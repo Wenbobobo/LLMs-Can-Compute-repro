@@ -8,3 +8,5 @@ Tracked benchmark summaries and milestone outputs will live here.
 - `M3_trace_executor/countdown_4_trace.json` is the first exported trace example
 - `M3_trace_executor/latest_write_trace.json` demonstrates last-write-wins memory semantics
 - `M3_trace_executor/memory_accumulator_trace.json` demonstrates bounded RAM read/write execution
+- `M4_exact_hardmax_model/decode_examples.json` demonstrates exact agreement between
+  linear-scan and accelerated latest-write decode on real trace examples

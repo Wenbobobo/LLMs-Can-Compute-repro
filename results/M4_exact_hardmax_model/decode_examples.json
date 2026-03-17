@@ -1,0 +1,92 @@
+{
+  "latest_write": {
+    "program": "latest_write",
+    "final_state": {
+      "pc": 5,
+      "stack": [
+        9
+      ],
+      "memory": [
+        [
+          0,
+          9
+        ]
+      ],
+      "halted": true,
+      "steps": 6
+    },
+    "decode": {
+      "addresses": [
+        0
+      ],
+      "max_steps": 4,
+      "epsilon": "1/6",
+      "observations": [
+        {
+          "step": 4,
+          "address": 0,
+          "expected_value": 9,
+          "linear_value": 9,
+          "accelerated_value": 9
+        }
+      ]
+    }
+  },
+  "memory_accumulator": {
+    "program": "memory_accumulator",
+    "final_state": {
+      "pc": 9,
+      "stack": [
+        12
+      ],
+      "memory": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          12
+        ]
+      ],
+      "halted": true,
+      "steps": 10
+    },
+    "decode": {
+      "addresses": [
+        0,
+        1,
+        2
+      ],
+      "max_steps": 8,
+      "epsilon": "1/10",
+      "observations": [
+        {
+          "step": 4,
+          "address": 0,
+          "expected_value": 7,
+          "linear_value": 7,
+          "accelerated_value": 7
+        },
+        {
+          "step": 5,
+          "address": 1,
+          "expected_value": 5,
+          "linear_value": 5,
+          "accelerated_value": 5
+        },
+        {
+          "step": 8,
+          "address": 2,
+          "expected_value": 12,
+          "linear_value": 12,
+          "accelerated_value": 12
+        }
+      ]
+    }
+  }
+}

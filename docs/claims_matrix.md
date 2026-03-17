@@ -8,5 +8,6 @@
 | B2 | A specialized cache can answer the same retrieval sublinearly | `HullKVCache` query agrees with brute force and benchmarks better than linear scan | implemented, unbenchmarked |
 | B3 | Tie handling is part of semantics, not a detail | Exact averaging over equal maximizers, including degeneracies | implemented, unverified |
 | C1 | These primitives can support a small exact executor | Tiny stack-machine interpreter, replay engine, and bounded RAM latest-write semantics | partially validated |
+| C1a | Latest-write memory reads can be rewritten as exact 2D hard-max causal retrieval | Linear scan and `HullKVCache` agree on extracted memory-read events from real traces | validated for current bounded RAM examples |
 | C2 | The executor survives long free-running rollout | Future model branch, length-bucket evaluation | unvalidated |
 | D1 | A higher-level compiled pipeline can target this substrate | Restricted Wasm-like or tiny C-like compiler path | out of scope for bootstrap |
