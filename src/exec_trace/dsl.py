@@ -13,6 +13,8 @@ class Opcode(StrEnum):
     EQ = "eq"
     DUP = "dup"
     POP = "pop"
+    LOAD = "load"
+    STORE = "store"
     JMP = "jmp"
     JZ = "jz"
     HALT = "halt"
@@ -42,6 +44,9 @@ class TraceEvent:
     popped: tuple[int, ...]
     pushed: tuple[int, ...]
     branch_taken: bool | None
+    memory_read_address: int | None
+    memory_read_value: int | None
+    memory_write: tuple[int, int] | None
     next_pc: int
     stack_depth_before: int
     stack_depth_after: int
@@ -52,6 +57,7 @@ class TraceEvent:
 class ExecutionState:
     pc: int = 0
     stack: tuple[int, ...] = ()
+    memory: tuple[tuple[int, int], ...] = ()
     halted: bool = False
     steps: int = 0
 

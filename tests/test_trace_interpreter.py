@@ -2,7 +2,16 @@ from __future__ import annotations
 
 import pytest
 
-from exec_trace import TraceInterpreter, countdown_program, equality_branch_program, replay_trace
+from exec_trace import (
+    TraceInterpreter,
+    countdown_program,
+    equality_branch_program,
+    latest_memory_value,
+    latest_write_program,
+    memory_accumulator_program,
+    replay_trace,
+    reconstruct_memory,
+)
 from exec_trace.dsl import TraceEvent
 from exec_trace.replay import ReplayMismatch
 
@@ -17,6 +26,7 @@ def test_countdown_replay_matches_interpreter() -> None:
     assert replayed == result.final_state
     assert replayed.halted is True
     assert replayed.stack == (0,)
+    assert replayed.memory == ()
 
 
 def test_branch_program_true_and_false_paths() -> None:
@@ -43,6 +53,34 @@ def test_trace_emission_is_deterministic() -> None:
     assert first.final_state == second.final_state
 
 
+def test_memory_latest_write_and_replay_match() -> None:
+    interpreter = TraceInterpreter()
+    program = latest_write_program()
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (9,)
+    assert replayed.memory == ((0, 9),)
+    assert latest_memory_value(result.events, 0) == 9
+    assert reconstruct_memory(result.events) == ((0, 9),)
+
+
+def test_memory_accumulator_program() -> None:
+    interpreter = TraceInterpreter()
+    program = memory_accumulator_program()
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (12,)
+    assert replayed.memory == ((0, 7), (1, 5), (2, 12))
+    load_events = [event for event in result.events if event.memory_read_address is not None]
+    assert [event.memory_read_value for event in load_events] == [7, 5, 12]
+
+
 def test_replay_detects_tampering() -> None:
     interpreter = TraceInterpreter()
     program = countdown_program(2)
@@ -58,10 +96,41 @@ def test_replay_detects_tampering() -> None:
         popped=original.popped,
         pushed=(),
         branch_taken=original.branch_taken,
+        memory_read_address=original.memory_read_address,
+        memory_read_value=original.memory_read_value,
+        memory_write=original.memory_write,
         next_pc=original.next_pc,
         stack_depth_before=original.stack_depth_before,
         stack_depth_after=original.stack_depth_after,
         halted=original.halted,
+    )
+
+    with pytest.raises(ReplayMismatch):
+        replay_trace(program, tuple(tampered))
+
+
+def test_replay_detects_tampered_memory_read() -> None:
+    interpreter = TraceInterpreter()
+    program = latest_write_program()
+    result = interpreter.run(program)
+
+    tampered = list(result.events)
+    load_event = tampered[4]
+    tampered[4] = TraceEvent(
+        step=load_event.step,
+        pc=load_event.pc,
+        opcode=load_event.opcode,
+        arg=load_event.arg,
+        popped=load_event.popped,
+        pushed=load_event.pushed,
+        branch_taken=load_event.branch_taken,
+        memory_read_address=load_event.memory_read_address,
+        memory_read_value=123,
+        memory_write=load_event.memory_write,
+        next_pc=load_event.next_pc,
+        stack_depth_before=load_event.stack_depth_before,
+        stack_depth_after=load_event.stack_depth_after,
+        halted=load_event.halted,
     )
 
     with pytest.raises(ReplayMismatch):

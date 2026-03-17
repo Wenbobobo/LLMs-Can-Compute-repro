@@ -33,3 +33,35 @@ def equality_branch_program(lhs: int, rhs: int) -> Program:
         Instruction(Opcode.HALT),
     )
     return Program(instructions=instructions, name=f"eq_{lhs}_{rhs}")
+
+
+def latest_write_program() -> Program:
+    """Overwrite one address and read it back to expose last-write semantics."""
+
+    instructions = (
+        Instruction(Opcode.PUSH_CONST, 7),
+        Instruction(Opcode.STORE, 0),
+        Instruction(Opcode.PUSH_CONST, 9),
+        Instruction(Opcode.STORE, 0),
+        Instruction(Opcode.LOAD, 0),
+        Instruction(Opcode.HALT),
+    )
+    return Program(instructions=instructions, name="latest_write")
+
+
+def memory_accumulator_program() -> Program:
+    """Write, read, and combine two explicit memory slots."""
+
+    instructions = (
+        Instruction(Opcode.PUSH_CONST, 7),
+        Instruction(Opcode.STORE, 0),
+        Instruction(Opcode.PUSH_CONST, 5),
+        Instruction(Opcode.STORE, 1),
+        Instruction(Opcode.LOAD, 0),
+        Instruction(Opcode.LOAD, 1),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.STORE, 2),
+        Instruction(Opcode.LOAD, 2),
+        Instruction(Opcode.HALT),
+    )
+    return Program(instructions=instructions, name="memory_accumulator")

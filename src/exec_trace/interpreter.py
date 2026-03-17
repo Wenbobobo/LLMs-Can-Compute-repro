@@ -26,9 +26,13 @@ class TraceInterpreter:
 
     def _step(self, state: ExecutionState, instruction: Instruction) -> tuple[TraceEvent, ExecutionState]:
         stack = list(state.stack)
+        memory = dict(state.memory)
         popped: tuple[int, ...] = ()
         pushed: tuple[int, ...] = ()
         branch_taken: bool | None = None
+        memory_read_address: int | None = None
+        memory_read_value: int | None = None
+        memory_write: tuple[int, int] | None = None
         next_pc = state.pc + 1
         halted = False
 
@@ -65,6 +69,26 @@ class TraceInterpreter:
                 if not stack:
                     raise RuntimeError("pop requires at least one stack element.")
                 popped = (stack.pop(),)
+            case Opcode.LOAD:
+                if instruction.arg is None:
+                    raise RuntimeError("load requires an integer address.")
+                if instruction.arg < 0:
+                    raise RuntimeError("load address must be non-negative.")
+                memory_read_address = instruction.arg
+                memory_read_value = memory.get(instruction.arg, 0)
+                pushed = (memory_read_value,)
+                stack.append(memory_read_value)
+            case Opcode.STORE:
+                if instruction.arg is None:
+                    raise RuntimeError("store requires an integer address.")
+                if instruction.arg < 0:
+                    raise RuntimeError("store address must be non-negative.")
+                if not stack:
+                    raise RuntimeError("store requires a value on the stack.")
+                value = stack.pop()
+                popped = (value,)
+                memory[instruction.arg] = value
+                memory_write = (instruction.arg, value)
             case Opcode.JMP:
                 if instruction.arg is None:
                     raise RuntimeError("jmp requires a target PC.")
@@ -93,6 +117,9 @@ class TraceInterpreter:
             popped=popped,
             pushed=pushed,
             branch_taken=branch_taken,
+            memory_read_address=memory_read_address,
+            memory_read_value=memory_read_value,
+            memory_write=memory_write,
             next_pc=next_pc,
             stack_depth_before=len(state.stack),
             stack_depth_after=len(stack),
@@ -101,6 +128,7 @@ class TraceInterpreter:
         next_state = ExecutionState(
             pc=next_pc,
             stack=tuple(stack),
+            memory=tuple(sorted(memory.items())),
             halted=halted,
             steps=state.steps + 1,
         )

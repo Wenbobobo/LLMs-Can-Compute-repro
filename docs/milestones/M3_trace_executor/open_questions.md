@@ -2,3 +2,5 @@
 
 - How much event detail is minimally necessary before the trace stops being
   informative and starts doing the executor's job for it?
+- Should the next memory extension be stack-relative addressing, dynamic
+  addressing, or a tiny bytecode layer?
