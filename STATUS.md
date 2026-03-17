@@ -2,20 +2,21 @@
 
 ## Working State
 
-- M0 scaffold: in progress
-- M1 claims/scope docs: in progress
+- M0 scaffold: complete
+- M1 claims/scope docs: complete
 - M2 geometry exactness: initial implementation added
 - M3 trace executor: initial implementation added
 - Packaging fix: renamed the trace package to avoid the Python stdlib conflict
-- Remote repo creation / push: pending tool availability
+- Public GitHub repo created and initial push completed
 
 ## Immediate Next Actions
 
-1. Run the new geometry and trace tests in a working shell.
-2. Generate the first benchmark outputs for `HullKVCache`.
-3. Create the public GitHub repo and push the bootstrap checkpoint.
+1. Add benchmark notes that interpret the first geometry result conservatively.
+2. Start the exact hard-max decode branch for `M4`.
+3. Decide whether bounded RAM or a tiny bytecode layer should be the next `M3` extension.
 
 ## Known Blockers
 
-- The command execution interface has not yet produced usable shell output in
-  this session, so git/gh operations and local test execution remain unverified.
+- None at the repository/bootstrap layer.
+- The main remaining risks are scientific: representation choices, tie semantics
+  at scale, and how far the current fast path generalizes beyond the toy executor.
