@@ -1,0 +1,104 @@
+{
+  "experiment": "trainable_stack_latest_write",
+  "scope": {
+    "description": "Fit a two-parameter latest-write scorer on short countdown stack traces, then evaluate on longer countdown traces and a dynamic-memory stack trace.",
+    "train_starts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "heldout_starts": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "notes": [
+      "This is a discriminative scorer over reference-generated candidate sets.",
+      "It is not yet a token-level learned decoder or free-running generative model."
+    ]
+  },
+  "best_scorer": {
+    "quadratic_scale": 0.25,
+    "time_scale": 0.0005
+  },
+  "fit_summary": {
+    "train_sample_accuracy": 1.0,
+    "train_exact_program_accuracy": 1.0
+  },
+  "evaluations": {
+    "train_countdown": {
+      "sample_accuracy": 1.0,
+      "exact_program_accuracy": 1.0,
+      "program_count": 7,
+      "sample_count": 70,
+      "by_length_bucket": [
+        {
+          "bucket": "25<=steps<=48",
+          "sample_count": 35,
+          "sample_accuracy": 1.0,
+          "program_count": 2,
+          "exact_program_accuracy": 1.0
+        },
+        {
+          "bucket": "steps<=24",
+          "sample_count": 35,
+          "sample_accuracy": 1.0,
+          "program_count": 5,
+          "exact_program_accuracy": 1.0
+        }
+      ]
+    },
+    "heldout_countdown": {
+      "sample_accuracy": 1.0,
+      "exact_program_accuracy": 1.0,
+      "program_count": 14,
+      "sample_count": 581,
+      "by_length_bucket": [
+        {
+          "bucket": "25<=steps<=48",
+          "sample_count": 47,
+          "sample_accuracy": 1.0,
+          "program_count": 2,
+          "exact_program_accuracy": 1.0
+        },
+        {
+          "bucket": "steps>=49",
+          "sample_count": 534,
+          "sample_accuracy": 1.0,
+          "program_count": 12,
+          "exact_program_accuracy": 1.0
+        }
+      ]
+    },
+    "dynamic_memory_stack": {
+      "sample_accuracy": 1.0,
+      "exact_program_accuracy": 1.0,
+      "program_count": 1,
+      "sample_count": 12,
+      "by_length_bucket": [
+        {
+          "bucket": "steps<=24",
+          "sample_count": 12,
+          "sample_accuracy": 1.0,
+          "program_count": 1,
+          "exact_program_accuracy": 1.0
+        }
+      ]
+    }
+  }
+}

@@ -19,7 +19,7 @@ The working target is narrower and more falsifiable:
 | M1 | Claims/scope lock, acceptance criteria, ambiguity register | complete |
 | M2 | Exact 2D hard-max geometry core | initial result recorded |
 | M3 | Append-only trace DSL and reference executor | initial result recorded |
-| M4 | Exact hard-max model branch | deterministic prototype started |
+| M4 | Exact hard-max model branch | deterministic prototype plus narrow trainable slice |
 | M5 | Standard 2D-head softmax baseline | planned |
 | M6 | Restricted compiled-program demos | planned |
 

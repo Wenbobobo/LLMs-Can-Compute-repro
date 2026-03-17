@@ -1,5 +1,9 @@
 # Open Questions
 
-- Which trace family should be the first model-training target?
-- After stack-slot retrieval, should the next exact hard-max target be mixed
-  memory/stack traces or a trainable latest-write head?
+- Should the next learned step keep the current exact candidate-set abstraction
+  and learn causal candidate generation, or jump to a tokenized decoder?
+- Is mixed memory-plus-stack retrieval the right next target, or should the
+  next experiment focus on free-running prediction inside the current stack
+  family first?
+- What is the smallest evaluation that would count as real rollout rather than
+  another discriminative retrieval check?
