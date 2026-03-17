@@ -1,0 +1,37 @@
+{
+  "benchmark": "geometry_hardmax",
+  "rows": [
+    {
+      "history_size": 128,
+      "query_count": 2000,
+      "insert_seconds": 0.0006896000122651458,
+      "brute_force_seconds": 1.6050625999923795,
+      "cache_seconds": 0.037515100033488125,
+      "cache_speedup_vs_bruteforce": 42.784441426508494
+    },
+    {
+      "history_size": 512,
+      "query_count": 2000,
+      "insert_seconds": 0.0012091000098735094,
+      "brute_force_seconds": 6.220118800003547,
+      "cache_seconds": 0.05115379998460412,
+      "cache_speedup_vs_bruteforce": 121.59641711614056
+    },
+    {
+      "history_size": 2048,
+      "query_count": 2000,
+      "insert_seconds": 0.0053317000274546444,
+      "brute_force_seconds": 26.00269950000802,
+      "cache_seconds": 0.11790379998274148,
+      "cache_speedup_vs_bruteforce": 220.54165772277267
+    },
+    {
+      "history_size": 8192,
+      "query_count": 2000,
+      "insert_seconds": 0.02950299996882677,
+      "brute_force_seconds": 106.97015090001514,
+      "cache_seconds": 0.4293399999733083,
+      "cache_speedup_vs_bruteforce": 249.15020940668325
+    }
+  ]
+}

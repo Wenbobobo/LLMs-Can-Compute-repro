@@ -1,0 +1,375 @@
+{
+  "program": "countdown_4",
+  "final_state": {
+    "pc": 6,
+    "stack": [
+      0
+    ],
+    "halted": true,
+    "steps": 24
+  },
+  "events": [
+    {
+      "step": 0,
+      "pc": 0,
+      "opcode": "push_const",
+      "arg": 4,
+      "popped": [],
+      "pushed": [
+        4
+      ],
+      "branch_taken": null,
+      "next_pc": 1,
+      "stack_depth_before": 0,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 1,
+      "pc": 1,
+      "opcode": "dup",
+      "arg": null,
+      "popped": [],
+      "pushed": [
+        4
+      ],
+      "branch_taken": null,
+      "next_pc": 2,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 2,
+      "pc": 2,
+      "opcode": "jz",
+      "arg": 6,
+      "popped": [
+        4
+      ],
+      "pushed": [],
+      "branch_taken": false,
+      "next_pc": 3,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 3,
+      "pc": 3,
+      "opcode": "push_const",
+      "arg": 1,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "next_pc": 4,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 4,
+      "pc": 4,
+      "opcode": "sub",
+      "arg": null,
+      "popped": [
+        4,
+        1
+      ],
+      "pushed": [
+        3
+      ],
+      "branch_taken": null,
+      "next_pc": 5,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 5,
+      "pc": 5,
+      "opcode": "jmp",
+      "arg": 1,
+      "popped": [],
+      "pushed": [],
+      "branch_taken": true,
+      "next_pc": 1,
+      "stack_depth_before": 1,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 6,
+      "pc": 1,
+      "opcode": "dup",
+      "arg": null,
+      "popped": [],
+      "pushed": [
+        3
+      ],
+      "branch_taken": null,
+      "next_pc": 2,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 7,
+      "pc": 2,
+      "opcode": "jz",
+      "arg": 6,
+      "popped": [
+        3
+      ],
+      "pushed": [],
+      "branch_taken": false,
+      "next_pc": 3,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 8,
+      "pc": 3,
+      "opcode": "push_const",
+      "arg": 1,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "next_pc": 4,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 9,
+      "pc": 4,
+      "opcode": "sub",
+      "arg": null,
+      "popped": [
+        3,
+        1
+      ],
+      "pushed": [
+        2
+      ],
+      "branch_taken": null,
+      "next_pc": 5,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 10,
+      "pc": 5,
+      "opcode": "jmp",
+      "arg": 1,
+      "popped": [],
+      "pushed": [],
+      "branch_taken": true,
+      "next_pc": 1,
+      "stack_depth_before": 1,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 11,
+      "pc": 1,
+      "opcode": "dup",
+      "arg": null,
+      "popped": [],
+      "pushed": [
+        2
+      ],
+      "branch_taken": null,
+      "next_pc": 2,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 12,
+      "pc": 2,
+      "opcode": "jz",
+      "arg": 6,
+      "popped": [
+        2
+      ],
+      "pushed": [],
+      "branch_taken": false,
+      "next_pc": 3,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 13,
+      "pc": 3,
+      "opcode": "push_const",
+      "arg": 1,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "next_pc": 4,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 14,
+      "pc": 4,
+      "opcode": "sub",
+      "arg": null,
+      "popped": [
+        2,
+        1
+      ],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "next_pc": 5,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 15,
+      "pc": 5,
+      "opcode": "jmp",
+      "arg": 1,
+      "popped": [],
+      "pushed": [],
+      "branch_taken": true,
+      "next_pc": 1,
+      "stack_depth_before": 1,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 16,
+      "pc": 1,
+      "opcode": "dup",
+      "arg": null,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "next_pc": 2,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 17,
+      "pc": 2,
+      "opcode": "jz",
+      "arg": 6,
+      "popped": [
+        1
+      ],
+      "pushed": [],
+      "branch_taken": false,
+      "next_pc": 3,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 18,
+      "pc": 3,
+      "opcode": "push_const",
+      "arg": 1,
+      "popped": [],
+      "pushed": [
+        1
+      ],
+      "branch_taken": null,
+      "next_pc": 4,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 19,
+      "pc": 4,
+      "opcode": "sub",
+      "arg": null,
+      "popped": [
+        1,
+        1
+      ],
+      "pushed": [
+        0
+      ],
+      "branch_taken": null,
+      "next_pc": 5,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 20,
+      "pc": 5,
+      "opcode": "jmp",
+      "arg": 1,
+      "popped": [],
+      "pushed": [],
+      "branch_taken": true,
+      "next_pc": 1,
+      "stack_depth_before": 1,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 21,
+      "pc": 1,
+      "opcode": "dup",
+      "arg": null,
+      "popped": [],
+      "pushed": [
+        0
+      ],
+      "branch_taken": null,
+      "next_pc": 2,
+      "stack_depth_before": 1,
+      "stack_depth_after": 2,
+      "halted": false
+    },
+    {
+      "step": 22,
+      "pc": 2,
+      "opcode": "jz",
+      "arg": 6,
+      "popped": [
+        0
+      ],
+      "pushed": [],
+      "branch_taken": true,
+      "next_pc": 6,
+      "stack_depth_before": 2,
+      "stack_depth_after": 1,
+      "halted": false
+    },
+    {
+      "step": 23,
+      "pc": 6,
+      "opcode": "halt",
+      "arg": null,
+      "popped": [],
+      "pushed": [],
+      "branch_taken": null,
+      "next_pc": 6,
+      "stack_depth_before": 1,
+      "stack_depth_after": 1,
+      "halted": true
+    }
+  ]
+}
