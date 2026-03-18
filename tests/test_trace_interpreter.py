@@ -9,9 +9,11 @@ from exec_trace import (
     equality_branch_program,
     latest_memory_value,
     latest_write_program,
+    loop_indirect_memory_program,
     memory_accumulator_program,
     replay_trace,
     reconstruct_memory,
+    stack_memory_ping_pong_program,
 )
 from exec_trace.dsl import TraceEvent
 from exec_trace.replay import ReplayMismatch
@@ -95,6 +97,30 @@ def test_dynamic_memory_program() -> None:
     load_events = [event for event in result.events if event.memory_read_address is not None]
     assert [event.memory_read_address for event in load_events] == [2, 2]
     assert [event.memory_read_value for event in load_events] == [11, 11]
+
+
+def test_loop_indirect_memory_program() -> None:
+    interpreter = TraceInterpreter()
+    program = loop_indirect_memory_program(4)
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (10,)
+    assert reconstruct_memory(result.events) == ((4, 0), (5, 10))
+
+
+def test_stack_memory_ping_pong_program() -> None:
+    interpreter = TraceInterpreter()
+    program = stack_memory_ping_pong_program()
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (13, 28)
+    assert reconstruct_memory(result.events) == ((0, 14), (1, 9), (2, 13))
 
 
 def test_replay_detects_tampering() -> None:

@@ -17,12 +17,19 @@ Tracked benchmark summaries and milestone outputs will live here.
   structured event-generation branch and its held-out rollout results
 - `M4_neural_event_executor/summary.json` records the neural structured-event
   decoder branch and its held-out rollout results
+- `M4_factorized_event_decoder/summary.json` records the richer direct
+  event-value decoder; this is the current teacher-forced-vs-rollout gap
+  checkpoint for `M4`
 - `M4_precision_scaling/summary.json` records single-head vs decomposition
   precision sweeps for the current 2D addressing family
+- `M4_precision_scaling_real_traces/summary.json` records real-trace precision
+  checks on offset loop and mixed stack-memory programs
 - `M5_standard_2d_baseline/dataset_preview.json` records atomic vs factorized
   vs event-grouped serialization statistics for the standard softmax baseline
   branch
 - `M5_standard_2d_baseline/training_run.json` records the atomic vs factorized
   vs event-grouped CUDA baseline training runs and rollout evaluation
+- `M5_event_level_baseline/training_run.json` records the final event-level
+  standard softmax baseline on the shared factorized event target
 - `runtime_environment.json` records the Python, Torch, and CUDA runtime used
   for the current exported checkpoints

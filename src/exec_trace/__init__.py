@@ -7,7 +7,9 @@ from .datasets import (
     dynamic_memory_transfer_program,
     equality_branch_program,
     latest_write_program,
+    loop_indirect_memory_program,
     memory_accumulator_program,
+    stack_memory_ping_pong_program,
 )
 from .dsl import ExecutionResult, ExecutionState, Instruction, Opcode, Program, TraceEvent
 from .interpreter import TraceInterpreter
@@ -30,7 +32,9 @@ __all__ = [
     "equality_branch_program",
     "latest_memory_value",
     "latest_write_program",
+    "loop_indirect_memory_program",
     "memory_accumulator_program",
     "replay_trace",
     "reconstruct_memory",
+    "stack_memory_ping_pong_program",
 ]

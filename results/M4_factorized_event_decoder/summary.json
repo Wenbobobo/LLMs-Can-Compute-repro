@@ -1,0 +1,670 @@
+{
+  "experiment": "m4_factorized_event_decoder",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "notes": [
+    "This branch replaces the opcode-conditioned structured-rule decoder with a history-aware event-value decoder.",
+    "The model predicts direct event fields such as push values, branch decisions, and memory addresses over a fixed factorized label space.",
+    "Exact latest-write retrieval still provides the append-only runtime state; the learned model now consumes recent event history and current top-of-stack summaries."
+  ],
+  "model_config": {
+    "d_model": 64,
+    "n_heads": 4,
+    "n_layers": 2,
+    "d_ffn": 128,
+    "opcode_dim": 16,
+    "history_window": 16,
+    "max_scalar": 256,
+    "max_address": 1024,
+    "max_pc": 128,
+    "include_top_values": true
+  },
+  "training_config": {
+    "epochs": 32,
+    "batch_size": 16,
+    "learning_rate": 0.005,
+    "weight_decay": 0.0
+  },
+  "train_metrics": {
+    "loss": 0.5497788190841675,
+    "exact_label_accuracy": 0.8012820512820513,
+    "example_count": 312,
+    "head_accuracies": [
+      {
+        "head": "stack_read_count",
+        "accuracy": 1.0
+      },
+      {
+        "head": "pop_count",
+        "accuracy": 1.0
+      },
+      {
+        "head": "push_count",
+        "accuracy": 1.0
+      },
+      {
+        "head": "push_value_0",
+        "accuracy": 0.842948717948718
+      },
+      {
+        "head": "push_value_1",
+        "accuracy": 1.0
+      },
+      {
+        "head": "branch_state",
+        "accuracy": 0.9935897435897436
+      },
+      {
+        "head": "memory_read_address",
+        "accuracy": 1.0
+      },
+      {
+        "head": "memory_write_address",
+        "accuracy": 0.9903846153846154
+      },
+      {
+        "head": "memory_write_value",
+        "accuracy": 0.9775641025641025
+      },
+      {
+        "head": "next_pc",
+        "accuracy": 0.9871794871794872
+      },
+      {
+        "head": "halted",
+        "accuracy": 0.9967948717948718
+      }
+    ]
+  },
+  "eval_metrics": {
+    "loss": 4.3565592765808105,
+    "exact_label_accuracy": 0.5321637426900585,
+    "example_count": 342,
+    "head_accuracies": [
+      {
+        "head": "stack_read_count",
+        "accuracy": 0.97953216374269
+      },
+      {
+        "head": "pop_count",
+        "accuracy": 0.9678362573099415
+      },
+      {
+        "head": "push_count",
+        "accuracy": 0.9766081871345029
+      },
+      {
+        "head": "push_value_0",
+        "accuracy": 0.6374269005847953
+      },
+      {
+        "head": "push_value_1",
+        "accuracy": 1.0
+      },
+      {
+        "head": "branch_state",
+        "accuracy": 0.9678362573099415
+      },
+      {
+        "head": "memory_read_address",
+        "accuracy": 0.9649122807017544
+      },
+      {
+        "head": "memory_write_address",
+        "accuracy": 0.9678362573099415
+      },
+      {
+        "head": "memory_write_value",
+        "accuracy": 0.9444444444444444
+      },
+      {
+        "head": "next_pc",
+        "accuracy": 0.8801169590643275
+      },
+      {
+        "head": "halted",
+        "accuracy": 0.9941520467836257
+      }
+    ]
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 19.107082033157347,
+      "eval_loss": 10.008456230163574
+    },
+    {
+      "epoch": 2,
+      "train_loss": 8.36364164352417,
+      "eval_loss": 6.199661731719971
+    },
+    {
+      "epoch": 3,
+      "train_loss": 4.958455204963684,
+      "eval_loss": 4.467573642730713
+    },
+    {
+      "epoch": 4,
+      "train_loss": 3.3550307989120483,
+      "eval_loss": 3.8510677814483643
+    },
+    {
+      "epoch": 5,
+      "train_loss": 2.393474906682968,
+      "eval_loss": 3.9327144622802734
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.988183730840683,
+      "eval_loss": 3.7559945583343506
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.6693823367357254,
+      "eval_loss": 3.513359546661377
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.4206562250852586,
+      "eval_loss": 3.563814640045166
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.3590075492858886,
+      "eval_loss": 3.3611583709716797
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.1840969160199166,
+      "eval_loss": 3.563281536102295
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.1343387991189957,
+      "eval_loss": 3.396627426147461
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.0066151201725007,
+      "eval_loss": 3.3403310775756836
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.9950412094593049,
+      "eval_loss": 3.576683521270752
+    },
+    {
+      "epoch": 14,
+      "train_loss": 1.001622498035431,
+      "eval_loss": 3.393836259841919
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.9407646358013153,
+      "eval_loss": 3.677788257598877
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.8253876507282257,
+      "eval_loss": 3.6257193088531494
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.9001986160874367,
+      "eval_loss": 4.1636176109313965
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.8618537947535515,
+      "eval_loss": 3.57742977142334
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.8589566051959991,
+      "eval_loss": 4.113491058349609
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.9727625995874405,
+      "eval_loss": 4.047770977020264
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.9478007048368454,
+      "eval_loss": 3.6848793029785156
+    },
+    {
+      "epoch": 22,
+      "train_loss": 1.0009241476655006,
+      "eval_loss": 3.976144790649414
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.8512800335884094,
+      "eval_loss": 4.315961837768555
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.8959805816411972,
+      "eval_loss": 4.341067790985107
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.9678587928414345,
+      "eval_loss": 3.9717161655426025
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.7939868986606597,
+      "eval_loss": 4.035250663757324
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.7977589592337608,
+      "eval_loss": 4.185007572174072
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.8625441059470177,
+      "eval_loss": 3.897214651107788
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.8802747927606106,
+      "eval_loss": 4.37276554107666
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.7201084971427918,
+      "eval_loss": 4.084494113922119
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.8347022578120231,
+      "eval_loss": 4.2977681159973145
+    },
+    {
+      "epoch": 32,
+      "train_loss": 0.6718272432684899,
+      "eval_loss": 4.3565592765808105
+    }
+  ],
+  "teacher_forced_groups": {
+    "train_programs": {
+      "loss": 0.5497788190841675,
+      "exact_label_accuracy": 0.8012820512820513,
+      "example_count": 312,
+      "head_accuracies": [
+        {
+          "head": "stack_read_count",
+          "accuracy": 1.0
+        },
+        {
+          "head": "pop_count",
+          "accuracy": 1.0
+        },
+        {
+          "head": "push_count",
+          "accuracy": 1.0
+        },
+        {
+          "head": "push_value_0",
+          "accuracy": 0.842948717948718
+        },
+        {
+          "head": "push_value_1",
+          "accuracy": 1.0
+        },
+        {
+          "head": "branch_state",
+          "accuracy": 0.9935897435897436
+        },
+        {
+          "head": "memory_read_address",
+          "accuracy": 1.0
+        },
+        {
+          "head": "memory_write_address",
+          "accuracy": 0.9903846153846154
+        },
+        {
+          "head": "memory_write_value",
+          "accuracy": 0.9775641025641025
+        },
+        {
+          "head": "next_pc",
+          "accuracy": 0.9871794871794872
+        },
+        {
+          "head": "halted",
+          "accuracy": 0.9967948717948718
+        }
+      ]
+    },
+    "heldout_programs": {
+      "loss": 4.3565592765808105,
+      "exact_label_accuracy": 0.5321637426900585,
+      "example_count": 342,
+      "head_accuracies": [
+        {
+          "head": "stack_read_count",
+          "accuracy": 0.97953216374269
+        },
+        {
+          "head": "pop_count",
+          "accuracy": 0.9678362573099415
+        },
+        {
+          "head": "push_count",
+          "accuracy": 0.9766081871345029
+        },
+        {
+          "head": "push_value_0",
+          "accuracy": 0.6374269005847953
+        },
+        {
+          "head": "push_value_1",
+          "accuracy": 1.0
+        },
+        {
+          "head": "branch_state",
+          "accuracy": 0.9678362573099415
+        },
+        {
+          "head": "memory_read_address",
+          "accuracy": 0.9649122807017544
+        },
+        {
+          "head": "memory_write_address",
+          "accuracy": 0.9678362573099415
+        },
+        {
+          "head": "memory_write_value",
+          "accuracy": 0.9444444444444444
+        },
+        {
+          "head": "next_pc",
+          "accuracy": 0.8801169590643275
+        },
+        {
+          "head": "halted",
+          "accuracy": 0.9941520467836257
+        }
+      ]
+    }
+  },
+  "rollout": {
+    "train_programs": {
+      "exact_trace_accuracy": 0.06666666666666667,
+      "exact_final_state_accuracy": 0.2,
+      "program_count": 15,
+      "by_length_bucket": [
+        {
+          "bucket": "25<=steps<=48",
+          "program_count": 3,
+          "exact_trace_accuracy": 0.0,
+          "exact_final_state_accuracy": 0.0
+        },
+        {
+          "bucket": "steps<=24",
+          "program_count": 11,
+          "exact_trace_accuracy": 0.09090909090909091,
+          "exact_final_state_accuracy": 0.2727272727272727
+        },
+        {
+          "bucket": "steps>=49",
+          "program_count": 1,
+          "exact_trace_accuracy": 0.0,
+          "exact_final_state_accuracy": 0.0
+        }
+      ],
+      "outcomes": [
+        {
+          "program_name": "countdown_0",
+          "program_steps": 4,
+          "exact_trace_match": true,
+          "exact_final_state_match": true,
+          "first_mismatch_step": null,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_1",
+          "program_steps": 9,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_2",
+          "program_steps": 14,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_3",
+          "program_steps": 19,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_4",
+          "program_steps": 24,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_5",
+          "program_steps": 29,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_6",
+          "program_steps": 34,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "eq_0_0",
+          "program_steps": 6,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 2,
+          "failure_reason": null
+        },
+        {
+          "program_name": "eq_0_1",
+          "program_steps": 6,
+          "exact_trace_match": false,
+          "exact_final_state_match": true,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "latest_write",
+          "program_steps": 6,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "memory_accumulator",
+          "program_steps": 10,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "dynamic_latest_write",
+          "program_steps": 9,
+          "exact_trace_match": false,
+          "exact_final_state_match": true,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "loop_indirect_memory_2_a4_b5",
+          "program_steps": 46,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 7,
+          "failure_reason": null
+        },
+        {
+          "program_name": "loop_indirect_memory_4_a4_b5",
+          "program_steps": 78,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 30,
+          "failure_reason": null
+        },
+        {
+          "program_name": "stack_memory_ping_pong_a0",
+          "program_steps": 18,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        }
+      ]
+    },
+    "heldout_programs": {
+      "exact_trace_accuracy": 0.0,
+      "exact_final_state_accuracy": 0.1111111111111111,
+      "program_count": 9,
+      "by_length_bucket": [
+        {
+          "bucket": "25<=steps<=48",
+          "program_count": 2,
+          "exact_trace_accuracy": 0.0,
+          "exact_final_state_accuracy": 0.0
+        },
+        {
+          "bucket": "steps<=24",
+          "program_count": 4,
+          "exact_trace_accuracy": 0.0,
+          "exact_final_state_accuracy": 0.25
+        },
+        {
+          "bucket": "steps>=49",
+          "program_count": 3,
+          "exact_trace_accuracy": 0.0,
+          "exact_final_state_accuracy": 0.0
+        }
+      ],
+      "outcomes": [
+        {
+          "program_name": "countdown_7",
+          "program_steps": 39,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_8",
+          "program_steps": 44,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_9",
+          "program_steps": 49,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "countdown_10",
+          "program_steps": 54,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "eq_5_5",
+          "program_steps": 6,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "eq_2_9",
+          "program_steps": 6,
+          "exact_trace_match": false,
+          "exact_final_state_match": true,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "dynamic_memory_transfer",
+          "program_steps": 16,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 1,
+          "failure_reason": null
+        },
+        {
+          "program_name": "loop_indirect_memory_6_a4_b5",
+          "program_steps": 110,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": 0,
+          "failure_reason": null
+        },
+        {
+          "program_name": "stack_memory_ping_pong_a32",
+          "program_steps": 18,
+          "exact_trace_match": false,
+          "exact_final_state_match": false,
+          "first_mismatch_step": null,
+          "failure_reason": "Program counter out of range: 23"
+        }
+      ]
+    }
+  }
+}

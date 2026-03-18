@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 from model.precision_stress import (
+    check_real_trace_precision,
     check_precision_range,
     check_precision_scheme_range,
     PrecisionStressRunner,
 )
+from exec_trace import loop_indirect_memory_program, stack_memory_ping_pong_program, TraceInterpreter
+from model.exact_hardmax import extract_memory_operations, extract_stack_slot_operations
 
 
 def test_float64_and_float32_pass_small_exhaustive_ranges() -> None:
@@ -72,3 +75,31 @@ def test_precision_runner_sweep_records_rows() -> None:
 
     assert report.scheme == "block_recentered"
     assert len(report.rows) == 2
+
+
+def test_real_trace_precision_passes_short_loop_memory_stream_in_float64() -> None:
+    result = TraceInterpreter().run(loop_indirect_memory_program(4))
+    operations = extract_memory_operations(result.events)
+    check = check_real_trace_precision(operations, fmt="float64", scheme="single_head")
+
+    assert check.space == "memory"
+    assert check.read_count > 0
+    assert check.passed is True
+
+
+def test_real_trace_precision_handles_stack_and_memory_streams() -> None:
+    result = TraceInterpreter().run(stack_memory_ping_pong_program())
+    memory_check = check_real_trace_precision(
+        extract_memory_operations(result.events),
+        fmt="float64",
+        scheme="single_head",
+    )
+    stack_check = check_real_trace_precision(
+        extract_stack_slot_operations(result.events),
+        fmt="float64",
+        scheme="single_head",
+    )
+
+    assert memory_check.passed is True
+    assert stack_check.space == "stack"
+    assert stack_check.read_count > 0
