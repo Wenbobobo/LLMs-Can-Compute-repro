@@ -1,0 +1,153 @@
+{
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "experiment": "p1_m4_failure_taxonomy_summary",
+  "source_artifacts": [
+    "results/M4_failure_provenance/per_program_provenance.json",
+    "results/M4_failure_provenance/summary.json",
+    "results/M4_failure_provenance/claim_impact.json"
+  ],
+  "target_slice": {
+    "mask_mode": "opcode_shape",
+    "split": "heldout"
+  },
+  "target_claim": "C2h",
+  "total_program_count": 15,
+  "failed_program_count": 15,
+  "by_provenance_class": [
+    {
+      "provenance_class": "downstream_nontermination_after_semantic_error",
+      "count": 7
+    },
+    {
+      "provenance_class": "memory_value_root_cause",
+      "count": 8
+    }
+  ],
+  "by_root_cause_head": [
+    {
+      "root_cause_head": "push_expr_0",
+      "count": 15
+    }
+  ],
+  "by_family": [
+    {
+      "family": "alternating_memory_loop",
+      "program_count": 2,
+      "failed_program_count": 2,
+      "by_provenance_class": [
+        {
+          "provenance_class": "downstream_nontermination_after_semantic_error",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "family": "countdown",
+      "program_count": 4,
+      "failed_program_count": 4,
+      "by_provenance_class": [
+        {
+          "provenance_class": "downstream_nontermination_after_semantic_error",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "family": "dynamic_memory_transfer",
+      "program_count": 1,
+      "failed_program_count": 1,
+      "by_provenance_class": [
+        {
+          "provenance_class": "memory_value_root_cause",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "equality_branch",
+      "program_count": 2,
+      "failed_program_count": 2,
+      "by_provenance_class": [
+        {
+          "provenance_class": "memory_value_root_cause",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "family": "flagged_indirect_accumulator",
+      "program_count": 2,
+      "failed_program_count": 2,
+      "by_provenance_class": [
+        {
+          "provenance_class": "memory_value_root_cause",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "family": "loop_indirect_memory",
+      "program_count": 1,
+      "failed_program_count": 1,
+      "by_provenance_class": [
+        {
+          "provenance_class": "downstream_nontermination_after_semantic_error",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "selector_checkpoint_bank",
+      "program_count": 2,
+      "failed_program_count": 2,
+      "by_provenance_class": [
+        {
+          "provenance_class": "memory_value_root_cause",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "family": "stack_memory_ping_pong",
+      "program_count": 1,
+      "failed_program_count": 1,
+      "by_provenance_class": [
+        {
+          "provenance_class": "memory_value_root_cause",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "caption_facts": [
+    "The fair-regime closure remains negative. Provenance now separates direct semantic mistakes from downstream nontermination instead of treating every step-budget row as primary evidence.",
+    "Held-out opcode_shape failures remain 15/15; direct memory-value root causes account for 8, downstream nontermination after earlier semantic error accounts for 7."
+  ]
+}

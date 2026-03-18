@@ -1,14 +1,13 @@
 # Status
 
-Not started. Still intentionally blocked.
+Still gated. Compiled demos themselves have not started, but the relevant
+pre-demo mechanism work for the current `D0` slice is now in place.
 
 Current blocker summary:
-
-- `M4` now has exact, induced, and neural structured-event executors, but the
-  neural branch is still an opcode-conditioned rule decoder rather than a
-  richer token/event model.
-- `M5` now has a runnable CUDA baseline, but its first exact free-running
-  rollout result is still zero on the current eval slice even after the
-  event-grouped serialization pass.
-- `M4-B` now has a useful decomposition checkpoint, but the current precision
-  story still stops short of any serious million-step claim.
+- the current tiny typed-bytecode slice is frozen at verifier/lowering/harness
+  + memory-surface companion + stress/reference follow-up;
+- the next blocker is no longer “implement the harness” or “add one more
+  stress/reference check”; it is to freeze wording and value through
+  `P3_paper_freeze_and_evidence_mapping` and `R2_systems_baseline_gate`;
+- later demo work now requires an explicit `M7_frontend_candidate_decision`;
+- no Wasm-like or arbitrary-C widening is justified by the current evidence.

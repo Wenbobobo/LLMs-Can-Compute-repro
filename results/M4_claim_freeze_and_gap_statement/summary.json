@@ -1,0 +1,53 @@
+{
+  "milestone": "M4_claim_freeze_and_gap_statement",
+  "date": "2026-03-18",
+  "inputs": {
+    "mask_dependence": [
+      "results/M4_mask_dependence_executor_gap/summary.json",
+      "results/M4_mask_dependence_executor_gap/per_program_failure_digest.json",
+      "results/M4_mask_dependence_executor_gap/regime_decision.json"
+    ],
+    "precision_generalization": [
+      "results/M4_precision_generalization/screening.json",
+      "results/M4_precision_generalization/boundary_sweep.json"
+    ]
+  },
+  "supported_with_caveat": [
+    {
+      "claim": "C2f",
+      "statement": "The staged pointer branch closes exact rollout on the current toy suite only under the strongest opcode_legal regime."
+    },
+    {
+      "claim": "C3e",
+      "statement": "The broadened precision suite sharpens a current-suite boundary: new high-address memory families fail immediately under float32 single-head, while current decomposition schemes remain stable on the exported suite."
+    }
+  ],
+  "negative_closures": [
+    {
+      "claim": "C2h",
+      "statement": "No fair fourth compatibility regime is justified on the expanded staged-pointer suite.",
+      "details": {
+        "structural_heldout_exact_trace_accuracy": 0.0,
+        "opcode_shape_heldout_exact_trace_accuracy": 0.0,
+        "opcode_legal_heldout_exact_trace_accuracy": 1.0,
+        "dominant_class": "memory_value",
+        "dominant_head": "push_expr_0",
+        "support_ratio": 0.5333333333333333,
+        "residual_failure_split": {
+          "memory_value_push_expr_0": 8,
+          "rollout_nontermination_step_budget": 7
+        }
+      }
+    }
+  ],
+  "unsupported_broadenings": [
+    "A fair learned executor claim independent of strong legality masks.",
+    "A broad long-horizon float32 robustness claim.",
+    "Any compiled-program claim broader than tiny typed bytecode."
+  ],
+  "gated_next_steps": [
+    "Use this claim freeze as the only narrative source for M6 typed-bytecode planning.",
+    "Keep M5 frozen as the standard-softmax negative control unless the fair label/decode space changes.",
+    "Translate the freeze into paper figures and tables under P1."
+  ]
+}

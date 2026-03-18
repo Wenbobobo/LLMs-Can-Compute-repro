@@ -1,0 +1,16 @@
+{
+  "target_claim": "C3e",
+  "status": "narrowed_positive_with_boundary",
+  "evidence_basis": [
+    "the organic-trace milestone reuses the current broadened M4-E batch instead of silently re-running an equivalent suite under a new name.",
+    "all currently exported high-address memory families fail at 1x under float32 single_head.",
+    "the deeper exported stack stream first fails at 4x, while the shallower stack stream stays stable through screening.",
+    "observed failure type remains tie_collapse across the current broadened suite."
+  ],
+  "concrete_stream_families": [
+    "flagged_indirect_accumulator",
+    "hotspot_memory_rewrite",
+    "selector_checkpoint_bank",
+    "stack_fanout_sum"
+  ]
+}

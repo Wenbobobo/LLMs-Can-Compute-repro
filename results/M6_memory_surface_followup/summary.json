@@ -1,0 +1,173 @@
+{
+  "experiment": "m6_memory_surface_followup",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "row_count": 6,
+    "memory_surface_match_count": 6,
+    "memory_surface_verifier_pass_count": 6,
+    "negative_control_count": 2
+  },
+  "rows": [
+    {
+      "program_name": "bytecode_call_frame_roundtrip_a192",
+      "suite": "control_flow_memory",
+      "comparison_mode": "short_exact_trace",
+      "base_trace_match": true,
+      "base_final_state_match": true,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "boundary_snapshot_count": 2,
+      "max_call_depth": 1,
+      "undeclared_address_count": 0,
+      "touched_frame_addresses": [
+        192
+      ],
+      "touched_heap_addresses": []
+    },
+    {
+      "program_name": "bytecode_countdown_helper_call_6_a48",
+      "suite": "control_flow_memory",
+      "comparison_mode": "medium_exact_trace",
+      "base_trace_match": true,
+      "base_final_state_match": true,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "boundary_snapshot_count": 12,
+      "max_call_depth": 1,
+      "undeclared_address_count": 0,
+      "touched_frame_addresses": [
+        48
+      ],
+      "touched_heap_addresses": []
+    },
+    {
+      "program_name": "bytecode_loop_with_subroutine_update_8_a64_b65",
+      "suite": "control_flow_memory",
+      "comparison_mode": "medium_exact_trace",
+      "base_trace_match": true,
+      "base_final_state_match": true,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "boundary_snapshot_count": 16,
+      "max_call_depth": 1,
+      "undeclared_address_count": 0,
+      "touched_frame_addresses": [
+        64,
+        65
+      ],
+      "touched_heap_addresses": []
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_6_a80",
+      "suite": "control_flow_memory",
+      "comparison_mode": "medium_exact_trace",
+      "base_trace_match": true,
+      "base_final_state_match": true,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "boundary_snapshot_count": 12,
+      "max_call_depth": 1,
+      "undeclared_address_count": 0,
+      "touched_frame_addresses": [
+        80,
+        81
+      ],
+      "touched_heap_addresses": [
+        82,
+        83
+      ]
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_20_a128_b129",
+      "suite": "control_flow_memory",
+      "comparison_mode": "long_exact_final_state",
+      "base_trace_match": true,
+      "base_final_state_match": true,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "boundary_snapshot_count": 40,
+      "max_call_depth": 1,
+      "undeclared_address_count": 0,
+      "touched_frame_addresses": [
+        128,
+        129
+      ],
+      "touched_heap_addresses": []
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_12_a160",
+      "suite": "control_flow_memory",
+      "comparison_mode": "long_exact_final_state",
+      "base_trace_match": true,
+      "base_final_state_match": true,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "boundary_snapshot_count": 24,
+      "max_call_depth": 1,
+      "undeclared_address_count": 0,
+      "touched_frame_addresses": [
+        160,
+        161
+      ],
+      "touched_heap_addresses": [
+        162,
+        163
+      ]
+    }
+  ],
+  "negative_controls": [
+    {
+      "program_name": "invalid_memory_surface_undeclared_static",
+      "passed": false,
+      "first_error_pc": 1,
+      "error_class": "undeclared_static_address",
+      "message": "store_static address 999 is not declared in the memory layout.",
+      "reachable_frame_addresses": [],
+      "reachable_heap_addresses": [],
+      "max_call_depth": 0
+    },
+    {
+      "program_name": "invalid_memory_surface_indirect_escape",
+      "passed": false,
+      "first_error_pc": 0,
+      "error_class": "undeclared_address_literal",
+      "message": "const_addr target 302 is not declared in the memory layout.",
+      "reachable_frame_addresses": [],
+      "reachable_heap_addresses": [],
+      "max_call_depth": 0
+    }
+  ]
+}

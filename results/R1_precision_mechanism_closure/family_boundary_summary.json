@@ -1,0 +1,219 @@
+{
+  "experiment": "r1_family_boundary_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "family": "alternating_offset_2048",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 1,
+      "earliest_single_head_failure_multiplier": 1,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "alternating_offset_256",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 0,
+      "earliest_single_head_failure_multiplier": 16,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "flagged_indirect_accumulator",
+      "stream_count": 1,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 1,
+      "earliest_single_head_failure_multiplier": 1,
+      "decomposition_fully_passing_stream_count": 1,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "hotspot_memory_rewrite",
+      "stream_count": 1,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 1,
+      "earliest_single_head_failure_multiplier": 1,
+      "decomposition_fully_passing_stream_count": 1,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "loop_offset_1024",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 1,
+      "earliest_single_head_failure_multiplier": 1,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "loop_offset_256",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 0,
+      "earliest_single_head_failure_multiplier": 16,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "loop_offset_4096",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 1,
+      "earliest_single_head_failure_multiplier": 1,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "loop_offset_64",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 0,
+      "single_head_failure_at_1x_stream_count": 0,
+      "earliest_single_head_failure_multiplier": null,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": []
+    },
+    {
+      "family": "ping_pong_offset_128",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 0,
+      "single_head_failure_at_1x_stream_count": 0,
+      "earliest_single_head_failure_multiplier": null,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": []
+    },
+    {
+      "family": "ping_pong_offset_2048",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 0,
+      "earliest_single_head_failure_multiplier": 4,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "ping_pong_offset_512",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 0,
+      "earliest_single_head_failure_multiplier": 64,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "ping_pong_offset_8192",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 1,
+      "earliest_single_head_failure_multiplier": 1,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "selector_checkpoint_bank",
+      "stream_count": 1,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 1,
+      "earliest_single_head_failure_multiplier": 1,
+      "decomposition_fully_passing_stream_count": 1,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "family": "stack_fanout_sum",
+      "stream_count": 2,
+      "single_head_failure_stream_count": 1,
+      "single_head_failure_at_1x_stream_count": 0,
+      "earliest_single_head_failure_multiplier": 4,
+      "decomposition_fully_passing_stream_count": 2,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

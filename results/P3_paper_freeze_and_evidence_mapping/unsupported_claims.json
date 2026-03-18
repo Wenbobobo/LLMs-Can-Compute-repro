@@ -1,0 +1,90 @@
+{
+  "experiment": "p3_unsupported_claims",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "claim_id": "unsupported_general_llm_computation",
+      "label": "general LLM computation",
+      "reason": "The repository validates a narrow execution substrate rather than a broad claim about general LLMs becoming computers.",
+      "source_docs": [
+        "README.md",
+        "docs/publication_record/threats_to_validity.md",
+        "docs/publication_record/blog_outline.md"
+      ]
+    },
+    {
+      "claim_id": "unsupported_arbitrary_c",
+      "label": "arbitrary C reproduction",
+      "reason": "The current compiled boundary is intentionally fixed to a tiny typed bytecode and should not be inflated into arbitrary-C coverage.",
+      "source_docs": [
+        "README.md",
+        "docs/publication_record/threats_to_validity.md",
+        "docs/publication_record/negative_results.md"
+      ]
+    },
+    {
+      "claim_id": "unsupported_broad_compiled_demo_widening",
+      "label": "broader compiled demos",
+      "reason": "Frontend widening remains blocked pending `R2` and an explicit `M7` decision.",
+      "source_docs": [
+        "docs/publication_record/claim_ladder.md",
+        "docs/milestones/M6_compiled_programs_and_demos/status.md",
+        "docs/milestones/M7_frontend_candidate_decision/status.md"
+      ]
+    },
+    {
+      "claim_id": "unsupported_fair_regime_staged_pointer_success",
+      "label": "fair-regime staged-pointer exactness",
+      "reason": "The strongest staged-pointer result still depends on stronger legality structure, and the fairer regimes remain negative or caveated.",
+      "source_docs": [
+        "docs/publication_record/negative_results.md",
+        "docs/publication_record/threats_to_validity.md"
+      ]
+    },
+    {
+      "claim_id": "unsupported_broad_long_horizon_precision_robustness",
+      "label": "broad long-horizon precision robustness",
+      "reason": "Current finite-precision evidence is still a current-suite boundary statement rather than a general long-horizon robustness result.",
+      "source_docs": [
+        "docs/publication_record/threats_to_validity.md",
+        "docs/publication_record/negative_results.md"
+      ]
+    },
+    {
+      "claim_id": "unsupported_current_scope_end_to_end_runtime_superiority",
+      "label": "current-scope end-to-end runtime superiority",
+      "reason": "The first systems gate is mixed: geometry is strongly positive, but current-scope lowered execution is not yet faster than the best reference/oracle path.",
+      "source_docs": [
+        "results/R2_systems_baseline_gate/summary.json",
+        "docs/publication_record/negative_results.md"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "fourth_regime_justified": false,
+  "recommended_mode": null,
+  "reason": "opcode_shape failures remain too dispersed across classes/heads.",
+  "support_ratio": 0.5333333333333333,
+  "dominant_class": "memory_value",
+  "dominant_head": "push_expr_0"
+}

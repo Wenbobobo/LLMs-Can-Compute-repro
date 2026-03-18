@@ -1,0 +1,57 @@
+[
+  {
+    "family": "hotspot_memory_rewrite",
+    "program_name": "hotspot_memory_rewrite_12_a2048",
+    "stream_name": "hotspot_memory_rewrite_12_a2048_memory",
+    "space": "memory",
+    "operation_count": 105,
+    "read_count": 64,
+    "write_count": 41,
+    "native_max_steps": 269,
+    "entered_boundary_sweep": true
+  },
+  {
+    "family": "flagged_indirect_accumulator",
+    "program_name": "flagged_indirect_accumulator_10_a1024",
+    "stream_name": "flagged_indirect_accumulator_10_a1024_memory",
+    "space": "memory",
+    "operation_count": 109,
+    "read_count": 73,
+    "write_count": 36,
+    "native_max_steps": 212,
+    "entered_boundary_sweep": true
+  },
+  {
+    "family": "selector_checkpoint_bank",
+    "program_name": "selector_checkpoint_bank_9_a1536",
+    "stream_name": "selector_checkpoint_bank_9_a1536_memory",
+    "space": "memory",
+    "operation_count": 130,
+    "read_count": 85,
+    "write_count": 45,
+    "native_max_steps": 304,
+    "entered_boundary_sweep": true
+  },
+  {
+    "family": "stack_fanout_sum",
+    "program_name": "stack_fanout_sum_64_v1",
+    "stream_name": "stack_fanout_sum_64_v1_stack",
+    "space": "stack",
+    "operation_count": 253,
+    "read_count": 126,
+    "write_count": 127,
+    "native_max_steps": 126,
+    "entered_boundary_sweep": false
+  },
+  {
+    "family": "stack_fanout_sum",
+    "program_name": "stack_fanout_sum_256_v1",
+    "stream_name": "stack_fanout_sum_256_v1_stack",
+    "space": "stack",
+    "operation_count": 1021,
+    "read_count": 510,
+    "write_count": 511,
+    "native_max_steps": 510,
+    "entered_boundary_sweep": true
+  }
+]

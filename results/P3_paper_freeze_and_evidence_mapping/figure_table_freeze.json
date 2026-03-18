@@ -1,0 +1,110 @@
+{
+  "experiment": "p3_figure_table_freeze",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "figures": [
+    {
+      "item": "Claim ladder + evidence matrix",
+      "status": "ready",
+      "notes": "Ledgers are synchronized; only paper layout is missing.",
+      "section": "mandatory_figures"
+    },
+    {
+      "item": "Staged decode regime comparison",
+      "status": "ready",
+      "notes": "`M4_staged_pointer_decoder` and `M4_mask_dependence_executor_gap` cover the comparison.",
+      "section": "mandatory_figures"
+    },
+    {
+      "item": "Provenance-backed staged failure taxonomy",
+      "status": "ready",
+      "notes": "Final plotted layout now exists in `results/P1_paper_readiness/m4_failure_taxonomy_figure.svg`, backed by the canonical taxonomy summary and CSV rows.",
+      "section": "mandatory_figures"
+    },
+    {
+      "item": "Real-trace precision boundary",
+      "status": "ready",
+      "notes": "Final plotted layout now exists in `results/P1_paper_readiness/m4_real_trace_boundary_figure.svg`, backed by the canonical boundary summary and CSV rows.",
+      "section": "mandatory_figures"
+    },
+    {
+      "item": "Softmax negative-control comparison",
+      "status": "ready",
+      "notes": "Existing `M5` artifacts are stable.",
+      "section": "mandatory_figures"
+    },
+    {
+      "item": "Frontend boundary diagram",
+      "status": "ready",
+      "notes": "Final diagram now exists in `results/P1_paper_readiness/m6_frontend_boundary_diagram.svg` and stays explicit about the tiny typed-bytecode scope.",
+      "section": "mandatory_figures"
+    }
+  ],
+  "tables": [
+    {
+      "item": "Supported vs unsupported claims",
+      "status": "ready",
+      "notes": "Covered by claim ladder plus threats/negative-results ledgers.",
+      "section": "mandatory_tables"
+    },
+    {
+      "item": "Exact-trace / final-state success table",
+      "status": "ready on current scope",
+      "notes": "Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. Broader compiled demos remain blocked unless a later `M7` decision explicitly approves widening.",
+      "section": "mandatory_tables"
+    },
+    {
+      "item": "Real-trace precision boundary table",
+      "status": "ready",
+      "notes": "Organic bundle plus scaling sweeps now also feed canonical `P1` boundary rows under `results/P1_paper_readiness/`.",
+      "section": "mandatory_tables"
+    },
+    {
+      "item": "Threats-to-validity table",
+      "status": "ready",
+      "notes": "Content exists; only wording polish remains.",
+      "section": "mandatory_tables"
+    }
+  ],
+  "summary": {
+    "by_status": [
+      {
+        "status": "ready",
+        "count": 9
+      },
+      {
+        "status": "ready on current scope",
+        "count": 1
+      }
+    ],
+    "appendix_linked_items": [
+      "Exact-trace / final-state success table"
+    ]
+  }
+}

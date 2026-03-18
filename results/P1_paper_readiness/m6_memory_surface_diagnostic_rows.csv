@@ -1,0 +1,7 @@
+program_name,suite,comparison_mode,base_trace_match,base_final_state_match,memory_surface_verifier_passed,memory_surface_match,boundary_snapshot_count,reference_boundary_snapshot_count,lowered_boundary_snapshot_count,boundary_snapshot_count_match,reference_access_count,lowered_access_count,access_count_match,max_call_depth,undeclared_address_count,touched_frame_addresses,touched_heap_addresses
+bytecode_iterated_helper_accumulator_20_a128_b129,control_flow_memory,long_exact_final_state,True,True,True,True,40,40,40,True,124,124,True,1,0,128|129,
+bytecode_subroutine_braid_long_12_a160,control_flow_memory,long_exact_final_state,True,True,True,True,24,24,24,True,103,103,True,1,0,160|161,162|163
+bytecode_countdown_helper_call_6_a48,control_flow_memory,medium_exact_trace,True,True,True,True,12,12,12,True,21,21,True,1,0,48,
+bytecode_loop_with_subroutine_update_8_a64_b65,control_flow_memory,medium_exact_trace,True,True,True,True,16,16,16,True,52,52,True,1,0,64|65,
+bytecode_subroutine_braid_6_a80,control_flow_memory,medium_exact_trace,True,True,True,True,12,12,12,True,55,55,True,1,0,80|81,82|83
+bytecode_call_frame_roundtrip_a192,control_flow_memory,short_exact_trace,True,True,True,True,2,2,2,True,3,3,True,1,0,192,

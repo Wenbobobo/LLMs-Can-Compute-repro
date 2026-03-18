@@ -1,0 +1,304 @@
+{
+  "experiment": "m6_typed_bytecode_verifier",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "program_name": "bytecode_arithmetic_smoke",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_eq_branch_true",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_eq_branch_false",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_call_add_halt",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_branch_then_call_true",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_branch_then_call_false",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_call_chain_smoke",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_static_memory_roundtrip",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_indirect_memory_roundtrip",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_dynamic_latest_write",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_countdown_6",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_alternating_memory_loop_6_a16",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_selector_checkpoint_bank_6_a32",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_countdown_helper_call_6_a48",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_loop_with_subroutine_update_8_a64_b65",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_6_a80",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_accumulator_12",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_8_a64",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_checkpoint_replay_long_8_a96",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_20_a128_b129",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_12_a160",
+      "passed": true,
+      "first_error_pc": null,
+      "error_class": null,
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ok"
+    },
+    {
+      "program_name": "invalid_store_indirect_order",
+      "passed": false,
+      "first_error_pc": 2,
+      "error_class": "type_mismatch",
+      "expected_stack": [
+        "i32",
+        "addr"
+      ],
+      "actual_stack": [
+        "addr",
+        "i32"
+      ],
+      "message": "store_indirect expected i32, addr."
+    },
+    {
+      "program_name": "invalid_branch_target",
+      "passed": false,
+      "first_error_pc": 0,
+      "error_class": "branch_target",
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "jmp target must stay within program bounds."
+    },
+    {
+      "program_name": "invalid_non_flag_branch",
+      "passed": false,
+      "first_error_pc": 1,
+      "error_class": "type_mismatch",
+      "expected_stack": [
+        "flag"
+      ],
+      "actual_stack": [
+        "i32"
+      ],
+      "message": "jz_zero expected flag."
+    },
+    {
+      "program_name": "invalid_call_target",
+      "passed": false,
+      "first_error_pc": 0,
+      "error_class": "call_target",
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "call target must stay within program bounds."
+    },
+    {
+      "program_name": "invalid_empty_return",
+      "passed": false,
+      "first_error_pc": 0,
+      "error_class": "empty_return",
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "ret requires one pending call frame."
+    },
+    {
+      "program_name": "invalid_unterminated_frame",
+      "passed": false,
+      "first_error_pc": 2,
+      "error_class": "unterminated_frame",
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "halt is only valid when the call stack is empty."
+    },
+    {
+      "program_name": "invalid_recursive_call",
+      "passed": false,
+      "first_error_pc": 0,
+      "error_class": "recursive_call",
+      "expected_stack": [],
+      "actual_stack": [],
+      "message": "recursive or mutually recursive call cycles are out of scope."
+    }
+  ]
+}

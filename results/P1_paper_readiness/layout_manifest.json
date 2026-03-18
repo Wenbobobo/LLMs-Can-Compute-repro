@@ -1,0 +1,69 @@
+{
+  "experiment": "p1_render_bundle_artifacts",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/P1_paper_readiness/m4_failure_taxonomy_summary.json",
+    "results/P1_paper_readiness/m4_real_trace_boundary_summary.json",
+    "results/P1_paper_readiness/exact_trace_final_state_table.json",
+    "results/P1_paper_readiness/m6_memory_surface_diagnostic_summary.json"
+  ],
+  "rendered_assets": [
+    {
+      "bundle_item": "Provenance-backed staged failure taxonomy",
+      "path": "results/P1_paper_readiness/m4_failure_taxonomy_figure.svg",
+      "kind": "figure_svg"
+    },
+    {
+      "bundle_item": "Real-trace precision boundary",
+      "path": "results/P1_paper_readiness/m4_real_trace_boundary_figure.svg",
+      "kind": "figure_svg"
+    },
+    {
+      "bundle_item": "Frontend boundary diagram",
+      "path": "results/P1_paper_readiness/m6_frontend_boundary_diagram.svg",
+      "kind": "figure_svg"
+    },
+    {
+      "bundle_item": "Exact-trace / final-state success table",
+      "path": "results/P1_paper_readiness/exact_trace_final_state_table.md",
+      "kind": "table_markdown"
+    },
+    {
+      "bundle_item": "Memory-surface diagnostic companion table",
+      "path": "results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md",
+      "kind": "table_markdown"
+    }
+  ],
+  "notes": [
+    "These rendered assets are layout companions only; they do not widen the scientific scope.",
+    "The exact-trace table remains partial because later compiled frontend families are still absent.",
+    "The memory-surface table is appendix-level only and stays attached to the same D0 boundary."
+  ]
+}

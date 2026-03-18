@@ -1,0 +1,7 @@
+program_name,comparison_mode,base_trace_match,base_final_state_match,memory_surface_verifier_passed,memory_surface_match,boundary_snapshot_count,max_call_depth,undeclared_address_count,touched_frame_addresses,touched_heap_addresses
+bytecode_call_frame_roundtrip_a192,short_exact_trace,True,True,True,True,2,1,0,192,
+bytecode_countdown_helper_call_6_a48,medium_exact_trace,True,True,True,True,12,1,0,48,
+bytecode_loop_with_subroutine_update_8_a64_b65,medium_exact_trace,True,True,True,True,16,1,0,64|65,
+bytecode_subroutine_braid_6_a80,medium_exact_trace,True,True,True,True,12,1,0,80|81,82|83
+bytecode_iterated_helper_accumulator_20_a128_b129,long_exact_final_state,True,True,True,True,40,1,0,128|129,
+bytecode_subroutine_braid_long_12_a160,long_exact_final_state,True,True,True,True,24,1,0,160|161,162|163

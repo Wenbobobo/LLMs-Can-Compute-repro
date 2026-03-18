@@ -1,0 +1,68 @@
+{
+  "experiment": "h0_public_surface_audit",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "check_id": "readme_tracks_current_gate",
+      "status": "pass",
+      "notes": "README states the current M7/P4 outcome rather than leaving it implied."
+    },
+    {
+      "check_id": "status_tracks_h0_followup",
+      "status": "pass",
+      "notes": "STATUS keeps the operational repo-hygiene work visible."
+    },
+    {
+      "check_id": "gitignore_covers_restricted_material",
+      "status": "pass",
+      "notes": "Required ignore entries present."
+    },
+    {
+      "check_id": "m7_no_widening_recorded",
+      "status": "pass",
+      "notes": "The current compiled endpoint remains D0."
+    },
+    {
+      "check_id": "p4_blog_hold_recorded",
+      "status": "pass",
+      "notes": "README is allowed, broader blog release is still blocked."
+    },
+    {
+      "check_id": "p2_ledger_mentions_h0",
+      "status": "pass",
+      "notes": "Artifact release ledger includes the H0 snapshot."
+    },
+    {
+      "check_id": "tmp_plan_retained",
+      "status": "pass",
+      "notes": "Temporary next-stage plan is still retained for unattended handoff continuity."
+    }
+  ]
+}

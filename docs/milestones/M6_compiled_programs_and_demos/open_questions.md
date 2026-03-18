@@ -1,6 +1,10 @@
 # Open Questions
 
-- Which end-to-end demo best stresses the core mechanism without becoming
-  marketing theater?
-- Which restricted frontend should come first: a tiny bytecode, a Wasm-like
-  subset, or a very small C-like language compiled into the existing DSL?
+- After `P3`, `R1`, and `R2`, is any second frontend scientifically justified
+  at all, or should the project stop at the current tiny typed-bytecode
+  boundary?
+- If widening is justified later, what minimal next surface would add evidence
+  rather than presentation pressure: a slightly richer bytecode or a narrow
+  Wasm-like subset?
+- What system-level baseline evidence should be required before compiled demos
+  become informative rather than decorative?

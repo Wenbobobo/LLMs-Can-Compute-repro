@@ -1,0 +1,103 @@
+{
+  "experiment": "m6_oracle_agreement_rows",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_6_a200_s0",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "spec_contract_passed": true,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_6_a216_s1",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "spec_contract_passed": true,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_18_a232_s0",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "spec_contract_passed": true,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null
+    },
+    {
+      "program_name": "invalid_helper_checkpoint_braid_branch_6_a248_s0",
+      "comparison_mode": "verifier_negative",
+      "verifier_passed": false,
+      "spec_contract_passed": false,
+      "trace_match_current_lowered": null,
+      "trace_match_current_spec": null,
+      "trace_match_lowered_spec": null,
+      "all_final_state_match": null,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null
+    },
+    {
+      "program_name": "invalid_helper_checkpoint_braid_surface_6_a264_s1",
+      "comparison_mode": "memory_surface_negative",
+      "verifier_passed": true,
+      "spec_contract_passed": true,
+      "trace_match_current_lowered": null,
+      "trace_match_current_spec": null,
+      "trace_match_lowered_spec": null,
+      "all_final_state_match": null,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "target_claim": "C2h",
+  "heldout_opcode_shape_failed_program_count": 15,
+  "heldout_opcode_shape_by_provenance": [
+    {
+      "provenance_class": "downstream_nontermination_after_semantic_error",
+      "count": 7
+    },
+    {
+      "provenance_class": "memory_value_root_cause",
+      "count": 8
+    }
+  ],
+  "claim_update": "The fair-regime closure remains negative. Provenance now separates direct semantic mistakes from downstream nontermination instead of treating every step-budget row as primary evidence."
+}

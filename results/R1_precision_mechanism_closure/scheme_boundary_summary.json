@@ -1,0 +1,107 @@
+{
+  "experiment": "r1_scheme_boundary_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "suite_bundle": "offset",
+      "scheme": "block_recentered",
+      "stream_count": 20,
+      "streams_with_failure": 0,
+      "fully_passing_streams": 20,
+      "earliest_failed_horizon_multiplier": null,
+      "failure_type_counts": []
+    },
+    {
+      "suite_bundle": "offset",
+      "scheme": "radix2",
+      "stream_count": 20,
+      "streams_with_failure": 0,
+      "fully_passing_streams": 20,
+      "earliest_failed_horizon_multiplier": null,
+      "failure_type_counts": []
+    },
+    {
+      "suite_bundle": "offset",
+      "scheme": "single_head",
+      "stream_count": 20,
+      "streams_with_failure": 8,
+      "fully_passing_streams": 12,
+      "earliest_failed_horizon_multiplier": 1,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "suite_bundle": "organic",
+      "scheme": "block_recentered",
+      "stream_count": 5,
+      "streams_with_failure": 1,
+      "fully_passing_streams": 4,
+      "earliest_failed_horizon_multiplier": 4,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "suite_bundle": "organic",
+      "scheme": "radix2",
+      "stream_count": 5,
+      "streams_with_failure": 1,
+      "fully_passing_streams": 4,
+      "earliest_failed_horizon_multiplier": 4,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "suite_bundle": "organic",
+      "scheme": "single_head",
+      "stream_count": 5,
+      "streams_with_failure": 4,
+      "fully_passing_streams": 1,
+      "earliest_failed_horizon_multiplier": 1,
+      "failure_type_counts": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 30
+        }
+      ]
+    }
+  ]
+}

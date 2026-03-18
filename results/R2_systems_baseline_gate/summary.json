@@ -1,0 +1,142 @@
+{
+  "experiment": "r2_systems_baseline_gate",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/M2_geometry_core/benchmark_geometry.json",
+    "results/M6_typed_bytecode_harness/short_exact_trace.json",
+    "results/M6_typed_bytecode_harness/long_exact_final_state.json",
+    "results/M6_stress_reference_followup/summary.json"
+  ],
+  "notes": [
+    "This gate keeps the system claim narrower than the mechanism claim.",
+    "Geometry speedup is evaluated from the existing M2 benchmark; bytecode/spec timings are profiled on the current positive D0 suites.",
+    "A negative or mixed systems result is still evidence because it constrains any later frontend widening."
+  ],
+  "geometry_summary": {
+    "row_count": 4,
+    "history_sizes": [
+      128,
+      512,
+      2048,
+      8192
+    ],
+    "median_cache_speedup_vs_bruteforce": 171.0690374194566,
+    "min_cache_speedup_vs_bruteforce": 42.784441426508494,
+    "max_cache_speedup_vs_bruteforce": 249.15020940668325,
+    "speedup_grows_with_history": true,
+    "all_cache_rows_faster_than_bruteforce": true,
+    "cache_seconds": [
+      0.037515100033488125,
+      0.05115379998460412,
+      0.11790379998274148,
+      0.4293399999733083
+    ],
+    "brute_force_seconds": [
+      1.6050625999923795,
+      6.220118800003547,
+      26.00269950000802,
+      106.97015090001514
+    ]
+  },
+  "runtime_summary": {
+    "case_count": 25,
+    "median_bytecode_ns_per_step": 6028.378659204857,
+    "median_lowered_ns_per_step": 6457.766997221025,
+    "median_spec_ns_per_step": 3540.0036722421646,
+    "median_verification_microseconds": 88.90009485185146,
+    "by_suite": [
+      {
+        "suite": "control_flow",
+        "case_count": 5,
+        "median_bytecode_ns_per_step": 5941.200070083141,
+        "median_lowered_ns_per_step": 5889.230837615636,
+        "median_spec_ns_per_step": 3426.9232016343335
+      },
+      {
+        "suite": "loops",
+        "case_count": 7,
+        "median_bytecode_ns_per_step": 5809.090885310627,
+        "median_lowered_ns_per_step": 6457.766997221025,
+        "median_spec_ns_per_step": 3471.377093101973
+      },
+      {
+        "suite": "memory",
+        "case_count": 3,
+        "median_bytecode_ns_per_step": 6033.340469002724,
+        "median_lowered_ns_per_step": 6716.6790055731935,
+        "median_spec_ns_per_step": 3766.6759453713894
+      },
+      {
+        "suite": "smoke",
+        "case_count": 7,
+        "median_bytecode_ns_per_step": 5900.006120403607,
+        "median_lowered_ns_per_step": 6733.345799148083,
+        "median_spec_ns_per_step": 3833.3237171173096
+      },
+      {
+        "suite": "stress_reference",
+        "case_count": 3,
+        "median_bytecode_ns_per_step": 6157.626650469788,
+        "median_lowered_ns_per_step": 6598.788031348677,
+        "median_spec_ns_per_step": 3307.3448234022003
+      }
+    ]
+  },
+  "gate_summary": {
+    "gate_status": "asymptotic_positive_but_end_to_end_not_yet_competitive",
+    "geometry_positive": true,
+    "lowered_ratio_vs_best_reference": 1.8242260729438198,
+    "reasons": [
+      "Geometry benchmark still shows a clear and growing cache-vs-bruteforce speedup.",
+      "Lowered exec_trace remains slower than the best current reference/oracle path on current-scope median ns/step."
+    ],
+    "what_is_missing": [
+      "broader end-to-end cost comparisons against any future widened frontend",
+      "cost attribution beyond the current interpreter/lowered/spec paths"
+    ]
+  },
+  "decision_table": [
+    {
+      "question": "Does specialized retrieval still buy an asymptotic advantage on the current geometry benchmark?",
+      "status": "yes",
+      "evidence": "results/M2_geometry_core/benchmark_geometry.json"
+    },
+    {
+      "question": "Is the lowered exec_trace path already end-to-end competitive with the best current reference path?",
+      "status": "not_yet",
+      "evidence": "results/R2_systems_baseline_gate/runtime_profile_rows.csv"
+    },
+    {
+      "question": "Should frontend widening proceed before another systems pass?",
+      "status": "no",
+      "evidence": "results/R2_systems_baseline_gate/summary.json"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "experiment": "r1_precision_mechanism_closure",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/M4_precision_scaling_real_traces/horizon_base_sweep.json",
+    "results/M4_precision_generalization/screening.json",
+    "results/M4_precision_generalization/boundary_sweep.json",
+    "results/M4_precision_organic_traces/claim_impact.json"
+  ],
+  "summary": {
+    "target_claim": "C3e",
+    "claim_update": "narrowed_positive_with_boundary",
+    "row_count": 924,
+    "stream_count": 25,
+    "family_count": 14,
+    "scheme_slice_count": 6,
+    "single_head_failure_stream_count": 12,
+    "single_head_failure_at_1x_stream_count": 7,
+    "stable_decomposition_stream_count": 25,
+    "observed_failure_type_counts": [
+      {
+        "failure_type": "tie_collapse",
+        "count": 68
+      }
+    ],
+    "caption_facts": [
+      "narrowed_positive_with_boundary",
+      "the organic-trace milestone reuses the current broadened M4-E batch instead of silently re-running an equivalent suite under a new name.",
+      "Single-head failure now appears on 12/25 tracked streams; 7 fail immediately at 1x.",
+      "At least one decomposition configuration remains fully passing on 25/25 tracked streams."
+    ],
+    "distilled_boundary": {
+      "helps_here": [
+        "Decomposition helps on the currently exported memory-heavy streams where single-head fails early."
+      ],
+      "unproven_here": [
+        "The current suite does not justify universal base/horizon claims across unseen trace families."
+      ],
+      "unsupported_here": [
+        "No current result supports broad long-horizon precision robustness beyond the validated suite."
+      ]
+    }
+  }
+}

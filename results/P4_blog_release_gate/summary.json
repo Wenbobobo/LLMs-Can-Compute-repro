@@ -1,0 +1,58 @@
+{
+  "experiment": "p4_blog_release_gate",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "README.md",
+    ".gitignore",
+    "docs/milestones/P2_public_research_packaging/artifact_release_ledger.md",
+    "docs/publication_record/blog_outline.md",
+    "results/P3_paper_freeze_and_evidence_mapping/summary.json",
+    "results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json",
+    "results/M7_frontend_candidate_decision/decision_summary.json"
+  ],
+  "summary": {
+    "release_status": "blog_blocked_readme_only",
+    "blog_authorized": false,
+    "readme_posture": "restrained_research_landing_page_allowed",
+    "checklist_item_count": 7,
+    "checklist_pass_count": 6,
+    "checklist_blocked_count": 1,
+    "blocked_items": [
+      "blog_release_authorized"
+    ],
+    "claim_audit_row_count": 8,
+    "blocked_claim_count": 7,
+    "required_before_blog": [
+      "another systems pass that makes widened execution competitive on the chosen scope",
+      "an explicit new claim/evidence mapping update for any widened frontend",
+      "a public-safe narrative that does not collapse D0 into arbitrary language or runtime claims"
+    ]
+  }
+}

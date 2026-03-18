@@ -1,0 +1,79 @@
+{
+  "experiment": "m7_frontend_candidate_matrix",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "candidate_id": "stay_on_tiny_typed_bytecode",
+      "label": "Stay on tiny typed bytecode",
+      "decision": "selected",
+      "claim_delta": "none",
+      "systems_readiness": "acceptable",
+      "paper_scope_alignment": "preserves the frozen paper-grade claim set",
+      "blocked_by": [],
+      "rationale": [
+        "P3 already freezes the current paper scope without missing best-evidence paths.",
+        "R1 closes as `narrowed_positive_with_boundary`: decomposition is useful on the current validated suite, but the result is still a boundary statement.",
+        "R2 remains `asymptotic_positive_but_end_to_end_not_yet_competitive`, so frontend widening would outrun the current systems evidence."
+      ]
+    },
+    {
+      "candidate_id": "minimal_frontend_widening",
+      "label": "Approve one minimal next frontend candidate",
+      "decision": "blocked",
+      "claim_delta": "would require a new scope statement plus another evidence-mapping pass",
+      "systems_readiness": "not_ready",
+      "paper_scope_alignment": "would widen the current endpoint beyond the frozen D0 boundary",
+      "blocked_by": [
+        "current-scope systems gate is not yet positive",
+        "current unsupported-claim ledger still blocks broader compiled-demo wording"
+      ],
+      "rationale": [
+        "Minimal widening is not selected by default because the current repository already has a complete paper-safe endpoint.",
+        "The unsupported-claim ledger still includes broader compiled-demo widening and current-scope runtime superiority."
+      ]
+    },
+    {
+      "candidate_id": "demo_first_public_widening",
+      "label": "Promote a broader demo-first frontend now",
+      "decision": "rejected",
+      "claim_delta": "would overstate the present scientific scope",
+      "systems_readiness": "not_ready",
+      "paper_scope_alignment": "conflicts with the paper-first gate",
+      "blocked_by": [
+        "unsupported general-LLM and arbitrary-C claims remain explicit no-go areas",
+        "blog/demo narrative is downstream of paper-grade evidence"
+      ],
+      "rationale": [
+        "The current project goal is a narrow execution-substrate reproduction, not a presentation-first demo.",
+        "A broader demo would blur the distinction between mechanism evidence and broader language/runtime claims."
+      ]
+    }
+  ]
+}

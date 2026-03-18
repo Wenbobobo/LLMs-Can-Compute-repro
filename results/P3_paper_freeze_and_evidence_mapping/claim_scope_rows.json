@@ -1,0 +1,167 @@
+{
+  "experiment": "p3_claim_scope_rows",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "claim_layer": "A1 Append-only trace substrate",
+      "current_status": "validated on current toy programs",
+      "best_evidence": [
+        {
+          "path": "docs/claims_matrix.md",
+          "exists": true
+        },
+        {
+          "path": "results/",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": []
+    },
+    {
+      "claim_layer": "B1 Exact 2D hard-max retrieval",
+      "current_status": "validated on current geometry core",
+      "best_evidence": [
+        {
+          "path": "results/M2_geometry_core/benchmark_geometry.json",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": []
+    },
+    {
+      "claim_layer": "C2f Staged pointer bridge",
+      "current_status": "partial positive with caveat",
+      "best_evidence": [
+        {
+          "path": "results/M4_staged_pointer_decoder/summary.json",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": [
+        {
+          "path": "results/M4_mask_dependence_executor_gap/",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "claim_layer": "C2g Pointer-space softmax negative control",
+      "current_status": "validated negative control",
+      "best_evidence": [
+        {
+          "path": "results/M5_pointer_baseline/training_run.json",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": []
+    },
+    {
+      "claim_layer": "C2h Staged mask-dependence closure",
+      "current_status": "negative closure with provenance separation",
+      "best_evidence": [
+        {
+          "path": "results/M4_mask_dependence_executor_gap/summary.json",
+          "exists": true
+        },
+        {
+          "path": "results/M4_failure_provenance/summary.json",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": []
+    },
+    {
+      "claim_layer": "C3d Real-trace horizon/base precision",
+      "current_status": "partial positive on current suite",
+      "best_evidence": [
+        {
+          "path": "results/M4_precision_scaling_real_traces/horizon_base_sweep.json",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": [
+        {
+          "path": "results/M4_precision_organic_traces/",
+          "exists": true
+        }
+      ]
+    },
+    {
+      "claim_layer": "C3e Broader real-trace precision taxonomy",
+      "current_status": "partial positive with sharper boundary and dedicated organic bundle",
+      "best_evidence": [
+        {
+          "path": "results/M4_precision_generalization/screening.json",
+          "exists": true
+        },
+        {
+          "path": "results/M4_precision_organic_traces/claim_impact.json",
+          "exists": true
+        },
+        {
+          "path": "results/R1_precision_mechanism_closure/summary.json",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": []
+    },
+    {
+      "claim_layer": "D0 First compiled frontend boundary",
+      "current_status": "current tiny typed bytecode remains the compiled endpoint; the frozen slice is implemented, survives one stress/reference follow-up with a standalone spec oracle and synced companion memory-surface diagnostics, and is explicitly not widened by `M7`",
+      "best_evidence": [
+        {
+          "path": "results/M6_typed_bytecode_harness/verifier_rows.json",
+          "exists": true
+        },
+        {
+          "path": "results/M6_typed_bytecode_harness/short_exact_trace.json",
+          "exists": true
+        },
+        {
+          "path": "results/M6_typed_bytecode_harness/long_exact_final_state.json",
+          "exists": true
+        },
+        {
+          "path": "results/M6_memory_surface_followup/summary.json",
+          "exists": true
+        },
+        {
+          "path": "results/M6_stress_reference_followup/summary.json",
+          "exists": true
+        },
+        {
+          "path": "results/M7_frontend_candidate_decision/decision_summary.json",
+          "exists": true
+        }
+      ],
+      "next_evidence_target": []
+    }
+  ]
+}

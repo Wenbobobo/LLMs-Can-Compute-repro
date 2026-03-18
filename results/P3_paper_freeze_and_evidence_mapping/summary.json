@@ -1,0 +1,44 @@
+{
+  "experiment": "p3_paper_freeze_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "claim_row_count": 8,
+    "current_evidence_entry_count": 17,
+    "planned_target_entry_count": 0,
+    "unsupported_claim_count": 6,
+    "blocked_figure_or_table_items": [],
+    "claims_missing_complete_best_evidence": []
+  },
+  "next_gate_docs": [
+    "docs/milestones/R1_precision_mechanism_closure/",
+    "docs/milestones/R2_systems_baseline_gate/",
+    "docs/milestones/M7_frontend_candidate_decision/"
+  ]
+}

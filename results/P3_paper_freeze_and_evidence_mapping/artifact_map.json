@@ -1,0 +1,137 @@
+{
+  "experiment": "p3_artifact_map",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "sections": {
+    "current_evidence": [
+      {
+        "claim_id": "C2e",
+        "path": "results/M4_factorized_event_decoder/summary.json",
+        "path_exists": true,
+        "description": "Direct factorized event-value decoder: nontrivial teacher-forced accuracy, weak free-running rollout."
+      },
+      {
+        "claim_id": "C2f",
+        "path": "results/M4_staged_pointer_decoder/summary.json",
+        "path_exists": true,
+        "description": "Staged pointer decoder with structural, `opcode_shape`, and `opcode_legal` rollout on the harder held-out slice including `alternating_memory_loop`."
+      },
+      {
+        "claim_id": "C2g",
+        "path": "results/M5_pointer_baseline/training_run.json",
+        "path_exists": true,
+        "description": "Pointer-space softmax baseline: structural and `opcode_shape` remain the valid comparison regimes; `opcode_legal` stays diagnostic only."
+      },
+      {
+        "claim_id": "C2h",
+        "path": "results/M4_mask_dependence_executor_gap/summary.json",
+        "path_exists": true,
+        "description": "Expanded staged-mask batch: held-out `opcode_shape` collapses on the broader suite, while `opcode_legal` remains exact; cleaned failures split between `push_expr_0` trace mismatches and `step_budget` nontermination, so no fourth regime is justified."
+      },
+      {
+        "claim_id": "C2h",
+        "path": "results/M4_failure_provenance/summary.json",
+        "path_exists": true,
+        "description": "Provenance follow-up: the earlier held-out `opcode_shape` `step_budget` rows are downstream nontermination after first semantic divergence, not a third root-cause family beside `push_expr_0`."
+      },
+      {
+        "claim_id": "C3c",
+        "path": "results/M4_precision_scaling_real_traces/summary.json",
+        "path_exists": true,
+        "description": "Real offset traces reproduce the single-head precision failure mode."
+      },
+      {
+        "claim_id": "C3d",
+        "path": "results/M4_precision_scaling_real_traces/horizon_base_sweep.json",
+        "path_exists": true,
+        "description": "Horizon/base sweep over loop, ping-pong, and alternating offset streams."
+      },
+      {
+        "claim_id": "C3e",
+        "path": "results/M4_precision_generalization/screening.json",
+        "path_exists": true,
+        "description": "Broader real-trace suite: new high-address memory families fail at `1x`, while stack depth remains easier at `64` and begins to fail by `256`."
+      },
+      {
+        "claim_id": "C3e",
+        "path": "results/M4_precision_generalization/boundary_sweep.json",
+        "path_exists": true,
+        "description": "Boundary sweep: decomposition remains strong on the new memory families, while the deeper exported stack stream tightens the stable-base story."
+      },
+      {
+        "claim_id": "C3e",
+        "path": "results/M4_precision_organic_traces/claim_impact.json",
+        "path_exists": true,
+        "description": "Dedicated organic-trace bundle: same broadened evidence is now indexed under one explicit claim-impact artifact for later paper/README use."
+      },
+      {
+        "claim_id": "C3e",
+        "path": "results/R1_precision_mechanism_closure/summary.json",
+        "path_exists": true,
+        "description": "Unified precision closure: single-head failures are common on the tracked suite, decomposition stays useful on current validated rows, and broader robustness claims remain blocked."
+      },
+      {
+        "claim_id": "D0",
+        "path": "results/M6_typed_bytecode_harness/verifier_rows.json",
+        "path_exists": true,
+        "description": "Current tiny-bytecode verifier batch: twenty-two valid programs pass, and seven negative controls fail deterministically with first-error reports."
+      },
+      {
+        "claim_id": "D0",
+        "path": "results/M6_typed_bytecode_harness/short_exact_trace.json",
+        "path_exists": true,
+        "description": "Current exact-trace harness batch: sixteen short/medium programs, including the control-flow-first `call` / `ret` rows, match the lowered `exec_trace` path exactly."
+      },
+      {
+        "claim_id": "D0",
+        "path": "results/M6_typed_bytecode_harness/long_exact_final_state.json",
+        "path_exists": true,
+        "description": "Current long-row harness batch: six longer programs also match exactly through final state."
+      },
+      {
+        "claim_id": "D0",
+        "path": "results/M6_memory_surface_followup/summary.json",
+        "path_exists": true,
+        "description": "Diagnostic memory-surface follow-up: the same call/ret bytecode slice now has six annotated rows and two deterministic negative controls, with reference-vs-lowered surface views still matching exactly."
+      },
+      {
+        "claim_id": "D0",
+        "path": "results/M6_stress_reference_followup/summary.json",
+        "path_exists": true,
+        "description": "Stress/reference follow-up: one branch-selected helper checkpoint braid family now adds two medium exact-trace positives, one long exact-final-state positive, and two matched negatives under a standalone Python spec interpreter, while all three positive rows preserve companion memory-surface agreement."
+      },
+      {
+        "claim_id": "D0",
+        "path": "results/M7_frontend_candidate_decision/decision_summary.json",
+        "path_exists": true,
+        "description": "Frontend decision bundle: the current endpoint stays on tiny typed bytecode, frontend widening is not authorized, and any revisit now requires a fresh scope + systems case."
+      }
+    ]
+  }
+}

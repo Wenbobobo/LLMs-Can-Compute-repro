@@ -1,0 +1,1968 @@
+{
+  "experiment": "r1_stream_boundary_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "suite_bundle": "offset",
+      "stream_name": "alternating_offset_2048_memory",
+      "family": "alternating_offset_2048",
+      "program_name": "alternating_offset_2048",
+      "space": "memory",
+      "native_max_steps": 223,
+      "read_count": 63,
+      "write_count": 40,
+      "single_head_first_failure_multiplier": 1,
+      "single_head_max_passed_horizon_multiplier": null,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "alternating_offset_2048_stack",
+      "family": "alternating_offset_2048",
+      "program_name": "alternating_offset_2048",
+      "space": "stack",
+      "native_max_steps": 224,
+      "read_count": 128,
+      "write_count": 129,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "alternating_offset_256_memory",
+      "family": "alternating_offset_256",
+      "program_name": "alternating_offset_256",
+      "space": "memory",
+      "native_max_steps": 223,
+      "read_count": 63,
+      "write_count": 40,
+      "single_head_first_failure_multiplier": 16,
+      "single_head_max_passed_horizon_multiplier": 4,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "alternating_offset_256_stack",
+      "family": "alternating_offset_256",
+      "program_name": "alternating_offset_256",
+      "space": "stack",
+      "native_max_steps": 224,
+      "read_count": 128,
+      "write_count": 129,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_1024_memory",
+      "family": "loop_offset_1024",
+      "program_name": "loop_offset_1024",
+      "space": "memory",
+      "native_max_steps": 204,
+      "read_count": 38,
+      "write_count": 26,
+      "single_head_first_failure_multiplier": 1,
+      "single_head_max_passed_horizon_multiplier": null,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_1024_stack",
+      "family": "loop_offset_1024",
+      "program_name": "loop_offset_1024",
+      "space": "stack",
+      "native_max_steps": 204,
+      "read_count": 152,
+      "write_count": 153,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_256_memory",
+      "family": "loop_offset_256",
+      "program_name": "loop_offset_256",
+      "space": "memory",
+      "native_max_steps": 204,
+      "read_count": 38,
+      "write_count": 26,
+      "single_head_first_failure_multiplier": 16,
+      "single_head_max_passed_horizon_multiplier": 4,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_256_stack",
+      "family": "loop_offset_256",
+      "program_name": "loop_offset_256",
+      "space": "stack",
+      "native_max_steps": 204,
+      "read_count": 152,
+      "write_count": 153,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_4096_memory",
+      "family": "loop_offset_4096",
+      "program_name": "loop_offset_4096",
+      "space": "memory",
+      "native_max_steps": 204,
+      "read_count": 38,
+      "write_count": 26,
+      "single_head_first_failure_multiplier": 1,
+      "single_head_max_passed_horizon_multiplier": null,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_4096_stack",
+      "family": "loop_offset_4096",
+      "program_name": "loop_offset_4096",
+      "space": "stack",
+      "native_max_steps": 204,
+      "read_count": 152,
+      "write_count": 153,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_64_memory",
+      "family": "loop_offset_64",
+      "program_name": "loop_offset_64",
+      "space": "memory",
+      "native_max_steps": 204,
+      "read_count": 38,
+      "write_count": 26,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "loop_offset_64_stack",
+      "family": "loop_offset_64",
+      "program_name": "loop_offset_64",
+      "space": "stack",
+      "native_max_steps": 204,
+      "read_count": 152,
+      "write_count": 153,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_128_memory",
+      "family": "ping_pong_offset_128",
+      "program_name": "ping_pong_offset_128",
+      "space": "memory",
+      "native_max_steps": 15,
+      "read_count": 4,
+      "write_count": 4,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_128_stack",
+      "family": "ping_pong_offset_128",
+      "program_name": "ping_pong_offset_128",
+      "space": "stack",
+      "native_max_steps": 16,
+      "read_count": 11,
+      "write_count": 13,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_2048_memory",
+      "family": "ping_pong_offset_2048",
+      "program_name": "ping_pong_offset_2048",
+      "space": "memory",
+      "native_max_steps": 15,
+      "read_count": 4,
+      "write_count": 4,
+      "single_head_first_failure_multiplier": 4,
+      "single_head_max_passed_horizon_multiplier": 1,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_2048_stack",
+      "family": "ping_pong_offset_2048",
+      "program_name": "ping_pong_offset_2048",
+      "space": "stack",
+      "native_max_steps": 16,
+      "read_count": 11,
+      "write_count": 13,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_512_memory",
+      "family": "ping_pong_offset_512",
+      "program_name": "ping_pong_offset_512",
+      "space": "memory",
+      "native_max_steps": 15,
+      "read_count": 4,
+      "write_count": 4,
+      "single_head_first_failure_multiplier": 64,
+      "single_head_max_passed_horizon_multiplier": 16,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_512_stack",
+      "family": "ping_pong_offset_512",
+      "program_name": "ping_pong_offset_512",
+      "space": "stack",
+      "native_max_steps": 16,
+      "read_count": 11,
+      "write_count": 13,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_8192_memory",
+      "family": "ping_pong_offset_8192",
+      "program_name": "ping_pong_offset_8192",
+      "space": "memory",
+      "native_max_steps": 15,
+      "read_count": 4,
+      "write_count": 4,
+      "single_head_first_failure_multiplier": 1,
+      "single_head_max_passed_horizon_multiplier": null,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "offset",
+      "stream_name": "ping_pong_offset_8192_stack",
+      "family": "ping_pong_offset_8192",
+      "program_name": "ping_pong_offset_8192",
+      "space": "stack",
+      "native_max_steps": 16,
+      "read_count": 11,
+      "write_count": 13,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "boundary"
+      ],
+      "decomposition_row_count": 32
+    },
+    {
+      "suite_bundle": "organic",
+      "stream_name": "flagged_indirect_accumulator_10_a1024_memory",
+      "family": "flagged_indirect_accumulator",
+      "program_name": "flagged_indirect_accumulator_10_a1024",
+      "space": "memory",
+      "native_max_steps": 212,
+      "read_count": 73,
+      "write_count": 36,
+      "single_head_first_failure_multiplier": 1,
+      "single_head_max_passed_horizon_multiplier": null,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary",
+        "screening"
+      ],
+      "decomposition_row_count": 40
+    },
+    {
+      "suite_bundle": "organic",
+      "stream_name": "hotspot_memory_rewrite_12_a2048_memory",
+      "family": "hotspot_memory_rewrite",
+      "program_name": "hotspot_memory_rewrite_12_a2048",
+      "space": "memory",
+      "native_max_steps": 269,
+      "read_count": 64,
+      "write_count": 41,
+      "single_head_first_failure_multiplier": 1,
+      "single_head_max_passed_horizon_multiplier": null,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary",
+        "screening"
+      ],
+      "decomposition_row_count": 40
+    },
+    {
+      "suite_bundle": "organic",
+      "stream_name": "selector_checkpoint_bank_9_a1536_memory",
+      "family": "selector_checkpoint_bank",
+      "program_name": "selector_checkpoint_bank_9_a1536",
+      "space": "memory",
+      "native_max_steps": 304,
+      "read_count": 85,
+      "write_count": 45,
+      "single_head_first_failure_multiplier": 1,
+      "single_head_max_passed_horizon_multiplier": null,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary",
+        "screening"
+      ],
+      "decomposition_row_count": 40
+    },
+    {
+      "suite_bundle": "organic",
+      "stream_name": "stack_fanout_sum_256_v1_stack",
+      "family": "stack_fanout_sum",
+      "program_name": "stack_fanout_sum_256_v1",
+      "space": "stack",
+      "native_max_steps": 510,
+      "read_count": 510,
+      "write_count": 511,
+      "single_head_first_failure_multiplier": 4,
+      "single_head_max_passed_horizon_multiplier": 1,
+      "single_head_failure_types": [
+        "tie_collapse"
+      ],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": false,
+          "max_passed_horizon_multiplier": 16,
+          "first_failure_multiplier": 64
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 128,
+          "all_rows_passed": false,
+          "max_passed_horizon_multiplier": 4,
+          "first_failure_multiplier": 16
+        },
+        {
+          "scheme": "block_recentered",
+          "base": 256,
+          "all_rows_passed": false,
+          "max_passed_horizon_multiplier": 1,
+          "first_failure_multiplier": 4
+        },
+        {
+          "scheme": "radix2",
+          "base": 32,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": false,
+          "max_passed_horizon_multiplier": 16,
+          "first_failure_multiplier": 64
+        },
+        {
+          "scheme": "radix2",
+          "base": 128,
+          "all_rows_passed": false,
+          "max_passed_horizon_multiplier": 4,
+          "first_failure_multiplier": 16
+        },
+        {
+          "scheme": "radix2",
+          "base": 256,
+          "all_rows_passed": false,
+          "max_passed_horizon_multiplier": 1,
+          "first_failure_multiplier": 4
+        }
+      ],
+      "observed_failure_types": [
+        "tie_collapse"
+      ],
+      "stages_present": [
+        "boundary",
+        "screening"
+      ],
+      "decomposition_row_count": 40
+    },
+    {
+      "suite_bundle": "organic",
+      "stream_name": "stack_fanout_sum_64_v1_stack",
+      "family": "stack_fanout_sum",
+      "program_name": "stack_fanout_sum_64_v1",
+      "space": "stack",
+      "native_max_steps": 126,
+      "read_count": 126,
+      "write_count": 127,
+      "single_head_first_failure_multiplier": null,
+      "single_head_max_passed_horizon_multiplier": 64,
+      "single_head_failure_types": [],
+      "decomposition_has_fully_passing_config": true,
+      "stable_configs": [
+        {
+          "scheme": "block_recentered",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        },
+        {
+          "scheme": "radix2",
+          "base": 64,
+          "all_rows_passed": true,
+          "max_passed_horizon_multiplier": 64,
+          "first_failure_multiplier": null
+        }
+      ],
+      "observed_failure_types": [],
+      "stages_present": [
+        "screening"
+      ],
+      "decomposition_row_count": 8
+    }
+  ]
+}

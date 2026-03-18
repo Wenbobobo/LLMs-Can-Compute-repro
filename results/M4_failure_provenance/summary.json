@@ -1,0 +1,176 @@
+{
+  "experiment": "m4_failure_provenance",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "notes": [
+    "This batch keeps the staged checkpoint family fixed and asks whether step-budget rows are primary failures or downstream symptoms.",
+    "The exporter captures the produced prefix before runtime failure so first semantic divergence can be recovered.",
+    "No new decode regime is introduced here; the goal is attribution rather than rescue."
+  ],
+  "mask_modes": {
+    "structural": {
+      "train_programs": {
+        "program_count": 20,
+        "failed_program_count": 18,
+        "by_provenance_class": [
+          {
+            "provenance_class": "control_flow_root_cause",
+            "count": 5
+          },
+          {
+            "provenance_class": "downstream_nontermination_after_semantic_error",
+            "count": 9
+          },
+          {
+            "provenance_class": "memory_address_root_cause",
+            "count": 2
+          },
+          {
+            "provenance_class": "memory_value_root_cause",
+            "count": 2
+          }
+        ],
+        "by_root_cause_head": [
+          {
+            "root_cause_head": "branch_expr",
+            "count": 2
+          },
+          {
+            "root_cause_head": "memory_read_address_expr",
+            "count": 2
+          },
+          {
+            "root_cause_head": "next_pc_mode",
+            "count": 4
+          },
+          {
+            "root_cause_head": "push_expr_0",
+            "count": 10
+          }
+        ]
+      },
+      "heldout_programs": {
+        "program_count": 15,
+        "failed_program_count": 15,
+        "by_provenance_class": [
+          {
+            "provenance_class": "control_flow_root_cause",
+            "count": 5
+          },
+          {
+            "provenance_class": "downstream_nontermination_after_semantic_error",
+            "count": 5
+          },
+          {
+            "provenance_class": "memory_address_root_cause",
+            "count": 2
+          },
+          {
+            "provenance_class": "memory_value_root_cause",
+            "count": 3
+          }
+        ],
+        "by_root_cause_head": [
+          {
+            "root_cause_head": "branch_expr",
+            "count": 3
+          },
+          {
+            "root_cause_head": "memory_read_address_expr",
+            "count": 2
+          },
+          {
+            "root_cause_head": "next_pc_mode",
+            "count": 2
+          },
+          {
+            "root_cause_head": "push_expr_0",
+            "count": 8
+          }
+        ]
+      }
+    },
+    "opcode_shape": {
+      "train_programs": {
+        "program_count": 20,
+        "failed_program_count": 16,
+        "by_provenance_class": [
+          {
+            "provenance_class": "downstream_nontermination_after_semantic_error",
+            "count": 14
+          },
+          {
+            "provenance_class": "memory_value_root_cause",
+            "count": 2
+          }
+        ],
+        "by_root_cause_head": [
+          {
+            "root_cause_head": "push_expr_0",
+            "count": 16
+          }
+        ]
+      },
+      "heldout_programs": {
+        "program_count": 15,
+        "failed_program_count": 15,
+        "by_provenance_class": [
+          {
+            "provenance_class": "downstream_nontermination_after_semantic_error",
+            "count": 7
+          },
+          {
+            "provenance_class": "memory_value_root_cause",
+            "count": 8
+          }
+        ],
+        "by_root_cause_head": [
+          {
+            "root_cause_head": "push_expr_0",
+            "count": 15
+          }
+        ]
+      }
+    },
+    "opcode_legal": {
+      "train_programs": {
+        "program_count": 20,
+        "failed_program_count": 0,
+        "by_provenance_class": [],
+        "by_root_cause_head": []
+      },
+      "heldout_programs": {
+        "program_count": 15,
+        "failed_program_count": 0,
+        "by_provenance_class": [],
+        "by_root_cause_head": []
+      }
+    }
+  }
+}
