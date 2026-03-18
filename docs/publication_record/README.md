@@ -12,6 +12,10 @@ Core ledgers:
   claims;
 - `manuscript_section_map.md` — current section-to-artifact ownership for the
   paper lane;
+- `figure_table_narrative_roles.md` — fixed argumentative role for each current
+  main-text figure and table;
+- `appendix_boundary_map.md` — explicit main-text versus appendix boundary for
+  companion artifacts;
 - `figure_backlog.md` — reserved future figures and tables;
 - `experiment_manifest.md` — reproducibility ledger for unattended runs;
 - `threats_to_validity.md` — constraints, caveats, and external-threat notes;
