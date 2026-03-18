@@ -10,6 +10,8 @@ Core ledgers:
   open;
 - `claim_evidence_table.md` — concrete artifacts already supporting published
   claims;
+- `manuscript_section_map.md` — current section-to-artifact ownership for the
+  paper lane;
 - `figure_backlog.md` — reserved future figures and tables;
 - `experiment_manifest.md` — reproducibility ledger for unattended runs;
 - `threats_to_validity.md` — constraints, caveats, and external-threat notes;
