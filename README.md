@@ -33,8 +33,8 @@ arbitrary C has been reproduced, or that presentation-first demos are evidence.
 - `M7` keeps the compiled endpoint at the current tiny typed-bytecode boundary.
 - `P4` allows the README to remain a restrained landing page and keeps the blog blocked.
 
-The next engineering work is applying the recorded release-hygiene commit split
-and any future systems revisit, not frontend widening or demo-first expansion.
+The next engineering work is paper-lane assembly and any future systems revisit,
+not frontend widening or demo-first expansion.
 
 ## Start Here
 

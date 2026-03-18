@@ -39,27 +39,14 @@
   ],
   "summary": {
     "branch": "main...origin/main",
-    "changed_path_count": 133,
-    "modified_path_count": 42,
-    "untracked_path_count": 91,
+    "changed_path_count": 0,
+    "modified_path_count": 0,
+    "untracked_path_count": 0,
     "public_surface_check_count": 7,
     "public_surface_pass_count": 7,
     "public_surface_blocked_count": 0,
     "blocked_checks": [],
-    "nonempty_commit_groups": [
-      {
-        "group_id": "docs_results_sync",
-        "path_count": 93
-      },
-      {
-        "group_id": "experiments_and_runtime",
-        "path_count": 30
-      },
-      {
-        "group_id": "release_surface_cleanup",
-        "path_count": 10
-      }
-    ],
-    "recommended_next_action": "apply the recorded commit split before the next outward sync"
+    "nonempty_commit_groups": [],
+    "recommended_next_action": "worktree is already clean"
   }
 }

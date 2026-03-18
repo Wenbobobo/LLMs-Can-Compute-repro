@@ -39,14 +39,14 @@
 - R2 systems gate: the first explicit systems baseline now exists under `results/R2_systems_baseline_gate/`; geometry remains strongly positive, but the lowered `exec_trace` path is not yet end-to-end competitive on the current positive `D0` suites
 - M7 frontend candidate decision: `results/M7_frontend_candidate_decision/` now records the explicit no-go outcome — stay on tiny typed bytecode, do not widen the frontend on current evidence
 - P4 blog release gate: `results/P4_blog_release_gate/` now records the outward-release audit — README may stay restrained, but the blog remains blocked
-- H0 release hygiene: `results/H0_repo_consolidation_and_release_hygiene/` now records the dirty-worktree audit, public-surface audit, and preferred commit split for the next outward sync
+- H0 release hygiene: `results/H0_repo_consolidation_and_release_hygiene/` now records the clean-worktree checkpoint after the split was applied, with zero blocked public-surface checks
 - Runtime environment export: Python `3.12.9`, `torch==2.10.0+cu128`, and CUDA device info are recorded under `results/runtime_environment.json`
 - Packaging fix: renamed the trace package to avoid the Python stdlib conflict
 - Public GitHub repo created and initial push completed
 
 ## Immediate Next Actions
 
-1. Apply the `H0` commit split before the next outward sync; the preferred groups are now machine-readable rather than ad hoc.
+1. Start the paper lane in the dedicated `paper` worktree and turn the frozen claim set into a manuscript skeleton.
 2. Keep `README.md`, `STATUS.md`, and `docs/publication_record/` synchronized with the completed `P3` → `P4` gate chain and its unsupported-claim ledger.
 3. Reopen `R1` or `R2` only if the project deliberately wants a stronger systems or precision case; otherwise keep the current `D0` endpoint fixed.
 4. Treat any future frontend widening as a fresh scope change that must satisfy the `M7` revisit prerequisites before implementation starts.
@@ -56,5 +56,5 @@
 
 - Broader compiled-demo work remains blocked by the completed `M7` no-go decision: the current tiny typed-bytecode `D0` slice is the endpoint on present evidence.
 - Broader outward narrative remains blocked by the completed `P4` gate: README is acceptable, but a blog would currently outrun the claim/evidence bundle.
-- Public release hygiene is now diagnosed but not yet applied: `H0` records the preferred commit split, but the current large dirty tree still needs that split before the next outward release checkpoint.
+- Public release hygiene itself is no longer a blocker on `main`; the remaining operational question is what to build next inside the now-separated worktrees.
 - Scientific uncertainty remains concentrated in three places: precision closure on longer organic/real traces, the system-level baseline story for specialized retrieval/runtime choices, and the discipline required to keep staged-pointer / typed-bytecode results from being overstated.

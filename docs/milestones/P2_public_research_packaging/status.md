@@ -14,7 +14,8 @@ Provisioned on 2026-03-18 to capture the publication readiness effort immediatel
 - the release ledger now also includes the `M7` decision bundle and the `P4`
   release gate, so the current public-safe posture is explicit rather than
   implied;
-- the `H0` release-hygiene snapshot now exists too, so the next packaging work
-  is to apply the recorded commit split rather than to rediscover it;
+- the `H0` release-hygiene snapshot now records a clean main worktree after the
+  split was applied and pushed, so the next packaging work is downstream
+  manuscript / release assembly rather than repo cleanup;
 - the blog remains locked after the completed `M7` / `P4` no-go outcome, but
   the future blog/paper outline is documented here for quick reference.
