@@ -12,6 +12,8 @@ Core ledgers:
   claims;
 - `manuscript_section_map.md` — current section-to-artifact ownership for the
   paper lane;
+- `section_caption_notes.md` — caption-ready section notes and phrasing
+  guardrails for the current manuscript skeleton;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
   main-text figure and table;
 - `appendix_boundary_map.md` — explicit main-text versus appendix boundary for

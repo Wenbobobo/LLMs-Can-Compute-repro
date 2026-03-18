@@ -6,4 +6,7 @@ Started on 2026-03-19 in the `paper` worktree.
 - the remaining work is manuscript assembly, not another evidence-defining
   experiment wave;
 - current section map, figure/table roles, and appendix boundaries are now
-  drafted; the next gap is turning them into caption-ready section notes.
+  drafted;
+- caption-ready section notes are now added; the next gap is moving the
+  abstract/introduction and the `R2` / `D0` sections closer to near-prose
+  manuscript stubs without widening scope.
