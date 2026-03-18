@@ -43,6 +43,8 @@ from .precision_stress import (
     sweep_precision_ranges,
 )
 from .softmax_baseline import (
+    base_tokens_for_mode,
+    baseline_bucket_name,
     build_trace_sequence,
     build_trace_sequences,
     causal_language_model_loss,
@@ -63,6 +65,7 @@ from .softmax_baseline import (
     Standard2DSoftmaxTransformer,
     summarize_trace_sequences,
     TeacherForcedMetrics,
+    TraceTokenizationMode,
     TrainingEpochStats,
     train_teacher_forced_baseline,
     TraceSequenceExample,
@@ -108,6 +111,7 @@ __all__ = [
     "SoftmaxTrainingRun",
     "Standard2DSoftmaxTransformer",
     "TeacherForcedMetrics",
+    "TraceTokenizationMode",
     "TrainingEpochStats",
     "TransitionExample",
     "TransitionRule",
@@ -115,6 +119,8 @@ __all__ = [
     "TraceSequenceStats",
     "TraceVocabulary",
     "TrainableLatestWriteScorer",
+    "base_tokens_for_mode",
+    "baseline_bucket_name",
     "build_countdown_stack_samples",
     "build_dynamic_memory_stack_samples",
     "build_transition_examples",

@@ -14,4 +14,6 @@ The current checkpoint includes:
 
 This is now a trained baseline, but not yet a strong one. The first run reaches
 nontrivial teacher-forced accuracy while still failing exact free-running
-rollout on the current eval slice.
+rollout on the current eval slice. The latest checkpoint adds a factorized
+digit-level serialization comparison; it improves vocabulary stability and
+pushes first error later, but still does not achieve exact rollout.

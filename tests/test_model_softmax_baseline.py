@@ -6,6 +6,7 @@ import pytest
 
 from exec_trace import countdown_program, dynamic_memory_program, equality_branch_program
 from model.softmax_baseline import (
+    base_tokens_for_mode,
     build_trace_sequence,
     build_trace_sequences,
     encode_trace_examples,
@@ -55,6 +56,26 @@ def test_event_serialization_captures_memory_annotations() -> None:
     assert any(token != "memory_write=none" for token in memory_write_tokens)
 
 
+def test_factorized_trace_sequence_exposes_stable_numeric_tokens() -> None:
+    example = build_trace_sequence(dynamic_memory_program(), tokenization_mode="factorized")
+
+    assert "<int>" in example.tokens
+    assert "</int>" in example.tokens
+    assert "<pair>" in example.tokens or "<none>" in example.tokens
+    assert example.tokenization_mode == "factorized"
+
+
+def test_factorized_vocab_can_encode_heldout_examples_from_train_only() -> None:
+    train_examples = build_trace_sequences((countdown_program(2), equality_branch_program(1, 1)), tokenization_mode="factorized")
+    heldout_examples = build_trace_sequences((countdown_program(15), dynamic_memory_program()), tokenization_mode="factorized")
+    vocabulary = TraceVocabulary.from_examples(train_examples, base_tokens=base_tokens_for_mode("factorized"))
+
+    encoded = encode_trace_examples(heldout_examples, vocabulary)
+
+    assert len(encoded) == len(heldout_examples)
+    assert all(example.tokenization_mode == "factorized" for example in encoded)
+
+
 def test_require_torch_matches_environment() -> None:
     torch_present = importlib.util.find_spec("torch") is not None
     if torch_present:
@@ -66,10 +87,17 @@ def test_require_torch_matches_environment() -> None:
 
 @pytest.mark.skipif(importlib.util.find_spec("torch") is None, reason="torch is not installed")
 def test_teacher_forced_training_pipeline_returns_metrics() -> None:
-    examples = build_trace_sequences((countdown_program(0), countdown_program(1), countdown_program(2)))
-    vocabulary = TraceVocabulary.from_examples(examples)
+    examples = build_trace_sequences((countdown_program(0), countdown_program(1), countdown_program(2)), tokenization_mode="factorized")
+    vocabulary = TraceVocabulary.from_examples(examples, base_tokens=base_tokens_for_mode("factorized"))
     encoded = encode_trace_examples(examples, vocabulary)
-    config = SoftmaxBaselineConfig(vocab_size=len(vocabulary), d_model=8, n_heads=4, n_layers=2, d_ffn=8, max_seq_len=256)
+    config = SoftmaxBaselineConfig(
+        vocab_size=len(vocabulary),
+        d_model=8,
+        n_heads=4,
+        n_layers=2,
+        d_ffn=8,
+        max_seq_len=max(len(example.token_ids) for example in encoded) + 8,
+    )
     training = SoftmaxTrainingConfig(epochs=4, batch_size=2, learning_rate=1e-2, device="cpu")
 
     run = train_teacher_forced_baseline(encoded, model_config=config, training_config=training, eval_examples=encoded)
@@ -84,10 +112,17 @@ def test_teacher_forced_training_pipeline_returns_metrics() -> None:
 
 @pytest.mark.skipif(importlib.util.find_spec("torch") is None, reason="torch is not installed")
 def test_free_running_rollout_evaluation_reports_outcomes() -> None:
-    examples = build_trace_sequences((countdown_program(0), equality_branch_program(1, 1)))
-    vocabulary = TraceVocabulary.from_examples(examples)
+    examples = build_trace_sequences((countdown_program(0), equality_branch_program(1, 1)), tokenization_mode="factorized")
+    vocabulary = TraceVocabulary.from_examples(examples, base_tokens=base_tokens_for_mode("factorized"))
     encoded = encode_trace_examples(examples, vocabulary)
-    config = SoftmaxBaselineConfig(vocab_size=len(vocabulary), d_model=8, n_heads=4, n_layers=2, d_ffn=8, max_seq_len=256)
+    config = SoftmaxBaselineConfig(
+        vocab_size=len(vocabulary),
+        d_model=8,
+        n_heads=4,
+        n_layers=2,
+        d_ffn=8,
+        max_seq_len=max(len(example.token_ids) for example in encoded) + 8,
+    )
     training = SoftmaxTrainingConfig(epochs=2, batch_size=2, learning_rate=1e-2, device="cpu")
 
     run = train_teacher_forced_baseline(encoded, model_config=config, training_config=training)

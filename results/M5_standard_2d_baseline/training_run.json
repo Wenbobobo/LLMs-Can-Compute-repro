@@ -29,393 +29,789 @@
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
   "notes": [
-    "The first runnable M5 checkpoint keeps the blog-like tiny 2D-head config and the current verbose structured trace serialization.",
-    "The vocabulary is built over the combined train/eval pool so the baseline can emit held-out structured tokens without OOV failures.",
-    "This is a conservative first baseline, not yet a clean claim about length generalization under factorized numeric tokenization."
+    "This export now compares two representation choices under the same tiny 2D-head softmax baseline.",
+    "The atomic branch keeps the original verbose whole-token serialization and still uses a train-plus-eval union vocabulary to avoid OOV failures.",
+    "The factorized branch decomposes integers into stable digit-level pieces and builds its vocabulary from train-only traces plus fixed base tokens."
   ],
   "status": "completed",
-  "device": "cuda",
-  "model_config": {
-    "vocab_size": 249,
-    "d_model": 36,
-    "n_heads": 18,
-    "n_layers": 7,
-    "d_ffn": 36,
-    "max_seq_len": 789
-  },
-  "training_config": {
-    "epochs": 30,
-    "batch_size": 4,
-    "learning_rate": 0.005,
-    "weight_decay": 0.0,
-    "seed": 0,
-    "max_grad_norm": 1.0,
-    "requested_device": null,
-    "resolved_device": "cuda"
-  },
-  "train_metrics": {
-    "loss": 0.10044311622625088,
-    "token_accuracy": 0.966120625465376,
-    "example_count": 12,
-    "token_count": 2686,
-    "by_length_bucket": [
-      {
-        "bucket": "25<=steps<=48",
-        "example_count": 2,
-        "token_count": 930,
-        "loss": 0.12081440514133822,
-        "token_accuracy": 0.9548387096774194
-      },
-      {
-        "bucket": "steps<=24",
-        "example_count": 10,
-        "token_count": 1756,
-        "loss": 0.08965422175527638,
-        "token_accuracy": 0.9720956719817767
-      }
-    ]
-  },
-  "eval_metrics": {
-    "loss": 2.8999389001438693,
-    "token_accuracy": 0.7042050691244239,
-    "example_count": 8,
-    "token_count": 3472,
-    "by_length_bucket": [
-      {
-        "bucket": "25<=steps<=48",
-        "example_count": 2,
-        "token_count": 1210,
-        "loss": 1.5924854997760993,
-        "token_accuracy": 0.8
-      },
-      {
-        "bucket": "steps<=24",
-        "example_count": 4,
-        "token_count": 772,
-        "loss": 5.862028671669837,
-        "token_accuracy": 0.5012953367875648
-      },
-      {
-        "bucket": "steps>=49",
-        "example_count": 2,
-        "token_count": 1490,
-        "loss": 2.426976021504242,
-        "token_accuracy": 0.7315436241610739
-      }
-    ]
-  },
-  "history": [
-    {
-      "epoch": 1,
-      "train_loss": 5.502381165822347,
-      "eval_loss": 4.468390686995423
-    },
-    {
-      "epoch": 2,
-      "train_loss": 3.8118115266164145,
-      "eval_loss": 3.354115246696406
-    },
-    {
-      "epoch": 3,
-      "train_loss": 2.790928284327189,
-      "eval_loss": 2.732135530715714
-    },
-    {
-      "epoch": 4,
-      "train_loss": 2.1041489044825235,
-      "eval_loss": 2.317286641882037
-    },
-    {
-      "epoch": 5,
-      "train_loss": 1.5101921955744426,
-      "eval_loss": 2.056923542703901
-    },
-    {
-      "epoch": 6,
-      "train_loss": 1.2581317623456318,
-      "eval_loss": 1.973846089215048
-    },
-    {
-      "epoch": 7,
-      "train_loss": 0.8768481214841207,
-      "eval_loss": 2.0017810811885215
-    },
-    {
-      "epoch": 8,
-      "train_loss": 0.7946816384792328,
-      "eval_loss": 2.1109716693445835
-    },
-    {
-      "epoch": 9,
-      "train_loss": 0.5616962015628815,
-      "eval_loss": 1.9804420725094833
-    },
-    {
-      "epoch": 10,
-      "train_loss": 0.4116251468658447,
-      "eval_loss": 2.0684183968514342
-    },
-    {
-      "epoch": 11,
-      "train_loss": 0.346910427014033,
-      "eval_loss": 2.3062429869470233
-    },
-    {
-      "epoch": 12,
-      "train_loss": 0.30780501166979474,
-      "eval_loss": 1.9947632634454333
-    },
-    {
-      "epoch": 13,
-      "train_loss": 0.24514939884344736,
-      "eval_loss": 2.1719611774838192
-    },
-    {
-      "epoch": 14,
-      "train_loss": 0.23802667359511057,
-      "eval_loss": 2.3728981063044565
-    },
-    {
-      "epoch": 15,
-      "train_loss": 0.18561908602714539,
-      "eval_loss": 2.183730775086973
-    },
-    {
-      "epoch": 16,
-      "train_loss": 0.16490502655506134,
-      "eval_loss": 2.144847946559092
-    },
-    {
-      "epoch": 17,
-      "train_loss": 0.15480888386567435,
-      "eval_loss": 2.2504750813275987
-    },
-    {
-      "epoch": 18,
-      "train_loss": 0.1374376912911733,
-      "eval_loss": 2.431027218373278
-    },
-    {
-      "epoch": 19,
-      "train_loss": 0.11349037289619446,
-      "eval_loss": 2.5209624327135525
-    },
-    {
-      "epoch": 20,
-      "train_loss": 0.12164267649253209,
-      "eval_loss": 2.3874897944487734
-    },
-    {
-      "epoch": 21,
-      "train_loss": 0.11436200638612111,
-      "eval_loss": 2.5991520602341898
-    },
-    {
-      "epoch": 22,
-      "train_loss": 0.11179147909084956,
-      "eval_loss": 2.608452667271899
-    },
-    {
-      "epoch": 23,
-      "train_loss": 0.09167927751938502,
-      "eval_loss": 2.8459200067488553
-    },
-    {
-      "epoch": 24,
-      "train_loss": 0.10001639276742935,
-      "eval_loss": 2.5449942006356157
-    },
-    {
-      "epoch": 25,
-      "train_loss": 0.10977588345607121,
-      "eval_loss": 2.4613928036927355
-    },
-    {
-      "epoch": 26,
-      "train_loss": 0.09644233932097752,
-      "eval_loss": 2.6088375849692227
-    },
-    {
-      "epoch": 27,
-      "train_loss": 0.0981612280011177,
-      "eval_loss": 2.692342227779775
-    },
-    {
-      "epoch": 28,
-      "train_loss": 0.0925670750439167,
-      "eval_loss": 2.665073551512259
-    },
-    {
-      "epoch": 29,
-      "train_loss": 0.07942774519324303,
-      "eval_loss": 2.6714435455470866
-    },
-    {
-      "epoch": 30,
-      "train_loss": 0.0793477048476537,
-      "eval_loss": 2.8999389001438693
-    }
-  ],
-  "group_metrics": {
-    "countdown_eval_teacher_forced": {
-      "loss": 2.0530006395445928,
-      "token_accuracy": 0.7622222222222222,
-      "example_count": 4,
-      "token_count": 2700,
-      "by_length_bucket": [
-        {
-          "bucket": "25<=steps<=48",
+  "variants": {
+    "atomic_union_vocab": {
+      "variant_name": "atomic_union_vocab",
+      "tokenization_mode": "atomic",
+      "vocab_source": "train_plus_eval",
+      "dataset_stats": {
+        "train": {
+          "example_count": 12,
+          "vocab_size": 176,
+          "min_length": 81,
+          "max_length": 501,
+          "mean_length": 224.83333333333334
+        },
+        "countdown_eval": {
+          "example_count": 4,
+          "vocab_size": 152,
+          "min_length": 571,
+          "max_length": 781,
+          "mean_length": 676
+        },
+        "branch_eval": {
           "example_count": 2,
-          "token_count": 1210,
-          "loss": 1.5924854997760993,
-          "token_accuracy": 0.8
+          "vocab_size": 81,
+          "min_length": 112,
+          "max_length": 112,
+          "mean_length": 112
+        },
+        "memory_eval": {
+          "example_count": 2,
+          "vocab_size": 142,
+          "min_length": 276,
+          "max_length": 276,
+          "mean_length": 276
+        }
+      },
+      "device": "cuda",
+      "model_config": {
+        "vocab_size": 249,
+        "d_model": 36,
+        "n_heads": 18,
+        "n_layers": 7,
+        "d_ffn": 36,
+        "max_seq_len": 789
+      },
+      "training_config": {
+        "epochs": 24,
+        "batch_size": 4,
+        "learning_rate": 0.005,
+        "weight_decay": 0.0,
+        "seed": 0,
+        "max_grad_norm": 1.0,
+        "requested_device": null,
+        "resolved_device": "cuda"
+      },
+      "train_metrics": {
+        "loss": 0.103164489843556,
+        "token_accuracy": 0.9653760238272524,
+        "example_count": 12,
+        "token_count": 2686,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "example_count": 2,
+            "token_count": 930,
+            "loss": 0.1109197403314293,
+            "token_accuracy": 0.9602150537634409
+          },
+          {
+            "bucket": "steps<=24",
+            "example_count": 10,
+            "token_count": 1756,
+            "loss": 0.09905721025715385,
+            "token_accuracy": 0.9681093394077449
+          }
+        ]
+      },
+      "eval_metrics": {
+        "loss": 2.5461295252399787,
+        "token_accuracy": 0.7237903225806451,
+        "example_count": 8,
+        "token_count": 3472,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "example_count": 2,
+            "token_count": 1210,
+            "loss": 1.4521132392331588,
+            "token_accuracy": 0.8214876033057851
+          },
+          {
+            "bucket": "steps<=24",
+            "example_count": 4,
+            "token_count": 772,
+            "loss": 5.006569028749984,
+            "token_accuracy": 0.5051813471502591
+          },
+          {
+            "bucket": "steps>=49",
+            "example_count": 2,
+            "token_count": 1490,
+            "loss": 2.1597539610510705,
+            "token_accuracy": 0.7577181208053692
+          }
+        ]
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 5.502381165822347,
+          "eval_loss": 4.468390744402662
         },
         {
-          "bucket": "steps>=49",
-          "example_count": 2,
-          "token_count": 1490,
-          "loss": 2.426976021504242,
-          "token_accuracy": 0.7315436241610739
-        }
-      ]
-    },
-    "branch_eval_teacher_forced": {
-      "loss": 0.8625729084014893,
-      "token_accuracy": 0.8828828828828829,
-      "example_count": 2,
-      "token_count": 222,
-      "by_length_bucket": [
+          "epoch": 2,
+          "train_loss": 3.8118115266164145,
+          "eval_loss": 3.3541154876557364
+        },
         {
-          "bucket": "steps<=24",
+          "epoch": 3,
+          "train_loss": 2.790928363800049,
+          "eval_loss": 2.7321354929477937
+        },
+        {
+          "epoch": 4,
+          "train_loss": 2.104148507118225,
+          "eval_loss": 2.3172872285551738
+        },
+        {
+          "epoch": 5,
+          "train_loss": 1.5102003415425618,
+          "eval_loss": 2.056974102927518
+        },
+        {
+          "epoch": 6,
+          "train_loss": 1.258594572544098,
+          "eval_loss": 1.9736744965070403
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.8769333958625793,
+          "eval_loss": 2.00716062283255
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.7863125304381052,
+          "eval_loss": 2.0805439734788536
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.5563611388206482,
+          "eval_loss": 2.002797700327388
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.4093705217043559,
+          "eval_loss": 2.046386624192862
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.3605947196483612,
+          "eval_loss": 2.1977817908375767
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.3048944026231766,
+          "eval_loss": 1.9982236096386536
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.24694610635439554,
+          "eval_loss": 2.201336811489773
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.24974958101908365,
+          "eval_loss": 2.223503716942352
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.20409638186295828,
+          "eval_loss": 2.265659322112387
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.16743087271849313,
+          "eval_loss": 2.2852296035582293
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.17555826405684152,
+          "eval_loss": 2.3379883920336098
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.1519927183787028,
+          "eval_loss": 2.3742587971007496
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.1445615068078041,
+          "eval_loss": 2.468077041140075
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.12590460727612177,
+          "eval_loss": 2.411358204425617
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.1155967190861702,
+          "eval_loss": 2.4954921996332535
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.21069082617759705,
+          "eval_loss": 2.599146639198614
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.1224560687939326,
+          "eval_loss": 2.5283290208896734
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.12750379741191864,
+          "eval_loss": 2.5461295252399787
+        }
+      ],
+      "group_metrics": {
+        "countdown_eval_teacher_forced": {
+          "loss": 1.8426260820141545,
+          "token_accuracy": 0.7862962962962963,
+          "example_count": 4,
+          "token_count": 2700,
+          "by_length_bucket": [
+            {
+              "bucket": "25<=steps<=48",
+              "example_count": 2,
+              "token_count": 1210,
+              "loss": 1.4521132392331588,
+              "token_accuracy": 0.8214876033057851
+            },
+            {
+              "bucket": "steps>=49",
+              "example_count": 2,
+              "token_count": 1490,
+              "loss": 2.1597539610510705,
+              "token_accuracy": 0.7577181208053692
+            }
+          ]
+        },
+        "branch_eval_teacher_forced": {
+          "loss": 0.9109431803226471,
+          "token_accuracy": 0.8603603603603603,
           "example_count": 2,
           "token_count": 222,
-          "loss": 0.8625729084014893,
-          "token_accuracy": 0.8828828828828829
-        }
-      ]
-    },
-    "memory_eval_teacher_forced": {
-      "loss": 7.879990816116333,
-      "token_accuracy": 0.3472727272727273,
-      "example_count": 2,
-      "token_count": 550,
-      "by_length_bucket": [
-        {
-          "bucket": "steps<=24",
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "token_count": 222,
+              "loss": 0.9109431803226471,
+              "token_accuracy": 0.8603603603603603
+            }
+          ]
+        },
+        "memory_eval_teacher_forced": {
+          "loss": 6.659712553024292,
+          "token_accuracy": 0.3618181818181818,
           "example_count": 2,
           "token_count": 550,
-          "loss": 7.879990816116333,
-          "token_accuracy": 0.3472727272727273
-        }
-      ]
-    },
-    "countdown_eval_rollout": {
-      "exact_sequence_accuracy": 0.0,
-      "example_count": 4,
-      "by_length_bucket": [
-        {
-          "bucket": "25<=steps<=48",
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "token_count": 550,
+              "loss": 6.659712553024292,
+              "token_accuracy": 0.3618181818181818
+            }
+          ]
+        },
+        "countdown_eval_rollout": {
+          "exact_sequence_accuracy": 0.0,
+          "example_count": 4,
+          "by_length_bucket": [
+            {
+              "bucket": "25<=steps<=48",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            },
+            {
+              "bucket": "steps>=49",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            }
+          ],
+          "outcomes": [
+            {
+              "program_name": "countdown_7",
+              "program_steps": 39,
+              "exact_sequence_match": false,
+              "first_error_token_index": 28,
+              "generated_token_count": 133,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "countdown_8",
+              "program_steps": 44,
+              "exact_sequence_match": false,
+              "first_error_token_index": 28,
+              "generated_token_count": 291,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "countdown_9",
+              "program_steps": 49,
+              "exact_sequence_match": false,
+              "first_error_token_index": 28,
+              "generated_token_count": 134,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "countdown_10",
+              "program_steps": 54,
+              "exact_sequence_match": false,
+              "first_error_token_index": 28,
+              "generated_token_count": 120,
+              "failure_reason": "length_mismatch"
+            }
+          ]
+        },
+        "branch_eval_rollout": {
+          "exact_sequence_accuracy": 0.0,
           "example_count": 2,
-          "exact_sequence_accuracy": 0.0
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            }
+          ],
+          "outcomes": [
+            {
+              "program_name": "eq_5_5",
+              "program_steps": 6,
+              "exact_sequence_match": false,
+              "first_error_token_index": 31,
+              "generated_token_count": 106,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "eq_2_9",
+              "program_steps": 6,
+              "exact_sequence_match": false,
+              "first_error_token_index": 31,
+              "generated_token_count": 112,
+              "failure_reason": null
+            }
+          ]
+        },
+        "memory_eval_rollout": {
+          "exact_sequence_accuracy": 0.0,
+          "example_count": 2,
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            }
+          ],
+          "outcomes": [
+            {
+              "program_name": "dynamic_memory",
+              "program_steps": 16,
+              "exact_sequence_match": false,
+              "first_error_token_index": 52,
+              "generated_token_count": 214,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "dynamic_memory_transfer",
+              "program_steps": 16,
+              "exact_sequence_match": false,
+              "first_error_token_index": 52,
+              "generated_token_count": 202,
+              "failure_reason": "length_mismatch"
+            }
+          ]
+        }
+      }
+    },
+    "factorized_train_vocab": {
+      "variant_name": "factorized_train_vocab",
+      "tokenization_mode": "factorized",
+      "vocab_source": "train_only_plus_base",
+      "dataset_stats": {
+        "train": {
+          "example_count": 12,
+          "vocab_size": 53,
+          "min_length": 256,
+          "max_length": 1648,
+          "mean_length": 741.25
+        },
+        "countdown_eval": {
+          "example_count": 4,
+          "vocab_size": 53,
+          "min_length": 1881,
+          "max_length": 2586,
+          "mean_length": 2232
+        },
+        "branch_eval": {
+          "example_count": 2,
+          "vocab_size": 53,
+          "min_length": 365,
+          "max_length": 365,
+          "mean_length": 365
+        },
+        "memory_eval": {
+          "example_count": 2,
+          "vocab_size": 53,
+          "min_length": 980,
+          "max_length": 980,
+          "mean_length": 980
+        }
+      },
+      "device": "cuda",
+      "model_config": {
+        "vocab_size": 53,
+        "d_model": 36,
+        "n_heads": 18,
+        "n_layers": 7,
+        "d_ffn": 36,
+        "max_seq_len": 2594
+      },
+      "training_config": {
+        "epochs": 24,
+        "batch_size": 2,
+        "learning_rate": 0.005,
+        "weight_decay": 0.0,
+        "seed": 0,
+        "max_grad_norm": 1.0,
+        "requested_device": null,
+        "resolved_device": "cuda"
+      },
+      "train_metrics": {
+        "loss": 0.0800457712056118,
+        "token_accuracy": 0.9766970618034447,
+        "example_count": 12,
+        "token_count": 8883,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "example_count": 2,
+            "token_count": 3061,
+            "loss": 0.0844018523456886,
+            "token_accuracy": 0.9768049656974844
+          },
+          {
+            "bucket": "steps<=24",
+            "example_count": 10,
+            "token_count": 5822,
+            "loss": 0.07775549907064527,
+            "token_accuracy": 0.9766403297835795
+          }
+        ]
+      },
+      "eval_metrics": {
+        "loss": 1.8356429427220429,
+        "token_accuracy": 0.7292850990525409,
+        "example_count": 8,
+        "token_count": 11610,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "example_count": 2,
+            "token_count": 3993,
+            "loss": 0.802064706590759,
+            "token_accuracy": 0.8812922614575507
+          },
+          {
+            "bucket": "steps<=24",
+            "example_count": 4,
+            "token_count": 2686,
+            "loss": 2.412056915833714,
+            "token_accuracy": 0.6451973194341027
+          },
+          {
+            "bucket": "steps>=49",
+            "example_count": 2,
+            "token_count": 4931,
+            "loss": 2.3586261033576683,
+            "token_accuracy": 0.6519975664165484
+          }
+        ]
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 3.1333131392796836,
+          "eval_loss": 2.112949737200544
         },
         {
-          "bucket": "steps>=49",
-          "example_count": 2,
-          "exact_sequence_accuracy": 0.0
+          "epoch": 2,
+          "train_loss": 1.678199032942454,
+          "eval_loss": 1.5499816432582418
+        },
+        {
+          "epoch": 3,
+          "train_loss": 1.1859281659126282,
+          "eval_loss": 1.3317407770366323
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.9697707196076711,
+          "eval_loss": 1.2291629329927003
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.7584646642208099,
+          "eval_loss": 1.228961206119087
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.6496307502190272,
+          "eval_loss": 1.223994530279199
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.5753713150819143,
+          "eval_loss": 1.2919710045329051
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.5383356561263403,
+          "eval_loss": 1.3302337477938253
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.4773764784137408,
+          "eval_loss": 1.3262995239530115
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.44689259429772693,
+          "eval_loss": 1.251889817710584
+        },
+        {
+          "epoch": 11,
+          "train_loss": 0.3463861991961797,
+          "eval_loss": 1.5670884618771477
+        },
+        {
+          "epoch": 12,
+          "train_loss": 0.377594235042731,
+          "eval_loss": 1.383696313509132
+        },
+        {
+          "epoch": 13,
+          "train_loss": 0.31928185125192005,
+          "eval_loss": 1.3845077132480499
+        },
+        {
+          "epoch": 14,
+          "train_loss": 0.2885146389404933,
+          "eval_loss": 1.4805888156866227
+        },
+        {
+          "epoch": 15,
+          "train_loss": 0.2296072244644165,
+          "eval_loss": 1.5422886647405962
+        },
+        {
+          "epoch": 16,
+          "train_loss": 0.1987303284307321,
+          "eval_loss": 1.5673167094755132
+        },
+        {
+          "epoch": 17,
+          "train_loss": 0.18986610819896063,
+          "eval_loss": 1.6506259579939846
+        },
+        {
+          "epoch": 18,
+          "train_loss": 0.1907467171549797,
+          "eval_loss": 1.5139317330258555
+        },
+        {
+          "epoch": 19,
+          "train_loss": 0.1504286676645279,
+          "eval_loss": 2.2755875120791353
+        },
+        {
+          "epoch": 20,
+          "train_loss": 0.17473330969611803,
+          "eval_loss": 1.7506415089074134
+        },
+        {
+          "epoch": 21,
+          "train_loss": 0.1363091990351677,
+          "eval_loss": 1.746716525357515
+        },
+        {
+          "epoch": 22,
+          "train_loss": 0.11845940351486206,
+          "eval_loss": 1.8740883569230713
+        },
+        {
+          "epoch": 23,
+          "train_loss": 0.10801009585460027,
+          "eval_loss": 1.8761836025039251
+        },
+        {
+          "epoch": 24,
+          "train_loss": 0.10201926529407501,
+          "eval_loss": 1.8356429427220429
         }
       ],
-      "outcomes": [
-        {
-          "program_name": "countdown_7",
-          "program_steps": 39,
-          "exact_sequence_match": false,
-          "first_error_token_index": 28,
-          "generated_token_count": 153,
-          "failure_reason": "length_mismatch"
+      "group_metrics": {
+        "countdown_eval_teacher_forced": {
+          "loss": 1.6621503461534697,
+          "token_accuracy": 0.7545943523083819,
+          "example_count": 4,
+          "token_count": 8924,
+          "by_length_bucket": [
+            {
+              "bucket": "25<=steps<=48",
+              "example_count": 2,
+              "token_count": 3993,
+              "loss": 0.802064706590759,
+              "token_accuracy": 0.8812922614575507
+            },
+            {
+              "bucket": "steps>=49",
+              "example_count": 2,
+              "token_count": 4931,
+              "loss": 2.3586261033576683,
+              "token_accuracy": 0.6519975664165484
+            }
+          ]
         },
-        {
-          "program_name": "countdown_8",
-          "program_steps": 44,
-          "exact_sequence_match": false,
-          "first_error_token_index": 28,
-          "generated_token_count": 157,
-          "failure_reason": "length_mismatch"
-        },
-        {
-          "program_name": "countdown_9",
-          "program_steps": 49,
-          "exact_sequence_match": false,
-          "first_error_token_index": 28,
-          "generated_token_count": 221,
-          "failure_reason": "length_mismatch"
-        },
-        {
-          "program_name": "countdown_10",
-          "program_steps": 54,
-          "exact_sequence_match": false,
-          "first_error_token_index": 28,
-          "generated_token_count": 157,
-          "failure_reason": "length_mismatch"
-        }
-      ]
-    },
-    "branch_eval_rollout": {
-      "exact_sequence_accuracy": 0.0,
-      "example_count": 2,
-      "by_length_bucket": [
-        {
-          "bucket": "steps<=24",
+        "branch_eval_teacher_forced": {
+          "loss": 0.24070974439382553,
+          "token_accuracy": 0.9560439560439561,
           "example_count": 2,
-          "exact_sequence_accuracy": 0.0
-        }
-      ],
-      "outcomes": [
-        {
-          "program_name": "eq_5_5",
-          "program_steps": 6,
-          "exact_sequence_match": false,
-          "first_error_token_index": 31,
-          "generated_token_count": 112,
-          "failure_reason": null
+          "token_count": 728,
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "token_count": 728,
+              "loss": 0.24070974439382553,
+              "token_accuracy": 0.9560439560439561
+            }
+          ]
         },
-        {
-          "program_name": "eq_2_9",
-          "program_steps": 6,
-          "exact_sequence_match": false,
-          "first_error_token_index": 31,
-          "generated_token_count": 112,
-          "failure_reason": null
-        }
-      ]
-    },
-    "memory_eval_rollout": {
-      "exact_sequence_accuracy": 0.0,
-      "example_count": 2,
-      "by_length_bucket": [
-        {
-          "bucket": "steps<=24",
+        "memory_eval_teacher_forced": {
+          "loss": 3.219381093978882,
+          "token_accuracy": 0.5296220633299284,
           "example_count": 2,
-          "exact_sequence_accuracy": 0.0
-        }
-      ],
-      "outcomes": [
-        {
-          "program_name": "dynamic_memory",
-          "program_steps": 16,
-          "exact_sequence_match": false,
-          "first_error_token_index": 51,
-          "generated_token_count": 112,
-          "failure_reason": "length_mismatch"
+          "token_count": 1958,
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "token_count": 1958,
+              "loss": 3.219381093978882,
+              "token_accuracy": 0.5296220633299284
+            }
+          ]
         },
-        {
-          "program_name": "dynamic_memory_transfer",
-          "program_steps": 16,
-          "exact_sequence_match": false,
-          "first_error_token_index": 51,
-          "generated_token_count": 159,
-          "failure_reason": "length_mismatch"
+        "countdown_eval_rollout": {
+          "exact_sequence_accuracy": 0.0,
+          "example_count": 4,
+          "by_length_bucket": [
+            {
+              "bucket": "25<=steps<=48",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            },
+            {
+              "bucket": "steps>=49",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            }
+          ],
+          "outcomes": [
+            {
+              "program_name": "countdown_7",
+              "program_steps": 39,
+              "exact_sequence_match": false,
+              "first_error_token_index": 94,
+              "generated_token_count": 616,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "countdown_8",
+              "program_steps": 44,
+              "exact_sequence_match": false,
+              "first_error_token_index": 94,
+              "generated_token_count": 616,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "countdown_9",
+              "program_steps": 49,
+              "exact_sequence_match": false,
+              "first_error_token_index": 94,
+              "generated_token_count": 1182,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "countdown_10",
+              "program_steps": 54,
+              "exact_sequence_match": false,
+              "first_error_token_index": 82,
+              "generated_token_count": 365,
+              "failure_reason": "length_mismatch"
+            }
+          ]
+        },
+        "branch_eval_rollout": {
+          "exact_sequence_accuracy": 0.0,
+          "example_count": 2,
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            }
+          ],
+          "outcomes": [
+            {
+              "program_name": "eq_5_5",
+              "program_steps": 6,
+              "exact_sequence_match": false,
+              "first_error_token_index": 106,
+              "generated_token_count": 365,
+              "failure_reason": null
+            },
+            {
+              "program_name": "eq_2_9",
+              "program_steps": 6,
+              "exact_sequence_match": false,
+              "first_error_token_index": 106,
+              "generated_token_count": 333,
+              "failure_reason": "length_mismatch"
+            }
+          ]
+        },
+        "memory_eval_rollout": {
+          "exact_sequence_accuracy": 0.0,
+          "example_count": 2,
+          "by_length_bucket": [
+            {
+              "bucket": "steps<=24",
+              "example_count": 2,
+              "exact_sequence_accuracy": 0.0
+            }
+          ],
+          "outcomes": [
+            {
+              "program_name": "dynamic_memory",
+              "program_steps": 16,
+              "exact_sequence_match": false,
+              "first_error_token_index": 186,
+              "generated_token_count": 344,
+              "failure_reason": "length_mismatch"
+            },
+            {
+              "program_name": "dynamic_memory_transfer",
+              "program_steps": 16,
+              "exact_sequence_match": false,
+              "first_error_token_index": 185,
+              "generated_token_count": 407,
+              "failure_reason": "length_mismatch"
+            }
+          ]
         }
-      ]
+      }
     }
   }
 }

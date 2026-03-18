@@ -7,3 +7,6 @@
 - "The current union-vocabulary workaround is a fair long-horizon baseline."
   Blocked because it prevents OOV crashes but does not resolve the underlying
   serialization issue.
+- "Factorized numeric tokenization by itself fixes the baseline."
+  Blocked because the new comparison improves vocabulary stability and delays
+  first error, but exact rollout still remains zero.

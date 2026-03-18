@@ -17,9 +17,9 @@ Tracked benchmark summaries and milestone outputs will live here.
   structured event-generation branch and its held-out rollout results
 - `M4_exact_hardmax_model/precision_stress.json` records finite-precision
   address-range failure sweeps for the current 2D encoding
-- `M5_standard_2d_baseline/dataset_preview.json` records the initial structured
-  dataset preview for the standard softmax baseline branch
-- `M5_standard_2d_baseline/training_run.json` records the first CUDA softmax
-  baseline training run and rollout evaluation
+- `M5_standard_2d_baseline/dataset_preview.json` records atomic vs factorized
+  serialization statistics for the standard softmax baseline branch
+- `M5_standard_2d_baseline/training_run.json` records the paired atomic vs
+  factorized CUDA baseline training runs and rollout evaluation
 - `runtime_environment.json` records the Python, Torch, and CUDA runtime used
   for the current exported checkpoints

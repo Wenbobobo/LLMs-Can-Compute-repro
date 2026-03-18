@@ -20,7 +20,7 @@ The working target is narrower and more falsifiable:
 | M2 | Exact 2D hard-max geometry core | benchmarked correctness-first implementation |
 | M3 | Append-only trace DSL and reference executor | stack plus bounded-RAM reference semantics recorded |
 | M4 | Exact hard-max model branch | free-running exact executor plus induced causal event branch |
-| M5 | Standard 2D-head softmax baseline | first CUDA training run completed; free-running exact rollout currently fails |
+| M5 | Standard 2D-head softmax baseline | atomic vs factorized CUDA comparison completed; exact free-running rollout still fails |
 | M6 | Restricted compiled-program demos | planned |
 
 ## Reproduction Stance

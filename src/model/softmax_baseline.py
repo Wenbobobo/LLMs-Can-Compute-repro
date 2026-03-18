@@ -5,9 +5,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 import random
 from statistics import mean
-from typing import Iterable, Sequence
+from typing import Iterable, Literal, Sequence
 
-from exec_trace import Program, TraceEvent, TraceInterpreter
+from exec_trace import Opcode, Program, TraceEvent, TraceInterpreter
 
 try:  # pragma: no cover - exercised only when torch is installed
     import torch
@@ -20,6 +20,43 @@ except ImportError:  # pragma: no cover - exercised in environments without torc
 
 
 SPECIAL_TOKENS = ("<pad>", "<bos>", "<instructions>", "<trace>", "<event>", "<eos>")
+TraceTokenizationMode = Literal["atomic", "factorized"]
+FACTORIZED_BASE_TOKENS = SPECIAL_TOKENS + (
+    "<inst>",
+    "</inst>",
+    "<int>",
+    "</int>",
+    "<list>",
+    "</list>",
+    "<pair>",
+    "</pair>",
+    "<none>",
+    "pc",
+    "op",
+    "arg",
+    "step",
+    "popped",
+    "pushed",
+    "branch",
+    "memory_read",
+    "memory_write",
+    "next_pc",
+    "stack_before",
+    "stack_after",
+    "halted",
+    "1",
+    "0",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "-",
+    "none",
+) + tuple(str(opcode) for opcode in Opcode)
 
 
 @dataclass(frozen=True, slots=True)
@@ -27,6 +64,7 @@ class TraceSequenceExample:
     program_name: str
     program_steps: int
     tokens: tuple[str, ...]
+    tokenization_mode: TraceTokenizationMode = "atomic"
 
 
 @dataclass(frozen=True, slots=True)
@@ -44,6 +82,7 @@ class EncodedTraceExample:
     program_steps: int
     token_ids: tuple[int, ...]
     prompt_length: int
+    tokenization_mode: TraceTokenizationMode
 
 
 @dataclass(frozen=True, slots=True)
@@ -117,8 +156,13 @@ class TraceVocabulary:
         self._id_to_token = tuple(unique)
 
     @classmethod
-    def from_examples(cls, examples: Sequence[TraceSequenceExample]) -> "TraceVocabulary":
-        tokens: list[str] = list(SPECIAL_TOKENS)
+    def from_examples(
+        cls,
+        examples: Sequence[TraceSequenceExample],
+        *,
+        base_tokens: Sequence[str] = SPECIAL_TOKENS,
+    ) -> "TraceVocabulary":
+        tokens: list[str] = list(base_tokens)
         for example in examples:
             tokens.extend(example.tokens)
         return cls(tokens)
@@ -127,7 +171,10 @@ class TraceVocabulary:
         return len(self._id_to_token)
 
     def encode(self, tokens: Sequence[str]) -> tuple[int, ...]:
-        return tuple(self._token_to_id[token] for token in tokens)
+        try:
+            return tuple(self._token_to_id[token] for token in tokens)
+        except KeyError as exc:
+            raise KeyError(f"Token {exc.args[0]!r} is not present in the vocabulary.") from exc
 
     def decode(self, ids: Sequence[int]) -> tuple[str, ...]:
         return tuple(self._id_to_token[index] for index in ids)
@@ -141,20 +188,106 @@ def require_torch() -> None:
         )
 
 
-def serialize_instruction_tokens(program: Program) -> tuple[str, ...]:
-    tokens: list[str] = ["<instructions>"]
-    for pc, instruction in enumerate(program.instructions):
-        tokens.extend(
-            (
-                f"inst_pc={pc}",
-                f"inst_op={instruction.opcode}",
-                f"inst_arg={instruction.arg if instruction.arg is not None else 'none'}",
-            )
-        )
+def base_tokens_for_mode(mode: TraceTokenizationMode) -> tuple[str, ...]:
+    return SPECIAL_TOKENS if mode == "atomic" else FACTORIZED_BASE_TOKENS
+
+
+def _encode_int_tokens(value: int) -> tuple[str, ...]:
+    digits = str(abs(value))
+    tokens = ["<int>"]
+    if value < 0:
+        tokens.append("-")
+    tokens.extend(digits)
+    tokens.append("</int>")
     return tuple(tokens)
 
 
-def serialize_event_tokens(event: TraceEvent) -> tuple[str, ...]:
+def _encode_optional_int_tokens(value: int | None) -> tuple[str, ...]:
+    if value is None:
+        return ("<none>",)
+    return _encode_int_tokens(value)
+
+
+def _encode_int_list_tokens(values: Sequence[int]) -> tuple[str, ...]:
+    if not values:
+        return ("<none>",)
+    tokens = ["<list>"]
+    for value in values:
+        tokens.extend(_encode_int_tokens(value))
+    tokens.append("</list>")
+    return tuple(tokens)
+
+
+def _encode_optional_pair_tokens(pair: tuple[int, int] | None) -> tuple[str, ...]:
+    if pair is None:
+        return ("<none>",)
+    tokens = ["<pair>"]
+    tokens.extend(_encode_int_tokens(pair[0]))
+    tokens.extend(_encode_int_tokens(pair[1]))
+    tokens.append("</pair>")
+    return tuple(tokens)
+
+
+def serialize_instruction_tokens(
+    program: Program,
+    *,
+    tokenization_mode: TraceTokenizationMode = "atomic",
+) -> tuple[str, ...]:
+    if tokenization_mode == "atomic":
+        tokens: list[str] = ["<instructions>"]
+        for pc, instruction in enumerate(program.instructions):
+            tokens.extend(
+                (
+                    f"inst_pc={pc}",
+                    f"inst_op={instruction.opcode}",
+                    f"inst_arg={instruction.arg if instruction.arg is not None else 'none'}",
+                )
+            )
+        return tuple(tokens)
+
+    tokens: list[str] = ["<instructions>"]
+    for pc, instruction in enumerate(program.instructions):
+        tokens.extend(("<inst>", "pc"))
+        tokens.extend(_encode_int_tokens(pc))
+        tokens.extend(("op", str(instruction.opcode), "arg"))
+        tokens.extend(_encode_optional_int_tokens(instruction.arg))
+        tokens.append("</inst>")
+    return tuple(tokens)
+
+
+def serialize_event_tokens(
+    event: TraceEvent,
+    *,
+    tokenization_mode: TraceTokenizationMode = "atomic",
+) -> tuple[str, ...]:
+    if tokenization_mode == "atomic":
+        popped = ",".join(str(value) for value in event.popped) if event.popped else "none"
+        pushed = ",".join(str(value) for value in event.pushed) if event.pushed else "none"
+        memory_read = (
+            "none"
+            if event.memory_read_address is None
+            else f"{event.memory_read_address}:{event.memory_read_value}"
+        )
+        memory_write = "none" if event.memory_write is None else f"{event.memory_write[0]}:{event.memory_write[1]}"
+        branch_taken = "none" if event.branch_taken is None else str(int(event.branch_taken))
+
+        return (
+            "<event>",
+            f"step={event.step}",
+            f"pc={event.pc}",
+            f"opcode={event.opcode}",
+            f"arg={event.arg if event.arg is not None else 'none'}",
+            f"popped={popped}",
+            f"pushed={pushed}",
+            f"branch={branch_taken}",
+            f"memory_read={memory_read}",
+            f"memory_write={memory_write}",
+            f"next_pc={event.next_pc}",
+            f"stack_before={event.stack_depth_before}",
+            f"stack_after={event.stack_depth_after}",
+            f"halted={int(event.halted)}",
+        )
+
     popped = ",".join(str(value) for value in event.popped) if event.popped else "none"
     pushed = ",".join(str(value) for value in event.pushed) if event.pushed else "none"
     memory_read = (
@@ -165,37 +298,58 @@ def serialize_event_tokens(event: TraceEvent) -> tuple[str, ...]:
     memory_write = "none" if event.memory_write is None else f"{event.memory_write[0]}:{event.memory_write[1]}"
     branch_taken = "none" if event.branch_taken is None else str(int(event.branch_taken))
 
-    return (
-        "<event>",
-        f"step={event.step}",
-        f"pc={event.pc}",
-        f"opcode={event.opcode}",
-        f"arg={event.arg if event.arg is not None else 'none'}",
-        f"popped={popped}",
-        f"pushed={pushed}",
-        f"branch={branch_taken}",
-        f"memory_read={memory_read}",
-        f"memory_write={memory_write}",
-        f"next_pc={event.next_pc}",
-        f"stack_before={event.stack_depth_before}",
-        f"stack_after={event.stack_depth_after}",
-        f"halted={int(event.halted)}",
-    )
+    tokens = ["<event>", "step"]
+    tokens.extend(_encode_int_tokens(event.step))
+    tokens.extend(("pc",))
+    tokens.extend(_encode_int_tokens(event.pc))
+    tokens.extend(("op", str(event.opcode), "arg"))
+    tokens.extend(_encode_optional_int_tokens(event.arg))
+    tokens.extend(("popped",))
+    tokens.extend(_encode_int_list_tokens(event.popped))
+    tokens.extend(("pushed",))
+    tokens.extend(_encode_int_list_tokens(event.pushed))
+    tokens.extend(("branch",))
+    if event.branch_taken is None:
+        tokens.append("<none>")
+    else:
+        tokens.extend(_encode_int_tokens(int(event.branch_taken)))
+    tokens.extend(("memory_read",))
+    if event.memory_read_address is None:
+        tokens.append("<none>")
+    else:
+        tokens.extend(_encode_optional_pair_tokens((event.memory_read_address, int(event.memory_read_value))))
+    tokens.extend(("memory_write",))
+    tokens.extend(_encode_optional_pair_tokens(event.memory_write))
+    tokens.extend(("next_pc",))
+    tokens.extend(_encode_int_tokens(event.next_pc))
+    tokens.extend(("stack_before",))
+    tokens.extend(_encode_int_tokens(event.stack_depth_before))
+    tokens.extend(("stack_after",))
+    tokens.extend(_encode_int_tokens(event.stack_depth_after))
+    tokens.extend(("halted",))
+    tokens.extend(_encode_int_tokens(int(event.halted)))
+    return tuple(tokens)
 
 
-def build_trace_sequence(program: Program, *, interpreter: TraceInterpreter | None = None) -> TraceSequenceExample:
+def build_trace_sequence(
+    program: Program,
+    *,
+    interpreter: TraceInterpreter | None = None,
+    tokenization_mode: TraceTokenizationMode = "atomic",
+) -> TraceSequenceExample:
     interpreter = interpreter or TraceInterpreter()
     result = interpreter.run(program)
 
-    tokens: list[str] = ["<bos>", *serialize_instruction_tokens(program), "<trace>"]
+    tokens: list[str] = ["<bos>", *serialize_instruction_tokens(program, tokenization_mode=tokenization_mode), "<trace>"]
     for event in result.events:
-        tokens.extend(serialize_event_tokens(event))
+        tokens.extend(serialize_event_tokens(event, tokenization_mode=tokenization_mode))
     tokens.append("<eos>")
 
     return TraceSequenceExample(
         program_name=program.name,
         program_steps=result.final_state.steps,
         tokens=tuple(tokens),
+        tokenization_mode=tokenization_mode,
     )
 
 
@@ -203,14 +357,22 @@ def build_trace_sequences(
     programs: Iterable[Program],
     *,
     interpreter: TraceInterpreter | None = None,
+    tokenization_mode: TraceTokenizationMode = "atomic",
 ) -> tuple[TraceSequenceExample, ...]:
     interpreter = interpreter or TraceInterpreter()
-    return tuple(build_trace_sequence(program, interpreter=interpreter) for program in programs)
+    return tuple(
+        build_trace_sequence(program, interpreter=interpreter, tokenization_mode=tokenization_mode)
+        for program in programs
+    )
 
 
-def summarize_trace_sequences(examples: Sequence[TraceSequenceExample]) -> TraceSequenceStats:
+def summarize_trace_sequences(
+    examples: Sequence[TraceSequenceExample],
+    *,
+    base_tokens: Sequence[str] = SPECIAL_TOKENS,
+) -> TraceSequenceStats:
     lengths = [len(example.tokens) for example in examples]
-    vocab = TraceVocabulary.from_examples(examples)
+    vocab = TraceVocabulary.from_examples(examples, base_tokens=base_tokens)
     return TraceSequenceStats(
         example_count=len(examples),
         vocab_size=len(vocab),
@@ -234,6 +396,7 @@ def encode_trace_examples(
             program_steps=example.program_steps,
             token_ids=vocabulary.encode(example.tokens),
             prompt_length=prompt_length(example),
+            tokenization_mode=example.tokenization_mode,
         )
         for example in examples
     )

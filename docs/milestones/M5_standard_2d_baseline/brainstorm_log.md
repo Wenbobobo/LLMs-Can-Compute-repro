@@ -8,3 +8,7 @@
 - The next high-value `M5` ablation is probably representation, not model size.
   A larger model on the same serialization is likely to hide, rather than fix,
   the rollout problem.
+- The factorized ablation confirmed part of this: vocabulary pressure drops and
+  first error moves later, but zero exact rollout remains. The next move should
+  probably change the rollout boundary or sequence compression rather than just
+  keep factorizing.
