@@ -30,7 +30,11 @@
   `partial` toward a stable current-scope-ready paper note.
 - [x] Do one paper-lane wording pass that checks README-facing phrasing against
   the newer manuscript bundle and caption candidates.
-- [ ] Prepare a merge-ready public-surface sync batch from the `paper` lane
+- [x] Prepare a merge-ready public-surface sync batch from the `paper` lane
   back to `main`.
-- [ ] Decide whether the next paper-lane pass should stay bundle-first or split
+- [x] Decide whether the next paper-lane pass should stay bundle-first or split
   into a manuscript-facing draft plus a shorter release-facing summary.
+- [ ] Start the shorter release-facing summary from the new outline, keeping it
+  strictly downstream of the manuscript bundle.
+- [ ] Decide whether the next manuscript pass should focus on prose polish or
+  on turning the current bundle into a more paper-shaped section draft.

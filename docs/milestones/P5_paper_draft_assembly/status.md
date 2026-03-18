@@ -19,5 +19,7 @@ Started on 2026-03-19 in the `paper` worktree.
   export;
 - the public-surface wording pass now aligns `README.md` and `STATUS.md` with
   the fuller manuscript bundle and caption candidates;
-- the next gap is integration discipline: decide when this paper-lane wording
-  bundle is stable enough to sync back onto `main`.
+- the merge-ready public-surface sync back to `main` is now completed and
+  recorded;
+- the next paper-lane mode is fixed: keep the manuscript bundle primary, and
+  use a separate short release-summary outline for future public-facing syncs.

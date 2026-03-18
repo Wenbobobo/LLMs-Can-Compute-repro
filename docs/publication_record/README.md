@@ -22,6 +22,8 @@ Core ledgers:
   material;
 - `caption_candidate_notes.md` — draft caption sentences for the fixed current
   main-text figures and tables;
+- `release_summary_outline.md` — short downstream summary outline for future
+  release-facing syncs;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
   main-text figure and table;
 - `appendix_boundary_map.md` — explicit main-text versus appendix boundary for
