@@ -34,15 +34,15 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - `M7` keeps the compiled endpoint at the current tiny typed-bytecode boundary.
 - `P4` allows the README to remain a restrained landing page and keeps the blog blocked.
 
-The next engineering work is paper-lane assembly and any future systems revisit,
-not frontend widening or demo-first expansion.
+The next engineering work is paper-lane sentence-level polish, callout cleanup,
+and any future systems revisit, not frontend widening or demo-first expansion.
 
 ## Start Here
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/claim_ladder.md` — claim boundary summary
 - `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
-- `docs/publication_record/manuscript_bundle_draft.md` — current section-ordered manuscript bundle
+- `docs/publication_record/manuscript_bundle_draft.md` — current manuscript section draft
 - `docs/milestones/P1_paper_readiness/` — current paper bundle staging area
 - `docs/milestones/P2_public_research_packaging/` — public-safe packaging ledger
 

@@ -1,8 +1,9 @@
 # Manuscript Bundle Draft
 
-Status: section-ordered manuscript draft after the first section-draft upgrade
-following the `M7` no-go decision. The remaining work is sentence-level polish
-and local figure/table callout cleanup, not another round of section planning.
+Status: paper-shaped manuscript section draft after the first section-draft
+upgrade following the `M7` no-go decision. The remaining work is sentence-level
+polish and local figure/table callout cleanup, not another round of section
+planning.
 
 ## 1. Abstract
 
@@ -44,16 +45,16 @@ current validated scope. Second, it closes two important boundaries instead of
 silently skipping them: staged-neural execution remains caveated by legality
 structure, and real-trace precision remains positive only within an explicitly
 narrow current-suite boundary. Third, it shows that the first compiled endpoint
-should remain at tiny typed bytecode `D0`: the current slice is exact and
+remains at tiny typed bytecode `D0`: the current slice is exact and
 auditable, but the systems gate is mixed and therefore does not justify
 widening to a broader frontend.
 
-The section should point readers to two paired main-text artifacts. A
-claim-ladder figure plus evidence matrix should orient the narrowed mechanism
-story that survives the freeze, while a separate supported-versus-unsupported
-claims table should keep the excluded broader readings explicit and auditable.
-Those unsupported rows are part of the result rather than placeholders for
-future rhetorical widening.
+The introduction closes by pointing readers to two paired main-text artifacts.
+A claim-ladder figure plus evidence matrix orients the narrowed mechanism story
+that survives the freeze, while a separate supported-versus-unsupported claims
+table keeps the excluded broader readings explicit and auditable. Those
+unsupported rows are part of the result rather than placeholders for future
+rhetorical widening.
 
 ## 3. Methods: Trace Substrate and Exact Retrieval
 
@@ -77,9 +78,9 @@ reconstruction. Latest-write memory reads and stack-slot reads are phrased as
 2D hard-max retrieval over keys that encode both content address and temporal
 priority, and the current brute-force and specialized retrieval paths agree on
 the validated examples. The geometry benchmark belongs here only as evidence
-that exact retrieval admits a meaningful asymptotic signal. It should not be
-allowed to blur into a broader claim that the full current system is already
-competitive end to end.
+that exact retrieval admits a meaningful asymptotic signal. In this draft, that
+signal stays explicitly separate from any broader claim that the full current
+system is already competitive end to end.
 
 ## 4. Executor Branches and Negative Controls
 
@@ -101,12 +102,12 @@ exact-label accuracy with structural rollout still at `0.0 / 0.0` on the
 exported train/held-out slice. These failures make the staged branch's partial
 success informative without turning it into a general neural-executor claim.
 
-The paper evidence for this section should therefore be organized around one
-regime-comparison figure and one negative-control comparison. The first should
-show that exact rollout survives only under stronger legality structure, and
-the second should show that nearby softmax baselines still fail under the same
-free-running criterion. Read together, they support a bounded structural claim
-rather than a general learned-executor result.
+This section is therefore organized around one regime-comparison figure and one
+negative-control comparison. The first shows that exact rollout survives only
+under stronger legality structure, and the second shows that nearby softmax
+baselines still fail under the same free-running criterion. Read together, they
+support a bounded structural claim rather than a general learned-executor
+result.
 
 ## 5. Mask Dependence and Failure Provenance
 
@@ -121,15 +122,15 @@ divergence. On the `opcode_shape` slice, the root-cause head is consistently
 `push_expr_0`, with the remaining failures explained by downstream
 consequences rather than a separate hidden regime. The staged story therefore
 ends as a sharper negative closure: legality structure still matters, and the
-paper should say so directly.
+paper says so directly.
 
-One provenance-backed staged failure taxonomy figure should carry this section's
-main evidence, with the figure used to separate root semantic mistakes from
-later runtime fallout rather than to imply a hidden positive regime.
+A provenance-backed staged failure taxonomy figure carries this section's main
+evidence, separating root semantic mistakes from later runtime fallout rather
+than implying a hidden positive regime.
 
 ## 6. Precision Boundary on Real / Organic Traces
 
-The precision section should make one bounded claim and then stop. On the
+The precision section makes one bounded claim and then stops. On the
 current exported real and organic trace families, float32 single-head latest-
 write retrieval fails early often enough that broad robustness language is no
 longer defensible: 12 of 25 tracked streams fail under the single-head scheme,
@@ -143,10 +144,10 @@ narrow positive-with-boundary statement: decomposition materially helps on the
 current validated suite, but nothing here supports universal base or horizon
 claims across unseen trace families or a broad long-horizon robustness result.
 
-The main-text support here should stay compact: one real-trace boundary figure
-to show where failures first appear across schemes, and one boundary table to
-make the current `12/25`, `7/25`, and `25/25` claims auditable without opening
-new generalization rhetoric.
+The main-text support here stays compact: one real-trace boundary figure shows
+where failures first appear across schemes, and one boundary table makes the
+current `12/25`, `7/25`, and `25/25` claims auditable without opening new
+generalization rhetoric.
 
 ## 7. Systems Gate
 
@@ -164,16 +165,16 @@ The correct conclusion is therefore mixed and operational: the specialized
 retrieval mechanism is real, but on the present validated scope it does not yet
 justify broader frontend widening or a general system-superiority claim.
 
-For layout, this result should remain a quantified main-text paragraph rather
-than a standalone table. The main text needs the mixed gate decision and its
-key timing anchors, while the full baseline matrix and runtime rows should stay
-in companion artifacts unless a later layout pass specifically promotes a
-compact gate table.
+In the current layout, this result remains a quantified main-text paragraph
+rather than a standalone table. The main text needs the mixed gate decision and
+its key timing anchors, while the full baseline matrix and runtime rows stay in
+companion artifacts unless a later layout pass specifically promotes a compact
+gate table.
 
 ## 8. Compiled Boundary
 
-The compiled result should be presented as an endpoint, not as a teaser. The
-current paper validates a tiny typed-bytecode `D0` slice with deterministic
+The compiled result is presented as an endpoint, not as a teaser. The current
+paper validates a tiny typed-bytecode `D0` slice with deterministic
 verification, exact-trace and exact-final-state agreement on the frozen starter
 suite, one stress/reference follow-up tied to a standalone Python spec oracle,
 and appendix-level memory-surface diagnostics that help audit the boundary
@@ -185,22 +186,22 @@ evidence bundle already closes the narrow compiled claim, the project stops at
 tiny typed bytecode rather than widening toward Wasm-like or arbitrary-C
 language coverage.
 
-The main text should support this endpoint with two artifacts: a frontend
-boundary diagram that makes the frozen `D0` slice explicit, and an
-exact-trace/final-state success table that records what the current starter
-suite does and does not validate. Companion appendix material should stay clearly
-downstream of that endpoint: memory-surface diagnostics and stress/reference
-rows help audit the boundary, but they do not widen it.
+The main text supports this endpoint with two artifacts: a frontend boundary
+diagram that makes the frozen `D0` slice explicit, and an exact-trace/final-
+state success table that records what the current starter suite does and does
+not validate. Companion appendix material stays clearly downstream of that
+endpoint: memory-surface diagnostics and stress/reference rows help audit the
+boundary, but they do not widen it.
 
 ## 9. Negative Results and Threats
 
-The negative-results section should read as part of the argument rather than as
+The negative-results section reads as part of the argument rather than as
 cleanup. Several tempting broader claims now have explicit contrary evidence or
 explicitly missing support: the project does not validate general LLM
 computation, arbitrary C reproduction, broader compiled demos, fair-regime
 staged-pointer exactness, broad long-horizon precision robustness, or
 current-scope end-to-end runtime superiority. These are not all the same kind
-of limitation, and the section should keep them distinct. Some are failures of
+of limitation, and the section keeps them distinct. Some are failures of
 learned execution under fair decode regimes; some are bounded precision
 results; some are systems-level no-go findings; and some are deliberate scope
 cuts made to avoid inflating `D0` into a broader language claim. Keeping these
@@ -211,18 +212,18 @@ section then makes the matching external-validity point: the current bundle is
 a narrow, auditable endpoint, not a disguised claim about general
 language-model computation.
 
-One compact threats-to-validity table should make those boundary rows explicit,
+A compact threats-to-validity table makes those boundary rows explicit,
 keeping failures of learned execution, finite-precision limits, systems no-go
 results, and deliberate scope cuts visible as distinct reasons rather than as a
 single undifferentiated limitation paragraph.
 
 ## 10. Reproducibility Appendix
 
-The appendix should make the current paper bundle auditable and regenerable
-without inflating companion diagnostics into new main-text claims. The guiding
-rule is simple: main text carries the distilled claim-bearing evidence, while
-the appendix carries regeneration commands, artifact maps, and companion views
-that strengthen auditability on the same frozen scope. The current appendix
+The appendix makes the current paper bundle auditable and regenerable without
+inflating companion diagnostics into new main-text claims. The guiding rule is
+simple: main text carries the distilled claim-bearing evidence, while the
+appendix carries regeneration commands, artifact maps, and companion views that
+strengthen auditability on the same frozen scope. The current appendix
 therefore has three jobs. First, it points readers to the canonical paper-ready
 bundle under `results/P1_paper_readiness/`, which contains rendered figures,
 table sources, and machine-readable bundle summaries. Second, it records how to

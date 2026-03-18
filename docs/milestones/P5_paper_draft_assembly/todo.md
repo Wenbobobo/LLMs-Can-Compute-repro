@@ -42,3 +42,8 @@
   main sections read less like assembly notes and more like a paper draft.
 - [x] Decide whether the release summary draft is stable enough to become the
   future source for README-adjacent short updates.
+- [x] Convert the most visible planning-style future tense in
+  `manuscript_bundle_draft.md` into paper-draft prose and cleaner artifact
+  callouts.
+- [x] Do one minimal `README.md` / `STATUS.md` sync after the release-summary
+  promotion so the public surface reflects the newer section-draft status.

@@ -23,18 +23,19 @@
 
 ## Current Paper State
 
-- `P5` now has a section-ordered manuscript bundle, appendix draft, caption
-  candidates, and layout decisions under `docs/publication_record/`.
+- `P5` now has a manuscript section draft, appendix draft, caption candidates,
+  and layout decisions under `docs/publication_record/`.
 - `results/P1_paper_readiness/summary.json` now reports `10/10` ready
   figure/table items and no blocked or partial items on the frozen current
   scope.
-- Remaining paper-lane work is wording and integration, not new claim
-  expansion.
+- Remaining paper-lane work is sentence-level polish, figure/table callout
+  cleanup, and restrained public-surface maintenance, not new claim expansion.
 
 ## Immediate Next Actions
 
-1. Keep `README.md`, `STATUS.md`, and `docs/publication_record/` aligned while
-   the paper lane prepares a merge-ready public-surface sync.
+1. Keep `README.md`, `STATUS.md`, and `docs/publication_record/` aligned, with
+   future short public-surface syncs derived from
+   `docs/publication_record/release_summary_draft.md`.
 2. Reopen `R1` or `R2` only if the project deliberately chooses a new evidence
    wave; otherwise keep the current `D0` endpoint fixed.
 3. Keep frontend widening and blog release blocked unless a future scope change
