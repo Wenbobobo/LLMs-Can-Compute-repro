@@ -19,6 +19,8 @@ class Opcode(StrEnum):
     STORE_AT = "store_at"
     JMP = "jmp"
     JZ = "jz"
+    CALL = "call"
+    RET = "ret"
     HALT = "halt"
 
 
@@ -60,6 +62,7 @@ class ExecutionState:
     pc: int = 0
     stack: tuple[int, ...] = ()
     memory: tuple[tuple[int, int], ...] = ()
+    call_stack: tuple[int, ...] = ()
     halted: bool = False
     steps: int = 0
 

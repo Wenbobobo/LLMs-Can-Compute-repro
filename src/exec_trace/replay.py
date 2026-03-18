@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from .dsl import ExecutionState, Program, TraceEvent
+from .dsl import ExecutionState, Opcode, Program, TraceEvent
 from .memory import latest_memory_value, reconstruct_memory
 
 
@@ -12,6 +12,7 @@ class ReplayMismatch(RuntimeError):
 
 def replay_trace(program: Program, events: tuple[TraceEvent, ...]) -> ExecutionState:
     stack: list[int] = []
+    call_stack: list[int] = []
     pc = 0
     halted = False
     reconstructed_events: list[TraceEvent] = []
@@ -61,6 +62,13 @@ def replay_trace(program: Program, events: tuple[TraceEvent, ...]) -> ExecutionS
                 f"{len(stack)} != {event.stack_depth_after}"
             )
 
+        if instruction.opcode == Opcode.CALL:
+            call_stack.append(pc + 1)
+        elif instruction.opcode == Opcode.RET:
+            if not call_stack:
+                raise ReplayMismatch(f"Return underflow at step {event.step}.")
+            call_stack.pop()
+
         pc = event.next_pc
         halted = event.halted
         reconstructed_events.append(event)
@@ -69,6 +77,7 @@ def replay_trace(program: Program, events: tuple[TraceEvent, ...]) -> ExecutionS
         pc=pc,
         stack=tuple(stack),
         memory=reconstruct_memory(tuple(reconstructed_events)),
+        call_stack=tuple(call_stack),
         halted=halted,
         steps=len(events),
     )

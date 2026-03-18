@@ -27,6 +27,7 @@ from model.induced_causal import (
     fit_transition_library,
     InducedTransitionLibrary,
 )
+from model.factorized_event_models import MODELED_EVENT_OPCODES
 
 try:  # pragma: no cover - exercised only when torch is installed
     import torch
@@ -117,7 +118,7 @@ class StructuredEventCodec:
     """Encode structured event contexts and labels for neural rule decoding."""
 
     def __init__(self) -> None:
-        self.opcodes = tuple(Opcode)
+        self.opcodes = MODELED_EVENT_OPCODES
         self._opcode_to_id = {opcode: index for index, opcode in enumerate(self.opcodes)}
         self._head_spaces: dict[str, tuple[object, ...]] = {
             "stack_read_count": (0, 1, 2),
@@ -509,12 +510,25 @@ class NeuralEventExecutor(FreeRunningTraceExecutor):
         step: int,
         pc: int,
         stack_depth: int,
+        call_stack: list[int],
         instruction: Opcode,
         arg: int | None,
         stack_history,
         memory_history,
         read_observations: list[ReadObservation],
     ):
+        if instruction in {Opcode.CALL, Opcode.RET}:
+            return super()._execute_instruction(
+                step=step,
+                pc=pc,
+                stack_depth=stack_depth,
+                call_stack=call_stack,
+                instruction=instruction,
+                arg=arg,
+                stack_history=stack_history,
+                memory_history=memory_history,
+                read_observations=read_observations,
+            )
         context = StructuredEventContext(
             program_name="runtime",
             step=step,

@@ -3,16 +3,24 @@ from __future__ import annotations
 import pytest
 
 from exec_trace import (
+    Instruction,
+    Opcode,
+    Program,
     TraceInterpreter,
+    alternating_memory_loop_program,
     countdown_program,
     dynamic_memory_program,
     equality_branch_program,
+    flagged_indirect_accumulator_program,
+    hotspot_memory_rewrite_program,
     latest_memory_value,
     latest_write_program,
     loop_indirect_memory_program,
     memory_accumulator_program,
     replay_trace,
     reconstruct_memory,
+    selector_checkpoint_bank_program,
+    stack_fanout_sum_program,
     stack_memory_ping_pong_program,
 )
 from exec_trace.dsl import TraceEvent
@@ -121,6 +129,123 @@ def test_stack_memory_ping_pong_program() -> None:
     assert replayed == result.final_state
     assert replayed.stack == (13, 28)
     assert reconstruct_memory(result.events) == ((0, 14), (1, 9), (2, 13))
+
+
+def test_alternating_memory_loop_program() -> None:
+    interpreter = TraceInterpreter()
+    program = alternating_memory_loop_program(4)
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (10,)
+    assert reconstruct_memory(result.events) == ((0, 0), (1, 0), (2, 6), (3, 4))
+
+
+def test_flagged_indirect_accumulator_program() -> None:
+    interpreter = TraceInterpreter()
+    program = flagged_indirect_accumulator_program(4, base_address=32)
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (10,)
+    assert reconstruct_memory(result.events) == (
+        (32, 0),
+        (33, 0),
+        (34, 36),
+        (35, 37),
+        (36, 6),
+        (37, 4),
+    )
+
+
+def test_selector_checkpoint_bank_program() -> None:
+    interpreter = TraceInterpreter()
+    program = selector_checkpoint_bank_program(4, base_address=40)
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (10,)
+    assert reconstruct_memory(result.events) == (
+        (40, 0),
+        (41, 1),
+        (42, 46),
+        (43, 46),
+        (44, 47),
+        (45, 48),
+        (46, 5),
+        (47, 3),
+        (48, 2),
+    )
+
+
+def test_hotspot_memory_rewrite_program() -> None:
+    interpreter = TraceInterpreter()
+    program = hotspot_memory_rewrite_program(4, base_address=24)
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (19,)
+    assert reconstruct_memory(result.events) == ((24, 0), (25, 1), (26, 8), (27, 5), (28, 6))
+
+
+def test_stack_fanout_sum_program() -> None:
+    interpreter = TraceInterpreter()
+    program = stack_fanout_sum_program(5, base_value=2)
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (10,)
+    assert result.final_state.steps == 10
+
+
+def test_call_ret_program_replay_matches_interpreter() -> None:
+    interpreter = TraceInterpreter()
+    program = Program(
+        instructions=(
+            Instruction(Opcode.PUSH_CONST, 1),
+            Instruction(Opcode.PUSH_CONST, 2),
+            Instruction(Opcode.CALL, 4),
+            Instruction(Opcode.HALT),
+            Instruction(Opcode.ADD),
+            Instruction(Opcode.PUSH_CONST, 3),
+            Instruction(Opcode.CALL, 8),
+            Instruction(Opcode.RET),
+            Instruction(Opcode.ADD),
+            Instruction(Opcode.RET),
+        ),
+        name="trace_call_chain_smoke",
+    )
+
+    result = interpreter.run(program)
+    replayed = replay_trace(program, result.events)
+
+    assert replayed == result.final_state
+    assert replayed.stack == (6,)
+    assert replayed.call_stack == ()
+
+
+def test_ret_without_pending_frame_raises() -> None:
+    interpreter = TraceInterpreter()
+    program = Program(
+        instructions=(
+            Instruction(Opcode.RET),
+            Instruction(Opcode.HALT),
+        ),
+        name="trace_invalid_empty_return",
+    )
+
+    with pytest.raises(RuntimeError, match="pending return address"):
+        interpreter.run(program)
 
 
 def test_replay_detects_tampering() -> None:

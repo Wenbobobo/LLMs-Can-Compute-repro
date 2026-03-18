@@ -28,6 +28,7 @@ _HISTORY_PAD = 0
 _NONE_BRANCH = -1
 _MAX_STACK_READS = 2
 _MAX_PUSHES = 2
+MODELED_EVENT_OPCODES = tuple(opcode for opcode in Opcode if opcode not in {Opcode.CALL, Opcode.RET})
 
 
 @dataclass(frozen=True, slots=True)
@@ -133,7 +134,7 @@ class FactorizedEventCodec:
 
     def __init__(self, config: FactorizedEventModelConfig) -> None:
         self.config = config
-        self.opcodes = tuple(Opcode)
+        self.opcodes = MODELED_EVENT_OPCODES
         self._opcode_to_id = {opcode: index + 1 for index, opcode in enumerate(self.opcodes)}
         scalar_space = tuple(range(-config.max_scalar, config.max_scalar + 1))
         address_space = tuple(range(0, config.max_address + 1))
@@ -751,12 +752,25 @@ class FactorizedEventExecutor(FreeRunningTraceExecutor):
         step: int,
         pc: int,
         stack_depth: int,
+        call_stack: list[int],
         instruction: Opcode,
         arg: int | None,
         stack_history,
         memory_history,
         read_observations: list[ReadObservation],
     ):
+        if instruction in {Opcode.CALL, Opcode.RET}:
+            return super()._execute_instruction(
+                step=step,
+                pc=pc,
+                stack_depth=stack_depth,
+                call_stack=call_stack,
+                instruction=instruction,
+                arg=arg,
+                stack_history=stack_history,
+                memory_history=memory_history,
+                read_observations=read_observations,
+            )
         context = FactorizedEventContext(
             program_name="runtime",
             step=step,

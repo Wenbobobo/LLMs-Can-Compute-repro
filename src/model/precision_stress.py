@@ -455,6 +455,7 @@ def check_real_trace_precision(
     scheme: PrecisionScheme = "single_head",
     base: int = 64,
     default_value: int = 0,
+    max_steps: int | None = None,
 ) -> RealTracePrecisionResult:
     if not operations:
         raise ValueError("At least one operation is required for real-trace precision checks.")
@@ -464,7 +465,10 @@ def check_real_trace_precision(
         raise ValueError("Real-trace precision checks expect operations from a single logical space.")
 
     space = next(iter(spaces))
-    max_steps = max(operation.step for operation in operations)
+    native_max_steps = max(operation.step for operation in operations)
+    max_steps = native_max_steps if max_steps is None else max_steps
+    if max_steps < native_max_steps:
+        raise ValueError("max_steps must be at least the largest step present in the operation stream.")
     prior_writes: list[MemoryOperation] = []
     read_count = 0
 

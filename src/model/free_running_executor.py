@@ -157,6 +157,7 @@ class FreeRunningTraceExecutor:
         step = 0
         pc = 0
         stack_depth = 0
+        call_stack: list[int] = []
         halted = False
 
         while not halted:
@@ -170,6 +171,7 @@ class FreeRunningTraceExecutor:
                 step=step,
                 pc=pc,
                 stack_depth=stack_depth,
+                call_stack=call_stack,
                 instruction=instruction.opcode,
                 arg=instruction.arg,
                 stack_history=stack_history,
@@ -221,6 +223,7 @@ class FreeRunningTraceExecutor:
         step: int,
         pc: int,
         stack_depth: int,
+        call_stack: list[int],
         instruction: Opcode,
         arg: int | None,
         stack_history: _LatestWriteSpace,
@@ -364,6 +367,15 @@ class FreeRunningTraceExecutor:
                 )
                 branch_taken = condition == 0
                 return ((condition,), (), branch_taken, None, None, arg if branch_taken else next_pc, False)
+            case Opcode.CALL:
+                if arg is None:
+                    raise RuntimeError("call requires a target PC.")
+                call_stack.append(pc + 1)
+                return ((), (), True, None, None, arg, False)
+            case Opcode.RET:
+                if not call_stack:
+                    raise RuntimeError("ret requires a pending return address.")
+                return ((), (), True, None, None, call_stack.pop(), False)
             case Opcode.HALT:
                 return ((), (), None, None, None, pc, True)
             case _:

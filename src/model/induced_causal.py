@@ -489,12 +489,25 @@ class InducedTransitionExecutor(FreeRunningTraceExecutor):
         step: int,
         pc: int,
         stack_depth: int,
+        call_stack: list[int],
         instruction: Opcode,
         arg: int | None,
         stack_history,
         memory_history,
         read_observations,
     ):
+        if instruction in {Opcode.CALL, Opcode.RET}:
+            return super()._execute_instruction(
+                step=step,
+                pc=pc,
+                stack_depth=stack_depth,
+                call_stack=call_stack,
+                instruction=instruction,
+                arg=arg,
+                stack_history=stack_history,
+                memory_history=memory_history,
+                read_observations=read_observations,
+            )
         rule = self.library.rule_for(instruction)
         reads = (
             ()
