@@ -12,3 +12,7 @@
   candidate sets, not with a token-level neural decoder.
 - Use short countdown traces as the training slice and judge the scorer by exact
   success on longer countdown traces plus cross-family transfer.
+- Insert an exact online executor before any token-level model branch so the
+  trace substrate proves itself in true free-running execution.
+- Treat finite-precision address collapse as part of `M4`, not as a later
+  deployment detail.

@@ -40,18 +40,32 @@ class TrainableLatestWriteScorer:
             + (self.time_scale * candidate.step)
         )
 
-    def predict_index(self, sample: LatestWriteSample) -> int:
+    def predict_index_for_query(
+        self,
+        query_address: int,
+        candidates: Sequence[LatestWriteCandidate],
+    ) -> int:
         best_index = 0
         best_key = None
-        for index, candidate in enumerate(sample.candidates):
-            key = (self.score(sample.query_address, candidate), candidate.step, index)
+        for index, candidate in enumerate(candidates):
+            key = (self.score(query_address, candidate), candidate.step, index)
             if best_key is None or key > best_key:
                 best_key = key
                 best_index = index
         return best_index
 
+    def predict_value_for_query(
+        self,
+        query_address: int,
+        candidates: Sequence[LatestWriteCandidate],
+    ) -> int:
+        return candidates[self.predict_index_for_query(query_address, candidates)].value
+
+    def predict_index(self, sample: LatestWriteSample) -> int:
+        return self.predict_index_for_query(sample.query_address, sample.candidates)
+
     def predict_value(self, sample: LatestWriteSample) -> int:
-        return sample.candidates[self.predict_index(sample)].value
+        return self.predict_value_for_query(sample.query_address, sample.candidates)
 
 
 @dataclass(frozen=True, slots=True)

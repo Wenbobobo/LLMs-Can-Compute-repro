@@ -1,0 +1,111 @@
+from __future__ import annotations
+
+from exec_trace import (
+    TraceInterpreter,
+    countdown_program,
+    dynamic_memory_program,
+    equality_branch_program,
+    latest_write_program,
+    memory_accumulator_program,
+)
+from model import (
+    build_countdown_stack_samples,
+    compare_execution_to_reference,
+    evaluate_free_running_programs,
+    fit_scorer,
+    run_free_running_exact,
+    run_free_running_with_stack_scorer,
+)
+
+
+def test_free_running_exact_linear_matches_reference_programs() -> None:
+    programs = (
+        countdown_program(7),
+        equality_branch_program(4, 4),
+        equality_branch_program(4, 5),
+        latest_write_program(),
+        memory_accumulator_program(),
+        dynamic_memory_program(),
+    )
+    interpreter = TraceInterpreter()
+
+    for program in programs:
+        execution = run_free_running_exact(program, decode_mode="linear")
+        reference = interpreter.run(program)
+
+        assert execution.events == reference.events
+        assert execution.final_state == reference.final_state
+
+
+def test_free_running_exact_accelerated_matches_reference_programs() -> None:
+    programs = (
+        countdown_program(12),
+        equality_branch_program(2, 2),
+        equality_branch_program(1, 3),
+        latest_write_program(),
+        memory_accumulator_program(),
+        dynamic_memory_program(),
+    )
+    interpreter = TraceInterpreter()
+
+    for program in programs:
+        execution = run_free_running_exact(program, decode_mode="accelerated")
+        reference = interpreter.run(program)
+
+        assert execution.events == reference.events
+        assert execution.final_state == reference.final_state
+
+
+def test_compare_execution_to_reference_reports_exact_match() -> None:
+    program = countdown_program(10)
+    execution = run_free_running_exact(program, decode_mode="accelerated")
+
+    outcome = compare_execution_to_reference(program, execution)
+
+    assert outcome.exact_trace_match is True
+    assert outcome.exact_final_state_match is True
+    assert outcome.first_mismatch_step is None
+
+
+def test_free_running_evaluation_reports_long_countdown_bucket() -> None:
+    programs = [countdown_program(start) for start in range(0, 21)]
+
+    evaluation = evaluate_free_running_programs(
+        programs,
+        lambda program: run_free_running_exact(program, decode_mode="accelerated"),
+    )
+
+    assert evaluation.exact_trace_accuracy == 1.0
+    assert evaluation.exact_final_state_accuracy == 1.0
+    assert any(name == "steps>=49" for name, _ in evaluation.by_length_bucket)
+
+
+def test_trainable_stack_executor_rolls_out_heldout_countdowns() -> None:
+    fit = fit_scorer(build_countdown_stack_samples(range(0, 7)))
+    programs = [countdown_program(start) for start in range(0, 21)]
+
+    evaluation = evaluate_free_running_programs(
+        programs,
+        lambda program: run_free_running_with_stack_scorer(program, fit.scorer),
+    )
+
+    assert evaluation.exact_trace_accuracy == 1.0
+    assert evaluation.exact_final_state_accuracy == 1.0
+
+
+def test_trainable_stack_executor_transfers_to_branch_and_dynamic_memory() -> None:
+    fit = fit_scorer(build_countdown_stack_samples(range(0, 7)))
+    programs = [
+        equality_branch_program(0, 0),
+        equality_branch_program(0, 1),
+        equality_branch_program(5, 5),
+        dynamic_memory_program(),
+    ]
+
+    evaluation = evaluate_free_running_programs(
+        programs,
+        lambda program: run_free_running_with_stack_scorer(program, fit.scorer),
+    )
+
+    assert evaluation.exact_trace_accuracy == 1.0
+    assert evaluation.exact_final_state_accuracy == 1.0

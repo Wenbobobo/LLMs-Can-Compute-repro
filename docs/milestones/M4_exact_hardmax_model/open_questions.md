@@ -1,9 +1,9 @@
 # Open Questions
 
-- Should the next learned step keep the current exact candidate-set abstraction
-  and learn causal candidate generation, or jump to a tokenized decoder?
-- Is mixed memory-plus-stack retrieval the right next target, or should the
-  next experiment focus on free-running prediction inside the current stack
-  family first?
-- What is the smallest evaluation that would count as real rollout rather than
-  another discriminative retrieval check?
+- Should the next learned step keep the current exact event semantics and learn
+  causal value retrieval online, or jump to a tokenized decoder?
+- Is address decomposition now necessary for any serious long-horizon finite
+  precision claim, or should it remain a separate sub-milestone?
+- After the current stack-family rollout result, is mixed memory-plus-stack
+  execution the right next learned target, or should the next step stay within
+  stack-only programs but remove the remaining exact memory fallback?

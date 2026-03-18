@@ -1,0 +1,747 @@
+{
+  "experiment": "m4_precision_stress",
+  "notes": [
+    "Scores are simulated by quantizing query/key components and intermediate arithmetic into the target format.",
+    "Local checks compare the exact winner against the nearest wrong-address neighbors plus the older same-address write."
+  ],
+  "exhaustive_checks": {
+    "float64": {
+      "identity": [
+        {
+          "fmt": "float64",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float64",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float64",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": true,
+          "first_failure": null
+        }
+      ],
+      "latest_write": [
+        {
+          "fmt": "float64",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float64",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float64",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": true,
+          "first_failure": null
+        }
+      ]
+    },
+    "float32": {
+      "identity": [
+        {
+          "fmt": "float32",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float32",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float32",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": true,
+          "first_failure": null
+        }
+      ],
+      "latest_write": [
+        {
+          "fmt": "float32",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float32",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float32",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": true,
+          "first_failure": null
+        }
+      ]
+    },
+    "bfloat16": {
+      "identity": [
+        {
+          "fmt": "bfloat16",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "bfloat16",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": false,
+          "first_failure": {
+            "query_address": 16,
+            "expected_address": 16,
+            "expected_step": 0,
+            "competing_address": 17,
+            "competing_step": 0,
+            "expected_score": 256.0,
+            "competing_score": 256.0
+          }
+        },
+        {
+          "fmt": "bfloat16",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": false,
+          "first_failure": {
+            "query_address": 16,
+            "expected_address": 16,
+            "expected_step": 0,
+            "competing_address": 17,
+            "competing_step": 0,
+            "expected_score": 256.0,
+            "competing_score": 256.0
+          }
+        }
+      ],
+      "latest_write": [
+        {
+          "fmt": "bfloat16",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": false,
+          "first_failure": {
+            "query_address": 3,
+            "expected_address": 3,
+            "expected_step": 1,
+            "competing_address": 3,
+            "competing_step": 0,
+            "expected_score": 9.0,
+            "competing_score": 9.0
+          }
+        },
+        {
+          "fmt": "bfloat16",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": false,
+          "first_failure": {
+            "query_address": 3,
+            "expected_address": 3,
+            "expected_step": 1,
+            "competing_address": 3,
+            "competing_step": 0,
+            "expected_score": 9.0,
+            "competing_score": 9.0
+          }
+        },
+        {
+          "fmt": "bfloat16",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": false,
+          "first_failure": {
+            "query_address": 2,
+            "expected_address": 2,
+            "expected_step": 1,
+            "competing_address": 2,
+            "competing_step": 0,
+            "expected_score": 4.0,
+            "competing_score": 4.0
+          }
+        }
+      ]
+    },
+    "float16": {
+      "identity": [
+        {
+          "fmt": "float16",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float16",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": true,
+          "first_failure": null
+        },
+        {
+          "fmt": "float16",
+          "kind": "identity",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": false,
+          "first_failure": {
+            "query_address": 46,
+            "expected_address": 46,
+            "expected_step": 0,
+            "competing_address": 45,
+            "competing_step": 0,
+            "expected_score": 2116.0,
+            "competing_score": 2116.0
+          }
+        }
+      ],
+      "latest_write": [
+        {
+          "fmt": "float16",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 16,
+          "max_steps": 32,
+          "passed": false,
+          "first_failure": {
+            "query_address": 8,
+            "expected_address": 8,
+            "expected_step": 1,
+            "competing_address": 8,
+            "competing_step": 0,
+            "expected_score": 64.0,
+            "competing_score": 64.0
+          }
+        },
+        {
+          "fmt": "float16",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 32,
+          "max_steps": 32,
+          "passed": false,
+          "first_failure": {
+            "query_address": 8,
+            "expected_address": 8,
+            "expected_step": 1,
+            "competing_address": 8,
+            "competing_step": 0,
+            "expected_score": 64.0,
+            "competing_score": 64.0
+          }
+        },
+        {
+          "fmt": "float16",
+          "kind": "latest_write",
+          "mode": "exhaustive",
+          "address_limit": 64,
+          "max_steps": 64,
+          "passed": false,
+          "first_failure": {
+            "query_address": 6,
+            "expected_address": 6,
+            "expected_step": 1,
+            "competing_address": 6,
+            "competing_step": 0,
+            "expected_score": 36.0,
+            "competing_score": 36.0
+          }
+        }
+      ]
+    }
+  },
+  "local_sweeps": {
+    "float64": {
+      "identity": [
+        {
+          "address_limit": 16,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 32,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 64,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 128,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 256,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 512,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 1024,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 2048,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 4096,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 8192,
+          "passed": true,
+          "first_failure_query": null
+        }
+      ],
+      "latest_write": [
+        {
+          "address_limit": 16,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 32,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 64,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 128,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 256,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 512,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 1024,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 2048,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 4096,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 8192,
+          "passed": true,
+          "first_failure_query": null
+        }
+      ]
+    },
+    "float32": {
+      "identity": [
+        {
+          "address_limit": 16,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 32,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 64,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 128,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 256,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 512,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 1024,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 2048,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 4096,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 8192,
+          "passed": false,
+          "first_failure_query": 4096
+        }
+      ],
+      "latest_write": [
+        {
+          "address_limit": 16,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 32,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 64,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 128,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 256,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 512,
+          "passed": false,
+          "first_failure_query": 182
+        },
+        {
+          "address_limit": 1024,
+          "passed": false,
+          "first_failure_query": 128
+        },
+        {
+          "address_limit": 2048,
+          "passed": false,
+          "first_failure_query": 91
+        },
+        {
+          "address_limit": 4096,
+          "passed": false,
+          "first_failure_query": 64
+        },
+        {
+          "address_limit": 8192,
+          "passed": false,
+          "first_failure_query": 46
+        }
+      ]
+    },
+    "bfloat16": {
+      "identity": [
+        {
+          "address_limit": 16,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 32,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 64,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 128,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 256,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 512,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 1024,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 2048,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 4096,
+          "passed": false,
+          "first_failure_query": 16
+        },
+        {
+          "address_limit": 8192,
+          "passed": false,
+          "first_failure_query": 16
+        }
+      ],
+      "latest_write": [
+        {
+          "address_limit": 16,
+          "passed": false,
+          "first_failure_query": 3
+        },
+        {
+          "address_limit": 32,
+          "passed": false,
+          "first_failure_query": 3
+        },
+        {
+          "address_limit": 64,
+          "passed": false,
+          "first_failure_query": 2
+        },
+        {
+          "address_limit": 128,
+          "passed": false,
+          "first_failure_query": 2
+        },
+        {
+          "address_limit": 256,
+          "passed": false,
+          "first_failure_query": 1
+        },
+        {
+          "address_limit": 512,
+          "passed": false,
+          "first_failure_query": 1
+        },
+        {
+          "address_limit": 1024,
+          "passed": false,
+          "first_failure_query": 1
+        },
+        {
+          "address_limit": 2048,
+          "passed": false,
+          "first_failure_query": 1
+        },
+        {
+          "address_limit": 4096,
+          "passed": false,
+          "first_failure_query": 1
+        },
+        {
+          "address_limit": 8192,
+          "passed": false,
+          "first_failure_query": 1
+        }
+      ]
+    },
+    "float16": {
+      "identity": [
+        {
+          "address_limit": 16,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 32,
+          "passed": true,
+          "first_failure_query": null
+        },
+        {
+          "address_limit": 64,
+          "passed": false,
+          "first_failure_query": 46
+        },
+        {
+          "address_limit": 128,
+          "passed": false,
+          "first_failure_query": 46
+        },
+        {
+          "address_limit": 256,
+          "passed": false,
+          "first_failure_query": 46
+        },
+        {
+          "address_limit": 512,
+          "passed": false,
+          "first_failure_query": 46
+        },
+        {
+          "address_limit": 1024,
+          "passed": false,
+          "first_failure_query": 46
+        },
+        {
+          "address_limit": 2048,
+          "passed": false,
+          "first_failure_query": 46
+        },
+        {
+          "address_limit": 4096,
+          "passed": false,
+          "first_failure_query": 46
+        },
+        {
+          "address_limit": 8192,
+          "passed": false,
+          "first_failure_query": 46
+        }
+      ],
+      "latest_write": [
+        {
+          "address_limit": 16,
+          "passed": false,
+          "first_failure_query": 8
+        },
+        {
+          "address_limit": 32,
+          "passed": false,
+          "first_failure_query": 8
+        },
+        {
+          "address_limit": 64,
+          "passed": false,
+          "first_failure_query": 6
+        },
+        {
+          "address_limit": 128,
+          "passed": false,
+          "first_failure_query": 4
+        },
+        {
+          "address_limit": 256,
+          "passed": false,
+          "first_failure_query": 3
+        },
+        {
+          "address_limit": 512,
+          "passed": false,
+          "first_failure_query": 2
+        },
+        {
+          "address_limit": 1024,
+          "passed": false,
+          "first_failure_query": 2
+        },
+        {
+          "address_limit": 2048,
+          "passed": false,
+          "first_failure_query": 1
+        },
+        {
+          "address_limit": 4096,
+          "passed": false,
+          "first_failure_query": 1
+        },
+        {
+          "address_limit": 8192,
+          "passed": false,
+          "first_failure_query": 1
+        }
+      ]
+    }
+  }
+}

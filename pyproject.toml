@@ -18,6 +18,9 @@ dependencies = []
 dev = [
   "pytest>=8.3,<9",
 ]
+m5 = [
+  "torch>=2.6,<3",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = [

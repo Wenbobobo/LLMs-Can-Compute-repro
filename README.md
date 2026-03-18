@@ -17,10 +17,10 @@ The working target is narrower and more falsifiable:
 | --- | --- | --- |
 | M0 | Public-safe scaffold, repo policy, research docs | complete |
 | M1 | Claims/scope lock, acceptance criteria, ambiguity register | complete |
-| M2 | Exact 2D hard-max geometry core | initial result recorded |
-| M3 | Append-only trace DSL and reference executor | initial result recorded |
-| M4 | Exact hard-max model branch | deterministic prototype plus narrow trainable slice |
-| M5 | Standard 2D-head softmax baseline | planned |
+| M2 | Exact 2D hard-max geometry core | benchmarked correctness-first implementation |
+| M3 | Append-only trace DSL and reference executor | stack plus bounded-RAM reference semantics recorded |
+| M4 | Exact hard-max model branch | free-running exact executor plus narrow trainable slice |
+| M5 | Standard 2D-head softmax baseline | scaffold started |
 | M6 | Restricted compiled-program demos | planned |
 
 ## Reproduction Stance
@@ -58,6 +58,7 @@ excluded from version control. The public repository stores:
 - `HullKVCache` matches brute-force hard-max exactly, including ties.
 - Geometry benchmarks show clearly sublinear query growth against history size.
 - The trace interpreter and replay engine agree on final state exactly.
+- The free-running exact executor reproduces reference traces by length bucket.
 - The project remains honest about unsupported claims and unresolved ambiguity.
 
 ## Environment
@@ -70,5 +71,8 @@ pytest
 python scripts/benchmark_geometry.py
 ```
 
-The lockfile is intentionally deferred until the first dependency resolution run
-in this environment.
+Optional `M5` scaffold work can use:
+
+```bash
+uv sync --group dev --group m5
+```

@@ -1,0 +1,909 @@
+{
+  "experiment": "m4_free_running_executor",
+  "notes": [
+    "Exact executors carry only step-local summaries such as PC and stack depth; value state is recovered via latest-write retrieval.",
+    "The trainable branch only replaces stack-slot reads with the fitted scorer. Memory reads remain exact in this checkpoint."
+  ],
+  "trainable_stack_scorer": {
+    "quadratic_scale": 0.25,
+    "time_scale": 0.0005,
+    "fit_train_sample_accuracy": 1.0,
+    "fit_train_exact_program_accuracy": 1.0
+  },
+  "evaluations": {
+    "exact_linear": {
+      "countdown_train": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 7,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "program_count": 2,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          },
+          {
+            "bucket": "steps<=24",
+            "program_count": 5,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "countdown_0",
+            "program_steps": 4,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_1",
+            "program_steps": 9,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_2",
+            "program_steps": 14,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_3",
+            "program_steps": 19,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_4",
+            "program_steps": 24,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_5",
+            "program_steps": 29,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_6",
+            "program_steps": 34,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "countdown_heldout": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 14,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "program_count": 2,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          },
+          {
+            "bucket": "steps>=49",
+            "program_count": 12,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "countdown_7",
+            "program_steps": 39,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_8",
+            "program_steps": 44,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_9",
+            "program_steps": 49,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_10",
+            "program_steps": 54,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_11",
+            "program_steps": 59,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_12",
+            "program_steps": 64,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_13",
+            "program_steps": 69,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_14",
+            "program_steps": 74,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_15",
+            "program_steps": 79,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_16",
+            "program_steps": 84,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_17",
+            "program_steps": 89,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_18",
+            "program_steps": 94,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_19",
+            "program_steps": 99,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_20",
+            "program_steps": 104,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "branch_programs": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 4,
+        "by_length_bucket": [
+          {
+            "bucket": "steps<=24",
+            "program_count": 4,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "eq_0_0",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_0_1",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_5_5",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_2_9",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "memory_programs": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 3,
+        "by_length_bucket": [
+          {
+            "bucket": "steps<=24",
+            "program_count": 3,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "latest_write",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "memory_accumulator",
+            "program_steps": 10,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "dynamic_memory",
+            "program_steps": 16,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      }
+    },
+    "exact_accelerated": {
+      "countdown_train": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 7,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "program_count": 2,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          },
+          {
+            "bucket": "steps<=24",
+            "program_count": 5,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "countdown_0",
+            "program_steps": 4,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_1",
+            "program_steps": 9,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_2",
+            "program_steps": 14,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_3",
+            "program_steps": 19,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_4",
+            "program_steps": 24,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_5",
+            "program_steps": 29,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_6",
+            "program_steps": 34,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "countdown_heldout": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 14,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "program_count": 2,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          },
+          {
+            "bucket": "steps>=49",
+            "program_count": 12,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "countdown_7",
+            "program_steps": 39,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_8",
+            "program_steps": 44,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_9",
+            "program_steps": 49,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_10",
+            "program_steps": 54,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_11",
+            "program_steps": 59,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_12",
+            "program_steps": 64,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_13",
+            "program_steps": 69,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_14",
+            "program_steps": 74,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_15",
+            "program_steps": 79,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_16",
+            "program_steps": 84,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_17",
+            "program_steps": 89,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_18",
+            "program_steps": 94,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_19",
+            "program_steps": 99,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_20",
+            "program_steps": 104,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "branch_programs": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 4,
+        "by_length_bucket": [
+          {
+            "bucket": "steps<=24",
+            "program_count": 4,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "eq_0_0",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_0_1",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_5_5",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_2_9",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "memory_programs": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 3,
+        "by_length_bucket": [
+          {
+            "bucket": "steps<=24",
+            "program_count": 3,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "latest_write",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "memory_accumulator",
+            "program_steps": 10,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "dynamic_memory",
+            "program_steps": 16,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      }
+    },
+    "trainable_stack": {
+      "countdown_train": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 7,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "program_count": 2,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          },
+          {
+            "bucket": "steps<=24",
+            "program_count": 5,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "countdown_0",
+            "program_steps": 4,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_1",
+            "program_steps": 9,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_2",
+            "program_steps": 14,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_3",
+            "program_steps": 19,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_4",
+            "program_steps": 24,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_5",
+            "program_steps": 29,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_6",
+            "program_steps": 34,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "countdown_heldout": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 14,
+        "by_length_bucket": [
+          {
+            "bucket": "25<=steps<=48",
+            "program_count": 2,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          },
+          {
+            "bucket": "steps>=49",
+            "program_count": 12,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "countdown_7",
+            "program_steps": 39,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_8",
+            "program_steps": 44,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_9",
+            "program_steps": 49,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_10",
+            "program_steps": 54,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_11",
+            "program_steps": 59,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_12",
+            "program_steps": 64,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_13",
+            "program_steps": 69,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_14",
+            "program_steps": 74,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_15",
+            "program_steps": 79,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_16",
+            "program_steps": 84,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_17",
+            "program_steps": 89,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_18",
+            "program_steps": 94,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_19",
+            "program_steps": 99,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "countdown_20",
+            "program_steps": 104,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "branch_programs": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 4,
+        "by_length_bucket": [
+          {
+            "bucket": "steps<=24",
+            "program_count": 4,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "eq_0_0",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_0_1",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_5_5",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "eq_2_9",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      },
+      "memory_programs": {
+        "exact_trace_accuracy": 1.0,
+        "exact_final_state_accuracy": 1.0,
+        "program_count": 3,
+        "by_length_bucket": [
+          {
+            "bucket": "steps<=24",
+            "program_count": 3,
+            "exact_trace_accuracy": 1.0,
+            "exact_final_state_accuracy": 1.0
+          }
+        ],
+        "outcomes": [
+          {
+            "program_name": "latest_write",
+            "program_steps": 6,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "memory_accumulator",
+            "program_steps": 10,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          },
+          {
+            "program_name": "dynamic_memory",
+            "program_steps": 16,
+            "exact_trace_match": true,
+            "exact_final_state_match": true,
+            "first_mismatch_step": null,
+            "failure_reason": null
+          }
+        ]
+      }
+    }
+  }
+}
