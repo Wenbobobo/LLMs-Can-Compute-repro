@@ -8,7 +8,7 @@ Scope:
 
 - current trace families only;
 - stream-level first-failure and family-level boundary summaries;
-- one explicit weak decomposition negative-control bundle;
+- one explicit weaker coarse-bucket negative-control bundle on the same tracked suite;
 - synchronized precision ledgers on the same bounded wording.
 
 Non-goals:
