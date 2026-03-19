@@ -34,11 +34,13 @@
 - The `P9` stage is complete on the same scope: `README.md`, `STATUS.md`,
   `release_summary_draft.md`, and blocked-blog controls are synchronized as a
   restrained release-candidate checkpoint.
-- The current active post-`P9` operational stage is checkpoint consolidation
-  and archive readiness under `docs/publication_record/current_stage_driver.md`.
-- `H3`, `P10`, `P11`, and `F1` are the active non-claim-expanding lanes on top
-  of the locked checkpoint.
-- No `E1` patch lane is active on the current repo state.
+- The current active post-`P9` operational stage is a bounded
+  reproduction-mainline return under
+  `docs/publication_record/current_stage_driver.md`.
+- `H4`, `E1a`, `E1b`, and `H5` are the active bounded lanes on top of the
+  locked checkpoint.
+- `E1c` remains conditional only and stays inactive unless a concrete `D0`
+  contradiction appears.
 
 ## Immediate Next Actions
 
@@ -48,14 +50,14 @@
 2. Keep `results/P1_paper_readiness/summary.json`,
    `results/P5_public_surface_sync/summary.json`,
    `results/P5_callout_alignment/summary.json`, and
-   `results/H2_bundle_lock_audit/summary.json` green while the locked bundle
-   remains the active baseline.
-3. Build and maintain the venue-agnostic packet under
-   `docs/publication_record/submission_packet_index.md` and
-   `docs/publication_record/archival_repro_manifest.md` without widening scope.
-4. Keep derivative-only writing material downstream of the manuscript bundle
-   and keep any future evidence change behind
-   `docs/publication_record/conditional_reopen_protocol.md`.
+   `results/H2_bundle_lock_audit/summary.json` green while the bounded return
+   stage is active.
+3. Complete `E1a` and `E1b` on the current validated scope without widening
+   frontend, language, or systems claims.
+4. Refreeze through `H5`, keep the packet/docs/bookkeeping synchronized, and
+   leave derivative-only writing downstream of the evidence state.
+5. The logical lane order stays `E1a` then `E1b`, and frontend widening
+   remains blocked throughout the active packet.
 
 ## Known Blockers
 

@@ -32,7 +32,7 @@
     {
       "item_id": "active_driver_names_current_packet",
       "status": "pass",
-      "notes": "The current-stage driver should expose the active consolidation packet and inactive reopen state."
+      "notes": "The current-stage driver should expose the active bounded return packet and conditional compiled lane."
     },
     {
       "item_id": "planning_taxonomy_assigns_single_active_driver",

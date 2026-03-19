@@ -1,0 +1,73 @@
+{
+  "experiment": "h4_reproduction_return_guard_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "tmp/2026-03-19-reproduction-mainline-return-master-plan.md",
+      "matched_lines": [
+        "## Scientific target",
+        "1. `H4_reproduction_mainline_return`",
+        "2. `E1a_precision_patch`"
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "| `H4-H5` | The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits |",
+        "- The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits."
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "- `H4`, `E1a`, `E1b`, and `H5` are the active bounded lanes on top of the"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `H4_reproduction_mainline_return`",
+        "- `E1a_precision_patch`",
+        "- `E1b_systems_patch`",
+        "the completed baseline for documentation, archive, and derivative controls.",
+        "The logical lane order remains `E1a_precision_patch` -> `E1b_systems_patch`.",
+        "3. Run `E1a_precision_patch` on the current bounded precision suite only.",
+        "4. Run `E1b_systems_patch` on the current mixed systems gate only.",
+        "- `E1a_precision_patch` is active only for bounded `C3d` / `C3e` sharpening on"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "`H5` refreezes through the standing audits. `E1c` remains conditional only."
+      ]
+    }
+  ]
+}

@@ -32,15 +32,17 @@
     {
       "path": "README.md",
       "matched_lines": [
+        "| `H4-H5` | The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits |",
         "- The restrained public surface remains downstream of the locked submission-candidate bundle, and broader blog/demo release stays blocked.",
-        "- The active post-`P9` stage is checkpoint consolidation and archive packaging: `H3` fixes driver/gate semantics, `P10` builds a venue-agnostic submission/archive packet, `P11` prepares downstream-only derivative material, and `F1` preauthors dormant `E1` patch playbooks."
+        "- The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits."
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
         "- The `P8` stage is complete on the current frozen scope: the manuscript,",
-        "- The `P9` stage is complete on the same scope: `README.md`, `STATUS.md`,"
+        "- The `P9` stage is complete on the same scope: `README.md`, `STATUS.md`,",
+        "- `H4`, `E1a`, `E1b`, and `H5` are the active bounded lanes on top of the"
       ]
     },
     {
@@ -50,17 +52,21 @@
         "- `planning_state_taxonomy.md` \u2014 allowed planning-state labels and current",
         "- `paper_package_plan.md` \u2014 completed post-`P7` stage design retained as a",
         "- `release_candidate_checklist.md` \u2014 restrained outward-sync",
-        "- `conditional_reopen_protocol.md` \u2014 dormant `E1` reopen protocol; no patch",
+        "- `conditional_reopen_protocol.md` \u2014 bounded reopen protocol still governing",
         "role currently belongs to `current_stage_driver.md`;"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H3_stage_driver_consolidation_and_plan_index`",
-        "- `P10_submission_packet_and_archival_repro_bundle`",
-        "- `P11_manuscript_targeting_and_derivative_controls`",
-        "- `F1_future_evidence_playbooks`"
+        "- `H4_reproduction_mainline_return`",
+        "- `E1a_precision_patch`",
+        "- `E1b_systems_patch`",
+        "- `H5_repro_sync_and_refreeze`",
+        "the completed baseline for documentation, archive, and derivative controls.",
+        "The logical lane order remains `E1a_precision_patch` -> `E1b_systems_patch`.",
+        "3. Run `E1a_precision_patch` on the current bounded precision suite only.",
+        "4. Run `E1b_systems_patch` on the current mixed systems gate only."
       ]
     },
     {

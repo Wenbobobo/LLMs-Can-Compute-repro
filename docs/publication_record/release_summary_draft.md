@@ -40,11 +40,11 @@ The current frozen scope has a locked submission-candidate bundle and a
 restrained release-candidate public surface. `P8` closed the manuscript,
 appendix, and ledger lock on the same frozen endpoint, `H2` remains the
 standing bundle-lock and release-hygiene gate, and `P9` keeps outward wording
-downstream of the locked bundle. The active post-`P9` follow-up is checkpoint
-consolidation rather than claim expansion: `H3` clarifies driver/gate
-semantics, `P10` builds a venue-agnostic submission/archive packet, `P11`
-prepares downstream-only derivative material, and `F1` preauthors dormant
-`E1` playbooks. No `E1` patch lane is active.
+downstream of the locked bundle. The active post-`P9` follow-up is a bounded
+reproduction-mainline return rather than another packaging-first pass: `H4`
+resets the active driver to the scientific mainline, `E1a` sharpens bounded
+precision on current families, `E1b` adds same-scope systems attribution, and
+`H5` refreezes through the standing audits. `E1c` remains conditional only.
 
 ## Reproducibility pointers
 

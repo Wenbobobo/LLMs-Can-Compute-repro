@@ -1,0 +1,23 @@
+{
+  "target_claim": "R2 systems gate",
+  "status": "bounded_clarification_no_scope_change",
+  "claim_update": "mixed_gate_reaffirmed_with_component_bridge",
+  "supports_here": [
+    "Geometry asymptotic advantage remains strongly positive on the current benchmark history sweep.",
+    "Same-scope suite bridge rows still keep lowered execution slower than the best current reference path on median ns/step.",
+    "Component cost rows now separate lowering-only cost from lowered-execution cost on the same D0 suites."
+  ],
+  "unproven_here": [
+    "Current-scope end-to-end superiority for lowered execution over the best available reference path.",
+    "Any claim that geometry asymptotics alone justify frontend widening."
+  ],
+  "blocked_here": [
+    "Frontend widening remains blocked by the current no-go decision.",
+    "No arbitrary-C or broader runtime-generalization claim is supported by this patch lane."
+  ],
+  "summary_anchor": {
+    "gate_status_after_patch": "asymptotic_positive_but_end_to_end_not_yet_competitive",
+    "lowered_ratio_vs_best_reference": 1.8242260729438198,
+    "frontend_widening_authorized": false
+  }
+}

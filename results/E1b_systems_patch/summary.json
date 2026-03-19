@@ -1,0 +1,87 @@
+{
+  "experiment": "e1b_systems_patch",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/M2_geometry_core/benchmark_geometry.json",
+    "results/R2_systems_baseline_gate/summary.json",
+    "results/R2_systems_baseline_gate/baseline_matrix.json",
+    "results/R2_systems_baseline_gate/runtime_profile_rows.csv",
+    "results/M6_typed_bytecode_harness/short_exact_trace.json",
+    "results/M6_typed_bytecode_harness/long_exact_final_state.json",
+    "results/M6_stress_reference_followup/summary.json",
+    "results/M7_frontend_candidate_decision/decision_summary.json"
+  ],
+  "notes": [
+    "This patch lane is bounded to the current mixed R2 systems gate and does not widen frontend scope.",
+    "All rows stay on the current positive D0 suites; no new runtime family is introduced.",
+    "The output focuses on split component attribution and same-scope bridge accounting."
+  ],
+  "summary": {
+    "target_claim": "R2 systems gate",
+    "lane": "E1b_systems_patch",
+    "trigger_conflict": "Current locked systems prose needs same-scope component attribution and history bridge rows without widening frontend scope.",
+    "gate_question": "On current positive D0 suites, does split attribution overturn the mixed R2 gate without a frontend scope change?",
+    "gate_status_after_patch": "asymptotic_positive_but_end_to_end_not_yet_competitive",
+    "geometry_positive": true,
+    "lowered_ratio_vs_best_reference": 1.8242260729438198,
+    "component_row_count": 25,
+    "suite_bridge_row_count": 5,
+    "history_bridge_row_count": 4,
+    "max_profile_step_count": 495,
+    "lagging_case_count_vs_best_reference": 25,
+    "dominant_component_counts": [
+      {
+        "component": "lowered_exec_only",
+        "count": 25
+      }
+    ],
+    "suite_bridge_status_counts": [
+      {
+        "bridge_status": "lagging_mixed_gate",
+        "count": 5
+      }
+    ],
+    "history_bridge_status_counts": [
+      {
+        "bridge_status": "beyond_current_d0_scope",
+        "count": 3
+      },
+      {
+        "bridge_status": "overlaps_current_d0_scope",
+        "count": 1
+      }
+    ],
+    "stress_reference_positive_row_count": 3,
+    "frontend_widening_authorized": false,
+    "single_bottleneck_fixable_now": false,
+    "e1c_trigger_required": false,
+    "decision": "Keep the mixed systems gate wording and the no-widening boundary; this patch adds attribution and bridge accounting only."
+  }
+}

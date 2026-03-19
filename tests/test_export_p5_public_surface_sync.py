@@ -55,9 +55,9 @@ def test_build_summary_reports_current_polish_phase() -> None:
     rows = module.build_sync_checklist(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "post_p9_checkpoint_consolidation_active"
+    assert summary["current_paper_phase"] == "reproduction_mainline_return_active"
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "execute the current H3/P10/P11/F1 consolidation packet while keeping current claim and artifact boundaries fixed"
+        "execute the current H4/E1a/E1b/H5 bounded return packet while keeping current claim and artifact boundaries fixed"
     )

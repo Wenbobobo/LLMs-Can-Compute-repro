@@ -44,7 +44,7 @@
     "results/H2_bundle_lock_audit/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "post_p9_checkpoint_consolidation_active",
+    "current_paper_phase": "reproduction_mainline_return_active",
     "packet_state": "archive_ready",
     "check_count": 9,
     "pass_count": 9,

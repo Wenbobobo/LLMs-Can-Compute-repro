@@ -1,0 +1,15 @@
+family,stream_count,single_head_failure_stream_count,single_head_failure_at_1x_stream_count,decomposition_recovered_stream_count,observed_failure_types
+alternating_offset_2048,2,1,1,1,tie_collapse
+alternating_offset_256,2,1,0,1,tie_collapse
+flagged_indirect_accumulator,1,1,1,1,tie_collapse
+hotspot_memory_rewrite,1,1,1,1,tie_collapse
+loop_offset_1024,2,1,1,1,tie_collapse
+loop_offset_256,2,1,0,1,tie_collapse
+loop_offset_4096,2,1,1,1,tie_collapse
+loop_offset_64,2,0,0,0,
+ping_pong_offset_128,2,0,0,0,
+ping_pong_offset_2048,2,1,0,1,tie_collapse
+ping_pong_offset_512,2,1,0,1,tie_collapse
+ping_pong_offset_8192,2,1,1,1,tie_collapse
+selector_checkpoint_bank,1,1,1,1,tie_collapse
+stack_fanout_sum,1,1,0,1,tie_collapse

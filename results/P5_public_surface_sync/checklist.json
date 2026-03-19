@@ -37,12 +37,12 @@
     {
       "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should name the active post-P9 consolidation packet rather than a generic later stage."
+      "notes": "README should name the active bounded return packet rather than the earlier docs-only packet."
     },
     {
       "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record the completed checkpoint plus the active consolidation packet."
+      "notes": "STATUS should record the completed checkpoint plus the active bounded return packet."
     },
     {
       "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
@@ -62,7 +62,7 @@
     {
       "item_id": "current_stage_driver_is_canonical",
       "status": "pass",
-      "notes": "The current-stage driver should expose the full active consolidation packet in one place."
+      "notes": "The current-stage driver should expose the full active bounded return packet in one place."
     },
     {
       "item_id": "layout_log_records_post_p7_decisions",

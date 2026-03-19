@@ -97,15 +97,16 @@ def build_sync_checklist(
             if contains_all(
                 readme_text,
                 [
-                    "active post-`p9` stage is checkpoint consolidation and archive packaging",
-                    "`h3` fixes driver/gate semantics",
-                    "`p10` builds a venue-agnostic submission/archive packet",
-                    "`p11` prepares downstream-only derivative material",
-                    "no `e1` patch lane is active",
+                    "the active stage is a bounded scientific return",
+                    "`h4` resets the driver to reproduction",
+                    "`e1a` sharpens the bounded precision story",
+                    "`e1b` adds same-scope systems attribution",
+                    "`e1c` stays conditional only",
+                    "`h5` refreezes through the standing audits",
                 ],
             )
             else "blocked",
-            "notes": "README should name the active post-P9 consolidation packet rather than a generic later stage.",
+            "notes": "README should name the active bounded return packet rather than the earlier docs-only packet.",
         },
         {
             "item_id": "status_tracks_current_active_stage",
@@ -115,13 +116,15 @@ def build_sync_checklist(
                 [
                     "`p8` stage is complete on the current frozen scope",
                     "`p9` stage is complete on the same scope",
-                    "current active post-`p9` operational stage is checkpoint consolidation and archive readiness",
-                    "`h3`, `p10`, `p11`, and `f1`",
-                    "no `e1` patch lane is active",
+                    "current active post-`p9` operational stage is a bounded reproduction-mainline return",
+                    "`h4`, `e1a`, `e1b`, and `h5`",
+                    "`e1c` remains conditional only",
+                    "logical lane order stays `e1a` then `e1b`",
+                    "frontend widening remains blocked",
                 ],
             )
             else "blocked",
-            "notes": "STATUS should record the completed checkpoint plus the active consolidation packet.",
+            "notes": "STATUS should record the completed checkpoint plus the active bounded return packet.",
         },
         {
             "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
@@ -151,11 +154,12 @@ def build_sync_checklist(
                 release_summary_text,
                 [
                     "this repository reproduces a narrow execution-substrate claim",
-                    "the active post-`p9` follow-up is checkpoint consolidation rather than claim expansion",
-                    "`h3` clarifies driver/gate semantics",
-                    "`p10` builds a venue-agnostic submission/archive packet",
-                    "`p11` prepares downstream-only derivative material",
-                    "no `e1` patch lane is active",
+                    "the active post-`p9` follow-up is a bounded reproduction-mainline return",
+                    "`h4` resets the active driver to the scientific mainline",
+                    "`e1a` sharpens bounded precision on current families",
+                    "`e1b` adds same-scope systems attribution",
+                    "`e1c` remains conditional only",
+                    "`h5` refreezes through the standing audits",
                 ],
             )
             and contains_none(release_summary_text, ["later full plan-mode stage"])
@@ -184,15 +188,17 @@ def build_sync_checklist(
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h3_stage_driver_consolidation_and_plan_index`",
-                    "`p10_submission_packet_and_archival_repro_bundle`",
-                    "`p11_manuscript_targeting_and_derivative_controls`",
-                    "`f1_future_evidence_playbooks`",
-                    "no `e1` patch lane is active on the current repo state",
+                    "`h4_reproduction_mainline_return`",
+                    "`e1a_precision_patch`",
+                    "`e1b_systems_patch`",
+                    "`h5_repro_sync_and_refreeze`",
+                    "`e1c_compiled_boundary_patch`",
+                    "logical lane order remains `e1a_precision_patch` -> `e1b_systems_patch`",
+                    "completed baseline",
                 ],
             )
             else "blocked",
-            "notes": "The current-stage driver should expose the full active consolidation packet in one place.",
+            "notes": "The current-stage driver should expose the full active bounded return packet in one place.",
         },
         {
             "item_id": "layout_log_records_post_p7_decisions",
@@ -230,10 +236,10 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         {
             "path": "README.md",
             "needles": [
-                "active post-`P9` stage is checkpoint consolidation and archive packaging",
-                "`H3` fixes driver/gate semantics",
-                "`P10` builds a venue-agnostic submission/archive packet",
-                "No `E1` patch lane is active",
+                "The active stage is a bounded scientific return",
+                "`H4` resets the driver to reproduction",
+                "`E1a` sharpens the bounded precision story",
+                "`E1c` stays conditional only",
                 "does **not** claim",
             ],
         },
@@ -242,8 +248,9 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "needles": [
                 "`P8` stage is complete on the current frozen scope",
                 "`P9` stage is complete on the same scope",
-                "checkpoint consolidation and archive readiness",
-                "`H3`, `P10`, `P11`, and `F1`",
+                "bounded reproduction-mainline return",
+                "`H4`, `E1a`, `E1b`, and `H5`",
+                "Logical lane order stays `E1a` then `E1b`",
             ],
         },
         {
@@ -260,20 +267,21 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         {
             "path": "docs/publication_record/current_stage_driver.md",
             "needles": [
-                "`H3_stage_driver_consolidation_and_plan_index`",
-                "`P10_submission_packet_and_archival_repro_bundle`",
-                "`P11_manuscript_targeting_and_derivative_controls`",
-                "`F1_future_evidence_playbooks`",
+                "`H4_reproduction_mainline_return`",
+                "`E1a_precision_patch`",
+                "`E1b_systems_patch`",
+                "`H5_repro_sync_and_refreeze`",
+                "completed baseline",
             ],
         },
         {
             "path": "docs/publication_record/release_summary_draft.md",
             "needles": [
                 "This repository reproduces a narrow execution-substrate claim",
-                "The active post-`P9` follow-up is checkpoint consolidation rather than claim expansion",
-                "`H3` clarifies driver/gate semantics",
-                "`P10` builds a venue-agnostic submission/archive packet",
-                "No `E1` patch lane is active",
+                "The active post-`P9` follow-up is a bounded reproduction-mainline return",
+                "`H4` resets the active driver to the scientific mainline",
+                "`E1a` sharpens bounded precision on current families",
+                "`E1c` remains conditional only",
             ],
         },
         {
@@ -323,14 +331,14 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "post_p9_checkpoint_consolidation_active",
+        "current_paper_phase": "reproduction_mainline_return_active",
         "release_summary_role": "approved_downstream_short_update_source",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "execute the current H3/P10/P11/F1 consolidation packet while keeping current claim and artifact boundaries fixed"
+            "execute the current H4/E1a/E1b/H5 bounded return packet while keeping current claim and artifact boundaries fixed"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),

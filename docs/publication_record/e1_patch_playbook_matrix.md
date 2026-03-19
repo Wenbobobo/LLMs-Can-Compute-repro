@@ -1,7 +1,8 @@
 # `E1` Patch Playbook Matrix
 
-This matrix is a dormant downstream aid for future evidence maintenance. No
-`E1` lane is active on the current repo state.
+This matrix is the routing reference for bounded evidence work. The playbooks
+themselves do not activate lanes; current activation, if any, is recorded in
+`docs/publication_record/current_stage_driver.md`.
 
 ## Shared activation rules
 

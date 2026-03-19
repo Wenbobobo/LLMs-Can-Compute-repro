@@ -1,0 +1,34 @@
+{
+  "target_claims": [
+    "C3d",
+    "C3e"
+  ],
+  "status": "sharpened_current_suite_boundary",
+  "claim_update": "narrowed_positive_with_boundary_sharpened_same_suite",
+  "source_basis": [
+    "No new trace-family programs were added in E1a; this lane re-indexes existing M4/R1 evidence only.",
+    "the organic-trace milestone reuses the current broadened M4-E batch instead of silently re-running an equivalent suite under a new name."
+  ],
+  "observed_failure_type_counts": [
+    {
+      "failure_type": "tie_collapse",
+      "count": 12
+    }
+  ],
+  "boundary_delta": {
+    "single_head_failure_stream_count": 12,
+    "single_head_failure_at_1x_stream_count": 7,
+    "family_count": 14
+  },
+  "distilled_boundary": {
+    "helps_here": [
+      "Decomposition still recovers many streams at the horizon where single-head first fails."
+    ],
+    "unproven_here": [
+      "Current-suite rows still do not support universal horizon/base robustness claims."
+    ],
+    "unsupported_here": [
+      "No E1a output broadens beyond current validated families."
+    ]
+  }
+}

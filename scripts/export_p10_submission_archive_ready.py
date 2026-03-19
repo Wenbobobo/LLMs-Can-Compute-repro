@@ -117,15 +117,17 @@ def build_checklist_rows(
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h3_stage_driver_consolidation_and_plan_index`",
-                    "`p10_submission_packet_and_archival_repro_bundle`",
-                    "`p11_manuscript_targeting_and_derivative_controls`",
-                    "`f1_future_evidence_playbooks`",
-                    "no `e1` patch lane is active on the current repo state",
+                    "`h4_reproduction_mainline_return`",
+                    "`e1a_precision_patch`",
+                    "`e1b_systems_patch`",
+                    "`h5_repro_sync_and_refreeze`",
+                    "`e1c_compiled_boundary_patch`",
+                    "logical lane order remains `e1a_precision_patch` -> `e1b_systems_patch`",
+                    "completed baseline",
                 ],
             )
             else "blocked",
-            "notes": "The current-stage driver should expose the active consolidation packet and inactive reopen state.",
+            "notes": "The current-stage driver should expose the active bounded return packet and conditional compiled lane.",
         },
         {
             "item_id": "planning_taxonomy_assigns_single_active_driver",
@@ -224,18 +226,19 @@ def build_checklist_rows(
             if contains_all(
                 readme_text,
                 [
-                    "active post-`p9` stage is checkpoint consolidation and archive packaging",
-                    "`h3` fixes driver/gate semantics",
-                    "`p10` builds a venue-agnostic submission/archive packet",
-                    "no `e1` patch lane is active",
+                    "the active stage is a bounded scientific return",
+                    "`h4` resets the driver to reproduction",
+                    "`e1a` sharpens the bounded precision story",
+                    "`e1c` stays conditional only",
                 ],
             )
             and contains_all(
                 status_text,
                 [
-                    "current active post-`p9` operational stage is checkpoint consolidation and archive readiness",
-                    "`h3`, `p10`, `p11`, and `f1`",
-                    "no `e1` patch lane is active",
+                    "current active post-`p9` operational stage is a bounded reproduction-mainline return",
+                    "`h4`, `e1a`, `e1b`, and `h5`",
+                    "`e1c` remains conditional only",
+                    "logical lane order stays `e1a` then `e1b`",
                 ],
             )
             and contains_all(
@@ -279,26 +282,27 @@ def build_packet_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         "README.md": (
             "readme_text",
             [
-                "active post-`P9` stage is checkpoint consolidation and archive packaging",
-                "`H3` fixes driver/gate semantics",
-                "`P10` builds a venue-agnostic submission/archive packet",
+                "The active stage is a bounded scientific return",
+                "`H4` resets the driver to reproduction",
+                "`E1a` sharpens the bounded precision story",
             ],
         ),
         "STATUS.md": (
             "status_text",
             [
-                "current active post-`P9` operational stage is checkpoint consolidation and archive readiness",
-                "`H3`, `P10`, `P11`, and `F1`",
-                "No `E1` patch lane is active",
+                "current active post-`P9` operational stage is a bounded reproduction-mainline return",
+                "`H4`, `E1a`, `E1b`, and `H5`",
+                "`E1c` remains conditional only",
             ],
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
             [
-                "`H3_stage_driver_consolidation_and_plan_index`",
-                "`P10_submission_packet_and_archival_repro_bundle`",
-                "`P11_manuscript_targeting_and_derivative_controls`",
-                "`F1_future_evidence_playbooks`",
+                "`H4_reproduction_mainline_return`",
+                "`E1a_precision_patch`",
+                "`E1b_systems_patch`",
+                "`H5_repro_sync_and_refreeze`",
+                "completed baseline",
             ],
         ),
         "docs/publication_record/submission_packet_index.md": (
@@ -352,7 +356,7 @@ def build_packet_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "post_p9_checkpoint_consolidation_active",
+        "current_paper_phase": "reproduction_mainline_return_active",
         "packet_state": "archive_ready" if not blocked_items else "blocked",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),

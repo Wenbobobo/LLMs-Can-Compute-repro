@@ -40,12 +40,12 @@
     "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md"
   ],
   "summary": {
-    "current_paper_phase": "post_p9_checkpoint_consolidation_active",
+    "current_paper_phase": "reproduction_mainline_return_active",
     "release_summary_role": "approved_downstream_short_update_source",
     "check_count": 9,
     "pass_count": 9,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "execute the current H3/P10/P11/F1 consolidation packet while keeping current claim and artifact boundaries fixed"
+    "recommended_next_action": "execute the current H4/E1a/E1b/H5 bounded return packet while keeping current claim and artifact boundaries fixed"
   }
 }

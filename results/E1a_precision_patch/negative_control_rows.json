@@ -1,0 +1,91 @@
+{
+  "experiment": "e1a_precision_patch_weak_negative_control",
+  "description": "Existing immediate single-head failures at 1x on current suites.",
+  "row_count": 7,
+  "rows": [
+    {
+      "suite_bundle": "c3d_real",
+      "stream_name": "alternating_offset_2048_memory",
+      "family": "alternating_offset_2048",
+      "program_name": "alternating_offset_2048",
+      "space": "memory",
+      "native_max_steps": 223,
+      "first_failure_horizon_multiplier": 1,
+      "first_failure_type": "tie_collapse",
+      "first_failure_read_step": 25,
+      "decomposition_passes_at_failure_horizon": true
+    },
+    {
+      "suite_bundle": "c3d_real",
+      "stream_name": "loop_offset_1024_memory",
+      "family": "loop_offset_1024",
+      "program_name": "loop_offset_1024",
+      "space": "memory",
+      "native_max_steps": 204,
+      "first_failure_horizon_multiplier": 1,
+      "first_failure_type": "tie_collapse",
+      "first_failure_read_step": 43,
+      "decomposition_passes_at_failure_horizon": true
+    },
+    {
+      "suite_bundle": "c3d_real",
+      "stream_name": "loop_offset_4096_memory",
+      "family": "loop_offset_4096",
+      "program_name": "loop_offset_4096",
+      "space": "memory",
+      "native_max_steps": 204,
+      "first_failure_horizon_multiplier": 1,
+      "first_failure_type": "tie_collapse",
+      "first_failure_read_step": 7,
+      "decomposition_passes_at_failure_horizon": true
+    },
+    {
+      "suite_bundle": "c3d_real",
+      "stream_name": "ping_pong_offset_8192_memory",
+      "family": "ping_pong_offset_8192",
+      "program_name": "ping_pong_offset_8192",
+      "space": "memory",
+      "native_max_steps": 15,
+      "first_failure_horizon_multiplier": 1,
+      "first_failure_type": "tie_collapse",
+      "first_failure_read_step": 4,
+      "decomposition_passes_at_failure_horizon": true
+    },
+    {
+      "suite_bundle": "c3e_generalized",
+      "stream_name": "flagged_indirect_accumulator_10_a1024_memory",
+      "family": "flagged_indirect_accumulator",
+      "program_name": "flagged_indirect_accumulator_10_a1024",
+      "space": "memory",
+      "native_max_steps": 212,
+      "first_failure_horizon_multiplier": 1,
+      "first_failure_type": "tie_collapse",
+      "first_failure_read_step": 70,
+      "decomposition_passes_at_failure_horizon": true
+    },
+    {
+      "suite_bundle": "c3e_generalized",
+      "stream_name": "hotspot_memory_rewrite_12_a2048_memory",
+      "family": "hotspot_memory_rewrite",
+      "program_name": "hotspot_memory_rewrite_12_a2048",
+      "space": "memory",
+      "native_max_steps": 269,
+      "first_failure_horizon_multiplier": 1,
+      "first_failure_type": "tie_collapse",
+      "first_failure_read_step": 30,
+      "decomposition_passes_at_failure_horizon": true
+    },
+    {
+      "suite_bundle": "c3e_generalized",
+      "stream_name": "selector_checkpoint_bank_9_a1536_memory",
+      "family": "selector_checkpoint_bank",
+      "program_name": "selector_checkpoint_bank_9_a1536",
+      "space": "memory",
+      "native_max_steps": 304,
+      "first_failure_horizon_multiplier": 1,
+      "first_failure_type": "tie_collapse",
+      "first_failure_read_step": 29,
+      "decomposition_passes_at_failure_horizon": true
+    }
+  ]
+}

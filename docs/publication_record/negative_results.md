@@ -24,6 +24,10 @@
 - In the broader `M4-E` suite, the new high-address memory streams all fail at
   `1x` under float32 single-head, and the deeper exported stack stream first
   fails at `4x`; observed failure type remains `tie_collapse`.
+- `E1a` keeps that boundary narrow on the same current suite: `12/25`
+  tracked streams fail under float32 single-head, `7/25` already at `1x`, and
+  the weaker coarse-bucket control also fails broadly, so decomposition is
+  useful but not universal.
 - The current `D0` slice is intentionally narrow. Exact agreement on this tiny
   typed-bytecode boundary, plus its appendix-level memory-surface companion,
   does not validate broader compiler or language claims.
@@ -32,3 +36,6 @@
   the current positive `D0` suites the lowered `exec_trace` path is still
   slower per step than the best current bytecode/spec reference path, so no
   current-scope end-to-end competitiveness claim is justified yet.
+- `E1b` improves attribution without changing that conclusion: the current gap
+  is now broken out by program, suite, and history bridge, but no same-scope
+  runtime row yet overturns the mixed gate or authorizes frontend widening.

@@ -1,0 +1,50 @@
+{
+  "experiment": "h4_reproduction_return_guard",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "tmp/2026-03-19-reproduction-mainline-return-master-plan.md",
+    "README.md",
+    "STATUS.md",
+    "docs/publication_record/README.md",
+    "docs/publication_record/current_stage_driver.md",
+    "docs/publication_record/release_summary_draft.md",
+    "results/M7_frontend_candidate_decision/decision_summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h4_reproduction_mainline_return_active",
+    "active_stage": "h4_reproduction_mainline_return",
+    "lane_order": "e1a_then_e1b_then_optional_e1c_then_h5",
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "execute bounded E1a/E1b evidence lanes, keep E1c conditional-only, and refreeze through H5"
+  }
+}

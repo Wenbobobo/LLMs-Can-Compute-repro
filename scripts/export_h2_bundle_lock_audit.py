@@ -93,9 +93,9 @@ def build_checklist_rows(
                 readme_text,
                 [
                     "submission-candidate bundle",
-                    "active post-`p9` stage is checkpoint consolidation and archive packaging",
-                    "`h3` fixes driver/gate semantics",
-                    "no `e1` patch lane is active",
+                    "the active stage is a bounded scientific return",
+                    "`h4` resets the driver to reproduction",
+                    "`e1c` stays conditional only",
                 ],
             )
             and contains_all(
@@ -103,13 +103,15 @@ def build_checklist_rows(
                 [
                     "`p8` stage is complete on the current frozen scope",
                     "`p9` stage is complete on the same scope",
-                    "current active post-`p9` operational stage is checkpoint consolidation and archive readiness",
-                    "`h3`, `p10`, `p11`, and `f1`",
-                    "no `e1` patch lane is active",
+                    "current active post-`p9` operational stage is a bounded reproduction-mainline return",
+                    "`h4`, `e1a`, `e1b`, and `h5`",
+                    "`e1c` remains conditional only",
+                    "logical lane order stays `e1a` then `e1b`",
+                    "frontend widening remains blocked",
                 ],
             )
             else "blocked",
-            "notes": "README and STATUS should both describe the locked checkpoint plus the active consolidation packet.",
+            "notes": "README and STATUS should both describe the locked checkpoint plus the active bounded return packet.",
         },
         {
             "item_id": "publication_record_tracks_driver_taxonomy",
@@ -139,11 +141,13 @@ def build_checklist_rows(
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h3_stage_driver_consolidation_and_plan_index`",
-                    "`p10_submission_packet_and_archival_repro_bundle`",
-                    "`p11_manuscript_targeting_and_derivative_controls`",
-                    "`f1_future_evidence_playbooks`",
-                    "no `e1` patch lane is active on the current repo state",
+                    "`h4_reproduction_mainline_return`",
+                    "`e1a_precision_patch`",
+                    "`e1b_systems_patch`",
+                    "`h5_repro_sync_and_refreeze`",
+                    "`e1c_compiled_boundary_patch`",
+                    "logical lane order remains `e1a_precision_patch` -> `e1b_systems_patch`",
+                    "completed baseline",
                 ],
             )
             and contains_all(
@@ -169,8 +173,10 @@ def build_checklist_rows(
                     "`p8` closed",
                     "`h2` remains",
                     "`p9` keeps outward wording downstream",
-                    "`h3` clarifies driver/gate semantics",
-                    "`p10` builds a venue-agnostic submission/archive packet",
+                    "the active post-`p9` follow-up is a bounded reproduction-mainline return",
+                    "`h4` resets the active driver to the scientific mainline",
+                    "`e1a` sharpens bounded precision on current families",
+                    "`h5` refreezes through the standing audits",
                 ],
             )
             and contains_all(
@@ -251,8 +257,9 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "readme_text",
             [
                 "submission-candidate bundle",
-                "active post-`P9` stage is checkpoint consolidation and archive packaging",
-                "`H3` fixes driver/gate semantics",
+                "The active stage is a bounded scientific return",
+                "`H4` resets the driver to reproduction",
+                "`E1a` sharpens the bounded precision story",
             ],
         ),
         "STATUS.md": (
@@ -260,7 +267,8 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             [
                 "`P8` stage is complete on the current frozen scope",
                 "`P9` stage is complete on the same scope",
-                "checkpoint consolidation and archive readiness",
+                "bounded reproduction-mainline return",
+                "`H4`, `E1a`, `E1b`, and `H5`",
             ],
         ),
         "docs/publication_record/README.md": (
@@ -276,10 +284,11 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
             [
-                "`H3_stage_driver_consolidation_and_plan_index`",
-                "`P10_submission_packet_and_archival_repro_bundle`",
-                "`P11_manuscript_targeting_and_derivative_controls`",
-                "`F1_future_evidence_playbooks`",
+                "`H4_reproduction_mainline_return`",
+                "`E1a_precision_patch`",
+                "`E1b_systems_patch`",
+                "`H5_repro_sync_and_refreeze`",
+                "completed baseline",
             ],
         ),
         "docs/publication_record/planning_state_taxonomy.md": (
@@ -302,7 +311,8 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
                 "`P8` closed",
                 "`H2` remains",
                 "`P9` keeps outward wording downstream",
-                "`H3` clarifies driver/gate semantics",
+                "The active post-`P9` follow-up is a bounded reproduction-mainline return",
+                "`H4` resets the active driver to the scientific mainline",
             ],
         ),
         "docs/publication_record/paper_bundle_status.md": (
@@ -360,14 +370,14 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "post_p9_checkpoint_consolidation_active",
+        "current_paper_phase": "reproduction_mainline_return_active",
         "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
         "check_count": len(rows),
         "pass_count": sum(row["status"] == "pass" for row in rows),
         "blocked_count": sum(row["status"] != "pass" for row in rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "keep the H2 bundle-lock audit green while the H3/P10/P11/F1 consolidation packet stays active"
+            "keep the H2 bundle-lock audit green while the H4/E1a/E1b/H5 bounded return packet stays active"
             if not blocked_items
             else "resolve the blocked bundle-lock or release-hygiene items before another outward sync"
         ),

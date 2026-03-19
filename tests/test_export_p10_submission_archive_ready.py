@@ -50,7 +50,7 @@ def test_build_summary_reports_archive_ready_packet() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "post_p9_checkpoint_consolidation_active"
+    assert summary["current_paper_phase"] == "reproduction_mainline_return_active"
     assert summary["packet_state"] == "archive_ready"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (

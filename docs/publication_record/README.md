@@ -7,7 +7,8 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H3` / `P10` / `P11` / `F1` stage;
+  current bounded reproduction-return packet in the `H4` / `E1a` / `E1b` /
+  `H5` stage;
 - `planning_state_taxonomy.md` — allowed planning-state labels and current
   assignments for active drivers, standing gates, dormant protocols, and
   historical-complete references;
@@ -15,8 +16,13 @@ Current control docs:
   `historical_complete` reference;
 - `release_candidate_checklist.md` — restrained outward-sync
   `standing_gate` for the locked checkpoint;
-- `conditional_reopen_protocol.md` — dormant `E1` reopen protocol; no patch
-  lane is currently active.
+- `conditional_reopen_protocol.md` — bounded reopen protocol still governing
+  the current scientific-return stage; `E1c` remains conditional only.
+
+Completed baseline:
+- `H3` / `P10` / `P11` / `F1` remain the completed baseline that made the
+  locked checkpoint auditable and handoff-safe before the active return packet
+  resumed reproduction work.
 
 Core ledgers:
 - `claim_ladder.md` — which claims are validated, partial, negative, or still
@@ -65,14 +71,16 @@ Derivative-only aids:
 - `reviewer_boundary_note.md` — concise reviewer-facing note on current claims,
   non-claims, and reopen routing.
 
-Dormant future-evidence playbooks:
-- `e1_patch_playbook_matrix.md` — lane-selection matrix for future reopen work;
-- `e1a_precision_patch_playbook.md` — smallest-bundle protocol for bounded
-  precision reopen requests;
-- `e1b_systems_patch_playbook.md` — smallest-bundle protocol for systems-gate
-  reopen requests;
-- `e1c_compiled_boundary_patch_playbook.md` — smallest-bundle protocol for
-  tiny-bytecode boundary reopen requests.
+Patch-playbook references:
+- `e1_patch_playbook_matrix.md` — lane-selection matrix retained as the
+  routing reference for the current bounded patch stage;
+- `e1a_precision_patch_playbook.md` — active bounded-precision protocol for the
+  current `E1a` lane;
+- `e1b_systems_patch_playbook.md` — active bounded-systems protocol for the
+  current `E1b` lane;
+- `e1c_compiled_boundary_patch_playbook.md` — still-dormant compiled-boundary
+  protocol, used only if the current return stage exposes a `D0`
+  contradiction.
 
 Supporting references:
 - `release_preflight_checklist.md` — outward release checklist for README /
@@ -109,8 +117,9 @@ Operating rule:
 - appendix-level diagnostics that strengthen an existing claim row without
   widening scope should stay tied to that claim and the `P1` paper bundle,
   rather than becoming a new claim layer by default;
-- dormant `E1` playbooks are preparation material only and must not be treated
-  as an active reopen;
+- the current stage activates only `E1a` and `E1b` on named bounded conflicts;
+  `E1c` remains dormant unless the active patches expose a true `D0`
+  contradiction;
 - `blog_outline.md` remains downstream and currently blocked: `M7` resolved as
   a no-widening decision, so broader blog prose should not outrun the present
   paper-grade endpoint.

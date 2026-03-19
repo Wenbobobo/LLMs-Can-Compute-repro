@@ -33,8 +33,8 @@
       "path": "README.md",
       "matched_lines": [
         "This repository does **not** claim that general LLMs are computers, that",
-        "- The active post-`P9` stage is checkpoint consolidation and archive packaging: `H3` fixes driver/gate semantics, `P10` builds a venue-agnostic submission/archive packet, `P11` prepares downstream-only derivative material, and `F1` preauthors dormant `E1` patch playbooks.",
-        "- No `E1` patch lane is active; any new evidence still routes through `docs/publication_record/conditional_reopen_protocol.md`."
+        "| `H4-H5` | The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits |",
+        "- The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits."
       ]
     },
     {
@@ -42,7 +42,8 @@
       "matched_lines": [
         "- The `P8` stage is complete on the current frozen scope: the manuscript,",
         "- The `P9` stage is complete on the same scope: `README.md`, `STATUS.md`,",
-        "- `H3`, `P10`, `P11`, and `F1` are the active non-claim-expanding lanes on top"
+        "- `H4`, `E1a`, `E1b`, and `H5` are the active bounded lanes on top of the",
+        "5. The logical lane order stays `E1a` then `E1b`, and frontend widening"
       ]
     },
     {
@@ -59,18 +60,19 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H3_stage_driver_consolidation_and_plan_index`",
-        "- `P10_submission_packet_and_archival_repro_bundle`",
-        "- `P11_manuscript_targeting_and_derivative_controls`",
-        "- `F1_future_evidence_playbooks`"
+        "- `H4_reproduction_mainline_return`",
+        "- `E1a_precision_patch`",
+        "- `E1b_systems_patch`",
+        "- `H5_repro_sync_and_refreeze`",
+        "the completed baseline for documentation, archive, and derivative controls.",
+        "The logical lane order remains `E1a_precision_patch` -> `E1b_systems_patch`."
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
         "This repository reproduces a narrow execution-substrate claim rather than a",
-        "semantics, `P10` builds a venue-agnostic submission/archive packet, `P11`",
-        "`E1` playbooks. No `E1` patch lane is active."
+        "`H5` refreezes through the standing audits. `E1c` remains conditional only."
       ]
     },
     {

@@ -25,6 +25,7 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 | `P1-P2` | paper bundle and public-safe packaging ledgers are active |
 | `P3-R2` | claim freeze, precision closure, and systems gate are exported; the systems result is mixed rather than triumphant |
 | `M7-P4` | the project stays on tiny typed bytecode, frontend widening is not authorized, and the blog remains blocked |
+| `H4-H5` | The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits |
 
 ## Current Gate Outcome
 
@@ -33,13 +34,16 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - The systems gate remains mixed: geometry is strongly positive, but the lowered path is still about `1.82x` slower than the best current reference/oracle path on positive `D0` suites.
 - The compiled endpoint stays at the current tiny typed-bytecode boundary.
 - The restrained public surface remains downstream of the locked submission-candidate bundle, and broader blog/demo release stays blocked.
-- The active post-`P9` stage is checkpoint consolidation and archive packaging: `H3` fixes driver/gate semantics, `P10` builds a venue-agnostic submission/archive packet, `P11` prepares downstream-only derivative material, and `F1` preauthors dormant `E1` patch playbooks.
-- No `E1` patch lane is active; any new evidence still routes through `docs/publication_record/conditional_reopen_protocol.md`.
+- The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits.
+- No active lane authorizes frontend widening, arbitrary C, or a broader “LLMs are computers” claim.
 
 ## Start Here
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical active-stage driver
+- `results/H4_reproduction_return_guard/summary.json` — active-stage guard for the bounded scientific-return packet
+- `results/E1a_precision_patch/summary.json` — current-suite precision patch summary
+- `results/E1b_systems_patch/summary.json` — same-scope systems bridge summary
 - `docs/publication_record/submission_packet_index.md` — venue-agnostic submission/archive handoff
 - `docs/publication_record/claim_ladder.md` — claim boundary summary
 - `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
@@ -58,6 +62,9 @@ uv run pytest -q
 Common export commands:
 
 ```bash
+uv run python scripts/export_h4_reproduction_return_guard.py
+uv run python scripts/export_e1a_precision_patch.py
+uv run python scripts/export_e1b_systems_patch.py
 uv run python scripts/export_p1_figure_table_sources.py
 uv run python scripts/render_p1_paper_artifacts.py
 uv run python scripts/export_p1_paper_readiness.py
