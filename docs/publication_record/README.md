@@ -6,6 +6,8 @@ and public-safe evidence mapping should be treated as active rather than
 speculative.
 
 Core ledgers:
+- `paper_package_plan.md` — active post-`P7` package driver for submission and
+  release stabilization;
 - `claim_ladder.md` — which claims are validated, partial, negative, or still
   open;
 - `claim_evidence_table.md` — concrete artifacts already supporting published
@@ -20,6 +22,8 @@ Core ledgers:
   baseline for the current freeze-candidate checkpoint;
 - `freeze_candidate_criteria.md` — explicit pass/fail standard for calling the
   current manuscript bundle a freeze candidate;
+- `submission_candidate_criteria.md` — explicit bundle-lock standard for the
+  next paper-facing pass on the same frozen scope;
 - `main_text_order.md` — fixed main-text figure/table sequence for the frozen
   scope;
 - `appendix_companion_scope.md` — required versus optional appendix companions
@@ -35,8 +39,12 @@ Core ledgers:
   updates;
 - `release_preflight_checklist.md` — outward release checklist for README /
   STATUS / release summary and paper-facing ledgers;
+- `release_candidate_checklist.md` — outward sync gate for the restrained
+  release-candidate pass after the bundle lock;
 - `blog_release_rules.md` — explicit downstream preconditions before any future
   blog derivative is allowed to move;
+- `conditional_reopen_protocol.md` — the only allowed path for reopening
+  evidence after the current freeze-candidate checkpoint;
 - `section_draft_upgrade_outline.md` — record of the structural pass that
   converted the bundle into a more paper-shaped section draft;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
@@ -61,11 +69,12 @@ Operating rule:
 - future short public-surface syncs should derive from
   `release_summary_draft.md`, while the manuscript bundle remains the
   authoritative paper-facing source.
+- `paper_package_plan.md` is the active post-`P7` package driver;
+  `paper_outline.md` is now structural reference material rather than the
+  current stage driver.
 - the freeze-candidate checkpoint is governed by `freeze_candidate_criteria.md`
   and `release_preflight_checklist.md`; future outward syncs should satisfy
   both before claiming a new paper-facing state.
-- `paper_outline.md` is active planning material for the current paper-first
-  workflow.
 - `blog_outline.md` remains downstream and currently blocked: `M7` resolved as
   a no-widening decision, so broader blog prose should not outrun the present
   paper-grade endpoint.

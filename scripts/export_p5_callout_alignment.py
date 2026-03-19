@@ -226,7 +226,7 @@ def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
         "blocked_count": sum(row["status"] != "pass" for row in rows),
         "blocked_rows": blocked_rows,
         "recommended_next_action": (
-            "continue manuscript-freeze candidate assembly while keeping the current main-text artifact pairings fixed"
+            "keep the current main-text artifact pairings fixed through the P8 submission-candidate bundle lock"
             if not blocked_rows
             else "resolve the blocked manuscript/caption/callout alignment rows before broader prose edits"
         ),

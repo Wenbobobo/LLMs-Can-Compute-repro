@@ -35,21 +35,22 @@
 - `results/P1_paper_readiness/summary.json` now reports `10/10` ready
   figure/table items and no blocked or partial items on the frozen current
   scope.
-- The current repository is therefore at a freeze-candidate checkpoint rather
-  than in another open drafting wave.
+- The current repository therefore remains at the freeze-candidate checkpoint,
+  and the post-`P7` stabilization lanes are now defined: `P8` locks the
+  submission-candidate bundle, `H2` promotes bundle-lock/release-hygiene
+  audits, and `P9` freezes the restrained public surface.
 
 ## Immediate Next Actions
 
 1. Keep `README.md`, `STATUS.md`, and future short public-surface syncs
-   downstream of `docs/publication_record/release_summary_draft.md`.
-2. Reconcile remaining legacy unchecked rows under
-   `docs/milestones/H1_legacy_backlog_reconciliation/` so unattended runs do
-   not misread frozen historical branches as active work.
-3. Start the next full plan-mode stage from the completed `P7` checkpoint,
-   using `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md`
-   and `handoff.md` as the frozen paper-lane baseline.
-4. Reopen precision, systems, or frontend widening only if the project
-   deliberately starts a new evidence wave; otherwise keep the current `D0`
+   downstream of `docs/publication_record/release_summary_draft.md` and
+   `docs/publication_record/release_candidate_checklist.md`.
+2. Execute `P8` against the frozen manuscript bundle, appendix minimum package,
+   and paper-facing ledgers without widening claims.
+3. Keep `P1`, `P5`, and `H2` audits green while the post-`P7` stabilization
+   package is active.
+4. Reopen precision, systems, or compiled-boundary evidence only through the
+   explicit `E1` conditional reopen protocol; otherwise keep the current `D0`
    endpoint fixed.
 
 ## Known Blockers

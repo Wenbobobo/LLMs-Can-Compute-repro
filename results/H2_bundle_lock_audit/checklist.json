@@ -1,0 +1,68 @@
+{
+  "experiment": "h2_bundle_lock_audit_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "readme_and_status_hold_post_p7_stabilization",
+      "status": "pass",
+      "notes": "README and STATUS should both describe the active post-P7 stabilization package rather than another vague planning pass."
+    },
+    {
+      "item_id": "publication_record_tracks_active_package_driver",
+      "status": "pass",
+      "notes": "Publication record docs should name one active post-P7 package driver plus the new control docs."
+    },
+    {
+      "item_id": "release_summary_and_bundle_status_name_post_p7_package",
+      "status": "pass",
+      "notes": "The short release summary and paper bundle status should both point to the same post-P7 package rather than stop at the freeze checkpoint."
+    },
+    {
+      "item_id": "submission_candidate_criteria_lock_scope",
+      "status": "pass",
+      "notes": "Submission-candidate criteria should define a real bundle-lock gate on the same frozen scope."
+    },
+    {
+      "item_id": "release_candidate_checklist_stays_downstream",
+      "status": "pass",
+      "notes": "The release-candidate checklist should keep outward sync downstream of the locked bundle and the standing audits."
+    },
+    {
+      "item_id": "conditional_reopen_protocol_requires_named_patch_lane",
+      "status": "pass",
+      "notes": "Reopen control should force later agents into one named patch lane and a refreeze step."
+    },
+    {
+      "item_id": "layout_log_records_post_p7_governance",
+      "status": "pass",
+      "notes": "The layout decision log should record the current post-P7 governance choices explicitly."
+    }
+  ]
+}

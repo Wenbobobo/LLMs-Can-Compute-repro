@@ -33,23 +33,24 @@
       "path": "README.md",
       "matched_lines": [
         "This repository does **not** claim that general LLMs are computers, that",
-        "The current freeze-candidate package is now assembled under the existing audit"
+        "package is now defined: `P8` locks the submission-candidate bundle, `H2`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- The `P7` stage is now complete on the current frozen scope: the manuscript",
-        "- The current repository is therefore at a freeze-candidate checkpoint rather",
-        "using `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md`"
+        "and the post-`P7` stabilization lanes are now defined: `P8` locks the"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
+        "- `paper_package_plan.md` \u2014 active post-`P7` package driver for submission and",
+        "- `submission_candidate_criteria.md` \u2014 explicit bundle-lock standard for the",
         "- `release_summary_draft.md` \u2014 short release-facing draft derived from the",
         "manuscript bundle and approved as the source for future README-adjacent short",
-        "`release_summary_draft.md`, while the manuscript bundle remains the"
+        "`release_summary_draft.md`, while the manuscript bundle remains the",
+        "- `paper_package_plan.md` is the active post-`P7` package driver;"
       ]
     },
     {
@@ -57,8 +58,9 @@
       "matched_lines": [
         "This repository reproduces a narrow execution-substrate claim rather than a",
         "## Current paper-facing follow-up",
-        "The current frozen scope now has a paper-facing freeze-candidate checkpoint:",
-        "from a later stage-planning pass, not from claim expansion."
+        "The current frozen scope now moves into a post-`P7` stabilization package.",
+        "`P8` locks the submission-candidate bundle, `H2` promotes bundle-lock and",
+        "release-hygiene audits, and `P9` freezes the restrained public surface. This"
       ]
     },
     {
@@ -72,21 +74,24 @@
     {
       "path": "docs/publication_record/layout_decision_log.md",
       "matched_lines": [
-        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the `D0` endpoint boundary without introducing new claims or marketing-style compression. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |"
+        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the `D0` endpoint boundary without introducing new claims or marketing-style compression. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |",
+        "| Post-`P7` next phase | Treat the freeze-candidate checkpoint as the fixed baseline and move the next paper-facing work into `P8` bundle lock, `H2` audit promotion, and `P9` restrained release sync. | The next risk is package and governance drift, not another freeze pass or a structure rewrite. | A later audit or review requirement proves one missing evidence class that cannot be resolved inside the current frozen bundle. | `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md`, `docs/publication_record/paper_package_plan.md`, `docs/plans/2026-03-19-post-p7-submission-release-stabilization-master-plan.md` |",
+        "| Evidence reopen discipline | Reopen evidence only through one named `E1` patch lane, and always return control to the locked paper/release lanes. | This keeps unattended runs from silently widening precision, systems, or compiled scope by wording drift. | A later scope decision intentionally replaces the current frozen endpoint with a new evidence program. | `docs/publication_record/conditional_reopen_protocol.md`, `docs/milestones/E1_conditional_evidence_reopen_protocol/result_digest.md` |"
       ]
     },
     {
-      "path": "docs/milestones/P5_paper_draft_assembly/status.md",
+      "path": "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md",
       "matched_lines": [
-        "- `P5` acceptance is now satisfied;",
-        "release-readiness phase rather than reopen manuscript assembly."
+        "## What `P7` closed",
+        "The next full plan-mode stage should start from:"
       ]
     },
     {
-      "path": "docs/milestones/P5_paper_draft_assembly/todo.md",
+      "path": "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/handoff.md",
       "matched_lines": [
-        "- [x] Finish one sentence-level polish and callout-alignment pass under the two",
-        "layout/readiness milestone scaffold."
+        "## What is already fixed",
+        "## Recommended execution order",
+        "## Reopen only if"
       ]
     }
   ]

@@ -37,22 +37,22 @@
     {
       "item_id": "readme_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "README now describes the completed freeze-candidate checkpoint rather than the earlier P6/P7 handoff."
+      "notes": "README now describes the active post-P7 stabilization package rather than an unspecified later planning pass."
     },
     {
       "item_id": "status_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "STATUS records the completed freeze-candidate stage and the next plan-mode handoff."
+      "notes": "STATUS records the post-P7 stabilization package rather than pointing only to a later plan-mode pass."
     },
     {
       "item_id": "publication_record_readme_tracks_downstream_source",
       "status": "pass",
-      "notes": "Publication record README names the approved short-update source explicitly."
+      "notes": "Publication record README names both the approved short-update source and the active post-P7 control docs."
     },
     {
       "item_id": "release_summary_stays_downstream",
       "status": "pass",
-      "notes": "The release summary stays narrow and current without falling back to an internal status preamble."
+      "notes": "The release summary stays narrow and current while naming the active post-P7 package explicitly."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
@@ -60,14 +60,14 @@
       "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble."
     },
     {
-      "item_id": "layout_log_records_release_summary_reuse",
+      "item_id": "layout_log_records_post_p7_decisions",
       "status": "pass",
-      "notes": "The layout decision log still records release-summary reuse as an explicit decision."
+      "notes": "The layout decision log should record release-summary reuse plus the new post-P7 governance choices."
     },
     {
-      "item_id": "p5_ledger_tracks_recent_sync",
+      "item_id": "p7_baseline_remains_explicit",
       "status": "pass",
-      "notes": "The P5 milestone ledger records closure and the explicit handoff to the next layout/readiness phase."
+      "notes": "The completed P7 digest and handoff should remain explicit as the frozen baseline for the current stage."
     }
   ]
 }

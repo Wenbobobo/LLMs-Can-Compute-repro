@@ -1,11 +1,12 @@
 # Blog Outline
 
-Status: currently blocked by the 2026-03-19 `M7`/`P4` outcome. The README may
-remain a restrained landing page, but broader blog prose should wait until a
-future scope reopening clears both the systems and public-release gates.
-`blog_release_rules.md` now fixes the explicit downstream preconditions. Any
-future blog work must remain derivative of the frozen manuscript bundle and
-approved short release summary rather than reopening claim framing on its own.
+Status: currently blocked by the 2026-03-19 `M7`/`P4` outcome and the current
+post-`P7` stabilization package. The README may remain a restrained landing
+page, and `P9` may freeze the short public surface, but broader blog prose
+should wait until both `release_candidate_checklist.md` and
+`blog_release_rules.md` are satisfied in full. Any future blog work must remain
+derivative of the frozen manuscript bundle and approved short release summary
+rather than reopening claim framing on its own.
 
 Planned sections:
 1. What was actually reproduced.

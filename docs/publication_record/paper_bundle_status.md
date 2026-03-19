@@ -30,8 +30,9 @@ The latest layout/readiness pass is now complete under the current
 public-surface and callout audit guards. Main-text artifact pairings stay
 fixed, the Methods section stays prose-first, and the systems gate remains
 inline rather than promoted to a standalone main-text table. The next
-paper-facing result is now a freeze-candidate checkpoint with fixed
-main-text order, explicit appendix scope, and downstream release rules.
+paper-facing result is now a submission-candidate bundle-lock pass on the same
+frozen scope under `docs/publication_record/paper_package_plan.md`, with a
+default not to reopen claim/evidence scope.
 
 ## Mandatory tables
 
@@ -50,3 +51,7 @@ The current freeze-candidate rules also live in
 `docs/publication_record/freeze_candidate_criteria.md`,
 `docs/publication_record/main_text_order.md`, and
 `docs/publication_record/release_preflight_checklist.md`.
+The next post-`P7` package controls now also live in
+`docs/publication_record/submission_candidate_criteria.md`,
+`docs/publication_record/release_candidate_checklist.md`, and
+`docs/publication_record/conditional_reopen_protocol.md`.

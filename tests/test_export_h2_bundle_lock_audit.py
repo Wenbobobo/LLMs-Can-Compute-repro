@@ -6,8 +6,8 @@ import sys
 
 
 def _load_export_module():
-    module_path = Path(__file__).resolve().parents[1] / "scripts" / "export_p5_public_surface_sync.py"
-    spec = importlib.util.spec_from_file_location("export_p5_public_surface_sync", module_path)
+    module_path = Path(__file__).resolve().parents[1] / "scripts" / "export_h2_bundle_lock_audit.py"
+    spec = importlib.util.spec_from_file_location("export_h2_bundle_lock_audit", module_path)
     assert spec is not None
     assert spec.loader is not None
     module = importlib.util.module_from_spec(spec)
@@ -20,11 +20,11 @@ def test_extract_matching_lines_returns_unique_hits_in_order() -> None:
     module = _load_export_module()
 
     lines = module.extract_matching_lines(
-        "alpha\nbeta release_summary_draft.md\ngamma release_summary_draft.md\n",
-        needles=["release_summary_draft.md"],
+        "alpha\nbeta paper_package_plan.md\ngamma paper_package_plan.md\n",
+        needles=["paper_package_plan.md"],
     )
 
-    assert lines == ["beta release_summary_draft.md", "gamma release_summary_draft.md"]
+    assert lines == ["beta paper_package_plan.md", "gamma paper_package_plan.md"]
 
 
 def test_contains_all_tolerates_wrapped_markdown_lines() -> None:
@@ -32,32 +32,32 @@ def test_contains_all_tolerates_wrapped_markdown_lines() -> None:
 
     assert (
         module.contains_all(
-            "The remaining work is sentence-level\npolish and local figure/table callout cleanup.\n",
-            ["sentence-level polish", "callout cleanup"],
+            "The next lane keeps the post-`P7`\nstabilization package narrow.\n",
+            ["post-`P7` stabilization package", "keeps the post-`P7` stabilization package narrow"],
         )
         is True
     )
 
 
-def test_build_sync_checklist_accepts_current_repo_state() -> None:
+def test_build_checklist_rows_accept_current_repo_state() -> None:
     module = _load_export_module()
 
     inputs = module.load_inputs()
-    rows = module.build_sync_checklist(**inputs)
+    rows = module.build_checklist_rows(**inputs)
 
     assert all(row["status"] == "pass" for row in rows)
 
 
-def test_build_summary_reports_current_polish_phase() -> None:
+def test_build_summary_reports_zero_blocked_items() -> None:
     module = _load_export_module()
 
     inputs = module.load_inputs()
-    rows = module.build_sync_checklist(**inputs)
+    rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
     assert summary["current_paper_phase"] == "post_p7_submission_release_stabilization_active"
-    assert summary["release_summary_role"] == "approved_downstream_short_update_source"
+    assert summary["bundle_lock_scope"] == "publication_record_bundle_and_supporting_ledgers"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "execute the P8 submission-candidate lock, H2 bundle-lock audit promotion, and P9 restrained release-candidate sync without reopening evidence scope"
+        "execute the P8 submission-candidate lock and P9 restrained public-surface freeze while keeping the H2 bundle-lock audit green"
     )

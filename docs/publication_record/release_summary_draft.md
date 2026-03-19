@@ -36,10 +36,12 @@ explicitly unsupported on the current paper scope.
 
 ## Current paper-facing follow-up
 
-The current frozen scope now has a paper-facing freeze-candidate checkpoint:
-main-text order is fixed, appendix companions are scoped, and outward release
-remains downstream of the manuscript bundle. The next major change should come
-from a later stage-planning pass, not from claim expansion.
+The current frozen scope now moves into a post-`P7` stabilization package.
+`P8` locks the submission-candidate bundle, `H2` promotes bundle-lock and
+release-hygiene audits, and `P9` freezes the restrained public surface. This
+next pass is package and integration work on the same frozen endpoint, not
+claim expansion. Any evidence reopen now goes through the explicit conditional
+reopen protocol rather than drift.
 
 ## Reproducibility pointers
 
