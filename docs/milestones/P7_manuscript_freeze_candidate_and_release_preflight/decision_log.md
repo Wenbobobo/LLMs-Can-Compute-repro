@@ -14,3 +14,5 @@
   as freeze blockers; leave the rest as linked but non-blocking diagnostics.
 - Make the later freeze pass parallel-friendly by recording separate manuscript,
   appendix, and release-preflight lanes with disjoint primary write sets.
+- Close `P7` once one manuscript freeze pass, one appendix freeze pass, and the
+  narrow release-preflight audits all land cleanly on the same frozen scope.

@@ -88,19 +88,22 @@ def build_sync_checklist(
         {
             "item_id": "readme_tracks_current_paper_phase",
             "status": "pass"
-            if contains_all(readme_text, ["layout-tightening and release-readiness pass", "manuscript-freeze candidacy"])
+            if contains_all(
+                readme_text,
+                ["freeze-candidate package is now assembled", "later stage-planning pass"],
+            )
             else "blocked",
-            "notes": "README now describes the post-P6 freeze/preflight handoff rather than the earlier layout-in-progress phase.",
+            "notes": "README now describes the completed freeze-candidate checkpoint rather than the earlier P6/P7 handoff.",
         },
         {
             "item_id": "status_tracks_current_paper_phase",
             "status": "pass"
             if contains_all(
                 status_text,
-                ["layout-tightening and release-readiness pass is now complete", "manuscript-freeze candidacy", "release_summary_draft.md"],
+                ["`P7` stage is now complete", "freeze-candidate checkpoint", "result_digest.md"],
             )
             else "blocked",
-            "notes": "STATUS records the completed P6 phase and the downstream short-summary source.",
+            "notes": "STATUS records the completed freeze-candidate stage and the next plan-mode handoff.",
         },
         {
             "item_id": "publication_record_readme_tracks_downstream_source",
@@ -117,7 +120,8 @@ def build_sync_checklist(
                 [
                     "This repository reproduces a narrow execution-substrate claim",
                     "Current paper-facing follow-up",
-                    "manuscript-freeze candidacy",
+                    "freeze-candidate checkpoint",
+                    "later stage-planning pass",
                 ],
             )
             and contains_none(release_summary_text, ["Status: short downstream summary"])
@@ -167,11 +171,11 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
     snapshots = [
         {
             "path": "README.md",
-            "needles": ["layout-tightening and release-readiness pass", "manuscript-freeze candidacy", "does **not** claim"],
+            "needles": ["freeze-candidate package is now assembled", "later stage-planning pass", "does **not** claim"],
         },
         {
             "path": "STATUS.md",
-            "needles": ["layout-tightening and release-readiness pass is now complete", "manuscript-freeze candidacy", "release_summary_draft.md"],
+            "needles": ["`P7` stage is now complete", "freeze-candidate checkpoint", "result_digest.md"],
         },
         {
             "path": "docs/publication_record/README.md",
@@ -182,7 +186,8 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "needles": [
                 "This repository reproduces a narrow execution-substrate claim",
                 "## Current paper-facing follow-up",
-                "manuscript-freeze candidacy",
+                "freeze-candidate checkpoint",
+                "later stage-planning pass",
             ],
         },
         {
@@ -226,14 +231,14 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "p6_complete_freeze_candidate_pending",
+        "current_paper_phase": "p7_freeze_candidate_checkpoint_complete",
         "release_summary_role": "approved_downstream_short_update_source",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "start manuscript-freeze candidacy and release preflight while keeping current claim/artifact boundaries fixed"
+            "hold current claim/artifact boundaries fixed and start the next full plan-mode stage from the freeze-candidate checkpoint"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),
@@ -288,7 +293,7 @@ def main() -> None:
                 "# P5 Public Surface Sync",
                 "",
                 "Machine-readable audit of whether the current public surface stays aligned with the",
-                "completed `P6` layout/readiness state and the approved downstream release summary.",
+                "completed freeze-candidate checkpoint and the approved downstream release summary.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

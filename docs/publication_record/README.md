@@ -17,7 +17,7 @@ Core ledgers:
 - `manuscript_stub_notes.md` — near-prose section stubs for the most
   boundary-sensitive parts of the draft;
 - `manuscript_bundle_draft.md` — current layout-disciplined manuscript
-  baseline for freeze-candidate work and release preflight;
+  baseline for the current freeze-candidate checkpoint;
 - `freeze_candidate_criteria.md` — explicit pass/fail standard for calling the
   current manuscript bundle a freeze candidate;
 - `main_text_order.md` — fixed main-text figure/table sequence for the frozen
@@ -61,6 +61,9 @@ Operating rule:
 - future short public-surface syncs should derive from
   `release_summary_draft.md`, while the manuscript bundle remains the
   authoritative paper-facing source.
+- the freeze-candidate checkpoint is governed by `freeze_candidate_criteria.md`
+  and `release_preflight_checklist.md`; future outward syncs should satisfy
+  both before claiming a new paper-facing state.
 - `paper_outline.md` is active planning material for the current paper-first
   workflow.
 - `blog_outline.md` remains downstream and currently blocked: `M7` resolved as

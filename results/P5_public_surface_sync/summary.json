@@ -39,12 +39,12 @@
     "docs/milestones/P5_paper_draft_assembly/todo.md"
   ],
   "summary": {
-    "current_paper_phase": "p6_complete_freeze_candidate_pending",
+    "current_paper_phase": "p7_freeze_candidate_checkpoint_complete",
     "release_summary_role": "approved_downstream_short_update_source",
     "check_count": 8,
     "pass_count": 8,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "start manuscript-freeze candidacy and release preflight while keeping current claim/artifact boundaries fixed"
+    "recommended_next_action": "hold current claim/artifact boundaries fixed and start the next full plan-mode stage from the freeze-candidate checkpoint"
   }
 }

@@ -7,6 +7,7 @@
 - `docs/publication_record/release_preflight_checklist.md`
 - `docs/publication_record/blog_release_rules.md`
 - `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/handoff.md`
+- `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md`
 - `docs/publication_record/manuscript_bundle_draft.md`
 - `docs/publication_record/paper_bundle_status.md`
 - `docs/publication_record/release_summary_draft.md`

@@ -33,17 +33,15 @@
       "path": "README.md",
       "matched_lines": [
         "This repository does **not** claim that general LLMs are computers, that",
-        "The current layout-tightening and release-readiness pass has stabilized local",
-        "guards. The next planned work is manuscript-freeze candidacy and release"
+        "The current freeze-candidate package is now assembled under the existing audit"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- The layout-tightening and release-readiness pass is now complete; remaining",
-        "paper-facing work is manuscript-freeze candidacy, release preflight, and",
-        "downstream of `docs/publication_record/release_summary_draft.md`.",
-        "3. Execute the decision-complete manuscript-freeze candidacy plus release"
+        "- The `P7` stage is now complete on the current frozen scope: the manuscript",
+        "- The current repository is therefore at a freeze-candidate checkpoint rather",
+        "using `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md`"
       ]
     },
     {
@@ -59,7 +57,8 @@
       "matched_lines": [
         "This repository reproduces a narrow execution-substrate claim rather than a",
         "## Current paper-facing follow-up",
-        "frozen scope. The next paper-facing work is manuscript-freeze candidacy and"
+        "The current frozen scope now has a paper-facing freeze-candidate checkpoint:",
+        "from a later stage-planning pass, not from claim expansion."
       ]
     },
     {

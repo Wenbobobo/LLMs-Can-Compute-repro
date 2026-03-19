@@ -37,12 +37,12 @@
     {
       "item_id": "readme_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "README now describes the post-P6 freeze/preflight handoff rather than the earlier layout-in-progress phase."
+      "notes": "README now describes the completed freeze-candidate checkpoint rather than the earlier P6/P7 handoff."
     },
     {
       "item_id": "status_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "STATUS records the completed P6 phase and the downstream short-summary source."
+      "notes": "STATUS records the completed freeze-candidate stage and the next plan-mode handoff."
     },
     {
       "item_id": "publication_record_readme_tracks_downstream_source",

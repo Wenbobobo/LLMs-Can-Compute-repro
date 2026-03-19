@@ -34,10 +34,10 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - The compiled endpoint stays at the current tiny typed-bytecode boundary.
 - The README remains a restrained landing page, and the broader blog release stays blocked.
 
-The current layout-tightening and release-readiness pass has stabilized local
-figure/table placement and public-surface wording under the existing audit
-guards. The next planned work is manuscript-freeze candidacy and release
-preflight, not frontend widening or demo-first expansion.
+The current freeze-candidate package is now assembled under the existing audit
+guards: main-text order is fixed, appendix scope is explicit, and outward
+release remains downstream of the paper lane. The next major work is a later
+stage-planning pass, not frontend widening or demo-first expansion.
 
 ## Start Here
 

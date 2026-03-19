@@ -33,7 +33,9 @@
       "path": "docs/publication_record/manuscript_bundle_draft.md",
       "matched_lines": [
         "A claim-ladder figure plus evidence matrix orients the narrowed mechanism story",
+        "supported-versus-unsupported claims table follows it immediately.",
         "The main-text support here stays compact: one real-trace boundary figure shows",
+        "In the fixed main-text order, the frontend boundary diagram appears before the",
         "A compact threats-to-validity table makes those boundary rows explicit,"
       ]
     },
@@ -62,7 +64,7 @@
       "matched_lines": [
         "| Introduction | Explain why the source field note was directionally interesting but rhetorically too broad, and define the paper's narrower claim ladder. | `docs/publication_record/claim_ladder.md`, `results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json` | main text |",
         "| Precision boundary | State where single-head fails, where decomposition helps, and what remains unsupported. | `results/R1_precision_mechanism_closure/summary.json`, `results/P1_paper_readiness/m4_real_trace_boundary_figure.svg` | main text |",
-        "| Compiled boundary | Explain why the first compiled step is the tiny typed-bytecode `D0` boundary and why widening was explicitly rejected. | `results/P1_paper_readiness/m6_frontend_boundary_diagram.svg`, `results/P1_paper_readiness/exact_trace_final_state_table.md`, `results/M7_frontend_candidate_decision/decision_summary.json` | main text |",
+        "| Compiled boundary | Explain why the first compiled step is the tiny typed-bytecode `D0` boundary and why widening was explicitly rejected. In the frozen order, the frontend boundary diagram precedes the exact-trace / final-state table. | `results/P1_paper_readiness/m6_frontend_boundary_diagram.svg`, `results/P1_paper_readiness/exact_trace_final_state_table.md`, `results/M7_frontend_candidate_decision/decision_summary.json` | main text |",
         "| Negative results and threats | Consolidate unsupported claims, failed baselines, mask-dependence closure, and mixed systems limits. | `docs/publication_record/negative_results.md`, `docs/publication_record/threats_to_validity.md`, `results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json` | main text |"
       ]
     }

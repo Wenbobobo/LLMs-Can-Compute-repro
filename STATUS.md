@@ -29,15 +29,14 @@
 - The latest layout/readiness pass has stabilized local figure/table
   placement, caption wording, and release-readiness handoff on the same frozen
   current scope.
-- The `P7` milestone now records explicit freeze-candidate criteria, fixed
-  main-text artifact order, appendix companion scope, release-preflight
-  checks, and blocked-blog rules for the next paper-facing execution pass.
+- The `P7` stage is now complete on the current frozen scope: the manuscript
+  freeze pass, appendix freeze pass, and release-preflight lane are defined and
+  synchronized under explicit freeze criteria and blocked-blog rules.
 - `results/P1_paper_readiness/summary.json` now reports `10/10` ready
   figure/table items and no blocked or partial items on the frozen current
   scope.
-- The layout-tightening and release-readiness pass is now complete; remaining
-  paper-facing work is manuscript-freeze candidacy, release preflight, and
-  restrained public-surface maintenance, not new claim expansion.
+- The current repository is therefore at a freeze-candidate checkpoint rather
+  than in another open drafting wave.
 
 ## Immediate Next Actions
 
@@ -46,10 +45,9 @@
 2. Reconcile remaining legacy unchecked rows under
    `docs/milestones/H1_legacy_backlog_reconciliation/` so unattended runs do
    not misread frozen historical branches as active work.
-3. Execute the decision-complete manuscript-freeze candidacy plus release
-   preflight package under
-   `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/`,
-   starting from `handoff.md`.
+3. Start the next full plan-mode stage from the completed `P7` checkpoint,
+   using `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md`
+   and `handoff.md` as the frozen paper-lane baseline.
 4. Reopen precision, systems, or frontend widening only if the project
    deliberately starts a new evidence wave; otherwise keep the current `D0`
    endpoint fixed.

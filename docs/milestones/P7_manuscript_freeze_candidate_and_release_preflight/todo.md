@@ -11,3 +11,7 @@
 - [x] Record the blocked-blog preconditions as downstream release rules rather
   than open-ended writing tasks.
 - [x] Leave a decision-complete handoff for the later full plan-mode pass.
+- [x] Execute one manuscript freeze pass on the fixed main-text artifact set.
+- [x] Execute one appendix freeze pass on the minimum appendix package.
+- [x] Rerun the narrow public-surface release-preflight audits.
+- [x] Close `P7` as the current freeze-candidate checkpoint.

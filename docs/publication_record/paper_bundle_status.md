@@ -30,7 +30,8 @@ The latest layout/readiness pass is now complete under the current
 public-surface and callout audit guards. Main-text artifact pairings stay
 fixed, the Methods section stays prose-first, and the systems gate remains
 inline rather than promoted to a standalone main-text table. The next
-paper-facing work is manuscript-freeze candidacy and release preflight.
+paper-facing result is now a freeze-candidate checkpoint with fixed
+main-text order, explicit appendix scope, and downstream release rules.
 
 ## Mandatory tables
 
@@ -45,3 +46,7 @@ Appendix boundary draft: current appendix-vs-main-text split is fixed in
 `docs/publication_record/appendix_boundary_map.md`.
 Appendix prose and regeneration framing now live in
 `docs/publication_record/appendix_stub_notes.md`.
+The current freeze-candidate rules also live in
+`docs/publication_record/freeze_candidate_criteria.md`,
+`docs/publication_record/main_text_order.md`, and
+`docs/publication_record/release_preflight_checklist.md`.

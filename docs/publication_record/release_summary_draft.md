@@ -36,9 +36,10 @@ explicitly unsupported on the current paper scope.
 
 ## Current paper-facing follow-up
 
-The layout-tightening and release-readiness pass is complete on the current
-frozen scope. The next paper-facing work is manuscript-freeze candidacy and
-release preflight, not claim expansion.
+The current frozen scope now has a paper-facing freeze-candidate checkpoint:
+main-text order is fixed, appendix companions are scoped, and outward release
+remains downstream of the manuscript bundle. The next major change should come
+from a later stage-planning pass, not from claim expansion.
 
 ## Reproducibility pointers
 
