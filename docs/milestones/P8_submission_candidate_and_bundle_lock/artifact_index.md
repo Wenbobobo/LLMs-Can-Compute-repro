@@ -14,3 +14,4 @@
 - `docs/publication_record/claim_evidence_table.md`
 - `docs/publication_record/negative_results.md`
 - `docs/publication_record/threats_to_validity.md`
+- `docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md`

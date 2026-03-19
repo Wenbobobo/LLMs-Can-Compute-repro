@@ -20,8 +20,7 @@
   regimes; exact rollout reappears only if stronger `opcode_legal` masks are
   allowed to collapse the DSL skeleton.
 - Real-trace precision evidence is still narrow: the current offset suite is
-  stronger than before, but it is not yet a broad long-horizon robustness
-  claim.
+  stronger than before, but it is not a broad long-horizon robustness claim.
 - In the broader `M4-E` suite, the new high-address memory streams all fail at
   `1x` under float32 single-head, and the deeper exported stack stream first
   fails at `4x`; observed failure type remains `tie_collapse`.

@@ -32,7 +32,7 @@
   while the deeper exported stack stream tightens the stable-base story.
 - `C3e` — `results/M4_precision_organic_traces/claim_impact.json`
   Dedicated organic-trace bundle: same broadened evidence is now indexed under
-  one explicit claim-impact artifact for later paper/README use.
+  one explicit claim-impact artifact for paper/README use.
 - `C3e` — `results/R1_precision_mechanism_closure/summary.json`
   Unified precision closure: single-head failures are common on the tracked
   suite, decomposition stays useful on current validated rows, and broader
@@ -62,9 +62,9 @@
   frontend widening is not authorized, and any revisit now requires a fresh
   scope + systems case.
 
-## Planned next evidence targets
+## Reopen conditions
 
 No mandatory new evidence target is open on the current paper scope.
 
-Any future reopening of `D0` now requires a successor to the `M7` no-widening
-decision plus a stronger systems pass than the current `R2` result.
+Any reopening of `D0` requires a successor to the `M7` no-widening decision
+plus a stronger systems pass than the current `R2` result.

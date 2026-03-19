@@ -70,13 +70,13 @@
     {
       "item": "Supported vs unsupported claims",
       "status": "ready",
-      "notes": "Covered by claim ladder plus threats/negative-results ledgers.",
+      "notes": "Covered by claim ladder plus threats/negative-results ledgers; current main-text layout stays as a separate table paired with the claim-ladder figure rather than one merged artifact.",
       "section": "mandatory_tables"
     },
     {
       "item": "Exact-trace / final-state success table",
-      "status": "ready on current scope",
-      "notes": "Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. Broader compiled demos remain blocked unless a later `M7` decision explicitly approves widening.",
+      "status": "ready",
+      "notes": "Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. This table is ready on the current frozen `D0` scope; broader compiled demos remain blocked unless a deliberate scope decision explicitly approves widening.",
       "section": "mandatory_tables"
     },
     {
@@ -96,11 +96,7 @@
     "by_status": [
       {
         "status": "ready",
-        "count": 9
-      },
-      {
-        "status": "ready on current scope",
-        "count": 1
+        "count": 10
       }
     ],
     "appendix_linked_items": [

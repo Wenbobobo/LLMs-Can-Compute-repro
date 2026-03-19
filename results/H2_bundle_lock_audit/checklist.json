@@ -30,19 +30,19 @@
   },
   "rows": [
     {
-      "item_id": "readme_and_status_hold_post_p7_stabilization",
+      "item_id": "readme_and_status_hold_locked_checkpoint",
       "status": "pass",
-      "notes": "README and STATUS should both describe the active post-P7 stabilization package rather than another vague planning pass."
+      "notes": "README and STATUS should both describe the locked submission/release checkpoint rather than an active stabilization package."
     },
     {
-      "item_id": "publication_record_tracks_active_package_driver",
+      "item_id": "publication_record_tracks_completed_package_driver",
       "status": "pass",
-      "notes": "Publication record docs should name one active post-P7 package driver plus the new control docs."
+      "notes": "Publication record docs should name the completed post-P7 package driver plus the current control docs."
     },
     {
-      "item_id": "release_summary_and_bundle_status_name_post_p7_package",
+      "item_id": "release_summary_and_bundle_status_name_locked_checkpoint",
       "status": "pass",
-      "notes": "The short release summary and paper bundle status should both point to the same post-P7 package rather than stop at the freeze checkpoint."
+      "notes": "The short release summary and paper bundle status should both point to the same locked submission/release checkpoint."
     },
     {
       "item_id": "submission_candidate_criteria_lock_scope",

@@ -33,24 +33,26 @@
       "path": "README.md",
       "matched_lines": [
         "This repository does **not** claim that general LLMs are computers, that",
-        "package is now defined: `P8` locks the submission-candidate bundle, `H2`"
+        "later full plan-mode stage or a named `E1` patch lane, not another outward"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "and the post-`P7` stabilization lanes are now defined: `P8` locks the"
+        "- The `P8` stage is now complete on the current frozen scope: the manuscript,",
+        "- The `P9` stage is now complete on the same scope: README, STATUS, release",
+        "checkpoint plus the standing `H2` audit gate."
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `paper_package_plan.md` \u2014 active post-`P7` package driver for submission and",
+        "- `paper_package_plan.md` \u2014 completed post-`P7` stage plan for the submission",
         "- `submission_candidate_criteria.md` \u2014 explicit bundle-lock standard for the",
         "- `release_summary_draft.md` \u2014 short release-facing draft derived from the",
         "manuscript bundle and approved as the source for future README-adjacent short",
         "`release_summary_draft.md`, while the manuscript bundle remains the",
-        "- `paper_package_plan.md` is the active post-`P7` package driver;"
+        "- `paper_package_plan.md` records the completed post-`P7` stage design;"
       ]
     },
     {
@@ -58,16 +60,16 @@
       "matched_lines": [
         "This repository reproduces a narrow execution-substrate claim rather than a",
         "## Current paper-facing follow-up",
-        "The current frozen scope now moves into a post-`P7` stabilization package.",
-        "`P8` locks the submission-candidate bundle, `H2` promotes bundle-lock and",
-        "release-hygiene audits, and `P9` freezes the restrained public surface. This"
+        "The current frozen scope now has a locked submission-candidate bundle and a",
+        "restrained release-candidate public surface. `P8` closed the manuscript,"
       ]
     },
     {
       "path": "docs/publication_record/manuscript_bundle_draft.md",
       "matched_lines": [
         "## 1. Abstract",
-        "but not for a broader source-language claim. The later no-widening decision is",
+        "but not for a broader source-language claim. The no-widening decision is part",
+        "validate. Companion appendix material stays clearly downstream of that",
         "## 10. Reproducibility Appendix"
       ]
     },
@@ -80,18 +82,17 @@
       ]
     },
     {
-      "path": "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md",
+      "path": "docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md",
       "matched_lines": [
-        "## What `P7` closed",
-        "The next full plan-mode stage should start from:"
+        "`P8` closed the submission-candidate bundle-lock pass on the frozen paper"
       ]
     },
     {
-      "path": "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/handoff.md",
+      "path": "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md",
       "matched_lines": [
-        "## What is already fixed",
-        "## Recommended execution order",
-        "## Reopen only if"
+        "## What `P9` closed",
+        "## Next-stage starting point",
+        "The next stage should treat this restrained release-candidate checkpoint as the"
       ]
     }
   ]

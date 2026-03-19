@@ -67,9 +67,7 @@
           "exists": true
         }
       ],
-      "next_evidence_target": [
-        "results/M4_mask_dependence_executor_gap/"
-      ],
+      "next_evidence_target": [],
       "completeness": "complete"
     },
     {
@@ -109,9 +107,7 @@
           "exists": true
         }
       ],
-      "next_evidence_target": [
-        "results/M4_precision_organic_traces/"
-      ],
+      "next_evidence_target": [],
       "completeness": "complete"
     },
     {

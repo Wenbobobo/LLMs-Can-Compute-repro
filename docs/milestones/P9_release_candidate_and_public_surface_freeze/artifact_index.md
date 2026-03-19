@@ -4,6 +4,7 @@
 - `docs/publication_record/release_candidate_checklist.md`
 - `docs/publication_record/blog_release_rules.md`
 - `docs/milestones/P9_release_candidate_and_public_surface_freeze/handoff.md`
+- `docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md`
 - `README.md`
 - `STATUS.md`
 - `docs/publication_record/release_summary_draft.md`

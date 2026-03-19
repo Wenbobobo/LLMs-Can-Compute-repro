@@ -83,37 +83,36 @@ def build_checklist_rows(
 ) -> list[dict[str, object]]:
     return [
         {
-            "item_id": "readme_and_status_hold_post_p7_stabilization",
+            "item_id": "readme_and_status_hold_locked_checkpoint",
             "status": "pass"
             if contains_all(
                 readme_text,
                 [
-                    "post-`p7` stabilization package is now defined",
-                    "`p8` locks the submission-candidate bundle",
-                    "`h2` promotes bundle-lock and release-hygiene audits",
-                    "`p9` freezes the restrained public surface",
+                    "submission-candidate bundle is now locked under the standing bundle-lock and release-hygiene audits",
+                    "restrained public surface has been synchronized as a release-candidate checkpoint",
+                    "later full plan-mode stage or a named `e1` patch lane",
                 ],
             )
             and contains_all(
                 status_text,
                 [
-                    "post-`p7` stabilization lanes are now defined",
-                    "`p8` locks the submission-candidate bundle",
-                    "`h2` promotes bundle-lock/release-hygiene audits",
-                    "`p9` freezes the restrained public surface",
+                    "`p8` stage is now complete on the current frozen scope",
+                    "`p9` stage is now complete on the same scope",
+                    "standing `h2` audit gate",
+                    "restrained release-candidate checkpoint",
                 ],
             )
             else "blocked",
-            "notes": "README and STATUS should both describe the active post-P7 stabilization package rather than another vague planning pass.",
+            "notes": "README and STATUS should both describe the locked submission/release checkpoint rather than an active stabilization package.",
         },
         {
-            "item_id": "publication_record_tracks_active_package_driver",
+            "item_id": "publication_record_tracks_completed_package_driver",
             "status": "pass"
             if contains_all(
                 publication_readme_text,
                 [
                     "paper_package_plan.md",
-                    "active post-`p7` package driver",
+                    "completed post-`p7` stage plan",
                     "submission_candidate_criteria.md",
                     "release_candidate_checklist.md",
                     "conditional_reopen_protocol.md",
@@ -124,29 +123,31 @@ def build_checklist_rows(
                 ["## Goal", "## Fixed Inputs", "## Package Write Set", "## Exit Gate"],
             )
             else "blocked",
-            "notes": "Publication record docs should name one active post-P7 package driver plus the new control docs.",
+            "notes": "Publication record docs should name the completed post-P7 package driver plus the current control docs.",
         },
         {
-            "item_id": "release_summary_and_bundle_status_name_post_p7_package",
+            "item_id": "release_summary_and_bundle_status_name_locked_checkpoint",
             "status": "pass"
             if contains_all(
                 release_summary_text,
                 [
-                    "post-`p7` stabilization package",
-                    "`p8` locks the submission-candidate bundle",
-                    "`h2` promotes bundle-lock and release-hygiene audits",
-                    "`p9` freezes the restrained public surface",
+                    "locked submission-candidate bundle",
+                    "restrained release-candidate public surface",
+                    "`p8` closed",
+                    "`h2` remains",
+                    "`p9` keeps outward wording downstream",
                 ],
             )
             and contains_all(
                 paper_bundle_status_text,
                 [
-                    "submission-candidate bundle-lock pass",
-                    "default not to reopen claim/evidence scope",
+                    "locked submission-candidate bundle",
+                    "claim/evidence scope kept closed by default",
+                    "current submission/release controls",
                 ],
             )
             else "blocked",
-            "notes": "The short release summary and paper bundle status should both point to the same post-P7 package rather than stop at the freeze checkpoint.",
+            "notes": "The short release summary and paper bundle status should both point to the same locked submission/release checkpoint.",
         },
         {
             "item_id": "submission_candidate_criteria_lock_scope",
@@ -212,23 +213,24 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         "README.md": (
             "readme_text",
             [
-                "post-`P7` stabilization package is now defined",
-                "`P8` locks the submission-candidate bundle",
-                "`P9` freezes the restrained public surface",
+                "submission-candidate bundle is now locked under the standing bundle-lock and release-hygiene audits",
+                "restrained public surface has been synchronized as a release-candidate checkpoint",
+                "later full plan-mode stage or a named `E1` patch lane",
             ],
         ),
         "STATUS.md": (
             "status_text",
             [
-                "post-`P7` stabilization lanes are now defined",
-                "`P8` locks the submission-candidate bundle",
-                "`H2` promotes bundle-lock/release-hygiene audits",
+                "`P8` stage is now complete on the current frozen scope",
+                "`P9` stage is now complete on the same scope",
+                "standing `H2` audit gate",
             ],
         ),
         "docs/publication_record/README.md": (
             "publication_readme_text",
             [
                 "paper_package_plan.md",
+                "completed post-`P7` stage plan",
                 "submission_candidate_criteria.md",
                 "release_candidate_checklist.md",
                 "conditional_reopen_protocol.md",
@@ -241,15 +243,20 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         "docs/publication_record/release_summary_draft.md": (
             "release_summary_text",
             [
-                "post-`P7` stabilization package",
-                "`P8` locks the submission-candidate bundle",
-                "`H2` promotes bundle-lock and release-hygiene audits",
-                "`P9` freezes the restrained public surface",
+                "locked submission-candidate bundle",
+                "restrained release-candidate public surface",
+                "`P8` closed",
+                "`H2` remains",
+                "`P9` keeps outward wording downstream",
             ],
         ),
         "docs/publication_record/paper_bundle_status.md": (
             "paper_bundle_status_text",
-            ["submission-candidate bundle-lock pass", "default not to reopen claim/evidence scope"],
+            [
+                "locked submission-candidate bundle",
+                "claim/evidence scope kept closed by default",
+                "current submission/release controls",
+            ],
         ),
         "docs/publication_record/submission_candidate_criteria.md": (
             "submission_candidate_text",
@@ -296,16 +303,16 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "post_p7_submission_release_stabilization_active",
+        "current_paper_phase": "p9_release_candidate_checkpoint_complete",
         "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
         "check_count": len(rows),
         "pass_count": sum(row["status"] == "pass" for row in rows),
         "blocked_count": sum(row["status"] != "pass" for row in rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "execute the P8 submission-candidate lock and P9 restrained public-surface freeze while keeping the H2 bundle-lock audit green"
+            "keep the H2 bundle-lock audit green while starting the next full plan-mode stage from the current locked checkpoint"
             if not blocked_items
-            else "resolve the blocked post-P7 bundle-lock or release-hygiene items before another outward sync"
+            else "resolve the blocked bundle-lock or release-hygiene items before another outward sync"
         ),
     }
 
@@ -359,8 +366,8 @@ def main() -> None:
             [
                 "# H2 Bundle Lock Audit",
                 "",
-                "Machine-readable audit of the post-P7 bundle-lock and release-hygiene",
-                "package used by the submission/release stabilization phase.",
+                "Machine-readable audit of the standing bundle-lock and release-hygiene",
+                "gate used by the locked submission/release checkpoint.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

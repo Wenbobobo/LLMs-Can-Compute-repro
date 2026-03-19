@@ -1,7 +1,7 @@
 # H2 Bundle Lock Audit
 
-Machine-readable audit of the post-P7 bundle-lock and release-hygiene
-package used by the submission/release stabilization phase.
+Machine-readable audit of the standing bundle-lock and release-hygiene
+gate used by the locked submission/release checkpoint.
 
 Artifacts:
 - `summary.json`

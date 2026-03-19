@@ -1,7 +1,7 @@
 # Figure and Table Narrative Roles
 
 This file fixes the argumentative role of each current main-text figure and
-table so later prose work does not silently widen the claim set.
+table so subsequent prose edits do not silently widen the claim set.
 The roles follow the fixed sequence in `main_text_order.md`.
 
 ## Main-text figures

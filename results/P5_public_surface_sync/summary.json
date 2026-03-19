@@ -35,16 +35,16 @@
     "docs/publication_record/release_summary_draft.md",
     "docs/publication_record/manuscript_bundle_draft.md",
     "docs/publication_record/layout_decision_log.md",
-    "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md",
-    "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/handoff.md"
+    "docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md",
+    "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md"
   ],
   "summary": {
-    "current_paper_phase": "post_p7_submission_release_stabilization_active",
+    "current_paper_phase": "p9_release_candidate_checkpoint_complete",
     "release_summary_role": "approved_downstream_short_update_source",
     "check_count": 8,
     "pass_count": 8,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "execute the P8 submission-candidate lock, H2 bundle-lock audit promotion, and P9 restrained release-candidate sync without reopening evidence scope"
+    "recommended_next_action": "start the next full plan-mode stage from the locked submission-candidate and restrained release-candidate checkpoint while keeping current claim and artifact boundaries fixed"
   }
 }

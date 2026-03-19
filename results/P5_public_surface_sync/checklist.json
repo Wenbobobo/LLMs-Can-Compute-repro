@@ -37,22 +37,22 @@
     {
       "item_id": "readme_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "README now describes the active post-P7 stabilization package rather than an unspecified later planning pass."
+      "notes": "README should describe the locked submission/release checkpoint rather than an active stabilization package."
     },
     {
       "item_id": "status_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "STATUS records the post-P7 stabilization package rather than pointing only to a later plan-mode pass."
+      "notes": "STATUS should record the completed checkpoint and the standing H2 gate."
     },
     {
       "item_id": "publication_record_readme_tracks_downstream_source",
       "status": "pass",
-      "notes": "Publication record README names both the approved short-update source and the active post-P7 control docs."
+      "notes": "Publication record README should name the approved short-update source and the completed post-P7 control docs."
     },
     {
       "item_id": "release_summary_stays_downstream",
       "status": "pass",
-      "notes": "The release summary stays narrow and current while naming the active post-P7 package explicitly."
+      "notes": "The release summary should stay narrow while naming the locked submission/release checkpoint explicitly."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
@@ -65,9 +65,9 @@
       "notes": "The layout decision log should record release-summary reuse plus the new post-P7 governance choices."
     },
     {
-      "item_id": "p7_baseline_remains_explicit",
+      "item_id": "p8_p9_checkpoint_remains_explicit",
       "status": "pass",
-      "notes": "The completed P7 digest and handoff should remain explicit as the frozen baseline for the current stage."
+      "notes": "The completed P8/P9 digests should remain explicit as the baseline for the next plan-mode stage."
     }
   ]
 }

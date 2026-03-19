@@ -64,12 +64,7 @@
           "exists": true
         }
       ],
-      "next_evidence_target": [
-        {
-          "path": "results/M4_mask_dependence_executor_gap/",
-          "exists": true
-        }
-      ]
+      "next_evidence_target": []
     },
     {
       "claim_layer": "C2g Pointer-space softmax negative control",
@@ -106,12 +101,7 @@
           "exists": true
         }
       ],
-      "next_evidence_target": [
-        {
-          "path": "results/M4_precision_organic_traces/",
-          "exists": true
-        }
-      ]
+      "next_evidence_target": []
     },
     {
       "claim_layer": "C3e Broader real-trace precision taxonomy",

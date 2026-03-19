@@ -70,7 +70,7 @@
     {
       "item": "Exact-trace / final-state success table",
       "status": "ready",
-      "notes": "Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. This table is ready on the current frozen `D0` scope; broader compiled demos remain blocked unless a later `M7` decision explicitly approves widening."
+      "notes": "Canonical machine-readable sources now have a 22-row paper-layout companion in `results/P1_paper_readiness/exact_trace_final_state_table.md`; the same `D0` slice also has an appendix-level memory-surface companion in `results/P1_paper_readiness/m6_memory_surface_diagnostic_table.md`, and a dedicated stress/reference companion now exists under `results/M6_stress_reference_followup/`. This table is ready on the current frozen `D0` scope; broader compiled demos remain blocked unless a deliberate scope decision explicitly approves widening."
     },
     {
       "item": "Real-trace precision boundary table",

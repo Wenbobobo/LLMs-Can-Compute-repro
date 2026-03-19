@@ -44,5 +44,5 @@ def test_build_summary_reports_zero_blocked_rows() -> None:
     assert summary["alignment_scope"] == "p5_main_text_callout_and_caption_pairs"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the current main-text artifact pairings fixed through the P8 submission-candidate bundle lock"
+        "keep the current main-text artifact pairings fixed at the restrained release-candidate checkpoint and through the next full plan-mode stage"
     )

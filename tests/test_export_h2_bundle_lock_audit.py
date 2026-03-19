@@ -55,9 +55,9 @@ def test_build_summary_reports_zero_blocked_items() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "post_p7_submission_release_stabilization_active"
+    assert summary["current_paper_phase"] == "p9_release_candidate_checkpoint_complete"
     assert summary["bundle_lock_scope"] == "publication_record_bundle_and_supporting_ledgers"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "execute the P8 submission-candidate lock and P9 restrained public-surface freeze while keeping the H2 bundle-lock audit green"
+        "keep the H2 bundle-lock audit green while starting the next full plan-mode stage from the current locked checkpoint"
     )

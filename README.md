@@ -34,13 +34,11 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - The compiled endpoint stays at the current tiny typed-bytecode boundary.
 - The README remains a restrained landing page, and the broader blog release stays blocked.
 
-The current freeze-candidate package remains fixed under the existing audit
-guards: main-text order is stable, appendix scope is explicit, and outward
-release remains downstream of the paper lane. The post-`P7` stabilization
-package is now defined: `P8` locks the submission-candidate bundle, `H2`
-promotes bundle-lock and release-hygiene audits, and `P9` freezes the
-restrained public surface. These lanes keep the current claim/artifact
-boundaries fixed rather than opening a new evidence wave.
+The current submission-candidate bundle is now locked under the standing
+bundle-lock and release-hygiene audits, and the restrained public surface has
+been synchronized as a release-candidate checkpoint. The next major work is a
+later full plan-mode stage or a named `E1` patch lane, not another outward
+claim-expansion pass.
 
 ## Start Here
 

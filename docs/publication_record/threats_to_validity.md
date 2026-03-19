@@ -16,10 +16,10 @@
   useful boundary signal, but it is not yet a rich multi-mode failure theory.
 - The first compiled frontend is intentionally narrowed to avoid importing
   unsupported language/runtime semantics too early.
-- The current `D0` slice is a boundary check, not yet a compiler
-  generalization result. Its exact agreement on the starter suite, plus its
-  appendix-level memory-surface diagnostics, should not be inflated into a
-  claim about arbitrary source languages or broader runtimes.
+- The current `D0` slice is a boundary check, not a compiler generalization
+  result. Its exact agreement on the starter suite, plus its appendix-level
+  memory-surface diagnostics, should not be inflated into a claim about
+  arbitrary source languages or broader runtimes.
 - The first explicit systems gate still separates mechanism from system value:
   current geometry evidence is strong, but current-scope end-to-end timing does
-  not yet show the lowered path beating the best current reference/oracle path.
+  not show the lowered path beating the best current reference/oracle path.

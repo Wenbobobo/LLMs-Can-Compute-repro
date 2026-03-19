@@ -1,8 +1,8 @@
-# Caption Candidate Notes
+# Caption Ready Notes
 
-This file converts the fixed figure/table roles into draft caption sentences
-that can be dropped into a manuscript with minimal editing. Each item keeps a
-boundary clause so later polishing does not widen the claim set.
+This file converts the fixed figure/table roles into caption sentences that
+can be dropped into a manuscript with minimal editing. Each item keeps a
+boundary clause so further editing does not widen the claim set.
 
 ## Figure captions
 
@@ -25,8 +25,8 @@ free-running regimes remain negative on the widened staged suite. Structural and
 
 ### Provenance-backed staged failure taxonomy
 
-Failure provenance for the widened staged suite shows that later
-`step_budget` rows are usually downstream symptoms of earlier semantic
+Failure provenance for the widened staged suite shows that downstream
+`step_budget` rows are usually symptoms of earlier semantic
 divergence rather than an independent success/failure regime. The resulting
 taxonomy sharpens the staged negative closure instead of reopening the claim.
 
@@ -70,7 +70,7 @@ broader compiled demos or frontend widening.
 
 Family- and scheme-level boundary rows behind the current
 positive-with-boundary precision claim. These rows are suite-specific and
-scheme-specific and should not be read as universal scaling laws.
+scheme-specific and do not read as universal scaling laws.
 
 ### Threats-to-validity table
 

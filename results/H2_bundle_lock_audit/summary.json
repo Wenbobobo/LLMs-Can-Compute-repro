@@ -41,12 +41,12 @@
     "docs/publication_record/layout_decision_log.md"
   ],
   "summary": {
-    "current_paper_phase": "post_p7_submission_release_stabilization_active",
+    "current_paper_phase": "p9_release_candidate_checkpoint_complete",
     "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
     "check_count": 7,
     "pass_count": 7,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "execute the P8 submission-candidate lock and P9 restrained public-surface freeze while keeping the H2 bundle-lock audit green"
+    "recommended_next_action": "keep the H2 bundle-lock audit green while starting the next full plan-mode stage from the current locked checkpoint"
   }
 }

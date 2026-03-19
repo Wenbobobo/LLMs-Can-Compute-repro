@@ -32,23 +32,27 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "package is now defined: `P8` locks the submission-candidate bundle, `H2`"
+        "later full plan-mode stage or a named `E1` patch lane, not another outward"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "and the post-`P7` stabilization lanes are now defined: `P8` locks the"
+        "- The `P8` stage is now complete on the current frozen scope: the manuscript,",
+        "- The `P9` stage is now complete on the same scope: README, STATUS, release",
+        "checkpoint plus the standing `H2` audit gate."
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `paper_package_plan.md` \u2014 active post-`P7` package driver for submission and",
+        "- `paper_package_plan.md` \u2014 completed post-`P7` stage plan for the submission",
         "- `submission_candidate_criteria.md` \u2014 explicit bundle-lock standard for the",
         "- `release_candidate_checklist.md` \u2014 outward sync gate for the restrained",
         "- `conditional_reopen_protocol.md` \u2014 the only allowed path for reopening",
-        "- `paper_package_plan.md` is the active post-`P7` package driver;"
+        "- `paper_package_plan.md` records the completed post-`P7` stage design;",
+        "`submission_candidate_criteria.md`, `release_candidate_checklist.md`, and",
+        "`conditional_reopen_protocol.md`."
       ]
     },
     {
@@ -63,16 +67,16 @@
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "The current frozen scope now moves into a post-`P7` stabilization package.",
-        "`P8` locks the submission-candidate bundle, `H2` promotes bundle-lock and",
-        "release-hygiene audits, and `P9` freezes the restrained public surface. This"
+        "The current frozen scope now has a locked submission-candidate bundle and a",
+        "restrained release-candidate public surface. `P8` closed the manuscript,",
+        "appendix, and ledger lock on the same frozen endpoint, `H2` remains the"
       ]
     },
     {
       "path": "docs/publication_record/paper_bundle_status.md",
       "matched_lines": [
-        "paper-facing result is now a submission-candidate bundle-lock pass on the same",
-        "default not to reopen claim/evidence scope."
+        "locked submission-candidate bundle now serves as the current frozen bundle",
+        "The current submission/release controls also live in"
       ]
     },
     {

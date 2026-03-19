@@ -1,4 +1,4 @@
-# Manuscript Bundle Draft
+# Manuscript Bundle
 
 ## 1. Abstract
 
@@ -47,11 +47,11 @@ auditable, but the systems gate is mixed and therefore does not justify
 widening to a broader frontend.
 
 The introduction closes by pointing readers to two paired main-text artifacts.
-A claim-ladder figure plus evidence matrix orients the narrowed mechanism story
-that survives the freeze, while a separate supported-versus-unsupported claims
-table keeps the excluded broader readings explicit and auditable. Those
-unsupported rows are part of the result rather than placeholders for future
-rhetorical widening.
+A claim-ladder figure plus evidence matrix orients the narrowed mechanism
+story that survives the freeze, while a separate supported-versus-unsupported
+claims table keeps the excluded broader readings explicit and auditable. Those
+unsupported rows are part of the result rather than placeholders for broader
+interpretation.
 In the fixed main-text order, the claim-ladder pair comes first and the
 supported-versus-unsupported claims table follows it immediately.
 
@@ -63,8 +63,8 @@ performance.
 ### 3.1 Trace substrate semantics
 
 The core representation is an append-only execution trace whose events expose
-the bounded state updates needed for later recovery: stack pops and pushes,
-branch decisions, next-program-counter transitions, and latest memory writes.
+the bounded state updates needed for state recovery: stack pops and pushes,
+branch decisions, program-counter transitions, and latest memory writes.
 Under that representation, the relevant executor state is no longer treated as
 opaque latent memory. It is exposed as a causal history that can be audited
 event by event against exact execution semantics.
@@ -77,10 +77,10 @@ reconstruction. Latest-write memory reads and stack-slot reads are phrased as
 2D hard-max retrieval over keys that encode both content address and temporal
 priority, and the current brute-force and specialized retrieval paths agree on
 the validated examples. The geometry benchmark belongs here only as evidence
-that exact retrieval admits a meaningful asymptotic signal. In this draft, that
-signal stays explicitly separate from any broader claim that the full current
-system is already competitive end to end. In the current paper layout, this
-section stays prose-first: the claim-bearing figure/table pairs appear later
+that exact retrieval admits a meaningful asymptotic signal. That signal stays
+separate from any broader claim that the full current system is already
+competitive end to end. In the current paper layout, this section stays
+prose-first: the claim-bearing figure/table pairs appear in the frozen order
 where they support boundary claims rather than method-only exposition.
 
 ## 4. Executor Branches and Negative Controls
@@ -117,17 +117,17 @@ widened suite is included, the fair positive interpretation does not survive:
 the held-out `opcode_shape` regime no longer supports exact rollout, and the
 only exact regime is the stronger `opcode_legal` diagnostic. The provenance
 results then narrow the explanation further. The cleaned failure taxonomy
-separates direct semantic errors from later runtime failure and shows that many
-`step_budget` rows are downstream nontermination after an earlier semantic
-divergence. On the `opcode_shape` slice, the root-cause head is consistently
-`push_expr_0`, with the remaining failures explained by downstream
-consequences rather than a separate hidden regime. The staged story therefore
-ends as a sharper negative closure: legality structure still matters, and the
-paper says so directly.
+separates direct semantic errors from downstream runtime failure and shows
+that many `step_budget` rows are downstream nontermination after an earlier
+semantic divergence. On the `opcode_shape` slice, the root-cause head is
+consistently `push_expr_0`, with the remaining failures explained by
+downstream consequences rather than a separate hidden regime. The staged story
+therefore ends as a sharper negative closure: legality structure still
+matters, and the paper says so directly.
 
 A provenance-backed staged failure taxonomy figure carries this section's main
-evidence, separating root semantic mistakes from later runtime fallout rather
-than implying a hidden positive regime.
+evidence, separating root semantic mistakes from downstream runtime fallout
+rather than implying a hidden positive regime.
 
 ## 6. Precision Boundary on Real / Organic Traces
 
@@ -164,14 +164,14 @@ current positive `D0` suites, the lowered `exec_trace` path still has a median
 cost of roughly `6458 ns/step`, compared with about `6028 ns/step` for the
 bytecode path and `3540 ns/step` for the best current reference/oracle path.
 The correct conclusion is therefore mixed and operational: the specialized
-retrieval mechanism is real, but on the present validated scope it does not yet
+retrieval mechanism is real, but on the present validated scope it does not
 justify broader frontend widening or a general system-superiority claim.
 
 In the current layout, this result remains a quantified main-text paragraph
 rather than a standalone table. The main text needs the mixed gate decision and
 its key timing anchors, while the full baseline matrix and runtime rows stay in
-companion artifacts unless a later layout pass specifically promotes a compact
-gate table.
+companion artifacts unless a layout pass specifically promotes a compact gate
+table.
 
 ## 8. Compiled Boundary
 
@@ -181,12 +181,11 @@ verification, exact-trace and exact-final-state agreement on the frozen starter
 suite, one stress/reference follow-up tied to a standalone Python spec oracle,
 and appendix-level memory-surface diagnostics that help audit the boundary
 without widening it. This is sufficient for a first compiled boundary claim,
-but not for a broader source-language claim. The later no-widening decision is
-therefore not an administrative footnote; it is part of the scientific
-conclusion. Because the systems gate remains mixed and because the current
-evidence bundle already closes the narrow compiled claim, the project stops at
-tiny typed bytecode rather than widening toward Wasm-like or arbitrary-C
-language coverage.
+but not for a broader source-language claim. The no-widening decision is part
+of the scientific conclusion. Because the systems gate remains mixed and
+because the current evidence bundle already closes the narrow compiled claim,
+the project stops at tiny typed bytecode rather than widening toward Wasm-like
+or arbitrary-C language coverage.
 
 The main text supports this endpoint with two artifacts: a frontend boundary
 diagram that makes the frozen `D0` slice explicit, and an exact-trace/final-state
@@ -203,13 +202,13 @@ The negative-results section reads as part of the argument rather than as
 cleanup. Several tempting broader claims now have explicit contrary evidence or
 explicitly missing support: the project does not validate general LLM
 computation, arbitrary C reproduction, broader compiled demos, fair-regime
-staged-pointer exactness, broad long-horizon precision robustness, or
-current-scope end-to-end runtime superiority. These are not all the same kind
-of limitation, and the section keeps them distinct. Some are failures of
-learned execution under fair decode regimes; some are bounded precision
-results; some are systems-level no-go findings; and some are deliberate scope
-cuts made to avoid inflating `D0` into a broader language claim. Keeping these
-rows explicit is scientifically useful because it prevents the paper from
+staged-pointer exactness, broad long-horizon precision robustness, or current-
+scope end-to-end runtime superiority. These are not all the same kind of
+limitation, and the section keeps them distinct. Some are failures of learned
+execution under fair decode regimes; some are bounded precision results; some
+are systems-level no-go findings; and some are deliberate scope cuts made to
+avoid inflating `D0` into a broader language claim. Keeping these rows
+explicit is scientifically useful because it prevents the paper from
 borrowing rhetorical force from the motivating field note while quietly
 dropping the parts that did not survive the evidence freeze. The threats
 section then makes the matching external-validity point: the current bundle is
@@ -238,7 +237,6 @@ full staged failure digests visible and inspectable without letting them mutate
 into broader claims. Release-hygiene and packaging ledgers belong here for the
 same reason: they make the research engineering process reproducible and
 inspectable, but they remain downstream of the scientific argument itself. The
-current appendix layout therefore stays anchored in three companion bundles:
-the `P1` paper-ready artifact set, the compiled-boundary companion
-diagnostics, and the release/readiness ledgers that keep the package
-regenerable.
+appendix layout stays anchored in three companion bundles: the `P1` paper-ready
+artifact set, the compiled-boundary companion diagnostics, and the release/
+readiness ledgers that keep the package regenerable.

@@ -1,12 +1,12 @@
 # Appendix Boundary Map
 
-This file fixes which artifacts stay in the appendix so later drafting does not
-inflate companion diagnostics into main-text claims.
+This file fixes which artifacts stay in the appendix so subsequent editing does
+not inflate companion diagnostics into main-text claims.
 
 ## Minimum appendix package
 
-These items are required for the current freeze candidate and should remain the
-canonical appendix spine:
+These items are required for the current submission-candidate bundle and
+remain the canonical appendix spine:
 
 | Artifact family | Status | Why it belongs there | Guardrail |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ canonical appendix spine:
 ## Allowed optional appendix material
 
 These companions may stay linked in the appendix when they help auditability,
-but they are not freeze blockers by themselves:
+but they are not bundle blockers by themselves:
 
 | Artifact family | Status | Why it belongs there | Guardrail |
 | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ but they are not freeze blockers by themselves:
 
 ## Out-of-scope appendix material
 
-These items stay out of the current freeze candidate:
+These items stay out of the current submission-candidate bundle:
 
 - a standalone systems gate table or the full `R2` runtime matrix in main text;
 - broader compiled demos or any frontend widening beyond `D0`;
@@ -36,8 +36,8 @@ These items stay out of the current freeze candidate:
 
 ## Main-text boundary
 
-The main text should only carry material that directly supports one of the
-frozen current-scope claim rows:
+The main text carries only material that directly supports one of the frozen
+current-scope claim rows:
 
 - `A1` append-only trace substrate;
 - `B1` exact 2D hard-max retrieval;
@@ -45,5 +45,5 @@ frozen current-scope claim rows:
 - `C3e` broadened but still narrow precision boundary;
 - `D0` tiny typed-bytecode boundary.
 
-Everything else should remain appendix-level unless a later scope change is
-explicitly recorded first in the ledgers.
+Everything else remains appendix-level unless a recorded scope change says
+otherwise.

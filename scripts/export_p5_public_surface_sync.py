@@ -29,11 +29,11 @@ def load_inputs() -> dict[str, str]:
         "release_summary_text": read_text(ROOT / "docs" / "publication_record" / "release_summary_draft.md"),
         "manuscript_text": read_text(ROOT / "docs" / "publication_record" / "manuscript_bundle_draft.md"),
         "layout_log_text": read_text(ROOT / "docs" / "publication_record" / "layout_decision_log.md"),
-        "p7_result_digest_text": read_text(
-            ROOT / "docs" / "milestones" / "P7_manuscript_freeze_candidate_and_release_preflight" / "result_digest.md"
+        "p8_result_digest_text": read_text(
+            ROOT / "docs" / "milestones" / "P8_submission_candidate_and_bundle_lock" / "result_digest.md"
         ),
-        "p7_handoff_text": read_text(
-            ROOT / "docs" / "milestones" / "P7_manuscript_freeze_candidate_and_release_preflight" / "handoff.md"
+        "p9_result_digest_text": read_text(
+            ROOT / "docs" / "milestones" / "P9_release_candidate_and_public_surface_freeze" / "result_digest.md"
         ),
     }
 
@@ -78,8 +78,8 @@ def build_sync_checklist(
     release_summary_text: str,
     manuscript_text: str,
     layout_log_text: str,
-    p7_result_digest_text: str,
-    p7_handoff_text: str,
+    p8_result_digest_text: str,
+    p9_result_digest_text: str,
 ) -> list[dict[str, object]]:
     return [
         {
@@ -95,14 +95,13 @@ def build_sync_checklist(
             if contains_all(
                 readme_text,
                 [
-                    "post-`p7` stabilization package is now defined",
-                    "`p8` locks the submission-candidate bundle",
-                    "`h2` promotes bundle-lock and release-hygiene audits",
-                    "`p9` freezes the restrained public surface",
+                    "submission-candidate bundle is now locked under the standing bundle-lock and release-hygiene audits",
+                    "restrained public surface has been synchronized as a release-candidate checkpoint",
+                    "later full plan-mode stage or a named `e1` patch lane",
                 ],
             )
             else "blocked",
-            "notes": "README now describes the active post-P7 stabilization package rather than an unspecified later planning pass.",
+            "notes": "README should describe the locked submission/release checkpoint rather than an active stabilization package.",
         },
         {
             "item_id": "status_tracks_current_paper_phase",
@@ -110,14 +109,14 @@ def build_sync_checklist(
             if contains_all(
                 status_text,
                 [
-                    "post-`p7` stabilization lanes are now defined",
-                    "`p8` locks the submission-candidate bundle",
-                    "`h2` promotes bundle-lock/release-hygiene audits",
-                    "`p9` freezes the restrained public surface",
+                    "`p8` stage is now complete on the current frozen scope",
+                    "`p9` stage is now complete on the same scope",
+                    "restrained release-candidate checkpoint",
+                    "standing `h2` audit gate",
                 ],
             )
             else "blocked",
-            "notes": "STATUS records the post-P7 stabilization package rather than pointing only to a later plan-mode pass.",
+            "notes": "STATUS should record the completed checkpoint and the standing H2 gate.",
         },
         {
             "item_id": "publication_record_readme_tracks_downstream_source",
@@ -128,13 +127,14 @@ def build_sync_checklist(
                     "release_summary_draft.md",
                     "approved as the source",
                     "paper_package_plan.md",
+                    "completed post-`p7` stage plan",
                     "submission_candidate_criteria.md",
                     "release_candidate_checklist.md",
                     "conditional_reopen_protocol.md",
                 ],
             )
             else "blocked",
-            "notes": "Publication record README names both the approved short-update source and the active post-P7 control docs.",
+            "notes": "Publication record README should name the approved short-update source and the completed post-P7 control docs.",
         },
         {
             "item_id": "release_summary_stays_downstream",
@@ -144,15 +144,16 @@ def build_sync_checklist(
                 [
                     "This repository reproduces a narrow execution-substrate claim",
                     "Current paper-facing follow-up",
-                    "post-`p7` stabilization package",
-                    "`p8` locks the submission-candidate bundle",
-                    "`h2` promotes bundle-lock and release-hygiene audits",
-                    "`p9` freezes the restrained public surface",
+                    "locked submission-candidate bundle",
+                    "restrained release-candidate public surface",
+                    "`p8` closed",
+                    "`h2` remains",
+                    "`p9` keeps outward wording downstream",
                 ],
             )
             and contains_none(release_summary_text, ["Status: short downstream summary", "later stage-planning pass"])
             else "blocked",
-            "notes": "The release summary stays narrow and current while naming the active post-P7 package explicitly.",
+            "notes": "The release summary should stay narrow while naming the locked submission/release checkpoint explicitly.",
         },
         {
             "item_id": "manuscript_tracks_section_draft_state",
@@ -162,7 +163,8 @@ def build_sync_checklist(
                 [
                     "## 1. Abstract",
                     "## 10. Reproducibility Appendix",
-                    "later no-widening decision",
+                    "Companion appendix material stays clearly downstream",
+                    "The no-widening decision is part",
                 ],
             )
             and contains_none(manuscript_text, ["Status: paper-shaped manuscript section draft"])
@@ -180,22 +182,22 @@ def build_sync_checklist(
             "notes": "The layout decision log should record release-summary reuse plus the new post-P7 governance choices.",
         },
         {
-            "item_id": "p7_baseline_remains_explicit",
+            "item_id": "p8_p9_checkpoint_remains_explicit",
             "status": "pass"
             if contains_all(
-                p7_result_digest_text,
+                p8_result_digest_text,
                 [
-                    "What `P7` closed",
-                    "The next full plan-mode stage should start from",
-                    "The next stage should treat these as the current paper-lane baseline",
+                    "`P8` closed the submission-candidate bundle-lock pass",
+                    "The milestone did not open a new evidence wave",
+                    "submission-candidate ready on the current scope",
                 ],
             )
             and contains_all(
-                p7_handoff_text,
-                ["What is already fixed", "Recommended execution order", "Reopen only if"],
+                p9_result_digest_text,
+                ["What `P9` closed", "Next-stage starting point", "restrained release-candidate checkpoint"],
             )
             else "blocked",
-            "notes": "The completed P7 digest and handoff should remain explicit as the frozen baseline for the current stage.",
+            "notes": "The completed P8/P9 digests should remain explicit as the baseline for the next plan-mode stage.",
         },
     ]
 
@@ -205,18 +207,18 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         {
             "path": "README.md",
             "needles": [
-                "post-`P7` stabilization package is now defined",
-                "`P8` locks the submission-candidate bundle",
-                "`P9` freezes the restrained public surface",
+                "submission-candidate bundle is now locked under the standing bundle-lock and release-hygiene audits",
+                "restrained public surface has been synchronized as a release-candidate checkpoint",
+                "later full plan-mode stage or a named `E1` patch lane",
                 "does **not** claim",
             ],
         },
         {
             "path": "STATUS.md",
             "needles": [
-                "post-`P7` stabilization lanes are now defined",
-                "`P8` locks the submission-candidate bundle",
-                "`H2` promotes bundle-lock/release-hygiene audits",
+                "`P8` stage is now complete on the current frozen scope",
+                "`P9` stage is now complete on the same scope",
+                "standing `H2` audit gate",
             ],
         },
         {
@@ -225,6 +227,7 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
                 "release_summary_draft.md",
                 "approved as the source",
                 "paper_package_plan.md",
+                "completed post-`P7` stage plan",
                 "submission_candidate_criteria.md",
             ],
         },
@@ -233,26 +236,32 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "needles": [
                 "This repository reproduces a narrow execution-substrate claim",
                 "## Current paper-facing follow-up",
-                "post-`P7` stabilization package",
-                "`P8` locks the submission-candidate bundle",
-                "`P9` freezes the restrained public surface",
+                "locked submission-candidate bundle",
+                "restrained release-candidate public surface",
+                "`P8` closed",
+                "`P9` keeps outward wording downstream",
             ],
         },
         {
             "path": "docs/publication_record/manuscript_bundle_draft.md",
-            "needles": ["## 1. Abstract", "## 10. Reproducibility Appendix", "later no-widening decision"],
+            "needles": [
+                "## 1. Abstract",
+                "## 10. Reproducibility Appendix",
+                "Companion appendix material stays clearly downstream",
+                "The no-widening decision is part",
+            ],
         },
         {
             "path": "docs/publication_record/layout_decision_log.md",
             "needles": ["Release-summary reuse", "Post-`P7` next phase", "Evidence reopen discipline"],
         },
         {
-            "path": "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md",
-            "needles": ["What `P7` closed", "The next full plan-mode stage should start from"],
+            "path": "docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md",
+            "needles": ["`P8` closed the submission-candidate bundle-lock pass", "submission-candidate ready on the current scope"],
         },
         {
-            "path": "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/handoff.md",
-            "needles": ["What is already fixed", "Recommended execution order", "Reopen only if"],
+            "path": "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md",
+            "needles": ["What `P9` closed", "Next-stage starting point", "restrained release-candidate checkpoint"],
         },
     ]
     rows: list[dict[str, object]] = []
@@ -264,8 +273,8 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "docs/publication_record/release_summary_draft.md": "release_summary_text",
             "docs/publication_record/manuscript_bundle_draft.md": "manuscript_text",
             "docs/publication_record/layout_decision_log.md": "layout_log_text",
-            "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md": "p7_result_digest_text",
-            "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/handoff.md": "p7_handoff_text",
+            "docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md": "p8_result_digest_text",
+            "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md": "p9_result_digest_text",
         }[str(row["path"])]
         rows.append(
             {
@@ -279,14 +288,14 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "post_p7_submission_release_stabilization_active",
+        "current_paper_phase": "p9_release_candidate_checkpoint_complete",
         "release_summary_role": "approved_downstream_short_update_source",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "execute the P8 submission-candidate lock, H2 bundle-lock audit promotion, and P9 restrained release-candidate sync without reopening evidence scope"
+            "start the next full plan-mode stage from the locked submission-candidate and restrained release-candidate checkpoint while keeping current claim and artifact boundaries fixed"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),
@@ -329,8 +338,8 @@ def main() -> None:
                 "docs/publication_record/release_summary_draft.md",
                 "docs/publication_record/manuscript_bundle_draft.md",
                 "docs/publication_record/layout_decision_log.md",
-                "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md",
-                "docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/handoff.md",
+                "docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md",
+                "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md",
             ],
             "summary": summary,
         },
@@ -341,7 +350,7 @@ def main() -> None:
                 "# P5 Public Surface Sync",
                 "",
                 "Machine-readable audit of whether the current public surface stays aligned with the",
-                "post-P7 stabilization package and the approved downstream release summary.",
+                "locked submission/release checkpoint and the approved downstream release summary.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

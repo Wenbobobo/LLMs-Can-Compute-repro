@@ -4,8 +4,8 @@ This file converts the current blocked-blog state into explicit release rules.
 
 ## Blog stays blocked unless all of the following are true
 
-1. The manuscript bundle satisfies `freeze_candidate_criteria.md`.
-2. `release_preflight_checklist.md` is fully green.
+1. The manuscript bundle satisfies `submission_candidate_criteria.md`.
+2. `release_candidate_checklist.md` is fully green.
 3. The derivative blog text is sourced from the frozen manuscript bundle and
    the approved short `release_summary_draft.md`, not from a parallel
    speculative narrative lane.
@@ -19,6 +19,8 @@ This file converts the current blocked-blog state into explicit release rules.
 ## Automatic re-block conditions
 
 - any new evidence wave reopens precision, systems, or compiled scope;
+- any named `E1` patch lane becomes active;
 - a public-surface sync starts using wording that is not traceable to the
   manuscript bundle or release summary;
-- the repo no longer satisfies the current public-surface or callout audits.
+- the repo no longer satisfies the current public-surface, callout, or
+  bundle-lock audits.

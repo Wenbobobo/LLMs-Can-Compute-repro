@@ -37,6 +37,15 @@ def test_build_claim_scope_rows_includes_current_d0_row() -> None:
     assert any(all(item["exists"] for item in row["best_evidence"]) for row in rows)
 
 
+def test_get_first_present_value_supports_locked_header_name() -> None:
+    module = _load_export_module()
+
+    assert (
+        module.get_first_present_value({"Boundary note": "locked"}, "Next evidence target", "Boundary note")
+        == "locked"
+    )
+
+
 def test_build_unsupported_claims_captures_arbitrary_c_and_runtime_superiority() -> None:
     module = _load_export_module()
 

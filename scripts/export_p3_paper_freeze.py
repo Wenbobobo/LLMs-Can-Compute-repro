@@ -52,6 +52,13 @@ def extract_backtick_paths(text: str) -> list[str]:
     return re.findall(r"`([^`]+)`", text)
 
 
+def get_first_present_value(row: dict[str, str], *keys: str) -> str:
+    for key in keys:
+        if key in row:
+            return row[key]
+    raise KeyError(keys[0])
+
+
 def path_exists(path_text: str) -> bool:
     if any(token in path_text for token in "*?[]"):
         return any(ROOT.glob(path_text))
@@ -104,12 +111,14 @@ def build_claim_scope_rows() -> list[dict[str, object]]:
 
     rows = []
     for row in tables[0]:
-        best_evidence_paths = extract_backtick_paths(row["Best evidence"])
-        next_target_paths = extract_backtick_paths(row["Next evidence target"])
+        best_evidence_paths = extract_backtick_paths(get_first_present_value(row, "Best evidence"))
+        next_target_paths = extract_backtick_paths(
+            get_first_present_value(row, "Next evidence target", "Boundary note")
+        )
         rows.append(
             {
-                "claim_layer": row["Claim layer"],
-                "current_status": row["Current status"],
+                "claim_layer": get_first_present_value(row, "Claim layer"),
+                "current_status": get_first_present_value(row, "Current status"),
                 "best_evidence": [
                     {"path": path, "exists": path_exists(path)}
                     for path in best_evidence_paths

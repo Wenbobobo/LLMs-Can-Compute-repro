@@ -88,7 +88,7 @@
         "claim_id": "C3e",
         "path": "results/M4_precision_organic_traces/claim_impact.json",
         "path_exists": true,
-        "description": "Dedicated organic-trace bundle: same broadened evidence is now indexed under one explicit claim-impact artifact for later paper/README use."
+        "description": "Dedicated organic-trace bundle: same broadened evidence is now indexed under one explicit claim-impact artifact for paper/README use."
       },
       {
         "claim_id": "C3e",

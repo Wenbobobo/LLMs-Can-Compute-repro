@@ -38,6 +38,15 @@ def test_extract_backtick_paths_returns_all_paths() -> None:
     assert module.extract_backtick_paths(text) == ["results/foo.json", "docs/bar.md"]
 
 
+def test_get_first_present_value_supports_legacy_and_locked_headers() -> None:
+    module = _load_export_module()
+
+    assert (
+        module.get_first_present_value({"Boundary note": "locked"}, "Next evidence target", "Boundary note")
+        == "locked"
+    )
+
+
 def test_build_claim_bundle_completeness_reads_current_ledgers() -> None:
     module = _load_export_module()
     payload = module.build_claim_bundle_completeness()

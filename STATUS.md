@@ -23,9 +23,9 @@
 
 ## Current Paper State
 
-- The paper bundle now has a sentence-polished manuscript section draft,
-  appendix draft, caption candidates, layout decisions, and machine-audited
-  public-surface / callout guards under `docs/publication_record/`.
+- The paper bundle now has a locked manuscript bundle, appendix package,
+  caption notes, layout decisions, and machine-audited public-surface /
+  callout guards under `docs/publication_record/`.
 - The latest layout/readiness pass has stabilized local figure/table
   placement, caption wording, and release-readiness handoff on the same frozen
   current scope.
@@ -35,20 +35,24 @@
 - `results/P1_paper_readiness/summary.json` now reports `10/10` ready
   figure/table items and no blocked or partial items on the frozen current
   scope.
-- The current repository therefore remains at the freeze-candidate checkpoint,
-  and the post-`P7` stabilization lanes are now defined: `P8` locks the
-  submission-candidate bundle, `H2` promotes bundle-lock/release-hygiene
-  audits, and `P9` freezes the restrained public surface.
+- The `P8` stage is now complete on the current frozen scope: the manuscript,
+  appendix minimum package, and paper-facing ledgers are locked together under
+  explicit submission-candidate criteria.
+- The `P9` stage is now complete on the same scope: README, STATUS, release
+  summary, and blocked-blog controls are synchronized as a restrained
+  release-candidate checkpoint.
+- The current repository is therefore at a restrained release-candidate
+  checkpoint rather than another open drafting wave.
 
 ## Immediate Next Actions
 
 1. Keep `README.md`, `STATUS.md`, and future short public-surface syncs
    downstream of `docs/publication_record/release_summary_draft.md` and
    `docs/publication_record/release_candidate_checklist.md`.
-2. Execute `P8` against the frozen manuscript bundle, appendix minimum package,
-   and paper-facing ledgers without widening claims.
-3. Keep `P1`, `P5`, and `H2` audits green while the post-`P7` stabilization
-   package is active.
+2. Start the next full plan-mode stage from the completed `P8` / `P9`
+   checkpoint plus the standing `H2` audit gate.
+3. Keep `P1`, `P5`, and `H2` audits green while the locked bundle remains the
+   active baseline.
 4. Reopen precision, systems, or compiled-boundary evidence only through the
    explicit `E1` conditional reopen protocol; otherwise keep the current `D0`
    endpoint fixed.

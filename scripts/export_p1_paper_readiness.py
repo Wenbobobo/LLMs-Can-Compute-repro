@@ -50,6 +50,13 @@ def extract_backtick_paths(text: str) -> list[str]:
     return re.findall(r"`([^`]+)`", text)
 
 
+def get_first_present_value(row: dict[str, str], *keys: str) -> str:
+    for key in keys:
+        if key in row:
+            return row[key]
+    raise KeyError(keys[0])
+
+
 def path_exists(path_text: str) -> bool:
     if any(token in path_text for token in "*?[]"):
         return any(ROOT.glob(path_text))
@@ -102,8 +109,10 @@ def build_claim_bundle_completeness() -> dict[str, object]:
     rows = []
     completeness_counter: Counter[str] = Counter()
     for row in claim_rows[0]:
-        evidence_paths = extract_backtick_paths(row["Best evidence"])
-        next_target_paths = extract_backtick_paths(row["Next evidence target"])
+        evidence_paths = extract_backtick_paths(get_first_present_value(row, "Best evidence"))
+        next_target_paths = extract_backtick_paths(
+            get_first_present_value(row, "Next evidence target", "Boundary note")
+        )
         evidence_checks = [
             {"path": path, "exists": path_exists(path)}
             for path in evidence_paths
@@ -119,8 +128,8 @@ def build_claim_bundle_completeness() -> dict[str, object]:
         completeness_counter[completeness] += 1
         rows.append(
             {
-                "claim_layer": row["Claim layer"],
-                "current_status": row["Current status"],
+                "claim_layer": get_first_present_value(row, "Claim layer"),
+                "current_status": get_first_present_value(row, "Current status"),
                 "best_evidence": evidence_checks,
                 "next_evidence_target": next_target_paths,
                 "completeness": completeness,
