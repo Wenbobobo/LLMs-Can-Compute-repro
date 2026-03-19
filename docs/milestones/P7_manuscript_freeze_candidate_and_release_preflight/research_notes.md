@@ -6,3 +6,8 @@
   freeze pass must not hide them during outward release cleanup.
 - Blog work should remain derivative of a cleared paper-facing release path,
   not a parallel narrative lane.
+- The main-text artifact order should privilege scope-setting and executor
+  closure before late compiled-boundary material.
+- Appendix companions should stay minimal: keep what the manuscript explicitly
+  cites for auditability, but do not let raw catalogs become silent freeze
+  blockers.

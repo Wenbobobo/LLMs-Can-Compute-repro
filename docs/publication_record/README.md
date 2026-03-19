@@ -18,6 +18,12 @@ Core ledgers:
   boundary-sensitive parts of the draft;
 - `manuscript_bundle_draft.md` — current layout-disciplined manuscript
   baseline for freeze-candidate work and release preflight;
+- `freeze_candidate_criteria.md` — explicit pass/fail standard for calling the
+  current manuscript bundle a freeze candidate;
+- `main_text_order.md` — fixed main-text figure/table sequence for the frozen
+  scope;
+- `appendix_companion_scope.md` — required versus optional appendix companions
+  on the same frozen scope;
 - `appendix_stub_notes.md` — near-prose appendix and reproducibility draft
   material;
 - `caption_candidate_notes.md` — draft caption sentences for the fixed current
@@ -27,6 +33,10 @@ Core ledgers:
 - `release_summary_draft.md` — short release-facing draft derived from the
   manuscript bundle and approved as the source for future README-adjacent short
   updates;
+- `release_preflight_checklist.md` — outward release checklist for README /
+  STATUS / release summary and paper-facing ledgers;
+- `blog_release_rules.md` — explicit downstream preconditions before any future
+  blog derivative is allowed to move;
 - `section_draft_upgrade_outline.md` — record of the structural pass that
   converted the bundle into a more paper-shaped section draft;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
