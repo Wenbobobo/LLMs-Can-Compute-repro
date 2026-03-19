@@ -52,6 +52,8 @@ that survives the freeze, while a separate supported-versus-unsupported claims
 table keeps the excluded broader readings explicit and auditable. Those
 unsupported rows are part of the result rather than placeholders for future
 rhetorical widening.
+In the fixed main-text order, the claim-ladder pair comes first and the
+supported-versus-unsupported claims table follows it immediately.
 
 ## 3. Methods: Trace Substrate and Exact Retrieval
 
@@ -192,6 +194,8 @@ success table that records what the current starter suite does and does not
 validate. Companion appendix material stays clearly downstream of that
 endpoint: memory-surface diagnostics and stress/reference rows help audit the
 boundary, but they do not widen it.
+In the fixed main-text order, the frontend boundary diagram appears before the
+exact-trace/final-state success table.
 
 ## 9. Negative Results and Threats
 
