@@ -1,0 +1,55 @@
+{
+  "experiment": "p10_submission_archive_ready",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "README.md",
+    "STATUS.md",
+    "docs/publication_record/README.md",
+    "docs/publication_record/current_stage_driver.md",
+    "docs/publication_record/planning_state_taxonomy.md",
+    "docs/publication_record/submission_packet_index.md",
+    "docs/publication_record/archival_repro_manifest.md",
+    "docs/publication_record/review_boundary_summary.md",
+    "docs/publication_record/external_release_note_skeleton.md",
+    "results/P1_paper_readiness/summary.json",
+    "results/P5_public_surface_sync/summary.json",
+    "results/P5_callout_alignment/summary.json",
+    "results/H2_bundle_lock_audit/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "post_p9_checkpoint_consolidation_active",
+    "packet_state": "archive_ready",
+    "check_count": 9,
+    "pass_count": 9,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff for venue-specific packaging while keeping scope fixed"
+  }
+}

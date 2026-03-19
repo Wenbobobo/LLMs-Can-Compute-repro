@@ -32,32 +32,54 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "later full plan-mode stage or a named `E1` patch lane, not another outward"
+        "- The restrained public surface remains downstream of the locked submission-candidate bundle, and broader blog/demo release stays blocked.",
+        "- The active post-`P9` stage is checkpoint consolidation and archive packaging: `H3` fixes driver/gate semantics, `P10` builds a venue-agnostic submission/archive packet, `P11` prepares downstream-only derivative material, and `F1` preauthors dormant `E1` patch playbooks."
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- The `P8` stage is now complete on the current frozen scope: the manuscript,",
-        "- The `P9` stage is now complete on the same scope: README, STATUS, release",
-        "checkpoint plus the standing `H2` audit gate."
+        "- The `P8` stage is complete on the current frozen scope: the manuscript,",
+        "- The `P9` stage is complete on the same scope: `README.md`, `STATUS.md`,"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `paper_package_plan.md` \u2014 completed post-`P7` stage plan for the submission",
-        "- `submission_candidate_criteria.md` \u2014 explicit bundle-lock standard for the",
-        "- `release_candidate_checklist.md` \u2014 outward sync gate for the restrained",
-        "- `conditional_reopen_protocol.md` \u2014 the only allowed path for reopening",
-        "- `paper_package_plan.md` records the completed post-`P7` stage design;",
-        "`submission_candidate_criteria.md`, `release_candidate_checklist.md`, and",
-        "`conditional_reopen_protocol.md`."
+        "- `current_stage_driver.md` \u2014 the canonical `active_driver` for the current",
+        "- `planning_state_taxonomy.md` \u2014 allowed planning-state labels and current",
+        "- `paper_package_plan.md` \u2014 completed post-`P7` stage design retained as a",
+        "- `release_candidate_checklist.md` \u2014 restrained outward-sync",
+        "- `conditional_reopen_protocol.md` \u2014 dormant `E1` reopen protocol; no patch",
+        "role currently belongs to `current_stage_driver.md`;"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `H3_stage_driver_consolidation_and_plan_index`",
+        "- `P10_submission_packet_and_archival_repro_bundle`",
+        "- `P11_manuscript_targeting_and_derivative_controls`",
+        "- `F1_future_evidence_playbooks`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/planning_state_taxonomy.md",
+      "matched_lines": [
+        "- `active_driver`",
+        "- `standing_gate`",
+        "- `historical_complete`",
+        "- `dormant_protocol`",
+        "- `docs/publication_record/current_stage_driver.md` \u2014 `active_driver`",
+        "- `docs/publication_record/release_candidate_checklist.md` \u2014 `standing_gate`",
+        "- `docs/publication_record/paper_package_plan.md` \u2014 `historical_complete`",
+        "- `docs/publication_record/conditional_reopen_protocol.md` \u2014 `dormant_protocol`"
       ]
     },
     {
       "path": "docs/publication_record/paper_package_plan.md",
       "matched_lines": [
+        "State: `historical_complete`.",
         "## Goal",
         "## Fixed Inputs",
         "## Package Write Set",
@@ -67,7 +89,7 @@
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "The current frozen scope now has a locked submission-candidate bundle and a",
+        "The current frozen scope has a locked submission-candidate bundle and a",
         "restrained release-candidate public surface. `P8` closed the manuscript,",
         "appendix, and ledger lock on the same frozen endpoint, `H2` remains the"
       ]
@@ -90,6 +112,7 @@
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
+        "State: `standing_gate`.",
         "- [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready",
         "- [ ] `results/P5_public_surface_sync/summary.json` reports zero blocked items.",
         "- [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.",
@@ -99,6 +122,7 @@
     {
       "path": "docs/publication_record/conditional_reopen_protocol.md",
       "matched_lines": [
+        "State: `dormant_protocol`.",
         "Only one patch lane may be active at a time:",
         "- `E1a_precision_patch`",
         "- `E1b_systems_patch`",

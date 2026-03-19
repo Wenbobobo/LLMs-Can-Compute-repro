@@ -32,6 +32,8 @@
     "README.md",
     "STATUS.md",
     "docs/publication_record/README.md",
+    "docs/publication_record/current_stage_driver.md",
+    "docs/publication_record/planning_state_taxonomy.md",
     "docs/publication_record/paper_package_plan.md",
     "docs/publication_record/release_summary_draft.md",
     "docs/publication_record/paper_bundle_status.md",
@@ -41,12 +43,12 @@
     "docs/publication_record/layout_decision_log.md"
   ],
   "summary": {
-    "current_paper_phase": "p9_release_candidate_checkpoint_complete",
+    "current_paper_phase": "post_p9_checkpoint_consolidation_active",
     "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
-    "check_count": 7,
-    "pass_count": 7,
+    "check_count": 8,
+    "pass_count": 8,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "keep the H2 bundle-lock audit green while starting the next full plan-mode stage from the current locked checkpoint"
+    "recommended_next_action": "keep the H2 bundle-lock audit green while the H3/P10/P11/F1 consolidation packet stays active"
   }
 }

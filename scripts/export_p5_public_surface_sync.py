@@ -26,6 +26,7 @@ def load_inputs() -> dict[str, str]:
         "readme_text": read_text(ROOT / "README.md"),
         "status_text": read_text(ROOT / "STATUS.md"),
         "publication_readme_text": read_text(ROOT / "docs" / "publication_record" / "README.md"),
+        "current_stage_driver_text": read_text(ROOT / "docs" / "publication_record" / "current_stage_driver.md"),
         "release_summary_text": read_text(ROOT / "docs" / "publication_record" / "release_summary_draft.md"),
         "manuscript_text": read_text(ROOT / "docs" / "publication_record" / "manuscript_bundle_draft.md"),
         "layout_log_text": read_text(ROOT / "docs" / "publication_record" / "layout_decision_log.md"),
@@ -75,6 +76,7 @@ def build_sync_checklist(
     readme_text: str,
     status_text: str,
     publication_readme_text: str,
+    current_stage_driver_text: str,
     release_summary_text: str,
     manuscript_text: str,
     layout_log_text: str,
@@ -90,51 +92,57 @@ def build_sync_checklist(
             "notes": "README keeps the narrow-scope guardrails explicit.",
         },
         {
-            "item_id": "readme_tracks_current_paper_phase",
+            "item_id": "readme_tracks_current_active_stage",
             "status": "pass"
             if contains_all(
                 readme_text,
                 [
-                    "submission-candidate bundle is now locked under the standing bundle-lock and release-hygiene audits",
-                    "restrained public surface has been synchronized as a release-candidate checkpoint",
-                    "later full plan-mode stage or a named `e1` patch lane",
+                    "active post-`p9` stage is checkpoint consolidation and archive packaging",
+                    "`h3` fixes driver/gate semantics",
+                    "`p10` builds a venue-agnostic submission/archive packet",
+                    "`p11` prepares downstream-only derivative material",
+                    "no `e1` patch lane is active",
                 ],
             )
             else "blocked",
-            "notes": "README should describe the locked submission/release checkpoint rather than an active stabilization package.",
+            "notes": "README should name the active post-P9 consolidation packet rather than a generic later stage.",
         },
         {
-            "item_id": "status_tracks_current_paper_phase",
+            "item_id": "status_tracks_current_active_stage",
             "status": "pass"
             if contains_all(
                 status_text,
                 [
-                    "`p8` stage is now complete on the current frozen scope",
-                    "`p9` stage is now complete on the same scope",
-                    "restrained release-candidate checkpoint",
-                    "standing `h2` audit gate",
+                    "`p8` stage is complete on the current frozen scope",
+                    "`p9` stage is complete on the same scope",
+                    "current active post-`p9` operational stage is checkpoint consolidation and archive readiness",
+                    "`h3`, `p10`, `p11`, and `f1`",
+                    "no `e1` patch lane is active",
                 ],
             )
             else "blocked",
-            "notes": "STATUS should record the completed checkpoint and the standing H2 gate.",
+            "notes": "STATUS should record the completed checkpoint plus the active consolidation packet.",
         },
         {
-            "item_id": "publication_record_readme_tracks_downstream_source",
+            "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
             "status": "pass"
             if contains_all(
                 publication_readme_text,
                 [
+                    "current_stage_driver.md",
+                    "planning_state_taxonomy.md",
+                    "submission_packet_index.md",
+                    "archival_repro_manifest.md",
                     "release_summary_draft.md",
-                    "approved as the source",
                     "paper_package_plan.md",
-                    "completed post-`p7` stage plan",
+                    "historical_complete",
                     "submission_candidate_criteria.md",
                     "release_candidate_checklist.md",
                     "conditional_reopen_protocol.md",
                 ],
             )
             else "blocked",
-            "notes": "Publication record README should name the approved short-update source and the completed post-P7 control docs.",
+            "notes": "Publication record README should name the active driver, packet docs, and taxonomy-labeled controls.",
         },
         {
             "item_id": "release_summary_stays_downstream",
@@ -142,18 +150,17 @@ def build_sync_checklist(
             if contains_all(
                 release_summary_text,
                 [
-                    "This repository reproduces a narrow execution-substrate claim",
-                    "Current paper-facing follow-up",
-                    "locked submission-candidate bundle",
-                    "restrained release-candidate public surface",
-                    "`p8` closed",
-                    "`h2` remains",
-                    "`p9` keeps outward wording downstream",
+                    "this repository reproduces a narrow execution-substrate claim",
+                    "the active post-`p9` follow-up is checkpoint consolidation rather than claim expansion",
+                    "`h3` clarifies driver/gate semantics",
+                    "`p10` builds a venue-agnostic submission/archive packet",
+                    "`p11` prepares downstream-only derivative material",
+                    "no `e1` patch lane is active",
                 ],
             )
-            and contains_none(release_summary_text, ["Status: short downstream summary", "later stage-planning pass"])
+            and contains_none(release_summary_text, ["later full plan-mode stage"])
             else "blocked",
-            "notes": "The release summary should stay narrow while naming the locked submission/release checkpoint explicitly.",
+            "notes": "The release summary should stay narrow while naming the active post-P9 follow-up explicitly.",
         },
         {
             "item_id": "manuscript_tracks_section_draft_state",
@@ -172,6 +179,22 @@ def build_sync_checklist(
             "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble.",
         },
         {
+            "item_id": "current_stage_driver_is_canonical",
+            "status": "pass"
+            if contains_all(
+                current_stage_driver_text,
+                [
+                    "`h3_stage_driver_consolidation_and_plan_index`",
+                    "`p10_submission_packet_and_archival_repro_bundle`",
+                    "`p11_manuscript_targeting_and_derivative_controls`",
+                    "`f1_future_evidence_playbooks`",
+                    "no `e1` patch lane is active on the current repo state",
+                ],
+            )
+            else "blocked",
+            "notes": "The current-stage driver should expose the full active consolidation packet in one place.",
+        },
+        {
             "item_id": "layout_log_records_post_p7_decisions",
             "status": "pass"
             if contains_all(
@@ -179,7 +202,7 @@ def build_sync_checklist(
                 ["Release-summary reuse", "Post-`P7` next phase", "Evidence reopen discipline"],
             )
             else "blocked",
-            "notes": "The layout decision log should record release-summary reuse plus the new post-P7 governance choices.",
+            "notes": "The layout decision log should record release-summary reuse plus the new governance choices.",
         },
         {
             "item_id": "p8_p9_checkpoint_remains_explicit",
@@ -207,39 +230,50 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         {
             "path": "README.md",
             "needles": [
-                "submission-candidate bundle is now locked under the standing bundle-lock and release-hygiene audits",
-                "restrained public surface has been synchronized as a release-candidate checkpoint",
-                "later full plan-mode stage or a named `E1` patch lane",
+                "active post-`P9` stage is checkpoint consolidation and archive packaging",
+                "`H3` fixes driver/gate semantics",
+                "`P10` builds a venue-agnostic submission/archive packet",
+                "No `E1` patch lane is active",
                 "does **not** claim",
             ],
         },
         {
             "path": "STATUS.md",
             "needles": [
-                "`P8` stage is now complete on the current frozen scope",
-                "`P9` stage is now complete on the same scope",
-                "standing `H2` audit gate",
+                "`P8` stage is complete on the current frozen scope",
+                "`P9` stage is complete on the same scope",
+                "checkpoint consolidation and archive readiness",
+                "`H3`, `P10`, `P11`, and `F1`",
             ],
         },
         {
             "path": "docs/publication_record/README.md",
             "needles": [
+                "current_stage_driver.md",
+                "planning_state_taxonomy.md",
+                "submission_packet_index.md",
+                "archival_repro_manifest.md",
                 "release_summary_draft.md",
-                "approved as the source",
                 "paper_package_plan.md",
-                "completed post-`P7` stage plan",
-                "submission_candidate_criteria.md",
+            ],
+        },
+        {
+            "path": "docs/publication_record/current_stage_driver.md",
+            "needles": [
+                "`H3_stage_driver_consolidation_and_plan_index`",
+                "`P10_submission_packet_and_archival_repro_bundle`",
+                "`P11_manuscript_targeting_and_derivative_controls`",
+                "`F1_future_evidence_playbooks`",
             ],
         },
         {
             "path": "docs/publication_record/release_summary_draft.md",
             "needles": [
                 "This repository reproduces a narrow execution-substrate claim",
-                "## Current paper-facing follow-up",
-                "locked submission-candidate bundle",
-                "restrained release-candidate public surface",
-                "`P8` closed",
-                "`P9` keeps outward wording downstream",
+                "The active post-`P9` follow-up is checkpoint consolidation rather than claim expansion",
+                "`H3` clarifies driver/gate semantics",
+                "`P10` builds a venue-agnostic submission/archive packet",
+                "No `E1` patch lane is active",
             ],
         },
         {
@@ -270,6 +304,7 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "README.md": "readme_text",
             "STATUS.md": "status_text",
             "docs/publication_record/README.md": "publication_readme_text",
+            "docs/publication_record/current_stage_driver.md": "current_stage_driver_text",
             "docs/publication_record/release_summary_draft.md": "release_summary_text",
             "docs/publication_record/manuscript_bundle_draft.md": "manuscript_text",
             "docs/publication_record/layout_decision_log.md": "layout_log_text",
@@ -288,14 +323,14 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "p9_release_candidate_checkpoint_complete",
+        "current_paper_phase": "post_p9_checkpoint_consolidation_active",
         "release_summary_role": "approved_downstream_short_update_source",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "start the next full plan-mode stage from the locked submission-candidate and restrained release-candidate checkpoint while keeping current claim and artifact boundaries fixed"
+            "execute the current H3/P10/P11/F1 consolidation packet while keeping current claim and artifact boundaries fixed"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),
@@ -335,6 +370,7 @@ def main() -> None:
                 "README.md",
                 "STATUS.md",
                 "docs/publication_record/README.md",
+                "docs/publication_record/current_stage_driver.md",
                 "docs/publication_record/release_summary_draft.md",
                 "docs/publication_record/manuscript_bundle_draft.md",
                 "docs/publication_record/layout_decision_log.md",
@@ -350,7 +386,8 @@ def main() -> None:
                 "# P5 Public Surface Sync",
                 "",
                 "Machine-readable audit of whether the current public surface stays aligned with the",
-                "locked submission/release checkpoint and the approved downstream release summary.",
+                "locked checkpoint, the active consolidation packet, and the approved downstream",
+                "release summary.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

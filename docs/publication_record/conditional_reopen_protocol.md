@@ -1,5 +1,7 @@
 # Conditional Reopen Protocol
 
+State: `dormant_protocol`.
+
 This file defines the only allowed way to reopen evidence after the current
 post-`P7` stabilization package.
 

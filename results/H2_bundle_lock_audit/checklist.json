@@ -30,19 +30,24 @@
   },
   "rows": [
     {
-      "item_id": "readme_and_status_hold_locked_checkpoint",
+      "item_id": "readme_and_status_hold_locked_checkpoint_and_active_driver",
       "status": "pass",
-      "notes": "README and STATUS should both describe the locked submission/release checkpoint rather than an active stabilization package."
+      "notes": "README and STATUS should both describe the locked checkpoint plus the active consolidation packet."
     },
     {
-      "item_id": "publication_record_tracks_completed_package_driver",
+      "item_id": "publication_record_tracks_driver_taxonomy",
       "status": "pass",
-      "notes": "Publication record docs should name the completed post-P7 package driver plus the current control docs."
+      "notes": "Publication record docs should expose the taxonomy-labeled controls and historical references explicitly."
+    },
+    {
+      "item_id": "current_stage_driver_is_explicit",
+      "status": "pass",
+      "notes": "The repo should expose one active-driver document plus one explicit planning-state taxonomy."
     },
     {
       "item_id": "release_summary_and_bundle_status_name_locked_checkpoint",
       "status": "pass",
-      "notes": "The short release summary and paper bundle status should both point to the same locked submission/release checkpoint."
+      "notes": "The short release summary and paper bundle status should both point to the same locked checkpoint."
     },
     {
       "item_id": "submission_candidate_criteria_lock_scope",
@@ -52,7 +57,7 @@
     {
       "item_id": "release_candidate_checklist_stays_downstream",
       "status": "pass",
-      "notes": "The release-candidate checklist should keep outward sync downstream of the locked bundle and the standing audits."
+      "notes": "The release-candidate checklist should keep outward sync downstream of the locked bundle and standing audits."
     },
     {
       "item_id": "conditional_reopen_protocol_requires_named_patch_lane",
@@ -62,7 +67,7 @@
     {
       "item_id": "layout_log_records_post_p7_governance",
       "status": "pass",
-      "notes": "The layout decision log should record the current post-P7 governance choices explicitly."
+      "notes": "The layout decision log should record the current governance choices explicitly."
     }
   ]
 }

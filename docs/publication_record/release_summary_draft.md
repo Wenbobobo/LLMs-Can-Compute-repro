@@ -36,13 +36,15 @@ explicitly unsupported on the current paper scope.
 
 ## Current paper-facing follow-up
 
-The current frozen scope now has a locked submission-candidate bundle and a
+The current frozen scope has a locked submission-candidate bundle and a
 restrained release-candidate public surface. `P8` closed the manuscript,
 appendix, and ledger lock on the same frozen endpoint, `H2` remains the
 standing bundle-lock and release-hygiene gate, and `P9` keeps outward wording
-downstream of the locked bundle. The next major change should come from a
-later full plan-mode stage or a named `E1` patch lane, not from claim
-expansion.
+downstream of the locked bundle. The active post-`P9` follow-up is checkpoint
+consolidation rather than claim expansion: `H3` clarifies driver/gate
+semantics, `P10` builds a venue-agnostic submission/archive packet, `P11`
+prepares downstream-only derivative material, and `F1` preauthors dormant
+`E1` playbooks. No `E1` patch lane is active.
 
 ## Reproducibility pointers
 

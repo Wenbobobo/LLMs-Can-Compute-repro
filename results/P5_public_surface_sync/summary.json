@@ -32,6 +32,7 @@
     "README.md",
     "STATUS.md",
     "docs/publication_record/README.md",
+    "docs/publication_record/current_stage_driver.md",
     "docs/publication_record/release_summary_draft.md",
     "docs/publication_record/manuscript_bundle_draft.md",
     "docs/publication_record/layout_decision_log.md",
@@ -39,12 +40,12 @@
     "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md"
   ],
   "summary": {
-    "current_paper_phase": "p9_release_candidate_checkpoint_complete",
+    "current_paper_phase": "post_p9_checkpoint_consolidation_active",
     "release_summary_role": "approved_downstream_short_update_source",
-    "check_count": 8,
-    "pass_count": 8,
+    "check_count": 9,
+    "pass_count": 9,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "start the next full plan-mode stage from the locked submission-candidate and restrained release-candidate checkpoint while keeping current claim and artifact boundaries fixed"
+    "recommended_next_action": "execute the current H3/P10/P11/F1 consolidation packet while keeping current claim and artifact boundaries fixed"
   }
 }

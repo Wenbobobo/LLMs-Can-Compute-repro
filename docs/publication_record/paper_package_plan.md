@@ -1,5 +1,7 @@
 # Paper Package Plan
 
+State: `historical_complete`.
+
 ## Goal
 
 Convert the completed `P7` freeze-candidate checkpoint into a post-`P7`

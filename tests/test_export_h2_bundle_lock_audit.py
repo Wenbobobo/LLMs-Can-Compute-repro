@@ -55,9 +55,9 @@ def test_build_summary_reports_zero_blocked_items() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "p9_release_candidate_checkpoint_complete"
+    assert summary["current_paper_phase"] == "post_p9_checkpoint_consolidation_active"
     assert summary["bundle_lock_scope"] == "publication_record_bundle_and_supporting_ledgers"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the H2 bundle-lock audit green while starting the next full plan-mode stage from the current locked checkpoint"
+        "keep the H2 bundle-lock audit green while the H3/P10/P11/F1 consolidation packet stays active"
     )

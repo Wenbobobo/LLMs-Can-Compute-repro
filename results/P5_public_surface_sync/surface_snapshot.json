@@ -33,35 +33,44 @@
       "path": "README.md",
       "matched_lines": [
         "This repository does **not** claim that general LLMs are computers, that",
-        "later full plan-mode stage or a named `E1` patch lane, not another outward"
+        "- The active post-`P9` stage is checkpoint consolidation and archive packaging: `H3` fixes driver/gate semantics, `P10` builds a venue-agnostic submission/archive packet, `P11` prepares downstream-only derivative material, and `F1` preauthors dormant `E1` patch playbooks.",
+        "- No `E1` patch lane is active; any new evidence still routes through `docs/publication_record/conditional_reopen_protocol.md`."
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- The `P8` stage is now complete on the current frozen scope: the manuscript,",
-        "- The `P9` stage is now complete on the same scope: README, STATUS, release",
-        "checkpoint plus the standing `H2` audit gate."
+        "- The `P8` stage is complete on the current frozen scope: the manuscript,",
+        "- The `P9` stage is complete on the same scope: `README.md`, `STATUS.md`,",
+        "- `H3`, `P10`, `P11`, and `F1` are the active non-claim-expanding lanes on top"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `paper_package_plan.md` \u2014 completed post-`P7` stage plan for the submission",
-        "- `submission_candidate_criteria.md` \u2014 explicit bundle-lock standard for the",
-        "- `release_summary_draft.md` \u2014 short release-facing draft derived from the",
-        "manuscript bundle and approved as the source for future README-adjacent short",
-        "`release_summary_draft.md`, while the manuscript bundle remains the",
-        "- `paper_package_plan.md` records the completed post-`P7` stage design;"
+        "- `current_stage_driver.md` \u2014 the canonical `active_driver` for the current",
+        "- `planning_state_taxonomy.md` \u2014 allowed planning-state labels and current",
+        "- `paper_package_plan.md` \u2014 completed post-`P7` stage design retained as a",
+        "- `submission_packet_index.md` \u2014 venue-agnostic packet index for current",
+        "- `archival_repro_manifest.md` \u2014 regeneration, environment, and archive-safety",
+        "- `release_summary_draft.md` \u2014 short release-facing draft approved as the"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `H3_stage_driver_consolidation_and_plan_index`",
+        "- `P10_submission_packet_and_archival_repro_bundle`",
+        "- `P11_manuscript_targeting_and_derivative_controls`",
+        "- `F1_future_evidence_playbooks`"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
         "This repository reproduces a narrow execution-substrate claim rather than a",
-        "## Current paper-facing follow-up",
-        "The current frozen scope now has a locked submission-candidate bundle and a",
-        "restrained release-candidate public surface. `P8` closed the manuscript,"
+        "semantics, `P10` builds a venue-agnostic submission/archive packet, `P11`",
+        "`E1` playbooks. No `E1` patch lane is active."
       ]
     },
     {

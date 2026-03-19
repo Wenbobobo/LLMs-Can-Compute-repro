@@ -35,24 +35,24 @@
       "notes": "README keeps the narrow-scope guardrails explicit."
     },
     {
-      "item_id": "readme_tracks_current_paper_phase",
+      "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should describe the locked submission/release checkpoint rather than an active stabilization package."
+      "notes": "README should name the active post-P9 consolidation packet rather than a generic later stage."
     },
     {
-      "item_id": "status_tracks_current_paper_phase",
+      "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record the completed checkpoint and the standing H2 gate."
+      "notes": "STATUS should record the completed checkpoint plus the active consolidation packet."
     },
     {
-      "item_id": "publication_record_readme_tracks_downstream_source",
+      "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
       "status": "pass",
-      "notes": "Publication record README should name the approved short-update source and the completed post-P7 control docs."
+      "notes": "Publication record README should name the active driver, packet docs, and taxonomy-labeled controls."
     },
     {
       "item_id": "release_summary_stays_downstream",
       "status": "pass",
-      "notes": "The release summary should stay narrow while naming the locked submission/release checkpoint explicitly."
+      "notes": "The release summary should stay narrow while naming the active post-P9 follow-up explicitly."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
@@ -60,9 +60,14 @@
       "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble."
     },
     {
+      "item_id": "current_stage_driver_is_canonical",
+      "status": "pass",
+      "notes": "The current-stage driver should expose the full active consolidation packet in one place."
+    },
+    {
       "item_id": "layout_log_records_post_p7_decisions",
       "status": "pass",
-      "notes": "The layout decision log should record release-summary reuse plus the new post-P7 governance choices."
+      "notes": "The layout decision log should record release-summary reuse plus the new governance choices."
     },
     {
       "item_id": "p8_p9_checkpoint_remains_explicit",

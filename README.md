@@ -32,22 +32,19 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - The precision story is closed as a narrowed boundary: float32 single-head fails on `12/25` tracked real/organic trace streams, `7/25` already at `1x`, while at least one decomposition stays exact on `25/25` tracked streams.
 - The systems gate remains mixed: geometry is strongly positive, but the lowered path is still about `1.82x` slower than the best current reference/oracle path on positive `D0` suites.
 - The compiled endpoint stays at the current tiny typed-bytecode boundary.
-- The README remains a restrained landing page, and the broader blog release stays blocked.
-
-The current submission-candidate bundle is now locked under the standing
-bundle-lock and release-hygiene audits, and the restrained public surface has
-been synchronized as a release-candidate checkpoint. The next major work is a
-later full plan-mode stage or a named `E1` patch lane, not another outward
-claim-expansion pass.
+- The restrained public surface remains downstream of the locked submission-candidate bundle, and broader blog/demo release stays blocked.
+- The active post-`P9` stage is checkpoint consolidation and archive packaging: `H3` fixes driver/gate semantics, `P10` builds a venue-agnostic submission/archive packet, `P11` prepares downstream-only derivative material, and `F1` preauthors dormant `E1` patch playbooks.
+- No `E1` patch lane is active; any new evidence still routes through `docs/publication_record/conditional_reopen_protocol.md`.
 
 ## Start Here
 
 - `STATUS.md` — current repository state and immediate gates
+- `docs/publication_record/current_stage_driver.md` — canonical active-stage driver
+- `docs/publication_record/submission_packet_index.md` — venue-agnostic submission/archive handoff
 - `docs/publication_record/claim_ladder.md` — claim boundary summary
 - `docs/publication_record/claim_evidence_table.md` — artifact-to-claim map
 - `docs/publication_record/manuscript_bundle_draft.md` — current manuscript section draft
 - `docs/milestones/P1_paper_readiness/` — current paper bundle staging area
-- `docs/milestones/P2_public_research_packaging/` — public-safe packaging ledger
 
 ## Quickstart
 
@@ -64,8 +61,9 @@ Common export commands:
 uv run python scripts/export_p1_figure_table_sources.py
 uv run python scripts/render_p1_paper_artifacts.py
 uv run python scripts/export_p1_paper_readiness.py
-uv run python scripts/export_m7_frontend_candidate_decision.py
-uv run python scripts/export_p4_blog_release_gate.py
+uv run python scripts/export_p5_public_surface_sync.py
+uv run python scripts/export_h2_bundle_lock_audit.py
+uv run python scripts/export_p10_submission_archive_ready.py
 ```
 
 ## Repository Layout

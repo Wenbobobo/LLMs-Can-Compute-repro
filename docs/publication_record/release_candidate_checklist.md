@@ -1,5 +1,7 @@
 # Release Candidate Checklist
 
+State: `standing_gate`.
+
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock.
 

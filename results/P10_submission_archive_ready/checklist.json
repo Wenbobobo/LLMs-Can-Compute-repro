@@ -1,0 +1,78 @@
+{
+  "experiment": "p10_submission_archive_ready_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "active_driver_names_current_packet",
+      "status": "pass",
+      "notes": "The current-stage driver should expose the active consolidation packet and inactive reopen state."
+    },
+    {
+      "item_id": "planning_taxonomy_assigns_single_active_driver",
+      "status": "pass",
+      "notes": "The planning taxonomy should make active-driver and gate ownership explicit."
+    },
+    {
+      "item_id": "submission_packet_names_canonical_bundle",
+      "status": "pass",
+      "notes": "The packet index should identify the canonical manuscript, appendix, control docs, and audit anchors."
+    },
+    {
+      "item_id": "archival_manifest_names_regeneration_and_restrictions",
+      "status": "pass",
+      "notes": "The archival manifest should document regeneration commands and explicit restricted-source exclusions."
+    },
+    {
+      "item_id": "review_boundary_summary_preserves_scope",
+      "status": "pass",
+      "notes": "The review-boundary summary should preserve supported claims, blocked claims, and explicit reopen routing."
+    },
+    {
+      "item_id": "external_release_note_stays_downstream",
+      "status": "pass",
+      "notes": "The release-note skeleton should remain restrained and explicitly downstream-only."
+    },
+    {
+      "item_id": "top_level_docs_align_with_current_driver",
+      "status": "pass",
+      "notes": "README, STATUS, and the publication index should all reflect the same active driver and packet docs."
+    },
+    {
+      "item_id": "packet_docs_keep_restricted_sources_out_of_public_bundle",
+      "status": "pass",
+      "notes": "Public packet docs other than the archive manifest should not depend on restricted-source paths."
+    },
+    {
+      "item_id": "standing_audits_remain_green",
+      "status": "pass",
+      "notes": "The existing standing audits must stay green before the packet is called archive-ready."
+    }
+  ]
+}
