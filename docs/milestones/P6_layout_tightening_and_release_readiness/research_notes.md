@@ -8,3 +8,6 @@
   companion tables read like hidden widening.
 - Blog and broader release prose remain downstream and blocked unless a later
   phase changes the public-release gate explicitly.
+- The best `P6` completion criterion is not prettier prose in isolation, but a
+  manuscript bundle whose local placement choices no longer require future
+  agents to infer intent from scattered notes.

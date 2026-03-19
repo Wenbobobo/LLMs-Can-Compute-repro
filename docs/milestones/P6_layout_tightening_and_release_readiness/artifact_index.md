@@ -13,5 +13,6 @@
 - `docs/publication_record/experiment_manifest.md`
 - `docs/milestones/P6_layout_tightening_and_release_readiness/open_questions.md`
 - `docs/milestones/P6_layout_tightening_and_release_readiness/decision_log.md`
+- `docs/milestones/P6_layout_tightening_and_release_readiness/result_digest.md`
 - `results/P5_public_surface_sync/summary.json`
 - `results/P5_callout_alignment/summary.json`

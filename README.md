@@ -28,16 +28,16 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 
 ## Current Gate Outcome
 
-- `P3` freezes the current paper scope; the current `P1` export now reports `10/10` ready figure/table items on that frozen scope.
-- `R1` closes the precision story as a narrowed boundary: float32 single-head fails on `12/25` tracked real/organic trace streams, `7/25` already at `1x`, while at least one decomposition stays exact on `25/25` tracked streams.
-- `R2` stays mixed: geometry is strongly positive, but the lowered path is still about `1.82x` slower than the best current reference/oracle path on positive `D0` suites.
-- `M7` keeps the compiled endpoint at the current tiny typed-bytecode boundary.
-- `P4` allows the README to remain a restrained landing page and keeps the blog blocked.
+- The current paper scope is frozen, and the paper-readiness export reports `10/10` ready figure/table items on that scope.
+- The precision story is closed as a narrowed boundary: float32 single-head fails on `12/25` tracked real/organic trace streams, `7/25` already at `1x`, while at least one decomposition stays exact on `25/25` tracked streams.
+- The systems gate remains mixed: geometry is strongly positive, but the lowered path is still about `1.82x` slower than the best current reference/oracle path on positive `D0` suites.
+- The compiled endpoint stays at the current tiny typed-bytecode boundary.
+- The README remains a restrained landing page, and the broader blog release stays blocked.
 
-The current paper-focused pass has completed sentence-level polish and callout
-cleanup under the `P5` audit guards. The next planned work is layout
-tightening, figure/table integration, and release-readiness packaging, not
-frontend widening or demo-first expansion.
+The current layout-tightening and release-readiness pass has stabilized local
+figure/table placement and public-surface wording under the existing audit
+guards. The next planned work is manuscript-freeze candidacy and release
+preflight, not frontend widening or demo-first expansion.
 
 ## Start Here
 

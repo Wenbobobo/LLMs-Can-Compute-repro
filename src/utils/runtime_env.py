@@ -49,6 +49,19 @@ class RuntimeEnvironment:
         return asdict(self)
 
 
+def _detect_virtual_env() -> str | None:
+    explicit = os.environ.get("VIRTUAL_ENV")
+    if explicit:
+        return explicit
+
+    prefix = Path(sys.prefix)
+    base_prefix = Path(getattr(sys, "base_prefix", sys.prefix))
+    if prefix != base_prefix and (prefix / "pyvenv.cfg").exists():
+        return str(prefix)
+
+    return None
+
+
 def _detect_uv_version() -> str | None:
     if shutil.which("uv") is None:
         return None
@@ -110,7 +123,7 @@ def detect_runtime_environment() -> RuntimeEnvironment:
             version=sys.version,
             implementation=platform.python_implementation(),
             platform=platform.platform(),
-            virtual_env=os.environ.get("VIRTUAL_ENV"),
+            virtual_env=_detect_virtual_env(),
         ),
         torch=_detect_torch(),
         uv_version=_detect_uv_version(),

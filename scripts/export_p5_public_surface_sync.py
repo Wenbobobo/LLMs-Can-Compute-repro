@@ -43,6 +43,11 @@ def contains_all(text: str, needles: list[str]) -> bool:
     return all(normalize_text_space(needle).lower() in lowered for needle in needles)
 
 
+def contains_none(text: str, needles: list[str]) -> bool:
+    lowered = normalize_text_space(text).lower()
+    return all(normalize_text_space(needle).lower() not in lowered for needle in needles)
+
+
 def extract_matching_lines(text: str, *, needles: list[str], max_lines: int = 6) -> list[str]:
     lowered_needles = [needle.lower() for needle in needles]
     hits: list[str] = []
@@ -83,19 +88,19 @@ def build_sync_checklist(
         {
             "item_id": "readme_tracks_current_paper_phase",
             "status": "pass"
-            if contains_all(readme_text, ["completed sentence-level polish", "layout tightening"])
+            if contains_all(readme_text, ["layout-tightening and release-readiness pass", "manuscript-freeze candidacy"])
             else "blocked",
-            "notes": "README now describes the post-P5 layout/readiness phase rather than the earlier polish-in-progress phase.",
+            "notes": "README now describes the post-P6 freeze/preflight handoff rather than the earlier layout-in-progress phase.",
         },
         {
             "item_id": "status_tracks_current_paper_phase",
             "status": "pass"
             if contains_all(
                 status_text,
-                ["sentence-level polish and callout-alignment pass is now complete", "layout tightening", "release_summary_draft.md"],
+                ["layout-tightening and release-readiness pass is now complete", "manuscript-freeze candidacy", "release_summary_draft.md"],
             )
             else "blocked",
-            "notes": "STATUS records the completed P5 phase and the downstream short-summary source.",
+            "notes": "STATUS records the completed P6 phase and the downstream short-summary source.",
         },
         {
             "item_id": "publication_record_readme_tracks_downstream_source",
@@ -109,20 +114,30 @@ def build_sync_checklist(
             "status": "pass"
             if contains_all(
                 release_summary_text,
-                ["README-adjacent short updates", "narrower than the paper bundle", "layout tightening"],
+                [
+                    "This repository reproduces a narrow execution-substrate claim",
+                    "Current paper-facing follow-up",
+                    "manuscript-freeze candidacy",
+                ],
             )
+            and contains_none(release_summary_text, ["Status: short downstream summary"])
             else "blocked",
-            "notes": "The release summary remains a downstream short public-surface artifact.",
+            "notes": "The release summary stays narrow and current without falling back to an internal status preamble.",
         },
         {
             "item_id": "manuscript_tracks_section_draft_state",
             "status": "pass"
             if contains_all(
                 manuscript_text,
-                ["paper-shaped manuscript section draft", "callout-alignment pass", "layout tightening"],
+                [
+                    "## 1. Abstract",
+                    "## 10. Reproducibility Appendix",
+                    "later no-widening decision",
+                ],
             )
+            and contains_none(manuscript_text, ["Status: paper-shaped manuscript section draft"])
             else "blocked",
-            "notes": "The manuscript draft states the post-P5 paper phase directly.",
+            "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble.",
         },
         {
             "item_id": "layout_log_records_release_summary_reuse",
@@ -152,11 +167,11 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
     snapshots = [
         {
             "path": "README.md",
-            "needles": ["completed sentence-level polish", "layout tightening", "does **not** claim"],
+            "needles": ["layout-tightening and release-readiness pass", "manuscript-freeze candidacy", "does **not** claim"],
         },
         {
             "path": "STATUS.md",
-            "needles": ["callout-alignment pass is now complete", "layout tightening", "release_summary_draft.md"],
+            "needles": ["layout-tightening and release-readiness pass is now complete", "manuscript-freeze candidacy", "release_summary_draft.md"],
         },
         {
             "path": "docs/publication_record/README.md",
@@ -164,11 +179,15 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         },
         {
             "path": "docs/publication_record/release_summary_draft.md",
-            "needles": ["README-adjacent short updates", "narrower than the paper bundle", "layout tightening"],
+            "needles": [
+                "This repository reproduces a narrow execution-substrate claim",
+                "## Current paper-facing follow-up",
+                "manuscript-freeze candidacy",
+            ],
         },
         {
             "path": "docs/publication_record/manuscript_bundle_draft.md",
-            "needles": ["paper-shaped manuscript section draft", "callout-alignment pass", "layout tightening"],
+            "needles": ["## 1. Abstract", "## 10. Reproducibility Appendix", "later no-widening decision"],
         },
         {
             "path": "docs/publication_record/layout_decision_log.md",
@@ -207,14 +226,14 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "p5_complete_layout_tightening_pending",
+        "current_paper_phase": "p6_complete_freeze_candidate_pending",
         "release_summary_role": "approved_downstream_short_update_source",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "start the separate layout-tightening and release-readiness wave while keeping current claim/artifact boundaries fixed"
+            "start manuscript-freeze candidacy and release preflight while keeping current claim/artifact boundaries fixed"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),
@@ -269,7 +288,7 @@ def main() -> None:
                 "# P5 Public Surface Sync",
                 "",
                 "Machine-readable audit of whether the current public surface stays aligned with the",
-                "completed `P5` polish state and the approved downstream release summary.",
+                "completed `P6` layout/readiness state and the approved downstream release summary.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

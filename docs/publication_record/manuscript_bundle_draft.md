@@ -1,10 +1,5 @@
 # Manuscript Bundle Draft
 
-Status: paper-shaped manuscript section draft after the sentence-level polish
-and callout-alignment pass that followed the `M7` no-go decision. Later work
-is layout tightening and figure/table integration, not another round of section
-planning.
-
 ## 1. Abstract
 
 We revisit a field-note claim that large language model mechanisms can behave
@@ -82,7 +77,9 @@ priority, and the current brute-force and specialized retrieval paths agree on
 the validated examples. The geometry benchmark belongs here only as evidence
 that exact retrieval admits a meaningful asymptotic signal. In this draft, that
 signal stays explicitly separate from any broader claim that the full current
-system is already competitive end to end.
+system is already competitive end to end. In the current paper layout, this
+section stays prose-first: the claim-bearing figure/table pairs appear later
+where they support boundary claims rather than method-only exposition.
 
 ## 4. Executor Branches and Negative Controls
 
@@ -182,7 +179,7 @@ verification, exact-trace and exact-final-state agreement on the frozen starter
 suite, one stress/reference follow-up tied to a standalone Python spec oracle,
 and appendix-level memory-surface diagnostics that help audit the boundary
 without widening it. This is sufficient for a first compiled boundary claim,
-but not for a broader source-language claim. The subsequent `M7` decision is
+but not for a broader source-language claim. The later no-widening decision is
 therefore not an administrative footnote; it is part of the scientific
 conclusion. Because the systems gate remains mixed and because the current
 evidence bundle already closes the narrow compiled claim, the project stops at
@@ -236,4 +233,8 @@ diagnostics such as memory-surface views, per-stream precision catalogs, and
 full staged failure digests visible and inspectable without letting them mutate
 into broader claims. Release-hygiene and packaging ledgers belong here for the
 same reason: they make the research engineering process reproducible and
-inspectable, but they remain downstream of the scientific argument itself.
+inspectable, but they remain downstream of the scientific argument itself. The
+current appendix layout therefore stays anchored in three companion bundles:
+the `P1` paper-ready artifact set, the compiled-boundary companion
+diagnostics, and the release/readiness ledgers that keep the package
+regenerable.

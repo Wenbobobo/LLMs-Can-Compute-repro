@@ -1,5 +1,9 @@
 # TODO
 
+Legacy note: the remaining unchecked rows are tracked in
+`docs/milestones/H1_legacy_backlog_reconciliation/classification_matrix.md`
+and are not active on the current frozen paper scope by default.
+
 - [x] Define the baseline architecture scaffold and structured trace dataset
 - [x] Keep logs and claims separate from the hard-max branch
 - [x] Install and validate the Torch runtime for this branch

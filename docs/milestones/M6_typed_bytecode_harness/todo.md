@@ -9,4 +9,4 @@
 - [x] Expand the typed-bytecode suite with static-target non-recursive `call` / `ret`.
 - [x] Freeze the control-flow batch wording across `README`, `STATUS`, and `P1` ledgers.
 - [x] Start the memory-surface follow-up under `docs/milestones/M6_memory_surface_followup/`.
-- [ ] Hand off the settled control-flow slice to `docs/milestones/M6_boundary_freeze/`.
+- [x] Hand off the settled control-flow slice to `docs/milestones/M6_boundary_freeze/`.

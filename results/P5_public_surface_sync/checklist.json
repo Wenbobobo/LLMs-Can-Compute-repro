@@ -6,7 +6,7 @@
       "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": null
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
     },
     "torch": {
       "installed": true,
@@ -37,12 +37,12 @@
     {
       "item_id": "readme_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "README now describes the post-P5 layout/readiness phase rather than the earlier polish-in-progress phase."
+      "notes": "README now describes the post-P6 freeze/preflight handoff rather than the earlier layout-in-progress phase."
     },
     {
       "item_id": "status_tracks_current_paper_phase",
       "status": "pass",
-      "notes": "STATUS records the completed P5 phase and the downstream short-summary source."
+      "notes": "STATUS records the completed P6 phase and the downstream short-summary source."
     },
     {
       "item_id": "publication_record_readme_tracks_downstream_source",
@@ -52,12 +52,12 @@
     {
       "item_id": "release_summary_stays_downstream",
       "status": "pass",
-      "notes": "The release summary remains a downstream short public-surface artifact."
+      "notes": "The release summary stays narrow and current without falling back to an internal status preamble."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
       "status": "pass",
-      "notes": "The manuscript draft states the post-P5 paper phase directly."
+      "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble."
     },
     {
       "item_id": "layout_log_records_release_summary_reuse",

@@ -6,7 +6,7 @@
       "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": null
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
     },
     "torch": {
       "installed": true,
@@ -33,16 +33,17 @@
       "path": "README.md",
       "matched_lines": [
         "This repository does **not** claim that general LLMs are computers, that",
-        "The current paper-focused pass has completed sentence-level polish and callout"
+        "The current layout-tightening and release-readiness pass has stabilized local",
+        "guards. The next planned work is manuscript-freeze candidacy and release"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- The sentence-level polish and callout-alignment pass is now complete;",
-        "remaining paper-facing work is layout tightening, figure/table integration,",
+        "- The layout-tightening and release-readiness pass is now complete; remaining",
+        "paper-facing work is manuscript-freeze candidacy, release preflight, and",
         "downstream of `docs/publication_record/release_summary_draft.md`.",
-        "2. Run the next paper-facing wave as layout tightening and release-readiness"
+        "3. Run the next paper-facing wave as manuscript-freeze candidacy plus release"
       ]
     },
     {
@@ -56,17 +57,17 @@
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "draft remains stable enough to seed README-adjacent short updates while staying",
-        "narrower than the paper bundle itself.",
-        "scope. The next paper-facing work is layout tightening, figure/table"
+        "This repository reproduces a narrow execution-substrate claim rather than a",
+        "## Current paper-facing follow-up",
+        "frozen scope. The next paper-facing work is manuscript-freeze candidacy and"
       ]
     },
     {
       "path": "docs/publication_record/manuscript_bundle_draft.md",
       "matched_lines": [
-        "Status: paper-shaped manuscript section draft after the sentence-level polish",
-        "and callout-alignment pass that followed the `M7` no-go decision. Later work",
-        "is layout tightening and figure/table integration, not another round of section"
+        "## 1. Abstract",
+        "but not for a broader source-language claim. The later no-widening decision is",
+        "## 10. Reproducibility Appendix"
       ]
     },
     {

@@ -1,9 +1,12 @@
 # Open Questions
 
-- Does any main-text section need an explicit placement cue for its paired
-  figure/table artifacts, or is the current prose already sufficient?
-- Should a later layout pass promote the compact `R2` gate table allowed by the
-  layout log, or should `R2` remain paragraph-only through the next release
-  batch?
-- What is the smallest release-readiness checklist that preserves manuscript /
-  caption / public-surface alignment without creating a new maintenance burden?
+No open `P6` questions remain.
+
+Resolved in this batch:
+
+- the current prose already carries the existing paired artifacts cleanly, so
+  `P6` adds only one light Methods placement cue rather than a wider placement
+  rewrite;
+- `R2` remains paragraph-only through the next release batch;
+- the smallest stable release-readiness handoff is now the combination of the
+  updated `P6` ledgers, the narrow `P5` audits, and the new `P7` scaffold.

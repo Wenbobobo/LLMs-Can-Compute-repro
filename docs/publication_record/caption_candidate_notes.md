@@ -12,7 +12,9 @@ Supported and unsupported claim rows after tightening the motivating field note
 into a paper-grade reproduction boundary. The validated scope ends at
 append-only traces, exact retrieval, a narrow precision boundary, and a tiny
 typed-bytecode `D0` endpoint; unsupported rows include arbitrary C, general LLM
-computation, and any broader current-scope systems-superiority claim.
+computation, and any broader current-scope systems-superiority claim. In the
+main text, this figure stays paired with a separate supported-versus-unsupported
+claims table so the excluded rows remain auditable.
 
 ### Staged decode regime comparison
 
@@ -32,8 +34,8 @@ taxonomy sharpens the staged negative closure instead of reopening the claim.
 
 On the current exported real and organic trace families, float32 single-head
 latest-write retrieval fails early while decomposition remains exact on the
-validated suite. The figure summarizes a suite-specific positive-with-boundary
-result rather than a universal long-horizon precision law.
+validated suite. The figure summarizes a suite-specific positive result with a
+clear boundary rather than a universal long-horizon precision law.
 
 ### Negative-control comparison
 
@@ -45,9 +47,9 @@ branch could exist in principle.
 ### Frontend boundary diagram
 
 The current compiled endpoint is a tiny typed-bytecode `D0` slice with exact
-agreement on the frozen starter suite under the current `M7` no-widening
-decision. The diagram marks an explicit stop at the present paper boundary; it
-does not imply Wasm-like, arbitrary-C, or broader runtime coverage.
+agreement on the frozen starter suite under the current no-widening decision.
+The diagram marks an explicit stop at the present paper boundary; it does not
+imply Wasm-like, arbitrary-C, or broader runtime coverage.
 
 ## Table captions
 
@@ -66,9 +68,9 @@ broader compiled demos or frontend widening.
 
 ### Real-trace precision boundary table
 
-Family- and scheme-level boundary rows behind the current `C3e`
-positive-with-boundary claim. These rows are suite-specific and scheme-specific
-and should not be read as universal scaling laws.
+Family- and scheme-level boundary rows behind the current
+positive-with-boundary precision claim. These rows are suite-specific and
+scheme-specific and should not be read as universal scaling laws.
 
 ### Threats-to-validity table
 

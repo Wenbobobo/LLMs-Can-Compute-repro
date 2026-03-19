@@ -55,9 +55,9 @@ def test_build_summary_reports_current_polish_phase() -> None:
     rows = module.build_sync_checklist(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "p5_complete_layout_tightening_pending"
+    assert summary["current_paper_phase"] == "p6_complete_freeze_candidate_pending"
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "start the separate layout-tightening and release-readiness wave while keeping current claim/artifact boundaries fixed"
+        "start manuscript-freeze candidacy and release preflight while keeping current claim/artifact boundaries fixed"
     )

@@ -1,10 +1,5 @@
 # Release Summary Draft
 
-Status: short downstream summary derived from the manuscript bundle. The current
-manuscript pass has completed sentence-level polish and callout cleanup; this
-draft remains stable enough to seed README-adjacent short updates while staying
-narrower than the paper bundle itself.
-
 ## Narrow target
 
 This repository reproduces a narrow execution-substrate claim rather than a
@@ -41,9 +36,9 @@ explicitly unsupported on the current paper scope.
 
 ## Current paper-facing follow-up
 
-The sentence-level manuscript polish pass is complete on the current frozen
-scope. The next paper-facing work is layout tightening, figure/table
-integration, and release-readiness packaging, not claim expansion.
+The layout-tightening and release-readiness pass is complete on the current
+frozen scope. The next paper-facing work is manuscript-freeze candidacy and
+release preflight, not claim expansion.
 
 ## Reproducibility pointers
 

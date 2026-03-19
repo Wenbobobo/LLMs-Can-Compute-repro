@@ -1,5 +1,9 @@
 # TODO
 
+Legacy note: the remaining unchecked rows are tracked in
+`docs/milestones/H1_legacy_backlog_reconciliation/classification_matrix.md`
+and are not active on the current frozen paper scope by default.
+
 - [x] Define the exact hard-max attention API for latest-write memory retrieval
 - [x] Build a minimal causal decode loop that compares linear scan and `HullKVCache`
 - [x] Validate the decode loop on exported `exec_trace` memory examples

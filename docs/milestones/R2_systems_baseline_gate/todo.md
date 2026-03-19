@@ -7,4 +7,4 @@
 - [x] Produce one stop/go table for whether specialized runtime machinery is
   justified by the current scope.
 - [x] Record what cannot yet be compared fairly and why.
-- [ ] Feed the decision summary into `M7_frontend_candidate_decision`.
+- [x] Feed the decision summary into `M7_frontend_candidate_decision`.

@@ -1,11 +1,12 @@
 # Status
 
-Opened on 2026-03-19 after `P5` closure.
+Completed on 2026-03-19 after `P5` closure.
 
-- `P5` sentence-level polish and callout alignment are complete on the frozen
-  current scope;
-- the current remaining paper-facing risk is layout drift, not missing
-  scientific evidence;
-- `release_summary_draft.md` remains the downstream source for restrained
-  README/STATUS updates;
-- no new evidence wave is open by default for this milestone.
+- the manuscript now has explicit local placement cues where they still add
+  value, while the existing main-text artifact pairings remain fixed;
+- the Methods section stays prose-first, `R2` stays inline, and starter-suite
+  `D0` evidence remains separate from companion diagnostics;
+- `README.md`, `STATUS.md`, and `release_summary_draft.md` are synchronized to
+  the completed layout/readiness state;
+- the next paper-facing wave now moves to manuscript-freeze candidacy and
+  release preflight rather than further local layout cleanup.

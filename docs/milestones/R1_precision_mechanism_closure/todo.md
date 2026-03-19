@@ -1,5 +1,9 @@
 # Todo
 
+Legacy note: the remaining unchecked rows are tracked in
+`docs/milestones/H1_legacy_backlog_reconciliation/classification_matrix.md`
+and are not active on the current frozen paper scope by default.
+
 - [x] Build one unified summary of native horizon, first-failure multiplier,
   and failure type across the current real/organic suites.
 - [ ] Continue narrow horizon/base sweeps only where they sharpen the boundary

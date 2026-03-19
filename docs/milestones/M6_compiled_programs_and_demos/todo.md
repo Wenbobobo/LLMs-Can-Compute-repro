@@ -14,7 +14,7 @@
   tiny typed-bytecode surface.
 - [x] Compare the current positive/negative suite against an external reference
   interpreter.
-- [ ] Reassess whether any broader compiled demo is justified only after
+- [x] Reassess whether any broader compiled demo is justified only after
   `P3_paper_freeze_and_evidence_mapping`,
   `R2_systems_baseline_gate`, and
-  `M7_frontend_candidate_decision` close positively.
+  `M7_frontend_candidate_decision` close positively; current answer is no on the frozen scope.

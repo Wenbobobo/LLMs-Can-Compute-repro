@@ -6,7 +6,7 @@
       "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": null
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
     },
     "torch": {
       "installed": true,
@@ -39,12 +39,12 @@
     "docs/milestones/P5_paper_draft_assembly/todo.md"
   ],
   "summary": {
-    "current_paper_phase": "p5_complete_layout_tightening_pending",
+    "current_paper_phase": "p6_complete_freeze_candidate_pending",
     "release_summary_role": "approved_downstream_short_update_source",
     "check_count": 8,
     "pass_count": 8,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "start the separate layout-tightening and release-readiness wave while keeping current claim/artifact boundaries fixed"
+    "recommended_next_action": "start manuscript-freeze candidacy and release preflight while keeping current claim/artifact boundaries fixed"
   }
 }

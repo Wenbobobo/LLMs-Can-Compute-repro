@@ -6,7 +6,7 @@
       "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": null
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
     },
     "torch": {
       "installed": true,
@@ -40,6 +40,6 @@
     "pass_count": 5,
     "blocked_count": 0,
     "blocked_rows": [],
-    "recommended_next_action": "continue layout tightening while keeping the current main-text artifact pairings fixed"
+    "recommended_next_action": "continue manuscript-freeze candidate assembly while keeping the current main-text artifact pairings fixed"
   }
 }
