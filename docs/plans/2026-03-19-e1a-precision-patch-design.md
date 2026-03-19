@@ -8,8 +8,8 @@ once:
 
 1. single-head float32 failures are common on the tracked suite;
 2. at least one decomposition remains exact on all tracked streams;
-3. weaker decomposition settings still fail on part of the broadened organic
-   slice.
+3. a weaker coarse-bucket control is explicit on the same tracked suite,
+   so the decomposition story is mechanistic rather than universal.
 
 Without that third slice, bounded wording can still be read too generously.
 
@@ -37,5 +37,5 @@ relabeling the result as universal robustness.
 
 - `C3d/C3e` remain bounded current-suite positives rather than universal
   positives;
-- the weak decomposition negative control is explicit in machine-readable form;
+- the weaker coarse-bucket control is explicit in machine-readable form;
 - the systems gate and `D0` boundary remain unchanged.
