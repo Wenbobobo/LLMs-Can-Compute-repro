@@ -29,6 +29,7 @@ results/local/
 results/tmp/
 tmp/
 *.log
+值守计划.md
 
 # OS/editor noise
 .DS_Store

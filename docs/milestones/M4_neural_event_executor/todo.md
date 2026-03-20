@@ -7,6 +7,9 @@ and are not active on the current frozen paper scope by default.
 - [x] Build a structured event codec for trainable labels
 - [x] Train a neural decoder over induced transition labels
 - [x] Run free-running held-out rollout on countdown, branch, and memory
-- [ ] Replace opcode-only conditioning with a context-richer event decoder
-- [ ] Test whether the richer decoder keeps exact rollout on the current held-out slice
-- [ ] Extend the neural branch to deeper mixed memory/stack programs
+- Dormant follow-up: replace opcode-only conditioning with a context-richer
+  event decoder only if `R4_mechanistic_retrieval_closure` requires it.
+- Dormant follow-up: test a richer decoder on the current held-out slice only
+  when that branch is explicitly reactivated.
+- Dormant follow-up: extend the neural branch to deeper mixed memory/stack
+  programs only after `R3` closes the current `D0` exact-execution stress gate.

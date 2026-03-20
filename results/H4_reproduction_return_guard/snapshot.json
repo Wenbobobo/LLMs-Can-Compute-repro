@@ -38,35 +38,38 @@
       ]
     },
     {
-      "path": "README.md",
+      "path": "docs/milestones/H4_reproduction_mainline_return/status.md",
       "matched_lines": [
-        "| `H4-H5` | The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits |",
-        "- The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits."
+        "Opened and completed on 2026-03-19 after the user re-prioritized the",
+        "to bounded scientific follow-up on the same frozen endpoint rather than"
       ]
     },
     {
-      "path": "STATUS.md",
+      "path": "docs/milestones/H4_reproduction_mainline_return/todo.md",
       "matched_lines": [
-        "- `H4`, `E1a`, `E1b`, and `H5` are the active bounded lanes on top of the"
+        "- [x] Add one `H4` guard export and regression test.",
+        "- [x] Record the `H4` batch in `experiment_manifest.md`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/experiment_manifest.md",
+      "matched_lines": [
+        "| 2026-03-19 | `H4_reproduction_mainline_return` | planning/publication docs plus `scripts/export_h4_reproduction_return_guard.py` | `tmp/2026-03-19-reproduction-mainline-return-master-plan.md`, refreshed `README.md`, refreshed `STATUS.md`, refreshed `docs/publication_record/README.md`, refreshed `docs/publication_record/current_stage_driver.md`, refreshed `docs/publication_record/release_summary_draft.md`, refreshed `docs/publication_record/e1_patch_playbook_matrix.md`, refreshed `docs/milestones/H4_reproduction_mainline_return/`, new `results/H4_reproduction_return_guard/` | same recorded Python 3.12 / `uv` / CUDA environment | no claim change; resets the active driver to a bounded reproduction-return packet on the same narrow scientific surface |"
+      ]
+    },
+    {
+      "path": "docs/milestones/H5_repro_sync_and_refreeze/artifact_index.md",
+      "matched_lines": [
+        "- `results/H4_reproduction_return_guard/summary.json`",
+        "- `results/E1a_precision_patch/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H4_reproduction_mainline_return`",
-        "- `E1a_precision_patch`",
-        "- `E1b_systems_patch`",
-        "the completed baseline for documentation, archive, and derivative controls.",
-        "The logical lane order remains `E1a_precision_patch` -> `E1b_systems_patch`.",
-        "3. Run `E1a_precision_patch` on the current bounded precision suite only.",
-        "4. Run `E1b_systems_patch` on the current mixed systems gate only.",
-        "- `E1a_precision_patch` is active only for bounded `C3d` / `C3e` sharpening on"
-      ]
-    },
-    {
-      "path": "docs/publication_record/release_summary_draft.md",
-      "matched_lines": [
-        "`H5` refreezes through the standing audits. `E1c` remains conditional only."
+        "- `H15_refreeze_and_decision_sync`",
+        "`H15_refreeze_and_decision_sync`.",
+        "- `H15_refreeze_and_decision_sync` is the current refrozen control stage."
       ]
     }
   ]

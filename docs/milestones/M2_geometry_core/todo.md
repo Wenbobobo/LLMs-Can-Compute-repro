@@ -10,4 +10,6 @@ and is not active on the current frozen paper scope by default.
 - [x] Add benchmark script
 - [x] Run exhaustive and randomized tests
 - [x] Record the first benchmark outputs in `results/M2_geometry_core/`
-- [ ] Decide whether the next geometry improvement should be dynamic hull maintenance or better finite-precision scaling
+- Dormant follow-up: decide between dynamic hull maintenance and better
+  finite-precision scaling only if `R3` or `R4` reopens geometry as a current
+  bottleneck.

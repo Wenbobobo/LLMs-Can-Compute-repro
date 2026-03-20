@@ -17,6 +17,12 @@ and are not active on the current frozen paper scope by default.
 - [x] Fit and validate an induced structured causal executor over exact event semantics
 - [x] Replace the induced structured executor with a structured-label neural causal decoder
 - [x] Add scheme-aware precision sweeps for decomposition and recentering
-- [ ] Push the neural branch past the current opcode-conditioned rule table into a context-richer event decoder
-- [ ] Extend neural or induced rollout deeper into mixed memory/stack execution under finite-precision constraints
-- [ ] Validate the decomposition schemes on real mixed memory/stack trace reads, not just synthetic local sweeps
+- Dormant follow-up: push the neural branch past the current opcode-conditioned
+  rule table only if `R4_mechanistic_retrieval_closure` shows that a richer
+  context-driven decoder is still scientifically necessary.
+- Dormant follow-up: extend neural or induced rollout deeper only if new
+  `R3_d0_exact_execution_stress_gate` suites remain positive and justify a
+  mechanistic companion on the same boundary.
+- Follow-up moved to `R3_d0_exact_execution_stress_gate`: validate the current
+  decomposition schemes on real mixed memory/stack trace reads only where the
+  active stress gate needs a sharper boundary explanation.

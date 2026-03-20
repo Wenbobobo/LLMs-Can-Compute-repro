@@ -30,21 +30,21 @@
   },
   "source_artifacts": [
     "tmp/2026-03-19-reproduction-mainline-return-master-plan.md",
-    "README.md",
-    "STATUS.md",
-    "docs/publication_record/README.md",
+    "docs/milestones/H4_reproduction_mainline_return/status.md",
+    "docs/milestones/H4_reproduction_mainline_return/todo.md",
+    "docs/milestones/H5_repro_sync_and_refreeze/artifact_index.md",
+    "docs/publication_record/experiment_manifest.md",
     "docs/publication_record/current_stage_driver.md",
-    "docs/publication_record/release_summary_draft.md",
     "results/M7_frontend_candidate_decision/decision_summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h4_reproduction_mainline_return_active",
-    "active_stage": "h4_reproduction_mainline_return",
-    "lane_order": "e1a_then_e1b_then_optional_e1c_then_h5",
+    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+    "preserved_baseline_stage": "h4_reproduction_mainline_return",
+    "successor_refreeze_stage": "h5_repro_sync_and_refreeze",
     "check_count": 5,
     "pass_count": 5,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "execute bounded E1a/E1b evidence lanes, keep E1c conditional-only, and refreeze through H5"
+    "recommended_next_action": "preserve the completed H4 return packet as the historical pivot into the later E1/H5 and H15 control chain while keeping the current repo state refrozen on H15"
   }
 }

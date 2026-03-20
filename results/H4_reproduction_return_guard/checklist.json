@@ -30,24 +30,24 @@
   },
   "rows": [
     {
-      "item_id": "master_plan_saved_before_execution",
+      "item_id": "historical_h4_plan_is_preserved",
       "status": "pass",
-      "notes": "The saved plan should make the return-stage packet explicit before wider edits."
+      "notes": "The saved H4 plan should remain preserved under tmp/ for archiveability."
     },
     {
-      "item_id": "current_stage_driver_names_return_packet",
+      "item_id": "h4_milestone_marks_the_packet_completed",
       "status": "pass",
-      "notes": "The canonical active driver should expose the bounded return packet and conditional E1c rule."
+      "notes": "The H4 milestone docs should now mark the packet completed rather than still-open work."
     },
     {
-      "item_id": "top_level_docs_align_to_return_stage",
+      "item_id": "current_stage_driver_has_advanced_beyond_h4",
       "status": "pass",
-      "notes": "README and STATUS should expose the same scientific-return packet."
+      "notes": "The repo should have advanced to the later H15 refrozen state instead of still treating H4 as active."
     },
     {
-      "item_id": "publication_index_and_release_summary_align",
+      "item_id": "manifest_and_h5_archive_preserve_h4_artifacts",
       "status": "pass",
-      "notes": "Publication-facing short docs should reflect the same active stage."
+      "notes": "The manifest and H5 archive should keep the completed H4 packet visible as history."
     },
     {
       "item_id": "m7_no_widening_still_explicit",

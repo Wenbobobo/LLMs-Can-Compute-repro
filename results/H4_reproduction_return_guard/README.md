@@ -1,7 +1,8 @@
 # H4 Reproduction Return Guard
 
-Machine-readable guard for whether the repo control docs are aligned to the
-bounded reproduction-mainline return stage.
+Machine-readable guard for whether the completed H4
+reproduction-mainline return packet remains preserved as a
+historical archive after later stage rollover.
 
 Artifacts:
 - `summary.json`

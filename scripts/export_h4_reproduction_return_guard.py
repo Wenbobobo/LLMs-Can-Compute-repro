@@ -1,4 +1,4 @@
-"""Export the H4 reproduction-mainline return stage-alignment guard."""
+"""Export the preserved H4 reproduction-mainline return historical guard."""
 
 from __future__ import annotations
 
@@ -50,11 +50,13 @@ def extract_matching_lines(text: str, *, needles: list[str], max_lines: int = 8)
 def load_inputs() -> dict[str, str]:
     return {
         "master_plan_text": read_text(ROOT / "tmp" / "2026-03-19-reproduction-mainline-return-master-plan.md"),
-        "readme_text": read_text(ROOT / "README.md"),
-        "status_text": read_text(ROOT / "STATUS.md"),
-        "publication_readme_text": read_text(ROOT / "docs" / "publication_record" / "README.md"),
+        "h4_status_text": read_text(ROOT / "docs" / "milestones" / "H4_reproduction_mainline_return" / "status.md"),
+        "h4_todo_text": read_text(ROOT / "docs" / "milestones" / "H4_reproduction_mainline_return" / "todo.md"),
+        "h5_artifact_index_text": read_text(
+            ROOT / "docs" / "milestones" / "H5_repro_sync_and_refreeze" / "artifact_index.md"
+        ),
+        "experiment_manifest_text": read_text(ROOT / "docs" / "publication_record" / "experiment_manifest.md"),
         "current_stage_driver_text": read_text(ROOT / "docs" / "publication_record" / "current_stage_driver.md"),
-        "release_summary_text": read_text(ROOT / "docs" / "publication_record" / "release_summary_draft.md"),
         "m7_decision_text": read_text(ROOT / "results" / "M7_frontend_candidate_decision" / "decision_summary.json"),
     }
 
@@ -62,16 +64,16 @@ def load_inputs() -> dict[str, str]:
 def build_checklist_rows(
     *,
     master_plan_text: str,
-    readme_text: str,
-    status_text: str,
-    publication_readme_text: str,
+    h4_status_text: str,
+    h4_todo_text: str,
+    h5_artifact_index_text: str,
+    experiment_manifest_text: str,
     current_stage_driver_text: str,
-    release_summary_text: str,
     m7_decision_text: str,
 ) -> list[dict[str, object]]:
     return [
         {
-            "item_id": "master_plan_saved_before_execution",
+            "item_id": "historical_h4_plan_is_preserved",
             "status": "pass"
             if contains_all(
                 master_plan_text,
@@ -84,81 +86,65 @@ def build_checklist_rows(
                 ],
             )
             else "blocked",
-            "notes": "The saved plan should make the return-stage packet explicit before wider edits.",
+            "notes": "The saved H4 plan should remain preserved under tmp/ for archiveability.",
         },
         {
-            "item_id": "current_stage_driver_names_return_packet",
+            "item_id": "h4_milestone_marks_the_packet_completed",
+            "status": "pass"
+            if contains_all(
+                h4_status_text,
+                [
+                    "opened and completed on 2026-03-19",
+                    "reproduction mainline",
+                    "bounded scientific follow-up",
+                ],
+            )
+            and contains_all(
+                h4_todo_text,
+                [
+                    "- [x] Save the full current-round return plan to `tmp/`.",
+                    "- [x] Add one `H4` guard export and regression test.",
+                    "- [x] Record the `H4` batch in `experiment_manifest.md`.",
+                ],
+            )
+            else "blocked",
+            "notes": "The H4 milestone docs should now mark the packet completed rather than still-open work.",
+        },
+        {
+            "item_id": "current_stage_driver_has_advanced_beyond_h4",
             "status": "pass"
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h4_reproduction_mainline_return`",
-                    "`e1a_precision_patch`",
-                    "`e1b_systems_patch`",
-                    "`h5_repro_sync_and_refreeze`",
-                    "`e1c_compiled_boundary_patch`",
-                    "logical lane order remains `e1a_precision_patch` -> `e1b_systems_patch`",
-                    "`e1c` remains conditional only",
-                    "completed baseline",
+                    "`h15_refreeze_and_decision_sync`",
+                    "is the current refrozen control stage",
+                    "`docs/milestones/h15_refreeze_and_decision_sync/result_digest.md`",
                 ],
             )
             else "blocked",
-            "notes": "The canonical active driver should expose the bounded return packet and conditional E1c rule.",
+            "notes": "The repo should have advanced to the later H15 refrozen state instead of still treating H4 as active.",
         },
         {
-            "item_id": "top_level_docs_align_to_return_stage",
+            "item_id": "manifest_and_h5_archive_preserve_h4_artifacts",
             "status": "pass"
             if contains_all(
-                readme_text,
+                experiment_manifest_text,
                 [
-                    "the active stage is a bounded scientific return",
-                    "`h4` resets the driver to reproduction",
-                    "`e1a` sharpens the bounded precision story",
-                    "`e1b` adds same-scope systems attribution",
-                    "`e1c` stays conditional only",
-                    "`h5` refreezes through the standing audits",
+                    "| 2026-03-19 | `h4_reproduction_mainline_return` |",
+                    "scripts/export_h4_reproduction_return_guard.py",
+                    "new `results/h4_reproduction_return_guard/`",
                 ],
             )
             and contains_all(
-                status_text,
+                h5_artifact_index_text,
                 [
-                    "current active post-`p9` operational stage is a bounded reproduction-mainline return",
-                    "`h4`, `e1a`, `e1b`, and `h5`",
-                    "`e1c` remains conditional only",
-                    "logical lane order stays `e1a` then `e1b`",
-                    "frontend widening remains blocked",
+                    "- `results/h4_reproduction_return_guard/summary.json`",
+                    "- `results/e1a_precision_patch/summary.json`",
+                    "- `results/e1b_systems_patch/summary.json`",
                 ],
             )
             else "blocked",
-            "notes": "README and STATUS should expose the same scientific-return packet.",
-        },
-        {
-            "item_id": "publication_index_and_release_summary_align",
-            "status": "pass"
-            if contains_all(
-                publication_readme_text,
-                [
-                    "current_stage_driver.md",
-                    "planning_state_taxonomy.md",
-                    "current bounded reproduction-return packet",
-                    "`h3` / `p10` / `p11` / `f1`",
-                    "completed baseline",
-                    "conditional_reopen_protocol.md",
-                ],
-            )
-            and contains_all(
-                release_summary_text,
-                [
-                    "the active post-`p9` follow-up is a bounded reproduction-mainline return",
-                    "`h4` resets the active driver to the scientific mainline",
-                    "`e1a` sharpens bounded precision on current families",
-                    "`e1b` adds same-scope systems attribution",
-                    "`e1c` remains conditional only",
-                    "`h5` refreezes through the standing audits",
-                ],
-            )
-            else "blocked",
-            "notes": "Publication-facing short docs should reflect the same active stage.",
+            "notes": "The manifest and H5 archive should keep the completed H4 packet visible as history.",
         },
         {
             "item_id": "m7_no_widening_still_explicit",
@@ -183,26 +169,25 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "master_plan_text",
             ["Scientific target", "`H4_reproduction_mainline_return`", "`E1a_precision_patch`"],
         ),
-        "README.md": (
-            "readme_text",
-            ["The active stage is a bounded scientific return", "`H4` resets the driver to reproduction"],
+        "docs/milestones/H4_reproduction_mainline_return/status.md": (
+            "h4_status_text",
+            ["Opened and completed on 2026-03-19", "bounded scientific follow-up"],
         ),
-        "STATUS.md": (
-            "status_text",
-            ["bounded reproduction-mainline return", "`H4`, `E1a`, `E1b`, and `H5`"],
+        "docs/milestones/H4_reproduction_mainline_return/todo.md": (
+            "h4_todo_text",
+            ["- [x] Add one `H4` guard export and regression test.", "- [x] Record the `H4` batch in `experiment_manifest.md`."],
+        ),
+        "docs/publication_record/experiment_manifest.md": (
+            "experiment_manifest_text",
+            ["| 2026-03-19 | `H4_reproduction_mainline_return` |", "new `results/H4_reproduction_return_guard/`"],
+        ),
+        "docs/milestones/H5_repro_sync_and_refreeze/artifact_index.md": (
+            "h5_artifact_index_text",
+            ["- `results/H4_reproduction_return_guard/summary.json`", "- `results/E1a_precision_patch/summary.json`"],
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            [
-                "`H4_reproduction_mainline_return`",
-                "`E1a_precision_patch`",
-                "`E1b_systems_patch`",
-                "completed baseline",
-            ],
-        ),
-        "docs/publication_record/release_summary_draft.md": (
-            "release_summary_text",
-            ["bounded reproduction-mainline return", "`E1c` remains conditional only"],
+            ["`H15_refreeze_and_decision_sync`", "is the current refrozen control stage"],
         ),
     }
     rows: list[dict[str, object]] = []
@@ -214,17 +199,17 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h4_reproduction_mainline_return_active",
-        "active_stage": "h4_reproduction_mainline_return",
-        "lane_order": "e1a_then_e1b_then_optional_e1c_then_h5",
+        "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+        "preserved_baseline_stage": "h4_reproduction_mainline_return",
+        "successor_refreeze_stage": "h5_repro_sync_and_refreeze",
         "check_count": len(rows),
         "pass_count": sum(row["status"] == "pass" for row in rows),
         "blocked_count": sum(row["status"] != "pass" for row in rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "execute bounded E1a/E1b evidence lanes, keep E1c conditional-only, and refreeze through H5"
+            "preserve the completed H4 return packet as the historical pivot into the later E1/H5 and H15 control chain while keeping the current repo state refrozen on H15"
             if not blocked_items
-            else "resolve the blocked H4 stage-alignment items before continuing bounded evidence work"
+            else "restore the missing H4 archival links before relying on the later refrozen control chain"
         ),
     }
 
@@ -255,11 +240,11 @@ def main() -> None:
             "environment": environment.as_dict(),
             "source_artifacts": [
                 "tmp/2026-03-19-reproduction-mainline-return-master-plan.md",
-                "README.md",
-                "STATUS.md",
-                "docs/publication_record/README.md",
+                "docs/milestones/H4_reproduction_mainline_return/status.md",
+                "docs/milestones/H4_reproduction_mainline_return/todo.md",
+                "docs/milestones/H5_repro_sync_and_refreeze/artifact_index.md",
+                "docs/publication_record/experiment_manifest.md",
                 "docs/publication_record/current_stage_driver.md",
-                "docs/publication_record/release_summary_draft.md",
                 "results/M7_frontend_candidate_decision/decision_summary.json",
             ],
             "summary": summary,
@@ -270,8 +255,9 @@ def main() -> None:
             [
                 "# H4 Reproduction Return Guard",
                 "",
-                "Machine-readable guard for whether the repo control docs are aligned to the",
-                "bounded reproduction-mainline return stage.",
+                "Machine-readable guard for whether the completed H4",
+                "reproduction-mainline return packet remains preserved as a",
+                "historical archive after later stage rollover.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",
