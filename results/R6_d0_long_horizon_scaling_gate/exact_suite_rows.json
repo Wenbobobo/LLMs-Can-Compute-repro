@@ -1,0 +1,1641 @@
+{
+  "experiment": "r6_d0_long_horizon_exact_suite_rows",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "program_name": "bytecode_indirect_counter_bank_24_a32_b33",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 398,
+      "lowered_step_count": 398,
+      "spec_step_count": 398,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_indirect_counter_bank_24_a32_b33",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 398,
+        "final_stack": [
+          300
+        ],
+        "final_frame_memory": [
+          [
+            32,
+            0
+          ],
+          [
+            33,
+            300
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "indirect_counter_bank",
+      "baseline_stage": "M6_typed_bytecode_harness",
+      "baseline_program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "baseline_start": 12,
+      "horizon_multiplier": 2,
+      "scaled_start": 24
+    },
+    {
+      "program_name": "bytecode_indirect_counter_bank_48_a32_b33",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 782,
+      "lowered_step_count": 782,
+      "spec_step_count": 782,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_indirect_counter_bank_48_a32_b33",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 782,
+        "final_stack": [
+          1176
+        ],
+        "final_frame_memory": [
+          [
+            32,
+            0
+          ],
+          [
+            33,
+            1176
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "indirect_counter_bank",
+      "baseline_stage": "M6_typed_bytecode_harness",
+      "baseline_program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "baseline_start": 12,
+      "horizon_multiplier": 4,
+      "scaled_start": 48
+    },
+    {
+      "program_name": "bytecode_indirect_counter_bank_96_a32_b33",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1550,
+      "lowered_step_count": 1550,
+      "spec_step_count": 1550,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_indirect_counter_bank_96_a32_b33",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1550,
+        "final_stack": [
+          4656
+        ],
+        "final_frame_memory": [
+          [
+            32,
+            0
+          ],
+          [
+            33,
+            4656
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "indirect_counter_bank",
+      "baseline_stage": "M6_typed_bytecode_harness",
+      "baseline_program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "baseline_start": 12,
+      "horizon_multiplier": 8,
+      "scaled_start": 96
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_12_a280_s0",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 336,
+      "lowered_step_count": 336,
+      "spec_step_count": 336,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_12_a280_s0",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 336,
+        "final_stack": [
+          36
+        ],
+        "final_frame_memory": [
+          [
+            280,
+            0
+          ],
+          [
+            281,
+            0
+          ],
+          [
+            282,
+            285
+          ],
+          [
+            283,
+            36
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            284,
+            42
+          ],
+          [
+            285,
+            36
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "helper_checkpoint_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "baseline_start": 6,
+      "horizon_multiplier": 2,
+      "scaled_start": 12
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_24_a280_s0",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 654,
+      "lowered_step_count": 654,
+      "spec_step_count": 654,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_24_a280_s0",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 654,
+        "final_stack": [
+          144
+        ],
+        "final_frame_memory": [
+          [
+            280,
+            0
+          ],
+          [
+            281,
+            0
+          ],
+          [
+            282,
+            285
+          ],
+          [
+            283,
+            144
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            284,
+            156
+          ],
+          [
+            285,
+            144
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "helper_checkpoint_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "baseline_start": 6,
+      "horizon_multiplier": 4,
+      "scaled_start": 24
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_48_a280_s0",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1290,
+      "lowered_step_count": 1290,
+      "spec_step_count": 1290,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_48_a280_s0",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1290,
+        "final_stack": [
+          576
+        ],
+        "final_frame_memory": [
+          [
+            280,
+            0
+          ],
+          [
+            281,
+            0
+          ],
+          [
+            282,
+            285
+          ],
+          [
+            283,
+            576
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            284,
+            600
+          ],
+          [
+            285,
+            576
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "helper_checkpoint_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "baseline_start": 6,
+      "horizon_multiplier": 8,
+      "scaled_start": 48
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_16_a96",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 328,
+      "lowered_step_count": 328,
+      "spec_step_count": 328,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_16_a96",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 328,
+        "final_stack": [
+          136
+        ],
+        "final_frame_memory": [
+          [
+            96,
+            0
+          ],
+          [
+            97,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            98,
+            72
+          ],
+          [
+            99,
+            64
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "subroutine_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_8_a96",
+      "baseline_start": 8,
+      "horizon_multiplier": 2,
+      "scaled_start": 16
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_32_a96",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 640,
+      "lowered_step_count": 640,
+      "spec_step_count": 640,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_32_a96",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 640,
+        "final_stack": [
+          528
+        ],
+        "final_frame_memory": [
+          [
+            96,
+            0
+          ],
+          [
+            97,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            98,
+            272
+          ],
+          [
+            99,
+            256
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "subroutine_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_8_a96",
+      "baseline_start": 8,
+      "horizon_multiplier": 4,
+      "scaled_start": 32
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_64_a96",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1264,
+      "lowered_step_count": 1264,
+      "spec_step_count": 1264,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_64_a96",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1264,
+        "final_stack": [
+          2080
+        ],
+        "final_frame_memory": [
+          [
+            96,
+            0
+          ],
+          [
+            97,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            98,
+            1056
+          ],
+          [
+            99,
+            1024
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "subroutine_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_8_a96",
+      "baseline_start": 8,
+      "horizon_multiplier": 8,
+      "scaled_start": 64
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_36_a312_s0",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 972,
+      "lowered_step_count": 972,
+      "spec_step_count": 972,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_long_36_a312_s0",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 972,
+        "final_stack": [
+          324
+        ],
+        "final_frame_memory": [
+          [
+            312,
+            0
+          ],
+          [
+            313,
+            0
+          ],
+          [
+            314,
+            317
+          ],
+          [
+            315,
+            324
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            316,
+            342
+          ],
+          [
+            317,
+            324
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "helper_checkpoint_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "baseline_start": 18,
+      "horizon_multiplier": 2,
+      "scaled_start": 36
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_72_a312_s0",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1926,
+      "lowered_step_count": 1926,
+      "spec_step_count": 1926,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_long_72_a312_s0",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1926,
+        "final_stack": [
+          1296
+        ],
+        "final_frame_memory": [
+          [
+            312,
+            0
+          ],
+          [
+            313,
+            0
+          ],
+          [
+            314,
+            317
+          ],
+          [
+            315,
+            1296
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            316,
+            1332
+          ],
+          [
+            317,
+            1296
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "helper_checkpoint_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "baseline_start": 18,
+      "horizon_multiplier": 4,
+      "scaled_start": 72
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_144_a312_s0",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 3834,
+      "lowered_step_count": 3834,
+      "spec_step_count": 3834,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_long_144_a312_s0",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 3834,
+        "final_stack": [
+          5184
+        ],
+        "final_frame_memory": [
+          [
+            312,
+            0
+          ],
+          [
+            313,
+            0
+          ],
+          [
+            314,
+            317
+          ],
+          [
+            315,
+            5184
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            316,
+            5256
+          ],
+          [
+            317,
+            5184
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "helper_checkpoint_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "baseline_start": 18,
+      "horizon_multiplier": 8,
+      "scaled_start": 144
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_28_a176",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 562,
+      "lowered_step_count": 562,
+      "spec_step_count": 562,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_long_28_a176",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 562,
+        "final_stack": [
+          406
+        ],
+        "final_frame_memory": [
+          [
+            176,
+            0
+          ],
+          [
+            177,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            178,
+            210
+          ],
+          [
+            179,
+            196
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "subroutine_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_long_14_a176",
+      "baseline_start": 14,
+      "horizon_multiplier": 2,
+      "scaled_start": 28
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_56_a176",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1108,
+      "lowered_step_count": 1108,
+      "spec_step_count": 1108,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_long_56_a176",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1108,
+        "final_stack": [
+          1596
+        ],
+        "final_frame_memory": [
+          [
+            176,
+            0
+          ],
+          [
+            177,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            178,
+            812
+          ],
+          [
+            179,
+            784
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "subroutine_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_long_14_a176",
+      "baseline_start": 14,
+      "horizon_multiplier": 4,
+      "scaled_start": 56
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_112_a176",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 2200,
+      "lowered_step_count": 2200,
+      "spec_step_count": 2200,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_long_112_a176",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 2200,
+        "final_stack": [
+          6328
+        ],
+        "final_frame_memory": [
+          [
+            176,
+            0
+          ],
+          [
+            177,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            178,
+            3192
+          ],
+          [
+            179,
+            3136
+          ]
+        ],
+        "final_call_stack": []
+      },
+      "family": "subroutine_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_long_14_a176",
+      "baseline_start": 14,
+      "horizon_multiplier": 8,
+      "scaled_start": 112
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_48_a144_b145",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 730,
+      "lowered_step_count": 730,
+      "spec_step_count": 730,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_iterated_helper_accumulator_48_a144_b145",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 730,
+        "final_stack": [
+          1176
+        ],
+        "final_frame_memory": [
+          [
+            144,
+            0
+          ],
+          [
+            145,
+            1176
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "iterated_helper_accumulator",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "baseline_start": 24,
+      "horizon_multiplier": 2,
+      "scaled_start": 48
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_96_a144_b145",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1450,
+      "lowered_step_count": 1450,
+      "spec_step_count": 1450,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_iterated_helper_accumulator_96_a144_b145",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1450,
+        "final_stack": [
+          4656
+        ],
+        "final_frame_memory": [
+          [
+            144,
+            0
+          ],
+          [
+            145,
+            4656
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "iterated_helper_accumulator",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "baseline_start": 24,
+      "horizon_multiplier": 4,
+      "scaled_start": 96
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_192_a144_b145",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 2890,
+      "lowered_step_count": 2890,
+      "spec_step_count": 2890,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_iterated_helper_accumulator_192_a144_b145",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 2890,
+        "final_stack": [
+          18528
+        ],
+        "final_frame_memory": [
+          [
+            144,
+            0
+          ],
+          [
+            145,
+            18528
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "iterated_helper_accumulator",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "baseline_start": 24,
+      "horizon_multiplier": 8,
+      "scaled_start": 192
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_20_a112",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 410,
+      "lowered_step_count": 410,
+      "spec_step_count": 410,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_stack_memory_braid_20_a112",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 410,
+        "final_stack": [
+          210
+        ],
+        "final_frame_memory": [
+          [
+            112,
+            0
+          ],
+          [
+            113,
+            0
+          ],
+          [
+            114,
+            116
+          ],
+          [
+            115,
+            117
+          ],
+          [
+            116,
+            110
+          ],
+          [
+            117,
+            100
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "stack_memory_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_stack_memory_braid_10_a112",
+      "baseline_start": 10,
+      "horizon_multiplier": 2,
+      "scaled_start": 20
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_40_a112",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 800,
+      "lowered_step_count": 800,
+      "spec_step_count": 800,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_stack_memory_braid_40_a112",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 800,
+        "final_stack": [
+          820
+        ],
+        "final_frame_memory": [
+          [
+            112,
+            0
+          ],
+          [
+            113,
+            0
+          ],
+          [
+            114,
+            116
+          ],
+          [
+            115,
+            117
+          ],
+          [
+            116,
+            420
+          ],
+          [
+            117,
+            400
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "stack_memory_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_stack_memory_braid_10_a112",
+      "baseline_start": 10,
+      "horizon_multiplier": 4,
+      "scaled_start": 40
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_80_a112",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1580,
+      "lowered_step_count": 1580,
+      "spec_step_count": 1580,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_stack_memory_braid_80_a112",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1580,
+        "final_stack": [
+          3240
+        ],
+        "final_frame_memory": [
+          [
+            112,
+            0
+          ],
+          [
+            113,
+            0
+          ],
+          [
+            114,
+            116
+          ],
+          [
+            115,
+            117
+          ],
+          [
+            116,
+            1640
+          ],
+          [
+            117,
+            1600
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "stack_memory_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_stack_memory_braid_10_a112",
+      "baseline_start": 10,
+      "horizon_multiplier": 8,
+      "scaled_start": 80
+    },
+    {
+      "program_name": "bytecode_checkpoint_replay_long_20_a128",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 648,
+      "lowered_step_count": 648,
+      "spec_step_count": 648,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_checkpoint_replay_long_20_a128",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 648,
+        "final_stack": [
+          210
+        ],
+        "final_frame_memory": [
+          [
+            128,
+            0
+          ],
+          [
+            129,
+            2
+          ],
+          [
+            130,
+            135
+          ],
+          [
+            131,
+            134
+          ],
+          [
+            132,
+            135
+          ],
+          [
+            133,
+            136
+          ],
+          [
+            134,
+            77
+          ],
+          [
+            135,
+            70
+          ],
+          [
+            136,
+            63
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "checkpoint_replay_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "baseline_start": 10,
+      "horizon_multiplier": 2,
+      "scaled_start": 20
+    },
+    {
+      "program_name": "bytecode_checkpoint_replay_long_40_a128",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 1266,
+      "lowered_step_count": 1266,
+      "spec_step_count": 1266,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_checkpoint_replay_long_40_a128",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 1266,
+        "final_stack": [
+          820
+        ],
+        "final_frame_memory": [
+          [
+            128,
+            0
+          ],
+          [
+            129,
+            1
+          ],
+          [
+            130,
+            134
+          ],
+          [
+            131,
+            134
+          ],
+          [
+            132,
+            135
+          ],
+          [
+            133,
+            136
+          ],
+          [
+            134,
+            287
+          ],
+          [
+            135,
+            273
+          ],
+          [
+            136,
+            260
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "checkpoint_replay_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "baseline_start": 10,
+      "horizon_multiplier": 4,
+      "scaled_start": 40
+    },
+    {
+      "program_name": "bytecode_checkpoint_replay_long_80_a128",
+      "suite": "r6_long_horizon_scaling",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 2508,
+      "lowered_step_count": 2508,
+      "spec_step_count": 2508,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_checkpoint_replay_long_80_a128",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 2508,
+        "final_stack": [
+          3240
+        ],
+        "final_frame_memory": [
+          [
+            128,
+            0
+          ],
+          [
+            129,
+            2
+          ],
+          [
+            130,
+            135
+          ],
+          [
+            131,
+            134
+          ],
+          [
+            132,
+            135
+          ],
+          [
+            133,
+            136
+          ],
+          [
+            134,
+            1107
+          ],
+          [
+            135,
+            1080
+          ],
+          [
+            136,
+            1053
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      },
+      "family": "checkpoint_replay_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "baseline_start": 10,
+      "horizon_multiplier": 8,
+      "scaled_start": 80
+    }
+  ]
+}

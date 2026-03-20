@@ -48,11 +48,42 @@ def test_build_summary_reports_archive_ready_packet() -> None:
 
     inputs = module.load_inputs()
     rows = module.build_checklist_rows(**inputs)
-    summary = module.build_summary(rows)
+    summary = module.build_summary(rows, inputs["worktree_hygiene_summary"])
 
-    assert summary["current_paper_phase"] == "reproduction_mainline_return_active"
+    assert summary["current_paper_phase"] == "h15_refreeze_and_decision_sync_complete"
     assert summary["packet_state"] == "archive_ready"
+    assert summary["release_commit_state"] in {
+        "dirty_worktree_release_commit_blocked",
+        "clean_worktree_ready_if_other_gates_green",
+    }
+    assert summary["git_diff_check_state"] in {"clean", "warnings_only"}
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff for venue-specific packaging while keeping scope fixed"
+        "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H15 stays aligned as the current refrozen stage, consult release_worktree_hygiene_snapshot before any release-facing commit, preserve H14/R11/R12 as the completed reopen packet, preserve H13/V1 as handoff state, keep H10/H11/R8/R9/R10/H12 as the latest completed checkpoint, and keep H8/R6/R7/H9 plus H6/R3/R4/(inactive R5)/H7 as preserved baselines"
     )
+
+
+def test_preflight_state_reader_reports_green_state() -> None:
+    module = _load_export_module()
+
+    summary_doc = {
+        "summary": {
+            "preflight_state": "docs_and_audits_green",
+        }
+    }
+
+    assert module.preflight_state_from_summary(summary_doc) == "docs_and_audits_green"
+
+
+def test_worktree_state_readers_extract_release_hygiene_fields() -> None:
+    module = _load_export_module()
+
+    summary_doc = {
+        "summary": {
+            "release_commit_state": "dirty_worktree_release_commit_blocked",
+            "git_diff_check_state": "warnings_only",
+        }
+    }
+
+    assert module.release_commit_state_from_summary(summary_doc) == "dirty_worktree_release_commit_blocked"
+    assert module.diff_check_state_from_summary(summary_doc) == "warnings_only"

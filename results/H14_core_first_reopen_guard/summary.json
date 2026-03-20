@@ -1,0 +1,65 @@
+{
+  "experiment": "h14_core_first_reopen_guard",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "README.md",
+    "STATUS.md",
+    "docs/publication_record/README.md",
+    "docs/publication_record/current_stage_driver.md",
+    "docs/publication_record/release_summary_draft.md",
+    "docs/milestones/H14_core_first_reopen_and_scope_lock/README.md",
+    "docs/milestones/H14_core_first_reopen_and_scope_lock/status.md",
+    "docs/milestones/H14_core_first_reopen_and_scope_lock/artifact_index.md",
+    "docs/milestones/H13_post_h12_rollover_and_next_stage_staging/result_digest.md",
+    "results/H13_post_h12_governance_stage_health/summary.json",
+    "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
+    "results/H10_r7_reconciliation_guard/summary.json",
+    "results/H11_post_h9_mainline_rollover_guard/summary.json",
+    "results/H8_driver_replacement_guard/summary.json",
+    "results/H6_mainline_rollover_guard/summary.json",
+    "results/release_worktree_hygiene_snapshot/summary.json",
+    "results/M7_frontend_candidate_decision/decision_summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+    "active_stage": "h15_refreeze_and_decision_sync",
+    "guarded_reopen_stage": "h14_core_first_reopen_and_scope_lock",
+    "handoff_stage": "h13_post_h12_rollover_and_next_stage_staging_preserved",
+    "stage_guard_state": "preserved_core_first_reopen_guard_green",
+    "release_commit_state": "dirty_worktree_release_commit_blocked",
+    "prior_completed_checkpoint": "h10_h11_r8_r9_r10_h12",
+    "lane_order": "preserve_h12_and_h13_then_preserve_completed_h14_packet_then_hold_h15_refrozen",
+    "check_count": 7,
+    "pass_count": 7,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "use this summary as the preserved H14 packet entrypoint; keep H10/H11/R8/R9/R10/H12 frozen as the latest completed checkpoint, keep H13/V1 preserved as handoff state, preserve R11 and R12 as landed reopen outputs, and treat H15 as the current refrozen stage until a later explicit plan changes it"
+  }
+}

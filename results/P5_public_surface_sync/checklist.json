@@ -37,12 +37,12 @@
     {
       "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should name the active bounded return packet rather than the earlier docs-only packet."
+      "notes": "README should keep H12 as the completed checkpoint while naming current H15 and preserved H14/H13 state."
     },
     {
       "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record the completed checkpoint plus the active bounded return packet."
+      "notes": "STATUS should record the completed checkpoint plus current H15 and preserved H14/H13/V1 state."
     },
     {
       "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
@@ -52,7 +52,7 @@
     {
       "item_id": "release_summary_stays_downstream",
       "status": "pass",
-      "notes": "The release summary should stay narrow while naming the active post-P9 follow-up explicitly."
+      "notes": "The release summary should stay narrow while naming the completed H12 checkpoint, preserved H13/V1 handoff, and current H15 stage explicitly."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
@@ -62,7 +62,7 @@
     {
       "item_id": "current_stage_driver_is_canonical",
       "status": "pass",
-      "notes": "The current-stage driver should expose the full active bounded return packet in one place."
+      "notes": "The current-stage driver should expose current H15 plus preserved H14/H13/V1 state and the completed H12 checkpoint in one place."
     },
     {
       "item_id": "layout_log_records_post_p7_decisions",

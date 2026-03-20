@@ -1,0 +1,123 @@
+{
+  "experiment": "v1_full_suite_validation_runtime_audit",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "pyproject.toml",
+    "tests/"
+  ],
+  "summary": {
+    "validation_gate_status": "needs_runtime_classification",
+    "collect_only_returncode": 0,
+    "collect_only_completed": true,
+    "collected_test_count": 192,
+    "test_file_count": 44,
+    "collect_only_reported_seconds": 4.79,
+    "collect_only_wall_seconds": 6.9192,
+    "torch_dependent_file_count": 4,
+    "likely_heavy_file_count": 10,
+    "likely_heavy_files": [
+      {
+        "file_path": "tests/test_model_precision_stress.py",
+        "category": "model_or_training",
+        "test_count": 13,
+        "torch_dependent": false,
+        "heuristic_score": 52
+      },
+      {
+        "file_path": "tests/test_model_softmax_baseline.py",
+        "category": "model_or_training",
+        "test_count": 11,
+        "torch_dependent": true,
+        "heuristic_score": 33
+      },
+      {
+        "file_path": "tests/test_bytecode_stress_reference.py",
+        "category": "bytecode",
+        "test_count": 6,
+        "torch_dependent": false,
+        "heuristic_score": 24
+      },
+      {
+        "file_path": "tests/test_model_free_running_executor.py",
+        "category": "model_or_training",
+        "test_count": 6,
+        "torch_dependent": false,
+        "heuristic_score": 24
+      },
+      {
+        "file_path": "tests/test_model_neural_event_executor.py",
+        "category": "model_or_training",
+        "test_count": 3,
+        "torch_dependent": true,
+        "heuristic_score": 22
+      },
+      {
+        "file_path": "tests/test_model_factorized_event_models.py",
+        "category": "model_or_training",
+        "test_count": 3,
+        "torch_dependent": true,
+        "heuristic_score": 19
+      },
+      {
+        "file_path": "tests/test_model_staged_pointer_event_models.py",
+        "category": "model_or_training",
+        "test_count": 4,
+        "torch_dependent": true,
+        "heuristic_score": 17
+      },
+      {
+        "file_path": "tests/test_trace_interpreter.py",
+        "category": "core_runtime",
+        "test_count": 17,
+        "torch_dependent": false,
+        "heuristic_score": 17
+      },
+      {
+        "file_path": "tests/test_export_r1_precision_mechanism_closure.py",
+        "category": "export_guard",
+        "test_count": 3,
+        "torch_dependent": false,
+        "heuristic_score": 12
+      },
+      {
+        "file_path": "tests/test_export_r3_d0_exact_execution_stress_gate.py",
+        "category": "export_guard",
+        "test_count": 3,
+        "torch_dependent": false,
+        "heuristic_score": 12
+      }
+    ],
+    "recommended_next_action": "run bounded per-file timings on the highest-scoring files before treating full pytest -q as a stable unattended standing gate",
+    "notes": [
+      "This audit classifies validation-runtime risk without changing scientific scope.",
+      "Successful collect-only means the current uncertainty is runtime behavior, not test discovery."
+    ]
+  }
+}

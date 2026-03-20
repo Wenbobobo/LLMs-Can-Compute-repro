@@ -1,0 +1,107 @@
+{
+  "experiment": "r10_d0_same_endpoint_cost_attribution",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "notes": [
+    "R10 uses representative-row attribution because a full component-wise exact attribution on the heaviest R8 row exceeded 150 seconds in one local benchmark.",
+    "The selected set keeps the current endpoint fixed by profiling the top two harder R8 families together with their matched admitted R6 source rows.",
+    "Exact attribution is measured on the accelerated exact executor while preserving exact-read validation, so the linear query path appears explicitly as validation overhead rather than being silently hidden."
+  ],
+  "summary": {
+    "overall": {
+      "representative_pair_count": 2,
+      "profiled_row_count": 4,
+      "selection_rule": "top_2_harder_families_by_bytecode_step_count_plus_matched_r6_source_rows",
+      "median_exact_vs_lowered_ratio": 2429.116321571347,
+      "median_retrieval_share_of_exact": 0.9980475095012138,
+      "median_harness_share_of_pipeline": 3.881832380925372e-06,
+      "nonretrieval_dominant_row_count": 0,
+      "dominant_component_counts": [
+        {
+          "component": "retrieval_total",
+          "count": 4
+        }
+      ]
+    },
+    "pair_summary": [
+      {
+        "pair_rank": 1,
+        "family": "helper_checkpoint_braid_long",
+        "source_program_name": "bytecode_helper_checkpoint_braid_long_144_a312_s0",
+        "harder_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+        "source_exact_total_seconds": 113.88003280002158,
+        "harder_exact_total_seconds": 184.14788469998166,
+        "exact_runtime_growth_vs_source": 1.6170339977277102,
+        "source_retrieval_share_of_exact": 0.9980683347214774,
+        "harder_retrieval_share_of_exact": 0.9984477904841851,
+        "source_exact_vs_lowered_ratio": 2494.825077558123,
+        "harder_exact_vs_lowered_ratio": 3165.2005205548103,
+        "source_dominant_exact_component": "retrieval_total",
+        "harder_dominant_exact_component": "retrieval_total"
+      },
+      {
+        "pair_rank": 2,
+        "family": "iterated_helper_accumulator",
+        "source_program_name": "bytecode_iterated_helper_accumulator_192_a144_b145",
+        "harder_program_name": "bytecode_iterated_helper_accumulator_240_a144_b145",
+        "source_exact_total_seconds": 61.598412099992856,
+        "harder_exact_total_seconds": 98.29222999990452,
+        "exact_runtime_growth_vs_source": 1.5956942175773379,
+        "source_retrieval_share_of_exact": 0.9975104747939221,
+        "harder_retrieval_share_of_exact": 0.9980266842809502,
+        "source_exact_vs_lowered_ratio": 549.5716812520227,
+        "harder_exact_vs_lowered_ratio": 2363.4075655845704,
+        "source_dominant_exact_component": "retrieval_total",
+        "harder_dominant_exact_component": "retrieval_total"
+      }
+    ],
+    "claim_impact": {
+      "status": "same_endpoint_cost_attribution_measured",
+      "target_claims": [
+        "D0"
+      ],
+      "e1c_status": "not_triggered",
+      "next_lane": "H12_refreeze_and_record_sync",
+      "supported_here": [
+        "R10 stays on representative same-endpoint admitted rows and measures where exact runtime is actually spent.",
+        "Current exact execution cost can be decomposed into retrieval, local transition, trace bookkeeping, and harness-facing setup rather than left as one opaque wall-clock number."
+      ],
+      "unsupported_here": [
+        "R10 does not reopen a broader systems packet or claim end-to-end superiority.",
+        "Representative-row attribution does not justify unseen-family runtime generalization."
+      ],
+      "distilled_result": {
+        "dominant_component": "retrieval_total",
+        "median_exact_vs_lowered_ratio": 2429.116321571347,
+        "median_retrieval_share_of_exact": 0.9980475095012138,
+        "negative_attribution_explicit": true
+      }
+    }
+  }
+}

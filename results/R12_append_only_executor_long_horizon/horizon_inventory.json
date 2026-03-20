@@ -1,0 +1,331 @@
+{
+  "experiment": "r12_horizon_inventory",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "r6_row_count": 24,
+    "r6_family_count": 8,
+    "r8_row_count": 4,
+    "r8_family_count": 4,
+    "max_r6_horizon_multiplier": 8,
+    "max_r8_horizon_multiplier": 10,
+    "comparison_modes": [
+      "long_exact_final_state",
+      "medium_exact_trace"
+    ],
+    "priority_r8_families": [
+      "checkpoint_replay_long",
+      "helper_checkpoint_braid_long",
+      "iterated_helper_accumulator",
+      "subroutine_braid_long"
+    ]
+  },
+  "rows": [
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "indirect_counter_bank",
+      "baseline_stage": "M6_typed_bytecode_harness",
+      "baseline_program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "horizon_multiplier": 2,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "program_name": "bytecode_indirect_counter_bank_24_a32_b33"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "indirect_counter_bank",
+      "baseline_stage": "M6_typed_bytecode_harness",
+      "baseline_program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "horizon_multiplier": 4,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 2048,
+      "program_name": "bytecode_indirect_counter_bank_48_a32_b33"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "indirect_counter_bank",
+      "baseline_stage": "M6_typed_bytecode_harness",
+      "baseline_program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "horizon_multiplier": 8,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_indirect_counter_bank_96_a32_b33"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "helper_checkpoint_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "horizon_multiplier": 2,
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 512,
+      "program_name": "bytecode_helper_checkpoint_braid_12_a280_s0"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "helper_checkpoint_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "horizon_multiplier": 4,
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 1024,
+      "program_name": "bytecode_helper_checkpoint_braid_24_a280_s0"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "helper_checkpoint_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "horizon_multiplier": 8,
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 2048,
+      "program_name": "bytecode_helper_checkpoint_braid_48_a280_s0"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "subroutine_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_8_a96",
+      "horizon_multiplier": 2,
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 1024,
+      "program_name": "bytecode_subroutine_braid_16_a96"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "subroutine_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_8_a96",
+      "horizon_multiplier": 4,
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 2048,
+      "program_name": "bytecode_subroutine_braid_32_a96"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "subroutine_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_8_a96",
+      "horizon_multiplier": 8,
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 4096,
+      "program_name": "bytecode_subroutine_braid_64_a96"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "helper_checkpoint_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "horizon_multiplier": 2,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 2048,
+      "program_name": "bytecode_helper_checkpoint_braid_long_36_a312_s0"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "helper_checkpoint_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "horizon_multiplier": 4,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_helper_checkpoint_braid_long_72_a312_s0"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "helper_checkpoint_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "horizon_multiplier": 8,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 8192,
+      "program_name": "bytecode_helper_checkpoint_braid_long_144_a312_s0"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "subroutine_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_long_14_a176",
+      "horizon_multiplier": 2,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 2048,
+      "program_name": "bytecode_subroutine_braid_long_28_a176"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "subroutine_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_long_14_a176",
+      "horizon_multiplier": 4,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_subroutine_braid_long_56_a176"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "subroutine_braid_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_long_14_a176",
+      "horizon_multiplier": 8,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 8192,
+      "program_name": "bytecode_subroutine_braid_long_112_a176"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "iterated_helper_accumulator",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "horizon_multiplier": 2,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 2048,
+      "program_name": "bytecode_iterated_helper_accumulator_48_a144_b145"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "iterated_helper_accumulator",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "horizon_multiplier": 4,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_iterated_helper_accumulator_96_a144_b145"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "iterated_helper_accumulator",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "horizon_multiplier": 8,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 8192,
+      "program_name": "bytecode_iterated_helper_accumulator_192_a144_b145"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "stack_memory_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_stack_memory_braid_10_a112",
+      "horizon_multiplier": 2,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 2048,
+      "program_name": "bytecode_stack_memory_braid_20_a112"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "stack_memory_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_stack_memory_braid_10_a112",
+      "horizon_multiplier": 4,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_stack_memory_braid_40_a112"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "stack_memory_braid",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_stack_memory_braid_10_a112",
+      "horizon_multiplier": 8,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 8192,
+      "program_name": "bytecode_stack_memory_braid_80_a112"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "checkpoint_replay_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "horizon_multiplier": 2,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 2560,
+      "program_name": "bytecode_checkpoint_replay_long_20_a128"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "checkpoint_replay_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "horizon_multiplier": 4,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 5120,
+      "program_name": "bytecode_checkpoint_replay_long_40_a128"
+    },
+    {
+      "stage": "R6_d0_long_horizon_scaling_gate",
+      "family": "checkpoint_replay_long",
+      "baseline_stage": "R3_d0_exact_execution_stress_gate",
+      "baseline_program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "horizon_multiplier": 8,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 10240,
+      "program_name": "bytecode_checkpoint_replay_long_80_a128"
+    },
+    {
+      "stage": "R8_d0_retrieval_pressure_gate",
+      "family": "helper_checkpoint_braid_long",
+      "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+      "baseline_program_name": "bytecode_helper_checkpoint_braid_long_144_a312_s0",
+      "horizon_multiplier": 10,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 10240,
+      "program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0"
+    },
+    {
+      "stage": "R8_d0_retrieval_pressure_gate",
+      "family": "subroutine_braid_long",
+      "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+      "baseline_program_name": "bytecode_subroutine_braid_long_112_a176",
+      "horizon_multiplier": 10,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 10240,
+      "program_name": "bytecode_subroutine_braid_long_140_a176"
+    },
+    {
+      "stage": "R8_d0_retrieval_pressure_gate",
+      "family": "iterated_helper_accumulator",
+      "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+      "baseline_program_name": "bytecode_iterated_helper_accumulator_192_a144_b145",
+      "horizon_multiplier": 10,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 10240,
+      "program_name": "bytecode_iterated_helper_accumulator_240_a144_b145"
+    },
+    {
+      "stage": "R8_d0_retrieval_pressure_gate",
+      "family": "checkpoint_replay_long",
+      "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+      "baseline_program_name": "bytecode_checkpoint_replay_long_80_a128",
+      "horizon_multiplier": 10,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 12800,
+      "program_name": "bytecode_checkpoint_replay_long_100_a128"
+    }
+  ]
+}

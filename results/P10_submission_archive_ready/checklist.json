@@ -32,7 +32,7 @@
     {
       "item_id": "active_driver_names_current_packet",
       "status": "pass",
-      "notes": "The current-stage driver should expose the active bounded return packet and conditional compiled lane."
+      "notes": "The current-stage driver should expose current H15, preserved H14/H13/V1 state, the preserved H12 checkpoint, and the conditional compiled lane."
     },
     {
       "item_id": "planning_taxonomy_assigns_single_active_driver",
@@ -50,6 +50,11 @@
       "notes": "The archival manifest should document regeneration commands and explicit restricted-source exclusions."
     },
     {
+      "item_id": "release_worktree_snapshot_is_recorded_without_forcing_clean_tree",
+      "status": "pass",
+      "notes": "The packet should carry the machine-readable worktree snapshot as an operational commit gate without treating a dirty unattended tree as a science failure."
+    },
+    {
       "item_id": "review_boundary_summary_preserves_scope",
       "status": "pass",
       "notes": "The review-boundary summary should preserve supported claims, blocked claims, and explicit reopen routing."
@@ -62,7 +67,7 @@
     {
       "item_id": "top_level_docs_align_with_current_driver",
       "status": "pass",
-      "notes": "README, STATUS, and the publication index should all reflect the same active driver and packet docs."
+      "notes": "README, STATUS, and the publication index should all reflect the same current H15 driver and preserved packet docs."
     },
     {
       "item_id": "packet_docs_keep_restricted_sources_out_of_public_bundle",

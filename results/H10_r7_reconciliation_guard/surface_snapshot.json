@@ -1,0 +1,68 @@
+{
+  "experiment": "h10_r7_reconciliation_guard_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "profiled the top `4` heaviest family representatives on the same endpoint;",
+        "about `0.973x` of linear on median, and it still ran about `1980.3x` slower"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "only the top `4` heaviest family representatives and returned",
+        "accelerated Hull decode is only about `0.973x` of linear on median, and it",
+        "still runs about `1980.3x` slower per step than the lowered path."
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": []
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "exact-admitted surface but profiles only the top `4` heaviest representatives,",
+        "stopping at `stop_decode_gain_not_material` with `0.973x` median",
+        "accelerated-vs-linear speedup and a `1980.3x` accelerated-vs-lowered ratio."
+      ]
+    },
+    {
+      "path": "docs/milestones/R7_d0_same_endpoint_runtime_bridge/status.md",
+      "matched_lines": [
+        "only the top `4` heaviest family representatives on the same endpoint in one",
+        "- all `4/4` profiled rows stayed exact with `0` contradiction candidates and",
+        "is only about `0.973x` of linear on median and still about `1980.3x` slower"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "experiment": "r6_d0_long_horizon_scaling_gate",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "notes": [
+    "R6 keeps the current D0 endpoint fixed and scales only already-admitted family horizons by fixed multipliers 2/4/8.",
+    "The exactness gate reuses the current bytecode/lowered/spec harness; decode parity is kept explicit on one longer lowered row per family before the same-endpoint runtime bridge revisits the largest rows.",
+    "The precision companion stays narrow: only exact-admitted multiplier-8 rows enter the horizon/base follow-up."
+  ],
+  "summary": {
+    "exact_suite": {
+      "row_count": 24,
+      "positive_row_count": 24,
+      "exact_admitted_count": 24,
+      "exact_trace_match_count": 6,
+      "exact_final_state_match_count": 18,
+      "diagnostic_surface_match_count": 9,
+      "contradiction_candidate_count": 0
+    },
+    "decode_parity": {
+      "row_count": 8,
+      "parity_match_count": 8,
+      "exact_read_agreement_count": 8
+    },
+    "growth": {
+      "row_count": 24,
+      "family_count": 8,
+      "max_step_growth_vs_baseline": 7.8108108108108105,
+      "max_event_growth_vs_baseline": 7.8108108108108105
+    },
+    "precision_followup": {
+      "candidate_stream_count": 8,
+      "boundary_bearing_stream_count": 4,
+      "boundary_bearing_streams": [
+        "bytecode_checkpoint_replay_long_80_a128_memory",
+        "bytecode_helper_checkpoint_braid_48_a280_s0_memory",
+        "bytecode_helper_checkpoint_braid_long_144_a312_s0_memory",
+        "bytecode_iterated_helper_accumulator_192_a144_b145_memory"
+      ],
+      "base_sweep_row_count": 20,
+      "negative_control_row_count": 4,
+      "negative_control_failure_count": 2
+    },
+    "claim_impact": {
+      "status": "bounded_long_horizon_exactness_on_current_d0",
+      "target_claims": [
+        "D0"
+      ],
+      "e1c_status": "not_triggered",
+      "next_lane": "R7_d0_same_endpoint_runtime_bridge",
+      "supported_here": [
+        "Current D0 families remain exact under fixed 2x/4x/8x horizon scaling without widening semantics.",
+        "Linear and accelerated Hull decode stay exactly aligned on one longer lowered row from each tested family.",
+        "Longer admitted rows materially increase event and read/write counts relative to the preserved baseline families."
+      ],
+      "bounded_companion": [
+        "Only multiplier-8 exact-admitted rows enter the narrow precision companion, and 4 streams show a boundary signal on that screen.",
+        "The weaker base-256 control fails on 2/4 boundary-bearing rows in the follow-up base sweep."
+      ],
+      "unsupported_here": [
+        "No R6 output authorizes frontend widening, arbitrary compiled-language claims, or a broad robustness statement.",
+        "The precision companion remains a narrow stress probe on exact-admitted long rows rather than a new universal precision guarantee."
+      ]
+    }
+  }
+}

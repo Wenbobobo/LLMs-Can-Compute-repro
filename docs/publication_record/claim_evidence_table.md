@@ -73,6 +73,69 @@
   positive, and two matched negatives under a standalone Python spec
   interpreter, while all three positive rows preserve companion
   memory-surface agreement.
+- `D0` — `results/R3_d0_exact_execution_stress_gate/summary.json`
+  Harder-suite exact-execution gate: seven additional bounded `D0` rows stay
+  exact under bytecode, lowered `exec_trace`, and standalone spec agreement;
+  linear versus accelerated Hull decode parity stays exact on all admitted
+  lowered rows; four longer memory streams enter the immediate precision
+  companion screen; and `E1c` remains inactive.
+- `D0` — `results/R4_mechanistic_retrieval_closure/summary.json`
+  Mechanistic retrieval closure: all `32` current positive `D0` programs are
+  explainable using latest-write, stack, control, and deterministic
+  local-transition primitives; `4290` source-event observations keep exact
+  linear-versus-Hull parity; `R5` is not justified; and `E1c` remains
+  inactive.
+- `D0` — `results/H8_driver_replacement_guard/summary.json`
+  Driver replacement guard: the repo control docs now treat `H8/R6/R7/H9` as
+  the active packet while preserving `H6/R3/R4/(inactive R5)/H7` as the
+  completed baseline on the same endpoint.
+- `D0` — `results/R6_d0_long_horizon_scaling_gate/summary.json`
+  Long-horizon scaling gate: current scalable `D0` families are pushed to fixed
+  longer horizons without widening semantics; all `24` rows remain admitted,
+  `8/8` longer-row decode-parity checks stay exact, growth reaches about
+  `7.81x` over baseline seeds, and the narrow multiplier-`8` precision
+  companion finds `4/8` boundary-bearing streams with the weaker control
+  failing on `2/4` of them.
+- `D0` — `results/R7_d0_same_endpoint_runtime_bridge/summary.json`
+  Same-endpoint runtime bridge: the full `8`-family exact-admitted surface is
+  preserved, but only the top `4` heaviest representatives are profiled and
+  remain exact; accelerated Hull decode reaches only about `0.973x` of linear
+  on median, remains about `1980.3x` slower per step than the lowered path,
+  and therefore stops at
+  `stop_decode_gain_not_material`.
+- `D0` — `results/H10_r7_reconciliation_guard/summary.json`
+  Reconciliation guard: the public and paper-facing ledgers now restate the
+  completed `R7` stop result as a bounded top-`4` profile on the preserved
+  `8`-family admitted surface.
+- `D0` — `results/H11_post_h9_mainline_rollover_guard/summary.json`
+  Mainline rollover guard: the repo control docs now treat
+  `H10/H11/R8/R9/R10/H12` as the active packet while preserving
+  `H8/R6/R7/H9` as the completed direct baseline.
+- `D0` — `results/R8_d0_retrieval_pressure_gate/summary.json`
+  Retrieval-pressure gate: the same fixed endpoint survives one bounded
+  heavier-family pressure raise with `4/4` admitted exact rows, `2/2` bounded
+  decode-parity probe matches, and no routed contradiction candidates.
+- `D0` — `results/R9_d0_real_trace_precision_boundary_companion/summary.json`
+  Precision companion: the admitted `R8` memory streams stay bounded and
+  companion-only, with all `4/4` screened streams still `effective_here` and
+  no weak negative-control failure.
+- `D0` — `results/R10_d0_same_endpoint_cost_attribution/summary.json`
+  Cost-attribution companion: representative admitted `R6/R8` rows keep the
+  systems question narrow and show current exact runtime still dominated by
+  retrieval cost rather than by harness or transition overhead.
+- `D0` — `results/R11_geometry_fastpath_reaudit/summary.json`
+  Geometry fast-path re-audit: the current exact `2D` parity slice stays exact
+  on `5/5` audited cases and the preserved standalone cache-vs-bruteforce gain
+  remains strong, but same-endpoint speedup wording stays blocked.
+- `D0` — `results/R12_append_only_executor_long_horizon/summary.json`
+  Append-only executor re-audit: current exported executor modes remain exact,
+  heldout countdown still reaches `104` steps, the preserved harder `R3`
+  baseline stays contradiction-free, and the next harder-slice inventory is
+  explicit across staged `R6/R8` rows.
+- `D0` — `results/H15_refreeze_and_decision_sync/summary.json`
+  Refreeze-and-decision sync: the repo is now explicitly refrozen after the
+  bounded reopen wave, with `R13` inactive, `R14` unjustified, and no new
+  active science lane authorized without a later explicit plan.
 - `D0` — `results/M7_frontend_candidate_decision/decision_summary.json`
   Frontend decision bundle: the current endpoint stays on tiny typed bytecode,
   frontend widening is not authorized, and any revisit now requires a fresh
@@ -94,15 +157,38 @@
   `D0` step counts without treating beyond-scope histories as end-to-end
   runtime evidence.
 
-## Active bounded patch state
+## Current bounded mainline state
 
-- `H4` sets the active phase to `h4_reproduction_mainline_return_active`, with
-  lane order `e1a_then_e1b_then_optional_e1c_then_h5`.
-- `E1a` is active only for bounded `C3d/C3e` sharpening on the current
-  validated suites.
-- `E1b` is active only for same-scope systems attribution on the current
-  positive `D0` suites.
-- `E1c` remains inactive unless `E1a` or `E1b` exposes a concrete frozen-`D0`
+- `H4` completed the bounded reproduction return packet, and `E1a/E1b/H5`
+  remain the immediate evidence baseline for current precision/systems wording.
+- `H15` is the current refrozen stage after one bounded `H14/R11/R12` reopen
+  packet on the same endpoint.
+- `H14` completed one explicit core-first reopen without widening: `R11`
+  re-audited exact geometry, `R12` re-audited append-only/latest-write
+  executor closure, `R13` stayed inactive, and `R14` stayed unjustified.
+- `H8/R6/R7/H9` remains the completed direct same-endpoint baseline for the
+  current packet.
+- `H6/R3/R4/(inactive R5)/H7` remains the deeper completed
+  exactness/mechanism baseline underneath it.
+- `H10` reconciles the prior packet to the artifact-backed `R7` top-`4`
+  profile wording and records that correction machine-readably.
+- `H11` moved the repo into the completed retrieval-pressure follow-up packet,
+  which is now preserved rather than active.
+- `R8` is the completed retrieval-pressure gate on the same fixed `D0`
+  endpoint and now hands the packet forward to `R9` and `R10`.
+- `R9` is the completed bounded precision companion lane and stays limited to
+  admitted `R8` same-endpoint memory streams only.
+- `R10` is the completed same-endpoint cost-attribution lane and remains
+  narrower than a reopened systems packet.
+- `H12` has now rerun the standing audits, synchronized the ledgers, and left
+  the current packet refrozen on the same endpoint.
+- `R11` is the completed exact-geometry re-audit lane and keeps the same-endpoint
+  performance story explicitly negative.
+- `R12` is the completed append-only executor re-audit lane and remains
+  bounded to the current staged `R6/R8` families.
+- `H15` has now synchronized the ledgers again and leaves the repo refrozen on
+  the same endpoint with `R13` inactive and `R14` unjustified.
+- `E1c` remains inactive unless the active packet exposes a concrete frozen-`D0`
   contradiction that wording alone cannot repair.
-- `H3` / `P10` / `P11` / `F1` remain the completed baseline while the bounded
-  return packet is active.
+- `H3` / `P10` / `P11` / `F1` remain the documentation/archive baseline while
+  `H4/E1a/E1b/H5` remain the completed bounded return baseline.

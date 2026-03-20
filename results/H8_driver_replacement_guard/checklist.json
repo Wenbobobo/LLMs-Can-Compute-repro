@@ -1,0 +1,58 @@
+{
+  "experiment": "h8_direct_baseline_preservation_guard_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "historical_h8_plan_is_preserved",
+      "status": "pass",
+      "notes": "The historical H8 packet plan should remain preserved under tmp/ for archiveability."
+    },
+    {
+      "item_id": "current_stage_driver_preserves_h8_packet_as_direct_baseline",
+      "status": "pass",
+      "notes": "The current driver should preserve H8/R6/R7/H9 as the direct baseline."
+    },
+    {
+      "item_id": "top_level_docs_keep_h8_packet_visible_as_direct_baseline",
+      "status": "pass",
+      "notes": "README and STATUS should preserve H8 as the direct baseline after H11 rollover."
+    },
+    {
+      "item_id": "publication_short_docs_preserve_h8_baseline",
+      "status": "pass",
+      "notes": "Publication-facing docs should keep the H8 packet visible as the direct baseline."
+    },
+    {
+      "item_id": "m7_no_widening_still_explicit",
+      "status": "pass",
+      "notes": "Preserving the H8 baseline must not weaken the prior no-widening decision."
+    }
+  ]
+}

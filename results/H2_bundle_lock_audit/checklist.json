@@ -32,7 +32,7 @@
     {
       "item_id": "readme_and_status_hold_locked_checkpoint_and_active_driver",
       "status": "pass",
-      "notes": "README and STATUS should both describe the locked checkpoint plus the active bounded return packet."
+      "notes": "README and STATUS should both describe the locked checkpoint plus current H15 and preserved H14/H13/V1 state."
     },
     {
       "item_id": "publication_record_tracks_driver_taxonomy",

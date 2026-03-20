@@ -1,0 +1,63 @@
+{
+  "experiment": "h11_post_h9_mainline_rollover_guard_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "master_plan_saved_before_execution",
+      "status": "pass",
+      "notes": "The saved plan should make the H10/H11/R8/R9/R10/H12 packet explicit before implementation closes."
+    },
+    {
+      "item_id": "current_stage_driver_names_retrieval_pressure_packet",
+      "status": "pass",
+      "notes": "The canonical driver should expose current H15, preserve H14/H13/V1 state, preserve the completed H12 checkpoint, and preserve both older baselines."
+    },
+    {
+      "item_id": "top_level_docs_align_to_retrieval_pressure_packet",
+      "status": "pass",
+      "notes": "README and STATUS should expose the same completed H12 checkpoint plus current H15 and preserved H14/H13/V1 state."
+    },
+    {
+      "item_id": "publication_index_and_release_summary_align",
+      "status": "pass",
+      "notes": "Publication-facing short docs should reflect the same preserved H12 checkpoint, preserved H14/H13/V1 state, and current H15 stage."
+    },
+    {
+      "item_id": "release_preflight_audit_is_green",
+      "status": "pass",
+      "notes": "The active post-H12 stage should keep outward sync routed through the release-preflight audit rather than prose-only checks."
+    },
+    {
+      "item_id": "m7_no_widening_still_explicit",
+      "status": "pass",
+      "notes": "The new packet must not weaken the prior no-widening decision."
+    }
+  ]
+}

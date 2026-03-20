@@ -1,0 +1,23 @@
+# Artifact Index
+
+- `tmp/2026-03-20-h14-core-first-reopen-master-plan.md`
+- `docs/plans/2026-03-20-h14-core-first-reopen-design.md`
+- `docs/plans/2026-03-20-r11-geometry-fastpath-reaudit-design.md`
+- `docs/plans/2026-03-20-r12-append-only-executor-long-horizon-design.md`
+- `docs/plans/2026-03-20-r13-small-model-executor-reactivation-design.md`
+- `docs/plans/2026-03-20-r14-bounded-compiled-probe-design.md`
+- `docs/plans/2026-03-20-h15-refreeze-and-decision-sync-design.md`
+- `docs/milestones/H14_core_first_reopen_and_scope_lock/result_digest.md`
+- `docs/milestones/R11_geometry_fastpath_reaudit/result_digest.md`
+- `docs/milestones/R12_append_only_executor_long_horizon/result_digest.md`
+- `docs/publication_record/current_stage_driver.md`
+- `docs/milestones/H13_post_h12_rollover_and_next_stage_staging/status.md`
+- `results/H14_core_first_reopen_guard/summary.json`
+- `results/R11_geometry_fastpath_reaudit/summary.json`
+- `results/R12_append_only_executor_long_horizon/summary.json`
+- `results/H15_refreeze_and_decision_sync/summary.json`
+- `results/H13_post_h12_governance_stage_health/summary.json`
+- `results/V1_full_suite_validation_runtime_timing_followup/summary.json`
+- `results/H11_post_h9_mainline_rollover_guard/summary.json`
+- `results/H8_driver_replacement_guard/summary.json`
+- `results/H6_mainline_rollover_guard/summary.json`

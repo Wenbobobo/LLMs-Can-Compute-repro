@@ -38,6 +38,13 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 ## Required audit anchors
 
 - `results/P1_paper_readiness/summary.json`
+- `results/H15_refreeze_and_decision_sync/summary.json`
+- `results/H14_core_first_reopen_guard/summary.json`
+- `results/H13_post_h12_governance_stage_health/summary.json`
+- `results/V1_full_suite_validation_runtime_audit/summary.json`
+- `results/V1_full_suite_validation_runtime_timing_followup/summary.json`
+- `results/release_worktree_hygiene_snapshot/summary.json`
+- `results/release_preflight_checklist_audit/summary.json`
 - `results/P5_public_surface_sync/summary.json`
 - `results/P5_callout_alignment/summary.json`
 - `results/H2_bundle_lock_audit/summary.json`
@@ -48,6 +55,13 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `scripts/export_p1_figure_table_sources.py`
 - `scripts/render_p1_paper_artifacts.py`
 - `scripts/export_p1_paper_readiness.py`
+- `scripts/export_h15_refreeze_and_decision_sync.py`
+- `scripts/export_h14_core_first_reopen_guard.py`
+- `scripts/export_h13_post_h12_governance_stage_health.py`
+- `scripts/export_v1_full_suite_validation_runtime_audit.py`
+- `scripts/export_v1_full_suite_validation_runtime_timing_followup.py`
+- `scripts/export_release_worktree_hygiene_snapshot.py`
+- `scripts/export_release_preflight_checklist_audit.py`
 - `scripts/export_p5_public_surface_sync.py`
 - `scripts/export_p5_callout_alignment.py`
 - `scripts/export_h2_bundle_lock_audit.py`

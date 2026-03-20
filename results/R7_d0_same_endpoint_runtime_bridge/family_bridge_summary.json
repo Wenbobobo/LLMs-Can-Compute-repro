@@ -1,0 +1,65 @@
+{
+  "experiment": "r7_d0_same_endpoint_runtime_family_bridge_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "family": "checkpoint_replay_long",
+      "row_count": 1,
+      "max_horizon_multiplier": 8,
+      "median_accelerated_speedup_vs_linear": 1.0254097354598695,
+      "median_accelerated_ratio_vs_lowered": 1544.8026804159156,
+      "all_rows_exact": true
+    },
+    {
+      "family": "helper_checkpoint_braid_long",
+      "row_count": 1,
+      "max_horizon_multiplier": 8,
+      "median_accelerated_speedup_vs_linear": 1.003059713327097,
+      "median_accelerated_ratio_vs_lowered": 3219.5407105489335,
+      "all_rows_exact": true
+    },
+    {
+      "family": "iterated_helper_accumulator",
+      "row_count": 1,
+      "max_horizon_multiplier": 8,
+      "median_accelerated_speedup_vs_linear": 1.001392069554479,
+      "median_accelerated_ratio_vs_lowered": 2159.0296671130386,
+      "all_rows_exact": true
+    },
+    {
+      "family": "subroutine_braid_long",
+      "row_count": 1,
+      "max_horizon_multiplier": 8,
+      "median_accelerated_speedup_vs_linear": 0.991114715427162,
+      "median_accelerated_ratio_vs_lowered": 1329.0117095799444,
+      "all_rows_exact": true
+    }
+  ]
+}

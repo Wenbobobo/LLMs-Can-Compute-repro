@@ -1,0 +1,129 @@
+{
+  "experiment": "r12_mode_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "mode": "exact_linear",
+      "suite": "countdown_train",
+      "program_count": 7,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 34
+    },
+    {
+      "mode": "exact_linear",
+      "suite": "countdown_heldout",
+      "program_count": 14,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 104
+    },
+    {
+      "mode": "exact_linear",
+      "suite": "branch_programs",
+      "program_count": 4,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 6
+    },
+    {
+      "mode": "exact_linear",
+      "suite": "memory_programs",
+      "program_count": 3,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 16
+    },
+    {
+      "mode": "exact_accelerated",
+      "suite": "countdown_train",
+      "program_count": 7,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 34
+    },
+    {
+      "mode": "exact_accelerated",
+      "suite": "countdown_heldout",
+      "program_count": 14,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 104
+    },
+    {
+      "mode": "exact_accelerated",
+      "suite": "branch_programs",
+      "program_count": 4,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 6
+    },
+    {
+      "mode": "exact_accelerated",
+      "suite": "memory_programs",
+      "program_count": 3,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 16
+    },
+    {
+      "mode": "trainable_stack",
+      "suite": "countdown_train",
+      "program_count": 7,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 34
+    },
+    {
+      "mode": "trainable_stack",
+      "suite": "countdown_heldout",
+      "program_count": 14,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 104
+    },
+    {
+      "mode": "trainable_stack",
+      "suite": "branch_programs",
+      "program_count": 4,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 6
+    },
+    {
+      "mode": "trainable_stack",
+      "suite": "memory_programs",
+      "program_count": 3,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "max_program_steps": 16
+    }
+  ]
+}

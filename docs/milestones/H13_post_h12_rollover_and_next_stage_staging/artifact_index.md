@@ -1,0 +1,27 @@
+# Artifact Index
+
+- `docs/plans/2026-03-20-h13-post-h12-rollover-design.md`
+- `docs/plans/2026-03-20-v1-full-suite-validation-runtime-design.md`
+- `docs/plans/2026-03-20-v1-per-file-timing-followup-design.md`
+- `docs/plans/2026-03-20-post-h12-checkpoint-hold-design.md`
+- `docs/plans/2026-03-20-h13-governance-stage-health-design.md`
+- `docs/plans/2026-03-20-h14-core-first-reopen-design.md`
+- `docs/plans/2026-03-20-release-worktree-hygiene-snapshot-design.md`
+- `tmp/2026-03-20-post-h12-next-stage-plan.md`
+- `docs/publication_record/current_stage_driver.md`
+- `docs/milestones/H14_core_first_reopen_and_scope_lock/status.md`
+- `docs/milestones/H12_refreeze_and_record_sync/result_digest.md`
+- `docs/milestones/H13_post_h12_rollover_and_next_stage_staging/result_digest.md`
+- `results/V1_full_suite_validation_runtime_audit/summary.json`
+- `results/V1_full_suite_validation_runtime_timing_followup/summary.json`
+- `results/release_worktree_hygiene_snapshot/summary.json`
+- `results/release_preflight_checklist_audit/summary.json`
+- `results/H10_r7_reconciliation_guard/summary.json`
+- `results/H11_post_h9_mainline_rollover_guard/summary.json`
+- `results/H8_driver_replacement_guard/summary.json`
+- `results/H6_mainline_rollover_guard/summary.json`
+- `results/P5_public_surface_sync/summary.json`
+- `results/H2_bundle_lock_audit/summary.json`
+- `results/P10_submission_archive_ready/summary.json`
+- `results/H13_post_h12_governance_stage_health/summary.json`
+- `results/H14_core_first_reopen_guard/summary.json`

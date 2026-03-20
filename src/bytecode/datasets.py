@@ -34,6 +34,37 @@ class StressReferenceCase:
     diagnostic_surface: bool = False
 
 
+@dataclass(frozen=True, slots=True)
+class LongHorizonScalingCase:
+    family: str
+    baseline_stage: str
+    baseline_program_name: str
+    baseline_start: int
+    horizon_multiplier: int
+    scaled_start: int
+    suite: str
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    diagnostic_surface: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class RetrievalPressureCase:
+    family: str
+    baseline_stage: str
+    baseline_program_name: str
+    baseline_horizon_multiplier: int
+    baseline_start: int
+    retrieval_horizon_multiplier: int
+    scaled_start: int
+    suite: str
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    diagnostic_surface: bool = False
+
+
 def _frame_cell(
     address: int,
     cell_type: BytecodeType,
@@ -939,3 +970,224 @@ def stress_reference_cases() -> tuple[StressReferenceCase, ...]:
             program=invalid_helper_checkpoint_braid_surface_program(6, base_address=264, selector_seed=1),
         ),
     )
+
+
+def r3_d0_exact_execution_stress_cases() -> tuple[StressReferenceCase, ...]:
+    return (
+        StressReferenceCase(
+            suite="r3_exact_execution",
+            comparison_mode="medium_exact_trace",
+            max_steps=256,
+            program=helper_checkpoint_braid_program(6, base_address=280, selector_seed=0),
+            diagnostic_surface=True,
+        ),
+        StressReferenceCase(
+            suite="r3_exact_execution",
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            program=subroutine_braid_program(8, base_address=96),
+        ),
+        StressReferenceCase(
+            suite="r3_exact_execution",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=helper_checkpoint_braid_long_program(18, base_address=312, selector_seed=0),
+            diagnostic_surface=True,
+        ),
+        StressReferenceCase(
+            suite="r3_exact_execution",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=subroutine_braid_long_program(14, base_address=176),
+        ),
+        StressReferenceCase(
+            suite="r3_exact_execution",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=iterated_helper_accumulator_program(24, counter_address=144, accumulator_address=145),
+        ),
+        StressReferenceCase(
+            suite="r3_exact_execution",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=stack_memory_braid_program(10, base_address=112),
+            diagnostic_surface=True,
+        ),
+        StressReferenceCase(
+            suite="r3_exact_execution",
+            comparison_mode="long_exact_final_state",
+            max_steps=1280,
+            program=checkpoint_replay_long_program(10, base_address=128),
+        ),
+    )
+
+
+def r6_d0_long_horizon_scaling_cases() -> tuple[LongHorizonScalingCase, ...]:
+    registry = (
+        {
+            "family": "indirect_counter_bank",
+            "baseline_stage": "M6_typed_bytecode_harness",
+            "baseline_start": 12,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 512,
+            "diagnostic_surface": False,
+            "builder": lambda start: indirect_counter_bank_program(start, counter_address=32, accumulator_address=33),
+        },
+        {
+            "family": "helper_checkpoint_braid",
+            "baseline_stage": "R3_d0_exact_execution_stress_gate",
+            "baseline_start": 6,
+            "comparison_mode": "medium_exact_trace",
+            "baseline_max_steps": 256,
+            "diagnostic_surface": True,
+            "builder": lambda start: helper_checkpoint_braid_program(start, base_address=280, selector_seed=0),
+        },
+        {
+            "family": "subroutine_braid",
+            "baseline_stage": "R3_d0_exact_execution_stress_gate",
+            "baseline_start": 8,
+            "comparison_mode": "medium_exact_trace",
+            "baseline_max_steps": 512,
+            "diagnostic_surface": False,
+            "builder": lambda start: subroutine_braid_program(start, base_address=96),
+        },
+        {
+            "family": "helper_checkpoint_braid_long",
+            "baseline_stage": "R3_d0_exact_execution_stress_gate",
+            "baseline_start": 18,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024,
+            "diagnostic_surface": True,
+            "builder": lambda start: helper_checkpoint_braid_long_program(start, base_address=312, selector_seed=0),
+        },
+        {
+            "family": "subroutine_braid_long",
+            "baseline_stage": "R3_d0_exact_execution_stress_gate",
+            "baseline_start": 14,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024,
+            "diagnostic_surface": False,
+            "builder": lambda start: subroutine_braid_long_program(start, base_address=176),
+        },
+        {
+            "family": "iterated_helper_accumulator",
+            "baseline_stage": "R3_d0_exact_execution_stress_gate",
+            "baseline_start": 24,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024,
+            "diagnostic_surface": False,
+            "builder": lambda start: iterated_helper_accumulator_program(start, counter_address=144, accumulator_address=145),
+        },
+        {
+            "family": "stack_memory_braid",
+            "baseline_stage": "R3_d0_exact_execution_stress_gate",
+            "baseline_start": 10,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024,
+            "diagnostic_surface": True,
+            "builder": lambda start: stack_memory_braid_program(start, base_address=112),
+        },
+        {
+            "family": "checkpoint_replay_long",
+            "baseline_stage": "R3_d0_exact_execution_stress_gate",
+            "baseline_start": 10,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1280,
+            "diagnostic_surface": False,
+            "builder": lambda start: checkpoint_replay_long_program(start, base_address=128),
+        },
+    )
+
+    cases: list[LongHorizonScalingCase] = []
+    for entry in registry:
+        builder = entry["builder"]
+        baseline_start = int(entry["baseline_start"])
+        baseline_program_name = builder(baseline_start).name
+        for multiplier in (2, 4, 8):
+            scaled_start = baseline_start * multiplier
+            cases.append(
+                LongHorizonScalingCase(
+                    family=str(entry["family"]),
+                    baseline_stage=str(entry["baseline_stage"]),
+                    baseline_program_name=baseline_program_name,
+                    baseline_start=baseline_start,
+                    horizon_multiplier=multiplier,
+                    scaled_start=scaled_start,
+                    suite="r6_long_horizon_scaling",
+                    comparison_mode=str(entry["comparison_mode"]),
+                    max_steps=int(entry["baseline_max_steps"]) * multiplier,
+                    program=builder(scaled_start),
+                    diagnostic_surface=bool(entry["diagnostic_surface"]),
+                )
+            )
+    return tuple(cases)
+
+
+def r8_d0_retrieval_pressure_cases() -> tuple[RetrievalPressureCase, ...]:
+    registry = (
+        {
+            "family": "helper_checkpoint_braid_long",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 18 * 8,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024 * 8,
+            "diagnostic_surface": True,
+            "builder": lambda start: helper_checkpoint_braid_long_program(start, base_address=312, selector_seed=0),
+        },
+        {
+            "family": "subroutine_braid_long",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 14 * 8,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024 * 8,
+            "diagnostic_surface": False,
+            "builder": lambda start: subroutine_braid_long_program(start, base_address=176),
+        },
+        {
+            "family": "iterated_helper_accumulator",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 24 * 8,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024 * 8,
+            "diagnostic_surface": False,
+            "builder": lambda start: iterated_helper_accumulator_program(
+                start,
+                counter_address=144,
+                accumulator_address=145,
+            ),
+        },
+        {
+            "family": "checkpoint_replay_long",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 10 * 8,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1280 * 8,
+            "diagnostic_surface": False,
+            "builder": lambda start: checkpoint_replay_long_program(start, base_address=128),
+        },
+    )
+
+    cases: list[RetrievalPressureCase] = []
+    for entry in registry:
+        builder = entry["builder"]
+        baseline_start = int(entry["baseline_start"])
+        baseline_program_name = builder(baseline_start).name
+        for multiplier in (10,):
+            scaled_start = (baseline_start // 8) * multiplier
+            cases.append(
+                RetrievalPressureCase(
+                    family=str(entry["family"]),
+                    baseline_stage=str(entry["baseline_stage"]),
+                    baseline_program_name=baseline_program_name,
+                    baseline_horizon_multiplier=8,
+                    baseline_start=baseline_start,
+                    retrieval_horizon_multiplier=multiplier,
+                    scaled_start=scaled_start,
+                    suite="r8_retrieval_pressure",
+                    comparison_mode=str(entry["comparison_mode"]),
+                    max_steps=(int(entry["baseline_max_steps"]) // 8) * multiplier,
+                    program=builder(scaled_start),
+                    diagnostic_surface=bool(entry["diagnostic_surface"]),
+                )
+            )
+    return tuple(cases)

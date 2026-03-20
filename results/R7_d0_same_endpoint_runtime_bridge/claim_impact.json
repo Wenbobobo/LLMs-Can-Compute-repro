@@ -1,0 +1,48 @@
+{
+  "experiment": "r7_d0_same_endpoint_runtime_claim_impact",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "status": "same_endpoint_runtime_bridge_measured",
+    "target_claims": [
+      "D0"
+    ],
+    "r5_reopen_status": "not_justified",
+    "e1c_status": "not_triggered",
+    "next_lane": "H9_refreeze_and_record_sync",
+    "supported_here": [
+      "R7 measures same-endpoint cost on the heaviest exact-admitted long-horizon D0 rows rather than reopening a broader systems lane.",
+      "Accelerated-versus-linear decode costs are compared on the same exact executor and the same lowered endpoint rows."
+    ],
+    "unsupported_here": [
+      "R7 does not reopen R5 by itself and does not justify frontend widening or a broader systems claim.",
+      "Even a positive same-endpoint decode gain would still be narrower than current-scope end-to-end systems superiority."
+    ]
+  }
+}

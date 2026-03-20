@@ -1,0 +1,472 @@
+{
+  "experiment": "r3_d0_exact_execution_stress_exact_suite_rows",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 177,
+      "lowered_step_count": 177,
+      "spec_step_count": 177,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 177,
+        "final_stack": [
+          9
+        ],
+        "final_frame_memory": [
+          [
+            280,
+            0
+          ],
+          [
+            281,
+            0
+          ],
+          [
+            282,
+            285
+          ],
+          [
+            283,
+            9
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            284,
+            12
+          ],
+          [
+            285,
+            9
+          ]
+        ],
+        "final_call_stack": []
+      }
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_8_a96",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "medium_exact_trace",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 172,
+      "lowered_step_count": 172,
+      "spec_step_count": 172,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_8_a96",
+        "comparison_mode": "medium_exact_trace",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 172,
+        "final_stack": [
+          36
+        ],
+        "final_frame_memory": [
+          [
+            96,
+            0
+          ],
+          [
+            97,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            98,
+            20
+          ],
+          [
+            99,
+            16
+          ]
+        ],
+        "final_call_stack": []
+      }
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 495,
+      "lowered_step_count": 495,
+      "spec_step_count": 495,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 495,
+        "final_stack": [
+          81
+        ],
+        "final_frame_memory": [
+          [
+            312,
+            0
+          ],
+          [
+            313,
+            0
+          ],
+          [
+            314,
+            317
+          ],
+          [
+            315,
+            81
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            316,
+            90
+          ],
+          [
+            317,
+            81
+          ]
+        ],
+        "final_call_stack": []
+      }
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_14_a176",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 289,
+      "lowered_step_count": 289,
+      "spec_step_count": 289,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_subroutine_braid_long_14_a176",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 289,
+        "final_stack": [
+          105
+        ],
+        "final_frame_memory": [
+          [
+            176,
+            0
+          ],
+          [
+            177,
+            0
+          ]
+        ],
+        "final_heap_memory": [
+          [
+            178,
+            56
+          ],
+          [
+            179,
+            49
+          ]
+        ],
+        "final_call_stack": []
+      }
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 370,
+      "lowered_step_count": 370,
+      "spec_step_count": 370,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 370,
+        "final_stack": [
+          300
+        ],
+        "final_frame_memory": [
+          [
+            144,
+            0
+          ],
+          [
+            145,
+            300
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      }
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_10_a112",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": true,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 215,
+      "lowered_step_count": 215,
+      "spec_step_count": 215,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_stack_memory_braid_10_a112",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 215,
+        "final_stack": [
+          55
+        ],
+        "final_frame_memory": [
+          [
+            112,
+            0
+          ],
+          [
+            113,
+            0
+          ],
+          [
+            114,
+            116
+          ],
+          [
+            115,
+            117
+          ],
+          [
+            116,
+            30
+          ],
+          [
+            117,
+            25
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      }
+    },
+    {
+      "program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "verifier_passed": true,
+      "verifier_first_error_pc": null,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_first_error_pc": null,
+      "spec_contract_error_class": null,
+      "trace_match_current_lowered": true,
+      "trace_match_current_spec": true,
+      "trace_match_lowered_spec": true,
+      "all_final_state_match": true,
+      "first_divergence_step": null,
+      "diagnostic_surface_match": null,
+      "mismatch_class": null,
+      "failure_reason": null,
+      "bytecode_step_count": 336,
+      "lowered_step_count": 336,
+      "spec_step_count": 336,
+      "bytecode_halted": true,
+      "lowered_halted": true,
+      "spec_halted": true,
+      "external_reference": {
+        "program_name": "bytecode_checkpoint_replay_long_10_a128",
+        "comparison_mode": "long_exact_final_state",
+        "contract_passed": true,
+        "contract_first_error_pc": null,
+        "contract_error_class": null,
+        "halted": true,
+        "step_count": 336,
+        "final_stack": [
+          55
+        ],
+        "final_frame_memory": [
+          [
+            128,
+            0
+          ],
+          [
+            129,
+            1
+          ],
+          [
+            130,
+            134
+          ],
+          [
+            131,
+            134
+          ],
+          [
+            132,
+            135
+          ],
+          [
+            133,
+            136
+          ],
+          [
+            134,
+            22
+          ],
+          [
+            135,
+            18
+          ],
+          [
+            136,
+            15
+          ]
+        ],
+        "final_heap_memory": [],
+        "final_call_stack": []
+      }
+    }
+  ]
+}

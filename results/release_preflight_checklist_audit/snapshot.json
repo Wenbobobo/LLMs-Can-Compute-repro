@@ -1,0 +1,120 @@
+{
+  "experiment": "release_preflight_checklist_audit_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
+        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
+        "gate as `healthy_but_slow`.",
+        "`H15_refreeze_and_decision_sync`.",
+        "- `H14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
+        "`H15_refreeze_and_decision_sync` under"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "then `H15_refreeze_and_decision_sync`. `E1c` remains conditional only and"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_preflight_checklist.md",
+      "matched_lines": [
+        "- [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready",
+        "- [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.",
+        "- [ ] `results/release_worktree_hygiene_snapshot/summary.json` classifies the",
+        "- [ ] `results/V1_full_suite_validation_runtime_timing_followup/summary.json`",
+        "- [ ] Use `results/release_worktree_hygiene_snapshot/summary.json` to decide"
+      ]
+    },
+    {
+      "path": "results/release_worktree_hygiene_snapshot/summary.json",
+      "matched_lines": [
+        "\"release_commit_state\": \"dirty_worktree_release_commit_blocked\",",
+        "\"git_diff_check_state\": \"warnings_only\","
+      ]
+    },
+    {
+      "path": "docs/publication_record/manuscript_bundle_draft.md",
+      "matched_lines": [
+        "## 1. Abstract",
+        "but not for a broader source-language claim. The no-widening decision is part",
+        "validate. Companion appendix material stays clearly downstream of that",
+        "## 10. Reproducibility Appendix"
+      ]
+    },
+    {
+      "path": "docs/publication_record/paper_bundle_status.md",
+      "matched_lines": [
+        "locked submission-candidate bundle now serves as the current frozen bundle",
+        "The current submission/release controls also live in"
+      ]
+    },
+    {
+      "path": "docs/publication_record/freeze_candidate_criteria.md",
+      "matched_lines": [
+        "1. Claim boundaries stay fixed.",
+        "4. Appendix companions stay scoped and auditable.",
+        "5. Release-facing derivatives remain downstream."
+      ]
+    },
+    {
+      "path": "docs/publication_record/main_text_order.md",
+      "matched_lines": [
+        "## Fixed order",
+        "Section: `Compiled Boundary`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/appendix_companion_scope.md",
+      "matched_lines": [
+        "## Required companions",
+        "## Allowed optional companions",
+        "## Out of scope on the current freeze candidate"
+      ]
+    },
+    {
+      "path": "docs/publication_record/blog_release_rules.md",
+      "matched_lines": [
+        "## Blog stays blocked unless all of the following are true",
+        "2. `release_candidate_checklist.md` is fully green.",
+        "no arbitrary C, no broad \u201cLLMs are computers\u201d framing, no current-scope"
+      ]
+    }
+  ]
+}

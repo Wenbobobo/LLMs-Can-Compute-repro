@@ -39,17 +39,22 @@
     "docs/publication_record/review_boundary_summary.md",
     "docs/publication_record/external_release_note_skeleton.md",
     "results/P1_paper_readiness/summary.json",
+    "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
+    "results/release_worktree_hygiene_snapshot/summary.json",
+    "results/release_preflight_checklist_audit/summary.json",
     "results/P5_public_surface_sync/summary.json",
     "results/P5_callout_alignment/summary.json",
     "results/H2_bundle_lock_audit/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "reproduction_mainline_return_active",
+    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
     "packet_state": "archive_ready",
-    "check_count": 9,
-    "pass_count": 9,
+    "release_commit_state": "dirty_worktree_release_commit_blocked",
+    "git_diff_check_state": "warnings_only",
+    "check_count": 10,
+    "pass_count": 10,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff for venue-specific packaging while keeping scope fixed"
+    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H15 stays aligned as the current refrozen stage, consult release_worktree_hygiene_snapshot before any release-facing commit, preserve H14/R11/R12 as the completed reopen packet, preserve H13/V1 as handoff state, keep H10/H11/R8/R9/R10/H12 as the latest completed checkpoint, and keep H8/R6/R7/H9 plus H6/R3/R4/(inactive R5)/H7 as preserved baselines"
   }
 }

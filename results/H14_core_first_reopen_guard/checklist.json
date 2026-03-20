@@ -1,0 +1,68 @@
+{
+  "experiment": "h14_core_first_reopen_guard_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "current_stage_driver_exposes_h14_core_first_order",
+      "status": "pass",
+      "notes": "The canonical driver should expose current H15 plus the preserved H14 packet and the required R11/R12-before-R14 ordering."
+    },
+    {
+      "item_id": "root_and_public_docs_expose_h14_without_widening",
+      "status": "pass",
+      "notes": "Root and publication-facing docs should agree on current H15 and preserved H14/H13 semantics."
+    },
+    {
+      "item_id": "h14_milestone_docs_track_scope_lock",
+      "status": "pass",
+      "notes": "The H14 milestone docs should keep the completed scope lock explicit and machine-readable."
+    },
+    {
+      "item_id": "preserved_h13_handoff_remains_green",
+      "status": "pass",
+      "notes": "H14 should treat H13/V1 as preserved handoff state, not reopen it implicitly."
+    },
+    {
+      "item_id": "preserved_baseline_guards_are_green",
+      "status": "pass",
+      "notes": "The latest checkpoint plus the older direct/deeper baselines should stay green under H15."
+    },
+    {
+      "item_id": "preserved_v1_runtime_reference_remains_green",
+      "status": "pass",
+      "notes": "The preserved V1 runtime reference should remain operationally bounded while H15 remains the current refrozen stage."
+    },
+    {
+      "item_id": "release_worktree_and_no_widening_constraints_remain_explicit",
+      "status": "pass",
+      "notes": "H14 should keep the runtime issue operationally bounded and the no-widening decision intact."
+    }
+  ]
+}

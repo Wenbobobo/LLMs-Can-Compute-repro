@@ -29,9 +29,16 @@ uv sync --group dev
 uv run python scripts/export_p1_figure_table_sources.py
 uv run python scripts/render_p1_paper_artifacts.py
 uv run python scripts/export_p1_paper_readiness.py
+uv run python scripts/export_h15_refreeze_and_decision_sync.py
+uv run python scripts/export_h14_core_first_reopen_guard.py
+uv run python scripts/export_h13_post_h12_governance_stage_health.py
+uv run python scripts/export_v1_full_suite_validation_runtime_audit.py
+uv run python scripts/export_v1_full_suite_validation_runtime_timing_followup.py
 uv run python scripts/export_p5_public_surface_sync.py
 uv run python scripts/export_p5_callout_alignment.py
 uv run python scripts/export_h2_bundle_lock_audit.py
+uv run python scripts/export_release_worktree_hygiene_snapshot.py
+uv run python scripts/export_release_preflight_checklist_audit.py
 uv run python scripts/export_p10_submission_archive_ready.py
 uv run pytest -q
 ```
@@ -40,6 +47,23 @@ uv run pytest -q
 
 - `results/P1_paper_readiness/summary.json` shows `10/10` ready figure/table
   items and no blocked or partial rows
+- `results/H15_refreeze_and_decision_sync/summary.json` records the current
+  refrozen stage, leaves `R13` inactive, leaves `R14` unjustified, and shows
+  zero blocked items
+- `results/H14_core_first_reopen_guard/summary.json` shows zero blocked items
+  on the preserved core-first reopen control surface
+- `results/H13_post_h12_governance_stage_health/summary.json` shows zero
+  blocked items on the preserved governance/runtime handoff
+- `results/V1_full_suite_validation_runtime_audit/summary.json` records a
+  successful collect-only inventory on the current suite
+- `results/V1_full_suite_validation_runtime_timing_followup/summary.json`
+  reports `healthy_but_slow` with zero timed-out files
+- `results/release_worktree_hygiene_snapshot/summary.json` reports either
+  `dirty_worktree_release_commit_blocked` or
+  `clean_worktree_ready_if_other_gates_green`, and does not report
+  `content_issues_present`
+- `results/release_preflight_checklist_audit/summary.json` reports
+  `docs_and_audits_green`
 - `results/P5_public_surface_sync/summary.json` shows zero blocked items
 - `results/P5_callout_alignment/summary.json` shows zero blocked rows
 - `results/H2_bundle_lock_audit/summary.json` shows zero blocked items

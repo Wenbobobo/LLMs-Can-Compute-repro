@@ -1,0 +1,159 @@
+{
+  "experiment": "r4_mechanistic_retrieval_closure",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "notes": [
+    "R4 stays on the current positive D0 suites and does not widen the frontend or systems claim surface.",
+    "The bridge rows classify each source event using only the allowed mechanistic primitive classes.",
+    "Source-event parity rows require linear and accelerated Hull retrieval to agree exactly on the same source observations."
+  ],
+  "summary": {
+    "overall": {
+      "program_count": 32,
+      "suite_count": 6,
+      "event_count": 5078,
+      "source_observation_count": 4290,
+      "primitive_event_counts": {
+        "latest_write": 1312,
+        "stack": 2221,
+        "control": 1121,
+        "local_transition": 3957
+      },
+      "unexplained_event_count": 0,
+      "parity_failure_count": 0,
+      "contradiction_candidate_count": 0
+    },
+    "by_suite": [
+      {
+        "suite": "control_flow",
+        "program_count": 5,
+        "event_count": 897,
+        "source_observation_count": 744,
+        "primitive_event_counts": {
+          "latest_write": 226,
+          "stack": 361,
+          "control": 245,
+          "local_transition": 652
+        },
+        "contradiction_candidate_count": 0,
+        "parity_failure_count": 0
+      },
+      {
+        "suite": "loops",
+        "program_count": 7,
+        "event_count": 1207,
+        "source_observation_count": 1076,
+        "primitive_event_counts": {
+          "latest_write": 314,
+          "stack": 560,
+          "control": 217,
+          "local_transition": 990
+        },
+        "contradiction_candidate_count": 0,
+        "parity_failure_count": 0
+      },
+      {
+        "suite": "memory",
+        "program_count": 3,
+        "event_count": 19,
+        "source_observation_count": 12,
+        "primitive_event_counts": {
+          "latest_write": 3,
+          "stack": 6,
+          "control": 3,
+          "local_transition": 16
+        },
+        "contradiction_candidate_count": 0,
+        "parity_failure_count": 0
+      },
+      {
+        "suite": "r3_exact_execution",
+        "program_count": 7,
+        "event_count": 2054,
+        "source_observation_count": 1741,
+        "primitive_event_counts": {
+          "latest_write": 553,
+          "stack": 896,
+          "control": 464,
+          "local_transition": 1590
+        },
+        "contradiction_candidate_count": 0,
+        "parity_failure_count": 0
+      },
+      {
+        "suite": "smoke",
+        "program_count": 7,
+        "event_count": 52,
+        "source_observation_count": 24,
+        "primitive_event_counts": {
+          "latest_write": 0,
+          "stack": 14,
+          "control": 21,
+          "local_transition": 31
+        },
+        "contradiction_candidate_count": 0,
+        "parity_failure_count": 0
+      },
+      {
+        "suite": "stress_reference",
+        "program_count": 3,
+        "event_count": 849,
+        "source_observation_count": 693,
+        "primitive_event_counts": {
+          "latest_write": 216,
+          "stack": 384,
+          "control": 171,
+          "local_transition": 678
+        },
+        "contradiction_candidate_count": 0,
+        "parity_failure_count": 0
+      }
+    ],
+    "diagnostic_companion_role": "diagnostic_only_mask_strength_evidence",
+    "claim_impact": {
+      "status": "bounded_mechanistic_closure_on_current_d0_suite",
+      "target_claims": [
+        "D0"
+      ],
+      "r5_status": "not_justified",
+      "e1c_status": "not_triggered",
+      "next_lane": "H7_refreeze_and_record_sync",
+      "supported_here": [
+        "All current positive D0 rows are explainable using only latest-write, stack, control, and deterministic local-transition primitives.",
+        "Linear and accelerated Hull retrieval agree exactly on all exported source-event observations from the same positive D0 suites."
+      ],
+      "diagnostic_only_here": [
+        "Staged-pointer and provenance artifacts remain mask-strength companions only and do not widen the main D0 mechanism claim."
+      ],
+      "unsupported_here": [
+        "R4 does not authorize frontend widening, systems-claim changes, or a broader neural executor claim."
+      ]
+    }
+  }
+}

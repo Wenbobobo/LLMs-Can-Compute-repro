@@ -1,0 +1,1097 @@
+{
+  "experiment": "r4_mechanistic_retrieval_program_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "program_name": "bytecode_accumulator_12",
+      "suite": "loops",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 512,
+      "event_count": 166,
+      "primitive_event_counts": {
+        "latest_write": 50,
+        "stack": 76,
+        "control": 26,
+        "local_transition": 140
+      },
+      "primitive_membership_counts": {
+        "local_transition": 140,
+        "stack": 76,
+        "latest_write": 50,
+        "control": 26
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 163,
+      "source_observations_by_space": {
+        "memory": 50,
+        "stack": 113
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_alternating_memory_loop_6_a16",
+      "suite": "loops",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "event_count": 121,
+      "primitive_event_counts": {
+        "latest_write": 33,
+        "stack": 55,
+        "control": 23,
+        "local_transition": 98
+      },
+      "primitive_membership_counts": {
+        "local_transition": 98,
+        "stack": 55,
+        "latest_write": 33,
+        "control": 23
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 101,
+      "source_observations_by_space": {
+        "memory": 33,
+        "stack": 68
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_arithmetic_smoke",
+      "suite": "smoke",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 4,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 1,
+        "control": 1,
+        "local_transition": 3
+      },
+      "primitive_membership_counts": {
+        "local_transition": 3,
+        "stack": 1,
+        "control": 1
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 2,
+      "source_observations_by_space": {
+        "stack": 2
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_branch_then_call_false",
+      "suite": "smoke",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 10,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 3,
+        "control": 4,
+        "local_transition": 6
+      },
+      "primitive_membership_counts": {
+        "local_transition": 6,
+        "stack": 3,
+        "control": 4
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 5,
+      "source_observations_by_space": {
+        "stack": 5
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_branch_then_call_true",
+      "suite": "smoke",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 10,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 3,
+        "control": 4,
+        "local_transition": 6
+      },
+      "primitive_membership_counts": {
+        "local_transition": 6,
+        "stack": 3,
+        "control": 4
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 5,
+      "source_observations_by_space": {
+        "stack": 5
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_call_add_halt",
+      "suite": "smoke",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 6,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 1,
+        "control": 3,
+        "local_transition": 3
+      },
+      "primitive_membership_counts": {
+        "local_transition": 3,
+        "control": 3,
+        "stack": 1
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 2,
+      "source_observations_by_space": {
+        "stack": 2
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_call_chain_smoke",
+      "suite": "smoke",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 10,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 2,
+        "control": 5,
+        "local_transition": 5
+      },
+      "primitive_membership_counts": {
+        "local_transition": 5,
+        "control": 5,
+        "stack": 2
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 4,
+      "source_observations_by_space": {
+        "stack": 4
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_checkpoint_replay_long_10_a128",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1280,
+      "event_count": 336,
+      "primitive_event_counts": {
+        "latest_write": 94,
+        "stack": 155,
+        "control": 68,
+        "local_transition": 268
+      },
+      "primitive_membership_counts": {
+        "local_transition": 268,
+        "stack": 155,
+        "latest_write": 94,
+        "control": 68
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 293,
+      "source_observations_by_space": {
+        "memory": 94,
+        "stack": 199
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_checkpoint_replay_long_8_a96",
+      "suite": "loops",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "event_count": 276,
+      "primitive_event_counts": {
+        "latest_write": 76,
+        "stack": 127,
+        "control": 56,
+        "local_transition": 220
+      },
+      "primitive_membership_counts": {
+        "local_transition": 220,
+        "stack": 127,
+        "latest_write": 76,
+        "control": 56
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 239,
+      "source_observations_by_space": {
+        "memory": 76,
+        "stack": 163
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_countdown_6",
+      "suite": "loops",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 128,
+      "event_count": 48,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 20,
+        "control": 14,
+        "local_transition": 34
+      },
+      "primitive_membership_counts": {
+        "local_transition": 34,
+        "stack": 20,
+        "control": 14
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 33,
+      "source_observations_by_space": {
+        "stack": 33
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_countdown_helper_call_6_a48",
+      "suite": "control_flow",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 128,
+      "event_count": 74,
+      "primitive_event_counts": {
+        "latest_write": 14,
+        "stack": 27,
+        "control": 26,
+        "local_transition": 48
+      },
+      "primitive_membership_counts": {
+        "local_transition": 48,
+        "stack": 27,
+        "latest_write": 14,
+        "control": 26
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 54,
+      "source_observations_by_space": {
+        "memory": 14,
+        "stack": 40
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_dynamic_latest_write",
+      "suite": "memory",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 64,
+      "event_count": 9,
+      "primitive_event_counts": {
+        "latest_write": 1,
+        "stack": 3,
+        "control": 1,
+        "local_transition": 8
+      },
+      "primitive_membership_counts": {
+        "local_transition": 8,
+        "stack": 3,
+        "latest_write": 1,
+        "control": 1
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 6,
+      "source_observations_by_space": {
+        "memory": 1,
+        "stack": 5
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_eq_branch_false",
+      "suite": "smoke",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 6,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 2,
+        "control": 2,
+        "local_transition": 4
+      },
+      "primitive_membership_counts": {
+        "local_transition": 4,
+        "stack": 2,
+        "control": 2
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 3,
+      "source_observations_by_space": {
+        "stack": 3
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_eq_branch_true",
+      "suite": "smoke",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 6,
+      "primitive_event_counts": {
+        "latest_write": 0,
+        "stack": 2,
+        "control": 2,
+        "local_transition": 4
+      },
+      "primitive_membership_counts": {
+        "local_transition": 4,
+        "stack": 2,
+        "control": 2
+      },
+      "primitive_classes_present": [
+        "control",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 3,
+      "source_observations_by_space": {
+        "stack": 3
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_6_a200_s0",
+      "suite": "stress_reference",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "event_count": 177,
+      "primitive_event_counts": {
+        "latest_write": 44,
+        "stack": 80,
+        "control": 35,
+        "local_transition": 142
+      },
+      "primitive_membership_counts": {
+        "local_transition": 142,
+        "stack": 80,
+        "latest_write": 44,
+        "control": 35
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 143,
+      "source_observations_by_space": {
+        "memory": 44,
+        "stack": 99
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_6_a216_s1",
+      "suite": "stress_reference",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "event_count": 177,
+      "primitive_event_counts": {
+        "latest_write": 44,
+        "stack": 80,
+        "control": 35,
+        "local_transition": 142
+      },
+      "primitive_membership_counts": {
+        "local_transition": 142,
+        "stack": 80,
+        "latest_write": 44,
+        "control": 35
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 143,
+      "source_observations_by_space": {
+        "memory": 44,
+        "stack": 99
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_6_a280_s0",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "event_count": 177,
+      "primitive_event_counts": {
+        "latest_write": 44,
+        "stack": 80,
+        "control": 35,
+        "local_transition": 142
+      },
+      "primitive_membership_counts": {
+        "local_transition": 142,
+        "stack": 80,
+        "latest_write": 44,
+        "control": 35
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 143,
+      "source_observations_by_space": {
+        "memory": 44,
+        "stack": 99
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_18_a232_s0",
+      "suite": "stress_reference",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "event_count": 495,
+      "primitive_event_counts": {
+        "latest_write": 128,
+        "stack": 224,
+        "control": 101,
+        "local_transition": 394
+      },
+      "primitive_membership_counts": {
+        "local_transition": 394,
+        "stack": 224,
+        "latest_write": 128,
+        "control": 101
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 407,
+      "source_observations_by_space": {
+        "memory": 128,
+        "stack": 279
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_18_a312_s0",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "event_count": 495,
+      "primitive_event_counts": {
+        "latest_write": 128,
+        "stack": 224,
+        "control": 101,
+        "local_transition": 394
+      },
+      "primitive_membership_counts": {
+        "local_transition": 394,
+        "stack": 224,
+        "latest_write": 128,
+        "control": 101
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 407,
+      "source_observations_by_space": {
+        "memory": 128,
+        "stack": 279
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_indirect_counter_bank_12_a32_b33",
+      "suite": "loops",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 512,
+      "event_count": 206,
+      "primitive_event_counts": {
+        "latest_write": 38,
+        "stack": 102,
+        "control": 26,
+        "local_transition": 180
+      },
+      "primitive_membership_counts": {
+        "local_transition": 180,
+        "stack": 102,
+        "latest_write": 38,
+        "control": 26
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 190,
+      "source_observations_by_space": {
+        "memory": 38,
+        "stack": 152
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_indirect_memory_roundtrip",
+      "suite": "memory",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 6,
+      "primitive_event_counts": {
+        "latest_write": 1,
+        "stack": 2,
+        "control": 1,
+        "local_transition": 5
+      },
+      "primitive_membership_counts": {
+        "local_transition": 5,
+        "stack": 2,
+        "latest_write": 1,
+        "control": 1
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 4,
+      "source_observations_by_space": {
+        "memory": 1,
+        "stack": 3
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_20_a128_b129",
+      "suite": "control_flow",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 512,
+      "event_count": 310,
+      "primitive_event_counts": {
+        "latest_write": 82,
+        "stack": 124,
+        "control": 82,
+        "local_transition": 228
+      },
+      "primitive_membership_counts": {
+        "local_transition": 228,
+        "stack": 124,
+        "latest_write": 82,
+        "control": 82
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 267,
+      "source_observations_by_space": {
+        "memory": 82,
+        "stack": 185
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_iterated_helper_accumulator_24_a144_b145",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "event_count": 370,
+      "primitive_event_counts": {
+        "latest_write": 98,
+        "stack": 148,
+        "control": 98,
+        "local_transition": 272
+      },
+      "primitive_membership_counts": {
+        "local_transition": 272,
+        "stack": 148,
+        "latest_write": 98,
+        "control": 98
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 319,
+      "source_observations_by_space": {
+        "memory": 98,
+        "stack": 221
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_loop_with_subroutine_update_8_a64_b65",
+      "suite": "control_flow",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "event_count": 130,
+      "primitive_event_counts": {
+        "latest_write": 34,
+        "stack": 52,
+        "control": 34,
+        "local_transition": 96
+      },
+      "primitive_membership_counts": {
+        "local_transition": 96,
+        "stack": 52,
+        "latest_write": 34,
+        "control": 34
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 111,
+      "source_observations_by_space": {
+        "memory": 34,
+        "stack": 77
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_selector_checkpoint_bank_6_a32",
+      "suite": "loops",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 512,
+      "event_count": 214,
+      "primitive_event_counts": {
+        "latest_write": 58,
+        "stack": 99,
+        "control": 42,
+        "local_transition": 172
+      },
+      "primitive_membership_counts": {
+        "local_transition": 172,
+        "stack": 99,
+        "latest_write": 58,
+        "control": 42
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 185,
+      "source_observations_by_space": {
+        "memory": 58,
+        "stack": 127
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_10_a112",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "event_count": 215,
+      "primitive_event_counts": {
+        "latest_write": 73,
+        "stack": 99,
+        "control": 37,
+        "local_transition": 178
+      },
+      "primitive_membership_counts": {
+        "local_transition": 178,
+        "stack": 99,
+        "latest_write": 73,
+        "control": 37
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 203,
+      "source_observations_by_space": {
+        "memory": 73,
+        "stack": 130
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_8_a64",
+      "suite": "loops",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 768,
+      "event_count": 176,
+      "primitive_event_counts": {
+        "latest_write": 59,
+        "stack": 81,
+        "control": 30,
+        "local_transition": 146
+      },
+      "primitive_membership_counts": {
+        "local_transition": 146,
+        "stack": 81,
+        "latest_write": 59,
+        "control": 30
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 165,
+      "source_observations_by_space": {
+        "memory": 59,
+        "stack": 106
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_static_memory_roundtrip",
+      "suite": "memory",
+      "comparison_mode": "short_exact_trace",
+      "max_steps": 32,
+      "event_count": 4,
+      "primitive_event_counts": {
+        "latest_write": 1,
+        "stack": 1,
+        "control": 1,
+        "local_transition": 3
+      },
+      "primitive_membership_counts": {
+        "local_transition": 3,
+        "stack": 1,
+        "latest_write": 1,
+        "control": 1
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 2,
+      "source_observations_by_space": {
+        "memory": 1,
+        "stack": 1
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_6_a80",
+      "suite": "control_flow",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "event_count": 133,
+      "primitive_event_counts": {
+        "latest_write": 33,
+        "stack": 55,
+        "control": 35,
+        "local_transition": 98
+      },
+      "primitive_membership_counts": {
+        "local_transition": 98,
+        "stack": 55,
+        "latest_write": 33,
+        "control": 35
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 108,
+      "source_observations_by_space": {
+        "memory": 33,
+        "stack": 75
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_8_a96",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 512,
+      "event_count": 172,
+      "primitive_event_counts": {
+        "latest_write": 43,
+        "stack": 71,
+        "control": 46,
+        "local_transition": 126
+      },
+      "primitive_membership_counts": {
+        "local_transition": 126,
+        "stack": 71,
+        "latest_write": 43,
+        "control": 46
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 140,
+      "source_observations_by_space": {
+        "memory": 43,
+        "stack": 97
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_12_a160",
+      "suite": "control_flow",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 768,
+      "event_count": 250,
+      "primitive_event_counts": {
+        "latest_write": 63,
+        "stack": 103,
+        "control": 68,
+        "local_transition": 182
+      },
+      "primitive_membership_counts": {
+        "local_transition": 182,
+        "stack": 103,
+        "latest_write": 63,
+        "control": 68
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 204,
+      "source_observations_by_space": {
+        "memory": 63,
+        "stack": 141
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    },
+    {
+      "program_name": "bytecode_subroutine_braid_long_14_a176",
+      "suite": "r3_exact_execution",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "event_count": 289,
+      "primitive_event_counts": {
+        "latest_write": 73,
+        "stack": 119,
+        "control": 79,
+        "local_transition": 210
+      },
+      "primitive_membership_counts": {
+        "local_transition": 210,
+        "stack": 119,
+        "latest_write": 73,
+        "control": 79
+      },
+      "primitive_classes_present": [
+        "control",
+        "latest_write",
+        "local_transition",
+        "stack"
+      ],
+      "source_observation_count": 236,
+      "source_observations_by_space": {
+        "memory": 73,
+        "stack": 163
+      },
+      "parity_failure_count": 0,
+      "unexplained_event_count": 0,
+      "contradiction_candidate_count": 0,
+      "mechanistically_explained": true
+    }
+  ]
+}

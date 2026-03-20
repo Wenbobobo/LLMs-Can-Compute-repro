@@ -1,0 +1,201 @@
+{
+  "experiment": "v1_full_suite_validation_runtime_timing_followup_per_file_timings",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "file_path": "tests/test_model_factorized_event_models.py",
+      "category": "model_or_training",
+      "test_count": 3,
+      "heuristic_score": 19,
+      "torch_dependent": true,
+      "completed": true,
+      "timed_out": false,
+      "returncode": 0,
+      "wall_seconds": 25.1116,
+      "timeout_seconds": 240,
+      "summary_line": "3 passed, 1 warning in 22.99s",
+      "reported_seconds": 22.99,
+      "slowest_rows": [
+        {
+          "seconds": 13.85,
+          "test_id": "tests/test_model_factorized_event_models.py::test_contextual_factorized_event_model_fits_training_programs"
+        },
+        {
+          "seconds": 5.05,
+          "test_id": "tests/test_model_factorized_event_models.py::test_event_level_softmax_baseline_trains_and_rolls_out"
+        }
+      ]
+    },
+    {
+      "file_path": "tests/test_model_staged_pointer_event_models.py",
+      "category": "model_or_training",
+      "test_count": 4,
+      "heuristic_score": 17,
+      "torch_dependent": true,
+      "completed": true,
+      "timed_out": false,
+      "returncode": 0,
+      "wall_seconds": 22.7733,
+      "timeout_seconds": 240,
+      "summary_line": "4 passed, 1 warning in 20.58s",
+      "reported_seconds": 20.58,
+      "slowest_rows": [
+        {
+          "seconds": 8.77,
+          "test_id": "tests/test_model_staged_pointer_event_models.py::test_pointer_event_model_rolls_out_heldout_programs_with_opcode_legal_masks"
+        },
+        {
+          "seconds": 7.66,
+          "test_id": "tests/test_model_staged_pointer_event_models.py::test_pointer_softmax_baseline_stays_non_exact_with_structural_masks"
+        }
+      ]
+    },
+    {
+      "file_path": "tests/test_model_neural_event_executor.py",
+      "category": "model_or_training",
+      "test_count": 3,
+      "heuristic_score": 22,
+      "torch_dependent": true,
+      "completed": true,
+      "timed_out": false,
+      "returncode": 0,
+      "wall_seconds": 18.5687,
+      "timeout_seconds": 240,
+      "summary_line": "3 passed in 16.43s",
+      "reported_seconds": 16.43,
+      "slowest_rows": [
+        {
+          "seconds": 6.29,
+          "test_id": "tests/test_model_neural_event_executor.py::test_neural_event_executor_training_pipeline_fits_structured_labels"
+        },
+        {
+          "seconds": 5.97,
+          "test_id": "tests/test_model_neural_event_executor.py::test_neural_event_executor_runs_exact_rollout_on_heldout_programs"
+        }
+      ]
+    },
+    {
+      "file_path": "tests/test_model_softmax_baseline.py",
+      "category": "model_or_training",
+      "test_count": 11,
+      "heuristic_score": 33,
+      "torch_dependent": true,
+      "completed": true,
+      "timed_out": false,
+      "returncode": 0,
+      "wall_seconds": 10.2043,
+      "timeout_seconds": 240,
+      "summary_line": "11 passed in 8.00s",
+      "reported_seconds": 8.0,
+      "slowest_rows": [
+        {
+          "seconds": 3.06,
+          "test_id": "tests/test_model_softmax_baseline.py::test_teacher_forced_training_pipeline_returns_metrics"
+        },
+        {
+          "seconds": 0.81,
+          "test_id": "tests/test_model_softmax_baseline.py::test_free_running_rollout_evaluation_reports_outcomes"
+        }
+      ]
+    },
+    {
+      "file_path": "tests/test_model_free_running_executor.py",
+      "category": "model_or_training",
+      "test_count": 6,
+      "heuristic_score": 24,
+      "torch_dependent": false,
+      "completed": true,
+      "timed_out": false,
+      "returncode": 0,
+      "wall_seconds": 7.5695,
+      "timeout_seconds": 240,
+      "summary_line": "6 passed in 5.87s",
+      "reported_seconds": 5.87,
+      "slowest_rows": [
+        {
+          "seconds": 0.89,
+          "test_id": "tests/test_model_free_running_executor.py::test_trainable_stack_executor_rolls_out_heldout_countdowns"
+        },
+        {
+          "seconds": 0.8,
+          "test_id": "tests/test_model_free_running_executor.py::test_free_running_evaluation_reports_long_countdown_bucket"
+        },
+        {
+          "seconds": 0.06,
+          "test_id": "tests/test_model_free_running_executor.py::test_free_running_exact_accelerated_matches_reference_programs"
+        },
+        {
+          "seconds": 0.04,
+          "test_id": "tests/test_model_free_running_executor.py::test_trainable_stack_executor_transfers_to_branch_and_dynamic_memory"
+        },
+        {
+          "seconds": 0.03,
+          "test_id": "tests/test_model_free_running_executor.py::test_compare_execution_to_reference_reports_exact_match"
+        }
+      ]
+    },
+    {
+      "file_path": "tests/test_model_precision_stress.py",
+      "category": "model_or_training",
+      "test_count": 13,
+      "heuristic_score": 52,
+      "torch_dependent": false,
+      "completed": true,
+      "timed_out": false,
+      "returncode": 0,
+      "wall_seconds": 6.3815,
+      "timeout_seconds": 240,
+      "summary_line": "13 passed in 4.74s",
+      "reported_seconds": 4.74,
+      "slowest_rows": [
+        {
+          "seconds": 0.19,
+          "test_id": "tests/test_model_precision_stress.py::test_float64_and_float32_pass_small_exhaustive_ranges"
+        },
+        {
+          "seconds": 0.17,
+          "test_id": "tests/test_model_precision_stress.py::test_radix2_scheme_extends_float32_latest_write_range"
+        },
+        {
+          "seconds": 0.06,
+          "test_id": "tests/test_model_precision_stress.py::test_real_trace_precision_handles_deep_stack_fanout_stream"
+        },
+        {
+          "seconds": 0.02,
+          "test_id": "tests/test_model_precision_stress.py::test_real_trace_precision_horizon_sweep_exposes_float32_single_head_limit"
+        },
+        {
+          "seconds": 0.02,
+          "test_id": "tests/test_model_precision_stress.py::test_bfloat16_breaks_identity_retrieval_early"
+        }
+      ]
+    }
+  ]
+}

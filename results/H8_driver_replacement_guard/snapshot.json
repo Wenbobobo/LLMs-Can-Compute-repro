@@ -1,0 +1,66 @@
+{
+  "experiment": "h8_direct_baseline_preservation_guard_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "tmp/2026-03-19-d0-long-horizon-mainline-plan.md",
+      "matched_lines": [
+        "# D0 Long-Horizon Mainline Plan",
+        "- `H8_driver_replacement_and_baseline_sync`"
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "| `H8-H9` | completed bounded `D0` long-horizon packet: `H8` replaced the driver, `R6` completed the long-horizon scaling gate, `R7` preserved the full `8`-family exact-admitted surface but profiled only the top `4` heaviest representatives, and `H9` refroze the packet |",
+        "- `H8/R6/R7/H9` now sits as the completed direct same-endpoint baseline, while"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "- `H8/R6/R7/H9` remains the completed direct same-endpoint baseline on the",
+        "- `H8/R6/R7/H9` remains the completed direct same-endpoint baseline"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "packet, `H8/R6/R7/H9` remains the completed direct same-endpoint baseline"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "exact-admitted surface but profiles only the top `4` heaviest representatives,"
+      ]
+    }
+  ]
+}

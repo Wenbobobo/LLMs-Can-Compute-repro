@@ -7,8 +7,12 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  current bounded reproduction-return packet in the `H4` / `E1a` / `E1b` /
-  `H5` stage;
+  `H15` refreeze-and-decision-sync stage, with the completed
+  `H14/R11/R12` reopen packet preserved on the same endpoint,
+  `H10/H11/R8/R9/R10/H12` preserved as the latest completed same-endpoint
+  follow-up packet, `H13/V1` preserved as governance/runtime handoff, and the
+  bounded timing follow-up still classifies full `pytest -q` as healthy but
+  multi-minute on the current suite;
 - `planning_state_taxonomy.md` — allowed planning-state labels and current
   assignments for active drivers, standing gates, dormant protocols, and
   historical-complete references;
@@ -17,12 +21,25 @@ Current control docs:
 - `release_candidate_checklist.md` — restrained outward-sync
   `standing_gate` for the locked checkpoint;
 - `conditional_reopen_protocol.md` — bounded reopen protocol still governing
-  the current scientific-return stage; `E1c` remains conditional only.
+  the current bounded `D0` packet; `E1c` remains conditional only.
 
-Completed baseline:
-- `H3` / `P10` / `P11` / `F1` remain the completed baseline that made the
-  locked checkpoint auditable and handoff-safe before the active return packet
-  resumed reproduction work.
+Completed baselines:
+- `H14` / `R11` / `R12` / `H15` remain the completed bounded core-first
+  reopen/refreeze packet on the same endpoint; `R11` keeps geometry parity
+  exact while blocking same-endpoint speedup wording, `R12` keeps current
+  executor exports exact while making the harder-slice inventory explicit, and
+  `H15` leaves `R13` inactive plus `R14` unjustified on current evidence;
+- `H8` / `R6` / `R7` / `H9` remain the completed bounded long-horizon direct
+  baseline on the same endpoint; `R7` preserves the full admitted family set
+  but only profiles the top `4` heaviest representatives in its bounded
+  runtime stop result;
+- `H6` / `R3` / `R4` / inactive `R5` / `H7` remain the completed bounded
+  exactness/mechanism baseline underneath the current packet;
+- `H4` / `E1a` / `E1b` / `H5` remain the completed bounded return packet that
+  sharpened precision and same-scope systems wording without widening scope;
+- `H3` / `P10` / `P11` / `F1` remain the completed control baseline that made
+  the locked checkpoint auditable and handoff-safe before the active return
+  packets resumed reproduction work.
 
 Core ledgers:
 - `claim_ladder.md` — which claims are validated, partial, negative, or still
@@ -73,18 +90,23 @@ Derivative-only aids:
 
 Patch-playbook references:
 - `e1_patch_playbook_matrix.md` — lane-selection matrix retained as the
-  routing reference for the current bounded patch stage;
-- `e1a_precision_patch_playbook.md` — active bounded-precision protocol for the
-  current `E1a` lane;
-- `e1b_systems_patch_playbook.md` — active bounded-systems protocol for the
-  current `E1b` lane;
+  routing reference for historical `E1a/E1b` patch work and any future
+  bounded reopen;
+- `e1a_precision_patch_playbook.md` — completed bounded-precision protocol for
+  the historical `E1a` lane;
+- `e1b_systems_patch_playbook.md` — completed bounded-systems protocol for the
+  historical `E1b` lane;
 - `e1c_compiled_boundary_patch_playbook.md` — still-dormant compiled-boundary
-  protocol, used only if the current return stage exposes a `D0`
+  protocol, used only if the current bounded `D0` packet exposes a `D0`
   contradiction.
 
 Supporting references:
 - `release_preflight_checklist.md` — outward release checklist for README /
-  STATUS / release summary and paper-facing ledgers;
+  STATUS / release summary and paper-facing ledgers; now paired with the
+  machine-readable `release_preflight_checklist_audit` export;
+- `results/release_worktree_hygiene_snapshot/summary.json` — operational
+  repo-cleanliness snapshot used to decide whether an outward sync commit is
+  currently blocked by a dirty worktree;
 - `blog_release_rules.md` — explicit downstream preconditions before any future
   blog derivative is allowed to move;
 - `section_draft_upgrade_outline.md` — record of the structural pass that
@@ -110,16 +132,27 @@ Operating rule:
 - future short public-surface syncs should derive from
   `release_summary_draft.md`, while the manuscript bundle remains the
   authoritative paper-facing source;
-- derivative writing aids such as `abstract_contribution_pack.md`,
-  `derivative_material_pack.md`, `reviewer_boundary_note.md`, and
-  `external_release_note_skeleton.md` remain downstream-only and must not
-  outrun the locked manuscript bundle;
+- derivative writing aids remain downstream-only and must not outrun the locked
+  manuscript bundle;
 - appendix-level diagnostics that strengthen an existing claim row without
   widening scope should stay tied to that claim and the `P1` paper bundle,
   rather than becoming a new claim layer by default;
-- the current stage activates only `E1a` and `E1b` on named bounded conflicts;
-  `E1c` remains dormant unless the active patches expose a true `D0`
-  contradiction;
+- the current stage preserves `H8/R6/R7/H9` as the completed direct baseline,
+  preserves `H6/R3/R4/(inactive R5)/H7` as the deeper historical baseline,
+  preserves `H10/H11/R8/R9/R10/H12` as the latest completed same-endpoint
+  follow-up packet, preserves `H13/V1` as the completed governance/runtime
+  handoff, preserves `H14/R11/R12/H15` as the completed reopen/refreeze
+  packet, keeps `H15` as the current refrozen control stage, keeps `R13`
+  inactive plus `R14` unjustified on the current fixed-endpoint evidence
+  state, uses the bounded timing follow-up as the current operational
+  reference for full-suite runtime behavior, and leaves `E1c` dormant unless a
+  completed packet or later explicit review exposes a true `D0` contradiction;
+- short-form alignment for guards: `H15` refreeze-and-decision-sync is the
+  active driver, `H14` / `R11` / `R12` remain the completed reopen packet,
+  `H13` / `V1` remain the completed governance/runtime handoff, `H10` / `H11`
+  / `R8` / `R9` / `R10` / `H12` remain the latest completed same-endpoint
+  packet, and `H8` / `R6` / `R7` / `H9` remain the completed bounded
+  long-horizon direct baseline;
 - `blog_outline.md` remains downstream and currently blocked: `M7` resolved as
   a no-widening decision, so broader blog prose should not outrun the present
   paper-grade endpoint.

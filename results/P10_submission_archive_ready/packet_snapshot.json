@@ -32,28 +32,36 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "| `H4-H5` | The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits |",
-        "- The active stage is a bounded scientific return: `H4` resets the driver to reproduction, `E1a` sharpens the bounded precision story, `E1b` adds same-scope systems attribution, `E1c` stays conditional only, and `H5` refreezes through the standing audits."
+        "| `H10-H12` | completed bounded `D0` retrieval-pressure packet: `H10` reconciles `R7` to artifact-backed wording, `H11` replaces the driver, `R8` stresses higher retrieval pressure on the same endpoint, `R9` keeps real-trace precision companion-only, `R10` attributes same-endpoint costs, and `H12` refreezes the packet |",
+        "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
+        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
+        "- The current active post-`P9` stage is `H15_refreeze_and_decision_sync`."
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- `H4`, `E1a`, `E1b`, and `H5` are the active bounded lanes on top of the",
-        "- `E1c` remains conditional only and stays inactive unless a concrete `D0`"
+        "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
+        "stage. `V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+        "gate as `healthy_but_slow`.",
+        "`H15_refreeze_and_decision_sync`.",
+        "- `H14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
+        "- `E1c` remains conditional only and contradiction-only on the frozen `D0`",
+        "`H15_refreeze_and_decision_sync` under",
+        "- `E1c` remains conditional only and stays inactive unless the completed"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H4_reproduction_mainline_return`",
-        "- `E1a_precision_patch`",
-        "- `E1b_systems_patch`",
-        "- `H5_repro_sync_and_refreeze`",
-        "the completed baseline for documentation, archive, and derivative controls.",
-        "The logical lane order remains `E1a_precision_patch` -> `E1b_systems_patch`.",
-        "3. Run `E1a_precision_patch` on the current bounded precision suite only.",
-        "4. Run `E1b_systems_patch` on the current mixed systems gate only."
+        "- `H15_refreeze_and_decision_sync`",
+        "`H14_core_first_reopen_and_scope_lock` with landed `R11` and `R12`.",
+        "baseline. `H13_post_h12_rollover_and_next_stage_staging` remains preserved,",
+        "`H14_core_first_reopen_and_scope_lock` ->",
+        "`H15_refreeze_and_decision_sync`.",
+        "5. Preserve `H14_core_first_reopen_and_scope_lock` as the completed reopened",
+        "- `H15_refreeze_and_decision_sync` is the current refrozen control stage.",
+        "- `H14_core_first_reopen_and_scope_lock` is preserved as the completed"
       ]
     },
     {
@@ -63,7 +71,10 @@
         "- `manuscript_bundle_draft.md`",
         "- `appendix_companion_scope.md`",
         "- `current_stage_driver.md`",
-        "- `results/P10_submission_archive_ready/summary.json`"
+        "- `results/H15_refreeze_and_decision_sync/summary.json`",
+        "- `results/V1_full_suite_validation_runtime_timing_followup/summary.json`",
+        "- `results/release_worktree_hygiene_snapshot/summary.json`",
+        "- `results/release_preflight_checklist_audit/summary.json`"
       ]
     },
     {
@@ -71,8 +82,19 @@
       "matched_lines": [
         "- Python `3.12`",
         "- `uv` for environment and command orchestration",
+        "uv run python scripts/export_v1_full_suite_validation_runtime_timing_followup.py",
+        "uv run python scripts/export_release_worktree_hygiene_snapshot.py",
+        "uv run python scripts/export_release_preflight_checklist_audit.py",
         "uv run python scripts/export_p10_submission_archive_ready.py",
+        "- `results/release_worktree_hygiene_snapshot/summary.json` reports either",
         "Local-only source material under `docs/Origin/` and `docs/origin/` stays out of"
+      ]
+    },
+    {
+      "path": "results/release_worktree_hygiene_snapshot/summary.json",
+      "matched_lines": [
+        "\"release_commit_state\": \"dirty_worktree_release_commit_blocked\",",
+        "\"git_diff_check_state\": \"warnings_only\","
       ]
     },
     {

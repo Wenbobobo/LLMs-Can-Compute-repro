@@ -77,6 +77,18 @@ def load_inputs() -> dict[str, Any]:
             ROOT / "docs" / "publication_record" / "external_release_note_skeleton.md"
         ),
         "p1_summary": read_json(ROOT / "results" / "P1_paper_readiness" / "summary.json"),
+        "v1_timing_summary": read_json(
+            ROOT / "results" / "V1_full_suite_validation_runtime_timing_followup" / "summary.json"
+        ),
+        "worktree_hygiene_summary_text": read_text(
+            ROOT / "results" / "release_worktree_hygiene_snapshot" / "summary.json"
+        ),
+        "worktree_hygiene_summary": read_json(
+            ROOT / "results" / "release_worktree_hygiene_snapshot" / "summary.json"
+        ),
+        "release_preflight_summary": read_json(
+            ROOT / "results" / "release_preflight_checklist_audit" / "summary.json"
+        ),
         "p5_summary": read_json(ROOT / "results" / "P5_public_surface_sync" / "summary.json"),
         "p5_callout_summary": read_json(ROOT / "results" / "P5_callout_alignment" / "summary.json"),
         "h2_summary": read_json(ROOT / "results" / "H2_bundle_lock_audit" / "summary.json"),
@@ -94,6 +106,26 @@ def blocked_count_from_summary(summary_doc: dict[str, Any]) -> int:
     return int(summary_doc["summary"]["blocked_count"])
 
 
+def runtime_classification_from_summary(summary_doc: dict[str, Any]) -> str:
+    return str(summary_doc["summary"]["runtime_classification"])
+
+
+def timed_out_count_from_summary(summary_doc: dict[str, Any]) -> int:
+    return int(summary_doc["summary"]["timed_out_file_count"])
+
+
+def preflight_state_from_summary(summary_doc: dict[str, Any]) -> str:
+    return str(summary_doc["summary"]["preflight_state"])
+
+
+def release_commit_state_from_summary(summary_doc: dict[str, Any]) -> str:
+    return str(summary_doc["summary"]["release_commit_state"])
+
+
+def diff_check_state_from_summary(summary_doc: dict[str, Any]) -> str:
+    return str(summary_doc["summary"]["git_diff_check_state"])
+
+
 def build_checklist_rows(
     *,
     readme_text: str,
@@ -106,6 +138,10 @@ def build_checklist_rows(
     review_boundary_summary_text: str,
     external_release_note_skeleton_text: str,
     p1_summary: dict[str, Any],
+    v1_timing_summary: dict[str, Any],
+    release_preflight_summary: dict[str, Any],
+    worktree_hygiene_summary_text: str,
+    worktree_hygiene_summary: dict[str, Any],
     p5_summary: dict[str, Any],
     p5_callout_summary: dict[str, Any],
     h2_summary: dict[str, Any],
@@ -117,17 +153,18 @@ def build_checklist_rows(
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h4_reproduction_mainline_return`",
-                    "`e1a_precision_patch`",
-                    "`e1b_systems_patch`",
-                    "`h5_repro_sync_and_refreeze`",
+                    "`h15_refreeze_and_decision_sync`",
+                    "`h14_core_first_reopen_and_scope_lock`",
+                    "`h13_post_h12_rollover_and_next_stage_staging` remains preserved",
+                    "`v1_full_suite_validation_runtime_audit` remains a standing operational reference",
+                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint follow-up packet",
                     "`e1c_compiled_boundary_patch`",
-                    "logical lane order remains `e1a_precision_patch` -> `e1b_systems_patch`",
-                    "completed baseline",
+                    "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline underneath",
+                    "`h6/r3/r4/(inactive r5)/h7` remains the deeper historical baseline",
                 ],
             )
             else "blocked",
-            "notes": "The current-stage driver should expose the active bounded return packet and conditional compiled lane.",
+            "notes": "The current-stage driver should expose current H15, preserved H14/H13/V1 state, the preserved H12 checkpoint, and the conditional compiled lane.",
         },
         {
             "item_id": "planning_taxonomy_assigns_single_active_driver",
@@ -161,6 +198,10 @@ def build_checklist_rows(
                     "`claim_evidence_table.md`",
                     "`current_stage_driver.md`",
                     "`results/p1_paper_readiness/summary.json`",
+                    "`results/h15_refreeze_and_decision_sync/summary.json`",
+                    "`results/v1_full_suite_validation_runtime_timing_followup/summary.json`",
+                    "`results/release_worktree_hygiene_snapshot/summary.json`",
+                    "`results/release_preflight_checklist_audit/summary.json`",
                     "`results/p10_submission_archive_ready/summary.json`",
                 ],
             )
@@ -176,15 +217,40 @@ def build_checklist_rows(
                     "python `3.12`",
                     "`uv`",
                     "uv run python scripts/export_p1_paper_readiness.py",
+                    "uv run python scripts/export_h15_refreeze_and_decision_sync.py",
+                    "uv run python scripts/export_v1_full_suite_validation_runtime_audit.py",
+                    "uv run python scripts/export_v1_full_suite_validation_runtime_timing_followup.py",
                     "uv run python scripts/export_p5_public_surface_sync.py",
                     "uv run python scripts/export_h2_bundle_lock_audit.py",
+                    "uv run python scripts/export_release_worktree_hygiene_snapshot.py",
+                    "uv run python scripts/export_release_preflight_checklist_audit.py",
                     "uv run python scripts/export_p10_submission_archive_ready.py",
+                    "results/release_worktree_hygiene_snapshot/summary.json",
                     "`docs/Origin/`",
                     "`docs/origin/`",
                 ],
             )
             else "blocked",
             "notes": "The archival manifest should document regeneration commands and explicit restricted-source exclusions.",
+        },
+        {
+            "item_id": "release_worktree_snapshot_is_recorded_without_forcing_clean_tree",
+            "status": "pass"
+            if release_commit_state_from_summary(worktree_hygiene_summary)
+            in {
+                "dirty_worktree_release_commit_blocked",
+                "clean_worktree_ready_if_other_gates_green",
+            }
+            and diff_check_state_from_summary(worktree_hygiene_summary) != "content_issues_present"
+            and contains_all(
+                worktree_hygiene_summary_text,
+                [
+                    "\"release_commit_state\":",
+                    "\"git_diff_check_state\":",
+                ],
+            )
+            else "blocked",
+            "notes": "The packet should carry the machine-readable worktree snapshot as an operational commit gate without treating a dirty unattended tree as a science failure.",
         },
         {
             "item_id": "review_boundary_summary_preserves_scope",
@@ -226,19 +292,24 @@ def build_checklist_rows(
             if contains_all(
                 readme_text,
                 [
-                    "the active stage is a bounded scientific return",
-                    "`h4` resets the driver to reproduction",
-                    "`e1a` sharpens the bounded precision story",
+                    "`h10-h12` | completed bounded `d0` retrieval-pressure packet",
+                    "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
+                    "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
+                    "the current active post-`p9` stage is `h15_refreeze_and_decision_sync`",
                     "`e1c` stays conditional only",
                 ],
             )
             and contains_all(
                 status_text,
                 [
-                    "current active post-`p9` operational stage is a bounded reproduction-mainline return",
-                    "`h4`, `e1a`, `e1b`, and `h5`",
+                    "`h15_refreeze_and_decision_sync`",
+                    "`h14_core_first_reopen_and_scope_lock`",
+                    "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
                     "`e1c` remains conditional only",
-                    "logical lane order stays `e1a` then `e1b`",
+                    "`healthy_but_slow`",
+                    "the completed reopen wave ran through",
+                    "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline",
                 ],
             )
             and contains_all(
@@ -248,10 +319,13 @@ def build_checklist_rows(
                     "`planning_state_taxonomy.md`",
                     "`submission_packet_index.md`",
                     "`archival_repro_manifest.md`",
+                    "`h15` refreeze-and-decision-sync",
+                    "`h14` / `r11` / `r12` remain the completed reopen packet",
+                    "`h13` / `v1` remain the completed governance/runtime handoff",
                 ],
             )
             else "blocked",
-            "notes": "README, STATUS, and the publication index should all reflect the same active driver and packet docs.",
+            "notes": "README, STATUS, and the publication index should all reflect the same current H15 driver and preserved packet docs.",
         },
         {
             "item_id": "packet_docs_keep_restricted_sources_out_of_public_bundle",
@@ -268,6 +342,9 @@ def build_checklist_rows(
             "status": "pass"
             if ready_count_from_p1_summary(p1_summary) == 10
             and not p1_summary["blocked_or_partial_items"]
+            and runtime_classification_from_summary(v1_timing_summary) == "healthy_but_slow"
+            and timed_out_count_from_summary(v1_timing_summary) == 0
+            and preflight_state_from_summary(release_preflight_summary) == "docs_and_audits_green"
             and blocked_count_from_summary(p5_summary) == 0
             and blocked_count_from_summary(p5_callout_summary) == 0
             and blocked_count_from_summary(h2_summary) == 0
@@ -282,27 +359,32 @@ def build_packet_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         "README.md": (
             "readme_text",
             [
-                "The active stage is a bounded scientific return",
-                "`H4` resets the driver to reproduction",
-                "`E1a` sharpens the bounded precision story",
+                "`H10-H12` | completed bounded `D0` retrieval-pressure packet",
+                "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline",
+                "| `H14-H15` | completed bounded core-first reopen/refreeze packet",
+                "The current active post-`P9` stage is `H15_refreeze_and_decision_sync`",
             ],
         ),
         "STATUS.md": (
             "status_text",
             [
-                "current active post-`P9` operational stage is a bounded reproduction-mainline return",
-                "`H4`, `E1a`, `E1b`, and `H5`",
+                "`H15_refreeze_and_decision_sync`",
+                "`H14_core_first_reopen_and_scope_lock`",
+                "`V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
+                "`healthy_but_slow`",
                 "`E1c` remains conditional only",
             ],
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
             [
-                "`H4_reproduction_mainline_return`",
-                "`E1a_precision_patch`",
-                "`E1b_systems_patch`",
-                "`H5_repro_sync_and_refreeze`",
-                "completed baseline",
+                "`H15_refreeze_and_decision_sync`",
+                "`H14_core_first_reopen_and_scope_lock`",
+                "`H13_post_h12_rollover_and_next_stage_staging` remains preserved",
+                "`V1_full_suite_validation_runtime_audit` remains a standing operational reference",
+                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint follow-up packet",
+                "`H8/R6/R7/H9` remains the completed direct same-endpoint baseline underneath",
             ],
         ),
         "docs/publication_record/submission_packet_index.md": (
@@ -311,6 +393,10 @@ def build_packet_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 "`manuscript_bundle_draft.md`",
                 "`appendix_companion_scope.md`",
                 "`current_stage_driver.md`",
+                "`results/H15_refreeze_and_decision_sync/summary.json`",
+                "`results/V1_full_suite_validation_runtime_timing_followup/summary.json`",
+                "`results/release_worktree_hygiene_snapshot/summary.json`",
+                "`results/release_preflight_checklist_audit/summary.json`",
                 "`results/P10_submission_archive_ready/summary.json`",
             ],
         ),
@@ -319,8 +405,19 @@ def build_packet_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
             [
                 "Python `3.12`",
                 "`uv`",
+                "uv run python scripts/export_v1_full_suite_validation_runtime_timing_followup.py",
+                "uv run python scripts/export_release_worktree_hygiene_snapshot.py",
+                "uv run python scripts/export_release_preflight_checklist_audit.py",
                 "uv run python scripts/export_p10_submission_archive_ready.py",
+                "results/release_worktree_hygiene_snapshot/summary.json",
                 "`docs/Origin/`",
+            ],
+        ),
+        "results/release_worktree_hygiene_snapshot/summary.json": (
+            "worktree_hygiene_summary_text",
+            [
+                "\"release_commit_state\":",
+                "\"git_diff_check_state\":",
             ],
         ),
         "docs/publication_record/review_boundary_summary.md": (
@@ -353,17 +450,21 @@ def build_packet_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     return rows
 
 
-def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
+def build_summary(
+    checklist_rows: list[dict[str, object]], worktree_hygiene_summary: dict[str, Any]
+) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "reproduction_mainline_return_active",
+        "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
         "packet_state": "archive_ready" if not blocked_items else "blocked",
+        "release_commit_state": release_commit_state_from_summary(worktree_hygiene_summary),
+        "git_diff_check_state": diff_check_state_from_summary(worktree_hygiene_summary),
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff for venue-specific packaging while keeping scope fixed"
+            "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H15 stays aligned as the current refrozen stage, consult release_worktree_hygiene_snapshot before any release-facing commit, preserve H14/R11/R12 as the completed reopen packet, preserve H13/V1 as handoff state, keep H10/H11/R8/R9/R10/H12 as the latest completed checkpoint, and keep H8/R6/R7/H9 plus H6/R3/R4/(inactive R5)/H7 as preserved baselines"
             if not blocked_items
             else "resolve the blocked packet-readiness items before treating the bundle as archive-ready"
         ),
@@ -375,7 +476,7 @@ def main() -> None:
     inputs = load_inputs()
     rows = build_checklist_rows(**inputs)
     snapshot = build_packet_snapshot(inputs)
-    summary = build_summary(rows)
+    summary = build_summary(rows, inputs["worktree_hygiene_summary"])
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     write_json(
@@ -410,6 +511,9 @@ def main() -> None:
                 "docs/publication_record/review_boundary_summary.md",
                 "docs/publication_record/external_release_note_skeleton.md",
                 "results/P1_paper_readiness/summary.json",
+                "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
+                "results/release_worktree_hygiene_snapshot/summary.json",
+                "results/release_preflight_checklist_audit/summary.json",
                 "results/P5_public_surface_sync/summary.json",
                 "results/P5_callout_alignment/summary.json",
                 "results/H2_bundle_lock_audit/summary.json",

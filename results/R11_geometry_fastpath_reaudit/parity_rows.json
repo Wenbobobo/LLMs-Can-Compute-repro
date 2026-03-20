@@ -1,0 +1,71 @@
+{
+  "experiment": "r11_geometry_parity_rows",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "case_id": "duplicate_maximizer_average",
+      "query_count": 1,
+      "exact_match": true,
+      "brute_score": 5,
+      "accelerated_score": 5,
+      "maximizer_count": 2
+    },
+    {
+      "case_id": "collinear_tie_case",
+      "query_count": 1,
+      "exact_match": true,
+      "brute_score": 0,
+      "accelerated_score": 0,
+      "maximizer_count": 3
+    },
+    {
+      "case_id": "zero_query_average",
+      "query_count": 1,
+      "exact_match": true,
+      "brute_score": 0,
+      "accelerated_score": 0,
+      "maximizer_count": 3
+    },
+    {
+      "case_id": "vector_value_tie",
+      "query_count": 1,
+      "exact_match": true,
+      "brute_score": 0,
+      "accelerated_score": 0,
+      "maximizer_count": 2
+    },
+    {
+      "case_id": "seeded_randomized_reference",
+      "query_count": 200,
+      "exact_match": true,
+      "maximizer_count": null
+    }
+  ]
+}

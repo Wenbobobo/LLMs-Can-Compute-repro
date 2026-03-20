@@ -39,3 +39,31 @@
 - `E1b` improves attribution without changing that conclusion: the current gap
   is now broken out by program, suite, and history bridge, but no same-scope
   runtime row yet overturns the mixed gate or authorizes frontend widening.
+- `R4` closes the current mechanism question only on the same bounded `D0`
+  scope: it does not justify `R5`, does not change the mixed systems result,
+  and keeps staged-pointer / provenance artifacts diagnostic-only rather than
+  claim-bearing evidence.
+- `R7` keeps the same-endpoint runtime bridge negative on current evidence:
+  across the preserved `8`-family exact-admitted long-horizon surface, the
+  bounded runtime bridge only profiles the top `4` heaviest representatives;
+  on those profiled rows accelerated Hull decode is only about `0.973x` of
+  linear on median and still about `1980.3x` slower per step than the lowered
+  path, so no decode-level bridge closure or `R5` reopen is justified.
+- `R9` sharpens that precision caveat on admitted `R8` memory streams without
+  overturning it: one admitted stream still shows an immediate
+  `single_head` `tie_collapse` at `1x`, recovered only by the default
+  decomposition grid, so the follow-up remains companion-only and does not
+  justify broader unseen-family or stack-wide robustness.
+- `R10` makes the negative same-endpoint systems result more explicit rather
+  than less: on representative admitted `R6/R8` rows, exact runtime remains
+  about `99.8%` retrieval time with a median exact-versus-lowered ratio around
+  `2429.1x`, so current same-endpoint execution still does not support a
+  practical runtime-bridge claim or an `R5` reopen.
+- `R11` keeps the geometry fast path positive only as a mechanistic primitive:
+  the current bounded parity slice stays exact and the standalone cache
+  benchmark stays strong, but this still does not support same-endpoint
+  executor speedup wording.
+- `R12` keeps the current append-only executor story bounded: exact current
+  executor exports and bounded `trainable_stack` success do not justify
+  unseen-family generalization, a broad neural-executor claim, or activation
+  of `R13`.

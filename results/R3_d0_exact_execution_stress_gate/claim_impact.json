@@ -1,0 +1,51 @@
+{
+  "experiment": "r3_d0_exact_execution_claim_impact",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "status": "bounded_exactness_survives_harder_d0_suite",
+    "target_claims": [
+      "D0"
+    ],
+    "e1c_status": "not_triggered",
+    "next_lane": "R4_mechanistic_retrieval_closure",
+    "supported_here": [
+      "The bounded harder D0 suite remains exact under bytecode, lowered exec_trace, and standalone spec agreement.",
+      "Linear and accelerated Hull latest-write decoders stay exactly aligned on the admitted lowered rows."
+    ],
+    "bounded_companion": [
+      "4 longer memory streams enter the immediate float32 precision companion screen, while the stack streams stay easier on the screened horizon grid.",
+      "The weaker base-256 block-recentered control fails on 3/4 boundary-bearing streams where the base-64 decompositions stay exact."
+    ],
+    "unsupported_here": [
+      "No R3 output authorizes frontend widening or a broader compiled-language claim.",
+      "No R3 output turns the immediate precision companion into a broad long-horizon robustness claim."
+    ]
+  }
+}

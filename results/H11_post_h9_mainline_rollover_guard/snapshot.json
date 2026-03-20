@@ -1,0 +1,88 @@
+{
+  "experiment": "h11_post_h9_mainline_rollover_guard_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "tmp/2026-03-20-post-h9-d0-retrieval-pressure-plan.md",
+      "matched_lines": [
+        "# Post-H9 D0 Retrieval-Pressure Plan",
+        "1. `H10_r7_reconciliation_and_refreeze`",
+        "3. `R8_d0_retrieval_pressure_gate`"
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "| `H10-H12` | completed bounded `D0` retrieval-pressure packet: `H10` reconciles `R7` to artifact-backed wording, `H11` replaces the driver, `R8` stresses higher retrieval pressure on the same endpoint, `R9` keeps real-trace precision companion-only, `R10` attributes same-endpoint costs, and `H12` refreezes the packet |",
+        "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
+        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
+        "- The current active post-`P9` stage is `H15_refreeze_and_decision_sync`."
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
+        "stage. `V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+        "gate as `healthy_but_slow`.",
+        "`H15_refreeze_and_decision_sync`.",
+        "- `H14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
+        "`H15_refreeze_and_decision_sync` under"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `H15_refreeze_and_decision_sync`",
+        "`H14_core_first_reopen_and_scope_lock` with landed `R11` and `R12`.",
+        "baseline. `H13_post_h12_rollover_and_next_stage_staging` remains preserved,",
+        "`H14_core_first_reopen_and_scope_lock` ->",
+        "`H15_refreeze_and_decision_sync`.",
+        "5. Preserve `H14_core_first_reopen_and_scope_lock` as the completed reopened",
+        "- `H15_refreeze_and_decision_sync` is the current refrozen control stage.",
+        "- `H14_core_first_reopen_and_scope_lock` is preserved as the completed"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "then `H15_refreeze_and_decision_sync`. `E1c` remains conditional only and"
+      ]
+    },
+    {
+      "path": "results/release_preflight_checklist_audit/summary.json",
+      "matched_lines": [
+        "\"preflight_scope\": \"outward_release_surface_and_frozen_paper_bundle\",",
+        "\"preflight_state\": \"docs_and_audits_green\",",
+        "\"recommended_next_action\": \"use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H15 remains the current refrozen stage, H14/R11/R12 remains the completed reopen packet, and H13/V1 remains preserved handoff state\""
+      ]
+    }
+  ]
+}

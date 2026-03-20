@@ -1,0 +1,53 @@
+{
+  "experiment": "r10_claim_impact",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "status": "same_endpoint_cost_attribution_measured",
+    "target_claims": [
+      "D0"
+    ],
+    "e1c_status": "not_triggered",
+    "next_lane": "H12_refreeze_and_record_sync",
+    "supported_here": [
+      "R10 stays on representative same-endpoint admitted rows and measures where exact runtime is actually spent.",
+      "Current exact execution cost can be decomposed into retrieval, local transition, trace bookkeeping, and harness-facing setup rather than left as one opaque wall-clock number."
+    ],
+    "unsupported_here": [
+      "R10 does not reopen a broader systems packet or claim end-to-end superiority.",
+      "Representative-row attribution does not justify unseen-family runtime generalization."
+    ],
+    "distilled_result": {
+      "dominant_component": "retrieval_total",
+      "median_exact_vs_lowered_ratio": 2429.116321571347,
+      "median_retrieval_share_of_exact": 0.9980475095012138,
+      "negative_attribution_explicit": true
+    }
+  }
+}

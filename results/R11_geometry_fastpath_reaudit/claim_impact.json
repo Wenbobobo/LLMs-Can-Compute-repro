@@ -1,0 +1,56 @@
+{
+  "experiment": "r11_geometry_claim_impact",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "status": "geometry_fastpath_reaudited_on_current_code",
+    "target_claims": [
+      "D0"
+    ],
+    "next_lane": "R12_append_only_executor_long_horizon",
+    "supported_here": [
+      "The current bounded geometry parity slice stays exactly aligned with brute-force on the active codebase.",
+      "The preserved standalone benchmark still shows a strong Hull cache speedup against brute-force lookup.",
+      "The preserved R4 baseline still records zero parity failures and zero contradiction candidates on the current mechanistic closure bundle."
+    ],
+    "unsupported_here": [
+      "R11 does not show an end-to-end same-endpoint executor speedup over the lowered path.",
+      "R11 does not authorize broader systems, compiled-language, or headline-level computerhood claims."
+    ],
+    "allowed_wording": [
+      "Exact 2D hard-max retrieval still matches brute-force on the current bounded parity slice.",
+      "Standalone Hull caching still shows a strong cache-versus-brute-force asymptotic win on the preserved geometry benchmark.",
+      "The geometry fast path remains a mechanistic retrieval primitive rather than an end-to-end runtime claim."
+    ],
+    "blocked_wording": [
+      "Do not describe R11 as showing a same-endpoint executor speedup over the lowered path.",
+      "Do not widen the standalone geometry benchmark into a broader systems-superiority claim."
+    ]
+  }
+}

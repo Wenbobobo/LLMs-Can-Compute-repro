@@ -1,0 +1,61 @@
+{
+  "experiment": "r10_representative_selection",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "pair_rank": 1,
+      "family": "helper_checkpoint_braid_long",
+      "selection_rule": "top_2_harder_families_by_bytecode_step_count_plus_matched_r6_source_rows",
+      "harder_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "harder_bytecode_step_count": 4788,
+      "harder_max_steps": 10240,
+      "source_program_name": "bytecode_helper_checkpoint_braid_long_144_a312_s0",
+      "source_max_steps": 8192,
+      "event_growth_vs_source": 1.2488262910798122,
+      "total_candidate_depth_growth_vs_source": 1.5589779690272025,
+      "memory_max_candidate_depth": 182,
+      "stack_max_candidate_depth": 1808
+    },
+    {
+      "pair_rank": 2,
+      "family": "iterated_helper_accumulator",
+      "selection_rule": "top_2_harder_families_by_bytecode_step_count_plus_matched_r6_source_rows",
+      "harder_program_name": "bytecode_iterated_helper_accumulator_240_a144_b145",
+      "harder_bytecode_step_count": 3610,
+      "harder_max_steps": 10240,
+      "source_program_name": "bytecode_iterated_helper_accumulator_192_a144_b145",
+      "source_max_steps": 8192,
+      "event_growth_vs_source": 1.2491349480968859,
+      "total_candidate_depth_growth_vs_source": 1.5598885335107662,
+      "memory_max_candidate_depth": 242,
+      "stack_max_candidate_depth": 1444
+    }
+  ]
+}

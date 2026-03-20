@@ -1,0 +1,53 @@
+{
+  "experiment": "h10_r7_reconciliation_guard",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "tmp/2026-03-20-post-h9-d0-retrieval-pressure-plan.md",
+    "results/R7_d0_same_endpoint_runtime_bridge/summary.json",
+    "README.md",
+    "STATUS.md",
+    "docs/publication_record/current_stage_driver.md",
+    "docs/publication_record/release_summary_draft.md",
+    "docs/publication_record/claim_ladder.md",
+    "docs/publication_record/negative_results.md",
+    "docs/milestones/R7_d0_same_endpoint_runtime_bridge/status.md",
+    "docs/milestones/R7_d0_same_endpoint_runtime_bridge/result_digest.md",
+    "docs/milestones/H9_refreeze_and_record_sync/result_digest.md"
+  ],
+  "summary": {
+    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+    "reconciled_stage": "h10_r7_reconciliation_and_refreeze",
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "treat H8/R6/R7/H9 as the completed direct baseline and keep all future R7 wording on the bounded top-4-profile evidence while H15 preserves H14/R11/R12 as the completed reopen packet, H10/H11/R8/R9/R10/H12 as the latest completed checkpoint, and H13/V1 as preserved handoff state"
+  }
+}

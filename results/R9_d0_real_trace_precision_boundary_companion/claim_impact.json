@@ -1,0 +1,58 @@
+{
+  "experiment": "r9_claim_impact",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "status": "bounded_real_trace_precision_boundary_companion",
+    "target_claims": [
+      "D0"
+    ],
+    "e1c_status": "not_triggered",
+    "next_lane": "R10_d0_same_endpoint_cost_attribution",
+    "distilled_boundary": {
+      "effective_here": [
+        "Current admitted R8 memory streams remain precision-stable on 4/4 screened streams under the bounded grid."
+      ],
+      "unproven_here": [
+        "0/4 screened streams need decomposition recovery or remain boundary-bearing, so broader robustness is still unproven."
+      ],
+      "negated_here": [
+        "Single-head float32 fails immediately without screened recovery on 0/4 admitted R8 memory streams, and the weaker base-256 control fails on 0/1 boundary-bearing follow-ups."
+      ]
+    },
+    "supported_here": [
+      "R9 stays companion-only on exact-admitted R8 rows and sharpens the current real-trace precision boundary without changing endpoint scope.",
+      "The bounded grid distinguishes streams that remain stable at default settings from streams that only recover under a bounded decomposition follow-up."
+    ],
+    "unsupported_here": [
+      "R9 does not justify a broader stack-wide or unseen-family precision guarantee.",
+      "R9 does not reopen arbitrary compiled-language claims or widen the D0 endpoint."
+    ]
+  }
+}

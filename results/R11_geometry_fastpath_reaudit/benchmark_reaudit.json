@@ -1,0 +1,74 @@
+{
+  "experiment": "r11_geometry_benchmark_reaudit",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "row_count": 4,
+    "min_history_size": 128,
+    "max_history_size": 8192,
+    "min_cache_speedup_vs_bruteforce": 42.784441426508494,
+    "median_cache_speedup_vs_bruteforce": 171.0690374194566,
+    "max_cache_speedup_vs_bruteforce": 249.15020940668325,
+    "speedup_increases_with_history": true
+  },
+  "rows": [
+    {
+      "history_size": 128,
+      "query_count": 2000,
+      "insert_seconds": 0.0006896000122651458,
+      "brute_force_seconds": 1.6050625999923795,
+      "cache_seconds": 0.037515100033488125,
+      "cache_speedup_vs_bruteforce": 42.784441426508494
+    },
+    {
+      "history_size": 512,
+      "query_count": 2000,
+      "insert_seconds": 0.0012091000098735094,
+      "brute_force_seconds": 6.220118800003547,
+      "cache_seconds": 0.05115379998460412,
+      "cache_speedup_vs_bruteforce": 121.59641711614056
+    },
+    {
+      "history_size": 2048,
+      "query_count": 2000,
+      "insert_seconds": 0.0053317000274546444,
+      "brute_force_seconds": 26.00269950000802,
+      "cache_seconds": 0.11790379998274148,
+      "cache_speedup_vs_bruteforce": 220.54165772277267
+    },
+    {
+      "history_size": 8192,
+      "query_count": 2000,
+      "insert_seconds": 0.02950299996882677,
+      "brute_force_seconds": 106.97015090001514,
+      "cache_seconds": 0.4293399999733083,
+      "cache_speedup_vs_bruteforce": 249.15020940668325
+    }
+  ]
+}

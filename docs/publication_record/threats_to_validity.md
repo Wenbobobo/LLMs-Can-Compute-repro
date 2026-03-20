@@ -23,3 +23,10 @@
 - The first explicit systems gate still separates mechanism from system value:
   current geometry evidence is strong, but current-scope end-to-end timing does
   not show the lowered path beating the best current reference/oracle path.
+- The reopened `R11` geometry re-audit strengthens mechanism evidence, not
+  end-to-end same-endpoint systems evidence; the preserved standalone cache
+  benchmark should not be read as a runtime-bridge result.
+- The reopened `R12` executor re-audit remains bounded to the currently staged
+  `R6/R8` families and current exported modes; it does not establish
+  unseen-family executor robustness or justify a broader trainable-executor
+  claim.

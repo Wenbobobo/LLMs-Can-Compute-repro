@@ -1,0 +1,71 @@
+{
+  "experiment": "v1_full_suite_validation_runtime_timing_followup",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/V1_full_suite_validation_runtime_audit/summary.json",
+    "results/V1_full_suite_validation_runtime_audit/file_inventory.json"
+  ],
+  "summary": {
+    "runtime_classification": "healthy_but_slow",
+    "selected_file_count": 6,
+    "candidate_pool_count": 44,
+    "completed_file_count": 6,
+    "timed_out_file_count": 0,
+    "median_wall_seconds": 14.3865,
+    "max_wall_seconds": 25.1116,
+    "total_wall_seconds": 90.6089,
+    "slowest_files": [
+      {
+        "file_path": "tests/test_model_factorized_event_models.py",
+        "wall_seconds": 25.1116,
+        "heuristic_score": 19,
+        "summary_line": "3 passed, 1 warning in 22.99s"
+      },
+      {
+        "file_path": "tests/test_model_staged_pointer_event_models.py",
+        "wall_seconds": 22.7733,
+        "heuristic_score": 17,
+        "summary_line": "4 passed, 1 warning in 20.58s"
+      },
+      {
+        "file_path": "tests/test_model_neural_event_executor.py",
+        "wall_seconds": 18.5687,
+        "heuristic_score": 22,
+        "summary_line": "3 passed in 16.43s"
+      }
+    ],
+    "selection_rule": "bounded top model_or_training-heavy shortlist by heuristic score, capped at 6 files",
+    "recommended_next_action": "treat full pytest -q as a healthy but multi-minute gate on the current suite and reserve it for long unattended windows",
+    "notes": [
+      "This follow-up remains operational and does not change scientific scope.",
+      "Per-file timings classify likely runtime-heavy lanes before another full-suite unattended run."
+    ]
+  }
+}

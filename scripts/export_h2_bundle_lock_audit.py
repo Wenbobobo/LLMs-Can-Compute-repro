@@ -93,8 +93,10 @@ def build_checklist_rows(
                 readme_text,
                 [
                     "submission-candidate bundle",
-                    "the active stage is a bounded scientific return",
-                    "`h4` resets the driver to reproduction",
+                    "`h10-h12` | completed bounded `d0` retrieval-pressure packet",
+                    "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
+                    "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
+                    "the current active post-`p9` stage is `h15_refreeze_and_decision_sync`",
                     "`e1c` stays conditional only",
                 ],
             )
@@ -103,15 +105,20 @@ def build_checklist_rows(
                 [
                     "`p8` stage is complete on the current frozen scope",
                     "`p9` stage is complete on the same scope",
-                    "current active post-`p9` operational stage is a bounded reproduction-mainline return",
-                    "`h4`, `e1a`, `e1b`, and `h5`",
+                    "`h15_refreeze_and_decision_sync`",
+                    "`h14_core_first_reopen_and_scope_lock`",
+                    "`h13_post_h12_rollover_and_next_stage_staging` is no longer the active stage",
+                    "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
                     "`e1c` remains conditional only",
-                    "logical lane order stays `e1a` then `e1b`",
-                    "frontend widening remains blocked",
+                    "`healthy_but_slow`",
+                    "the completed reopen wave ran through",
+                    "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline",
+                    "`h6/r3/r4/(inactive r5)/h7` remains the deeper completed baseline",
                 ],
             )
             else "blocked",
-            "notes": "README and STATUS should both describe the locked checkpoint plus the active bounded return packet.",
+            "notes": "README and STATUS should both describe the locked checkpoint plus current H15 and preserved H14/H13/V1 state.",
         },
         {
             "item_id": "publication_record_tracks_driver_taxonomy",
@@ -122,7 +129,11 @@ def build_checklist_rows(
                     "current_stage_driver.md",
                     "planning_state_taxonomy.md",
                     "paper_package_plan.md",
+                    "release_preflight_checklist.md",
+                    "release_preflight_checklist_audit",
+                    "release_worktree_hygiene_snapshot",
                     "historical_complete",
+                    "healthy but multi-minute",
                     "submission_candidate_criteria.md",
                     "release_candidate_checklist.md",
                     "conditional_reopen_protocol.md",
@@ -141,13 +152,15 @@ def build_checklist_rows(
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h4_reproduction_mainline_return`",
-                    "`e1a_precision_patch`",
-                    "`e1b_systems_patch`",
-                    "`h5_repro_sync_and_refreeze`",
+                    "`h15_refreeze_and_decision_sync`",
+                    "`h14_core_first_reopen_and_scope_lock`",
+                    "`h13_post_h12_rollover_and_next_stage_staging` remains preserved",
+                    "`v1_full_suite_validation_runtime_audit` remains a standing operational reference",
+                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint follow-up packet",
                     "`e1c_compiled_boundary_patch`",
-                    "logical lane order remains `e1a_precision_patch` -> `e1b_systems_patch`",
-                    "completed baseline",
+                    "the completed reopened wave ran in the order",
+                    "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline underneath",
+                    "`h6/r3/r4/(inactive r5)/h7` remains the deeper historical baseline",
                 ],
             )
             and contains_all(
@@ -173,10 +186,10 @@ def build_checklist_rows(
                     "`p8` closed",
                     "`h2` remains",
                     "`p9` keeps outward wording downstream",
-                    "the active post-`p9` follow-up is a bounded reproduction-mainline return",
-                    "`h4` resets the active driver to the scientific mainline",
-                    "`e1a` sharpens bounded precision on current families",
-                    "`h5` refreezes through the standing audits",
+                    "`h10/h11/r8/r9/r10/h12` is now the latest completed same-endpoint follow-up packet",
+                    "`h13/v1` is now the preserved governance/runtime handoff",
+                    "the current active post-`p9` stage is `h15_refreeze_and_decision_sync`",
+                    "`e1c` remains conditional only",
                 ],
             )
             and contains_all(
@@ -217,6 +230,7 @@ def build_checklist_rows(
                     "results/p5_public_surface_sync/summary.json",
                     "results/p5_callout_alignment/summary.json",
                     "results/h2_bundle_lock_audit/summary.json",
+                    "results/release_preflight_checklist_audit/summary.json",
                     "blog work remains blocked",
                 ],
             )
@@ -257,9 +271,10 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             "readme_text",
             [
                 "submission-candidate bundle",
-                "The active stage is a bounded scientific return",
-                "`H4` resets the driver to reproduction",
-                "`E1a` sharpens the bounded precision story",
+                "`H10-H12` | completed bounded `D0` retrieval-pressure packet",
+                "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline",
+                "| `H14-H15` | completed bounded core-first reopen/refreeze packet",
+                "The current active post-`P9` stage is `H15_refreeze_and_decision_sync`",
             ],
         ),
         "STATUS.md": (
@@ -267,8 +282,12 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             [
                 "`P8` stage is complete on the current frozen scope",
                 "`P9` stage is complete on the same scope",
-                "bounded reproduction-mainline return",
-                "`H4`, `E1a`, `E1b`, and `H5`",
+                "`H15_refreeze_and_decision_sync`",
+                "`H14_core_first_reopen_and_scope_lock`",
+                "`H13_post_h12_rollover_and_next_stage_staging` is no longer the active stage",
+                "`V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
+                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
+                "`healthy_but_slow`",
             ],
         ),
         "docs/publication_record/README.md": (
@@ -277,6 +296,10 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
                 "current_stage_driver.md",
                 "planning_state_taxonomy.md",
                 "paper_package_plan.md",
+                "release_preflight_checklist.md",
+                "release_preflight_checklist_audit",
+                "release_worktree_hygiene_snapshot",
+                "healthy but multi-minute",
                 "release_candidate_checklist.md",
                 "conditional_reopen_protocol.md",
             ],
@@ -284,11 +307,12 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
             [
-                "`H4_reproduction_mainline_return`",
-                "`E1a_precision_patch`",
-                "`E1b_systems_patch`",
-                "`H5_repro_sync_and_refreeze`",
-                "completed baseline",
+                "`H15_refreeze_and_decision_sync`",
+                "`H14_core_first_reopen_and_scope_lock`",
+                "`H13_post_h12_rollover_and_next_stage_staging` remains preserved",
+                "`V1_full_suite_validation_runtime_audit` remains a standing operational reference",
+                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint follow-up packet",
+                "`H8/R6/R7/H9` remains the completed direct same-endpoint baseline underneath",
             ],
         ),
         "docs/publication_record/planning_state_taxonomy.md": (
@@ -311,8 +335,10 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
                 "`P8` closed",
                 "`H2` remains",
                 "`P9` keeps outward wording downstream",
-                "The active post-`P9` follow-up is a bounded reproduction-mainline return",
-                "`H4` resets the active driver to the scientific mainline",
+                "`H10/H11/R8/R9/R10/H12` is now the latest completed same-endpoint follow-up packet",
+                "`H13/V1` is now the preserved governance/runtime handoff",
+                "The current active post-`P9` stage is `H15_refreeze_and_decision_sync`",
+                "`E1c` remains conditional only",
             ],
         ),
         "docs/publication_record/paper_bundle_status.md": (
@@ -336,6 +362,8 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
             [
                 "State: `standing_gate`",
                 "results/P1_paper_readiness/summary.json",
+                "results/release_preflight_checklist_audit/summary.json",
+                "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
                 "results/P5_public_surface_sync/summary.json",
                 "results/H2_bundle_lock_audit/summary.json",
                 "Blog work remains blocked",
@@ -370,14 +398,14 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "reproduction_mainline_return_active",
+        "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
         "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
         "check_count": len(rows),
         "pass_count": sum(row["status"] == "pass" for row in rows),
         "blocked_count": sum(row["status"] != "pass" for row in rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "keep the H2 bundle-lock audit green while the H4/E1a/E1b/H5 bounded return packet stays active"
+            "keep the H2 bundle-lock audit green while H15 stays aligned as the current refrozen stage, H14/R11/R12 remains the completed reopen packet, H13/V1 remains preserved handoff state, H10/H11/R8/R9/R10/H12 remains the latest completed checkpoint, and H8/R6/R7/H9 plus H6/R3/R4/(inactive R5)/H7 remain preserved baselines"
             if not blocked_items
             else "resolve the blocked bundle-lock or release-hygiene items before another outward sync"
         ),

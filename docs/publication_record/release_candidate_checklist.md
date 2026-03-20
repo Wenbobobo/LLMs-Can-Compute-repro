@@ -25,13 +25,26 @@ release-candidate state after the current submission-candidate bundle lock.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
+- [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero
+  blocked items on the current refrozen control surface.
+- [ ] `results/H14_core_first_reopen_guard/summary.json` reports zero blocked
+  items on the preserved core-first reopen control surface.
+- [ ] `results/H13_post_h12_governance_stage_health/summary.json` reports zero
+  blocked items on the preserved governance/runtime handoff.
 - [ ] `results/P5_public_surface_sync/summary.json` reports zero blocked items.
 - [ ] `results/P5_callout_alignment/summary.json` reports zero blocked rows.
 - [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.
+- [ ] `results/release_worktree_hygiene_snapshot/summary.json` classifies
+  whether the current worktree blocks an outward sync commit.
+- [ ] `results/release_preflight_checklist_audit/summary.json` reports
+  `docs_and_audits_green` with zero blocked items.
+- [ ] `results/V1_full_suite_validation_runtime_timing_followup/summary.json`
+  reports `healthy_but_slow` with zero timed-out files.
 
 ## Release hygiene
 
-- [ ] The repo is clean before the outward sync commit.
+- [ ] `results/release_worktree_hygiene_snapshot/summary.json` is checked
+  before the outward sync commit.
 - [ ] No local-only source material under `docs/Origin/` or `docs/origin/`
   appears in public-facing docs or release notes.
 - [ ] Blog work remains blocked unless this checklist and

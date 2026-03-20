@@ -1,0 +1,63 @@
+{
+  "experiment": "r10_pair_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "pair_rank": 1,
+      "family": "helper_checkpoint_braid_long",
+      "source_program_name": "bytecode_helper_checkpoint_braid_long_144_a312_s0",
+      "harder_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "source_exact_total_seconds": 113.88003280002158,
+      "harder_exact_total_seconds": 184.14788469998166,
+      "exact_runtime_growth_vs_source": 1.6170339977277102,
+      "source_retrieval_share_of_exact": 0.9980683347214774,
+      "harder_retrieval_share_of_exact": 0.9984477904841851,
+      "source_exact_vs_lowered_ratio": 2494.825077558123,
+      "harder_exact_vs_lowered_ratio": 3165.2005205548103,
+      "source_dominant_exact_component": "retrieval_total",
+      "harder_dominant_exact_component": "retrieval_total"
+    },
+    {
+      "pair_rank": 2,
+      "family": "iterated_helper_accumulator",
+      "source_program_name": "bytecode_iterated_helper_accumulator_192_a144_b145",
+      "harder_program_name": "bytecode_iterated_helper_accumulator_240_a144_b145",
+      "source_exact_total_seconds": 61.598412099992856,
+      "harder_exact_total_seconds": 98.29222999990452,
+      "exact_runtime_growth_vs_source": 1.5956942175773379,
+      "source_retrieval_share_of_exact": 0.9975104747939221,
+      "harder_retrieval_share_of_exact": 0.9980266842809502,
+      "source_exact_vs_lowered_ratio": 549.5716812520227,
+      "harder_exact_vs_lowered_ratio": 2363.4075655845704,
+      "source_dominant_exact_component": "retrieval_total",
+      "harder_dominant_exact_component": "retrieval_total"
+    }
+  ]
+}

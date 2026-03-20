@@ -1,0 +1,95 @@
+{
+  "experiment": "r11_geometry_fastpath_reaudit",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/M2_geometry_core/benchmark_geometry.json",
+    "results/R4_mechanistic_retrieval_closure/summary.json",
+    "results/R10_d0_same_endpoint_cost_attribution/summary.json",
+    "tests/test_geometry_hardmax.py",
+    "tests/test_model_exact_hardmax.py"
+  ],
+  "summary": {
+    "current_exactness": {
+      "parity_case_count": 5,
+      "exact_match_count": 5,
+      "all_cases_exact": true
+    },
+    "benchmark_reaudit": {
+      "row_count": 4,
+      "min_history_size": 128,
+      "max_history_size": 8192,
+      "min_cache_speedup_vs_bruteforce": 42.784441426508494,
+      "median_cache_speedup_vs_bruteforce": 171.0690374194566,
+      "max_cache_speedup_vs_bruteforce": 249.15020940668325,
+      "speedup_increases_with_history": true
+    },
+    "mechanistic_baseline": {
+      "program_count": 32,
+      "suite_count": 6,
+      "source_observation_count": 4290,
+      "parity_failure_count": 0,
+      "contradiction_candidate_count": 0
+    },
+    "same_endpoint_guard": {
+      "dominant_exact_component": "retrieval_total",
+      "median_retrieval_share_of_exact": 0.9980475095012138,
+      "median_exact_vs_lowered_ratio": 2429.116321571347,
+      "profiled_row_count": 4,
+      "representative_pair_count": 2,
+      "negative_attribution_explicit": true,
+      "same_endpoint_fastpath_material": false
+    },
+    "claim_impact": {
+      "status": "geometry_fastpath_reaudited_on_current_code",
+      "target_claims": [
+        "D0"
+      ],
+      "next_lane": "R12_append_only_executor_long_horizon",
+      "supported_here": [
+        "The current bounded geometry parity slice stays exactly aligned with brute-force on the active codebase.",
+        "The preserved standalone benchmark still shows a strong Hull cache speedup against brute-force lookup.",
+        "The preserved R4 baseline still records zero parity failures and zero contradiction candidates on the current mechanistic closure bundle."
+      ],
+      "unsupported_here": [
+        "R11 does not show an end-to-end same-endpoint executor speedup over the lowered path.",
+        "R11 does not authorize broader systems, compiled-language, or headline-level computerhood claims."
+      ],
+      "allowed_wording": [
+        "Exact 2D hard-max retrieval still matches brute-force on the current bounded parity slice.",
+        "Standalone Hull caching still shows a strong cache-versus-brute-force asymptotic win on the preserved geometry benchmark.",
+        "The geometry fast path remains a mechanistic retrieval primitive rather than an end-to-end runtime claim."
+      ],
+      "blocked_wording": [
+        "Do not describe R11 as showing a same-endpoint executor speedup over the lowered path.",
+        "Do not widen the standalone geometry benchmark into a broader systems-superiority claim."
+      ]
+    }
+  }
+}

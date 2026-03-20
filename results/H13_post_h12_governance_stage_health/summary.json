@@ -1,0 +1,63 @@
+{
+  "experiment": "h13_post_h12_governance_stage_health",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/publication_record/current_stage_driver.md",
+    "docs/milestones/H13_post_h12_rollover_and_next_stage_staging/README.md",
+    "docs/milestones/H13_post_h12_rollover_and_next_stage_staging/status.md",
+    "docs/milestones/H13_post_h12_rollover_and_next_stage_staging/artifact_index.md",
+    "docs/milestones/H13_post_h12_rollover_and_next_stage_staging/result_digest.md",
+    "results/V1_full_suite_validation_runtime_audit/summary.json",
+    "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
+    "results/H10_r7_reconciliation_guard/summary.json",
+    "results/H11_post_h9_mainline_rollover_guard/summary.json",
+    "results/H8_driver_replacement_guard/summary.json",
+    "results/H6_mainline_rollover_guard/summary.json",
+    "results/P5_public_surface_sync/summary.json",
+    "results/H2_bundle_lock_audit/summary.json",
+    "results/release_worktree_hygiene_snapshot/summary.json",
+    "results/release_preflight_checklist_audit/summary.json",
+    "results/P10_submission_archive_ready/summary.json",
+    "results/M7_frontend_candidate_decision/decision_summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h15_refreeze_and_decision_sync_complete",
+    "active_stage": "h15_refreeze_and_decision_sync",
+    "preserved_stage": "h13_post_h12_rollover_and_next_stage_staging",
+    "entrypoint_role": "preserved_governance_handoff_reference",
+    "stage_health_state": "preserved_handoff_green",
+    "release_commit_state": "dirty_worktree_release_commit_blocked",
+    "check_count": 7,
+    "pass_count": 7,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "use this summary as the preserved H13/V1 handoff reference while H15 keeps the repo refrozen; keep H14/R11/R12 preserved as the completed reopen packet, keep H10/H11/R8/R9/R10/H12 frozen, consult release_worktree_hygiene_snapshot before any release-facing commit, and do not treat H13/V1 as an active science lane"
+  }
+}

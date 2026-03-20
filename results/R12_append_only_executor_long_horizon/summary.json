@@ -1,0 +1,121 @@
+{
+  "experiment": "r12_append_only_executor_long_horizon",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/M4_exact_hardmax_model/free_running_executor.json",
+    "results/R3_d0_exact_execution_stress_gate/summary.json",
+    "results/R3_d0_exact_execution_stress_gate/claim_impact.json",
+    "results/R4_mechanistic_retrieval_closure/summary.json",
+    "src/bytecode/datasets.py",
+    "src/model/free_running_executor.py"
+  ],
+  "summary": {
+    "free_running_baseline": {
+      "mode_count": 3,
+      "mode_names": [
+        "exact_accelerated",
+        "exact_linear",
+        "trainable_stack"
+      ],
+      "all_modes_exact": true,
+      "countdown_heldout_program_count": 14,
+      "max_exact_heldout_steps": 104,
+      "trainable_stack_program_count": 14
+    },
+    "harder_d0_baseline": {
+      "exact_suite_row_count": 7,
+      "positive_row_count": 7,
+      "exact_trace_match_count": 2,
+      "exact_final_state_match_count": 5,
+      "decode_parity_match_count": 7,
+      "boundary_bearing_stream_count": 4,
+      "negative_control_failure_count": 3,
+      "e1c_status": "not_triggered"
+    },
+    "mechanistic_baseline": {
+      "program_count": 32,
+      "suite_count": 6,
+      "event_count": 5078,
+      "source_observation_count": 4290,
+      "parity_failure_count": 0,
+      "contradiction_candidate_count": 0
+    },
+    "horizon_inventory": {
+      "r6_row_count": 24,
+      "r6_family_count": 8,
+      "r8_row_count": 4,
+      "r8_family_count": 4,
+      "max_r6_horizon_multiplier": 8,
+      "max_r8_horizon_multiplier": 10,
+      "comparison_modes": [
+        "long_exact_final_state",
+        "medium_exact_trace"
+      ],
+      "priority_r8_families": [
+        "checkpoint_replay_long",
+        "helper_checkpoint_braid_long",
+        "iterated_helper_accumulator",
+        "subroutine_braid_long"
+      ]
+    },
+    "claim_impact": {
+      "status": "append_only_executor_long_horizon_reaudit_exported",
+      "target_claims": [
+        "D0"
+      ],
+      "next_lane": "H15_refreeze_and_decision_sync",
+      "supported_here": [
+        "The current exact free-running executor remains exact on the preserved M4 countdown, branch, and memory suites in both linear and accelerated modes.",
+        "The preserved harder D0 baseline still records 7/7 exact-suite rows, 7/7 decode-parity rows, and no contradiction candidates.",
+        "The reopened long-horizon inventory is explicit across 24 staged R6 rows and 4 staged R8 harder rows on the same fixed endpoint."
+      ],
+      "unsupported_here": [
+        "R12 does not yet authorize unseen-family generalization beyond the currently staged R6/R8 families.",
+        "Trainable stack success remains a bounded bridge observation and does not reopen a broad neural executor claim."
+      ],
+      "followup_contract": {
+        "conditional_r13_only_if": "A remaining bounded executor gap is localized to the stack-read bridge rather than endpoint scope or precision collapse.",
+        "priority_r8_families": [
+          "checkpoint_replay_long",
+          "helper_checkpoint_braid_long",
+          "iterated_helper_accumulator",
+          "subroutine_braid_long"
+        ],
+        "failure_taxonomy": [
+          "retrieval_exactness",
+          "horizon_budget",
+          "trace_organization",
+          "precision_boundary",
+          "local_transition"
+        ]
+      }
+    }
+  }
+}

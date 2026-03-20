@@ -25,12 +25,24 @@ current freeze candidate is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
+- [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero
+  blocked items on the current refrozen control surface.
+- [ ] `results/H14_core_first_reopen_guard/summary.json` reports zero blocked
+  items on the preserved core-first reopen control surface.
+- [ ] `results/H13_post_h12_governance_stage_health/summary.json` reports zero
+  blocked items on the preserved governance/runtime handoff.
 - [ ] `results/P5_public_surface_sync/summary.json` reports zero blocked items.
 - [ ] `results/P5_callout_alignment/summary.json` reports zero blocked rows.
+- [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.
+- [ ] `results/release_worktree_hygiene_snapshot/summary.json` classifies the
+  current release-commit readiness and reports no diff-check content issues.
+- [ ] `results/V1_full_suite_validation_runtime_timing_followup/summary.json`
+  reports `healthy_but_slow` with zero timed-out files.
 
 ## Release hygiene
 
-- [ ] The current repo state is clean before any outward sync commit.
+- [ ] Use `results/release_worktree_hygiene_snapshot/summary.json` to decide
+  whether an outward sync commit is currently blocked by a dirty tree.
 - [ ] No local-only source material under `docs/Origin/` or `docs/origin/`
   enters the public surface.
 - [ ] Blog work remains blocked unless `blog_release_rules.md` is satisfied in

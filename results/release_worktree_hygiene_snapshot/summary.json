@@ -1,0 +1,58 @@
+{
+  "experiment": "release_worktree_hygiene_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "git status --short --branch --untracked-files=all",
+    "git diff --check"
+  ],
+  "summary": {
+    "repo_hygiene_scope": "current_worktree_and_diff_check",
+    "branch": "main...origin/main",
+    "changed_path_count": 339,
+    "modified_path_count": 41,
+    "tracked_dirty_count": 41,
+    "untracked_path_count": 298,
+    "untracked_count": 298,
+    "staged_path_count": 0,
+    "staged_count": 0,
+    "unstaged_path_count": 41,
+    "unstaged_count": 41,
+    "release_commit_state": "dirty_worktree_release_commit_blocked",
+    "working_tree_clean": false,
+    "git_diff_check_state": "warnings_only",
+    "warning_count": 9,
+    "issue_count": 0,
+    "check_count": 2,
+    "pass_count": 2,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "do not create an outward sync commit from the current tree; isolate the intended release subset or wait for a clean tree"
+  }
+}

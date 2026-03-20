@@ -1,0 +1,86 @@
+{
+  "experiment": "h14_core_first_reopen_guard_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `H15_refreeze_and_decision_sync`",
+        "`H14_core_first_reopen_and_scope_lock` with landed `R11` and `R12`.",
+        "`H14_core_first_reopen_and_scope_lock` ->",
+        "`R11_geometry_fastpath_reaudit` ->",
+        "`R12_append_only_executor_long_horizon` ->",
+        "`H15_refreeze_and_decision_sync`.",
+        "5. Preserve `H14_core_first_reopen_and_scope_lock` as the completed reopened",
+        "- `H15_refreeze_and_decision_sync` is the current refrozen control stage."
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
+        "- The current active post-`P9` stage is `H15_refreeze_and_decision_sync`."
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "`H15_refreeze_and_decision_sync`.",
+        "- `H14_core_first_reopen_and_scope_lock` is now the completed reopened packet",
+        "`H14 -> R11 -> R12 -> conditional R13 -> bounded R14 -> H15`.",
+        "`H15_refreeze_and_decision_sync` under"
+      ]
+    },
+    {
+      "path": "docs/milestones/H14_core_first_reopen_and_scope_lock/status.md",
+      "matched_lines": [
+        "- `R11_geometry_fastpath_reaudit` and",
+        "`R12_append_only_executor_long_horizon` have now landed as the required",
+        "- current `H15` readiness says `R13_small_model_executor_reactivation` is not",
+        "- current `H15` readiness says `R14_bounded_compiled_probe` is not currently",
+        "- `H15_refreeze_and_decision_sync` completed the refreeze and synchronized the"
+      ]
+    },
+    {
+      "path": "docs/milestones/H14_core_first_reopen_and_scope_lock/artifact_index.md",
+      "matched_lines": [
+        "- `docs/plans/2026-03-20-h14-core-first-reopen-design.md`",
+        "- `results/H14_core_first_reopen_guard/summary.json`"
+      ]
+    },
+    {
+      "path": "docs/milestones/H13_post_h12_rollover_and_next_stage_staging/result_digest.md",
+      "matched_lines": [
+        "`H13` completed the governance-only post-`H12` handoff and left the repo ready",
+        "- did not authorize `R11`, `R12`, `R13`, or `R14`;"
+      ]
+    }
+  ]
+}
