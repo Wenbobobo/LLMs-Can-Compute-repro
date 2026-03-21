@@ -1,0 +1,110 @@
+{
+  "experiment": "r22_d0_true_boundary_localization_gate",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/R19_d0_pointer_like_surface_generalization_gate/runtime_rows.json",
+    "results/R20_d0_runtime_mechanism_ablation_matrix/summary.json",
+    "results/R21_d0_exact_executor_boundary_break_map/summary.json",
+    "docs/plans/2026-03-21-post-h19-mainline-reentry-design.md",
+    "tmp/active_wave_plan.md",
+    "src/model/free_running_executor.py",
+    "src/bytecode/datasets.py"
+  ],
+  "summary": {
+    "status": "r22_boundary_localization_complete",
+    "current_frozen_stage": "h19_refreeze_and_next_scope_decision",
+    "source_runtime_stage": "r21_d0_exact_executor_boundary_break_map",
+    "gate": {
+      "lane_verdict": "no_failure_in_extended_grid",
+      "reason": "Every executed R22 candidate stayed exact inside the harder same-endpoint boundary grid.",
+      "planned_branch_count": 51,
+      "planned_candidate_count": 102,
+      "executed_candidate_count": 102,
+      "resource_skipped_candidate_count": 0,
+      "pruned_candidate_count": 0,
+      "exact_candidate_count": 102,
+      "failure_candidate_count": 0,
+      "failure_branch_count": 0,
+      "continuity_anchor_candidate_count": 6,
+      "continuity_anchor_exact_count": 6,
+      "extended_probe_candidate_count": 96,
+      "extended_probe_exact_count": 96,
+      "first_fail_candidate_id": null,
+      "first_fail_program_name": null,
+      "first_fail_reproduced": null,
+      "first_fail_supporting_exact_neighbor_count": null,
+      "next_priority_lane": "r23_d0_same_endpoint_systems_overturn_gate"
+    },
+    "planned_lane_classes": [
+      "continuity_anchor",
+      "extended_probe"
+    ],
+    "planned_families": [
+      "checkpoint_replay_long",
+      "helper_checkpoint_braid",
+      "helper_checkpoint_braid_long",
+      "subroutine_braid",
+      "subroutine_braid_long"
+    ],
+    "planned_unique_address_targets": [
+      6,
+      8,
+      12,
+      16,
+      20,
+      24,
+      32
+    ],
+    "planned_horizon_multipliers": [
+      2.0,
+      2.5,
+      3.0
+    ],
+    "planned_checkpoint_depths": [
+      "plus_one",
+      "plus_two"
+    ],
+    "planned_hot_address_skews": [
+      "baseline",
+      "flattened"
+    ],
+    "executed_family_count": 5,
+    "recommended_next_action": "Advance to R23 on the same D0 endpoint, then refreeze R22 and R23 together in H21.",
+    "supported_here": [
+      "R22 stayed on the current tiny typed-bytecode D0 endpoint.",
+      "R22 preserved a continuity-anchor set and a harder extended-probe set in one machine-readable export.",
+      "R22 preserves positive rows, failure rows, and first-fail diagnostics without opening a repair lane."
+    ],
+    "unsupported_here": [
+      "R22 does not authorize wider frontend, wider language scope, or a broader softmax-replacement claim.",
+      "R22 does not itself repair failures or widen beyond the same-endpoint executor story."
+    ]
+  }
+}
