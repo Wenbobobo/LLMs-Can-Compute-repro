@@ -70,24 +70,27 @@ The next phase should therefore split cleanly:
 
 ### Wave A: `P12_manuscript_and_manifest_maintenance` preserved closeout
 
-- Update `claim_ladder.md`, `claim_evidence_table.md`,
-  `negative_results.md`, `experiment_manifest.md`,
-  `review_boundary_summary.md`, and related publication ledgers.
-- Record three core consequences:
+- Preserve the already-landed `P12` closeout outputs in `claim_ladder.md`,
+  `claim_evidence_table.md`, `negative_results.md`,
+  `experiment_manifest.md`, `review_boundary_summary.md`, and related
+  publication ledgers.
+- Keep three core consequences explicit in those preserved records:
   - `R22` strengthens bounded no-break evidence but still does not localize the
     true executor boundary;
   - `R23` strengthens exactness and mechanism relevance but fails the
     same-endpoint systems overturn goal;
-  - `H21` keeps scope locked and routes the active lane to conservative
-    manuscript/manifest maintenance.
-- Reserve any figure/table placeholders for `R22/R23/H21` as mixed or negative
-  evidence, not as widened-claim staging.
+  - `H21` keeps scope locked and the downstream manuscript/manifest closeout is
+    now preserved-complete rather than the current active lane.
+- Treat any figure/table placeholders for `R22/R23/H21` as historical mixed or
+  negative evidence scaffolding, not as widened-claim staging.
 
 Acceptance:
 
-- claim/evidence ledgers reflect `R22/R23/H21`;
-- negative or mixed evidence is first-class in the manuscript-facing records;
-- no outward-safe prose outruns the new ledgers.
+- already satisfied by the landed `P12` packet unless a later outward-sync doc
+  reveals a concrete ledger mismatch;
+- negative or mixed evidence remains first-class in the manuscript-facing
+  records;
+- no outward-safe prose outruns the preserved ledgers.
 
 ### Wave B: `R24_d0_boundary_localization_zoom_followup` planning-only prelay
 

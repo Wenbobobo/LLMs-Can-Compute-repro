@@ -8,8 +8,8 @@ current freeze candidate is assembled.
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
 - [ ] `STATUS.md` reflects the current frozen `H21` same-endpoint state and
-  names `P12` as the immediate next-priority lane while keeping `P13`
-  downstream-only.
+  records the preserved `P12` closeout plus the current planning-only
+  `R24/R25` handoff while keeping `P13` downstream-only.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
   wording downstream of landed `H21`.
 

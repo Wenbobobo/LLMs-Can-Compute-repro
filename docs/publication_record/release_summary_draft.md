@@ -81,6 +81,13 @@ stage, `H14` remains the completed prior reopened packet rather than the active
 stage, and `E1c` remains conditional only and contradiction-only on current
 evidence.
 
+The downstream `P12` manuscript / manifest closeout implied by `H21` is now
+preserved in the repo docs. The current pre-next-phase work is therefore
+planning-only rather than experimental: `R24` keeps a boundary-first reopen
+packet ready without authorizing execution, `R25` keeps same-endpoint systems
+hypotheses and kill criteria explicit, and `P13` remains later outward-sync
+hygiene rather than an active science lane.
+
 ## Reproducibility pointers
 
 - `README.md`
