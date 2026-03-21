@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from exec_trace import (
     TraceInterpreter,
     countdown_program,
@@ -9,6 +11,7 @@ from exec_trace import (
     memory_accumulator_program,
 )
 from model import (
+    FreeRunningTraceExecutor,
     build_countdown_stack_samples,
     compare_execution_to_reference,
     evaluate_free_running_programs,
@@ -54,6 +57,78 @@ def test_free_running_exact_accelerated_matches_reference_programs() -> None:
 
         assert execution.events == reference.events
         assert execution.final_state == reference.final_state
+
+
+def test_free_running_partitioned_memory_matches_reference_programs() -> None:
+    programs = (
+        latest_write_program(),
+        memory_accumulator_program(),
+        dynamic_memory_program(),
+    )
+    interpreter = TraceInterpreter()
+    executor = FreeRunningTraceExecutor(
+        stack_strategy="accelerated",
+        memory_strategy="partitioned_exact",
+    )
+
+    for program in programs:
+        execution = executor.run(program)
+        reference = interpreter.run(program)
+
+        assert execution.events == reference.events
+        assert execution.final_state == reference.final_state
+
+
+def test_free_running_pointer_like_exact_matches_reference_programs() -> None:
+    programs = (
+        countdown_program(12),
+        equality_branch_program(2, 2),
+        latest_write_program(),
+        memory_accumulator_program(),
+        dynamic_memory_program(),
+    )
+    interpreter = TraceInterpreter()
+    executor = FreeRunningTraceExecutor(
+        stack_strategy="pointer_like_exact",
+        memory_strategy="pointer_like_exact",
+    )
+
+    for program in programs:
+        execution = executor.run(program)
+        reference = interpreter.run(program)
+
+        assert execution.events == reference.events
+        assert execution.final_state == reference.final_state
+
+
+def test_free_running_staged_exact_matches_reference_programs() -> None:
+    programs = (
+        countdown_program(12),
+        equality_branch_program(1, 3),
+        latest_write_program(),
+        memory_accumulator_program(),
+        dynamic_memory_program(),
+    )
+    interpreter = TraceInterpreter()
+    executor = FreeRunningTraceExecutor(
+        stack_strategy="staged_exact",
+        memory_strategy="staged_exact",
+    )
+
+    for program in programs:
+        execution = executor.run(program)
+        reference = interpreter.run(program)
+
+        assert execution.events == reference.events
+        assert execution.final_state == reference.final_state
+
+
+def test_free_running_rejects_partitioned_stack_strategy() -> None:
+    with pytest.raises(ValueError, match="partitioned_exact"):
+        FreeRunningTraceExecutor(
+            stack_strategy="partitioned_exact",
+            memory_strategy="accelerated",
+        )
 
 
 def test_compare_execution_to_reference_reports_exact_match() -> None:

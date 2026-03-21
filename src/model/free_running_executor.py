@@ -12,7 +12,14 @@ from geometry import HullKVCache, brute_force_hardmax_2d
 from model.exact_hardmax import encode_latest_write_key, encode_latest_write_query
 from model.trainable_latest_write import LatestWriteCandidate, TrainableLatestWriteScorer, bucket_name
 
-ReadStrategy = Literal["linear", "accelerated", "trainable"]
+ReadStrategy = Literal[
+    "linear",
+    "accelerated",
+    "partitioned_exact",
+    "pointer_like_exact",
+    "staged_exact",
+    "trainable",
+]
 SpaceName = Literal["stack", "memory"]
 
 
@@ -73,6 +80,12 @@ class _LatestWriteSpace:
         self._linear_keys: list[tuple[int, Fraction]] = []
         self._linear_values: list[int] = []
         self._accelerated = HullKVCache()
+        self._latest_by_address: dict[int, int] = {}
+        self._latest_candidate_index_by_address: dict[int, int] = {}
+        self._candidate_values: list[int] = []
+        self._staged_head_by_address: dict[int, int] = {}
+        self._staged_values: list[int] = []
+        self._staged_prev_index: list[int | None] = []
         self._candidates: list[LatestWriteCandidate] = []
 
     @property
@@ -85,16 +98,43 @@ class _LatestWriteSpace:
         self._linear_keys.append(key)
         self._linear_values.append(value)
         self._accelerated.insert(key, value)
-        self._candidates.append(LatestWriteCandidate(address=address, step=step, value=value))
+        self._latest_by_address[address] = value
+        self._record_candidate(address=address, value=value, step=step)
 
-    def read_exact(self, address: int) -> tuple[int, int]:
+    def read_linear(self, address: int) -> int:
         self._ensure_readable_address(address)
         query = encode_latest_write_query(address)
         linear_value = brute_force_hardmax_2d(self._linear_keys, self._linear_values, query).value
-        accelerated_value = self._accelerated.query(query).value
-        if not isinstance(linear_value, int) or not isinstance(accelerated_value, int):
+        if not isinstance(linear_value, int):
             raise TypeError("Latest-write runtime expects scalar integer values.")
-        return (linear_value, accelerated_value)
+        return linear_value
+
+    def read_accelerated(self, address: int) -> int:
+        self._ensure_readable_address(address)
+        query = encode_latest_write_query(address)
+        accelerated_value = self._accelerated.query(query).value
+        if not isinstance(accelerated_value, int):
+            raise TypeError("Latest-write runtime expects scalar integer values.")
+        return accelerated_value
+
+    def read_exact(self, address: int) -> tuple[int, int]:
+        return (self.read_linear(address), self.read_accelerated(address))
+
+    def read_partitioned(self, address: int) -> int:
+        self._ensure_readable_address(address)
+        return self._latest_by_address[address]
+
+    def read_pointer_like(self, address: int) -> int:
+        self._ensure_readable_address(address)
+        latest_index = self._latest_candidate_index_by_address[address]
+        return self._candidate_values[latest_index]
+
+    def read_staged_exact(self, address: int) -> int:
+        self._ensure_readable_address(address)
+        head_index = self._staged_head_by_address[address]
+        if head_index < 0:
+            raise RuntimeError(f"Invalid staged head index for address {address}.")
+        return self._staged_values[head_index]
 
     def _seed_address(self, address: int) -> None:
         if address in self._seen_addresses:
@@ -104,9 +144,19 @@ class _LatestWriteSpace:
         self._linear_keys.append(key)
         self._linear_values.append(self.default_value)
         self._accelerated.insert(key, self.default_value)
-        self._candidates.append(
-            LatestWriteCandidate(address=address, step=-1, value=self.default_value, is_default=True)
-        )
+        self._latest_by_address[address] = self.default_value
+        self._record_candidate(address=address, value=self.default_value, step=-1, is_default=True)
+
+    def _record_candidate(self, *, address: int, value: int, step: int, is_default: bool = False) -> None:
+        self._candidates.append(LatestWriteCandidate(address=address, step=step, value=value, is_default=is_default))
+        self._candidate_values.append(value)
+        candidate_index = len(self._candidate_values) - 1
+        self._latest_candidate_index_by_address[address] = candidate_index
+
+        previous_index = self._staged_head_by_address.get(address)
+        self._staged_values.append(value)
+        self._staged_prev_index.append(previous_index)
+        self._staged_head_by_address[address] = len(self._staged_values) - 1
 
     def _ensure_readable_address(self, address: int) -> None:
         if address in self._seen_addresses:
@@ -123,15 +173,19 @@ class FreeRunningTraceExecutor:
         self,
         *,
         stack_strategy: ReadStrategy = "accelerated",
-        memory_strategy: Literal["linear", "accelerated"] = "accelerated",
+        memory_strategy: ReadStrategy = "accelerated",
         stack_scorer: TrainableLatestWriteScorer | None = None,
         default_memory_value: int = 0,
         validate_exact_reads: bool = True,
     ) -> None:
+        if stack_strategy == "partitioned_exact":
+            raise ValueError("stack_strategy='partitioned_exact' is reserved for memory-only counterfactual probes.")
         if stack_strategy == "trainable" and stack_scorer is None:
             raise ValueError("stack_strategy='trainable' requires a stack_scorer.")
         if stack_strategy != "trainable" and stack_scorer is not None:
             raise ValueError("stack_scorer should only be provided for trainable stack execution.")
+        if memory_strategy == "trainable":
+            raise ValueError("memory_strategy='trainable' is unsupported for free-running exact execution.")
 
         self.stack_strategy = stack_strategy
         self.memory_strategy = memory_strategy
@@ -437,23 +491,73 @@ class FreeRunningTraceExecutor:
         scorer: TrainableLatestWriteScorer | None,
         read_observations: list[ReadObservation],
     ) -> int:
-        linear_value, accelerated_value = history.read_exact(address)
-        if self.validate_exact_reads and linear_value != accelerated_value:
-            raise RuntimeError(
-                f"Exact read mismatch at step {step} for {space}[{address}]: "
-                f"{linear_value} != {accelerated_value}"
-            )
+        linear_value: int | None = None
+        accelerated_value: int | None = None
+        partitioned_value: int | None = None
+        pointer_value: int | None = None
+        staged_value: int | None = None
 
         if strategy == "linear":
+            linear_value = history.read_linear(address)
             chosen_value = linear_value
         elif strategy == "accelerated":
+            accelerated_value = history.read_accelerated(address)
             chosen_value = accelerated_value
+        elif strategy == "partitioned_exact":
+            if space != "memory":
+                raise RuntimeError("partitioned_exact is only supported for memory reads.")
+            partitioned_value = history.read_partitioned(address)
+            chosen_value = partitioned_value
+        elif strategy == "pointer_like_exact":
+            pointer_value = history.read_pointer_like(address)
+            chosen_value = pointer_value
+        elif strategy == "staged_exact":
+            staged_value = history.read_staged_exact(address)
+            chosen_value = staged_value
         elif strategy == "trainable":
             if scorer is None:
                 raise RuntimeError("Trainable stack reads require a scorer.")
             chosen_value = scorer.predict_value_for_query(address, history.candidates)
         else:
             raise RuntimeError(f"Unsupported read strategy: {strategy}")
+
+        if self.validate_exact_reads:
+            if linear_value is None:
+                linear_value = history.read_linear(address)
+            if accelerated_value is None:
+                accelerated_value = history.read_accelerated(address)
+            if partitioned_value is None:
+                partitioned_value = history.read_partitioned(address)
+            if pointer_value is None:
+                pointer_value = history.read_pointer_like(address)
+            if staged_value is None:
+                staged_value = history.read_staged_exact(address)
+
+        if self.validate_exact_reads and linear_value != accelerated_value:
+            raise RuntimeError(
+                f"Exact read mismatch at step {step} for {space}[{address}]: "
+                f"{linear_value} != {accelerated_value}"
+            )
+        if self.validate_exact_reads and partitioned_value != linear_value:
+            raise RuntimeError(
+                f"Partitioned exact read mismatch at step {step} for {space}[{address}]: "
+                f"{partitioned_value} != {linear_value}"
+            )
+        if self.validate_exact_reads and pointer_value != linear_value:
+            raise RuntimeError(
+                f"Pointer-like exact read mismatch at step {step} for {space}[{address}]: "
+                f"{pointer_value} != {linear_value}"
+            )
+        if self.validate_exact_reads and staged_value != linear_value:
+            raise RuntimeError(
+                f"Staged exact read mismatch at step {step} for {space}[{address}]: "
+                f"{staged_value} != {linear_value}"
+            )
+
+        if linear_value is None:
+            linear_value = chosen_value
+        if accelerated_value is None:
+            accelerated_value = chosen_value
 
         read_observations.append(
             ReadObservation(
@@ -486,7 +590,13 @@ def run_free_running_with_stack_scorer(
     program: Program,
     scorer: TrainableLatestWriteScorer,
     *,
-    memory_mode: Literal["linear", "accelerated"] = "accelerated",
+    memory_mode: Literal[
+        "linear",
+        "accelerated",
+        "partitioned_exact",
+        "pointer_like_exact",
+        "staged_exact",
+    ] = "accelerated",
     max_steps: int = 10_000,
 ) -> FreeRunningExecutionResult:
     executor = FreeRunningTraceExecutor(

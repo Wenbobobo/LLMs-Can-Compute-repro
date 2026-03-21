@@ -1191,3 +1191,77 @@ def r8_d0_retrieval_pressure_cases() -> tuple[RetrievalPressureCase, ...]:
                 )
             )
     return tuple(cases)
+
+
+def r15_d0_remaining_family_retrieval_pressure_cases() -> tuple[RetrievalPressureCase, ...]:
+    registry = (
+        {
+            "family": "indirect_counter_bank",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 12 * 8,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 512 * 8,
+            "diagnostic_surface": False,
+            "builder": lambda start: indirect_counter_bank_program(
+                start,
+                counter_address=32,
+                accumulator_address=33,
+            ),
+        },
+        {
+            "family": "helper_checkpoint_braid",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 6 * 8,
+            "comparison_mode": "medium_exact_trace",
+            "baseline_max_steps": 256 * 8,
+            "diagnostic_surface": True,
+            "builder": lambda start: helper_checkpoint_braid_program(
+                start,
+                base_address=280,
+                selector_seed=0,
+            ),
+        },
+        {
+            "family": "subroutine_braid",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 8 * 8,
+            "comparison_mode": "medium_exact_trace",
+            "baseline_max_steps": 512 * 8,
+            "diagnostic_surface": False,
+            "builder": lambda start: subroutine_braid_program(start, base_address=96),
+        },
+        {
+            "family": "stack_memory_braid",
+            "baseline_stage": "R6_d0_long_horizon_scaling_gate",
+            "baseline_start": 10 * 8,
+            "comparison_mode": "long_exact_final_state",
+            "baseline_max_steps": 1024 * 8,
+            "diagnostic_surface": True,
+            "builder": lambda start: stack_memory_braid_program(start, base_address=112),
+        },
+    )
+
+    cases: list[RetrievalPressureCase] = []
+    for entry in registry:
+        builder = entry["builder"]
+        baseline_start = int(entry["baseline_start"])
+        baseline_program_name = builder(baseline_start).name
+        for multiplier in (10,):
+            scaled_start = (baseline_start // 8) * multiplier
+            cases.append(
+                RetrievalPressureCase(
+                    family=str(entry["family"]),
+                    baseline_stage=str(entry["baseline_stage"]),
+                    baseline_program_name=baseline_program_name,
+                    baseline_horizon_multiplier=8,
+                    baseline_start=baseline_start,
+                    retrieval_horizon_multiplier=multiplier,
+                    scaled_start=scaled_start,
+                    suite="r15_remaining_family_retrieval_pressure",
+                    comparison_mode=str(entry["comparison_mode"]),
+                    max_steps=(int(entry["baseline_max_steps"]) // 8) * multiplier,
+                    program=builder(scaled_start),
+                    diagnostic_surface=bool(entry["diagnostic_surface"]),
+                )
+            )
+    return tuple(cases)
