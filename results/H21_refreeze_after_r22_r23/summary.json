@@ -1,0 +1,96 @@
+{
+  "experiment": "h21_refreeze_after_r22_r23",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/H21_refreeze_after_r22_r23/README.md",
+    "docs/milestones/H21_refreeze_after_r22_r23/status.md",
+    "docs/milestones/H21_refreeze_after_r22_r23/todo.md",
+    "docs/milestones/H21_refreeze_after_r22_r23/acceptance.md",
+    "docs/milestones/H21_refreeze_after_r22_r23/artifact_index.md",
+    "docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md",
+    "results/H19_refreeze_and_next_scope_decision/summary.json",
+    "results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json",
+    "results/R22_d0_true_boundary_localization_gate/summary.json",
+    "results/R23_d0_same_endpoint_systems_overturn_gate/summary.json",
+    "results/R2_systems_baseline_gate/summary.json",
+    "results/E1b_systems_patch/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h21_refreeze_after_r22_r23_complete",
+    "active_stage": "h21_refreeze_after_r22_r23",
+    "prior_frozen_stage": "h19_refreeze_and_next_scope_decision",
+    "reentry_stage": "h20_post_h19_mainline_reentry_and_hygiene_split",
+    "decision_state": "post_r22_r23_refreeze_complete",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "boundary_verdict": "extended_grid_no_break_still_not_localized",
+    "systems_verdict": "systems_still_mixed",
+    "future_frontier_review_state": "planning_only_conditionally_reviewable",
+    "future_frontier_lane": "f2_future_frontier_recheck_activation_matrix",
+    "unsatisfied_frontier_activation_conditions": [
+      "true_executor_boundary_localization",
+      "current_scope_systems_story_materially_positive",
+      "scope_lift_thesis_explicitly_reauthorized"
+    ],
+    "next_priority_lane": "p12_manuscript_and_manifest_maintenance",
+    "supported_here_count": 4,
+    "unsupported_here_count": 5,
+    "disconfirmed_here_count": 1,
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "Advance to P12 to update claim ladders, manifests, and negative-result ledgers while keeping outward prose downstream.",
+    "supported_here": [
+      "R22 stayed on the fixed tiny typed-bytecode D0 endpoint and extended the bounded executor-boundary scan beyond the original R21 grid.",
+      "R22 executed 102/102 planned candidates in the harder same-endpoint grid.",
+      "R23 stayed on the full current positive D0 systems universe and kept pointer-like exact exact on 25/25 rows.",
+      "R23 keeps the same-endpoint systems story explicit and measured rather than letting the project drift on mechanism-only evidence."
+    ],
+    "unsupported_here": [
+      "No H21 claim widens beyond the current tiny typed-bytecode D0 endpoint.",
+      "H21 still does not authorize arbitrary compiled-language claims, a general softmax-replacement thesis, or a broader 'LLMs are computers' headline.",
+      "H21 does not treat F2 planning material as permission to run widened probes by momentum.",
+      "The true executor failure boundary is still not localized on the current same-endpoint evidence.",
+      "The current-scope systems story is still not materially positive enough to support broader systems claims."
+    ],
+    "disconfirmed_here": [
+      "R22 disconfirms the narrower expectation that the earlier R21 grid had already exposed an executor failure inside the currently tested same-endpoint envelope."
+    ],
+    "distilled_result": {
+      "r22_lane_verdict": "no_failure_in_extended_grid",
+      "r22_executed_candidate_count": 102,
+      "r22_failure_candidate_count": 0,
+      "r23_lane_verdict": "systems_still_mixed",
+      "r23_pointer_like_exact_case_count": 25,
+      "r23_total_case_count": 25,
+      "r23_pointer_like_median_ratio_vs_best_reference": 4.164328445173109
+    }
+  }
+}

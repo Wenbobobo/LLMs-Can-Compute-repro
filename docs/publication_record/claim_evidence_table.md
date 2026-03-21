@@ -136,6 +136,27 @@
   Refreeze-and-decision sync: the repo is now explicitly refrozen after the
   bounded reopen wave, with `R13` inactive, `R14` unjustified, and no new
   active science lane authorized without a later explicit plan.
+- `D0` — `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`
+  Same-scope refreeze: the completed `H16/R15/R16/R17/R18` packet is frozen as
+  the preserved prior reopen/refreeze baseline, with frontier review still
+  conditional-only.
+- `D0` — `results/H19_refreeze_and_next_scope_decision/summary.json`
+  Same-endpoint mainline refreeze: the completed `H18/R19/R20/R21` packet is
+  frozen machine-readably, with runtime generalization and mechanism support
+  carried forward but no boundary break localized.
+- `D0` — `results/R22_d0_true_boundary_localization_gate/summary.json`
+  Harder boundary follow-up: the extended `102`-candidate executor grid stays
+  exact throughout, so the bounded no-break story is strengthened but true
+  boundary localization remains open.
+- `D0` — `results/R23_d0_same_endpoint_systems_overturn_gate/summary.json`
+  Same-endpoint systems recheck: `pointer_like_exact` stays exact on the full
+  positive `D0` suite and is much faster than imported accelerated, but it is
+  still slower than both the best current reference path and the lowered path,
+  so the systems verdict remains mixed.
+- `D0` — `results/H21_refreeze_after_r22_r23/summary.json`
+  Post-`R22/R23` refreeze: the current machine-readable state keeps scope
+  locked, records `systems_still_mixed`, leaves three frontier-activation
+  conditions unsatisfied, and routes the next priority to `P12`.
 - `D0` — `results/M7_frontend_candidate_decision/decision_summary.json`
   Frontend decision bundle: the current endpoint stays on tiny typed bytecode,
   frontend widening is not authorized, and any revisit now requires a fresh
@@ -161,33 +182,25 @@
 
 - `H4` completed the bounded reproduction return packet, and `E1a/E1b/H5`
   remain the immediate evidence baseline for current precision/systems wording.
-- `H15` is the current refrozen stage after one bounded `H14/R11/R12` reopen
-  packet on the same endpoint.
-- `H14` completed one explicit core-first reopen without widening: `R11`
-  re-audited exact geometry, `R12` re-audited append-only/latest-write
-  executor closure, `R13` stayed inactive, and `R14` stayed unjustified.
+- `H21` is the current refrozen stage after the bounded
+  `H20/R22/R23/H21` follow-up on top of the preserved `H18/R19/R20/R21/H19`
+  packet.
+- `H20` separated dirty-tree hygiene from the next science wave without
+  widening the endpoint or changing the frozen evidence state by prose alone.
+- `R22` completed the harder same-endpoint boundary follow-up and strengthened
+  the no-break-observed story without localizing a true executor boundary.
+- `R23` completed the harder same-endpoint systems recheck, preserved exactness
+  on the full positive `D0` suite, and still left the systems verdict mixed.
+- `H19` remains the preserved pre-`R22/R23` same-endpoint refreeze for the
+  completed `H18/R19/R20/R21` packet.
+- `H17` remains the preserved prior same-scope refreeze for the completed
+  `H16/R15/R16/R17/R18` packet.
+- `H15` remains the preserved prior refreeze for the completed
+  `H14/R11/R12` reopen packet.
 - `H8/R6/R7/H9` remains the completed direct same-endpoint baseline for the
   current packet.
 - `H6/R3/R4/(inactive R5)/H7` remains the deeper completed
   exactness/mechanism baseline underneath it.
-- `H10` reconciles the prior packet to the artifact-backed `R7` top-`4`
-  profile wording and records that correction machine-readably.
-- `H11` moved the repo into the completed retrieval-pressure follow-up packet,
-  which is now preserved rather than active.
-- `R8` is the completed retrieval-pressure gate on the same fixed `D0`
-  endpoint and now hands the packet forward to `R9` and `R10`.
-- `R9` is the completed bounded precision companion lane and stays limited to
-  admitted `R8` same-endpoint memory streams only.
-- `R10` is the completed same-endpoint cost-attribution lane and remains
-  narrower than a reopened systems packet.
-- `H12` has now rerun the standing audits, synchronized the ledgers, and left
-  the current packet refrozen on the same endpoint.
-- `R11` is the completed exact-geometry re-audit lane and keeps the same-endpoint
-  performance story explicitly negative.
-- `R12` is the completed append-only executor re-audit lane and remains
-  bounded to the current staged `R6/R8` families.
-- `H15` has now synchronized the ledgers again and leaves the repo refrozen on
-  the same endpoint with `R13` inactive and `R14` unjustified.
 - `E1c` remains inactive unless the active packet exposes a concrete frozen-`D0`
   contradiction that wording alone cannot repair.
 - `H3` / `P10` / `P11` / `F1` remain the documentation/archive baseline while

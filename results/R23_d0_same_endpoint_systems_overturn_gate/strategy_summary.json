@@ -1,0 +1,112 @@
+{
+  "experiment": "r23_strategy_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "strategy_id": "bytecode_reference",
+      "control_class": "reference_path",
+      "case_count": 25,
+      "exact_case_count": 25,
+      "median_ns_per_step": 6265.536418952848,
+      "median_ratio_vs_best_reference": 1.7545981340481063,
+      "median_retrieval_share": null,
+      "dominant_component_counts": []
+    },
+    {
+      "strategy_id": "spec_reference",
+      "control_class": "reference_path",
+      "case_count": 25,
+      "exact_case_count": 25,
+      "median_ns_per_step": 3365.5366991872843,
+      "median_ratio_vs_best_reference": 1.0,
+      "median_retrieval_share": null,
+      "dominant_component_counts": []
+    },
+    {
+      "strategy_id": "lowered_exec_trace",
+      "control_class": "lowered_baseline",
+      "case_count": 25,
+      "exact_case_count": 25,
+      "median_ns_per_step": 6102.840416133404,
+      "median_ratio_vs_best_reference": 1.7168801128212166,
+      "median_retrieval_share": null,
+      "dominant_component_counts": []
+    },
+    {
+      "strategy_id": "linear_exact",
+      "control_class": "same_endpoint_exact_candidate",
+      "case_count": 25,
+      "exact_case_count": 25,
+      "median_ns_per_step": 164904.1660130024,
+      "median_ratio_vs_best_reference": 49.3823038415429,
+      "median_retrieval_share": 0.8988811873779899,
+      "dominant_component_counts": [
+        {
+          "component": "non_retrieval",
+          "count": 4
+        },
+        {
+          "component": "retrieval_total",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "strategy_id": "accelerated",
+      "control_class": "same_endpoint_exact_candidate",
+      "case_count": 25,
+      "exact_case_count": 25,
+      "median_ns_per_step": 337888.46160929935,
+      "median_ratio_vs_best_reference": 102.27124308521466,
+      "median_retrieval_share": 0.9441736433877438,
+      "dominant_component_counts": [
+        {
+          "component": "retrieval_total",
+          "count": 25
+        }
+      ]
+    },
+    {
+      "strategy_id": "pointer_like_exact",
+      "control_class": "same_endpoint_exact_candidate",
+      "case_count": 25,
+      "exact_case_count": 25,
+      "median_ns_per_step": 14741.818251257593,
+      "median_ratio_vs_best_reference": 4.164328445173109,
+      "median_retrieval_share": 0.023242820153297997,
+      "dominant_component_counts": [
+        {
+          "component": "non_retrieval",
+          "count": 25
+        }
+      ]
+    }
+  ]
+}

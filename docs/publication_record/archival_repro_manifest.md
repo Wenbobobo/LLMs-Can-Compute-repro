@@ -29,6 +29,15 @@ uv sync --group dev
 uv run python scripts/export_p1_figure_table_sources.py
 uv run python scripts/render_p1_paper_artifacts.py
 uv run python scripts/export_p1_paper_readiness.py
+uv run python scripts/export_h18_post_h17_mainline_reopen_guard.py
+uv run python scripts/export_r19_d0_pointer_like_surface_generalization_gate.py
+uv run python scripts/export_r20_d0_runtime_mechanism_ablation_matrix.py
+uv run python scripts/export_r21_d0_exact_executor_boundary_break_map.py
+uv run python scripts/export_h19_refreeze_and_next_scope_decision.py
+uv run python scripts/export_h20_post_h19_mainline_reentry_and_hygiene_split.py
+uv run python scripts/export_r22_d0_true_boundary_localization_gate.py
+uv run python scripts/export_r23_d0_same_endpoint_systems_overturn_gate.py
+uv run python scripts/export_h21_refreeze_after_r22_r23.py
 uv run python scripts/export_h15_refreeze_and_decision_sync.py
 uv run python scripts/export_h14_core_first_reopen_guard.py
 uv run python scripts/export_h13_post_h12_governance_stage_health.py
@@ -47,9 +56,14 @@ uv run pytest -q
 
 - `results/P1_paper_readiness/summary.json` shows `10/10` ready figure/table
   items and no blocked or partial rows
+- `results/H21_refreeze_after_r22_r23/summary.json` records the current
+  refrozen same-endpoint state, keeps future frontier review planning-only,
+  and points the next downstream lane at `P12`
+- `results/H19_refreeze_and_next_scope_decision/summary.json` remains the
+  preserved pre-`R22/R23` refrozen same-endpoint control state
 - `results/H15_refreeze_and_decision_sync/summary.json` records the current
-  refrozen stage, leaves `R13` inactive, leaves `R14` unjustified, and shows
-  zero blocked items
+  preserved prior refrozen stage, leaves `R13` inactive, leaves `R14`
+  unjustified, and shows zero blocked items
 - `results/H14_core_first_reopen_guard/summary.json` shows zero blocked items
   on the preserved core-first reopen control surface
 - `results/H13_post_h12_governance_stage_health/summary.json` shows zero
@@ -80,4 +94,7 @@ only as excluded inputs, never as required release artifacts.
 This archive is evidence for a narrow mechanistic endpoint: append-only traces,
 exact latest-write retrieval, bounded precision, and a tiny typed-bytecode
 `D0` compiled boundary. It is not evidence for arbitrary C, general LLM
-computation, or current-scope end-to-end systems superiority.
+computation, or current-scope end-to-end systems superiority. The landed
+`H21` packet strengthens same-endpoint runtime support inside the fixed `D0`
+boundary, but it still does not localize the true executor boundary and still
+does not overturn the mixed same-endpoint systems gate.

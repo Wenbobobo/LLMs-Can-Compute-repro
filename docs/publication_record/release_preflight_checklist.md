@@ -7,10 +7,11 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects the same frozen paper scope and names the current
-  next action without implying a new evidence wave.
+- [ ] `STATUS.md` reflects the current frozen `H21` same-endpoint state and
+  names `P12` as the immediate next-priority lane while keeping `P13`
+  downstream-only.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
-  wording.
+  wording downstream of landed `H21`.
 
 ## Paper-facing ledgers
 
@@ -25,8 +26,15 @@ current freeze candidate is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
+- [ ] `results/H21_refreeze_after_r22_r23/summary.json` reports zero blocked
+  items on the current refrozen control surface.
+- [ ] `results/H19_refreeze_and_next_scope_decision/summary.json` remains
+  available as the preserved pre-`R22/R23` control surface.
+- [ ] `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`
+  still reports zero blocked items on the preserved prior same-scope refreeze
+  surface.
 - [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero
-  blocked items on the current refrozen control surface.
+  blocked items on the preserved prior refrozen control surface.
 - [ ] `results/H14_core_first_reopen_guard/summary.json` reports zero blocked
   items on the preserved core-first reopen control surface.
 - [ ] `results/H13_post_h12_governance_stage_health/summary.json` reports zero

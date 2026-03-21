@@ -1,0 +1,21 @@
+# Artifact Index
+
+- `docs/plans/2026-03-21-h18-unattended-mainline-master-plan.md`
+- `docs/plans/2026-03-21-post-r22-r23-h21-mainline-design.md`
+- `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json`
+- `results/H21_refreeze_after_r22_r23/summary.json`
+- `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`
+- `results/H18_post_h17_mainline_reopen_guard/summary.json`
+- `results/H19_refreeze_and_next_scope_decision/summary.json`
+- `results/R19_d0_pointer_like_surface_generalization_gate/summary.json`
+- `results/R20_d0_runtime_mechanism_ablation_matrix/summary.json`
+- `results/R21_d0_exact_executor_boundary_break_map/summary.json`
+- `results/R22_d0_true_boundary_localization_gate/summary.json`
+- `results/R23_d0_same_endpoint_systems_overturn_gate/summary.json`
+- `results/M7_frontend_candidate_decision/decision_summary.json`
+- `results/R2_systems_baseline_gate/summary.json`
+- `results/E1b_systems_patch/summary.json`
+- `docs/milestones/F2_future_frontier_recheck_activation_matrix/todo.md`
+- `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
+- `docs/milestones/H17_refreeze_and_conditional_frontier_recheck/result_digest.md`
+- `docs/milestones/H19_refreeze_and_next_scope_decision/README.md`

@@ -57,19 +57,29 @@ preserved governance/runtime handoff rather than the active science lane. `V1`
 records that `pytest --collect-only -q` succeeds on the current suite, and the
 bounded top-`6` per-file timing follow-up classifies full `pytest -q` as
 healthy but multi-minute rather than discovery-broken. The current active
-post-`P9` stage is `H15_refreeze_and_decision_sync`, which keeps the repo
-refrozen after one explicit reopen wave:
-`H14_core_first_reopen_and_scope_lock`,
-`R11_geometry_fastpath_reaudit`,
-`R12_append_only_executor_long_horizon`,
-optional `R13_small_model_executor_reactivation`,
-bounded `R14_bounded_compiled_probe`,
-then `H15_refreeze_and_decision_sync`. `E1c` remains conditional only and
-contradiction-only on current evidence. `R11` re-audited the geometry fast
-path without reopening same-endpoint speedup wording, `R12` exported exact
-current executor closure plus explicit harder-slice inventory, `H14` is now
-the completed reopened packet rather than the active stage, and the current
-`H15` refreeze export records `R13` as inactive with `R14` unjustified.
+post-`P9` stage is `H21_refreeze_after_r22_r23`, which refreezes the completed
+same-endpoint packet
+`H20_post_h19_mainline_reentry_and_hygiene_split` ->
+`R22_d0_true_boundary_localization_gate` ->
+`R23_d0_same_endpoint_systems_overturn_gate` ->
+`H21_refreeze_after_r22_r23` on top of the preserved
+`H18_post_h17_mainline_reopen_and_scope_lock` ->
+`R19_d0_pointer_like_surface_generalization_gate` ->
+`R20_d0_runtime_mechanism_ablation_matrix` ->
+`R21_d0_exact_executor_boundary_break_map` ->
+`H19_refreeze_and_next_scope_decision` packet. `H21` keeps the claim partition
+explicit: same-endpoint runtime generalization and mechanism support remain
+supported on current evidence, the harder `R22` grid still did not localize a
+true executor failure, `R23` kept pointer-like exact exact on the full positive
+`D0` systems suite but still left the systems verdict mixed, broader endpoint
+widening remains unsupported, and future frontier review remains planning-only.
+`H19` is now the preserved pre-`R22/R23` refreeze decision for the completed
+`H18/R19/R20/R21` packet. `H17` remains the preserved prior same-scope
+refreeze decision for the completed `H16/R15/R16/R17/R18` packet.
+`H15_refreeze_and_decision_sync` remains the completed predecessor refreeze
+stage, `H14` remains the completed prior reopened packet rather than the active
+stage, and `E1c` remains conditional only and contradiction-only on current
+evidence.
 
 ## Reproducibility pointers
 

@@ -1,0 +1,58 @@
+{
+  "experiment": "h21_refreeze_after_r22_r23_claim_packet",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "supported_here": [
+      "R22 stayed on the fixed tiny typed-bytecode D0 endpoint and extended the bounded executor-boundary scan beyond the original R21 grid.",
+      "R22 executed 102/102 planned candidates in the harder same-endpoint grid.",
+      "R23 stayed on the full current positive D0 systems universe and kept pointer-like exact exact on 25/25 rows.",
+      "R23 keeps the same-endpoint systems story explicit and measured rather than letting the project drift on mechanism-only evidence."
+    ],
+    "unsupported_here": [
+      "No H21 claim widens beyond the current tiny typed-bytecode D0 endpoint.",
+      "H21 still does not authorize arbitrary compiled-language claims, a general softmax-replacement thesis, or a broader 'LLMs are computers' headline.",
+      "H21 does not treat F2 planning material as permission to run widened probes by momentum.",
+      "The true executor failure boundary is still not localized on the current same-endpoint evidence.",
+      "The current-scope systems story is still not materially positive enough to support broader systems claims."
+    ],
+    "disconfirmed_here": [
+      "R22 disconfirms the narrower expectation that the earlier R21 grid had already exposed an executor failure inside the currently tested same-endpoint envelope."
+    ],
+    "distilled_result": {
+      "r22_lane_verdict": "no_failure_in_extended_grid",
+      "r22_executed_candidate_count": 102,
+      "r22_failure_candidate_count": 0,
+      "r23_lane_verdict": "systems_still_mixed",
+      "r23_pointer_like_exact_case_count": 25,
+      "r23_total_case_count": 25,
+      "r23_pointer_like_median_ratio_vs_best_reference": 4.164328445173109
+    }
+  }
+}

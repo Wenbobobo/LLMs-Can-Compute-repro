@@ -67,3 +67,21 @@
   executor exports and bounded `trainable_stack` success do not justify
   unseen-family generalization, a broad neural-executor claim, or activation
   of `R13`.
+- `R20` strengthens the mechanism story by failure contrast, not by a broader
+  systems closure: the shuffled pointer-like and address-oblivious controls
+  both fail on the fixed probe set, but that does not change the same-endpoint
+  systems verdict by itself.
+- `R21` remains a no-break-observed result rather than a localized executor
+  boundary: the bounded `48`-branch grid staying exact does not mean the true
+  failure boundary has been found.
+- `R22` sharpens that caveat further: the harder `102`-candidate follow-up also
+  stays exact, so the true executor boundary is still not localized on current
+  evidence.
+- `R23` is a first-class mixed systems result, not a near-win: pointer-like
+  exact stays exact on `25/25` full-suite rows and is far faster than imported
+  accelerated, but it remains about `4.16x` slower than the best current
+  reference path and still slower than the lowered path on the bounded systems
+  criterion.
+- `H21` therefore keeps frontier review planning-only: the same-endpoint
+  systems story is still not materially positive enough for broader systems,
+  frontend, or demo claims.
