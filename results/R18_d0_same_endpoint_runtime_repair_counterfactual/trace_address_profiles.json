@@ -1,0 +1,137 @@
+{
+  "experiment": "r18_trace_address_profiles",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "family": "helper_checkpoint_braid_long",
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "boundary_bearing_stream": true,
+      "reference_step_count": 4788,
+      "memory_operation_count": 2168,
+      "memory_load_count": 1262,
+      "memory_store_count": 906,
+      "unique_address_count": 6,
+      "hottest_address": 312,
+      "hottest_address_loads": 541,
+      "hottest_address_stores": 181,
+      "address_rows": [
+        {
+          "address": 312,
+          "loads": 541,
+          "stores": 181,
+          "total_ops": 722
+        },
+        {
+          "address": 313,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 314,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 315,
+          "loads": 1,
+          "stores": 181,
+          "total_ops": 182
+        },
+        {
+          "address": 316,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        },
+        {
+          "address": 317,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        }
+      ]
+    },
+    {
+      "program_name": "bytecode_stack_memory_braid_100_a112",
+      "family": "stack_memory_braid",
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "boundary_bearing_stream": false,
+      "reference_step_count": 1970,
+      "memory_operation_count": 1009,
+      "memory_load_count": 703,
+      "memory_store_count": 306,
+      "unique_address_count": 6,
+      "hottest_address": 112,
+      "hottest_address_loads": 301,
+      "hottest_address_stores": 101,
+      "address_rows": [
+        {
+          "address": 112,
+          "loads": 301,
+          "stores": 101,
+          "total_ops": 402
+        },
+        {
+          "address": 113,
+          "loads": 100,
+          "stores": 101,
+          "total_ops": 201
+        },
+        {
+          "address": 114,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 115,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 116,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        },
+        {
+          "address": 117,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        }
+      ]
+    }
+  ]
+}

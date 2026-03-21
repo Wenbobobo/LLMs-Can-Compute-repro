@@ -1,0 +1,62 @@
+{
+  "experiment": "h19_refreeze_and_next_scope_decision_claim_packet",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "supported_here": [
+      "The reopened H18 wave stayed on the fixed tiny typed-bytecode D0 endpoint and preserved the H17 no-widening control state.",
+      "R19 supports same-endpoint runtime generalization inside the declared admitted-plus-heldout envelope: pointer-like exact matched all admitted 8/8 rows and all heldout 16/16 rows.",
+      "R20 supports mechanism relevance on the fixed 16-row probe set: pointer-like exact stayed exact on 16/16 rows while both bounded negative controls failed claim-relevantly.",
+      "R21 supports a stronger bounded executor packet than before: all 96/96 executed candidates across the planned 48-branch grid stayed exact."
+    ],
+    "unsupported_here": [
+      "No H19 claim widens beyond the current tiny typed-bytecode D0 endpoint.",
+      "H19 still does not authorize arbitrary compiled-language claims, a general softmax-replacement claim, or a broader 'LLMs are computers' headline.",
+      "The bounded R21 scan does not identify the true failure boundary of the current executor; it only shows that the present grid did not expose one.",
+      "The repo still does not have a positive end-to-end systems-superiority result on the current positive D0 suites."
+    ],
+    "disconfirmed_here": [
+      "R20 disconfirms the bounded hypothesis that shuffled pointer-like retrieval can preserve the current speed-and-exactness packet on the fixed 16-row probe set.",
+      "R20 disconfirms the bounded hypothesis that an address-oblivious control can preserve the current speed-and-exactness packet on that same 16-row probe set.",
+      "R21 disconfirms the narrower expectation that the current planned 48-branch boundary scan had already exposed an exactness failure inside its executed grid."
+    ],
+    "distilled_result": {
+      "r19_admitted_pointer_like_exact_count": 8,
+      "r19_heldout_pointer_like_exact_count": 16,
+      "r20_pointer_like_exact_case_count": 16,
+      "r20_negative_controls_with_claim_relevant_failure": [
+        "pointer_like_shuffled",
+        "address_oblivious_control"
+      ],
+      "r21_executed_candidate_count": 96,
+      "r21_failure_candidate_count": 0,
+      "r21_failure_branch_count": 0
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "experiment": "r16_source_surface_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "exact_suite_row_count": 4,
+      "admitted_program_count": 4,
+      "screened_stream_count": 4,
+      "family_count": 4,
+      "families": [
+        "checkpoint_replay_long",
+        "helper_checkpoint_braid_long",
+        "iterated_helper_accumulator",
+        "subroutine_braid_long"
+      ],
+      "boundary_bearing_stream_count": 1,
+      "effective_here_stream_count": 4,
+      "unproven_here_stream_count": 0,
+      "negated_here_stream_count": 0
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "exact_suite_row_count": 4,
+      "admitted_program_count": 4,
+      "screened_stream_count": 4,
+      "family_count": 4,
+      "families": [
+        "helper_checkpoint_braid",
+        "indirect_counter_bank",
+        "stack_memory_braid",
+        "subroutine_braid"
+      ],
+      "boundary_bearing_stream_count": 0,
+      "effective_here_stream_count": 4,
+      "unproven_here_stream_count": 0,
+      "negated_here_stream_count": 0
+    }
+  ]
+}

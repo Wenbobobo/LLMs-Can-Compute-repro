@@ -1,0 +1,1191 @@
+{
+  "experiment": "r19_pointer_like_surface_generalization_address_profiles",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "checkpoint_replay_long",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_checkpoint_replay_long_100_a128",
+      "boundary_family": false,
+      "reference_step_count": 3126,
+      "memory_operation_count": 1313,
+      "memory_load_count": 904,
+      "memory_store_count": 409,
+      "unique_address_count": 9,
+      "hottest_address": 128,
+      "hottest_address_loads": 301,
+      "hottest_address_stores": 101,
+      "address_rows": [
+        {
+          "address": 128,
+          "loads": 301,
+          "stores": 101,
+          "total_ops": 402
+        },
+        {
+          "address": 129,
+          "loads": 200,
+          "stores": 101,
+          "total_ops": 301
+        },
+        {
+          "address": 130,
+          "loads": 200,
+          "stores": 101,
+          "total_ops": 301
+        },
+        {
+          "address": 131,
+          "loads": 34,
+          "stores": 1,
+          "total_ops": 35
+        },
+        {
+          "address": 132,
+          "loads": 33,
+          "stores": 1,
+          "total_ops": 34
+        },
+        {
+          "address": 133,
+          "loads": 33,
+          "stores": 1,
+          "total_ops": 34
+        },
+        {
+          "address": 134,
+          "loads": 35,
+          "stores": 35,
+          "total_ops": 70
+        },
+        {
+          "address": 135,
+          "loads": 34,
+          "stores": 34,
+          "total_ops": 68
+        },
+        {
+          "address": 136,
+          "loads": 34,
+          "stores": 34,
+          "total_ops": 68
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "helper_checkpoint_braid",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_helper_checkpoint_braid_60_a280_s0",
+      "boundary_family": false,
+      "reference_step_count": 1608,
+      "memory_operation_count": 728,
+      "memory_load_count": 422,
+      "memory_store_count": 306,
+      "unique_address_count": 6,
+      "hottest_address": 280,
+      "hottest_address_loads": 181,
+      "hottest_address_stores": 61,
+      "address_rows": [
+        {
+          "address": 280,
+          "loads": 181,
+          "stores": 61,
+          "total_ops": 242
+        },
+        {
+          "address": 281,
+          "loads": 60,
+          "stores": 61,
+          "total_ops": 121
+        },
+        {
+          "address": 282,
+          "loads": 60,
+          "stores": 61,
+          "total_ops": 121
+        },
+        {
+          "address": 283,
+          "loads": 1,
+          "stores": 61,
+          "total_ops": 62
+        },
+        {
+          "address": 284,
+          "loads": 60,
+          "stores": 31,
+          "total_ops": 91
+        },
+        {
+          "address": 285,
+          "loads": 60,
+          "stores": 31,
+          "total_ops": 91
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "helper_checkpoint_braid_long",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "boundary_family": true,
+      "reference_step_count": 4788,
+      "memory_operation_count": 2168,
+      "memory_load_count": 1262,
+      "memory_store_count": 906,
+      "unique_address_count": 6,
+      "hottest_address": 312,
+      "hottest_address_loads": 541,
+      "hottest_address_stores": 181,
+      "address_rows": [
+        {
+          "address": 312,
+          "loads": 541,
+          "stores": 181,
+          "total_ops": 722
+        },
+        {
+          "address": 313,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 314,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 315,
+          "loads": 1,
+          "stores": 181,
+          "total_ops": 182
+        },
+        {
+          "address": 316,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        },
+        {
+          "address": 317,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "indirect_counter_bank",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_indirect_counter_bank_120_a32_b33",
+      "boundary_family": false,
+      "reference_step_count": 1934,
+      "memory_operation_count": 604,
+      "memory_load_count": 362,
+      "memory_store_count": 242,
+      "unique_address_count": 2,
+      "hottest_address": 32,
+      "hottest_address_loads": 241,
+      "hottest_address_stores": 121,
+      "address_rows": [
+        {
+          "address": 32,
+          "loads": 241,
+          "stores": 121,
+          "total_ops": 362
+        },
+        {
+          "address": 33,
+          "loads": 121,
+          "stores": 121,
+          "total_ops": 242
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "iterated_helper_accumulator",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_iterated_helper_accumulator_240_a144_b145",
+      "boundary_family": false,
+      "reference_step_count": 3610,
+      "memory_operation_count": 1444,
+      "memory_load_count": 962,
+      "memory_store_count": 482,
+      "unique_address_count": 2,
+      "hottest_address": 144,
+      "hottest_address_loads": 721,
+      "hottest_address_stores": 241,
+      "address_rows": [
+        {
+          "address": 144,
+          "loads": 721,
+          "stores": 241,
+          "total_ops": 962
+        },
+        {
+          "address": 145,
+          "loads": 241,
+          "stores": 241,
+          "total_ops": 482
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "stack_memory_braid",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_stack_memory_braid_100_a112",
+      "boundary_family": false,
+      "reference_step_count": 1970,
+      "memory_operation_count": 1009,
+      "memory_load_count": 703,
+      "memory_store_count": 306,
+      "unique_address_count": 6,
+      "hottest_address": 112,
+      "hottest_address_loads": 301,
+      "hottest_address_stores": 101,
+      "address_rows": [
+        {
+          "address": 112,
+          "loads": 301,
+          "stores": 101,
+          "total_ops": 402
+        },
+        {
+          "address": 113,
+          "loads": 100,
+          "stores": 101,
+          "total_ops": 201
+        },
+        {
+          "address": 114,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 115,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 116,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        },
+        {
+          "address": 117,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "subroutine_braid",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_subroutine_braid_80_a96",
+      "boundary_family": false,
+      "reference_step_count": 1576,
+      "memory_operation_count": 647,
+      "memory_load_count": 403,
+      "memory_store_count": 244,
+      "unique_address_count": 4,
+      "hottest_address": 96,
+      "hottest_address_loads": 241,
+      "hottest_address_stores": 81,
+      "address_rows": [
+        {
+          "address": 96,
+          "loads": 241,
+          "stores": 81,
+          "total_ops": 322
+        },
+        {
+          "address": 97,
+          "loads": 80,
+          "stores": 81,
+          "total_ops": 161
+        },
+        {
+          "address": 98,
+          "loads": 41,
+          "stores": 41,
+          "total_ops": 82
+        },
+        {
+          "address": 99,
+          "loads": 41,
+          "stores": 41,
+          "total_ops": 82
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "subroutine_braid_long",
+      "cohort": "admitted",
+      "variant_id": "r17_admitted_surface",
+      "variant_group": "admitted_surface",
+      "program_name": "bytecode_subroutine_braid_long_140_a176",
+      "boundary_family": false,
+      "reference_step_count": 2746,
+      "memory_operation_count": 1127,
+      "memory_load_count": 703,
+      "memory_store_count": 424,
+      "unique_address_count": 4,
+      "hottest_address": 176,
+      "hottest_address_loads": 421,
+      "hottest_address_stores": 141,
+      "address_rows": [
+        {
+          "address": 176,
+          "loads": 421,
+          "stores": 141,
+          "total_ops": 562
+        },
+        {
+          "address": 177,
+          "loads": 140,
+          "stores": 141,
+          "total_ops": 281
+        },
+        {
+          "address": 178,
+          "loads": 71,
+          "stores": 71,
+          "total_ops": 142
+        },
+        {
+          "address": 179,
+          "loads": 71,
+          "stores": 71,
+          "total_ops": 142
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "checkpoint_replay_long",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_checkpoint_replay_long_100_a144",
+      "boundary_family": false,
+      "reference_step_count": 3126,
+      "memory_operation_count": 1313,
+      "memory_load_count": 904,
+      "memory_store_count": 409,
+      "unique_address_count": 9,
+      "hottest_address": 144,
+      "hottest_address_loads": 301,
+      "hottest_address_stores": 101,
+      "address_rows": [
+        {
+          "address": 144,
+          "loads": 301,
+          "stores": 101,
+          "total_ops": 402
+        },
+        {
+          "address": 145,
+          "loads": 200,
+          "stores": 101,
+          "total_ops": 301
+        },
+        {
+          "address": 146,
+          "loads": 200,
+          "stores": 101,
+          "total_ops": 301
+        },
+        {
+          "address": 147,
+          "loads": 34,
+          "stores": 1,
+          "total_ops": 35
+        },
+        {
+          "address": 148,
+          "loads": 33,
+          "stores": 1,
+          "total_ops": 34
+        },
+        {
+          "address": 149,
+          "loads": 33,
+          "stores": 1,
+          "total_ops": 34
+        },
+        {
+          "address": 150,
+          "loads": 35,
+          "stores": 35,
+          "total_ops": 70
+        },
+        {
+          "address": 151,
+          "loads": 34,
+          "stores": 34,
+          "total_ops": 68
+        },
+        {
+          "address": 152,
+          "loads": 34,
+          "stores": 34,
+          "total_ops": 68
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "checkpoint_replay_long",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_32",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_checkpoint_replay_long_100_a160",
+      "boundary_family": false,
+      "reference_step_count": 3126,
+      "memory_operation_count": 1313,
+      "memory_load_count": 904,
+      "memory_store_count": 409,
+      "unique_address_count": 9,
+      "hottest_address": 160,
+      "hottest_address_loads": 301,
+      "hottest_address_stores": 101,
+      "address_rows": [
+        {
+          "address": 160,
+          "loads": 301,
+          "stores": 101,
+          "total_ops": 402
+        },
+        {
+          "address": 161,
+          "loads": 200,
+          "stores": 101,
+          "total_ops": 301
+        },
+        {
+          "address": 162,
+          "loads": 200,
+          "stores": 101,
+          "total_ops": 301
+        },
+        {
+          "address": 163,
+          "loads": 34,
+          "stores": 1,
+          "total_ops": 35
+        },
+        {
+          "address": 164,
+          "loads": 33,
+          "stores": 1,
+          "total_ops": 34
+        },
+        {
+          "address": 165,
+          "loads": 33,
+          "stores": 1,
+          "total_ops": 34
+        },
+        {
+          "address": 166,
+          "loads": 35,
+          "stores": 35,
+          "total_ops": 70
+        },
+        {
+          "address": 167,
+          "loads": 34,
+          "stores": 34,
+          "total_ops": 68
+        },
+        {
+          "address": 168,
+          "loads": 34,
+          "stores": 34,
+          "total_ops": 68
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "helper_checkpoint_braid",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_helper_checkpoint_braid_60_a296_s0",
+      "boundary_family": false,
+      "reference_step_count": 1608,
+      "memory_operation_count": 728,
+      "memory_load_count": 422,
+      "memory_store_count": 306,
+      "unique_address_count": 6,
+      "hottest_address": 296,
+      "hottest_address_loads": 181,
+      "hottest_address_stores": 61,
+      "address_rows": [
+        {
+          "address": 296,
+          "loads": 181,
+          "stores": 61,
+          "total_ops": 242
+        },
+        {
+          "address": 297,
+          "loads": 60,
+          "stores": 61,
+          "total_ops": 121
+        },
+        {
+          "address": 298,
+          "loads": 60,
+          "stores": 61,
+          "total_ops": 121
+        },
+        {
+          "address": 299,
+          "loads": 1,
+          "stores": 61,
+          "total_ops": 62
+        },
+        {
+          "address": 300,
+          "loads": 60,
+          "stores": 31,
+          "total_ops": 91
+        },
+        {
+          "address": 301,
+          "loads": 60,
+          "stores": 31,
+          "total_ops": 91
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "helper_checkpoint_braid",
+      "cohort": "heldout",
+      "variant_id": "selector_seed_flip",
+      "variant_group": "seed_equivalent",
+      "program_name": "bytecode_helper_checkpoint_braid_60_a280_s1",
+      "boundary_family": false,
+      "reference_step_count": 1608,
+      "memory_operation_count": 728,
+      "memory_load_count": 422,
+      "memory_store_count": 306,
+      "unique_address_count": 6,
+      "hottest_address": 280,
+      "hottest_address_loads": 181,
+      "hottest_address_stores": 61,
+      "address_rows": [
+        {
+          "address": 280,
+          "loads": 181,
+          "stores": 61,
+          "total_ops": 242
+        },
+        {
+          "address": 281,
+          "loads": 60,
+          "stores": 61,
+          "total_ops": 121
+        },
+        {
+          "address": 282,
+          "loads": 60,
+          "stores": 61,
+          "total_ops": 121
+        },
+        {
+          "address": 283,
+          "loads": 1,
+          "stores": 61,
+          "total_ops": 62
+        },
+        {
+          "address": 284,
+          "loads": 60,
+          "stores": 31,
+          "total_ops": 91
+        },
+        {
+          "address": 285,
+          "loads": 60,
+          "stores": 31,
+          "total_ops": 91
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "helper_checkpoint_braid_long",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_helper_checkpoint_braid_long_180_a328_s0",
+      "boundary_family": true,
+      "reference_step_count": 4788,
+      "memory_operation_count": 2168,
+      "memory_load_count": 1262,
+      "memory_store_count": 906,
+      "unique_address_count": 6,
+      "hottest_address": 328,
+      "hottest_address_loads": 541,
+      "hottest_address_stores": 181,
+      "address_rows": [
+        {
+          "address": 328,
+          "loads": 541,
+          "stores": 181,
+          "total_ops": 722
+        },
+        {
+          "address": 329,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 330,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 331,
+          "loads": 1,
+          "stores": 181,
+          "total_ops": 182
+        },
+        {
+          "address": 332,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        },
+        {
+          "address": 333,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "helper_checkpoint_braid_long",
+      "cohort": "heldout",
+      "variant_id": "selector_seed_flip",
+      "variant_group": "seed_equivalent",
+      "program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s1",
+      "boundary_family": true,
+      "reference_step_count": 4788,
+      "memory_operation_count": 2168,
+      "memory_load_count": 1262,
+      "memory_store_count": 906,
+      "unique_address_count": 6,
+      "hottest_address": 312,
+      "hottest_address_loads": 541,
+      "hottest_address_stores": 181,
+      "address_rows": [
+        {
+          "address": 312,
+          "loads": 541,
+          "stores": 181,
+          "total_ops": 722
+        },
+        {
+          "address": 313,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 314,
+          "loads": 180,
+          "stores": 181,
+          "total_ops": 361
+        },
+        {
+          "address": 315,
+          "loads": 1,
+          "stores": 181,
+          "total_ops": 182
+        },
+        {
+          "address": 316,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        },
+        {
+          "address": 317,
+          "loads": 180,
+          "stores": 91,
+          "total_ops": 271
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "indirect_counter_bank",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_indirect_counter_bank_120_a48_b49",
+      "boundary_family": false,
+      "reference_step_count": 1934,
+      "memory_operation_count": 604,
+      "memory_load_count": 362,
+      "memory_store_count": 242,
+      "unique_address_count": 2,
+      "hottest_address": 48,
+      "hottest_address_loads": 241,
+      "hottest_address_stores": 121,
+      "address_rows": [
+        {
+          "address": 48,
+          "loads": 241,
+          "stores": 121,
+          "total_ops": 362
+        },
+        {
+          "address": 49,
+          "loads": 121,
+          "stores": 121,
+          "total_ops": 242
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "indirect_counter_bank",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_32",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_indirect_counter_bank_120_a64_b65",
+      "boundary_family": false,
+      "reference_step_count": 1934,
+      "memory_operation_count": 604,
+      "memory_load_count": 362,
+      "memory_store_count": 242,
+      "unique_address_count": 2,
+      "hottest_address": 64,
+      "hottest_address_loads": 241,
+      "hottest_address_stores": 121,
+      "address_rows": [
+        {
+          "address": 64,
+          "loads": 241,
+          "stores": 121,
+          "total_ops": 362
+        },
+        {
+          "address": 65,
+          "loads": 121,
+          "stores": 121,
+          "total_ops": 242
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "iterated_helper_accumulator",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_iterated_helper_accumulator_240_a160_b161",
+      "boundary_family": false,
+      "reference_step_count": 3610,
+      "memory_operation_count": 1444,
+      "memory_load_count": 962,
+      "memory_store_count": 482,
+      "unique_address_count": 2,
+      "hottest_address": 160,
+      "hottest_address_loads": 721,
+      "hottest_address_stores": 241,
+      "address_rows": [
+        {
+          "address": 160,
+          "loads": 721,
+          "stores": 241,
+          "total_ops": 962
+        },
+        {
+          "address": 161,
+          "loads": 241,
+          "stores": 241,
+          "total_ops": 482
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "iterated_helper_accumulator",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_32",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_iterated_helper_accumulator_240_a176_b177",
+      "boundary_family": false,
+      "reference_step_count": 3610,
+      "memory_operation_count": 1444,
+      "memory_load_count": 962,
+      "memory_store_count": 482,
+      "unique_address_count": 2,
+      "hottest_address": 176,
+      "hottest_address_loads": 721,
+      "hottest_address_stores": 241,
+      "address_rows": [
+        {
+          "address": 176,
+          "loads": 721,
+          "stores": 241,
+          "total_ops": 962
+        },
+        {
+          "address": 177,
+          "loads": 241,
+          "stores": 241,
+          "total_ops": 482
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "stack_memory_braid",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_stack_memory_braid_100_a128",
+      "boundary_family": false,
+      "reference_step_count": 1970,
+      "memory_operation_count": 1009,
+      "memory_load_count": 703,
+      "memory_store_count": 306,
+      "unique_address_count": 6,
+      "hottest_address": 128,
+      "hottest_address_loads": 301,
+      "hottest_address_stores": 101,
+      "address_rows": [
+        {
+          "address": 128,
+          "loads": 301,
+          "stores": 101,
+          "total_ops": 402
+        },
+        {
+          "address": 129,
+          "loads": 100,
+          "stores": 101,
+          "total_ops": 201
+        },
+        {
+          "address": 130,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 131,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 132,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        },
+        {
+          "address": 133,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "stack_memory_braid",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_32",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_stack_memory_braid_100_a144",
+      "boundary_family": false,
+      "reference_step_count": 1970,
+      "memory_operation_count": 1009,
+      "memory_load_count": 703,
+      "memory_store_count": 306,
+      "unique_address_count": 6,
+      "hottest_address": 144,
+      "hottest_address_loads": 301,
+      "hottest_address_stores": 101,
+      "address_rows": [
+        {
+          "address": 144,
+          "loads": 301,
+          "stores": 101,
+          "total_ops": 402
+        },
+        {
+          "address": 145,
+          "loads": 100,
+          "stores": 101,
+          "total_ops": 201
+        },
+        {
+          "address": 146,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 147,
+          "loads": 100,
+          "stores": 1,
+          "total_ops": 101
+        },
+        {
+          "address": 148,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        },
+        {
+          "address": 149,
+          "loads": 51,
+          "stores": 51,
+          "total_ops": 102
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "subroutine_braid",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_subroutine_braid_80_a112",
+      "boundary_family": false,
+      "reference_step_count": 1576,
+      "memory_operation_count": 647,
+      "memory_load_count": 403,
+      "memory_store_count": 244,
+      "unique_address_count": 4,
+      "hottest_address": 112,
+      "hottest_address_loads": 241,
+      "hottest_address_stores": 81,
+      "address_rows": [
+        {
+          "address": 112,
+          "loads": 241,
+          "stores": 81,
+          "total_ops": 322
+        },
+        {
+          "address": 113,
+          "loads": 80,
+          "stores": 81,
+          "total_ops": 161
+        },
+        {
+          "address": 114,
+          "loads": 41,
+          "stores": 41,
+          "total_ops": 82
+        },
+        {
+          "address": 115,
+          "loads": 41,
+          "stores": 41,
+          "total_ops": 82
+        }
+      ]
+    },
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "family": "subroutine_braid",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_32",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_subroutine_braid_80_a128",
+      "boundary_family": false,
+      "reference_step_count": 1576,
+      "memory_operation_count": 647,
+      "memory_load_count": 403,
+      "memory_store_count": 244,
+      "unique_address_count": 4,
+      "hottest_address": 128,
+      "hottest_address_loads": 241,
+      "hottest_address_stores": 81,
+      "address_rows": [
+        {
+          "address": 128,
+          "loads": 241,
+          "stores": 81,
+          "total_ops": 322
+        },
+        {
+          "address": 129,
+          "loads": 80,
+          "stores": 81,
+          "total_ops": 161
+        },
+        {
+          "address": 130,
+          "loads": 41,
+          "stores": 41,
+          "total_ops": 82
+        },
+        {
+          "address": 131,
+          "loads": 41,
+          "stores": 41,
+          "total_ops": 82
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "subroutine_braid_long",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_16",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_subroutine_braid_long_140_a192",
+      "boundary_family": false,
+      "reference_step_count": 2746,
+      "memory_operation_count": 1127,
+      "memory_load_count": 703,
+      "memory_store_count": 424,
+      "unique_address_count": 4,
+      "hottest_address": 192,
+      "hottest_address_loads": 421,
+      "hottest_address_stores": 141,
+      "address_rows": [
+        {
+          "address": 192,
+          "loads": 421,
+          "stores": 141,
+          "total_ops": 562
+        },
+        {
+          "address": 193,
+          "loads": 140,
+          "stores": 141,
+          "total_ops": 281
+        },
+        {
+          "address": 194,
+          "loads": 71,
+          "stores": 71,
+          "total_ops": 142
+        },
+        {
+          "address": 195,
+          "loads": 71,
+          "stores": 71,
+          "total_ops": 142
+        }
+      ]
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "family": "subroutine_braid_long",
+      "cohort": "heldout",
+      "variant_id": "address_shift_plus_32",
+      "variant_group": "address_equivalent",
+      "program_name": "bytecode_subroutine_braid_long_140_a208",
+      "boundary_family": false,
+      "reference_step_count": 2746,
+      "memory_operation_count": 1127,
+      "memory_load_count": 703,
+      "memory_store_count": 424,
+      "unique_address_count": 4,
+      "hottest_address": 208,
+      "hottest_address_loads": 421,
+      "hottest_address_stores": 141,
+      "address_rows": [
+        {
+          "address": 208,
+          "loads": 421,
+          "stores": 141,
+          "total_ops": 562
+        },
+        {
+          "address": 209,
+          "loads": 140,
+          "stores": 141,
+          "total_ops": 281
+        },
+        {
+          "address": 210,
+          "loads": 71,
+          "stores": 71,
+          "total_ops": 142
+        },
+        {
+          "address": 211,
+          "loads": 71,
+          "stores": 71,
+          "total_ops": 142
+        }
+      ]
+    }
+  ]
+}

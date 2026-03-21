@@ -1,0 +1,84 @@
+{
+  "experiment": "r21_d0_exact_executor_boundary_break_map",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/R19_d0_pointer_like_surface_generalization_gate/runtime_rows.json",
+    "results/R20_d0_runtime_mechanism_ablation_matrix/summary.json",
+    "docs/plans/2026-03-21-h18-unattended-mainline-master-plan.md",
+    "tmp/active_wave_plan.md",
+    "src/model/free_running_executor.py"
+  ],
+  "summary": {
+    "status": "r21_boundary_map_complete",
+    "current_frozen_stage": "h17_refreeze_and_conditional_frontier_recheck",
+    "source_runtime_stage": "r20_d0_runtime_mechanism_ablation_matrix",
+    "gate": {
+      "lane_verdict": "no_boundary_break_detected",
+      "reason": "Every executed bounded R21 candidate stayed exact on the current D0 endpoint.",
+      "planned_branch_count": 48,
+      "planned_candidate_count": 96,
+      "executed_candidate_count": 96,
+      "skipped_candidate_count": 0,
+      "exact_candidate_count": 96,
+      "failure_candidate_count": 0,
+      "failure_branch_count": 0,
+      "next_priority_lane": "h19_refreeze_and_next_scope_decision"
+    },
+    "planned_unique_address_targets": [
+      6,
+      8,
+      12,
+      16
+    ],
+    "planned_horizon_multipliers": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "planned_checkpoint_depths": [
+      "baseline",
+      "plus_one"
+    ],
+    "planned_hot_address_skews": [
+      "baseline",
+      "flattened"
+    ],
+    "executed_family_count": 3,
+    "recommended_next_action": "Advance to H19 to refreeze R19-R21 into one machine-readable same-endpoint state.",
+    "supported_here": [
+      "R21 stayed on the current D0 endpoint and kept the exact-executor scan exporter-local.",
+      "Both positive and negative rows are preserved when failures occur."
+    ],
+    "unsupported_here": [
+      "R21 does not authorize a wider endpoint, frontend surface, or repair loop.",
+      "R21 remains a bounded boundary map rather than a general runtime replacement claim."
+    ]
+  }
+}

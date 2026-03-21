@@ -1,0 +1,78 @@
+{
+  "experiment": "h20_post_h19_mainline_reentry_and_hygiene_split",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/plans/2026-03-21-post-h19-mainline-reentry-design.md",
+    "tmp/active_wave_plan.md",
+    "docs/milestones/H20_post_h19_mainline_reentry_and_hygiene_split/README.md",
+    "docs/milestones/H20_post_h19_mainline_reentry_and_hygiene_split/status.md",
+    "docs/milestones/H20_post_h19_mainline_reentry_and_hygiene_split/todo.md",
+    "docs/milestones/H20_post_h19_mainline_reentry_and_hygiene_split/acceptance.md",
+    "docs/milestones/H20_post_h19_mainline_reentry_and_hygiene_split/artifact_index.md",
+    "docs/milestones/H20_post_h19_mainline_reentry_and_hygiene_split/decision_log.md",
+    "docs/milestones/R22_d0_true_boundary_localization_gate/todo.md",
+    "docs/milestones/R23_d0_same_endpoint_systems_overturn_gate/todo.md",
+    "docs/milestones/H21_refreeze_after_r22_r23/todo.md",
+    "docs/milestones/P12_manuscript_and_manifest_maintenance/status.md",
+    "docs/milestones/P12_manuscript_and_manifest_maintenance/todo.md",
+    "docs/milestones/P13_public_surface_sync_and_repo_hygiene/todo.md",
+    "results/H19_refreeze_and_next_scope_decision/summary.json",
+    "results/release_worktree_hygiene_snapshot/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h20_post_h19_mainline_reentry_active",
+    "current_frozen_stage": "h19_refreeze_and_next_scope_decision",
+    "reentry_state": "dirty_tree_isolation_required_before_next_science_commits",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "h19_decision_state": "same_endpoint_refreeze_complete",
+    "future_frontier_review_state": "planning_only_conditionally_reviewable",
+    "unsatisfied_frontier_activation_conditions": [
+      "true_executor_boundary_localization",
+      "current_scope_systems_story_materially_positive"
+    ],
+    "commit_split_state": "pending_in_dirty_tree",
+    "lane_order": "h20_then_r22_then_r23_then_h21_then_p13",
+    "next_priority_lanes": [
+      "r22_d0_true_boundary_localization_gate",
+      "r23_d0_same_endpoint_systems_overturn_gate"
+    ],
+    "background_lanes": [
+      "p12_manuscript_and_manifest_maintenance",
+      "f2_future_frontier_recheck_activation_matrix"
+    ],
+    "release_commit_state": "dirty_worktree_release_commit_blocked",
+    "changed_path_count": 339,
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "finish isolating the dirty tree into the H20 buckets, land the H20 guard, then run R22 and R23 in parallel on separate write sets while keeping H19 frozen and outward docs downstream"
+  }
+}

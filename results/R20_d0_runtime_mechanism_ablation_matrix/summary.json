@@ -1,0 +1,208 @@
+{
+  "experiment": "r20_d0_runtime_mechanism_ablation_matrix",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/R19_d0_pointer_like_surface_generalization_gate/summary.json",
+    "results/R19_d0_pointer_like_surface_generalization_gate/runtime_rows.json",
+    "results/R19_d0_pointer_like_surface_generalization_gate/family_runtime_summary.json",
+    "scripts/export_r19_d0_pointer_like_surface_generalization_gate.py",
+    "src/model/free_running_executor.py"
+  ],
+  "summary": {
+    "status": "r20_runtime_ablation_complete",
+    "current_frozen_stage": "h17_refreeze_and_conditional_frontier_recheck",
+    "source_runtime_stage": "r19_d0_pointer_like_surface_generalization_gate",
+    "selected_case_count": 16,
+    "admitted_case_count": 8,
+    "heldout_focus_case_count": 8,
+    "family_count": 8,
+    "selection_rule": "all admitted rows plus one exact heldout row per family chosen by the lowest pointer-like speedup vs current accelerated",
+    "gate": {
+      "lane_verdict": "mechanism_supported",
+      "reason": "Pointer-like exact stayed exact on the bounded sample set, and at least one negative control failed in a claim-relevant way.",
+      "pointer_like_exact_gate_passed": true,
+      "pointer_like_exact_case_count": 16,
+      "total_case_count": 16,
+      "negative_controls_with_claim_relevant_failure": [
+        "pointer_like_shuffled",
+        "address_oblivious_control"
+      ],
+      "pointer_like_exact_median_speedup_vs_imported_accelerated": 408.92967458168357,
+      "next_priority_lane": "r21_d0_exact_executor_boundary_break_map"
+    },
+    "strategy_summary": [
+      {
+        "strategy_id": "linear_exact",
+        "control_class": "exact_baseline",
+        "runtime_mode": "imported_r19_baseline",
+        "row_count": 16,
+        "exact_case_count": 16,
+        "exact_case_rate": 1.0,
+        "median_ns_per_step": 21383918.383584615,
+        "median_speedup_vs_imported_accelerated": 0.6588572640275252,
+        "median_speedup_vs_imported_linear": 1.0,
+        "median_retrieval_share": null,
+        "median_retrieval_correct_rate": null,
+        "median_address_match_rate": null,
+        "median_hottest_address_hit_rate": null,
+        "median_selected_step_gap": null,
+        "median_correct_step_gap": null,
+        "median_step_gap_delta": null,
+        "claim_relevant_failure": false,
+        "exact_failure_program_names": []
+      },
+      {
+        "strategy_id": "accelerated",
+        "control_class": "exact_baseline",
+        "runtime_mode": "imported_r19_baseline",
+        "row_count": 16,
+        "exact_case_count": 16,
+        "exact_case_rate": 1.0,
+        "median_ns_per_step": 12794609.745558903,
+        "median_speedup_vs_imported_accelerated": 1.0,
+        "median_speedup_vs_imported_linear": 1.5182040673181367,
+        "median_retrieval_share": null,
+        "median_retrieval_correct_rate": null,
+        "median_address_match_rate": null,
+        "median_hottest_address_hit_rate": null,
+        "median_selected_step_gap": null,
+        "median_correct_step_gap": null,
+        "median_step_gap_delta": null,
+        "claim_relevant_failure": false,
+        "exact_failure_program_names": []
+      },
+      {
+        "strategy_id": "pointer_like_exact",
+        "control_class": "target_mechanism",
+        "runtime_mode": "measured_r20",
+        "row_count": 16,
+        "exact_case_count": 16,
+        "exact_case_rate": 1.0,
+        "median_ns_per_step": 23921.141339510876,
+        "median_speedup_vs_imported_accelerated": 408.92967458168357,
+        "median_speedup_vs_imported_linear": 626.3020709534669,
+        "median_retrieval_share": 0.0326173747931773,
+        "median_retrieval_correct_rate": 1.0,
+        "median_address_match_rate": 1.0,
+        "median_hottest_address_hit_rate": 0.1398919320956628,
+        "median_selected_step_gap": 1.0,
+        "median_correct_step_gap": 1.0,
+        "median_step_gap_delta": 0.0,
+        "claim_relevant_failure": false,
+        "exact_failure_program_names": []
+      },
+      {
+        "strategy_id": "pointer_like_shuffled",
+        "control_class": "negative_control",
+        "runtime_mode": "measured_r20",
+        "row_count": 16,
+        "exact_case_count": 0,
+        "exact_case_rate": 0.0,
+        "median_ns_per_step": null,
+        "median_speedup_vs_imported_accelerated": null,
+        "median_speedup_vs_imported_linear": null,
+        "median_retrieval_share": null,
+        "median_retrieval_correct_rate": 0.45660903192946645,
+        "median_address_match_rate": 0.0007954534824252246,
+        "median_hottest_address_hit_rate": 0.0,
+        "median_selected_step_gap": 2.0,
+        "median_correct_step_gap": 1.0,
+        "median_step_gap_delta": 1.0,
+        "claim_relevant_failure": true,
+        "exact_failure_program_names": [
+          "bytecode_checkpoint_replay_long_100_a128",
+          "bytecode_helper_checkpoint_braid_60_a280_s0",
+          "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+          "bytecode_indirect_counter_bank_120_a32_b33",
+          "bytecode_iterated_helper_accumulator_240_a144_b145",
+          "bytecode_stack_memory_braid_100_a112",
+          "bytecode_subroutine_braid_80_a96",
+          "bytecode_subroutine_braid_long_140_a176",
+          "bytecode_checkpoint_replay_long_100_a144",
+          "bytecode_helper_checkpoint_braid_60_a296_s0",
+          "bytecode_helper_checkpoint_braid_long_180_a312_s1",
+          "bytecode_indirect_counter_bank_120_a48_b49",
+          "bytecode_iterated_helper_accumulator_240_a176_b177",
+          "bytecode_stack_memory_braid_100_a144",
+          "bytecode_subroutine_braid_80_a112",
+          "bytecode_subroutine_braid_long_140_a208"
+        ]
+      },
+      {
+        "strategy_id": "address_oblivious_control",
+        "control_class": "negative_control",
+        "runtime_mode": "measured_r20",
+        "row_count": 16,
+        "exact_case_count": 0,
+        "exact_case_rate": 0.0,
+        "median_ns_per_step": null,
+        "median_speedup_vs_imported_accelerated": null,
+        "median_speedup_vs_imported_linear": null,
+        "median_retrieval_share": null,
+        "median_retrieval_correct_rate": 0.9128787878787878,
+        "median_address_match_rate": 0.7071428571428571,
+        "median_hottest_address_hit_rate": 0.0,
+        "median_selected_step_gap": 1.0,
+        "median_correct_step_gap": 1.0,
+        "median_step_gap_delta": 0.0,
+        "claim_relevant_failure": true,
+        "exact_failure_program_names": [
+          "bytecode_checkpoint_replay_long_100_a128",
+          "bytecode_helper_checkpoint_braid_60_a280_s0",
+          "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+          "bytecode_indirect_counter_bank_120_a32_b33",
+          "bytecode_iterated_helper_accumulator_240_a144_b145",
+          "bytecode_stack_memory_braid_100_a112",
+          "bytecode_subroutine_braid_80_a96",
+          "bytecode_subroutine_braid_long_140_a176",
+          "bytecode_checkpoint_replay_long_100_a144",
+          "bytecode_helper_checkpoint_braid_60_a296_s0",
+          "bytecode_helper_checkpoint_braid_long_180_a312_s1",
+          "bytecode_indirect_counter_bank_120_a48_b49",
+          "bytecode_iterated_helper_accumulator_240_a176_b177",
+          "bytecode_stack_memory_braid_100_a144",
+          "bytecode_subroutine_braid_80_a112",
+          "bytecode_subroutine_braid_long_140_a208"
+        ]
+      }
+    ],
+    "next_priority_lane": "r21_d0_exact_executor_boundary_break_map",
+    "recommended_next_action": "Advance to R21 to map the boundary of the current exact executor while keeping H19/P13 downstream of the bounded R20 result.",
+    "supported_here": [
+      "R20 stayed on the fixed 16-row sample set exported from landed R19 without widening the D0 endpoint.",
+      "Pointer-like exact stayed exact on 16/16 selected rows under the current mechanism probe runtime.",
+      "The negative-control set is now executed rather than merely planned: shuffled exact count = 0/16, address-oblivious exact count = 0/16."
+    ],
+    "unsupported_here": [
+      "R20 still does not justify any broader softmax-replacement or widened compiled-endpoint claim.",
+      "Linear and accelerated baselines remain imported from landed R19 rather than freshly reprofiled here."
+    ]
+  }
+}

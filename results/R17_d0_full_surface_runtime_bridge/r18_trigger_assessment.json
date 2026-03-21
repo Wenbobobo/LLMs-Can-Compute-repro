@@ -1,0 +1,50 @@
+{
+  "experiment": "r17_r18_trigger_assessment",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "triggered": false,
+    "repair_target": null,
+    "next_lane": "H17_refreeze_and_conditional_frontier_recheck",
+    "reason": "The full-surface bridge can be recorded without opening R18 because the focused attribution subset did not isolate one bounded runtime repair target.",
+    "bridge_open": true,
+    "sharp_local_outlier": false,
+    "candidate_matches_surface_worst": false,
+    "surface_worst_program_name": "bytecode_helper_checkpoint_braid_60_a280_s0",
+    "surface_worst_family": "helper_checkpoint_braid",
+    "focused_worst_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+    "focused_worst_family": "helper_checkpoint_braid_long",
+    "focused_outlier_ratio": 1.3636363636363635,
+    "thresholds": {
+      "bridge_ratio_vs_lowered": 1.5,
+      "focused_outlier_ratio": 1.5,
+      "dominant_component_share": 0.6
+    }
+  }
+}

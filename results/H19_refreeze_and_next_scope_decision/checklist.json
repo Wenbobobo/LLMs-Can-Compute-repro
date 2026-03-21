@@ -1,0 +1,68 @@
+{
+  "experiment": "h19_refreeze_and_next_scope_decision_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "h19_milestone_docs_describe_a_machine_readable_post_h18_refreeze",
+      "status": "pass",
+      "notes": "H19 should land first as an exporter-backed refreeze packet before a later P13 root/public sync rebases the outward docs."
+    },
+    {
+      "item_id": "h17_and_h18_are_preserved_as_the_input_control_packet",
+      "status": "pass",
+      "notes": "H19 must freeze the landed H18 runtime wave without pretending that H17 never existed."
+    },
+    {
+      "item_id": "r19_confirms_same_endpoint_generalization_inside_the_declared_envelope",
+      "status": "pass",
+      "notes": "R19 is the positive same-endpoint runtime generalization result inside the fixed admitted plus heldout envelope."
+    },
+    {
+      "item_id": "r20_supports_the_mechanism_and_disconfirms_the_bounded_controls",
+      "status": "pass",
+      "notes": "R20 should carry both the positive target-mechanism result and the bounded negative-control failures into H19."
+    },
+    {
+      "item_id": "r21_stays_exact_across_the_bounded_grid_without_a_detected_break",
+      "status": "pass",
+      "notes": "R21 is still bounded and should be frozen as a no-break-observed result, not as proof that no boundary exists anywhere."
+    },
+    {
+      "item_id": "no_widening_controls_remain_explicit_after_the_refreeze",
+      "status": "pass",
+      "notes": "H19 may strengthen the same-endpoint packet, but it must not silently activate wider frontend or demo claims."
+    },
+    {
+      "item_id": "release_worktree_state_remains_explicit_for_downstream_syncs",
+      "status": "pass",
+      "notes": "H19 should keep the outward-sync cleanliness constraint explicit instead of pretending that P13 is already safe to commit."
+    }
+  ]
+}

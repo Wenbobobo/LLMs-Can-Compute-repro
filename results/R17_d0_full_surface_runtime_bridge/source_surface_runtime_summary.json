@@ -1,0 +1,53 @@
+{
+  "experiment": "r17_source_surface_runtime_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+      "row_count": 4,
+      "family_count": 4,
+      "boundary_bearing_stream_count": 0,
+      "median_accelerated_speedup_vs_linear": 1.1026315789473684,
+      "median_accelerated_ratio_vs_lowered": 2.0555555555555554,
+      "median_accelerated_ratio_vs_bytecode": 1.696969696969697,
+      "all_rows_exact": true
+    },
+    {
+      "source_lane": "R8_d0_retrieval_pressure_gate",
+      "row_count": 4,
+      "family_count": 4,
+      "boundary_bearing_stream_count": 1,
+      "median_accelerated_speedup_vs_linear": 1.085144927536232,
+      "median_accelerated_ratio_vs_lowered": 1.7417582417582418,
+      "median_accelerated_ratio_vs_bytecode": 1.5166666666666666,
+      "all_rows_exact": true
+    }
+  ]
+}

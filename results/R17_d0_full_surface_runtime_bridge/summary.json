@@ -1,0 +1,165 @@
+{
+  "experiment": "r17_d0_full_surface_runtime_bridge",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/R7_d0_same_endpoint_runtime_bridge/summary.json",
+    "results/R10_d0_same_endpoint_cost_attribution/summary.json",
+    "results/R15_d0_remaining_family_retrieval_pressure_gate/summary.json",
+    "results/R15_d0_remaining_family_retrieval_pressure_gate/exact_suite_rows.json",
+    "results/R16_d0_real_trace_precision_boundary_saturation/summary.json",
+    "results/R16_d0_real_trace_precision_boundary_saturation/runtime_bridge_handoff.json",
+    "results/R8_d0_retrieval_pressure_gate/summary.json",
+    "results/R8_d0_retrieval_pressure_gate/exact_suite_rows.json"
+  ],
+  "notes": [
+    "R17 profiles the full admitted same-scope R8/R15 surface instead of reusing the representative-only R7 subset.",
+    "Runtime rows stay on the same lowered endpoint and keep linear-versus-accelerated exact execution explicit on every admitted program.",
+    "Focused attribution stays limited to the unique R16 boundary-bearing stream and the heaviest admitted R15 row so R18 can remain optional unless a local repair target is actually isolated."
+  ],
+  "summary": {
+    "overall": {
+      "exact_suite_row_count": 8,
+      "admitted_surface_row_count": 8,
+      "source_lane_count": 2,
+      "family_count": 8,
+      "boundary_bearing_stream_count": 1,
+      "runtime_profiled_row_count": 8,
+      "focused_attribution_row_count": 2,
+      "profile_repeats": 1,
+      "median_bytecode_ns_per_step": 13.5,
+      "median_lowered_ns_per_step": 11.5,
+      "median_linear_ns_per_step": 23.5,
+      "median_accelerated_ns_per_step": 21.5,
+      "median_accelerated_speedup_vs_linear": 1.093073593073593,
+      "median_accelerated_ratio_vs_lowered": 1.871212121212121,
+      "contradiction_candidate_count": 0
+    },
+    "source_surface": {
+      "rows": [
+        {
+          "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+          "row_count": 4,
+          "family_count": 4,
+          "boundary_bearing_stream_count": 0,
+          "median_accelerated_speedup_vs_linear": 1.1026315789473684,
+          "median_accelerated_ratio_vs_lowered": 2.0555555555555554,
+          "median_accelerated_ratio_vs_bytecode": 1.696969696969697,
+          "all_rows_exact": true
+        },
+        {
+          "source_lane": "R8_d0_retrieval_pressure_gate",
+          "row_count": 4,
+          "family_count": 4,
+          "boundary_bearing_stream_count": 1,
+          "median_accelerated_speedup_vs_linear": 1.085144927536232,
+          "median_accelerated_ratio_vs_lowered": 1.7417582417582418,
+          "median_accelerated_ratio_vs_bytecode": 1.5166666666666666,
+          "all_rows_exact": true
+        }
+      ]
+    },
+    "stopgo": {
+      "stopgo_status": "stop_decode_gain_not_material",
+      "median_accelerated_speedup_vs_linear": 1.093073593073593,
+      "median_accelerated_ratio_vs_lowered": 1.871212121212121,
+      "contradiction_candidate_count": 0,
+      "worst_bridge_program_name": "bytecode_helper_checkpoint_braid_60_a280_s0",
+      "worst_bridge_family": "helper_checkpoint_braid",
+      "worst_bridge_ratio_vs_lowered": 2.25,
+      "reason": "Accelerated decode does not provide a material same-endpoint speedup over linear decode on the admitted full surface.",
+      "thresholds": {
+        "material_decode_speedup": 1.1,
+        "bridge_ratio_vs_lowered": 1.5
+      }
+    },
+    "focused_attribution": {
+      "row_count": 2,
+      "selection_rule": "unique_boundary_bearing_precision_stream_plus_heaviest_r15_admitted_by_bytecode_step_count",
+      "median_exact_vs_lowered_ratio": 2.6,
+      "median_retrieval_share_of_exact": 0.625,
+      "dominant_component_counts": [
+        {
+          "component": "retrieval_total",
+          "count": 2
+        }
+      ],
+      "rows": [
+        {
+          "selection_rank": 1,
+          "focus_reason": "unique_boundary_bearing_precision_stream",
+          "source_lane": "R8_d0_retrieval_pressure_gate",
+          "family": "helper_checkpoint_braid_long",
+          "program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+          "boundary_bearing_stream": true,
+          "exact_vs_lowered_ratio": 3.0,
+          "retrieval_share_of_exact": 0.6,
+          "dominant_exact_component": "retrieval_total",
+          "dominant_component_share": 0.7
+        },
+        {
+          "selection_rank": 2,
+          "focus_reason": "heaviest_r15_admitted_by_bytecode_step_count",
+          "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+          "family": "stack_memory_braid",
+          "program_name": "bytecode_stack_memory_braid_100_a112",
+          "boundary_bearing_stream": false,
+          "exact_vs_lowered_ratio": 2.2,
+          "retrieval_share_of_exact": 0.65,
+          "dominant_exact_component": "retrieval_total",
+          "dominant_component_share": 0.5499999999999999
+        }
+      ]
+    },
+    "claim_impact": {
+      "status": "full_surface_same_endpoint_runtime_bridge_measured",
+      "target_claims": [
+        "D0"
+      ],
+      "e1c_status": "not_triggered",
+      "next_lane": "H17_refreeze_and_conditional_frontier_recheck",
+      "supported_here": [
+        "R17 returns to same-endpoint runtime only after R16 screened the full admitted same-scope R8/R15 precision surface.",
+        "All 8 admitted surface rows are profiled for runtime bridge cost instead of leaving post-R15 runtime coverage implicit.",
+        "Focused attribution stays bounded to the unique boundary-bearing stream and the heaviest admitted R15 row, so any repair follow-up remains optional and local."
+      ],
+      "unsupported_here": [
+        "R17 does not reopen a broader systems packet, arbitrary compiled-language claims, or unseen-family runtime generalization.",
+        "A negative or mixed bridge result is still a bounded runtime measurement rather than proof of a wider impossibility claim.",
+        "R18 remains inactive unless this export names a bounded same-endpoint repair target explicitly."
+      ],
+      "distilled_result": {
+        "stopgo_status": "stop_decode_gain_not_material",
+        "median_accelerated_speedup_vs_linear": 1.093073593073593,
+        "median_accelerated_ratio_vs_lowered": 1.871212121212121,
+        "r18_triggered": false
+      }
+    }
+  }
+}

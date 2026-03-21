@@ -1,0 +1,78 @@
+{
+  "experiment": "h16_post_h15_same_scope_reopen_guard_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "current_stage_driver_exposes_h16_same_scope_lane_order",
+      "status": "pass",
+      "notes": "The canonical driver should expose H16 as the active same-scope reopen and make the R15/R16/R17/activated comparator-only R18/H17 order explicit."
+    },
+    {
+      "item_id": "root_and_public_docs_promote_h16_without_widening",
+      "status": "pass",
+      "notes": "Root and publication-facing docs should advance to H16 while keeping the scope lock and non-claims explicit."
+    },
+    {
+      "item_id": "h16_milestone_docs_lock_same_scope_scope_and_sequence",
+      "status": "pass",
+      "notes": "The H16 milestone docs should keep the reopened scope lock, execution order, and artifact plan explicit."
+    },
+    {
+      "item_id": "r15_remaining_family_lane_landed_cleanly",
+      "status": "pass",
+      "notes": "H16 should start from a landed R15 remaining-family gate rather than a placeholder lane description."
+    },
+    {
+      "item_id": "r16_precision_surface_lane_landed_cleanly",
+      "status": "pass",
+      "notes": "H16 should reflect a landed R16 precision-saturation lane before handing the packet forward to R17."
+    },
+    {
+      "item_id": "r17_runtime_bridge_landed_and_r18_activation_remains_bounded",
+      "status": "pass",
+      "notes": "H16 carry-over closeout should reflect a landed R17 bridge, an activated comparator-only R18 lane, and a still-pending H17 refreeze."
+    },
+    {
+      "item_id": "h15_h14_h13_predecessor_controls_remain_green",
+      "status": "pass",
+      "notes": "H16 should inherit a green predecessor chain from H15, the preserved H14 packet, and the preserved H13/V1 handoff."
+    },
+    {
+      "item_id": "preserved_v1_runtime_reference_remains_green",
+      "status": "pass",
+      "notes": "The preserved V1 runtime reference should remain operationally bounded while H16 is active."
+    },
+    {
+      "item_id": "release_worktree_and_no_widening_constraints_remain_explicit",
+      "status": "pass",
+      "notes": "H16 may reopen same-scope science work, but release hygiene and no-widening constraints remain in force."
+    }
+  ]
+}

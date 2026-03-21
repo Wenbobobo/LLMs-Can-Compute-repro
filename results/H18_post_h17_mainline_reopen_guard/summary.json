@@ -1,0 +1,77 @@
+{
+  "experiment": "h18_post_h17_mainline_reopen_guard",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "README.md",
+    "STATUS.md",
+    "docs/publication_record/README.md",
+    "docs/publication_record/current_stage_driver.md",
+    "docs/plans/2026-03-21-h18-unattended-mainline-master-plan.md",
+    "tmp/active_wave_plan.md",
+    "docs/milestones/H18_post_h17_mainline_reopen_and_scope_lock/README.md",
+    "docs/milestones/H18_post_h17_mainline_reopen_and_scope_lock/status.md",
+    "docs/milestones/H18_post_h17_mainline_reopen_and_scope_lock/todo.md",
+    "docs/milestones/H18_post_h17_mainline_reopen_and_scope_lock/acceptance.md",
+    "docs/milestones/H18_post_h17_mainline_reopen_and_scope_lock/artifact_index.md",
+    "docs/milestones/H18_post_h17_mainline_reopen_and_scope_lock/decision_log.md",
+    "docs/milestones/R19_d0_pointer_like_surface_generalization_gate/todo.md",
+    "docs/milestones/R20_d0_runtime_mechanism_ablation_matrix/todo.md",
+    "docs/milestones/R21_d0_exact_executor_boundary_break_map/todo.md",
+    "docs/milestones/H19_refreeze_and_next_scope_decision/todo.md",
+    "docs/milestones/F2_future_frontier_recheck_activation_matrix/todo.md",
+    "docs/milestones/P12_manuscript_and_manifest_maintenance/todo.md",
+    "docs/milestones/P13_public_surface_sync_and_repo_hygiene/todo.md",
+    "results/H17_refreeze_and_conditional_frontier_recheck/summary.json",
+    "results/M7_frontend_candidate_decision/decision_summary.json",
+    "results/release_worktree_hygiene_snapshot/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h18_post_h17_mainline_reopen_planned",
+    "current_frozen_stage": "h17_refreeze_and_conditional_frontier_recheck",
+    "planned_reopen_stage": "h18_post_h17_mainline_reopen_and_scope_lock",
+    "stage_guard_state": "planned_same_scope_reopen_ready",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "frontier_recheck_state": "conditional_plan_required",
+    "frontend_widening_authorized": false,
+    "release_commit_state": "dirty_worktree_release_commit_blocked",
+    "lane_order": "h18_then_r19_then_r20_then_r21_then_h19_then_p13",
+    "next_priority_lane": "h19_refreeze_and_next_scope_decision",
+    "background_lanes": [
+      "f2_future_frontier_recheck_activation_matrix",
+      "p12_manuscript_and_manifest_maintenance"
+    ],
+    "changed_path_count": 339,
+    "check_count": 6,
+    "pass_count": 6,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "preserve H17 as the frozen input, advance into H19 on the landed R19/R20/R21 packet, keep F2/P12 bounded to the saved H18 plan, and avoid outward sync commits until the dirty-tree split is isolated"
+  }
+}

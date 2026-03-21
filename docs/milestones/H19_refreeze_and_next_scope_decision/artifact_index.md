@@ -1,0 +1,21 @@
+# Artifact Index
+
+- `docs/plans/2026-03-21-h18-unattended-mainline-master-plan.md`
+- `docs/milestones/H19_refreeze_and_next_scope_decision/README.md`
+- `docs/milestones/H19_refreeze_and_next_scope_decision/todo.md`
+- `docs/milestones/H19_refreeze_and_next_scope_decision/status.md`
+- `docs/milestones/H19_refreeze_and_next_scope_decision/acceptance.md`
+- `docs/milestones/H19_refreeze_and_next_scope_decision/result_digest.md`
+- `docs/milestones/H18_post_h17_mainline_reopen_and_scope_lock/README.md`
+- `docs/milestones/R19_d0_pointer_like_surface_generalization_gate/README.md`
+- `docs/milestones/R20_d0_runtime_mechanism_ablation_matrix/README.md`
+- `docs/milestones/R21_d0_exact_executor_boundary_break_map/README.md`
+- `scripts/export_h19_refreeze_and_next_scope_decision.py`
+- `tests/test_export_h19_refreeze_and_next_scope_decision.py`
+- `results/R19_d0_pointer_like_surface_generalization_gate/summary.json`
+- `results/R20_d0_runtime_mechanism_ablation_matrix/summary.json`
+- `results/R21_d0_exact_executor_boundary_break_map/summary.json`
+- `results/H19_refreeze_and_next_scope_decision/summary.json`
+- `results/H19_refreeze_and_next_scope_decision/checklist.json`
+- `results/H19_refreeze_and_next_scope_decision/snapshot.json`
+- `results/H19_refreeze_and_next_scope_decision/claim_packet.json`

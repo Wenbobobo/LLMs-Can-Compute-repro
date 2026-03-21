@@ -1,0 +1,113 @@
+{
+  "experiment": "r19_pointer_like_surface_generalization_family_runtime_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "family": "checkpoint_replay_long",
+      "boundary_family": false,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 270.88751982055715
+    },
+    {
+      "family": "helper_checkpoint_braid",
+      "boundary_family": false,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 367.9169626995722
+    },
+    {
+      "family": "helper_checkpoint_braid_long",
+      "boundary_family": true,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 644.1038714751758
+    },
+    {
+      "family": "indirect_counter_bank",
+      "boundary_family": false,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 643.1741153004436
+    },
+    {
+      "family": "iterated_helper_accumulator",
+      "boundary_family": false,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 396.2719093631715
+    },
+    {
+      "family": "stack_memory_braid",
+      "boundary_family": false,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 275.65791849836626
+    },
+    {
+      "family": "subroutine_braid",
+      "boundary_family": false,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 317.5314741066546
+    },
+    {
+      "family": "subroutine_braid_long",
+      "boundary_family": false,
+      "admitted_row_count": 1,
+      "heldout_row_count": 2,
+      "admitted_pointer_like_exact_count": 1,
+      "heldout_pointer_like_exact_count": 2,
+      "heldout_failure_program_names": [],
+      "median_heldout_pointer_like_speedup_vs_current_accelerated": 544.9012627084417
+    }
+  ]
+}

@@ -27,6 +27,7 @@ dist/
 # Local results and scratch space
 results/local/
 results/tmp/
+results/R20_d0_runtime_mechanism_ablation_matrix/probe_read_rows.json
 tmp/
 *.log
 值守计划.md

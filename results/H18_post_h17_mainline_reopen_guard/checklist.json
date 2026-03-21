@@ -1,0 +1,63 @@
+{
+  "experiment": "h18_post_h17_mainline_reopen_guard_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "root_and_public_docs_keep_h17_frozen_and_h18_planned",
+      "status": "pass",
+      "notes": "H18 should remain readable as the historical planning guard even after the current public surface advances to landed H19."
+    },
+    {
+      "item_id": "master_plan_and_active_wave_handoff_agree_on_lane_order",
+      "status": "pass",
+      "notes": "The unattended plan and the short handoff file should expose the same next-wave structure, even after the active handoff advances from H18 setup into R19 execution."
+    },
+    {
+      "item_id": "h18_scope_lock_and_dirty_tree_split_are_explicit",
+      "status": "pass",
+      "notes": "H18 should make the split and ownership explicit before the unattended runtime wave starts."
+    },
+    {
+      "item_id": "next_wave_scaffolds_are_actionable_and_bounded",
+      "status": "pass",
+      "notes": "R19/R20/R21/H19 plus the background lanes should already be defined as bounded follow-ups."
+    },
+    {
+      "item_id": "no_widening_and_frozen_input_controls_remain_in_force",
+      "status": "pass",
+      "notes": "H18 must start from the frozen H17 state and preserve the M7 no-widening decision."
+    },
+    {
+      "item_id": "release_worktree_state_remains_explicit_before_branching",
+      "status": "pass",
+      "notes": "The new wave should keep the dirty-tree constraint explicit rather than pretending the repo is clean."
+    }
+  ]
+}

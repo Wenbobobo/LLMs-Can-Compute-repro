@@ -1,0 +1,99 @@
+{
+  "experiment": "h19_refreeze_and_next_scope_decision",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/H19_refreeze_and_next_scope_decision/README.md",
+    "docs/milestones/H19_refreeze_and_next_scope_decision/status.md",
+    "docs/milestones/H19_refreeze_and_next_scope_decision/todo.md",
+    "docs/milestones/H19_refreeze_and_next_scope_decision/acceptance.md",
+    "docs/milestones/H19_refreeze_and_next_scope_decision/artifact_index.md",
+    "results/H17_refreeze_and_conditional_frontier_recheck/summary.json",
+    "results/H18_post_h17_mainline_reopen_guard/summary.json",
+    "results/R19_d0_pointer_like_surface_generalization_gate/summary.json",
+    "results/R20_d0_runtime_mechanism_ablation_matrix/summary.json",
+    "results/R21_d0_exact_executor_boundary_break_map/summary.json",
+    "results/M7_frontend_candidate_decision/decision_summary.json",
+    "results/release_worktree_hygiene_snapshot/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h19_refreeze_and_next_scope_decision_complete",
+    "active_stage": "h19_refreeze_and_next_scope_decision",
+    "prior_frozen_stage": "h17_refreeze_and_conditional_frontier_recheck",
+    "guarded_reopen_stage": "h18_post_h17_mainline_reopen_and_scope_lock",
+    "decision_state": "same_endpoint_refreeze_complete",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "same_endpoint_evidence_state": "materially_extended_same_endpoint_packet",
+    "runtime_generalization_verdict": "same_endpoint_generalization_confirmed",
+    "mechanism_verdict": "mechanism_supported",
+    "boundary_verdict": "no_boundary_break_detected",
+    "frontier_recheck_decision": "conditional_plan_required",
+    "future_frontier_review_state": "planning_only_conditionally_reviewable",
+    "future_frontier_lane": "f2_future_frontier_recheck_activation_matrix",
+    "next_priority_lane": "p13_public_surface_sync_and_repo_hygiene",
+    "release_commit_state": "dirty_worktree_release_commit_blocked",
+    "supported_here_count": 4,
+    "unsupported_here_count": 4,
+    "disconfirmed_here_count": 3,
+    "check_count": 7,
+    "pass_count": 7,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "treat H19 as the machine-readable frozen post-H18 state, keep any broader root/publication rebasing downstream to P13, keep F2 planning-only, and do not widen runtime scope or frontend wording without a later explicit plan",
+    "supported_here": [
+      "The reopened H18 wave stayed on the fixed tiny typed-bytecode D0 endpoint and preserved the H17 no-widening control state.",
+      "R19 supports same-endpoint runtime generalization inside the declared admitted-plus-heldout envelope: pointer-like exact matched all admitted 8/8 rows and all heldout 16/16 rows.",
+      "R20 supports mechanism relevance on the fixed 16-row probe set: pointer-like exact stayed exact on 16/16 rows while both bounded negative controls failed claim-relevantly.",
+      "R21 supports a stronger bounded executor packet than before: all 96/96 executed candidates across the planned 48-branch grid stayed exact."
+    ],
+    "unsupported_here": [
+      "No H19 claim widens beyond the current tiny typed-bytecode D0 endpoint.",
+      "H19 still does not authorize arbitrary compiled-language claims, a general softmax-replacement claim, or a broader 'LLMs are computers' headline.",
+      "The bounded R21 scan does not identify the true failure boundary of the current executor; it only shows that the present grid did not expose one.",
+      "The repo still does not have a positive end-to-end systems-superiority result on the current positive D0 suites."
+    ],
+    "disconfirmed_here": [
+      "R20 disconfirms the bounded hypothesis that shuffled pointer-like retrieval can preserve the current speed-and-exactness packet on the fixed 16-row probe set.",
+      "R20 disconfirms the bounded hypothesis that an address-oblivious control can preserve the current speed-and-exactness packet on that same 16-row probe set.",
+      "R21 disconfirms the narrower expectation that the current planned 48-branch boundary scan had already exposed an exactness failure inside its executed grid."
+    ],
+    "distilled_result": {
+      "r19_admitted_pointer_like_exact_count": 8,
+      "r19_heldout_pointer_like_exact_count": 16,
+      "r20_pointer_like_exact_case_count": 16,
+      "r20_negative_controls_with_claim_relevant_failure": [
+        "pointer_like_shuffled",
+        "address_oblivious_control"
+      ],
+      "r21_executed_candidate_count": 96,
+      "r21_failure_candidate_count": 0,
+      "r21_failure_branch_count": 0
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "experiment": "r19_pointer_like_surface_generalization_family_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "family": "checkpoint_replay_long",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "address_shift_plus_32"
+      ],
+      "variant_groups": [
+        "address_equivalent"
+      ],
+      "boundary_family": false
+    },
+    {
+      "family": "helper_checkpoint_braid",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "selector_seed_flip"
+      ],
+      "variant_groups": [
+        "address_equivalent",
+        "seed_equivalent"
+      ],
+      "boundary_family": false
+    },
+    {
+      "family": "helper_checkpoint_braid_long",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "selector_seed_flip"
+      ],
+      "variant_groups": [
+        "address_equivalent",
+        "seed_equivalent"
+      ],
+      "boundary_family": true
+    },
+    {
+      "family": "indirect_counter_bank",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "address_shift_plus_32"
+      ],
+      "variant_groups": [
+        "address_equivalent"
+      ],
+      "boundary_family": false
+    },
+    {
+      "family": "iterated_helper_accumulator",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "address_shift_plus_32"
+      ],
+      "variant_groups": [
+        "address_equivalent"
+      ],
+      "boundary_family": false
+    },
+    {
+      "family": "stack_memory_braid",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "address_shift_plus_32"
+      ],
+      "variant_groups": [
+        "address_equivalent"
+      ],
+      "boundary_family": false
+    },
+    {
+      "family": "subroutine_braid",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "address_shift_plus_32"
+      ],
+      "variant_groups": [
+        "address_equivalent"
+      ],
+      "boundary_family": false
+    },
+    {
+      "family": "subroutine_braid_long",
+      "admitted_count": 1,
+      "heldout_count": 2,
+      "variant_ids": [
+        "address_shift_plus_16",
+        "address_shift_plus_32"
+      ],
+      "variant_groups": [
+        "address_equivalent"
+      ],
+      "boundary_family": false
+    }
+  ]
+}

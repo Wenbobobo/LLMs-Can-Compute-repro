@@ -1,0 +1,55 @@
+{
+  "experiment": "r17_claim_impact",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "status": "full_surface_same_endpoint_runtime_bridge_measured",
+    "target_claims": [
+      "D0"
+    ],
+    "e1c_status": "not_triggered",
+    "next_lane": "H17_refreeze_and_conditional_frontier_recheck",
+    "supported_here": [
+      "R17 returns to same-endpoint runtime only after R16 screened the full admitted same-scope R8/R15 precision surface.",
+      "All 8 admitted surface rows are profiled for runtime bridge cost instead of leaving post-R15 runtime coverage implicit.",
+      "Focused attribution stays bounded to the unique boundary-bearing stream and the heaviest admitted R15 row, so any repair follow-up remains optional and local."
+    ],
+    "unsupported_here": [
+      "R17 does not reopen a broader systems packet, arbitrary compiled-language claims, or unseen-family runtime generalization.",
+      "A negative or mixed bridge result is still a bounded runtime measurement rather than proof of a wider impossibility claim.",
+      "R18 remains inactive unless this export names a bounded same-endpoint repair target explicitly."
+    ],
+    "distilled_result": {
+      "stopgo_status": "stop_decode_gain_not_material",
+      "median_accelerated_speedup_vs_linear": 1.093073593073593,
+      "median_accelerated_ratio_vs_lowered": 1.871212121212121,
+      "r18_triggered": false
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "experiment": "h17_refreeze_and_conditional_frontier_recheck_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "source": "results/H16_post_h15_same_scope_reopen_guard/summary.json",
+      "fields": {
+        "stage_guard_state": "same_scope_reopen_guard_green",
+        "latest_landed_lane": "r17_d0_full_surface_runtime_bridge",
+        "active_comparator_lane": "r18_d0_same_endpoint_runtime_repair_counterfactual"
+      }
+    },
+    {
+      "source": "results/R15_d0_remaining_family_retrieval_pressure_gate/summary.json",
+      "fields": {
+        "next_lane": "R16_d0_real_trace_precision_boundary_saturation"
+      }
+    },
+    {
+      "source": "results/R16_d0_real_trace_precision_boundary_saturation/summary.json",
+      "fields": {
+        "next_lane": "R17_d0_full_surface_runtime_bridge"
+      }
+    },
+    {
+      "source": "results/R17_d0_full_surface_runtime_bridge/summary.json",
+      "fields": {
+        "status": "full_surface_same_endpoint_runtime_bridge_measured",
+        "stopgo_status": "stop_decode_gain_not_material"
+      }
+    },
+    {
+      "source": "results/R18_d0_same_endpoint_runtime_repair_counterfactual/summary.json",
+      "fields": {
+        "status": "r18b_pointer_like_complete",
+        "probe_strategy": "pointer_like_exact_both_spaces",
+        "executed_probe_ids": [
+          "r18b_pointer_like"
+        ],
+        "frontier_recheck_hint": "conditional_plan_required"
+      }
+    }
+  ]
+}

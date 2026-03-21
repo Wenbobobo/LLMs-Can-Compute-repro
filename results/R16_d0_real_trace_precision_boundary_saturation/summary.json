@@ -1,0 +1,136 @@
+{
+  "experiment": "r16_d0_real_trace_precision_boundary_saturation",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/R8_d0_retrieval_pressure_gate/summary.json",
+    "results/R8_d0_retrieval_pressure_gate/exact_suite_rows.json",
+    "results/R9_d0_real_trace_precision_boundary_companion/summary.json",
+    "results/R15_d0_remaining_family_retrieval_pressure_gate/summary.json",
+    "results/R15_d0_remaining_family_retrieval_pressure_gate/exact_suite_rows.json"
+  ],
+  "notes": [
+    "R16 stays same-scope and merges the exact-admitted R8 and R15 surfaces instead of opening a wider precision sweep.",
+    "The bounded grid stays on memory streams only so the lane saturates the admitted real-trace precision surface without widening to arbitrary streams or stack-wide guarantees.",
+    "Default base 64 defines the screened grid before any boundary-bearing stream receives a small decomposition base sweep.",
+    "Base 256 remains a weaker negative control rather than a positive alternative."
+  ],
+  "summary": {
+    "source_surface": {
+      "exact_suite_row_count": 8,
+      "admitted_program_count": 8,
+      "source_lane_count": 2,
+      "rows": [
+        {
+          "source_lane": "R8_d0_retrieval_pressure_gate",
+          "exact_suite_row_count": 4,
+          "admitted_program_count": 4,
+          "screened_stream_count": 4,
+          "family_count": 4,
+          "families": [
+            "checkpoint_replay_long",
+            "helper_checkpoint_braid_long",
+            "iterated_helper_accumulator",
+            "subroutine_braid_long"
+          ],
+          "boundary_bearing_stream_count": 1,
+          "effective_here_stream_count": 4,
+          "unproven_here_stream_count": 0,
+          "negated_here_stream_count": 0
+        },
+        {
+          "source_lane": "R15_d0_remaining_family_retrieval_pressure_gate",
+          "exact_suite_row_count": 4,
+          "admitted_program_count": 4,
+          "screened_stream_count": 4,
+          "family_count": 4,
+          "families": [
+            "helper_checkpoint_braid",
+            "indirect_counter_bank",
+            "stack_memory_braid",
+            "subroutine_braid"
+          ],
+          "boundary_bearing_stream_count": 0,
+          "effective_here_stream_count": 4,
+          "unproven_here_stream_count": 0,
+          "negated_here_stream_count": 0
+        }
+      ]
+    },
+    "screening": {
+      "candidate_stream_count": 8,
+      "family_count": 8,
+      "boundary_bearing_stream_count": 1,
+      "base_sweep_row_count": 5,
+      "negative_control_row_count": 1,
+      "negative_control_failure_count": 0
+    },
+    "classification": {
+      "effective_here_stream_count": 8,
+      "unproven_here_stream_count": 0,
+      "negated_here_stream_count": 0
+    },
+    "failure_taxonomy": {
+      "row_count": 1,
+      "rows": [
+        {
+          "failure_type": "tie_collapse",
+          "count": 2
+        }
+      ]
+    },
+    "claim_impact": {
+      "gate_status": "go_real_trace_precision_surface_saturated",
+      "target_claims": [
+        "D0"
+      ],
+      "e1c_status": "not_triggered",
+      "next_lane": "R17_d0_full_surface_runtime_bridge",
+      "distilled_boundary": {
+        "effective_here": [
+          "The admitted same-scope R8/R15 memory surface remains precision-stable on 8/8 screened streams under the bounded grid."
+        ],
+        "unproven_here": [
+          "0/8 screened streams still need decomposition recovery or remain boundary-bearing, so broader robustness remains unproven."
+        ],
+        "negated_here": [
+          "Single-head float32 fails without screened recovery on 0/8 screened streams, and the weaker base-256 control fails on 0/1 boundary-bearing follow-ups."
+        ]
+      },
+      "supported_here": [
+        "R16 saturates the admitted same-scope real-trace precision surface by merging the exact-admitted R8 and R15 families without widening endpoint scope.",
+        "The lane keeps failure taxonomy, decomposition recovery, and weaker negative controls explicit at stream and family granularity before runtime follow-up work resumes."
+      ],
+      "unsupported_here": [
+        "R16 does not justify unseen-family precision guarantees, a broader stack-wide robustness claim, or arbitrary compiled-language support.",
+        "R16 does not by itself establish same-endpoint runtime superiority; that remains downstream of R17."
+      ]
+    }
+  }
+}

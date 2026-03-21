@@ -1,0 +1,145 @@
+{
+  "experiment": "r20_family_selection_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "family": "checkpoint_replay_long",
+      "boundary_family": false,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "address_shift_plus_16"
+      ],
+      "heldout_variant_groups": [
+        "address_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 196.03036144840604
+    },
+    {
+      "family": "helper_checkpoint_braid",
+      "boundary_family": false,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "address_shift_plus_16"
+      ],
+      "heldout_variant_groups": [
+        "address_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 223.90723528189238
+    },
+    {
+      "family": "helper_checkpoint_braid_long",
+      "boundary_family": true,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "selector_seed_flip"
+      ],
+      "heldout_variant_groups": [
+        "seed_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 612.1418549402249
+    },
+    {
+      "family": "indirect_counter_bank",
+      "boundary_family": false,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "address_shift_plus_16"
+      ],
+      "heldout_variant_groups": [
+        "address_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 526.2211369516383
+    },
+    {
+      "family": "iterated_helper_accumulator",
+      "boundary_family": false,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "address_shift_plus_32"
+      ],
+      "heldout_variant_groups": [
+        "address_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 381.3911887450569
+    },
+    {
+      "family": "stack_memory_braid",
+      "boundary_family": false,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "address_shift_plus_32"
+      ],
+      "heldout_variant_groups": [
+        "address_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 131.87819445655273
+    },
+    {
+      "family": "subroutine_braid",
+      "boundary_family": false,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "address_shift_plus_16"
+      ],
+      "heldout_variant_groups": [
+        "address_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 308.4733095133086
+    },
+    {
+      "family": "subroutine_braid_long",
+      "boundary_family": false,
+      "selected_row_count": 2,
+      "admitted_selected_count": 1,
+      "heldout_selected_count": 1,
+      "heldout_variant_ids": [
+        "address_shift_plus_32"
+      ],
+      "heldout_variant_groups": [
+        "address_equivalent"
+      ],
+      "min_pointer_like_speedup_vs_current_accelerated": 331.57560323483295
+    }
+  ]
+}
