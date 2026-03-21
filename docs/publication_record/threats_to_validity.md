@@ -30,3 +30,13 @@
   `R6/R8` families and current exported modes; it does not establish
   unseen-family executor robustness or justify a broader trainable-executor
   claim.
+- The landed `R21/R22` boundary scans are still no-break-observed evidence, not
+  a localized true executor boundary. Larger exact grids reduce one class of
+  doubt while leaving the actual failure frontier unresolved.
+- The landed `R23` follow-up upgrades the same-endpoint runtime candidate but
+  does not close the systems story: exactness on the full positive `D0` suite
+  is not enough when the candidate still trails the best current reference path
+  on the bounded gate criterion.
+- `H21` is therefore a scientific boundary, not only an operational refreeze.
+  It records that frontier review and wider compiled-language claims remain
+  blocked on current evidence rather than merely deferred for lack of effort.

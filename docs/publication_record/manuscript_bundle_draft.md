@@ -16,11 +16,13 @@ remains exact on all 25 tracked streams in the validated suite. The systems
 story is mixed. Cached retrieval retains a strong asymptotic advantage on the
 geometry benchmark, but the current lowered `exec_trace` path remains about
 `1.82x` slower than the best current reference/oracle path on the positive
-`D0` suites. We therefore keep the compiled endpoint at tiny typed bytecode
-and treat broader claims about arbitrary C, general LLM computation, or
-current end-to-end competitiveness as unsupported. Stopping at `D0` is
-therefore part of the current scientific conclusion, not an implementation gap
-waiting to be filled.
+`D0` suites, and the later same-endpoint `R23` recheck still leaves
+`pointer_like_exact` about `4.16x` slower than the best current reference path
+despite preserving exactness on `25/25` rows. We therefore keep the compiled
+endpoint at tiny typed bytecode and treat broader claims about arbitrary C,
+general LLM computation, or current end-to-end competitiveness as unsupported.
+Stopping at `D0` is therefore part of the current scientific conclusion, not
+an implementation gap waiting to be filled.
 
 ## 2. Introduction and Claim Ladder
 
@@ -163,15 +165,21 @@ the compiled scope that the paper actually validates. When measured on the
 current positive `D0` suites, the lowered `exec_trace` path still has a median
 cost of roughly `6458 ns/step`, compared with about `6028 ns/step` for the
 bytecode path and `3540 ns/step` for the best current reference/oracle path.
-The correct conclusion is therefore mixed and operational: the specialized
-retrieval mechanism is real, but on the present validated scope it does not
+The later same-endpoint `R23` follow-up upgrades `pointer_like_exact` into the
+current first-class runtime candidate and keeps exactness on `25/25` full-suite
+rows, but it still remains about `4.16x` slower than the best current
+reference path. The correct conclusion is therefore mixed and operational: the
+specialized retrieval mechanism is real, the same-endpoint runtime candidate
+improved materially, but on the present validated scope it still does not
 justify broader frontend widening or a general system-superiority claim.
 
 In the current layout, this result remains a quantified main-text paragraph
 rather than a standalone table. The main text needs the mixed gate decision and
 its key timing anchors, while the full baseline matrix and runtime rows stay in
 companion artifacts unless a layout pass specifically promotes a compact gate
-table.
+table. If that promotion happens, the compact systems table should treat `R2`
+and `R23` as one mixed chain rather than implying that the later follow-up
+nearly overturned the gate.
 
 ## 8. Compiled Boundary
 
@@ -187,12 +195,26 @@ because the current evidence bundle already closes the narrow compiled claim,
 the project stops at tiny typed bytecode rather than widening toward Wasm-like
 or arbitrary-C language coverage.
 
+The later same-endpoint packet sharpens that endpoint rather than replacing it.
+`R19` supports runtime generalization inside the admitted-plus-heldout same-
+endpoint envelope, `R20` supports the mechanism story through matched negative
+controls, `R21` and `R22` jointly show that the bounded executor scans still do
+not localize a true failure boundary, and `H21` refreezes those consequences as
+one explicit claim partition. The compiled-boundary section therefore needs to
+carry both kinds of result at once: a real positive endpoint on the fixed `D0`
+scope, and an equally important statement that the current packet still stops
+before true boundary localization or same-endpoint systems closure.
+
 The main text supports this endpoint with two artifacts: a frontend boundary
 diagram that makes the frozen `D0` slice explicit, and an exact-trace/final-state
 success table that records what the current starter suite does and does not
 validate. Companion appendix material stays clearly downstream of that
 endpoint: memory-surface diagnostics and stress/reference rows help audit the
-boundary, but they do not widen it.
+boundary, but they do not widen it. For the post-`H21` packet, the appendix
+should also reserve one compact runtime-generalization placeholder for `R19`,
+one mechanism-ablation placeholder for `R20`, one paired boundary-map
+placeholder for `R21/R22`, one compact mixed systems gate placeholder for
+`R23`, and one frozen claim-partition note for `H21`.
 In the fixed main-text order, the frontend boundary diagram appears before the
 exact-trace/final-state success table.
 
@@ -213,7 +235,14 @@ borrowing rhetorical force from the motivating field note while quietly
 dropping the parts that did not survive the evidence freeze. The threats
 section then makes the matching external-validity point: the current bundle is
 a narrow, auditable endpoint, not a disguised claim about general
-language-model computation.
+language-model computation. The post-`H21` follow-up adds two more rows that
+should remain first-class in that section. `R22` is not a hidden positive
+systems result; it is a harder no-break-observed boundary scan that still
+fails to localize the true executor boundary. `R23` is not a softened near-win;
+it is a mixed same-endpoint systems recheck that preserves exactness but still
+fails the bounded competitiveness goal. `H21` matters because it freezes those
+two rows into the paper-facing claim partition instead of leaving them as
+operational footnotes.
 
 A compact threats-to-validity table makes those boundary rows explicit,
 keeping failures of learned execution, finite-precision limits, systems no-go
@@ -239,4 +268,8 @@ same reason: they make the research engineering process reproducible and
 inspectable, but they remain downstream of the scientific argument itself. The
 appendix layout stays anchored in three companion bundles: the `P1` paper-ready
 artifact set, the compiled-boundary companion diagnostics, and the release/
-readiness ledgers that keep the package regenerable.
+readiness ledgers that keep the package regenerable. For the post-`H21`
+closeout, the appendix should explicitly reserve space for the `R19` runtime
+generalization rows, the `R20` matched-control ablation rows, the paired
+`R21/R22` boundary-map summaries, the `R23` compact systems-gate rows, and the
+`H21` supported/unsupported/disconfirmed claim note.
