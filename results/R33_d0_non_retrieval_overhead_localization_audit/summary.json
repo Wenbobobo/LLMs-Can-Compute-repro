@@ -1,0 +1,75 @@
+{
+  "experiment": "r33_d0_non_retrieval_overhead_localization_audit",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json",
+    "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
+    "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
+    "results/R23_d0_same_endpoint_systems_overturn_gate/summary.json",
+    "results/R23_d0_same_endpoint_systems_overturn_gate/runtime_profile_rows.json",
+    "results/R28_d0_trace_retrieval_contract_audit/summary.json",
+    "docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/component_localization_manifest.md",
+    "src/model/free_running_executor.py"
+  ],
+  "summary": {
+    "status": "r33_non_retrieval_overhead_localization_complete",
+    "current_frozen_stage": "h26_refreeze_after_r32_boundary_sharp_zoom",
+    "prior_operational_stage": "h25_refreeze_after_r30_r31_decision_packet",
+    "source_systems_reauthorization_stage": "r31_d0_same_endpoint_systems_recovery_reauthorization_packet",
+    "gate": {
+      "lane_verdict": "suite_stable_noncompetitive_after_localization",
+      "reason": "One non-retrieval component now dominates every audited suite, and pointer-like exact remains noncompetitive against the fixed same-endpoint references.",
+      "audit_scope": "stratified_first_pass",
+      "planned_case_count": 12,
+      "executed_case_count": 12,
+      "exact_case_count": 12,
+      "component_accounting_match_count": 12,
+      "suite_count": 5,
+      "stable_suite_component_count": 5,
+      "global_dominant_component": "state_update_bookkeeping_seconds",
+      "suites_same_dominant_component": true,
+      "next_priority_lane": "h27_refreeze_after_r32_r33_same_endpoint_decision"
+    },
+    "selected_suite_count": 5,
+    "executed_program_count": 12,
+    "component_targets": [
+      "dispatch_decode_seconds",
+      "state_update_bookkeeping_seconds",
+      "tensor_python_plumbing_seconds",
+      "residual_fixed_overhead_seconds"
+    ],
+    "comparator_set": [
+      "spec_reference",
+      "lowered_exec_trace",
+      "pointer_like_exact"
+    ],
+    "recommended_next_action": "Freeze the R33 outcome into H27 before considering any new plan-mode routing.",
+    "supported_here": [
+      "R33 stays on the current positive D0 suite and keeps the comparator set fixed.",
+      "R33 executed 12 bounded rows under audit scope `stratified_first_pass`.",
+      "R33 decomposes pointer_like_exact non-retrieval time into dispatch/decode, bookkeeping, python plumbing, and residual fixed overhead."
+    ],
+    "unsupported_here": [
+      "R33 does not widen endpoint scope, suite scope, or comparator scope by momentum.",
+      "R33 does not authorize direct R29 activation by itself.",
+      "R33 does not convert a component-localization result into a broader frontier claim."
+    ]
+  }
+}

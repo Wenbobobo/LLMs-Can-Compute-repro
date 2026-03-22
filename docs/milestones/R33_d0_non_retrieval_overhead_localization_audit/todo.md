@@ -9,5 +9,8 @@
 - [x] Save one planning-only component-localization manifest before execution.
 - [x] Fix one stratified per-suite audit packet before any full-suite replay.
 - [x] Fix one escalation rule from stratified audit to full `R23`-sized replay.
-- [ ] Execute only after a later explicit next-stage activation of the deferred
+- [x] Execute only after a later explicit next-stage activation of the deferred
   audit lane.
+- [x] Export one machine-readable `R33` result packet.
+- [x] Record whether one non-retrieval component localized or the lane stayed
+      aggregate-only.

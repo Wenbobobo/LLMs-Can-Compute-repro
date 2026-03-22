@@ -1,0 +1,38 @@
+{
+  "experiment": "h27_refreeze_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "h27_docs_freeze_one_explicit_post_r33_same_endpoint_packet",
+      "status": "pass",
+      "notes": "H27 should freeze one explicit post-R33 same-endpoint decision packet."
+    },
+    {
+      "item_id": "h26_explicitly_activates_r33_and_r33_exports_one_bounded_verdict",
+      "status": "pass",
+      "notes": "H27 should only exist because H26 preserved R33 and R33 actually executed."
+    },
+    {
+      "item_id": "r31_and_h27_keep_r29_blocked_without_auto_reauthorization",
+      "status": "pass",
+      "notes": "H27 should preserve the R31 discipline that R33 does not directly authorize R29."
+    }
+  ]
+}

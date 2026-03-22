@@ -1,9 +1,13 @@
 # Status
 
-Conditionally planned after `R33`, not yet executed.
+Executed post-`R33` refreeze.
 
-- the lane is inactive unless `H26` keeps deferred `R33` justified next;
-- if activated, it should freeze the post-`R33` systems reading on the same
-  `D0` endpoint;
-- it should not treat `R33` as automatic authorization for `R29`, `F3`, or
-  wider scope.
+- the lane consumed executed `R33` without widening scope beyond the current
+  tiny typed-bytecode `D0` endpoint;
+- it freezes the post-`R33` systems verdict as
+  `systems_more_sharply_negative`;
+- it preserves `R29` and `F3` as blocked future lanes on the same scope;
+- it keeps `F2` planning-only rather than turning attribution into automatic
+  frontier authorization;
+- the next downstream action is a new explicit planning packet, not another
+  runtime lane by momentum.

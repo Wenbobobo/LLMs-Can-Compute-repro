@@ -1,0 +1,118 @@
+{
+  "experiment": "r33_suite_component_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "suite": "control_flow",
+      "case_count": 3,
+      "exact_case_count": 3,
+      "component_accounting_match_count": 3,
+      "median_pointer_like_ratio_vs_spec_reference": 4.613525139014237,
+      "median_pointer_like_ratio_vs_lowered_exec_trace": 2.1843092606983507,
+      "median_retrieval_seconds": 6.539968308061361e-05,
+      "median_non_retrieval_seconds": 0.004362200270406902,
+      "median_pointer_like_non_retrieval_share": 0.9833179549376025,
+      "component_counts": [
+        {
+          "component": "state_update_bookkeeping_seconds",
+          "count": 3
+        }
+      ],
+      "suite_dominant_component": "state_update_bookkeeping_seconds",
+      "component_ranking_stable": true
+    },
+    {
+      "suite": "loops",
+      "case_count": 3,
+      "exact_case_count": 3,
+      "component_accounting_match_count": 3,
+      "median_pointer_like_ratio_vs_spec_reference": 4.113699535222819,
+      "median_pointer_like_ratio_vs_lowered_exec_trace": 2.4731367652546608,
+      "median_retrieval_seconds": 6.56001502647996e-05,
+      "median_non_retrieval_seconds": 0.003378799883648753,
+      "median_pointer_like_non_retrieval_share": 0.982042842522897,
+      "component_counts": [
+        {
+          "component": "state_update_bookkeeping_seconds",
+          "count": 3
+        }
+      ],
+      "suite_dominant_component": "state_update_bookkeeping_seconds",
+      "component_ranking_stable": true
+    },
+    {
+      "suite": "memory",
+      "case_count": 2,
+      "exact_case_count": 2,
+      "component_accounting_match_count": 2,
+      "median_pointer_like_ratio_vs_spec_reference": 4.130432288520784,
+      "median_pointer_like_ratio_vs_lowered_exec_trace": 2.9874212915507394,
+      "median_retrieval_seconds": 3.300025127828121e-06,
+      "median_non_retrieval_seconds": 0.00028170004952698946,
+      "median_pointer_like_non_retrieval_share": 0.9896003583578493,
+      "component_counts": [
+        {
+          "component": "state_update_bookkeeping_seconds",
+          "count": 2
+        }
+      ],
+      "suite_dominant_component": "state_update_bookkeeping_seconds",
+      "component_ranking_stable": true
+    },
+    {
+      "suite": "smoke",
+      "case_count": 2,
+      "exact_case_count": 2,
+      "component_accounting_match_count": 2,
+      "median_pointer_like_ratio_vs_spec_reference": 4.092527457048518,
+      "median_pointer_like_ratio_vs_lowered_exec_trace": 2.820470349246035,
+      "median_retrieval_seconds": 1.800013706088066e-06,
+      "median_non_retrieval_seconds": 0.00016629998572170734,
+      "median_pointer_like_non_retrieval_share": 0.9921738496642175,
+      "component_counts": [
+        {
+          "component": "state_update_bookkeeping_seconds",
+          "count": 2
+        }
+      ],
+      "suite_dominant_component": "state_update_bookkeeping_seconds",
+      "component_ranking_stable": true
+    },
+    {
+      "suite": "stress_reference",
+      "case_count": 2,
+      "exact_case_count": 2,
+      "component_accounting_match_count": 2,
+      "median_pointer_like_ratio_vs_spec_reference": 4.015961450005755,
+      "median_pointer_like_ratio_vs_lowered_exec_trace": 2.44470899361278,
+      "median_retrieval_seconds": 0.00016200065147131681,
+      "median_non_retrieval_seconds": 0.010003099334426224,
+      "median_pointer_like_non_retrieval_share": 0.9840630538119579,
+      "component_counts": [
+        {
+          "component": "state_update_bookkeeping_seconds",
+          "count": 2
+        }
+      ],
+      "suite_dominant_component": "state_update_bookkeeping_seconds",
+      "component_ranking_stable": true
+    }
+  ]
+}
