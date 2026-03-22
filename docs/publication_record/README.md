@@ -12,12 +12,16 @@ Current control docs:
   packet, `H29/R36/R37/H30/H31/R38` as the frozen upstream evidence chain, the
   older same-endpoint `H25/H23` stack as preserved historical context, and any
   later compiler-boundary extension as conditional on a new plan packet;
+- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — the
+  current post-`H32` planning surface that prepares one docs-only `H33`
+  question-selection packet rather than automatic wider runtime execution;
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — the current
-  saved post-`H30` execution surface for the explicit later decision packet,
-  one richer same-substrate extension gate, `H32` refreeze, and `P18` clean
-  closeout;
-- `docs/milestones/P18_post_h32_clean_worktree_promotion/` — the current clean
-  worktree closeout lane that fixes packet split and runbook after `H32`;
+  saved post-`H30` execution surface that landed the explicit later decision
+  packet, one richer same-substrate extension gate, `H32` refreeze, and `P18`
+  clean closeout;
+- `docs/milestones/P18_post_h32_clean_worktree_promotion/` — the completed
+  clean worktree closeout lane that fixes packet split and runbook after
+  `H32`;
 - `docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md` — the
   preserved historical pre-execution planning packet that defined the narrow
   `R37 -> H30` route before execution;
@@ -47,11 +51,13 @@ Current control docs:
   `docs/milestones/H27_refreeze_after_r32_r33_same_endpoint_decision/` — the
   preserved prior same-endpoint decision/closeout stack that remains historical
   rather than active.
+- `docs/milestones/H33_post_h32_conditional_next_question_packet/` — the
+  planning-only scaffold for the next docs-only packet after `H32`;
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/` and
   `docs/milestones/F4_post_h23_origin_claim_delta_matrix/` — internal-only
   planning surfaces that keep future frontier review gated and origin-facing
-  claim comparisons anchored to the frozen `H23` evidence while staying
-  operationally downstream of `H25`;
+  claim comparisons anchored to the current `H32` stack without authorizing
+  new execution by themselves;
 - `docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/` — the
   preserved prior internal handoff surface for the old same-endpoint route,
   blocked frontier/scope-lift paths, and commit-hygiene split guidance without

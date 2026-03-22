@@ -79,15 +79,23 @@ The current justified next move is still not automatic widening.
 `H32` preserves the narrow compiled-boundary result after one explicit
 extension, and no further runtime extension is active by default.
 
-The immediate clean-worktree closeout lane
-`P18_post_h32_clean_worktree_promotion` is now the operational packaging
-surface on branch `wip/h31-later-explicit`; no new runtime execution is active
-by default.
+The clean-worktree closeout lane
+`P18_post_h32_clean_worktree_promotion` is now complete on branch
+`wip/h31-later-explicit`; no new runtime execution is active by default.
+
+The saved next planning surface is now:
+
+- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
+
+That design keeps the next move docs-only and prepares one conditional
+question-selection packet rather than automatic broader compiled execution.
 
 If reauthorized later, the next conditional order is:
 
-new plan packet ->
-conditional new substrate question or broader compiled-boundary justification
+saved post-`H32` plan packet ->
+conditional `H33_post_h32_conditional_next_question_packet` ->
+either freeze compiled-boundary as complete-for-now
+or one same-substrate Origin-core substrate question
 
 ## Control References
 
@@ -102,8 +110,11 @@ conditional new substrate question or broader compiled-boundary justification
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
+- `docs/milestones/H33_post_h32_conditional_next_question_packet/`
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/`
+- `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md`
 
 ## Standing Gates

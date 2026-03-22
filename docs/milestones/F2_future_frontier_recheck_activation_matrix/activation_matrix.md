@@ -2,25 +2,27 @@
 
 `F2` is planning-only. It does not authorize any widened run by itself. The
 matrix below exists so a later agent can decide whether frontier review is even
-plan-worthy without rereading the full `H19 -> H25` packet.
+plan-worthy without rereading the current `H27 -> H32` Origin-core packet and
+the preserved same-endpoint control stack.
 
 ## Trigger Matrix
 
-| Condition | Current `H25` active / `H23` frozen state | Required for any future frontier-plan draft | Why it still matters |
+| Condition | Current `H32` active state | Required for any future frontier-plan draft | Why it still matters |
 | --- | --- | --- | --- |
-| Same-endpoint evidence chain is coherent | satisfied | keep satisfied | `H19`, `H21`, `H23`, and `H25` now describe one bounded `D0` story rather than conflicting partial follow-ups |
-| Mechanism story is claim-relevant on the current endpoint | satisfied | keep satisfied | `R20` and `R28` keep the retrieval/mechanism story claim-relevant without widening beyond the admitted same-endpoint evidence |
-| True executor boundary is localized | not satisfied | `R32` or a later explicit same-endpoint follow-up would need to expose one reproducible family-local `first_fail` with neighboring exact rows, or a stronger principled contradiction than the current no-localization state | `H23` still ends at `bounded_grid_still_not_localized`, and `R30` authorizes one more family-local sharp zoom rather than frontier widening |
-| Current-scope systems story is materially positive | not satisfied | `R33` or a later explicit same-endpoint systems packet would need to move the systems story materially positive on the same endpoint first, with `R29` staying blocked unless a later explicit packet reauthorizes it | `R23` still ends at `systems_still_mixed`, and `R31` routes the next justified systems work through a narrower non-retrieval audit while keeping `R29` blocked |
-| Scope-lift thesis is explicitly re-authorized | not satisfied | a later refreeze would need to replace the standing no-widening state with an explicit new decision | `H25` keeps `F3` blocked and planning-only; planning notes are not authorization |
-| The active downstream same-endpoint order is exhausted or explicitly superseded | not satisfied | the currently justified `R32 -> deferred R33 -> blocked R29/F3` order must either finish or be replaced by a later explicit packet | `F2` must not be used to skip over the still-open same-endpoint follow-up sequence |
+| Origin-core evidence chain is coherent | satisfied | keep satisfied | `H28`, `H29`, `R36`, `R37`, `H30`, `H31`, `R38`, and `H32` now describe one narrow append-only / exact-retrieval / small-VM story rather than a broad compiler claim |
+| The current compiled-boundary line is explicitly delimited | satisfied | keep satisfied | `H30/H31/R38/H32` name one admitted extension row, one boundary probe, the same opcode surface, and the standing no-widening rule |
+| A concrete post-`H32` substrate gap is isolated | not satisfied | the saved post-`H32` design and a later docs-only packet would need to reduce the next question to one precise same-substrate audit or freeze-complete-for-now decision | without that reduction, a widened review would just be momentum beyond `H32` |
+| Compiler/runtime boundary remains claim-relevant | satisfied | keep satisfied | the current materials still identify "compiler does all the work" and "accelerating only the easy part" as the main unresolved scientific risks after `H32` |
+| Broader compiled or new-substrate work is explicitly reauthorized | not satisfied | a later explicit packet would need to replace the standing `H32` no-widening state with one named new question | `H32` ends at `new_plan_required_before_any_further_compiled_boundary_or_scope_lift` |
+| Systems or frontier story changes materially | not satisfied | a later packet would need to move beyond the current narrow Origin-core result in a coherent way | the project still does not have a materially positive broad systems or general-computer story |
+| The active downstream order is exhausted or explicitly superseded | not satisfied | the saved post-`H32` design plus a later `H33` packet must either freeze here or authorize one narrow same-substrate question first | `F2` must not be used to skip over the current post-`H32` planning requirement |
 
 ## Non-goals
 
-- Do not treat `R30` authorizing `R32` as implicit authorization for frontier
-  review, scope lift, or endpoint widening.
-- Do not treat `R31` or a future `R33` attribution audit as if the systems
-  story is already materially positive.
+- Do not treat `H32` or `R38` as implicit authorization for another compiled
+  family, a new substrate, or frontier review.
+- Do not treat the saved post-`H32` plan or `H33` scaffold as if they were
+  already landed evidence.
 - Do not restate a planning matrix as if it were a landed experimental result.
 - Do not use `F2` to backdoor a broader “LLMs are computers” claim.
 
@@ -28,45 +30,43 @@ plan-worthy without rereading the full `H19 -> H25` packet.
 
 Any later frontier-plan draft should require, at minimum:
 
-1. the preserved refreeze/decision chain
+1. the preserved same-endpoint control chain
    `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`,
-   `results/H18_post_h17_mainline_reopen_guard/summary.json`,
    `results/H19_refreeze_and_next_scope_decision/summary.json`,
    `results/H21_refreeze_after_r22_r23/summary.json`,
-   `results/H23_refreeze_after_r26_r27_r28/summary.json`, and
-   `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`;
-2. the landed same-endpoint packet
-   `results/R19_d0_pointer_like_surface_generalization_gate/summary.json`,
-   `results/R20_d0_runtime_mechanism_ablation_matrix/summary.json`, and
-   `results/R21_d0_exact_executor_boundary_break_map/summary.json`;
-3. the landed post-`H19` and post-`H21` follow-up packets
-   `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json`,
-   `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`,
-   `results/R22_d0_true_boundary_localization_gate/summary.json`,
-   `results/R23_d0_same_endpoint_systems_overturn_gate/summary.json`, and
-   `results/R26_d0_boundary_localization_execution_gate/summary.json`,
-   `results/R27_d0_boundary_localization_extension_gate/summary.json`,
-   `results/R28_d0_trace_retrieval_contract_audit/summary.json`,
-   `results/R30_d0_boundary_reauthorization_packet/summary.json`, and
-   `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`;
-4. the current downstream planning manifests
-   `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md`,
-   `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/component_localization_manifest.md`,
+   `results/H23_refreeze_after_r26_r27_r28/summary.json`,
+   `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`, and
+   `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`;
+2. the current Origin-core packet
+   `results/H28_post_h27_origin_core_reanchor_packet/summary.json`,
+   `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`,
+   `results/R34_origin_retrieval_primitive_contract_gate/summary.json`,
+   `results/R35_origin_append_only_stack_vm_execution_gate/summary.json`,
+   `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`,
+   `results/R37_origin_compiler_boundary_gate/summary.json`,
+   `results/H30_post_r36_r37_scope_decision_packet/summary.json`,
+   `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`,
+   `results/R38_origin_compiler_control_surface_extension_gate/summary.json`,
+   and `results/H32_post_r38_compiled_boundary_refreeze/summary.json`;
+3. the current downstream planning surfaces
+   `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`,
+   `docs/milestones/H33_post_h32_conditional_next_question_packet/`,
    and `docs/milestones/F3_post_h23_scope_lift_decision_bundle/decision_gate.md`;
-5. the standing no-widening controls
+4. the standing no-widening controls
    `results/M7_frontend_candidate_decision/decision_summary.json`;
-6. the standing mixed systems gate
+5. the standing mixed systems gate
    `results/R2_systems_baseline_gate/summary.json` and
    `results/E1b_systems_patch/summary.json`.
 
 ## Smallest Acceptable Widened-Probe Shape
 
 If a later explicit plan ever becomes justified, the first widened probe should
-still be narrower than a new frontend:
+still be narrower than a new frontend or a new general compiled family:
 
-- one explicitly named contradiction or gap tied back to the
-  `H23/H25` unsupported or disconfirmed rows, not a broad exploratory sweep;
-- one small comparator set tied back to the current blocked same-endpoint
-  sequence rather than a new endpoint family;
+- one explicitly named contradiction or gap tied back to the current
+  `H32/H31/H30/H29` unsupported or disconfirmed rows, not a broad exploratory
+  sweep;
+- one small comparator set tied back to the current admitted row and boundary
+  probe rather than a new endpoint family;
 - one fixed success/failure criterion decided before execution;
 - one explicit stop condition that prevents an open-ended repair loop.

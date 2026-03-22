@@ -8,10 +8,14 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-h32-conditional-next-packet-design.md` — the current saved
+  post-`H32` planning surface: keep `H32` active, prepare one docs-only `H33`
+  question-selection packet, and avoid automatic wider compiled-boundary or
+  new-substrate execution.
 - `2026-03-22-post-h30-h31-r38-extension-plan.md` — the current saved
-  post-`H30` execution surface: explicit later decision packet, one richer
-  same-substrate extension gate, `H32` refreeze, and `P18` clean-worktree
-  closeout.
+  post-`H30` execution surface that landed the explicit later decision packet,
+  one richer same-substrate extension gate, `H32` refreeze, and `P18`
+  clean-worktree closeout.
 - `2026-03-22-post-h30-explicit-next-wave-design.md` — the preserved pre-`H31`
   planning surface that required a later explicit packet before any further
   compiler-boundary extension.
@@ -34,10 +38,14 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `2026-03-23-post-h32-conditional-next-packet-design.md` — current planning
+  surface for the conditional post-`H32` question-selection packet.
 - `2026-03-22-post-h30-h31-r38-extension-plan.md` — current design surface for
   the landed `H31 -> R38 -> H32` wave.
-- `../milestones/P18_post_h32_clean_worktree_promotion/` — current clean
+- `../milestones/P18_post_h32_clean_worktree_promotion/` — completed clean
   worktree packaging lane for the post-`H32` bundle.
+- `../milestones/H33_post_h32_conditional_next_question_packet/` — planning-only
+  scaffold for the next docs-only packet after `H32`.
 - `../milestones/H32_post_r38_compiled_boundary_refreeze/` — current active
   routing/refreeze packet for the Origin-core line.
 - `../milestones/R38_origin_compiler_control_surface_extension_gate/` —

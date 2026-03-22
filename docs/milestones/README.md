@@ -43,11 +43,15 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P17_h30_commit_hygiene_and_clean_worktree_promotion/` — completed docs-only
   closeout and clean-worktree packet-promotion lane before the later explicit
   packet.
-- `P18_post_h32_clean_worktree_promotion/` — current clean-branch closeout and
-  promotion lane for the landed `H31/R38/H32` packet.
+- `P18_post_h32_clean_worktree_promotion/` — completed clean-branch closeout
+  and promotion lane for the landed `H31/R38/H32` packet.
 
 ## Conditional Future Lanes
 
+- `../plans/2026-03-23-post-h32-conditional-next-packet-design.md` — saved
+  post-`H32` planning surface for the next docs-only question-selection packet.
+- `H33_post_h32_conditional_next_question_packet/` — planning-only scaffold for
+  the conditional next packet after `H32`.
 - `../plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — saved plan for
   the landed explicit-extension wave after `H30`.
 - no further compiler-boundary extension is active by default.

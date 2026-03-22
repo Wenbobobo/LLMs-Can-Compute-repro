@@ -32,8 +32,8 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-Origin-core refreeze active after one explicit later-extension packet and one
-same-substrate richer control/call family check
+Origin-core refreeze remains active while post-`H32` work stays planning-only
+until a later docs-only packet chooses the next question
 
 ## Current Facts
 
@@ -65,8 +65,11 @@ same-substrate richer control/call family check
    control/call family only.
 4. Avoid reopening `R29`, `F3`, broader compiler/demo scope, or frontier
    widening by momentum.
-5. Treat `P18_post_h32_clean_worktree_promotion` as the operational closeout
-   lane on this clean branch.
+5. Treat `P18_post_h32_clean_worktree_promotion` as completed operational
+   closeout on this clean branch.
+6. Save one post-`H32` planning packet before any later runtime execution.
+7. Refresh `F2_future_frontier_recheck_activation_matrix` to the current
+   `H27 -> H28 -> H29 -> R36 -> R37 -> H30 -> H31 -> R38 -> H32` stack.
 
 ## Last Completed Order
 
@@ -90,13 +93,18 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 
 ## Next Conditional Order
 
-new plan packet ->
-conditional new substrate question or broader compiled-boundary justification
+`docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` ->
+conditional `H33_post_h32_conditional_next_question_packet` ->
+either freeze compiled-boundary as complete-for-now
+or one same-substrate Origin-core substrate question
 
 ## Current References
 
+- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/`
+- `docs/milestones/H33_post_h32_conditional_next_question_packet/`
+- `docs/milestones/F2_future_frontier_recheck_activation_matrix/`
 - `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`
 - `docs/milestones/H31_post_h30_later_explicit_boundary_decision_packet/`
 - `docs/milestones/R38_origin_compiler_control_surface_extension_gate/`
@@ -111,9 +119,11 @@ conditional new substrate question or broader compiled-boundary justification
 - `P17` closeout remains complete on `wip/p17-h30-clean`; do not reopen it;
 - `P18` is the current clean-branch packaging surface; do not merge back into
   dirty `main` or dirty `wip/h27-promotion` by momentum;
+- do not treat the saved post-`H32` plan or `H33` scaffold as runtime
+  authorization by themselves;
 - do not reopen `R29` or `F3` by wording alone;
 - do not relabel one richer compiled control family as arbitrary-language
   support;
-- do not skip the saved post-`H30` / `H31` / `R38` plan when evaluating any
-  later broader lane;
+- do not skip the saved post-`H30` / `H31` / `R38` plan or the saved
+  post-`H32` plan when evaluating any later broader lane;
 - require a new plan before any further compiled-boundary extension.

@@ -1,5 +1,14 @@
 # Artifact Index
 
+- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
+- `docs/milestones/H33_post_h32_conditional_next_question_packet/`
+- `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
+- `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
+- `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+- `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
+- `results/H28_post_h27_origin_core_reanchor_packet/summary.json`
+- `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`
 - `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md`
 - `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
 - `results/R30_d0_boundary_reauthorization_packet/summary.json`

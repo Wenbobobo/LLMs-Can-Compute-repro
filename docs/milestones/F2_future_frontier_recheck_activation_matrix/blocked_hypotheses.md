@@ -1,10 +1,12 @@
 # Blocked Hypotheses
 
-- `H25` does not authorize frontier widening just because it routes the next
-  same-endpoint work through `R32` and deferred `R33`.
-- A family-local boundary sharp zoom by itself is not enough to justify scope
-  lift or frontier review.
-- A non-retrieval systems audit by itself is not enough to justify broader
-  demos, headlines, or endpoint widening.
+- `H32` does not authorize frontier widening just because one richer compiled
+  control family now works on the same substrate.
+- A saved post-`H32` plan or `H33` scaffold is not enough to justify runtime
+  widening without a later explicit decision.
+- One same-substrate substrate question by itself is not enough to justify
+  scope lift or frontier review.
+- A broader systems or headline story cannot be inferred from the current
+  narrow compiled-boundary packet alone.
 - This lane should never be used to outrun the current evidence with blog-style
   narrative.
