@@ -4,13 +4,14 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H25` active / `H23` frozen stack.
+the current `H30` active / `H29` preserved-upstream / `H27-H28`
+preserved-closeout-and-pivot stack.
 
 ## Wording and scope
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by active `H25`.
+  recorded by active `H30`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
@@ -18,8 +19,8 @@ the current `H25` active / `H23` frozen stack.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same `H25` active / `H23`
-  frozen control package.
+  `publication_record/README.md` all describe the same `H30` active /
+  `H29-H27-H28` preserved current control package.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 
@@ -27,11 +28,18 @@ the current `H25` active / `H23` frozen stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
-- [ ] `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
-  reports the current active operational decision packet without widening
-  scope.
-- [ ] `results/H23_refreeze_after_r26_r27_r28/summary.json` still records the
-  current frozen scientific state.
+- [ ] `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+  reports the current active routing/refreeze packet without widening scope.
+- [ ] `results/R37_origin_compiler_boundary_gate/summary.json` reports one
+  tiny compiled-boundary gate only and does not imply broader compiler support.
+- [ ] `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
+  remains available as the preserved upstream Origin-core refreeze packet.
+- [ ] `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`
+  still records the preserved negative same-endpoint closeout.
+- [ ] `results/H28_post_h27_origin_core_reanchor_packet/summary.json` still
+  records the current Origin-core pivot packet.
+- [ ] `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
+  still records the current narrow precision-boundary follow-up.
 - [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero
   blocked items on the preserved earlier refrozen control surface.
 - [ ] `results/H14_core_first_reopen_guard/summary.json` reports zero blocked

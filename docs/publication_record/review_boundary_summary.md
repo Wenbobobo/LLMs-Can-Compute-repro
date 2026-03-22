@@ -2,33 +2,38 @@
 
 Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
-appendix, claim/evidence ledgers, and landed `H23` packet, while
-`H25_refreeze_after_r30_r31_decision_packet` is the current active operational
-decision packet for downstream routing.
+appendix, claim/evidence ledgers, and landed result packets. The current active
+routing/refreeze packet is `H30_post_r36_r37_scope_decision_packet`,
+preserving `H27` as the negative closeout of the old same-endpoint line and
+`H28` as the Origin-core pivot packet underneath it.
 
 ## Supported here on the current frozen scope
 
 - deterministic computation can be encoded as an append-only execution trace;
 - exact latest-write retrieval over that trace can be implemented with the
   current structured 2D hard-max mechanism;
-- those primitives support one small exact executor and a tiny typed-bytecode
-  `D0` compiled endpoint on the validated slice;
-- same-endpoint runtime generalization is supported inside the admitted-plus-
-  heldout `R19` envelope, the bounded `R20` mechanism result is supported on
-  the fixed `16`-row probe set, the harder `R22`, `R26`, and `R27` executor
-  grids still did not expose a failure inside their executed ranges, `R28`
-  supports the current mechanism contract with only partial control isolation,
-  and `R23` kept pointer-like exact exact on the full positive `D0` systems
-  suite;
-- the systems result remains mixed rather than triumphant.
+- those primitives support one small exact executor on the active narrow
+  Origin-core bundle;
+- `R34` supports the minimal retrieval primitive contract on the current narrow
+  extracted suite, `R35` supports exact rollout on the current stack-VM bundle,
+  and `H29` freezes that chain positively without reopening blocked lanes;
+- `R36` sharpens a narrow precision boundary on the active bundle: selected
+  inflated-horizon float32 `single_head` rows fail by `tie_collapse`, while
+  bounded decomposition schemes recover those exact exported rows;
+- `R37` supports one tiny lowered bytecode subset on the active Origin-core
+  substrate, with source reference, lowered interpreter, and free-running exact
+  execution all agreeing on the admitted rows;
+- preserved historical same-endpoint evidence remains available underneath the
+  current line, but it is no longer the active routing target.
 
 ## Unsupported here
 
 - no general “LLMs are computers” claim;
 - no arbitrary C reproduction claim;
-- no broader compiled demos beyond the current `D0` boundary;
+- no broader compiled demos beyond the current tiny validated boundary;
 - no claim that the bounded `R21/R22` scans found the true executor failure
   boundary, or that the later `R26/R27` follow-up packet localized it;
+- no claim that `R36` authorizes compiler/demo/frontend scope lift;
 - no current-scope end-to-end runtime-superiority claim.
 
 ## Disconfirmed here
@@ -43,11 +48,14 @@ decision packet for downstream routing.
 
 ## Canonical evidence anchors
 
-- `results/H23_refreeze_after_r26_r27_r28/summary.json`
-- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
-- `results/R30_d0_boundary_reauthorization_packet/summary.json`
-- `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
-- `results/H21_refreeze_after_r22_r23/summary.json`
+- `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`
+- `results/H28_post_h27_origin_core_reanchor_packet/summary.json`
+- `results/R34_origin_retrieval_primitive_contract_gate/summary.json`
+- `results/R35_origin_append_only_stack_vm_execution_gate/summary.json`
+- `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
+- `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
+- `results/R37_origin_compiler_boundary_gate/summary.json`
+- `results/H30_post_r36_r37_scope_decision_packet/summary.json`
 - `claim_ladder.md`
 - `claim_evidence_table.md`
 - `manuscript_bundle_draft.md`
@@ -64,10 +72,10 @@ lane in `conditional_reopen_protocol.md`:
 - `E1c_compiled_boundary_patch`
 
 Any later broader frontier review remains planning-only under
-`F2_future_frontier_recheck_activation_matrix`, now downstream of active `H25`
-while preserving `H23` as the frozen scientific state, until a later explicit
-packet changes that status. The current same-endpoint order remains
-`R32 -> deferred R33 -> blocked R29/F3`, with `F2` only as the planning
-surface beyond that. Review questions that can be answered by wording, packet
-indexing, or existing ledgers should stay downstream of the landed `H25/H23`
-stack rather than reopening science.
+`F2_future_frontier_recheck_activation_matrix` and the blocked
+`F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
+that status. The current conditional future order starts only after `H30` and
+still requires a later explicit packet before any compiler-boundary extension.
+Review questions that can be answered by wording, packet indexing, or existing
+ledgers should stay downstream of the landed `H30/H29/H28/H27` stack rather
+than reopening science.

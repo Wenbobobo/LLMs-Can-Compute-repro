@@ -46,6 +46,13 @@ uv run python scripts/export_h23_refreeze_after_r26_r27_r28.py
 uv run python scripts/export_r30_d0_boundary_reauthorization_packet.py
 uv run python scripts/export_r31_d0_same_endpoint_systems_recovery_reauthorization_packet.py
 uv run python scripts/export_h25_refreeze_after_r30_r31_decision_packet.py
+uv run python scripts/export_h28_post_h27_origin_core_reanchor_packet.py
+uv run python scripts/export_r34_origin_retrieval_primitive_contract_gate.py
+uv run python scripts/export_r35_origin_append_only_stack_vm_execution_gate.py
+uv run python scripts/export_h29_refreeze_after_r34_r35_origin_core_gate.py
+uv run python scripts/export_r36_origin_long_horizon_precision_scaling_gate.py
+uv run python scripts/export_r37_origin_compiler_boundary_gate.py
+uv run python scripts/export_h30_post_r36_r37_scope_decision_packet.py
 uv run python scripts/export_h15_refreeze_and_decision_sync.py
 uv run python scripts/export_h14_core_first_reopen_guard.py
 uv run python scripts/export_h13_post_h12_governance_stage_health.py
@@ -64,6 +71,23 @@ uv run pytest -q
 
 - `results/P1_paper_readiness/summary.json` shows `10/10` ready figure/table
   items and no blocked or partial rows
+- `results/H30_post_r36_r37_scope_decision_packet/summary.json` records the
+  current active Origin-core routing/refreeze packet after the tiny compiled
+  boundary gate and keeps any later compiler-boundary extension conditional on
+  a later explicit packet
+- `results/R37_origin_compiler_boundary_gate/summary.json` records one narrow
+  positive fact beyond `H29/R36`: one admitted tiny bytecode subset survives
+  source reference, lowering parity, and free-running exact execution on the
+  active substrate
+- `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
+  records the active narrow precision boundary rather than a broad precision
+  robustness claim
+- `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json` records
+  the preserved upstream Origin-core refreeze chain
+- `results/H28_post_h27_origin_core_reanchor_packet/summary.json` records the
+  Origin-core pivot away from the older same-endpoint route
+- `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`
+  records the preserved negative closeout of the older same-endpoint route
 - `results/H23_refreeze_after_r26_r27_r28/summary.json` records the current
   refrozen same-endpoint state, keeps the boundary unresolved inside the
   bounded `R22/R26/R27` envelope, keeps the mechanism contract positive only
@@ -125,12 +149,14 @@ only as excluded inputs, never as required release artifacts.
 ## Archive interpretation rule
 
 This archive is evidence for a narrow mechanistic endpoint: append-only traces,
-exact latest-write retrieval, bounded precision, and a tiny typed-bytecode
-`D0` compiled boundary. It is not evidence for arbitrary C, general LLM
-computation, or current-scope end-to-end systems superiority. The landed
-`H23` packet strengthens same-endpoint boundary and mechanism evidence inside
-the fixed `D0` boundary, but it still does not localize the true executor
-boundary, still preserves only partial control isolation, and still does not
-overturn the mixed same-endpoint systems gate. The later `R30/R31/H25` stack
-does not widen that science claim set; it only records the current downstream
-routing `R32 -> deferred R33 -> blocked R29/F3`.
+exact latest-write retrieval, bounded precision, and one tiny compiled
+boundary on the active Origin-core substrate. It is not evidence for arbitrary
+`C`, general LLM computation, or current-scope end-to-end systems superiority.
+The landed `H30` packet preserves the `H29 -> R36 -> R37` chain as the current
+active state, while `H27/H28` explain the pivot away from the older
+same-endpoint route. The preserved `H23` packet strengthens same-endpoint
+boundary and mechanism evidence inside the fixed `D0` boundary, but it still
+does not localize the true executor boundary, still preserves only partial
+control isolation, and still does not overturn the mixed same-endpoint systems
+gate. The later `R30/R31/H25` stack does not widen that science claim set; it
+only records the downstream routing `R32 -> deferred R33 -> blocked R29/F3`.

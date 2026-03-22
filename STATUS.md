@@ -2,6 +2,18 @@
 
 ## Current Scientific State
 
+- The current active routing packet is
+  `H30_post_r36_r37_scope_decision_packet`, not the earlier `H25`
+  same-endpoint decision packet.
+- The active scientific target is now the narrower Origin-core line:
+  append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
+  executor.
+- `H27` preserves the negative closeout of the old same-endpoint recovery wave;
+  `H28` is the pivot packet; `R34` and `R35` validate the current narrow
+  mechanism/executor chain; `R36` sharpens a suite-bounded precision boundary;
+  `R37` validates one tiny lowered boundary; and `H30` freezes that result
+  without authorizing broader scope lift.
+- Any later compiler-boundary extension still requires a later explicit packet.
 - Append-only trace semantics and exact `2D` hard-max retrieval remain
   validated on the current scope.
 - Staged-neural execution stays caveated by legality structure; the widened
@@ -10,11 +22,12 @@
   fails on `12/25` tracked real/organic streams, `7/25` already at `1x`,
   while at least one decomposition stays exact on `25/25` tracked streams in
   the validated suite.
-- The current compiled endpoint remains tiny typed bytecode `D0`, with
+- The preserved prior compiled endpoint remains tiny typed bytecode `D0`, with
   deterministic verifier coverage, exact-trace / exact-final-state agreement on
   the frozen starter suite, memory-surface diagnostics, one stress/reference
   follow-up, one harder-suite `R3` exactness gate, and one bounded `R4`
-  mechanistic-closure bundle.
+  mechanistic-closure bundle. Under `H30` this is historical context rather
+  than the active mainline.
 - `R6` keeps the completed long-horizon packet exact on current families only:
   all `24` fixed-multiplier rows remain admitted, `8/8` longer-row
   decode-parity checks match exactly, and the narrow multiplier-`8` precision
@@ -103,7 +116,7 @@
 - `V1_full_suite_validation_runtime_audit` remains the standing bounded
   operational reference under the preserved `H13/V1` handoff.
 - The current active post-`P9` operational stage is
-  `H25_refreeze_after_r30_r31_decision_packet`.
+  `H30_post_r36_r37_scope_decision_packet`.
 - `H21` now remains the preserved pre-reopen same-endpoint control packet
   underneath the current stage.
 - `H22` locked the post-`H21` reopen as one bounded dual-track packet on the
@@ -115,7 +128,7 @@
   `pointer_like_exact_non_retrieval_dominant` bottleneck verdict.
 - `R27` then executed the declared second-wave extension on `12/12`
   candidates and still did not localize a failure.
-- `H23` now records the current frozen same-endpoint state:
+- On the preserved prior same-endpoint route, `H23` recorded the frozen state:
   `decision_state = post_r26_r27_r28_refreeze_complete`,
   `boundary_verdict = bounded_grid_still_not_localized`,
   `mechanism_contract_verdict = mechanism_contract_supported_with_partial_control_isolation`,
@@ -176,7 +189,7 @@
   `pointer_like_exact_non_retrieval_dominant` bottleneck verdict.
 - `R27` then executed the declared second-wave extension on `12/12`
   candidates and still did not localize a failure.
-- `H23` now records the current frozen same-endpoint state:
+- On the preserved prior same-endpoint route, `H23` recorded the frozen state:
   `decision_state = post_r26_r27_r28_refreeze_complete`,
   `boundary_verdict = bounded_grid_still_not_localized`,
   `mechanism_contract_verdict = mechanism_contract_supported_with_partial_control_isolation`,
@@ -192,7 +205,8 @@
   `systems_reauthorization_verdict = audit_non_retrieval_overhead_first`,
   routing any later same-endpoint systems story through `R33` before `R29` can
   be honestly reconsidered.
-- `H25` now records the current active operational decision packet:
+- On the preserved prior same-endpoint route, `H25` recorded the active
+  operational decision packet that later fed `R32/R33/H27`:
   `decision_state = post_h23_reauthorization_packet_complete`,
   `current_frozen_stage = h23_refreeze_after_r26_r27_r28`,
   `next_priority_lane = r32_d0_family_local_boundary_sharp_zoom`, and
@@ -228,16 +242,14 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H25_refreeze_after_r30_r31_decision_packet` under
-  `docs/publication_record/current_stage_driver.md`, with the completed
-  `H22/R26/R28/R27/H23` packet preserved as the current frozen narrow-endpoint
-  scientific state, the completed `H24/R30/R31/H25` packet preserved as the
-  current decision/refreeze layer above it, the completed `H20/R22/R23/H21`
-  packet preserved as the immediate pre-reopen control, the completed
-  `H18/R19/R20/R21/H19` packet preserved as the earlier same-endpoint refreeze
-  control, the completed `H16/R15/R16/R17/R18/H17` packet preserved as the
-  prior same-scope refreeze baseline, and `H13/V1` preserved as the
-  governance/runtime handoff.
+  `H30_post_r36_r37_scope_decision_packet` under
+  `docs/publication_record/current_stage_driver.md`, with
+  `H28/R34/R35/H29/R36/R37` preserved as the current upstream Origin-core
+  evidence chain, `H27` preserved as the negative closeout of the old
+  same-endpoint route, the completed `H24/R30/R31/H25` packet preserved as the
+  prior same-endpoint decision/refreeze layer, the completed
+  `H22/R26/R28/R27/H23` packet preserved as the earlier frozen same-endpoint
+  scientific state, and `H13/V1` preserved as the governance/runtime handoff.
 - `H8/R6/R7/H9` remains the completed direct same-endpoint baseline
   underneath the current stage.
 - `H6/R3/R4/(inactive R5)/H7` remains the deeper completed baseline
@@ -254,23 +266,26 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H25` is now the current
-   active decision packet while `H23` remains the frozen scientific state.
-2. Use `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
-   together with the landed `R30` and `R31` summaries as the current routing
-   surface for future plan-mode work.
-3. Keep the `H25` claim partition explicit while preserving the narrower `H23`
-   scientific limits underneath it.
-4. Treat `R32_d0_family_local_boundary_sharp_zoom` as the primary authorized
-   next science lane and `R33_d0_non_retrieval_overhead_localization_audit` as
-   the deferred systems-audit lane.
-5. Keep `R29_d0_same_endpoint_systems_recovery_execution_gate`,
+   `tmp/active_wave_plan.md` aligned on the rule that `H30` is now the current
+   active packet above preserved `H29/R36/R37`.
+2. Treat `P17_h30_commit_hygiene_and_clean_worktree_promotion` as completed on
+   `wip/p17-h30-clean`; the next planning surface is now the later explicit
+   packet rather than more closeout work.
+3. Use `results/H30_post_r36_r37_scope_decision_packet/summary.json` and
+   `results/R37_origin_compiler_boundary_gate/summary.json` plus
+   `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md` as the
+   current routing surface for future plan-mode work.
+4. Keep the `H30` claim partition explicit while preserving `H27` as the
+   negative same-endpoint closeout and `H28` as the pivot packet.
+5. Treat any later compiler-boundary extension as conditional on a later
+   explicit packet, not as the current active lane.
+6. Keep `R29_d0_same_endpoint_systems_recovery_execution_gate`,
    `F3_post_h23_scope_lift_decision_bundle`, and
    `F2_future_frontier_recheck_activation_matrix` blocked until a later
    explicit packet changes the preconditions.
-6. Keep `F4_post_h23_origin_claim_delta_matrix` and
-   `P15_internal_claim_and_handoff_sync_after_h25` aligned as internal-only
-   downstream aids rather than treating them as substitutes for new evidence.
+6. Keep `F4_post_h23_origin_claim_delta_matrix` and the saved post-`R36`
+   planning packet aligned as downstream aids rather than substitutes for new
+   evidence.
 7. Treat `results/release_worktree_hygiene_snapshot/summary.json` plus
    `results/release_preflight_checklist_audit/summary.json` as the current
    outward-sync controls; a dirty tree still blocks release-facing commits but

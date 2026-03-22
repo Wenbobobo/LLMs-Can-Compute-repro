@@ -95,3 +95,16 @@
   `R32` first and deferred `R33` second: the systems story is still not
   materially positive enough for broader systems, frontend, or demo claims,
   and the executor boundary is still not localized.
+- `H27` later closes that old same-endpoint recovery line more sharply
+  negative: `R32` still does not localize a true boundary, `R33` still does
+  not turn the systems story positive, and the old `R29/F3` route remains
+  blocked rather than implicitly revived.
+- `R36` sharpens the current precision caveat on the active Origin-core bundle:
+  selected inflated-horizon float32 `single_head` rows fail by
+  `tie_collapse`, bounded decomposition schemes recover those exported rows,
+  and that recovery still does not authorize compiled/demo scope lift by
+  momentum.
+- `R37` remains a narrow existence proof, not a broad compiler result: one tiny
+  admitted bytecode subset lowers and executes exactly on the active
+  Origin-core substrate, but that does not reopen arbitrary `C`, broader
+  language support, or same-endpoint systems claims.

@@ -1,19 +1,26 @@
 # Commit And Hygiene Handoff
 
+This document is preserved as the `H25`-era commit handoff for the old
+same-endpoint route. Under `H30` it is not the current routing note; use it
+only when isolating or committing the older `H24/R30/R31/H25/R32/R33/H27`
+packet family.
+
 ## Stable Scientific / Routing State
 
-- `H25_refreeze_after_r30_r31_decision_packet` is the current active
-  operational decision packet.
-- `H23_refreeze_after_r26_r27_r28` remains the current frozen same-endpoint
-  scientific state.
-- `R32_d0_family_local_boundary_sharp_zoom` is the primary authorized next
-  science lane.
-- `R33_d0_non_retrieval_overhead_localization_audit` remains the deferred
-  systems-audit prerequisite lane.
+- `H30_post_r36_r37_scope_decision_packet` is the current active routing
+  packet.
+- `H27_refreeze_after_r32_r33_same_endpoint_decision` is the preserved
+  negative closeout of the old same-endpoint route.
+- On that preserved prior route,
+  `H25_refreeze_after_r30_r31_decision_packet` was the last active operational
+  decision packet and `H23_refreeze_after_r26_r27_r28` remained the frozen
+  same-endpoint scientific state.
+- `R32_d0_family_local_boundary_sharp_zoom` and
+  `R33_d0_non_retrieval_overhead_localization_audit` are preserved historical
+  follow-up lanes on that old route, not the current next objective.
 - `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle` remain blocked.
-- `F2_future_frontier_recheck_activation_matrix` is now synchronized to the
-  post-`H25` state and remains planning-only.
+- `F2_future_frontier_recheck_activation_matrix` remains planning-only.
 - `F4_post_h23_origin_claim_delta_matrix` appears adequate and does not need a
   claim-status rewrite for this closeout.
 
@@ -81,8 +88,8 @@ current integrated tree still reports
 ## Commit Guidance
 
 - Do not create an outward sync commit from the current integrated tree.
-- Save the current plan/handoff first, then create an isolated worktree for the
-  commit subset.
+- Save the current `H30` plan/handoff first, then create an isolated worktree
+  for the commit subset.
 - Prefer a two-step split when the broader post-`H23` packet is still
   uncommitted:
   1. `post-h23-core-packet`:

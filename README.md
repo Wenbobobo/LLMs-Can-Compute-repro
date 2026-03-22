@@ -9,10 +9,31 @@ This repository tracks a paper-grade endpoint:
 2. exact latest-write retrieval over that trace can be implemented with
    structured 2D hard-max retrieval;
 3. on the current validated scope, those primitives support a small exact
-   executor and a tiny typed-bytecode `D0` compiled endpoint.
+   executor; the earlier tiny typed-bytecode `D0` compiled endpoint is now a
+   preserved historical boundary rather than the active mainline.
 
 This repository does **not** claim that general LLMs are computers, that
 arbitrary C has been reproduced, or that demo-first presentation is evidence.
+
+## Current Mainline Note
+
+As of `2026-03-22`, the canonical current stage is no longer the old
+same-endpoint `D0` recovery line. The active routing packet is
+`H30_post_r36_r37_scope_decision_packet`, preserving:
+
+- `H27` as the negative closeout of the old same-endpoint recovery wave;
+- `H28` as the Origin-core pivot packet;
+- `H29` as the positive Origin-core refreeze packet on the current A/B/C chain;
+- `R36` as a narrow precision-boundary sharpening pass;
+- `R37` as a tiny compiled-boundary confirmation that stays on the current
+  append-only / exact-retrieval / small-VM substrate.
+
+For current work, trust
+`docs/publication_record/current_stage_driver.md`,
+`tmp/active_wave_plan.md`,
+`docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`, and the
+`results/H30...` / `results/R37...` summaries ahead of the historical packet
+inventory below.
 
 ## Current Boundary
 
@@ -31,10 +52,29 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 | `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |
 | `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |
 | `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the preserved pre-reopen same-endpoint control |
-| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the current frozen scientific state: `H22` locked one boundary-first reopen contract, `R26` executed `22/22` first-wave candidates without localizing a failure, `R28` audited the mechanism contract as supported with partial control isolation, `R27` extended to `12/12` second-wave candidates without localizing a failure, and `H23` refroze the packet with `P14` as the downstream docs-only lane |
-| `H24-H25` | completed post-`H23` reauthorization/refreeze packet: `H24` separated reauthorization work from hygiene, `R30` authorized one future family-local boundary sharp zoom through `R32`, `R31` routed any later same-endpoint systems recovery discussion through `R33` non-retrieval overhead localization first, and `H25` refroze that decision packet without widening scope |
+| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the prior same-endpoint frozen scientific state: `H22` locked one boundary-first reopen contract, `R26` executed `22/22` first-wave candidates without localizing a failure, `R28` audited the mechanism contract as supported with partial control isolation, `R27` extended to `12/12` second-wave candidates without localizing a failure, and `H23` refroze the packet with `P14` as the downstream docs-only lane |
+| `H24-H25` | completed post-`H23` reauthorization/refreeze packet preserved as the prior same-endpoint decision layer: `H24` separated reauthorization work from hygiene, `R30` authorized one future family-local boundary sharp zoom through `R32`, `R31` routed any later same-endpoint systems recovery discussion through `R33` non-retrieval overhead localization first, and `H25` refroze that decision packet without widening scope |
+| `H26-H29` | completed same-endpoint closeout plus Origin-core pivot/refreeze packet: `R32/R33/H27` closed the old same-endpoint route negatively, `H28` reanchored the project around append-only traces plus exact retrieval plus a small exact stack/VM, `R34/R35` validated that narrow chain, and `H29` froze it positively |
+| `R36` | completed narrow precision-boundary follow-up on the active Origin-core bundle: inflated-horizon float32 `single_head` fails on selected high-address/deep-stack rows while bounded decomposition schemes recover those exact rows without authorizing broader scope lift |
 
 ## Current Gate Outcome
+
+- The current active stage is `H30_post_r36_r37_scope_decision_packet`, not
+  the earlier `H25` same-endpoint decision packet.
+- The current active scientific target is the narrower Origin-core line:
+  append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
+  executor.
+- `R34` supports the narrow retrieval primitive contract on `47/47`
+  observations, `R35` supports exact rollout on `12/12` current bundle rows,
+  `R36` sharpens a suite-bounded precision boundary, and `R37` then shows that
+  one tiny admitted bytecode subset can lower onto the active substrate
+  exactly.
+- The old same-endpoint `D0` story is preserved historically: `H27` closes it
+  negatively, and `H30` keeps any later compiled-boundary extension behind a
+  fresh explicit packet rather than momentum.
+- The saved next-wave planning surface for any later extension discussion is
+  `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`; it is a
+  routing aid, not a new result.
 
 - The current active stage still starts from the locked submission-candidate
   bundle and restrained release-candidate checkpoint created by `P8/P9`.
@@ -80,12 +120,10 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
   `pytest --collect-only -q` succeeds on the current suite, the bounded top-`6`
   timing follow-up classifies full `pytest -q` as healthy but multi-minute,
   and outward-sync control remains machine-audited.
-- The current active post-`P9` stage is
-  `H25_refreeze_after_r30_r31_decision_packet`. It preserves
-  `H23_refreeze_after_r26_r27_r28` as the frozen same-endpoint scientific
-  state, keeps the endpoint locked to tiny typed bytecode `D0`, and records one
-  post-`H23` decision packet before any later science execution is treated as
-  authorized.
+- On the preserved prior same-endpoint route, the last post-`P9` active packet
+  was `H25_refreeze_after_r30_r31_decision_packet`. That `H25/H23` stack is no
+  longer the current mainline after `H27 -> H28 -> H29 -> R36 -> R37 -> H30`;
+  it remains historical control context only.
 - `H15_refreeze_and_decision_sync` is now the preserved prior refreeze and
   decision record. It still records `R13` as inactive and `R14` as
   unjustified on the fixed `D0` endpoint.
@@ -182,7 +220,7 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
   `pointer_like_exact_non_retrieval_dominant` bottleneck verdict.
 - `R27` then closed the declared second-wave boundary extension with
   `12/12` exact candidates and no localized failure.
-- `H23` now records the current frozen same-endpoint state:
+- On the preserved prior same-endpoint route, `H23` recorded the frozen state:
   `decision_state = post_r26_r27_r28_refreeze_complete`,
   `boundary_verdict = bounded_grid_still_not_localized`,
   `mechanism_contract_verdict = mechanism_contract_supported_with_partial_control_isolation`,
@@ -196,7 +234,8 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 - `R31` then concluded that any later same-endpoint systems recovery story must
   first pass through `R33_d0_non_retrieval_overhead_localization_audit`; direct
   `R29` activation remains blocked.
-- `H25` now records the current active operational decision packet:
+- On the preserved prior same-endpoint route, `H25` recorded the active
+  operational decision packet:
   `decision_state = post_h23_reauthorization_packet_complete`,
   `current_frozen_stage = h23_refreeze_after_r26_r27_r28`,
   `next_priority_lane = r32_d0_family_local_boundary_sharp_zoom`, and
@@ -216,10 +255,14 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
-- `docs/plans/README.md` — plans index for the unattended master plan, current post-`H23` / post-`H25` designs, and historical design stack
+- `docs/plans/README.md` — plans index for the unattended master plan, the current post-`R36` design packet, and the historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
-- `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — current post-`H23` reauthorization/refreeze design that landed `H24/R30/R31/H25` and staged `R32/R33`
-- `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — current near-term post-`H25` handoff clarifying that `R32` is the first justified next science lane, `R33` stays deferred, and execution should wait for a clean next-stage worktree
+- `docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md` — current post-`R36` planning packet clarifying that `H29/R36` are frozen, `R37` is conditional, and any next execution wave needs a new explicit packet plus a clean worktree
+- `results/H30_post_r36_r37_scope_decision_packet/summary.json` — one-file summary for the current active Origin-core refreeze packet
+- `results/R37_origin_compiler_boundary_gate/summary.json` — one-file summary for the completed tiny compiled-boundary gate
+- `results/R36_origin_long_horizon_precision_scaling_gate/summary.json` — one-file summary for the completed narrow precision-boundary follow-up
+- `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — preserved historical design that landed `H24/R30/R31/H25`
+- `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — preserved historical design for the completed `R32 -> H26 -> R33 -> H27` wave
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
 - `docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/handoff_notes.md` — internal handoff for the current `H25` state, downstream lane order, and blocked follow-up paths
 - `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md` — planning-only first-pass `R32` sharp-zoom manifest fixing the candidate core, ceiling-relative ladder, stop rules, and required outputs

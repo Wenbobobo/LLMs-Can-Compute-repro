@@ -7,12 +7,13 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects the current active `H25` decision packet while
-  preserving `H23` as the current frozen same-endpoint scientific state and
-  keeps any later `R29` / `F3` execution blocked.
+- [ ] `STATUS.md` reflects the current active `H30` routing/refreeze packet,
+  preserves `H29` as the upstream refreeze plus `H27/H28` as the preserved
+  closeout/pivot packet pair, and keeps later compiler-boundary extension /
+  `R29` / `F3` execution conditional or blocked as appropriate.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
-  wording downstream of landed `H25` while preserving the narrower `H23`
-  scientific limits.
+  wording downstream of landed `H30/R37` while preserving the narrow
+  Origin-core limits.
 
 ## Paper-facing ledgers
 
@@ -27,28 +28,22 @@ current freeze candidate is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
-- [ ] `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
-  reports zero blocked items on the current active decision packet.
-- [ ] `results/H23_refreeze_after_r26_r27_r28/summary.json` reports zero
-  blocked items on the current frozen scientific control surface.
-- [ ] `results/R30_d0_boundary_reauthorization_packet/summary.json` remains
-  available as the landed post-`H23` boundary decision packet.
-- [ ] `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
-  remains available as the landed post-`H23` systems decision packet.
-- [ ] `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`
-  remains available as the reopen-control packet for the current refrozen
-  surface.
-- [ ] `results/R26_d0_boundary_localization_execution_gate/summary.json`
-  remains available as the first-wave boundary packet for the current refrozen
-  surface.
-- [ ] `results/R27_d0_boundary_localization_extension_gate/summary.json`
-  remains available as the bounded second-wave extension packet.
-- [ ] `results/R28_d0_trace_retrieval_contract_audit/summary.json` remains
-  available as the mechanism-contract audit for the current refrozen surface.
-- [ ] `results/H21_refreeze_after_r22_r23/summary.json` remains available as
-  the preserved immediate pre-reopen control surface.
-- [ ] `results/H19_refreeze_and_next_scope_decision/summary.json` remains
-  available as the preserved pre-`R22/R23` control surface.
+- [ ] `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+  reports zero blocked items on the current active routing/refreeze packet.
+- [ ] `results/R37_origin_compiler_boundary_gate/summary.json` remains
+  available as the current tiny compiled-boundary gate.
+- [ ] `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
+  remains available as the preserved upstream refreeze packet.
+- [ ] `results/H28_post_h27_origin_core_reanchor_packet/summary.json` remains
+  available as the current Origin-core pivot packet.
+- [ ] `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`
+  remains available as the preserved negative same-endpoint closeout packet.
+- [ ] `results/R34_origin_retrieval_primitive_contract_gate/summary.json`
+  remains available as the current primitive-contract gate.
+- [ ] `results/R35_origin_append_only_stack_vm_execution_gate/summary.json`
+  remains available as the current exact execution gate.
+- [ ] `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
+  remains available as the current narrow precision-boundary follow-up.
 - [ ] `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`
   still reports zero blocked items on the preserved prior same-scope refreeze
   surface.

@@ -38,6 +38,12 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 ## Required audit anchors
 
 - `results/P1_paper_readiness/summary.json`
+- `results/H30_post_r36_r37_scope_decision_packet/summary.json`
+- `results/R37_origin_compiler_boundary_gate/summary.json`
+- `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`
+- `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
+- `results/H28_post_h27_origin_core_reanchor_packet/summary.json`
+- `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`
 - `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
 - `results/R30_d0_boundary_reauthorization_packet/summary.json`
 - `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
@@ -103,6 +109,6 @@ not part of the public submission/archive handoff.
 
 Venue-specific formatting may fork from this packet, but that formatting must
 not widen claims, activate an `E1` patch lane, or outrun the locked manuscript
-bundle. The current packet is anchored on active `H25` plus frozen `H23`, with
-`H21` preserved as the immediate pre-reopen control and `H19` preserved as the
-earlier same-endpoint refreeze.
+bundle. The current packet is anchored on active `H30`, with preserved upstream
+`H29/R37/R36/H28/H27` as the current Origin-core chain and preserved
+`H25/H23/H21/H19` as the older same-endpoint control stack.

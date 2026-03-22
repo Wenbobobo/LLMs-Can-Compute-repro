@@ -7,28 +7,32 @@ broad “LLMs are computers” thesis. On the current validated scope, the proje
 supports three linked statements: deterministic computation can be encoded as an
 append-only execution trace; exact latest-write retrieval over that trace can
 be implemented with structured 2D hard-max retrieval; and those primitives are
-enough for a small exact executor plus a tiny typed-bytecode `D0` compiled
-endpoint.
+enough for a small exact executor on the active Origin-core bundle. The earlier
+tiny typed-bytecode `D0` endpoint is now a preserved historical boundary rather
+than the active mainline.
 
 ## Current gate chain
 
-The current evidence chain still runs through four fixed gates. `P3` freezes
-the paper scope and its unsupported claims. `R1` keeps the precision result
-positive but bounded rather than broad. `R2` remains mixed rather than
-triumphant: geometry retains a strong asymptotic retrieval win, but the lowered
-`exec_trace` path is still not enough to authorize frontend widening. `M7`
-therefore keeps widening blocked, and `P4` keeps the blog blocked while
-allowing a restrained repository landing page.
+The current execution-facing chain is now
+`H27_refreeze_after_r32_r33_same_endpoint_decision` ->
+`H28_post_h27_origin_core_reanchor_packet` ->
+`R34_origin_retrieval_primitive_contract_gate` ->
+`R35_origin_append_only_stack_vm_execution_gate` ->
+`H29_refreeze_after_r34_r35_origin_core_gate` ->
+`R36_origin_long_horizon_precision_scaling_gate` ->
+`R37_origin_compiler_boundary_gate` ->
+`H30_post_r36_r37_scope_decision_packet`.
+Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
+remain relevant guardrails, but they are no longer the current
+science-routing story by themselves.
 
 ## Current endpoint and non-goals
 
-The compiled endpoint on current evidence is tiny typed bytecode `D0`. It is
-backed by deterministic verifier coverage, exact-trace / exact-final-state
-agreement on the frozen starter suite, appendix-level memory-surface
-diagnostics, one stress/reference follow-up, one harder-suite `R3` exactness
-gate, and one bounded `R4` mechanistic-closure bundle. This endpoint should be
-read as a current boundary, not as a bridge to arbitrary C, general LLM
-computation, or broader demo-first claims. Those broader readings remain
+The active endpoint on current evidence is the narrower Origin-core substrate:
+append-only traces, exact retrieval, and a small exact stack/VM executor. The
+earlier tiny typed-bytecode `D0` endpoint remains a preserved historical
+boundary and should not be read as the current bridge to arbitrary C, general
+LLM computation, or broader demo-first claims. Those broader readings remain
 explicitly unsupported on the current paper scope.
 
 ## Current paper-facing follow-up
@@ -56,8 +60,8 @@ exact-versus-lowered ratio stays around `2429.1x`. `H13/V1` is now the
 preserved governance/runtime handoff rather than the active science lane. `V1`
 records that `pytest --collect-only -q` succeeds on the current suite, and the
 bounded top-`6` per-file timing follow-up classifies full `pytest -q` as
-healthy but multi-minute rather than discovery-broken. The current frozen
-scientific state inside the post-`P9` chain is
+healthy but multi-minute rather than discovery-broken. The preserved prior
+same-endpoint scientific state inside the earlier post-`P9` chain is
 `H23_refreeze_after_r26_r27_r28`, which refreezes the
 bounded post-`H21` packet
 `H22_post_h21_boundary_reopen_and_dual_track_lock` ->
@@ -91,12 +95,13 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H25_refreeze_after_r30_r31_decision_packet`, which preserves `H23` as the
-frozen scientific state while recording one bounded post-`H23` decision
-packet: `R30` authorizes one future family-local boundary sharp zoom through
-`R32`, `R31` routes any later same-endpoint systems recovery discussion
-through `R33` non-retrieval overhead localization first, `R29` and `F3`
-remain blocked, and `F2` remains planning-only on current evidence.
+`H30_post_r36_r37_scope_decision_packet`, which preserves `H27` as the
+negative closeout of the old same-endpoint route, preserves `H28` as the
+Origin-core pivot packet, keeps `H29` as the positive narrow refreeze,
+records `R36` as a completed precision-boundary follow-up, and records `R37`
+as one tiny compiled-boundary confirmation rather than a scope-lift
+authorization. Any later compiler-boundary extension remains conditional on a
+later explicit packet.
 
 ## Reproducibility pointers
 
