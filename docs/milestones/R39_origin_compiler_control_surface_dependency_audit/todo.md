@@ -6,7 +6,10 @@
   rows tested here;
 - keep exact trace/exact final state and baseline-versus-perturbation
   comparisons explicit as separate checks;
-- require a later explicit post-`R39` decision packet before changing routing
-  or widening scope;
+- keep the no new opcode, no hidden host evaluator, and no new program-family
+  breadth rule explicit even after `H34`;
+- keep the `H34` freeze interpretation explicit:
+  one declared permutation surviving does not justify another runtime lane by
+  momentum;
 - keep broader compiler, same-endpoint, and frontier stories blocked
   regardless of this local positive result.

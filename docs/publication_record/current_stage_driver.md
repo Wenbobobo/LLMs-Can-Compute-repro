@@ -8,7 +8,7 @@ The current active stage is:
 
 The current docs-only control packet is:
 
-- `H33_post_h32_conditional_next_question_packet`
+- `H34_post_r39_later_explicit_scope_decision_packet`
 
 This stage freezes the current Origin-core chain after one explicit
 post-`H30` extension decision:
@@ -23,7 +23,10 @@ post-`H30` extension decision:
   rather than automatic broader compiled execution;
 - `R39` executes one declared helper-body permutation with target renumbering
   and shows that exactness plus final-state preservation survive that declared
-  control-surface change on both rows.
+  control-surface change on both rows;
+- `H34` keeps `H32` active while selecting
+  `freeze_compiled_boundary_as_complete_for_now` and leaving no active
+  downstream runtime lane.
 
 ## Current Machine-State Meaning
 
@@ -56,7 +59,7 @@ post-`H30` extension decision:
   `decision_state = origin_core_one_richer_compiled_control_family_refrozen`,
   `compiled_boundary_state = one_richer_compiled_control_family_supported_narrowly`,
   `next_required_lane = new_plan_required_before_any_further_compiled_boundary_or_scope_lift`;
-- `H33` is the current docs-only control packet:
+- `H33` remains the preserved prior docs-only control packet:
   `decision_state = one_origin_core_substrate_question_authorized_docs_only`,
   `selected_outcome = authorize_one_origin_core_substrate_question`,
   `authorized_next_runtime_candidate = r39_origin_compiler_control_surface_dependency_audit`;
@@ -64,6 +67,12 @@ post-`H30` extension decision:
   `lane_verdict = control_surface_dependence_not_detected_on_declared_permutation`,
   `declared_perturbation = helper_body_permutation_with_target_renumbering`,
   `next_priority_lane = later_explicit_post_r39_decision_packet_required`;
+- `H34` is the current docs-only control packet:
+  `decision_state = compiled_boundary_complete_for_now_docs_only`,
+  `selected_outcome = freeze_compiled_boundary_as_complete_for_now`,
+  `authorized_next_runtime_candidate = none`,
+  `reopen_precondition = new_contradiction_or_sharper_same_substrate_gap_required`,
+  `next_required_lane = no_active_downstream_runtime_lane`;
 - blocked future lanes remain:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
@@ -90,31 +99,37 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R38_origin_compiler_control_surface_extension_gate` ->
 `H32_post_r38_compiled_boundary_refreeze` ->
 `H33_post_h32_conditional_next_question_packet` ->
-`R39_origin_compiler_control_surface_dependency_audit`
+`R39_origin_compiler_control_surface_dependency_audit` ->
+`H34_post_r39_later_explicit_scope_decision_packet`
 
 ## Next Planned Order
 
-The current justified next move is still not automatic widening.
-`H32` preserves the narrow compiled-boundary result after one explicit
-extension, and `H33` converts the next step into one explicit same-substrate
-question rather than a new broad runtime batch. `R39` now answers that
-question on one declared perturbation, but no routing change is active until a
-later explicit post-`R39` decision packet lands.
+The current justified next move is now the landed `H34` interpretation rather
+than another automatic runtime lane. `H32` still preserves the narrow
+compiled-boundary result after one explicit extension, `H33` converted the
+next step into one explicit same-substrate question, and `R39` answered that
+question on one declared perturbation. `H34` now interprets that result as
+`freeze_compiled_boundary_as_complete_for_now`.
 
 The clean-worktree closeout lane
 `P18_post_h32_clean_worktree_promotion` is now complete on branch
-`wip/h31-later-explicit`, and `R39` is complete as a downstream runtime audit.
+`wip/h31-later-explicit`, `R39` is complete as a downstream runtime audit, and
+`H34` is complete as the required later explicit interpretation packet.
 
 The preserved execution design surface for `R39` is:
 
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 
-That design kept the move narrow and prepared exactly one same-substrate
-runtime candidate rather than automatic broader compiled execution.
+The preserved interpretation design surface for `H34` is:
+
+- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
+
+Those designs keep the line narrow and fix the current state as complete-for-now
+rather than automatically widening.
 
 The next required order is now:
 
-later explicit post-`R39` decision packet
+no active downstream runtime lane
 
 ## Control References
 
@@ -131,9 +146,12 @@ later explicit post-`R39` decision packet
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
 - `results/H33_post_h32_conditional_next_question_packet/summary.json`
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
+- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
+- `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/`
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
@@ -153,8 +171,10 @@ later explicit post-`R39` decision packet
 
 - `H32_post_r38_compiled_boundary_refreeze` is the current active routing
   packet.
-- `H33_post_h32_conditional_next_question_packet` is the current docs-only
+- `H34_post_r39_later_explicit_scope_decision_packet` is the current docs-only
   control packet above `H32`.
+- `H33_post_h32_conditional_next_question_packet` remains the preserved prior
+  docs-only question-selection packet under `H34`.
 - `H31_post_h30_later_explicit_boundary_decision_packet` remains the preserved
   explicit authorization packet under `H32`.
 - `H30_post_r36_r37_scope_decision_packet` remains the preserved prior
@@ -169,6 +189,8 @@ later explicit post-`R39` decision packet
   richer control-surface extension gate.
 - `R39_origin_compiler_control_surface_dependency_audit` is the completed
   same-substrate dependency audit, not a routing change by itself.
+- there is no active downstream runtime lane after `H34`; any future same-
+  substrate reopen requires a new contradiction-driven explicit packet.
 - `H27_refreeze_after_r32_r33_same_endpoint_decision` remains the preserved
   negative same-endpoint closeout.
 
@@ -176,5 +198,5 @@ later explicit post-`R39` decision packet
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30/H31/R38/H32/H33/R39` packet chain change the current routing
-target, not the historical record.
+`H29/R36/R37/H30/H31/R38/H32/H33/R39/H34` packet chain change the current
+routing target, not the historical record.

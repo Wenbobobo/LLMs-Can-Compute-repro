@@ -20,7 +20,7 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 As of `2026-03-23`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line. The active routing/refreeze packet remains
 `H32_post_r38_compiled_boundary_refreeze`, and the current docs-only control
-packet is `H33_post_h32_conditional_next_question_packet`, preserving:
+packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
 
 - `H27` as the negative closeout of the old same-endpoint recovery wave;
 - `H28` as the Origin-core pivot packet;
@@ -33,12 +33,14 @@ packet is `H33_post_h32_conditional_next_question_packet`, preserving:
 - `R38` as the one-richer control/call-family compiled boundary gate on the
   same opcode surface;
 - `P18` as the operational clean-worktree packaging lane for this packet;
-- `H33` as the docs-only next-question packet that keeps `H32` active while
+- `H33` as the prior docs-only next-question packet that keeps `H32` active while
   naming only `R39_origin_compiler_control_surface_dependency_audit` as the
   one justified same-substrate follow-up question; and
 - `R39` as the completed same-substrate dependency audit showing that one
   declared helper-body permutation with target renumbering can preserve exact
-  final state and workload while still changing the trace on both audited rows.
+  final state and workload while still changing the trace on both audited rows;
+- `H34` as the docs-only later explicit scope-decision packet that keeps `H32`
+  active while selecting `freeze_compiled_boundary_as_complete_for_now`.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
@@ -76,10 +78,9 @@ inventory below.
   the preserved prior `H30` packet or the earlier `H25` same-endpoint
   decision packet.
 - The current docs-only control packet is
-  `H33_post_h32_conditional_next_question_packet`, which selects
-  `authorize_one_origin_core_substrate_question` and names
-  `R39_origin_compiler_control_surface_dependency_audit` as the only justified
-  same-substrate follow-up question.
+  `H34_post_r39_later_explicit_scope_decision_packet`, which selects
+  `freeze_compiled_boundary_as_complete_for_now` and names no active
+  downstream runtime lane.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -95,6 +96,8 @@ inventory below.
   `control_surface_dependence_not_detected_on_declared_permutation` on both the
   admitted row and the recorded boundary probe, while still not authorizing
   arbitrary control-surface freedom or broader compiler claims.
+- `H34` then interprets that result as complete-for-now narrow support rather
+  than authorizing another same-substrate runtime move by momentum.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -105,8 +108,10 @@ inventory below.
   same-family boundary probe rather than an admitted widening.
 - The preserved design surface that led to the completed `R39` audit is
   `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`;
-  `R39` itself is not a routing change, and any further extension still
-  requires a later explicit post-`R39` packet.
+  the preserved design surface that led to the landed `H34` interpretation is
+  `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`;
+  `R39` itself is not a routing change, and there is now no active downstream
+  runtime lane.
 
 - The current active stage still starts from the locked submission-candidate
   bundle and restrained release-candidate checkpoint created by `P8/P9`.
@@ -290,9 +295,11 @@ inventory below.
 - `docs/plans/README.md` — plans index for the current `post-H32` planning surface, the landed `H31/R38/H32/P18` wave, and the historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — preserved design that led to the completed post-`H33` same-substrate audit, `R39`
+- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md` — preserved design that led to the landed post-`R39` docs-only scope-decision packet, `H34`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — preserved post-`H32` planning packet that led to the landed docs-only `H33` question-selection step
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — preserved execution design packet that fixed the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the landed `H32/P18` closeout path
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json` — one-file summary for the current active Origin-core refreeze packet
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json` — one-file summary for the current docs-only scope-decision packet freezing the compiled-boundary line complete-for-now
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json` — one-file summary for the completed same-substrate dependency audit on one declared helper-body permutation
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json` — one-file summary for the completed one-richer compiled control/call-family gate
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json` — one-file summary for the explicit later-extension authorization packet
@@ -302,6 +309,7 @@ inventory below.
 - `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — preserved historical design that landed `H24/R30/R31/H25`
 - `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — preserved historical design for the completed `R32 -> H26 -> R33 -> H27` wave
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
+- `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/README.md` — landed docs-only post-`R39` scope-decision packet that keeps `H32` active and selects freeze-complete-for-now
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/README.md` — landed docs-only conditional next-question packet that keeps `H32` active and authorizes only `R39`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/README.md` — completed same-substrate dependency audit authorized by `H33`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md` — execution manifest for the completed `R39` audit

@@ -7,6 +7,8 @@ Current scientific/control stack:
 - current active decision packet:
   `H32_post_r38_compiled_boundary_refreeze`;
 - current docs-only control packet:
+  `H34_post_r39_later_explicit_scope_decision_packet`;
+- preserved prior docs-only question-selection packet:
   `H33_post_h32_conditional_next_question_packet`;
 - preserved later explicit packet:
   `H31_post_h30_later_explicit_boundary_decision_packet`;
@@ -36,9 +38,9 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-Origin-core refreeze remains active while `H33` holds the docs-only control
-surface and `R39` sits as a completed downstream audit awaiting a later
-explicit decision packet
+Origin-core refreeze remains active while `H34` holds the docs-only control
+surface, `R39` sits as completed downstream evidence, and there is no active
+downstream runtime lane
 
 ## Current Facts
 
@@ -59,10 +61,15 @@ explicit decision packet
 - `R38` shows that one richer subroutine/control family and one longer
   same-family boundary probe stay exact without widening the opcode surface.
 - `H32` freezes that result as narrow same-substrate evidence only.
+- `H33` then selected exactly one same-substrate question instead of automatic
+  broader compiled execution.
 - `R39` then shows that one declared helper-body permutation with target
   renumbering preserves exact source/lowered/free-running execution and final
   state on both the admitted row and the named same-family boundary probe,
   while changing trace on both rows.
+- `H34` then interprets that result as
+  `freeze_compiled_boundary_as_complete_for_now` and names no new runtime
+  candidate.
 - `R29`, `F3`, and frontier/demo widening remain blocked.
 
 ## Immediate Objectives
@@ -76,11 +83,14 @@ explicit decision packet
    widening by momentum.
 5. Treat `P18_post_h32_clean_worktree_promotion` as completed operational
    closeout on this clean branch.
-6. Preserve `H33` as the current docs-only packet selecting exactly one
+6. Preserve `H34` as the current docs-only packet selecting
+   `freeze_compiled_boundary_as_complete_for_now`.
+7. Preserve `H33` as the prior docs-only packet that selected exactly one
    narrow same-substrate question.
-7. Preserve `R39_origin_compiler_control_surface_dependency_audit` as a
-   completed downstream same-substrate audit, not a routing change by itself.
-8. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
+8. Preserve `R39_origin_compiler_control_surface_dependency_audit` as
+   completed downstream same-substrate evidence, not a routing change by
+   itself.
+9. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
    downstream of `H33/R39`.
 
 ## Last Completed Order
@@ -103,18 +113,21 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R38_origin_compiler_control_surface_extension_gate` ->
 `H32_post_r38_compiled_boundary_refreeze` ->
 `H33_post_h32_conditional_next_question_packet` ->
-`R39_origin_compiler_control_surface_dependency_audit`
+`R39_origin_compiler_control_surface_dependency_audit` ->
+`H34_post_r39_later_explicit_scope_decision_packet`
 
 ## Next Conditional Order
 
-later explicit post-`R39` decision packet
+no active downstream runtime lane
 
 ## Current References
 
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
+- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/`
+- `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/`
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/`
@@ -128,19 +141,20 @@ later explicit post-`R39` decision packet
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
 - `results/H33_post_h32_conditional_next_question_packet/summary.json`
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
 
 ## If Blocked
 
 - `P17` closeout remains complete on `wip/p17-h30-clean`; do not reopen it;
 - `P18` is the current clean-branch packaging surface; do not merge back into
   dirty `main` or dirty `wip/h27-promotion` by momentum;
-- do not treat `H33` or the local `R39` positive result as broader compiled or
-  frontier authorization by themselves;
+- do not treat `H34`, `H33`, or the local `R39` positive result as broader
+  compiled or frontier authorization by themselves;
 - do not reopen `R29` or `F3` by wording alone;
 - do not relabel one richer compiled control family as arbitrary-language
   support;
 - do not skip the saved post-`H30` / `H31` / `R38` plan, the saved
   post-`H32` plan, or the landed `R39` audit when evaluating any later
   broader lane;
-- require a later explicit post-`R39` decision packet before any routing or
-  scope change.
+- require a new contradiction-driven explicit packet before any future same-
+  substrate reopen or routing/scope change.

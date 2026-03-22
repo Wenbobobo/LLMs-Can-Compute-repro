@@ -12,11 +12,13 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H33_post_h32_conditional_next_question_packet/` — current docs-only
-  control packet that keeps `H32` active while selecting the only justified
-  next question.
+- `H34_post_r39_later_explicit_scope_decision_packet/` — current docs-only
+  control packet that keeps `H32` active while selecting
+  `freeze_compiled_boundary_as_complete_for_now`.
 - `H32_post_r38_compiled_boundary_refreeze/` — current active routing/refreeze
   packet.
+- `H33_post_h32_conditional_next_question_packet/` — preserved prior docs-only
+  control packet that selected the one justified next question.
 - `H31_post_h30_later_explicit_boundary_decision_packet/` — preserved explicit
   authorization packet between `H30` and `R38`.
 - `H30_post_r36_r37_scope_decision_packet/` — preserved prior compiled-boundary
@@ -57,6 +59,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Conditional Future Lanes
 
+- `../plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
+  preserved design surface that led to the landed `H34` scope-decision
+  packet.
 - `../plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
   — preserved design surface that led to the completed `R39`
   same-substrate audit.
@@ -64,12 +69,14 @@ planning bundles. Read the current driver first, not the directory name alone.
   post-`H32` planning surface that led to the landed docs-only `H33` packet.
 - `R39_origin_compiler_control_surface_dependency_audit/` — completed
   same-substrate dependency audit, not an automatic routing change.
+- `H34_post_r39_later_explicit_scope_decision_packet/` — completed docs-only
+  interpretation packet, not a routing change.
 - `../plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — saved plan for
   the landed explicit-extension wave after `H30`.
 - no further same-substrate or compiler-boundary extension is active by
   default.
-- any later runtime, broader compiled, or frontier lane now requires a later
-  explicit post-`R39` decision packet.
+- any later runtime, broader compiled, or frontier lane now requires a new
+  contradiction-driven explicit packet.
 
 ## Blocked Or Planning-Only Lanes
 
@@ -87,12 +94,14 @@ Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
 - `H32` is active routing.
-- `H33` is the current docs-only control packet.
+- `H34` is the current docs-only control packet.
+- `H33` is the preserved prior docs-only question-selection packet.
 - `H31` and `H30` are preserved upstream decision packets, not the next
   objective.
 - `H29` and `H28` are preserved upstream refreeze/pivot evidence.
 - `R34`, `R35`, `R36`, `R37`, and `R38` stay frozen as upstream support.
 - `R39` is complete as a downstream audit, not an active routing change.
+- no active downstream runtime lane exists after `H34`.
 - one richer compiled control family still does not authorize broader compiler
   or demo scope lift.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new

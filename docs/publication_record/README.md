@@ -7,14 +7,17 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H32` active routing/refreeze packet plus the current `H33` docs-only
+  `H32` active routing/refreeze packet plus the current `H34` docs-only
   control packet, preserving `H27` as the negative closeout of the old
   same-endpoint wave, `H28` as the Origin-core pivot packet,
   `H29/R36/R37/H30/H31/R38` as the frozen upstream evidence chain, the older
   same-endpoint `H25/H23` stack as preserved historical context, treating
   `R39` as one completed same-substrate audit rather than an automatic routing
-  change, and keeping any later compiler-boundary extension conditional on a
-  later explicit packet;
+  change, and recording `H34` as the freeze-complete-for-now interpretation
+  packet rather than a new runtime authorization;
+- `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
+  — the preserved design surface that led to the landed post-`R39`
+  scope-decision packet, `H34`;
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
   — the preserved design surface that led to the completed post-`H33`
   same-substrate audit, `R39`;
@@ -60,6 +63,9 @@ Current control docs:
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/` — the
   landed docs-only packet that keeps `H32` active while authorizing only one
   same-substrate next question;
+- `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/` — the
+  landed docs-only packet that keeps `H32` active while selecting
+  `freeze_compiled_boundary_as_complete_for_now`;
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/` —
   the completed same-substrate dependency audit authorized by `H33`;
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
@@ -93,6 +99,9 @@ Current control docs:
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json` —
   machine-readable current active routing/refreeze packet for the post-`R38`
   narrow compiled-boundary state;
+- `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json` —
+  machine-readable docs-only scope-decision packet freezing the current
+  compiled-boundary line complete-for-now;
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
   — machine-readable same-substrate dependency-audit summary for one declared
   helper-body permutation with target renumbering;

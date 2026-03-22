@@ -8,6 +8,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-r39-later-explicit-scope-decision-design.md` — the
+  current preserved design surface for the landed post-`R39` docs-only scope
+  decision packet, `H34_post_r39_later_explicit_scope_decision_packet`.
 - `2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — the
   preserved design surface that led to the completed post-`H33`
   same-substrate audit, `R39_origin_compiler_control_surface_dependency_audit`.
@@ -40,6 +43,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
+  preserved design surface that led to the landed post-`R39` docs-only scope
+  decision packet.
 - `2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` —
   preserved design surface that led to the completed post-`H33`
   same-substrate audit.
@@ -49,6 +55,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   the landed `H31 -> R38 -> H32` wave.
 - `../milestones/P18_post_h32_clean_worktree_promotion/` — completed clean
   worktree packaging lane for the post-`H32` bundle.
+- `../milestones/H34_post_r39_later_explicit_scope_decision_packet/` —
+  landed docs-only scope-decision packet that keeps `H32` active while
+  freezing the compiled-boundary line complete-for-now.
 - `../milestones/H33_post_h32_conditional_next_question_packet/` — landed
   docs-only packet that keeps `H32` active while selecting the next question.
 - `../milestones/R39_origin_compiler_control_surface_dependency_audit/` —
@@ -94,5 +103,5 @@ its status against:
 4. the corresponding `results/<lane>/summary.json`
 
 Do not treat an older plan as authorization to reopen a blocked lane.
-When a saved plan and the current `H33/H32/R39/R38/H31/H30` packet differ,
+When a saved plan and the current `H34/H32/H33/R39/R38/H31/H30` packet differ,
 trust the landed packet.

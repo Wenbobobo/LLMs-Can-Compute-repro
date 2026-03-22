@@ -19,15 +19,18 @@
   `H32` active; and `R39` completes one declared same-substrate dependency
   audit without changing routing.
 - The current docs-only control packet is
-  `H33_post_h32_conditional_next_question_packet`, which selects
-  `authorize_one_origin_core_substrate_question` and names
-  `R39_origin_compiler_control_surface_dependency_audit` as the only justified
-  same-substrate follow-up question.
+  `H34_post_r39_later_explicit_scope_decision_packet`, which selects
+  `freeze_compiled_boundary_as_complete_for_now` and names no active
+  downstream runtime lane.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
   one declared helper-body permutation with target renumbering preserves exact
   final state and workload while changing the trace on both audited rows, so
   the verdict stays narrow and does not authorize arbitrary control-surface or
   broader compiler claims.
+- `H34_post_r39_later_explicit_scope_decision_packet` is now complete:
+  it interprets the local `R39` positive result as complete-for-now narrow
+  support and requires a new contradiction- or sharper-gap-driven packet
+  before any future same-substrate reopen.
 - The current admitted post-`H30` extension row is
   `subroutine_braid_program(6, base_address=80)`, while
   `subroutine_braid_long_program(12, base_address=160)` remains a same-family
@@ -285,8 +288,9 @@
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
    `tmp/active_wave_plan.md` aligned on the rule that `H32` remains the
-   current active packet, `H33` remains the current docs-only control packet,
-   and `R39` remains a completed downstream audit rather than a routing change.
+   current active packet, `H34` remains the current docs-only control packet,
+   `H33` remains the preserved prior question-selection packet, and `R39`
+   remains completed downstream evidence rather than a routing change.
 2. Treat `P17_h30_commit_hygiene_and_clean_worktree_promotion` as completed on
    `wip/p17-h30-clean`, and treat
    `P18_post_h32_clean_worktree_promotion` as the completed clean-worktree
@@ -294,6 +298,7 @@
 3. Use `results/H32_post_r38_compiled_boundary_refreeze/summary.json`,
    `results/H33_post_h32_conditional_next_question_packet/summary.json`,
    `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`,
+   `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`,
    `results/R38_origin_compiler_control_surface_extension_gate/summary.json`,
    `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`,
    and `results/H30_post_r36_r37_scope_decision_packet/summary.json` plus
@@ -304,13 +309,16 @@
    `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
    plus
    `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
-   as the preserved design/execution surface for the completed `R39` audit.
+   as the preserved design/execution surface for the completed `R39` audit, and
+   `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
+   as the preserved design surface for `H34`.
 4. Keep the `H32` claim partition explicit while preserving `H30` as the prior
    tiny compiled-boundary packet, `H31` as the explicit extension-only
    decision packet, and `H27` as the negative same-endpoint closeout.
-5. Treat `R39_origin_compiler_control_surface_dependency_audit` as a completed
-   same-substrate audit, not as the current active lane; any next runtime move
-   now requires a later explicit post-`R39` decision packet.
+5. Treat `R39_origin_compiler_control_surface_dependency_audit` as completed
+   same-substrate evidence, not as the current active lane; `H34` now freezes
+   the compiled-boundary line complete-for-now and leaves no active downstream
+   runtime lane.
 6. Keep `R29_d0_same_endpoint_systems_recovery_execution_gate`,
    `F3_post_h23_scope_lift_decision_bundle`, and
    `F2_future_frontier_recheck_activation_matrix` blocked until a later

@@ -1,6 +1,7 @@
 # R39 Origin Compiler Control Surface Dependency Audit
 
-Executed same-substrate audit after `H33`.
+Executed same-substrate audit after `H33`, now interpreted downstream by
+`H34_post_r39_later_explicit_scope_decision_packet`.
 
 `R39` executes one declared control-surface perturbation on the same admitted
 row and the same same-family boundary probe used by `R38`:
@@ -24,3 +25,7 @@ On the declared perturbation, the answer is narrowly positive:
   boundary probe;
 - final state is preserved relative to baseline on both rows;
 - trace changes on both rows, so the perturbation is not a no-op.
+
+`R39` remains completed evidence, not a routing change. `H34` interprets the
+local positive result as complete-for-now narrow support rather than automatic
+authorization for another runtime lane.
