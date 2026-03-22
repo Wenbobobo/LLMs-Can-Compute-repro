@@ -7,14 +7,18 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H32` active routing/refreeze packet, preserving `H27` as the negative
-  closeout of the old same-endpoint wave, `H28` as the Origin-core pivot
-  packet, `H29/R36/R37/H30/H31/R38` as the frozen upstream evidence chain, the
-  older same-endpoint `H25/H23` stack as preserved historical context, and any
-  later compiler-boundary extension as conditional on a new plan packet;
+  `H32` active routing/refreeze packet plus the current `H33` docs-only
+  control packet, preserving `H27` as the negative closeout of the old
+  same-endpoint wave, `H28` as the Origin-core pivot packet,
+  `H29/R36/R37/H30/H31/R38` as the frozen upstream evidence chain, the older
+  same-endpoint `H25/H23` stack as preserved historical context, and any later
+  compiler-boundary extension as conditional on a later explicit packet;
+- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
+  — the current saved design surface for the only post-`H33`
+  same-substrate runtime candidate, `R39`;
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — the
-  current post-`H32` planning surface that prepares one docs-only `H33`
-  question-selection packet rather than automatic wider runtime execution;
+  preserved post-`H32` planning surface that led to the landed docs-only `H33`
+  question-selection packet;
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — the current
   saved post-`H30` execution surface that landed the explicit later decision
   packet, one richer same-substrate extension gate, `H32` refreeze, and `P18`
@@ -52,7 +56,10 @@ Current control docs:
   preserved prior same-endpoint decision/closeout stack that remains historical
   rather than active.
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/` — the
-  planning-only scaffold for the next docs-only packet after `H32`;
+  landed docs-only packet that keeps `H32` active while authorizing only one
+  same-substrate next question;
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/` —
+  the planning-only same-substrate audit scaffold authorized by `H33`;
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/` and
   `docs/milestones/F4_post_h23_origin_claim_delta_matrix/` — internal-only
   planning surfaces that keep future frontier review gated and origin-facing

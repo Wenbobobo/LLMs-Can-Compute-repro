@@ -8,10 +8,12 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
-- `2026-03-23-post-h32-conditional-next-packet-design.md` — the current saved
-  post-`H32` planning surface: keep `H32` active, prepare one docs-only `H33`
-  question-selection packet, and avoid automatic wider compiled-boundary or
-  new-substrate execution.
+- `2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — the
+  current saved design surface for the only post-`H33` same-substrate runtime
+  candidate, `R39_origin_compiler_control_surface_dependency_audit`.
+- `2026-03-23-post-h32-conditional-next-packet-design.md` — the preserved
+  post-`H32` planning surface that led to the landed docs-only `H33`
+  question-selection packet.
 - `2026-03-22-post-h30-h31-r38-extension-plan.md` — the current saved
   post-`H30` execution surface that landed the explicit later decision packet,
   one richer same-substrate extension gate, `H32` refreeze, and `P18`
@@ -38,14 +40,18 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `2026-03-23-post-h32-conditional-next-packet-design.md` — current planning
+- `2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` —
+  current staged design surface for the post-`H33` same-substrate audit.
+- `2026-03-23-post-h32-conditional-next-packet-design.md` — preserved design
   surface for the conditional post-`H32` question-selection packet.
 - `2026-03-22-post-h30-h31-r38-extension-plan.md` — current design surface for
   the landed `H31 -> R38 -> H32` wave.
 - `../milestones/P18_post_h32_clean_worktree_promotion/` — completed clean
   worktree packaging lane for the post-`H32` bundle.
-- `../milestones/H33_post_h32_conditional_next_question_packet/` — planning-only
-  scaffold for the next docs-only packet after `H32`.
+- `../milestones/H33_post_h32_conditional_next_question_packet/` — landed
+  docs-only packet that keeps `H32` active while selecting the next question.
+- `../milestones/R39_origin_compiler_control_surface_dependency_audit/` —
+  planning-only same-substrate audit scaffold authorized by `H33`.
 - `../milestones/H32_post_r38_compiled_boundary_refreeze/` — current active
   routing/refreeze packet for the Origin-core line.
 - `../milestones/R38_origin_compiler_control_surface_extension_gate/` —
@@ -85,5 +91,5 @@ its status against:
 4. the corresponding `results/<lane>/summary.json`
 
 Do not treat an older plan as authorization to reopen a blocked lane.
-When a saved plan and the current `H32/R38/H31/H30` packet differ, trust the
-landed packet.
+When a saved plan and the current `H33/H32/R38/H31/H30` packet differ, trust
+the landed packet.

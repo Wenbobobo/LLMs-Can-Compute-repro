@@ -6,6 +6,10 @@ The current active stage is:
 
 - `H32_post_r38_compiled_boundary_refreeze`
 
+The current docs-only control packet is:
+
+- `H33_post_h32_conditional_next_question_packet`
+
 This stage freezes the current Origin-core chain after one explicit
 post-`H30` extension decision:
 
@@ -14,7 +18,9 @@ post-`H30` extension decision:
 - `R37` preserves one tiny compiled boundary on the same substrate;
 - `H31` authorizes exactly one further tiny extension on the same substrate;
 - `R38` validates one richer compiled control/call family without widening the
-  opcode surface or reopening blocked lanes.
+  opcode surface or reopening blocked lanes;
+- `H33` keeps `H32` active while selecting one same-substrate next question
+  rather than automatic broader compiled execution.
 
 ## Current Machine-State Meaning
 
@@ -47,6 +53,10 @@ post-`H30` extension decision:
   `decision_state = origin_core_one_richer_compiled_control_family_refrozen`,
   `compiled_boundary_state = one_richer_compiled_control_family_supported_narrowly`,
   `next_required_lane = new_plan_required_before_any_further_compiled_boundary_or_scope_lift`;
+- `H33` is the current docs-only control packet:
+  `decision_state = one_origin_core_substrate_question_authorized_docs_only`,
+  `selected_outcome = authorize_one_origin_core_substrate_question`,
+  `authorized_next_runtime_candidate = r39_origin_compiler_control_surface_dependency_audit`;
 - blocked future lanes remain:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
@@ -71,31 +81,32 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H30_post_r36_r37_scope_decision_packet` ->
 `H31_post_h30_later_explicit_boundary_decision_packet` ->
 `R38_origin_compiler_control_surface_extension_gate` ->
-`H32_post_r38_compiled_boundary_refreeze`
+`H32_post_r38_compiled_boundary_refreeze` ->
+`H33_post_h32_conditional_next_question_packet`
 
 ## Next Planned Order
 
 The current justified next move is still not automatic widening.
 `H32` preserves the narrow compiled-boundary result after one explicit
-extension, and no further runtime extension is active by default.
+extension, and `H33` converts the next step into one explicit same-substrate
+question rather than a new broad runtime batch.
 
 The clean-worktree closeout lane
 `P18_post_h32_clean_worktree_promotion` is now complete on branch
 `wip/h31-later-explicit`; no new runtime execution is active by default.
 
-The saved next planning surface is now:
+The saved current staged execution surface is now:
 
-- `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
+- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 
-That design keeps the next move docs-only and prepares one conditional
-question-selection packet rather than automatic broader compiled execution.
+That design keeps the next move narrow and prepares exactly one same-substrate
+runtime candidate rather than automatic broader compiled execution.
 
 If reauthorized later, the next conditional order is:
 
-saved post-`H32` plan packet ->
-conditional `H33_post_h32_conditional_next_question_packet` ->
-either freeze compiled-boundary as complete-for-now
-or one same-substrate Origin-core substrate question
+saved post-`H33` `R39` design ->
+staged `R39_origin_compiler_control_surface_dependency_audit` ->
+later explicit post-`R39` decision packet
 
 ## Control References
 
@@ -110,9 +121,12 @@ or one same-substrate Origin-core substrate question
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
+- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md`
@@ -129,6 +143,8 @@ or one same-substrate Origin-core substrate question
 
 - `H32_post_r38_compiled_boundary_refreeze` is the current active routing
   packet.
+- `H33_post_h32_conditional_next_question_packet` is the current docs-only
+  control packet above `H32`.
 - `H31_post_h30_later_explicit_boundary_decision_packet` remains the preserved
   explicit authorization packet under `H32`.
 - `H30_post_r36_r37_scope_decision_packet` remains the preserved prior
@@ -141,6 +157,8 @@ or one same-substrate Origin-core substrate question
   compiled-boundary gate.
 - `R38_origin_compiler_control_surface_extension_gate` remains the preserved
   richer control-surface extension gate.
+- `R39_origin_compiler_control_surface_dependency_audit` is the staged
+  same-substrate next candidate, not an active lane.
 - `H27_refreeze_after_r32_r33_same_endpoint_decision` remains the preserved
   negative same-endpoint closeout.
 

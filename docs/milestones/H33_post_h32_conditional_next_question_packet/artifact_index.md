@@ -1,7 +1,10 @@
 # H33 Artifact Index
 
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
+- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
 - `results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json`
 - `results/R36_origin_long_horizon_precision_scaling_gate/summary.json`

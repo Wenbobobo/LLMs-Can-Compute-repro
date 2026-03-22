@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "source": "results/H32_post_r38_compiled_boundary_refreeze/summary.json",
+      "fields": {
+        "active_stage": "h32_post_r38_compiled_boundary_refreeze",
+        "decision_state": "origin_core_one_richer_compiled_control_family_refrozen",
+        "compiled_boundary_state": "one_richer_compiled_control_family_supported_narrowly",
+        "next_required_lane": "new_plan_required_before_any_further_compiled_boundary_or_scope_lift"
+      }
+    },
+    {
+      "source": "results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json",
+      "fields": {
+        "authorization_outcome": "execute_one_more_tiny_extension",
+        "admitted_extension_case": "bytecode_subroutine_braid_6_a80",
+        "boundary_probe_case": "bytecode_subroutine_braid_long_12_a160"
+      }
+    },
+    {
+      "source": "results/R38_origin_compiler_control_surface_extension_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_compiler_control_surface_extension_supported_narrowly",
+        "admitted_case_count": 1,
+        "boundary_stress_case_count": 1
+      }
+    }
+  ]
+}

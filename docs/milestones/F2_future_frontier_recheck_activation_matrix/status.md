@@ -10,14 +10,13 @@ branch.
 - it now includes one explicit activation matrix keyed to the current
   `H27 -> H28 -> H29 -> R36 -> R37 -> H30 -> H31 -> R38 -> H32` packet while
   preserving earlier same-endpoint controls as historical context;
-- the next justified move remains a saved post-`H32` planning packet plus one
-  conditional docs-only `H33` decision packet, not a new runtime batch by
+- the next justified move is now the landed docs-only `H33` packet plus one
+  staged same-substrate `R39` design, not a new widened runtime batch by
   default;
 - its currently unsatisfied conditions remain
-  `concrete_post_h32_substrate_gap_isolated`,
-  `broader_question_explicitly_reauthorized`, and
+  `broader_question_explicitly_reauthorized` and
   `systems_or_frontier_story_materially_changed`;
-- any future frontier-plan draft must remain downstream of the saved post-`H32`
-  design and a later explicit decision packet rather than bypassing them by
-  momentum;
+- any future frontier-plan draft must remain downstream of `H33`, any future
+  `R39` outcome, and a later explicit decision packet rather than bypassing
+  them by momentum;
 - it must not become a backdoor widening lane.

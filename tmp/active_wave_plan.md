@@ -6,6 +6,8 @@ Current scientific/control stack:
 
 - current active decision packet:
   `H32_post_r38_compiled_boundary_refreeze`;
+- current docs-only control packet:
+  `H33_post_h32_conditional_next_question_packet`;
 - preserved later explicit packet:
   `H31_post_h30_later_explicit_boundary_decision_packet`;
 - preserved prior compiled-boundary refreeze packet:
@@ -24,6 +26,8 @@ Current scientific/control stack:
   `R37_origin_compiler_boundary_gate`;
 - preserved richer control-surface extension lane:
   `R38_origin_compiler_control_surface_extension_gate`;
+- staged next runtime candidate:
+  `R39_origin_compiler_control_surface_dependency_audit`;
 - blocked future lanes:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
@@ -32,8 +36,8 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-Origin-core refreeze remains active while post-`H32` work stays planning-only
-until a later docs-only packet chooses the next question
+Origin-core refreeze remains active while `H33` holds the docs-only control
+surface and `R39` stays staged rather than active
 
 ## Current Facts
 
@@ -67,9 +71,12 @@ until a later docs-only packet chooses the next question
    widening by momentum.
 5. Treat `P18_post_h32_clean_worktree_promotion` as completed operational
    closeout on this clean branch.
-6. Save one post-`H32` planning packet before any later runtime execution.
-7. Refresh `F2_future_frontier_recheck_activation_matrix` to the current
-   `H27 -> H28 -> H29 -> R36 -> R37 -> H30 -> H31 -> R38 -> H32` stack.
+6. Preserve `H33` as the current docs-only packet selecting exactly one
+   narrow same-substrate question.
+7. Keep `R39_origin_compiler_control_surface_dependency_audit` as the only
+   staged next runtime candidate.
+8. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
+   downstream of `H33/R39`.
 
 ## Last Completed Order
 
@@ -89,21 +96,23 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H30_post_r36_r37_scope_decision_packet` ->
 `H31_post_h30_later_explicit_boundary_decision_packet` ->
 `R38_origin_compiler_control_surface_extension_gate` ->
-`H32_post_r38_compiled_boundary_refreeze`
+`H32_post_r38_compiled_boundary_refreeze` ->
+`H33_post_h32_conditional_next_question_packet`
 
 ## Next Conditional Order
 
-`docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` ->
-conditional `H33_post_h32_conditional_next_question_packet` ->
-either freeze compiled-boundary as complete-for-now
-or one same-substrate Origin-core substrate question
+`docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` ->
+staged `R39_origin_compiler_control_surface_dependency_audit` ->
+later explicit post-`R39` decision packet
 
 ## Current References
 
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
+- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/`
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/`
 - `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`
 - `docs/milestones/H31_post_h30_later_explicit_boundary_decision_packet/`
@@ -113,6 +122,7 @@ or one same-substrate Origin-core substrate question
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json`
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
+- `results/H33_post_h32_conditional_next_question_packet/summary.json`
 
 ## If Blocked
 

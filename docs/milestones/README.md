@@ -12,6 +12,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
+- `H33_post_h32_conditional_next_question_packet/` — current docs-only
+  control packet that keeps `H32` active while selecting the only justified
+  next question.
 - `H32_post_r38_compiled_boundary_refreeze/` — current active routing/refreeze
   packet.
 - `H31_post_h30_later_explicit_boundary_decision_packet/` — preserved explicit
@@ -50,10 +53,12 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Conditional Future Lanes
 
+- `../plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
+  — saved design for the only post-`H33` same-substrate runtime candidate.
 - `../plans/2026-03-23-post-h32-conditional-next-packet-design.md` — saved
-  post-`H32` planning surface for the next docs-only question-selection packet.
-- `H33_post_h32_conditional_next_question_packet/` — planning-only scaffold for
-  the conditional next packet after `H32`.
+  post-`H32` planning surface that led to the landed docs-only `H33` packet.
+- `R39_origin_compiler_control_surface_dependency_audit/` — planning-only
+  same-substrate audit scaffold authorized by `H33`.
 - `../plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — saved plan for
   the landed explicit-extension wave after `H30`.
 - no further compiler-boundary extension is active by default.
@@ -75,10 +80,13 @@ Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
 - `H32` is active routing.
+- `H33` is the current docs-only control packet.
 - `H31` and `H30` are preserved upstream decision packets, not the next
   objective.
 - `H29` and `H28` are preserved upstream refreeze/pivot evidence.
 - `R34`, `R35`, `R36`, `R37`, and `R38` stay frozen as upstream support.
+- `R39` is staged as the only named next runtime candidate, not an active
+  lane.
 - one richer compiled control family still does not authorize broader compiler
   or demo scope lift.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new

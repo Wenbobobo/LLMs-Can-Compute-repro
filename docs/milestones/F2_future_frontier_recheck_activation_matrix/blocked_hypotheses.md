@@ -2,8 +2,8 @@
 
 - `H32` does not authorize frontier widening just because one richer compiled
   control family now works on the same substrate.
-- A saved post-`H32` plan or `H33` scaffold is not enough to justify runtime
-  widening without a later explicit decision.
+- A saved post-`H33` `R39` design is not enough to justify widened runtime
+  work without a later explicit decision.
 - One same-substrate substrate question by itself is not enough to justify
   scope lift or frontier review.
 - A broader systems or headline story cannot be inferred from the current

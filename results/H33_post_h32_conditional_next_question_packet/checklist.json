@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h33_docs_select_one_explicit_post_h32_outcome_and_keep_h32_active",
+      "status": "pass",
+      "notes": "H33 should formalize the post-H32 fork, keep H32 active, and select exactly one narrow next-question outcome."
+    },
+    {
+      "item_id": "upstream_h32_and_post_h32_plan_require_an_explicit_new_question_packet",
+      "status": "pass",
+      "notes": "H33 is only justified if H32 still ends at a new-plan-required state and the saved post-H32 design narrows the next question explicitly."
+    },
+    {
+      "item_id": "r39_candidate_stays_same_substrate_same_opcode_and_no_widening",
+      "status": "pass",
+      "notes": "The only lane named by H33 must remain a same-substrate audit, not a backdoor widening packet."
+    },
+    {
+      "item_id": "driver_active_wave_and_f2_preserve_h32_routing_h33_control_and_r39_as_next_candidate",
+      "status": "pass",
+      "notes": "Project entrypoints should show that H32 stays active, H33 is the current docs-only control packet, and R39 is the only named next candidate."
+    }
+  ]
+}
