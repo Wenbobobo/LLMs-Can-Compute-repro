@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "primitive_id": "latest_write_address",
+      "case_count": 3,
+      "observation_count": 4,
+      "exact_observation_count": 4,
+      "exact_observation_rate": 1.0,
+      "verdict": "supported"
+    },
+    {
+      "primitive_id": "stack_top",
+      "case_count": 3,
+      "observation_count": 26,
+      "exact_observation_count": 26,
+      "exact_observation_rate": 1.0,
+      "verdict": "supported"
+    },
+    {
+      "primitive_id": "stack_at_depth",
+      "case_count": 3,
+      "observation_count": 14,
+      "exact_observation_count": 14,
+      "exact_observation_rate": 1.0,
+      "verdict": "supported"
+    },
+    {
+      "primitive_id": "call_return_target",
+      "case_count": 1,
+      "observation_count": 2,
+      "exact_observation_count": 2,
+      "exact_observation_rate": 1.0,
+      "verdict": "supported"
+    },
+    {
+      "primitive_id": "tie_average_geometry",
+      "case_count": 1,
+      "observation_count": 1,
+      "exact_observation_count": 1,
+      "exact_observation_rate": 1.0,
+      "verdict": "supported"
+    }
+  ]
+}

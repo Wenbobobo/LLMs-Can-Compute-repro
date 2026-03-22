@@ -5,6 +5,7 @@ from fractions import Fraction
 
 from exec_trace import (
     TraceInterpreter,
+    call_chain_program,
     countdown_program,
     dynamic_memory_program,
     latest_write_program,
@@ -15,9 +16,11 @@ from model import (
     MemoryOperation,
     encode_latest_write_key,
     encode_latest_write_query,
+    extract_call_frame_operations,
     extract_memory_operations,
     extract_stack_slot_operations,
     run_latest_write_decode,
+    run_latest_write_decode_for_call_events,
     run_latest_write_decode_for_stack_events,
 )
 
@@ -118,6 +121,21 @@ def test_stack_slot_decode_matches_dynamic_memory_trace_example() -> None:
     for observation in decode_run.observations:
         assert observation.linear_value == observation.expected_value
         assert observation.accelerated_value == observation.expected_value
+
+
+def test_call_frame_decode_matches_call_chain_trace_example() -> None:
+    interpreter = TraceInterpreter()
+    result = interpreter.run(call_chain_program())
+
+    operations = extract_call_frame_operations(result.events)
+    assert [operation.kind for operation in operations] == ["store", "store", "load", "load"]
+
+    decode_run = run_latest_write_decode_for_call_events(result.events)
+    observed = [(obs.address, obs.expected_value) for obs in decode_run.observations]
+    accelerated = [(obs.address, obs.accelerated_value) for obs in decode_run.observations]
+
+    assert observed == [(1, 7), (0, 3)]
+    assert accelerated == observed
 
 
 def test_latest_write_decode_modes_match_random_operation_stream() -> None:

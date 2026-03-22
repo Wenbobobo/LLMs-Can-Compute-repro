@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "supported_here": [
+      "H30 freezes H29, R36, and R37 into the current Origin-core routing packet.",
+      "R37 supports one tiny lowered/compiled bytecode subset on the active append-only / exact-retrieval / small-VM substrate.",
+      "R37 remains `origin_tiny_compiled_boundary_supported_narrowly` with the admitted source subset staying narrow and exact.",
+      "Any later compiled-boundary extension still requires a new explicit packet rather than momentum."
+    ],
+    "unsupported_here": [
+      "H30 does not reopen R29 same-endpoint systems recovery.",
+      "H30 does not reopen F3 scope lift or relax F2 planning-only discipline.",
+      "H30 does not relabel one tiny compiled boundary as arbitrary C, broad compiler support, or a general LLM-computer result."
+    ],
+    "disconfirmed_here": [
+      "The expectation that one positive tiny-boundary packet is enough to soften blocked lanes or headline scope limits."
+    ],
+    "distilled_result": {
+      "active_stage": "h30_post_r36_r37_scope_decision_packet",
+      "decision_state": "origin_core_tiny_compiled_boundary_refrozen",
+      "origin_core_chain_state": "positive_with_narrow_compiled_boundary",
+      "compiled_boundary_state": "tiny_compiled_boundary_supported_narrowly",
+      "frozen_upstream_gates": [
+        "h29_refreeze_after_r34_r35_origin_core_gate",
+        "r36_origin_long_horizon_precision_scaling_gate",
+        "r37_origin_compiler_boundary_gate"
+      ],
+      "next_required_lane": "later_explicit_packet_required_before_any_compiler_boundary_extension",
+      "blocked_lanes_preserved": [
+        "r29_d0_same_endpoint_systems_recovery_execution_gate",
+        "f3_post_h23_scope_lift_decision_bundle"
+      ],
+      "future_frontier_review_state": "planning_only_f2_preserved"
+    }
+  }
+}

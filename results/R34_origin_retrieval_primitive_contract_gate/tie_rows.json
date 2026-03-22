@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "primitive_id": "tie_average_geometry",
+      "query": [
+        0,
+        1
+      ],
+      "expected_value": 2,
+      "linear_value": 2,
+      "accelerated_value": 2,
+      "maximizer_count": 2,
+      "exact_match": true
+    }
+  ]
+}

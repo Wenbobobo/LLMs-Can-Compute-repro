@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h29_docs_freeze_r34_r35_and_route_to_r36",
+      "status": "pass",
+      "notes": "H29 should freeze R34/R35 and route only to a narrow R36 next step."
+    },
+    {
+      "item_id": "h28_reanchor_state_is_preserved",
+      "status": "pass",
+      "notes": "H29 must inherit and preserve the H28 Origin-core pivot state."
+    },
+    {
+      "item_id": "r34_and_r35_gates_remain_positive",
+      "status": "pass",
+      "notes": "H29 should only freeze as positive if both upstream gates stayed exact."
+    },
+    {
+      "item_id": "blocked_lanes_preserved_without_scope_widening",
+      "status": "pass",
+      "notes": "H29 should keep R29/F3 blocked and F2 planning-only discipline."
+    }
+  ]
+}

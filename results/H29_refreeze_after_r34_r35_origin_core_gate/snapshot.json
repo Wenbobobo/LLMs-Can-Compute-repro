@@ -1,0 +1,30 @@
+{
+  "rows": [
+    {
+      "source": "results/H28_post_h27_origin_core_reanchor_packet/summary.json",
+      "fields": {
+        "active_stage": "h28_post_h27_origin_core_reanchor_packet",
+        "scientific_target": "origin_core_append_only_retrieval_small_vm",
+        "same_endpoint_recovery_state": "closed_negative_at_h27"
+      }
+    },
+    {
+      "source": "results/R34_origin_retrieval_primitive_contract_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_retrieval_contract_supported",
+        "primitive_contract_supported": true,
+        "observation_count": 47,
+        "exact_observation_count": 47
+      }
+    },
+    {
+      "source": "results/R35_origin_append_only_stack_vm_execution_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_stack_vm_exact_supported",
+        "pointer_like_exact_all_cases": true,
+        "executed_case_count": 12,
+        "pointer_like_exact_trace_match_count": 12
+      }
+    }
+  ]
+}

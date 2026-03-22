@@ -7,6 +7,7 @@ from fractions import Fraction
 from typing import Literal, Sequence
 
 from exec_trace import TraceEvent
+from exec_trace.dsl import Opcode
 from geometry import HullKVCache, brute_force_hardmax_2d
 
 
@@ -30,7 +31,7 @@ class MemoryOperation:
     kind: Literal["store", "load"]
     address: int
     value: int
-    space: Literal["memory", "stack"] = "memory"
+    space: Literal["memory", "stack", "call"] = "memory"
 
 
 @dataclass(frozen=True, slots=True)
@@ -107,6 +108,37 @@ def extract_stack_slot_operations(events: Sequence[TraceEvent]) -> tuple[MemoryO
                     address=write_base + offset,
                     value=value,
                     space="stack",
+                )
+            )
+    return tuple(operations)
+
+
+def extract_call_frame_operations(events: Sequence[TraceEvent]) -> tuple[MemoryOperation, ...]:
+    operations: list[MemoryOperation] = []
+    call_depth = 0
+    for event in events:
+        if event.opcode == Opcode.CALL:
+            operations.append(
+                MemoryOperation(
+                    step=event.step,
+                    kind="store",
+                    address=call_depth,
+                    value=event.pc + 1,
+                    space="call",
+                )
+            )
+            call_depth += 1
+        elif event.opcode == Opcode.RET:
+            if call_depth <= 0:
+                raise ValueError(f"RET event at step {event.step} has no pending call frame.")
+            call_depth -= 1
+            operations.append(
+                MemoryOperation(
+                    step=event.step,
+                    kind="load",
+                    address=call_depth,
+                    value=event.next_pc,
+                    space="call",
                 )
             )
     return tuple(operations)
@@ -199,5 +231,15 @@ def run_latest_write_decode_for_stack_events(
     default_value: int = 0,
 ) -> DecodeRun:
     operations = extract_stack_slot_operations(events)
+    config = config_for_operations(operations, default_value=default_value)
+    return run_latest_write_decode(operations, config)
+
+
+def run_latest_write_decode_for_call_events(
+    events: Sequence[TraceEvent],
+    *,
+    default_value: int = 0,
+) -> DecodeRun:
+    operations = extract_call_frame_operations(events)
     config = config_for_operations(operations, default_value=default_value)
     return run_latest_write_decode(operations, config)

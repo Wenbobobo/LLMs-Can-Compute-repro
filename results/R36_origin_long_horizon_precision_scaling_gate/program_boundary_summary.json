@@ -1,0 +1,104 @@
+{
+  "rows": [
+    {
+      "case_id": "call_chain_control",
+      "program_name": "call_chain",
+      "space": "call",
+      "native_max_steps": 8,
+      "tested_horizon_multipliers": [
+        1,
+        16
+      ],
+      "single_head_first_failing_multiplier": null,
+      "single_head_failing_multipliers": [],
+      "radix2_all_tested_exact": true,
+      "block_recentered_all_tested_exact": true,
+      "decomposition_recovery_multipliers": [],
+      "decomposition_recovers_single_head_failure": false
+    },
+    {
+      "case_id": "flagged_indirect_accumulator_control",
+      "program_name": "flagged_indirect_accumulator_6_a128",
+      "space": "memory",
+      "native_max_steps": 134,
+      "tested_horizon_multipliers": [
+        1,
+        16
+      ],
+      "single_head_first_failing_multiplier": null,
+      "single_head_failing_multipliers": [],
+      "radix2_all_tested_exact": true,
+      "block_recentered_all_tested_exact": true,
+      "decomposition_recovery_multipliers": [],
+      "decomposition_recovers_single_head_failure": false
+    },
+    {
+      "case_id": "hotspot_memory_rewrite_high_address",
+      "program_name": "hotspot_memory_rewrite_8_a256",
+      "space": "memory",
+      "native_max_steps": 185,
+      "tested_horizon_multipliers": [
+        1,
+        4,
+        16,
+        64
+      ],
+      "single_head_first_failing_multiplier": 16,
+      "single_head_failing_multipliers": [
+        16,
+        64
+      ],
+      "radix2_all_tested_exact": true,
+      "block_recentered_all_tested_exact": true,
+      "decomposition_recovery_multipliers": [
+        16,
+        64
+      ],
+      "decomposition_recovers_single_head_failure": true
+    },
+    {
+      "case_id": "loop_indirect_memory_high_address",
+      "program_name": "loop_indirect_memory_12_a256_b257",
+      "space": "memory",
+      "native_max_steps": 204,
+      "tested_horizon_multipliers": [
+        1,
+        4,
+        16
+      ],
+      "single_head_first_failing_multiplier": 16,
+      "single_head_failing_multipliers": [
+        16
+      ],
+      "radix2_all_tested_exact": true,
+      "block_recentered_all_tested_exact": true,
+      "decomposition_recovery_multipliers": [
+        16
+      ],
+      "decomposition_recovers_single_head_failure": true
+    },
+    {
+      "case_id": "stack_fanout_depth_boundary",
+      "program_name": "stack_fanout_sum_256_v1",
+      "space": "stack",
+      "native_max_steps": 510,
+      "tested_horizon_multipliers": [
+        1,
+        4,
+        16
+      ],
+      "single_head_first_failing_multiplier": 4,
+      "single_head_failing_multipliers": [
+        4,
+        16
+      ],
+      "radix2_all_tested_exact": true,
+      "block_recentered_all_tested_exact": true,
+      "decomposition_recovery_multipliers": [
+        4,
+        16
+      ],
+      "decomposition_recovers_single_head_failure": true
+    }
+  ]
+}

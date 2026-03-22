@@ -35,6 +35,24 @@ def equality_branch_program(lhs: int, rhs: int) -> Program:
     return Program(instructions=instructions, name=f"eq_{lhs}_{rhs}")
 
 
+def call_chain_program() -> Program:
+    """Exercise nested call/return control flow on the tiny stack machine."""
+
+    instructions = (
+        Instruction(Opcode.PUSH_CONST, 1),
+        Instruction(Opcode.PUSH_CONST, 2),
+        Instruction(Opcode.CALL, 4),
+        Instruction(Opcode.HALT),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.PUSH_CONST, 3),
+        Instruction(Opcode.CALL, 8),
+        Instruction(Opcode.RET),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.RET),
+    )
+    return Program(instructions=instructions, name="call_chain")
+
+
 def latest_write_program() -> Program:
     """Overwrite one address and read it back to expose last-write semantics."""
 

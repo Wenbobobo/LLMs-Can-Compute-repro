@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "current_paper_phase": "r35_origin_append_only_stack_vm_execution_gate_complete",
+    "active_runtime_lane": "r35_origin_append_only_stack_vm_execution_gate",
+    "gate": {
+      "lane_verdict": "origin_stack_vm_exact_supported",
+      "pointer_like_exact_all_cases": true,
+      "holdout_exact_count": 6,
+      "holdout_case_count": 6,
+      "call_case_count": 1,
+      "call_read_case_count": 1,
+      "suite_count": 7,
+      "next_priority_lane": "h29_refreeze_after_r34_r35_origin_core_gate",
+      "executed_case_count": 12,
+      "pointer_like_exact_trace_match_count": 12,
+      "pointer_like_exact_final_state_match_count": 12,
+      "pointer_like_exact_read_count": 548
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

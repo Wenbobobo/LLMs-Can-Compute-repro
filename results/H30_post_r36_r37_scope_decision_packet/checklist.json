@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h30_docs_freeze_h29_r36_r37_and_preserve_scope_discipline",
+      "status": "pass",
+      "notes": "H30 docs should freeze H29/R36/R37 into one explicit no-momentum decision packet."
+    },
+    {
+      "item_id": "upstream_origin_core_chain_and_tiny_boundary_remain_positive",
+      "status": "pass",
+      "notes": "H30 only freezes positively if the H29/R36/R37 chain remains narrow and exact."
+    },
+    {
+      "item_id": "driver_and_active_wave_promote_h30_without_reopening_blocked_lanes",
+      "status": "pass",
+      "notes": "The canonical driver and active-wave handoff should now route through H30, not treat R37 as future-only."
+    },
+    {
+      "item_id": "blocked_and_planning_only_lanes_remain_explicit",
+      "status": "pass",
+      "notes": "H30 should preserve R29/F3 as blocked and keep F2 planning-only."
+    }
+  ]
+}

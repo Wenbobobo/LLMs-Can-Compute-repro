@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "current_paper_phase": "r36_origin_long_horizon_precision_scaling_gate_complete",
+    "active_runtime_lane": "r36_origin_long_horizon_precision_scaling_gate",
+    "gate": {
+      "lane_verdict": "origin_precision_scaling_boundary_sharpened",
+      "narrow_scope_kept": true,
+      "inflated_single_head_failure_count": 5,
+      "decomposition_recovery_case_count": 3,
+      "executed_case_count": 5,
+      "executed_scheme_count": 3,
+      "executed_row_count": 42,
+      "next_priority_lane": "later_explicit_packet_required_before_scope_lift"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

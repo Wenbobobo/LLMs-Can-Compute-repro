@@ -2,15 +2,16 @@
 
 | Origin-facing claim | Current status | Why |
 | --- | --- | --- |
-| Append-only execution trace can encode deterministic computation | `reproduced_here` | This is the strongest stable substrate result in the repo and remains supported on the current exact executor boundary. |
-| Exact 2D hard-max retrieval can be implemented and accelerated with a hull-style cache | `reproduced_here` | The geometric core and later `D0` evidence keep this narrow retrieval claim positive. |
-| Latest-write / stack-like retrieval can support a small exact executor | `narrowed_here` | Supported on the current bounded executor and `D0` endpoint, but still narrower than the origin headline. |
-| The current tiny compiled endpoint can run long exact programs inside the model-like executor substrate | `narrowed_here` | Supported only for the fixed tiny typed-bytecode `D0` boundary, not for arbitrary compiled programs. |
-| The true executor boundary has been localized cleanly | `unsupported_here` | `R22`, `R26`, and `R27` all stayed exact on their bounded grids and `H23` still records `bounded_grid_still_not_localized`. |
-| Same-endpoint systems competitiveness is already positive | `unsupported_here` | `R23` and `H23` still preserve `systems_still_mixed`. |
-| Mechanism support alone closes the systems story | `unsupported_here` | `R28` supports only the mechanism contract and explicitly leaves the systems story mixed. |
-| Arbitrary `C` has been reproduced | `blocked_by_scope` | The current endpoint is fixed tiny typed-bytecode `D0`; broader compiled-language claims remain intentionally blocked. |
-| Sudoku / Hungarian style demo parity should drive the next stage | `blocked_by_scope` | The project remains reproduction-first and substrate-first; flashy demos are still downstream packaging. |
-| A general LLM has become a computer | `blocked_by_scope` | The repo explicitly rejects this headline framing. |
-| Million-step reliability and economics on broad workloads | `requires_new_substrate` | Current evidence is too narrow and would require a broader executor/compiler/runtime story. |
-| General LLM integration with a fast execution path | `requires_new_substrate` | Current repo evidence stays on the narrow executor substrate and does not yet test hybrid language-plus-executor systems. |
+| Append-only execution trace can encode deterministic computation | `reproduced_here` | This remains the strongest stable substrate result in the repo and is reaffirmed by the `H28 -> R34/R35 -> H29` Origin-core packet chain. |
+| Exact 2D hard-max retrieval can be implemented and accelerated with a hull-style cache | `reproduced_here` | The geometric core remains positive, and `R34` revalidates the exact primitive contract on the active narrow suite. |
+| Latest-write / stack-like retrieval can support a small exact executor | `reproduced_here` | `R34` validates the primitive contract directly, `R35` validates a small exact stack VM on the active narrow bundle, and `H29` freezes that chain positively without reopening blocked lanes. |
+| One tiny lowered/compiled source subset can target the current Origin-core substrate exactly | `reproduced_here` | `R37` shows one admitted bytecode subset survives verifier/spec checks, lowered interpreter parity, and accelerated free-running exact execution while staying on the current append-only / retrieval / small-VM substrate. |
+| The current tiny compiled endpoint can run long exact programs inside the model-like executor substrate | `narrowed_here` | The tiny compiled endpoint remains preserved historically, but `H27` closes the same-endpoint recovery route negatively and `H28` moves the active mainline away from it. |
+| The true executor boundary has been localized cleanly | `unsupported_here` | `R22`, `R26`, and `R27` all stayed exact on their bounded grids and still did not localize a true boundary. |
+| Same-endpoint systems competitiveness is already positive | `unsupported_here` | `R33` and `H27` sharpen the old same-endpoint systems result negatively rather than positively. |
+| Mechanism support alone closes the systems story | `unsupported_here` | `R28` and the later `H27` closeout keep mechanism evidence separate from systems competitiveness. |
+| Arbitrary `C` has been reproduced | `blocked_by_scope` | The active mainline remains on narrow Origin-core substrate gates; `R36` sharpens a precision boundary but does not authorize compiled-language scope lift. |
+| Sudoku / Hungarian style demo parity should drive the next stage | `blocked_by_scope` | The active route is again substrate-first and reproduction-first rather than demo-first. |
+| A general LLM has become a computer | `blocked_by_scope` | The repo still rejects the headline framing. |
+| Million-step reliability and economics on broad workloads | `requires_new_substrate` | Current evidence is still too narrow and would require a broader executor/compiler/runtime story plus systems wins. |
+| General LLM integration with a fast execution path | `requires_new_substrate` | Current repo evidence still stays on the narrow executor substrate and does not yet test hybrid language-plus-executor systems. |

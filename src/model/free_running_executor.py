@@ -20,7 +20,7 @@ ReadStrategy = Literal[
     "staged_exact",
     "trainable",
 ]
-SpaceName = Literal["stack", "memory"]
+SpaceName = Literal["stack", "memory", "call"]
 
 
 @dataclass(frozen=True, slots=True)
@@ -189,6 +189,7 @@ class FreeRunningTraceExecutor:
 
         self.stack_strategy = stack_strategy
         self.memory_strategy = memory_strategy
+        self.call_strategy: ReadStrategy = "pointer_like_exact" if stack_strategy == "trainable" else stack_strategy
         self.stack_scorer = stack_scorer
         self.default_memory_value = default_memory_value
         self.validate_exact_reads = validate_exact_reads
@@ -205,13 +206,18 @@ class FreeRunningTraceExecutor:
             default_value=self.default_memory_value,
             allow_default_reads=True,
         )
+        call_history = _LatestWriteSpace(
+            epsilon=epsilon,
+            default_value=0,
+            allow_default_reads=False,
+        )
 
         events: list[TraceEvent] = []
         read_observations: list[ReadObservation] = []
         step = 0
         pc = 0
         stack_depth = 0
-        call_stack: list[int] = []
+        call_depth = 0
         halted = False
 
         while not halted:
@@ -221,17 +227,19 @@ class FreeRunningTraceExecutor:
                 raise RuntimeError(f"Program counter out of range: {pc}")
 
             instruction = program.instructions[pc]
-            popped, pushed, branch_taken, memory_read, memory_write, next_pc, halted = self._execute_instruction(
+            execution_result = self._execute_instruction(
                 step=step,
                 pc=pc,
                 stack_depth=stack_depth,
-                call_stack=call_stack,
+                call_depth=call_depth,
                 instruction=instruction.opcode,
                 arg=instruction.arg,
                 stack_history=stack_history,
                 memory_history=memory_history,
+                call_history=call_history,
                 read_observations=read_observations,
             )
+            popped, pushed, branch_taken, memory_read, memory_write, next_pc, halted, call_depth = execution_result
 
             event = TraceEvent(
                 step=step,
@@ -277,11 +285,12 @@ class FreeRunningTraceExecutor:
         step: int,
         pc: int,
         stack_depth: int,
-        call_stack: list[int],
+        call_depth: int,
         instruction: Opcode,
         arg: int | None,
         stack_history: _LatestWriteSpace,
         memory_history: _LatestWriteSpace,
+        call_history: _LatestWriteSpace,
         read_observations: list[ReadObservation],
     ) -> tuple[
         tuple[int, ...],
@@ -291,6 +300,7 @@ class FreeRunningTraceExecutor:
         tuple[int, int] | None,
         int,
         bool,
+        int,
     ]:
         next_pc = pc + 1
         branch_taken: bool | None = None
@@ -302,7 +312,7 @@ class FreeRunningTraceExecutor:
             case Opcode.PUSH_CONST:
                 if arg is None:
                     raise RuntimeError("push_const requires an integer argument.")
-                return ((), (arg,), None, None, None, next_pc, False)
+                return ((), (arg,), None, None, None, next_pc, False, call_depth)
             case Opcode.ADD:
                 lhs, rhs = self._read_stack_suffix(
                     step=step,
@@ -311,7 +321,7 @@ class FreeRunningTraceExecutor:
                     stack_history=stack_history,
                     read_observations=read_observations,
                 )
-                return ((lhs, rhs), (lhs + rhs,), None, None, None, next_pc, False)
+                return ((lhs, rhs), (lhs + rhs,), None, None, None, next_pc, False, call_depth)
             case Opcode.SUB:
                 lhs, rhs = self._read_stack_suffix(
                     step=step,
@@ -320,7 +330,7 @@ class FreeRunningTraceExecutor:
                     stack_history=stack_history,
                     read_observations=read_observations,
                 )
-                return ((lhs, rhs), (lhs - rhs,), None, None, None, next_pc, False)
+                return ((lhs, rhs), (lhs - rhs,), None, None, None, next_pc, False, call_depth)
             case Opcode.EQ:
                 lhs, rhs = self._read_stack_suffix(
                     step=step,
@@ -329,7 +339,7 @@ class FreeRunningTraceExecutor:
                     stack_history=stack_history,
                     read_observations=read_observations,
                 )
-                return ((lhs, rhs), (int(lhs == rhs),), None, None, None, next_pc, False)
+                return ((lhs, rhs), (int(lhs == rhs),), None, None, None, next_pc, False, call_depth)
             case Opcode.DUP:
                 (value,) = self._read_stack_suffix(
                     step=step,
@@ -338,7 +348,7 @@ class FreeRunningTraceExecutor:
                     stack_history=stack_history,
                     read_observations=read_observations,
                 )
-                return ((), (value,), None, None, None, next_pc, False)
+                return ((), (value,), None, None, None, next_pc, False, call_depth)
             case Opcode.POP:
                 (value,) = self._read_stack_suffix(
                     step=step,
@@ -347,7 +357,7 @@ class FreeRunningTraceExecutor:
                     stack_history=stack_history,
                     read_observations=read_observations,
                 )
-                return ((value,), (), None, None, None, next_pc, False)
+                return ((value,), (), None, None, None, next_pc, False, call_depth)
             case Opcode.LOAD:
                 if arg is None:
                     raise RuntimeError("load requires an integer address.")
@@ -360,7 +370,7 @@ class FreeRunningTraceExecutor:
                     read_observations=read_observations,
                 )
                 memory_read = (arg, value)
-                return ((), (value,), None, memory_read, None, next_pc, False)
+                return ((), (value,), None, memory_read, None, next_pc, False, call_depth)
             case Opcode.STORE:
                 if arg is None:
                     raise RuntimeError("store requires an integer address.")
@@ -374,7 +384,7 @@ class FreeRunningTraceExecutor:
                     read_observations=read_observations,
                 )
                 memory_write = (arg, value)
-                return ((value,), (), None, None, memory_write, next_pc, False)
+                return ((value,), (), None, None, memory_write, next_pc, False, call_depth)
             case Opcode.LOAD_AT:
                 (address,) = self._read_stack_suffix(
                     step=step,
@@ -392,7 +402,7 @@ class FreeRunningTraceExecutor:
                     read_observations=read_observations,
                 )
                 memory_read = (address, value)
-                return ((address,), (value,), None, memory_read, None, next_pc, False)
+                return ((address,), (value,), None, memory_read, None, next_pc, False, call_depth)
             case Opcode.STORE_AT:
                 value, address = self._read_stack_suffix(
                     step=step,
@@ -404,11 +414,11 @@ class FreeRunningTraceExecutor:
                 if address < 0:
                     raise RuntimeError("store_at address must be non-negative.")
                 memory_write = (address, value)
-                return ((value, address), (), None, None, memory_write, next_pc, False)
+                return ((value, address), (), None, None, memory_write, next_pc, False, call_depth)
             case Opcode.JMP:
                 if arg is None:
                     raise RuntimeError("jmp requires a target PC.")
-                return ((), (), True, None, None, arg, False)
+                return ((), (), True, None, None, arg, False, call_depth)
             case Opcode.JZ:
                 if arg is None:
                     raise RuntimeError("jz requires a target PC.")
@@ -420,18 +430,27 @@ class FreeRunningTraceExecutor:
                     read_observations=read_observations,
                 )
                 branch_taken = condition == 0
-                return ((condition,), (), branch_taken, None, None, arg if branch_taken else next_pc, False)
+                return ((condition,), (), branch_taken, None, None, arg if branch_taken else next_pc, False, call_depth)
             case Opcode.CALL:
                 if arg is None:
                     raise RuntimeError("call requires a target PC.")
-                call_stack.append(pc + 1)
-                return ((), (), True, None, None, arg, False)
+                call_history.write(call_depth, pc + 1, step)
+                return ((), (), True, None, None, arg, False, call_depth + 1)
             case Opcode.RET:
-                if not call_stack:
+                if call_depth <= 0:
                     raise RuntimeError("ret requires a pending return address.")
-                return ((), (), True, None, None, call_stack.pop(), False)
+                return_pc = self._read_from_space(
+                    step=step,
+                    address=call_depth - 1,
+                    space="call",
+                    strategy=self.call_strategy,
+                    history=call_history,
+                    scorer=None,
+                    read_observations=read_observations,
+                )
+                return ((), (), True, None, None, return_pc, False, call_depth - 1)
             case Opcode.HALT:
-                return ((), (), None, None, None, pc, True)
+                return ((), (), None, None, None, pc, True, call_depth)
             case _:
                 raise RuntimeError(f"Unsupported opcode: {instruction}")
 

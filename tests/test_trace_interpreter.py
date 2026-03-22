@@ -8,6 +8,7 @@ from exec_trace import (
     Program,
     TraceInterpreter,
     alternating_memory_loop_program,
+    call_chain_program,
     countdown_program,
     dynamic_memory_program,
     equality_branch_program,
@@ -210,21 +211,7 @@ def test_stack_fanout_sum_program() -> None:
 
 def test_call_ret_program_replay_matches_interpreter() -> None:
     interpreter = TraceInterpreter()
-    program = Program(
-        instructions=(
-            Instruction(Opcode.PUSH_CONST, 1),
-            Instruction(Opcode.PUSH_CONST, 2),
-            Instruction(Opcode.CALL, 4),
-            Instruction(Opcode.HALT),
-            Instruction(Opcode.ADD),
-            Instruction(Opcode.PUSH_CONST, 3),
-            Instruction(Opcode.CALL, 8),
-            Instruction(Opcode.RET),
-            Instruction(Opcode.ADD),
-            Instruction(Opcode.RET),
-        ),
-        name="trace_call_chain_smoke",
-    )
+    program = call_chain_program()
 
     result = interpreter.run(program)
     replayed = replay_trace(program, result.events)

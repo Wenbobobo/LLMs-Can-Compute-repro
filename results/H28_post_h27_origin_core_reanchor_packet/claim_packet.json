@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "supported_here": [
+      "H28 reanchors the active stage around the narrower Origin-core append-only / retrieval / small-VM thesis.",
+      "H27 is preserved as the negative closeout of the old same-endpoint D0 recovery wave.",
+      "The next required order is R34, then R35, then H29."
+    ],
+    "unsupported_here": [
+      "H28 does not reopen R29.",
+      "H28 does not reopen F3 or bypass F2.",
+      "H28 does not claim general LLM-computer, arbitrary-C, or million-step parity."
+    ],
+    "disconfirmed_here": [
+      "The old expectation that same-endpoint D0 recovery should remain the primary next-stage narrative after H27."
+    ],
+    "distilled_result": {
+      "active_stage": "h28_post_h27_origin_core_reanchor_packet",
+      "scientific_target": "origin_core_append_only_retrieval_small_vm",
+      "same_endpoint_recovery_state": "closed_negative_at_h27",
+      "next_required_order": [
+        "r34_origin_retrieval_primitive_contract_gate",
+        "r35_origin_append_only_stack_vm_execution_gate",
+        "h29_refreeze_after_r34_r35_origin_core_gate"
+      ],
+      "blocked_lanes_preserved": [
+        "r29_d0_same_endpoint_systems_recovery_execution_gate",
+        "f3_post_h23_scope_lift_decision_bundle"
+      ]
+    }
+  }
+}

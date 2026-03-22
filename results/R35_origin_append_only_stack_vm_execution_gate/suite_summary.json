@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "suite": "call_return",
+      "case_count": 1,
+      "pointer_like_exact_trace_match_count": 1,
+      "pointer_like_exact_final_state_match_count": 1,
+      "call_read_case_count": 1,
+      "holdout_case_count": 0
+    },
+    {
+      "suite": "control_flow",
+      "case_count": 2,
+      "pointer_like_exact_trace_match_count": 2,
+      "pointer_like_exact_final_state_match_count": 2,
+      "call_read_case_count": 0,
+      "holdout_case_count": 1
+    },
+    {
+      "suite": "indirect_memory",
+      "case_count": 2,
+      "pointer_like_exact_trace_match_count": 2,
+      "pointer_like_exact_final_state_match_count": 2,
+      "call_read_case_count": 0,
+      "holdout_case_count": 0
+    },
+    {
+      "suite": "loops",
+      "case_count": 2,
+      "pointer_like_exact_trace_match_count": 2,
+      "pointer_like_exact_final_state_match_count": 2,
+      "call_read_case_count": 0,
+      "holdout_case_count": 2
+    },
+    {
+      "suite": "mixed_surface",
+      "case_count": 2,
+      "pointer_like_exact_trace_match_count": 2,
+      "pointer_like_exact_final_state_match_count": 2,
+      "call_read_case_count": 0,
+      "holdout_case_count": 2
+    },
+    {
+      "suite": "stack_depth",
+      "case_count": 1,
+      "pointer_like_exact_trace_match_count": 1,
+      "pointer_like_exact_final_state_match_count": 1,
+      "call_read_case_count": 0,
+      "holdout_case_count": 1
+    },
+    {
+      "suite": "straight_line",
+      "case_count": 2,
+      "pointer_like_exact_trace_match_count": 2,
+      "pointer_like_exact_final_state_match_count": 2,
+      "call_read_case_count": 0,
+      "holdout_case_count": 0
+    }
+  ]
+}

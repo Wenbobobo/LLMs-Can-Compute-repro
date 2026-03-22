@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "supported_here": [
+      "H29 freezes R34 and R35 as the current positive Origin-core A/B/C evidence chain.",
+      "R34 remains `origin_retrieval_contract_supported` with primitive contract support preserved.",
+      "R35 remains `origin_stack_vm_exact_supported` with exact trace/final-state support preserved.",
+      "A narrow precision boundary audit is justified next as R36."
+    ],
+    "unsupported_here": [
+      "H29 does not reopen R29 same-endpoint recovery by momentum.",
+      "H29 does not reopen F3 scope lift or bypass F2 discipline.",
+      "H29 does not escalate to broad compiler/demo claims."
+    ],
+    "disconfirmed_here": [
+      "The expectation that post-H28 progress should automatically reactivate blocked same-endpoint or headline-narrative lanes."
+    ],
+    "distilled_result": {
+      "active_stage": "h29_refreeze_after_r34_r35_origin_core_gate",
+      "origin_core_chain_state": "positive_on_current_bundle",
+      "frozen_upstream_gates": [
+        "r34_origin_retrieval_primitive_contract_gate",
+        "r35_origin_append_only_stack_vm_execution_gate"
+      ],
+      "next_required_lane": "r36_origin_long_horizon_precision_scaling_gate",
+      "blocked_lanes_preserved": [
+        "r29_d0_same_endpoint_systems_recovery_execution_gate",
+        "f3_post_h23_scope_lift_decision_bundle"
+      ],
+      "future_frontier_review_state": "planning_only_f2_preserved"
+    }
+  }
+}
