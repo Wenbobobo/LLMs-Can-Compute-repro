@@ -26,7 +26,7 @@ Current scientific/control stack:
   `R37_origin_compiler_boundary_gate`;
 - preserved richer control-surface extension lane:
   `R38_origin_compiler_control_surface_extension_gate`;
-- staged next runtime candidate:
+- completed same-substrate dependency audit lane:
   `R39_origin_compiler_control_surface_dependency_audit`;
 - blocked future lanes:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
@@ -37,7 +37,8 @@ Current scientific/control stack:
 Immediate active wave:
 
 Origin-core refreeze remains active while `H33` holds the docs-only control
-surface and `R39` stays staged rather than active
+surface and `R39` sits as a completed downstream audit awaiting a later
+explicit decision packet
 
 ## Current Facts
 
@@ -58,6 +59,10 @@ surface and `R39` stays staged rather than active
 - `R38` shows that one richer subroutine/control family and one longer
   same-family boundary probe stay exact without widening the opcode surface.
 - `H32` freezes that result as narrow same-substrate evidence only.
+- `R39` then shows that one declared helper-body permutation with target
+  renumbering preserves exact source/lowered/free-running execution and final
+  state on both the admitted row and the named same-family boundary probe,
+  while changing trace on both rows.
 - `R29`, `F3`, and frontier/demo widening remain blocked.
 
 ## Immediate Objectives
@@ -73,8 +78,8 @@ surface and `R39` stays staged rather than active
    closeout on this clean branch.
 6. Preserve `H33` as the current docs-only packet selecting exactly one
    narrow same-substrate question.
-7. Keep `R39_origin_compiler_control_surface_dependency_audit` as the only
-   staged next runtime candidate.
+7. Preserve `R39_origin_compiler_control_surface_dependency_audit` as a
+   completed downstream same-substrate audit, not a routing change by itself.
 8. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
    downstream of `H33/R39`.
 
@@ -97,12 +102,11 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H31_post_h30_later_explicit_boundary_decision_packet` ->
 `R38_origin_compiler_control_surface_extension_gate` ->
 `H32_post_r38_compiled_boundary_refreeze` ->
-`H33_post_h32_conditional_next_question_packet`
+`H33_post_h32_conditional_next_question_packet` ->
+`R39_origin_compiler_control_surface_dependency_audit`
 
 ## Next Conditional Order
 
-`docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` ->
-staged `R39_origin_compiler_control_surface_dependency_audit` ->
 later explicit post-`R39` decision packet
 
 ## Current References
@@ -123,17 +127,20 @@ later explicit post-`R39` decision packet
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
 - `results/H33_post_h32_conditional_next_question_packet/summary.json`
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
 
 ## If Blocked
 
 - `P17` closeout remains complete on `wip/p17-h30-clean`; do not reopen it;
 - `P18` is the current clean-branch packaging surface; do not merge back into
   dirty `main` or dirty `wip/h27-promotion` by momentum;
-- do not treat the saved post-`H32` plan or `H33` scaffold as runtime
-  authorization by themselves;
+- do not treat `H33` or the local `R39` positive result as broader compiled or
+  frontier authorization by themselves;
 - do not reopen `R29` or `F3` by wording alone;
 - do not relabel one richer compiled control family as arbitrary-language
   support;
-- do not skip the saved post-`H30` / `H31` / `R38` plan or the saved
-  post-`H32` plan when evaluating any later broader lane;
-- require a new plan before any further compiled-boundary extension.
+- do not skip the saved post-`H30` / `H31` / `R38` plan, the saved
+  post-`H32` plan, or the landed `R39` audit when evaluating any later
+  broader lane;
+- require a later explicit post-`R39` decision packet before any routing or
+  scope change.

@@ -1,14 +1,26 @@
 # R39 Origin Compiler Control Surface Dependency Audit
 
-Planning-only same-substrate audit authorized by `H33`.
+Executed same-substrate audit after `H33`.
 
-`R39` is the only future runtime candidate named after `H32/H33`. It asks one
-narrow question:
+`R39` executes one declared control-surface perturbation on the same admitted
+row and the same same-family boundary probe used by `R38`:
 
-- on the current admitted row plus the current same-family boundary probe, how
-  much of the observed exactness depends on compiler-side control-surface
-  structure versus the current append-only / exact-retrieval / small-VM
-  substrate itself?
+- baseline rows:
+  `subroutine_braid_program(6, base_address=80)` and
+  `subroutine_braid_long_program(12, base_address=160)`;
+- perturbation rows:
+  helper-body permutation with target renumbering on those same two rows.
 
-`R39` must keep the same opcode surface as `R37/R38`, keep the current
-Origin-core substrate fixed, and avoid family breadth or scope lift.
+The lane stays on the same opcode surface as `R37/R38`, keeps the current
+Origin-core substrate fixed, and asks one narrow question:
+
+- if helper bodies are relocated and the two call targets are renumbered while
+  preserving final semantics, does exact source/lowered/free-running execution
+  survive?
+
+On the declared perturbation, the answer is narrowly positive:
+
+- exactness survives on both the admitted row and the named same-family
+  boundary probe;
+- final state is preserved relative to baseline on both rows;
+- trace changes on both rows, so the perturbation is not a no-op.

@@ -11,11 +11,13 @@ Current control docs:
   control packet, preserving `H27` as the negative closeout of the old
   same-endpoint wave, `H28` as the Origin-core pivot packet,
   `H29/R36/R37/H30/H31/R38` as the frozen upstream evidence chain, the older
-  same-endpoint `H25/H23` stack as preserved historical context, and any later
-  compiler-boundary extension as conditional on a later explicit packet;
+  same-endpoint `H25/H23` stack as preserved historical context, treating
+  `R39` as one completed same-substrate audit rather than an automatic routing
+  change, and keeping any later compiler-boundary extension conditional on a
+  later explicit packet;
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
-  — the current saved design surface for the only post-`H33`
-  same-substrate runtime candidate, `R39`;
+  — the preserved design surface that led to the completed post-`H33`
+  same-substrate audit, `R39`;
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — the
   preserved post-`H32` planning surface that led to the landed docs-only `H33`
   question-selection packet;
@@ -59,7 +61,9 @@ Current control docs:
   landed docs-only packet that keeps `H32` active while authorizing only one
   same-substrate next question;
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/` —
-  the planning-only same-substrate audit scaffold authorized by `H33`;
+  the completed same-substrate dependency audit authorized by `H33`;
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
+  — execution manifest for the completed `R39` audit;
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/` and
   `docs/milestones/F4_post_h23_origin_claim_delta_matrix/` — internal-only
   planning surfaces that keep future frontier review gated and origin-facing
@@ -89,6 +93,9 @@ Current control docs:
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json` —
   machine-readable current active routing/refreeze packet for the post-`R38`
   narrow compiled-boundary state;
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
+  — machine-readable same-substrate dependency-audit summary for one declared
+  helper-body permutation with target renumbering;
 - `results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json` —
   machine-readable boundary refreeze for the bounded `R32` follow-up;
 - `results/R33_d0_non_retrieval_overhead_localization_audit/summary.json` —

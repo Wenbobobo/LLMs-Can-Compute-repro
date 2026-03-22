@@ -1,0 +1,180 @@
+{
+  "rows": [
+    {
+      "case_id": "subroutine_braid_admitted_baseline",
+      "family_role": "admitted",
+      "control_surface_variant": "baseline",
+      "program_name": "bytecode_subroutine_braid_6_a80",
+      "max_steps": 141,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 114,
+      "free_running_stack_read_count": 75,
+      "free_running_memory_read_count": 33,
+      "free_running_call_read_count": 6,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 15,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            80,
+            0
+          ],
+          [
+            81,
+            0
+          ],
+          [
+            82,
+            12
+          ],
+          [
+            83,
+            9
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 133
+      }
+    },
+    {
+      "case_id": "subroutine_braid_admitted_permuted",
+      "family_role": "admitted",
+      "control_surface_variant": "helper_body_permuted_targets_renumbered",
+      "program_name": "bytecode_subroutine_braid_permuted_helpers_6_a80",
+      "max_steps": 141,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 114,
+      "free_running_stack_read_count": 75,
+      "free_running_memory_read_count": 33,
+      "free_running_call_read_count": 6,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 15,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            80,
+            0
+          ],
+          [
+            81,
+            0
+          ],
+          [
+            82,
+            12
+          ],
+          [
+            83,
+            9
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 133
+      }
+    },
+    {
+      "case_id": "subroutine_braid_boundary_baseline",
+      "family_role": "boundary_stress",
+      "control_surface_variant": "baseline",
+      "program_name": "bytecode_subroutine_braid_long_12_a160",
+      "max_steps": 258,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 216,
+      "free_running_stack_read_count": 141,
+      "free_running_memory_read_count": 63,
+      "free_running_call_read_count": 12,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 15,
+        "stack": [
+          78
+        ],
+        "memory": [
+          [
+            160,
+            0
+          ],
+          [
+            161,
+            0
+          ],
+          [
+            162,
+            42
+          ],
+          [
+            163,
+            36
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 250
+      }
+    },
+    {
+      "case_id": "subroutine_braid_boundary_permuted",
+      "family_role": "boundary_stress",
+      "control_surface_variant": "helper_body_permuted_targets_renumbered",
+      "program_name": "bytecode_subroutine_braid_long_permuted_helpers_12_a160",
+      "max_steps": 258,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 216,
+      "free_running_stack_read_count": 141,
+      "free_running_memory_read_count": 63,
+      "free_running_call_read_count": 12,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 15,
+        "stack": [
+          78
+        ],
+        "memory": [
+          [
+            160,
+            0
+          ],
+          [
+            161,
+            0
+          ],
+          [
+            162,
+            42
+          ],
+          [
+            163,
+            36
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 250
+      }
+    }
+  ]
+}

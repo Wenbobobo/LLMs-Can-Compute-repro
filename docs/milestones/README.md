@@ -40,6 +40,10 @@ planning bundles. Read the current driver first, not the directory name alone.
   lane.
 - `R38_origin_compiler_control_surface_extension_gate/` — completed richer
   compiled control-surface lane on the same opcode surface.
+- `R39_origin_compiler_control_surface_dependency_audit/` — completed
+  same-substrate dependency audit on one declared helper-body permutation with
+  target renumbering; it preserves narrow scope and does not change routing by
+  itself.
 
 ## Completed Current-Wave Closeout
 
@@ -54,15 +58,18 @@ planning bundles. Read the current driver first, not the directory name alone.
 ## Conditional Future Lanes
 
 - `../plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
-  — saved design for the only post-`H33` same-substrate runtime candidate.
+  — preserved design surface that led to the completed `R39`
+  same-substrate audit.
 - `../plans/2026-03-23-post-h32-conditional-next-packet-design.md` — saved
   post-`H32` planning surface that led to the landed docs-only `H33` packet.
-- `R39_origin_compiler_control_surface_dependency_audit/` — planning-only
-  same-substrate audit scaffold authorized by `H33`.
+- `R39_origin_compiler_control_surface_dependency_audit/` — completed
+  same-substrate dependency audit, not an automatic routing change.
 - `../plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — saved plan for
   the landed explicit-extension wave after `H30`.
-- no further compiler-boundary extension is active by default.
-- any broader compiled or frontier lane now requires a new plan packet.
+- no further same-substrate or compiler-boundary extension is active by
+  default.
+- any later runtime, broader compiled, or frontier lane now requires a later
+  explicit post-`R39` decision packet.
 
 ## Blocked Or Planning-Only Lanes
 
@@ -85,8 +92,7 @@ stack:
   objective.
 - `H29` and `H28` are preserved upstream refreeze/pivot evidence.
 - `R34`, `R35`, `R36`, `R37`, and `R38` stay frozen as upstream support.
-- `R39` is staged as the only named next runtime candidate, not an active
-  lane.
+- `R39` is complete as a downstream audit, not an active routing change.
 - one richer compiled control family still does not authorize broader compiler
   or demo scope lift.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new

@@ -582,12 +582,53 @@ def subroutine_braid_program(start: int, *, base_address: int = 0) -> BytecodePr
     )
 
 
+def _permute_subroutine_braid_helper_surface(program: BytecodeProgram, *, name: str) -> BytecodeProgram:
+    instructions = list(program.instructions)
+    instructions[18] = BytecodeInstruction(
+        instructions[18].opcode,
+        35,
+        in_types=instructions[18].in_types,
+        out_types=instructions[18].out_types,
+    )
+    instructions[22] = BytecodeInstruction(
+        instructions[22].opcode,
+        30,
+        in_types=instructions[22].in_types,
+        out_types=instructions[22].out_types,
+    )
+    helper_a = instructions[30:35]
+    helper_b = instructions[35:40]
+    instructions[30:35] = helper_b
+    instructions[35:40] = helper_a
+    return BytecodeProgram(
+        instructions=tuple(instructions),
+        name=name,
+        memory_layout=program.memory_layout,
+    )
+
+
+def subroutine_braid_permuted_helpers_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    base_program = subroutine_braid_program(start, base_address=base_address)
+    return _permute_subroutine_braid_helper_surface(
+        base_program,
+        name=f"bytecode_subroutine_braid_permuted_helpers_{start}_a{base_address}",
+    )
+
+
 def subroutine_braid_long_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
     base_program = subroutine_braid_program(start, base_address=base_address)
     return BytecodeProgram(
         instructions=base_program.instructions,
         name=f"bytecode_subroutine_braid_long_{start}_a{base_address}",
         memory_layout=base_program.memory_layout,
+    )
+
+
+def subroutine_braid_long_permuted_helpers_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    base_program = subroutine_braid_long_program(start, base_address=base_address)
+    return _permute_subroutine_braid_helper_surface(
+        base_program,
+        name=f"bytecode_subroutine_braid_long_permuted_helpers_{start}_a{base_address}",
     )
 
 

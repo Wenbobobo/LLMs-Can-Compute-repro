@@ -20,7 +20,10 @@ post-`H30` extension decision:
 - `R38` validates one richer compiled control/call family without widening the
   opcode surface or reopening blocked lanes;
 - `H33` keeps `H32` active while selecting one same-substrate next question
-  rather than automatic broader compiled execution.
+  rather than automatic broader compiled execution;
+- `R39` executes one declared helper-body permutation with target renumbering
+  and shows that exactness plus final-state preservation survive that declared
+  control-surface change on both rows.
 
 ## Current Machine-State Meaning
 
@@ -57,6 +60,10 @@ post-`H30` extension decision:
   `decision_state = one_origin_core_substrate_question_authorized_docs_only`,
   `selected_outcome = authorize_one_origin_core_substrate_question`,
   `authorized_next_runtime_candidate = r39_origin_compiler_control_surface_dependency_audit`;
+- `R39` is now complete as a same-substrate dependency audit:
+  `lane_verdict = control_surface_dependence_not_detected_on_declared_permutation`,
+  `declared_perturbation = helper_body_permutation_with_target_renumbering`,
+  `next_priority_lane = later_explicit_post_r39_decision_packet_required`;
 - blocked future lanes remain:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
@@ -82,30 +89,31 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H31_post_h30_later_explicit_boundary_decision_packet` ->
 `R38_origin_compiler_control_surface_extension_gate` ->
 `H32_post_r38_compiled_boundary_refreeze` ->
-`H33_post_h32_conditional_next_question_packet`
+`H33_post_h32_conditional_next_question_packet` ->
+`R39_origin_compiler_control_surface_dependency_audit`
 
 ## Next Planned Order
 
 The current justified next move is still not automatic widening.
 `H32` preserves the narrow compiled-boundary result after one explicit
 extension, and `H33` converts the next step into one explicit same-substrate
-question rather than a new broad runtime batch.
+question rather than a new broad runtime batch. `R39` now answers that
+question on one declared perturbation, but no routing change is active until a
+later explicit post-`R39` decision packet lands.
 
 The clean-worktree closeout lane
 `P18_post_h32_clean_worktree_promotion` is now complete on branch
-`wip/h31-later-explicit`; no new runtime execution is active by default.
+`wip/h31-later-explicit`, and `R39` is complete as a downstream runtime audit.
 
-The saved current staged execution surface is now:
+The preserved execution design surface for `R39` is:
 
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 
-That design keeps the next move narrow and prepares exactly one same-substrate
+That design kept the move narrow and prepared exactly one same-substrate
 runtime candidate rather than automatic broader compiled execution.
 
-If reauthorized later, the next conditional order is:
+The next required order is now:
 
-saved post-`H33` `R39` design ->
-staged `R39_origin_compiler_control_surface_dependency_audit` ->
 later explicit post-`R39` decision packet
 
 ## Control References
@@ -122,11 +130,13 @@ later explicit post-`R39` decision packet
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json`
 - `results/H33_post_h32_conditional_next_question_packet/summary.json`
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md`
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md`
@@ -157,8 +167,8 @@ later explicit post-`R39` decision packet
   compiled-boundary gate.
 - `R38_origin_compiler_control_surface_extension_gate` remains the preserved
   richer control-surface extension gate.
-- `R39_origin_compiler_control_surface_dependency_audit` is the staged
-  same-substrate next candidate, not an active lane.
+- `R39_origin_compiler_control_surface_dependency_audit` is the completed
+  same-substrate dependency audit, not a routing change by itself.
 - `H27_refreeze_after_r32_r33_same_endpoint_decision` remains the preserved
   negative same-endpoint closeout.
 
@@ -166,5 +176,5 @@ later explicit post-`R39` decision packet
 
 The earlier `H18 -> H27` same-endpoint stack remains preserved as historical
 evidence, not as the current mainline objective. `H28` and the later
-`H29/R36/R37/H30/H31/R38/H32` packet chain change the current routing target,
-not the historical record.
+`H29/R36/R37/H30/H31/R38/H32/H33/R39` packet chain change the current routing
+target, not the historical record.

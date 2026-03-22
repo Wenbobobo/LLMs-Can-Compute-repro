@@ -34,14 +34,17 @@ packet is `H33_post_h32_conditional_next_question_packet`, preserving:
   same opcode surface;
 - `P18` as the operational clean-worktree packaging lane for this packet;
 - `H33` as the docs-only next-question packet that keeps `H32` active while
-  naming only `R39_origin_compiler_control_surface_dependency_audit` as a
-  future same-substrate candidate.
+  naming only `R39_origin_compiler_control_surface_dependency_audit` as the
+  one justified same-substrate follow-up question; and
+- `R39` as the completed same-substrate dependency audit showing that one
+  declared helper-body permutation with target renumbering can preserve exact
+  final state and workload while still changing the trace on both audited rows.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
 `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`,
-`results/H33...`, and the `results/H32...` / `results/R38...` /
+`results/H33...`, `results/R39...`, and the `results/H32...` / `results/R38...` /
 `results/H31...` / `results/H30...` summaries ahead of the historical packet
 inventory below.
 
@@ -75,8 +78,8 @@ inventory below.
 - The current docs-only control packet is
   `H33_post_h32_conditional_next_question_packet`, which selects
   `authorize_one_origin_core_substrate_question` and names
-  `R39_origin_compiler_control_surface_dependency_audit` as the only future
-  runtime candidate.
+  `R39_origin_compiler_control_surface_dependency_audit` as the only justified
+  same-substrate follow-up question.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -87,6 +90,11 @@ inventory below.
   names the only allowed later-explicit extension, `R38` validates one richer
   compiled control/call family on the same substrate, and `H32` refreezes that
   result without broadening scope.
+- `R39` then executes one declared helper-body permutation with target
+  renumbering and returns
+  `control_surface_dependence_not_detected_on_declared_permutation` on both the
+  admitted row and the recorded boundary probe, while still not authorizing
+  arbitrary control-surface freedom or broader compiler claims.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -95,10 +103,10 @@ inventory below.
   post-`H30` extension row is `subroutine_braid_program(6, base_address=80)`,
   while `subroutine_braid_long_program(12, base_address=160)` is recorded as a
   same-family boundary probe rather than an admitted widening.
-- The saved design surface for the current staged next move is
+- The preserved design surface that led to the completed `R39` audit is
   `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`;
-  `R39` remains staged rather than active, and any broader extension still
-  requires a later explicit packet beyond `H33`.
+  `R39` itself is not a routing change, and any further extension still
+  requires a later explicit post-`R39` packet.
 
 - The current active stage still starts from the locked submission-candidate
   bundle and restrained release-candidate checkpoint created by `P8/P9`.
@@ -281,10 +289,11 @@ inventory below.
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
 - `docs/plans/README.md` — plans index for the current `post-H32` planning surface, the landed `H31/R38/H32/P18` wave, and the historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
-- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — current saved design for the only post-`H33` same-substrate runtime candidate, `R39`
+- `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — preserved design that led to the completed post-`H33` same-substrate audit, `R39`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — preserved post-`H32` planning packet that led to the landed docs-only `H33` question-selection step
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — preserved execution design packet that fixed the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the landed `H32/P18` closeout path
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json` — one-file summary for the current active Origin-core refreeze packet
+- `results/R39_origin_compiler_control_surface_dependency_audit/summary.json` — one-file summary for the completed same-substrate dependency audit on one declared helper-body permutation
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json` — one-file summary for the completed one-richer compiled control/call-family gate
 - `results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json` — one-file summary for the explicit later-extension authorization packet
 - `results/H30_post_r36_r37_scope_decision_packet/summary.json` — one-file summary for the preserved prior tiny compiled-boundary refreeze packet
@@ -294,7 +303,8 @@ inventory below.
 - `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — preserved historical design for the completed `R32 -> H26 -> R33 -> H27` wave
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/README.md` — landed docs-only conditional next-question packet that keeps `H32` active and authorizes only `R39`
-- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/README.md` — planning-only same-substrate audit scaffold authorized by `H33`
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/README.md` — completed same-substrate dependency audit authorized by `H33`
+- `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md` — execution manifest for the completed `R39` audit
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/worktree_runbook.md` — operational clean-worktree packaging runbook for the completed `H32` closeout wave
 - `docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/handoff_notes.md` — preserved internal handoff for the historical `H25` state, downstream lane order, and blocked follow-up paths
 - `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md` — planning-only first-pass `R32` sharp-zoom manifest fixing the candidate core, ceiling-relative ladder, stop rules, and required outputs
