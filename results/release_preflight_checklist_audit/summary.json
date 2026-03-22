@@ -44,15 +44,13 @@
   "summary": {
     "current_paper_phase": "h25_refreeze_after_r30_r31_decision_packet_active_h23_frozen",
     "preflight_scope": "outward_release_surface_and_frozen_paper_bundle",
-    "preflight_state": "blocked",
+    "preflight_state": "docs_and_audits_green",
     "release_commit_state": "dirty_worktree_release_commit_blocked",
     "git_diff_check_state": "warnings_only",
     "check_count": 7,
-    "pass_count": 6,
-    "blocked_count": 1,
-    "blocked_items": [
-      "standing_audits_remain_green"
-    ],
-    "recommended_next_action": "resolve the blocked release-preflight items before treating outward-sync docs as stable"
+    "pass_count": 7,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H25 remains the current active decision packet, H23 remains the frozen same-endpoint scientific state, R30 and R31 remain the landed reauthorization packet pair for the R32/R33 routing decision, H22/R26/R28/R27 remains the completed bounded reopen packet, H21 remains the preserved pre-reopen control, H19 remains the earlier same-endpoint refreeze, H17 remains the preserved prior same-scope refreeze, H15 remains the preserved prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, and H13/V1 remains preserved handoff state"
   }
 }

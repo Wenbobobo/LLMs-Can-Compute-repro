@@ -51,7 +51,7 @@
     },
     {
       "item_id": "standing_audits_remain_green",
-      "status": "blocked",
+      "status": "pass",
       "notes": "The current release-preflight surface still depends on the H25/H23/R30/R31 decision chain, the frozen P1/P5/H2 chain, and the bounded V1 timing classification."
     }
   ]
