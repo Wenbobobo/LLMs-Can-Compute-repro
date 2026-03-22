@@ -1,8 +1,8 @@
 # Acceptance
 
 - trigger conditions are explicit in the current post-`H32` state;
-- the relation to the saved post-`H32` plan, landed `H33`, staged `R39`,
-  `R29`, and `F3` is explicit;
+- the relation to the saved post-`H32` plan, landed `H33`, completed `R39`,
+  landed `H34`, `R29`, and `F3` is explicit;
 - non-goals are explicit;
 - no widened experiment is implemented here;
 - a future agent can decide whether a frontier plan is justified without

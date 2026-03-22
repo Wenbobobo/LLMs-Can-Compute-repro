@@ -2,8 +2,8 @@
 
 - [x] Refresh the trigger conditions for any future frontier recheck to the
   current post-`H32` state.
-- [x] Record that the next justified move is the landed docs-only `H33` packet
-  plus one staged same-substrate `R39` design, not automatic runtime
+- [x] Record that the landed `H33 -> R39 -> H34` chain closes the current
+  same-substrate question without authorizing automatic further runtime
   execution.
 - [x] Record non-goals and forbidden wording for any widened follow-up.
 - [x] Specify the minimum evidence bundle required before a widened probe can
