@@ -56,8 +56,9 @@ def test_build_summary_reports_current_polish_phase() -> None:
     summary = module.build_summary(rows)
 
     assert summary["current_paper_phase"] == "h25_refreeze_after_r30_r31_decision_packet_active_h23_frozen"
+    assert summary["internal_driver_phase"] == "h27_refreeze_after_r32_r33_same_endpoint_decision_active"
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the current H25 active decision packet aligned across public-surface docs while preserving H23 as the frozen same-endpoint scientific state, R30 as the landed boundary reauthorization packet authorizing R32, R31 as the landed systems reauthorization packet routing later systems work through R33, H22/R26/R28/R27 as the completed bounded reopen packet, H21 as the preserved pre-reopen control, H19 as the earlier same-endpoint refreeze, H17 as the preserved prior same-scope refreeze, H15 as the prior refreeze decision, and H13/V1 plus H8/R6/R7/H9 and H10/H11/R8/R9/R10/H12 as preserved baselines"
+        "keep the outward-facing H25/H23 public surface aligned while treating H27 as the current internal driver, H26 as the current same-endpoint boundary packet, R33 as the completed bounded systems-audit lane, R30 and R31 as the landed reauthorization pair for the finished R32/H26/R33/H27 wave, H22/R26/R28/R27 as the completed bounded reopen packet, H21 as the preserved pre-reopen control, H19 as the earlier same-endpoint refreeze, H17 as the preserved prior same-scope refreeze, H15 as the prior refreeze decision, and H13/V1 plus H8/R6/R7/H9 and H10/H11/R8/R9/R10/H12 as preserved baselines"
     )

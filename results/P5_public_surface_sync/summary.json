@@ -2,29 +2,19 @@
   "experiment": "p5_public_surface_sync",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
@@ -41,11 +31,12 @@
   ],
   "summary": {
     "current_paper_phase": "h25_refreeze_after_r30_r31_decision_packet_active_h23_frozen",
+    "internal_driver_phase": "h27_refreeze_after_r32_r33_same_endpoint_decision_active",
     "release_summary_role": "approved_downstream_short_update_source",
     "check_count": 9,
     "pass_count": 9,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "keep the current H25 active decision packet aligned across public-surface docs while preserving H23 as the frozen same-endpoint scientific state, R30 as the landed boundary reauthorization packet authorizing R32, R31 as the landed systems reauthorization packet routing later systems work through R33, H22/R26/R28/R27 as the completed bounded reopen packet, H21 as the preserved pre-reopen control, H19 as the earlier same-endpoint refreeze, H17 as the preserved prior same-scope refreeze, H15 as the prior refreeze decision, and H13/V1 plus H8/R6/R7/H9 and H10/H11/R8/R9/R10/H12 as preserved baselines"
+    "recommended_next_action": "keep the outward-facing H25/H23 public surface aligned while treating H27 as the current internal driver, H26 as the current same-endpoint boundary packet, R33 as the completed bounded systems-audit lane, R30 and R31 as the landed reauthorization pair for the finished R32/H26/R33/H27 wave, H22/R26/R28/R27 as the completed bounded reopen packet, H21 as the preserved pre-reopen control, H19 as the earlier same-endpoint refreeze, H17 as the preserved prior same-scope refreeze, H15 as the prior refreeze decision, and H13/V1 plus H8/R6/R7/H9 and H10/H11/R8/R9/R10/H12 as preserved baselines"
   }
 }

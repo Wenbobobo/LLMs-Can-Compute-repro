@@ -7,14 +7,17 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H25` active decision packet, preserving `H23` as the current frozen
-  same-endpoint scientific state, preserving the completed `H22/R26/R28/R27`
-  bounded reopen packet underneath it, `H21` as the immediate pre-reopen
-  control, `H19` as the earlier same-endpoint refreeze control, `H17` as the
-  prior same-scope refreeze, `H15` as the prior refreeze-and-decision-sync stage,
-  `H10/H11/R8/R9/R10/H12` preserved as the latest earlier same-endpoint
-  follow-up packet, `H13/V1` preserved as the governance/runtime handoff, and
-  future frontier work left conditional on a new explicit plan;
+  `H27` active decision packet, preserving `H26` as the current same-endpoint
+  boundary packet, `R33` as the completed bounded systems-audit lane, `H25` as
+  the preserved prior post-`H23` decision packet, `H23` as the preserved
+  earlier frozen same-endpoint scientific state, the completed
+  `H22/R26/R28/R27` bounded reopen packet underneath it, `H21` as the immediate
+  pre-reopen control, `H19` as the earlier same-endpoint refreeze control,
+  `H17` as the prior same-scope refreeze, `H15` as the prior
+  refreeze-and-decision-sync stage, `H10/H11/R8/R9/R10/H12` preserved as the
+  latest earlier same-endpoint follow-up packet, `H13/V1` preserved as the
+  governance/runtime handoff, and future frontier work left conditional on a
+  new explicit plan;
 - `docs/plans/2026-03-22-post-h23-reauthorization-design.md` — the current
   execution plan that landed `H24/R30/R31/H25`, preserves `H23` as the frozen
   scientific state, stages `R32` as the primary future lane, keeps `R33`
@@ -26,25 +29,24 @@ Current control docs:
   milestones, deferred next lanes, blocked/planning-only bundles, and
   preserved historical packets;
 - `docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md` — the current
-  near-term downstream handoff that keeps `R32` as the first justified next
-  science lane, keeps `R33` deferred as an attribution-first prerequisite
-  lane, and records that new runtime execution should wait for a clean
-  next-stage worktree or later explicit activation packet;
+  near-term downstream handoff that staged the bounded `R32 -> H26 -> R33 ->
+  H27` wave, is now preserved as a landed design record, and should not be
+  treated as the active downstream driver after `H27`;
 - `docs/plans/2026-03-22-post-unattended-r32-mainline-design.md` — the current
-  next-stage design that adds `P16` as the immediate clean-worktree closeout
-  lane ahead of execution, then records the intended `R32 -> H26 -> conditional
-  R33 -> H27` sequence without changing the frozen scientific scope;
+  unattended next-stage design that added `P16` ahead of execution and is now
+  preserved as the landed design record for the completed
+  `R32 -> H26 -> R33 -> H27` sequence without changing the frozen scientific
+  scope;
 - `docs/milestones/H25_refreeze_after_r30_r31_decision_packet/`,
   `docs/milestones/P16_h25_commit_hygiene_and_clean_worktree_promotion/`,
   `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/`,
-  `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/`,
   `docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/`,
+  `docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/`,
   `docs/milestones/H27_refreeze_after_r32_r33_same_endpoint_decision/`,
   `docs/milestones/R29_d0_same_endpoint_systems_recovery_execution_gate/`, and
-  `docs/milestones/F3_post_h23_scope_lift_decision_bundle/` — the current
-  active decision packet, the immediate closeout lane, the
-  authorized/deferred future lanes, the planned downstream refreeze packets,
-  and the blocked future execution/scope-lift packet, kept explicit without
+  `docs/milestones/F3_post_h23_scope_lift_decision_bundle/` — the preserved
+  prior decision packet, the completed closeout/downstream execution wave, and
+  the still-blocked future execution/scope-lift packet, kept explicit without
   authorizing scope widening;
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/` and
   `docs/milestones/F4_post_h23_origin_claim_delta_matrix/` — internal-only
@@ -56,8 +58,16 @@ Current control docs:
   unattended continuation, and commit-hygiene split guidance without creating a
   new runtime lane;
 - `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` —
-  machine-readable refreeze for the post-`H23` decision packet, including the
-  current primary next lane, deferred audit lane, and preserved blockers;
+  machine-readable refreeze for the preserved prior post-`H23` decision
+  packet;
+- `results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json` —
+  machine-readable boundary refreeze for the bounded `R32` follow-up;
+- `results/R33_d0_non_retrieval_overhead_localization_audit/summary.json` —
+  machine-readable bounded systems-audit packet localizing the dominant
+  non-retrieval component on the current endpoint;
+- `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json` —
+  machine-readable current active decision packet freezing the post-`R33`
+  same-endpoint state;
 - `docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md`
   — planning-only first-pass `R32` manifest fixing the candidate core,
   ceiling-relative zoom ladder, stop rules, and required outputs before any
