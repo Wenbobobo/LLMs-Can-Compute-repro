@@ -17,6 +17,9 @@ preserved-closeout-and-pivot stack.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
+- [ ] `F7`, `F8`, and `P21` remain aligned with that same planning-only
+  no-reopen interpretation and do not imply a new evidence wave, `H35`, or a
+  broadened runtime family.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
 ## Paper-facing dependencies
@@ -29,6 +32,9 @@ preserved-closeout-and-pivot stack.
 - [ ] `plans/README.md` and the saved post-`P20/F5/F6` handoff surfaces still
   present docs/planning maintenance as admissible while runtime remains
   inactive by default.
+- [ ] `publication_record/README.md` and the saved post-`H34` planning-wave
+  surface present `F7/F8/P21` as planning-only follow-ons while keeping
+  `F9/F10/F11` inactive.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 

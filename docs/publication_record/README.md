@@ -77,6 +77,20 @@ Current control docs:
 - `docs/milestones/F6_post_p20_future_option_matrix/` — the completed
   planning-only option matrix that keeps docs/planning work admissible while
   preserving the no-reopen default;
+- `docs/milestones/F7_post_h34_reopen_trigger_specification_bundle/` — the
+  completed planning-only contradiction/reopen specification bundle that makes
+  future same-substrate reopen criteria mechanical without authorizing one now;
+- `docs/milestones/F8_post_h34_beyond_origin_bridge_roadmap/` — the completed
+  planning-only beyond-Origin roadmap that stores future milestone families
+  without activating them;
+- `docs/milestones/F9_post_h34_restricted_wasm_semantic_boundary_roadmap/`,
+  `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`, and
+  `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/` —
+  inactive roadmap storage only, not active waves or runtime authorization;
+- `docs/milestones/P21_post_h34_planning_surface_sync/` — the completed
+  docs-only control-surface sync for the current post-`H34` planning wave;
+- `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — the
+  preserved design surface for that first planning-only follow-on wave;
 - `docs/plans/2026-03-23-post-p20-f6-future-option-design.md` — the
   preserved design surface for that post-`P20/F5` option matrix;
 - `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — the

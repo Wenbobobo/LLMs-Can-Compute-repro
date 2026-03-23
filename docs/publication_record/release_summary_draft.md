@@ -116,7 +116,11 @@ new contradiction-driven explicit packet. The later paper-facing and planning-
 only closeout lanes now also align to that reading: `P20` rewrites the
 manuscript bundle to terminate on the landed `H34` state, `F5` concludes
 `no_reopen_candidate_survives`, and `F6` records docs/planning maintenance as
-the current admissible default rather than a new runtime wave.
+the current admissible default rather than a new runtime wave. The next landed
+follow-on wave remains planning-only: `F7` makes future same-substrate reopen
+criteria mechanical, `F8` stores beyond-Origin milestone families without
+activating them, `F9/F10/F11` remain inactive roadmap storage only, and `P21`
+aligns the driver and handoff surfaces to that same no-reopen reading.
 
 ## Reproducibility pointers
 
