@@ -51,6 +51,10 @@ Current control docs:
   — the completed auxiliary design surface for refreshing dormant `E1`
   playbooks and helper historical wording that still speak as though
   preserved same-endpoint `R2/D0` scope were the live paper endpoint;
+- `docs/plans/2026-03-24-post-h43-p34-live-surface-wording-guardrail-design.md`
+  — the completed auxiliary design surface for adding machine-checkable drift
+  guards on current helper/control wording surfaces downstream of landed
+  `H43`;
 - `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md` —
   the completed earlier prior low-priority design surface for refreshing stale
   release/public audits and the last contradictory release-facing ledgers
@@ -188,6 +192,9 @@ Current control docs:
   completed auxiliary dormant-playbook wording refresh packet that keeps
   `P31` current while refreshing dormant `E1` playbooks and helper historical
   wording;
+- `docs/milestones/P34_post_h43_live_surface_wording_guardrail/` — the
+  completed auxiliary live-surface wording guardrail packet that keeps `P31`
+  current while machine-checking current helper/control wording surfaces;
 - `docs/milestones/P30_post_h43_manuscript_surface_refresh/` — the completed
   prior low-priority operational manuscript-surface refresh packet that
   updates stale paper-facing prose baselines and derivative helper docs while
@@ -369,6 +376,9 @@ Current control docs:
 - `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json` —
   machine-readable completed auxiliary dormant-playbook wording refresh
   packet downstream of landed `H43`;
+- `results/P34_post_h43_live_surface_wording_guardrail/summary.json` —
+  machine-readable completed auxiliary live-surface wording guardrail packet
+  downstream of landed `H43`;
 - `results/P30_post_h43_manuscript_surface_refresh/summary.json` —
   machine-readable completed prior low-priority manuscript-surface refresh
   packet downstream of landed `H43`;

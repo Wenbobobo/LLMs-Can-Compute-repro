@@ -50,6 +50,10 @@ planning bundles. Read the current driver first, not the directory name alone.
   dormant-playbook wording refresh packet updating dormant `E1` playbooks and
   helper historical wording without changing scientific stage or displacing
   `P31`.
+- `P34_post_h43_live_surface_wording_guardrail/` — completed auxiliary
+  live-surface wording guardrail packet adding machine-checkable drift guards
+  on current helper/control surfaces without changing scientific stage or
+  displacing `P31`.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior low-priority
   operational manuscript-surface refresh packet updating stale paper-facing
   prose baselines and derivative helper docs without changing scientific
@@ -177,6 +181,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P33_post_h43_dormant_playbook_wording_refresh/` — completed auxiliary
   dormant-playbook wording refresh packet that keeps `P31` current while
   refreshing dormant `E1` playbook and helper historical wording.
+- `P34_post_h43_live_surface_wording_guardrail/` — completed auxiliary
+  live-surface wording guardrail packet that keeps `P31` current while
+  machine-checking current helper/control surfaces.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior operational
   manuscript-surface refresh packet that keeps `H43` current while refreshing
   stale paper-facing prose baselines and derivative helper docs.

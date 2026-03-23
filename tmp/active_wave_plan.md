@@ -66,6 +66,11 @@ dormant-playbook wording refresh packet. It only refreshes dormant `E1`
 playbooks plus helper historical wording that still spoke as though preserved
 same-endpoint `R2/D0` scope were the live paper endpoint, and it does not
 displace `P31` as the current low-priority wave.
+`P34_post_h43_live_surface_wording_guardrail` is the completed auxiliary
+live-surface wording guardrail packet. It only adds machine-checkable drift
+guards on current helper/control surfaces so preserved `D0` support is not
+restated as the whole current endpoint, and it does not displace `P31` as the
+current low-priority wave.
 
 ## Current Facts
 
@@ -92,6 +97,8 @@ displace `P31` as the current low-priority wave.
   post-`H43` historical/regeneration wording refresh branch.
 - `wip/p33-h43-dormant-playbook-wording-refresh` is the clean completed
   auxiliary post-`H43` dormant-playbook wording refresh branch.
+- `wip/p34-h43-wording-guardrail-lint` is the clean completed auxiliary
+  post-`H43` live-surface wording guardrail branch.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -203,6 +210,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   packet and does not displace `P31` as the current low-priority wave.
 - `P33` is the completed auxiliary dormant-playbook wording refresh packet and
   does not displace `P31` as the current low-priority wave.
+- `P34` is the completed auxiliary live-surface wording guardrail packet and
+  does not displace `P31` as the current low-priority wave.
 - `P30` is the completed prior manuscript-surface refresh wave.
 - `P29` is the completed earlier prior release/public audit refresh wave.
 - `P28` is the completed earlier publication/control sync wave.
@@ -225,6 +234,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md`
+- `docs/plans/2026-03-24-post-h43-p34-live-surface-wording-guardrail-design.md`
 - `docs/plans/2026-03-24-post-h43-p30-manuscript-surface-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
@@ -242,6 +252,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/P31_post_h43_blog_guardrails_refresh/`
 - `docs/milestones/P32_post_h43_historical_wording_refresh/`
 - `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/`
+- `docs/milestones/P34_post_h43_live_surface_wording_guardrail/`
 - `docs/milestones/P30_post_h43_manuscript_surface_refresh/`
 - `docs/milestones/P29_post_h43_release_audit_refresh/`
 - `docs/milestones/P28_post_h43_publication_surface_sync/`
@@ -254,6 +265,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json`
 - `results/P32_post_h43_historical_wording_refresh/summary.json`
 - `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json`
+- `results/P34_post_h43_live_surface_wording_guardrail/summary.json`
 - `results/P30_post_h43_manuscript_surface_refresh/summary.json`
 - `results/P29_post_h43_release_audit_refresh/summary.json`
 - `results/P28_post_h43_publication_surface_sync/summary.json`

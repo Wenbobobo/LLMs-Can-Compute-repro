@@ -45,6 +45,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   keeps `P31` current while refreshing dormant `E1` playbooks and helper
   historical wording that still speak as though preserved same-endpoint
   `R2/D0` scope were the live paper endpoint.
+- `2026-03-24-post-h43-p34-live-surface-wording-guardrail-design.md` — the
+  completed auxiliary live-surface wording guardrail design surface that keeps
+  `P31` current while adding machine-checkable drift checks on current helper
+  and control surfaces.
 - `2026-03-24-post-h43-p30-manuscript-surface-refresh-design.md` — the
   completed prior low-priority manuscript-surface refresh design surface that
   moved stale paper-facing prose baselines to the landed `H43` state without
@@ -121,6 +125,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/P33_post_h43_dormant_playbook_wording_refresh/` —
   completed auxiliary dormant-playbook wording refresh packet that keeps
   `P31` current while refreshing dormant `E1` playbook and helper wording.
+- `../milestones/P34_post_h43_live_surface_wording_guardrail/` — completed
+  auxiliary live-surface wording guardrail packet that keeps `P31` current
+  while machine-checking current helper/control surfaces.
 - `../milestones/H43_post_r44_useful_case_refreeze/` — current active
   docs-only refreeze packet that records `R44` as completed narrow useful-case
   evidence and restores `no_active_downstream_runtime_lane`.
@@ -156,6 +163,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   `H43`.
 - `../milestones/P33_post_h43_dormant_playbook_wording_refresh/` — completed
   auxiliary dormant-playbook wording refresh packet downstream of `H43`.
+- `../milestones/P34_post_h43_live_surface_wording_guardrail/` — completed
+  auxiliary live-surface wording guardrail packet downstream of `H43`.
 - `../milestones/P30_post_h43_manuscript_surface_refresh/` — completed prior
   low-priority operational manuscript-surface refresh packet downstream of
   `H43`.
@@ -214,8 +223,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
   control-override, explicit merge-wave, dual-mode execution, post-`R43`
   route-selection, post-`R44` useful-case refreeze, and post-`H43`
-  operational sync/audit-refresh/manuscript/helper-doc/dormant-playbook
-  design set.
+  operational sync/audit-refresh/manuscript/helper-doc/dormant-playbook/
+  wording-guardrail design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,
