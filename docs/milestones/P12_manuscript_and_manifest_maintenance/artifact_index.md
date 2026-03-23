@@ -20,3 +20,5 @@
 - `docs/milestones/P12_manuscript_and_manifest_maintenance/post_h21_manuscript_implications.md`
 - `docs/milestones/P12_manuscript_and_manifest_maintenance/r19_r23_h21_placeholder_map.md`
 - `docs/milestones/P12_manuscript_and_manifest_maintenance/post_h34_manuscript_resync_gap_note.md`
+- `docs/milestones/P20_post_h34_manuscript_narrative_resync/`
+- `docs/milestones/F5_post_h34_contradiction_scout_matrix/`

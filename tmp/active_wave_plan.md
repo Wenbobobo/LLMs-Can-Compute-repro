@@ -39,7 +39,8 @@ Current scientific/control stack:
 Immediate active wave:
 
 Origin-core refreeze remains active while `H34` holds the docs-only control
-surface, `R39` sits as completed downstream evidence, and there is no active
+surface, `R39` sits as completed downstream evidence, `P20` and `F5` now serve
+as completed paper-facing/planning-only closeout lanes, and there is no active
 downstream runtime lane
 
 ## Current Facts
@@ -90,8 +91,11 @@ downstream runtime lane
 8. Preserve `R39_origin_compiler_control_surface_dependency_audit` as
    completed downstream same-substrate evidence, not a routing change by
    itself.
-9. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
-   downstream of `H33/R39`.
+9. Preserve `P20_post_h34_manuscript_narrative_resync` as completed paper-
+   facing closeout and `F5_post_h34_contradiction_scout_matrix` as completed
+   planning-only no-reopen filtration.
+10. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
+    downstream of `H33/R39`.
 
 ## Last Completed Order
 
@@ -131,6 +135,9 @@ no active downstream runtime lane
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/`
+- `docs/milestones/P20_post_h34_manuscript_narrative_resync/`
+- `docs/milestones/F5_post_h34_contradiction_scout_matrix/`
+- `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md`
 - `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`
 - `docs/milestones/H31_post_h30_later_explicit_boundary_decision_packet/`
 - `docs/milestones/R38_origin_compiler_control_surface_extension_gate/`

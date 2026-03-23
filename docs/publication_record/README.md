@@ -68,6 +68,15 @@ Current control docs:
   `freeze_compiled_boundary_as_complete_for_now`;
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/` —
   the completed same-substrate dependency audit authorized by `H33`;
+- `docs/milestones/P20_post_h34_manuscript_narrative_resync/` — the completed
+  paper-facing manuscript and helper-doc resync that makes the prose bundle
+  terminate on the landed `H34` state;
+- `docs/milestones/F5_post_h34_contradiction_scout_matrix/` — the completed
+  planning-only contradiction scout that currently concludes
+  `no_reopen_candidate_survives`;
+- `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — the
+  preserved handoff surface after `P20/F5`, recording that no active
+  downstream runtime lane exists and no default reopen should be created;
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
   — execution manifest for the completed `R39` audit;
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/` and

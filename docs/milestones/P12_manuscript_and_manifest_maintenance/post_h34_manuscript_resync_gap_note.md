@@ -1,15 +1,20 @@
 # Post-H34 Manuscript Resync Gap Note
 
+Status note: preserved historical handoff only. The gap recorded here was
+closed by `P20_post_h34_manuscript_narrative_resync`, and the contradiction
+follow-up state was later summarized by
+`F5_post_h34_contradiction_scout_matrix`.
+
 ## Purpose
 
-This note records the remaining paper-facing gap after the landed
+This note recorded the remaining paper-facing gap after the landed
 `H32 -> H33 -> R39 -> H34` chain and the later publication-control syncs.
-It exists so later unattended work can distinguish between:
+It remains useful so later unattended work can distinguish between:
 
 - publication ledgers and release/control docs that already reflect current
   routing;
 - preserved historical manuscript notes tied to the older post-`H21` packet;
-- the still-open task of rewriting the prose bundle to the current control
+- the once-open task of rewriting the prose bundle to the current control
   state.
 
 ## Current authoritative state
@@ -31,9 +36,9 @@ The authoritative current-control docs are therefore:
 - `docs/publication_record/claim_evidence_table.md`
 - `docs/publication_record/release_summary_draft.md`
 
-## Remaining prose gap
+## Historical prose gap
 
-`docs/publication_record/manuscript_bundle_draft.md` is still usable as a
+Before `P20`, `docs/publication_record/manuscript_bundle_draft.md` was still usable as a
 paper-shaped baseline, but later sections continue to describe preserved
 post-`H21` placeholder packets as if they were the live paper-assembly
 surface. That is now stale in routing terms even where the local scientific
@@ -58,6 +63,15 @@ The largest remaining gaps are:
 3. Demote preserved same-endpoint material to explicit historical context
    beneath the current Origin-core line.
 4. Recheck derivative packs only after the manuscript resync lands.
+
+## Resolution
+
+`P20_post_h34_manuscript_narrative_resync` completed the rewrite described
+here, refreshed the immediate helper docs, and moved the paper-facing bundle to
+the current `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` endpoint.
+`F5_post_h34_contradiction_scout_matrix` then recorded that
+`no_reopen_candidate_survives`, so this note should now be read as historical
+context rather than an open task.
 
 ## Acceptance
 

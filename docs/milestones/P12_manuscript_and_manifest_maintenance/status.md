@@ -11,7 +11,8 @@ downstream publication-control syncs.
 - the old `post_h21_manuscript_implications.md` and
   `r19_r23_h21_placeholder_map.md` notes remain useful as preserved same-
   endpoint references, not as current-routing summaries;
-- the remaining open paper-facing gap is a dedicated manuscript narrative
-  resync for `manuscript_bundle_draft.md` and downstream derivative packs so
-  they follow `H32/H33/R39/H34` directly;
+- the previously open paper-facing gap is now closed by
+  `P20_post_h34_manuscript_narrative_resync`, which rewrites
+  `manuscript_bundle_draft.md` and downstream derivative packs to follow
+  `H32/H33/R39/H34` directly;
 - no runtime execution or scope widening is authorized from this lane.

@@ -8,6 +8,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — the preserved
+  post-`P20/F5` handoff surface that records the completed manuscript resync,
+  the planning-only `no_reopen_candidate_survives` outcome, and the fact that
+  there is still no active downstream runtime lane.
 - `2026-03-23-post-r39-later-explicit-scope-decision-design.md` — the
   current preserved design surface for the landed post-`R39` docs-only scope
   decision packet, `H34_post_r39_later_explicit_scope_decision_packet`.
@@ -43,6 +47,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — preserved handoff
+  surface after the completed manuscript resync and contradiction scout.
 - `2026-03-23-post-r39-later-explicit-scope-decision-design.md` —
   preserved design surface that led to the landed post-`R39` docs-only scope
   decision packet.

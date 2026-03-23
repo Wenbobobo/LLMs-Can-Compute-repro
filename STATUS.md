@@ -31,6 +31,12 @@
   it interprets the local `R39` positive result as complete-for-now narrow
   support and requires a new contradiction- or sharper-gap-driven packet
   before any future same-substrate reopen.
+- `P20_post_h34_manuscript_narrative_resync` is now complete:
+  the paper-facing manuscript bundle and immediate helper docs now terminate on
+  the landed `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` chain.
+- `F5_post_h34_contradiction_scout_matrix` is now complete:
+  it preserves the current no-reopen interpretation and concludes
+  `no_reopen_candidate_survives` under the present evidence bundle.
 - The current admitted post-`H30` extension row is
   `subroutine_braid_program(6, base_address=80)`, while
   `subroutine_braid_long_program(12, base_address=160)` remains a same-family

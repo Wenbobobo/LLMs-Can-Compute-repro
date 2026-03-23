@@ -40,7 +40,11 @@ packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
   declared helper-body permutation with target renumbering can preserve exact
   final state and workload while still changing the trace on both audited rows;
 - `H34` as the docs-only later explicit scope-decision packet that keeps `H32`
-  active while selecting `freeze_compiled_boundary_as_complete_for_now`.
+  active while selecting `freeze_compiled_boundary_as_complete_for_now`;
+- `P20` as the completed paper-facing manuscript/helper-doc resync that makes
+  the prose bundle terminate on the landed `H34` state; and
+- `F5` as the completed planning-only contradiction scout that currently
+  concludes `no_reopen_candidate_survives`.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
