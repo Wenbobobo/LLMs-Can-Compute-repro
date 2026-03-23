@@ -34,10 +34,13 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `submission_candidate_criteria.md`
 - `release_candidate_checklist.md`
 - `conditional_reopen_protocol.md`
+- `../plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 - `../plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
 - `../milestones/F7_post_h34_reopen_trigger_specification_bundle/`
 - `../milestones/F8_post_h34_beyond_origin_bridge_roadmap/`
+- `../milestones/F10_post_h34_executor_value_comparator_matrix/`
 - `../milestones/P21_post_h34_planning_surface_sync/`
+- `../milestones/P22_post_f10_planning_surface_sync/`
 
 ## Required audit anchors
 
@@ -129,5 +132,8 @@ chain and preserved `H25/H23/H21/H19` as the older same-endpoint control
 stack. The latest downstream follow-on wave remains planning-only:
 `F7` makes future same-substrate reopen criteria mechanical,
 `F8` stores beyond-Origin milestone families without activating them,
-`F9/F10/F11` remain inactive roadmap storage only, and `P21` aligns the
-top-level control surfaces to that same no-reopen interpretation.
+`F10` now makes richer executor-visible value/comparator obligations explicit
+without authorizing runtime widening, `F9` remains blocked, `F11` remains
+new-substrate, `P21` preserves the first post-`H34` planning sync, and `P22`
+aligns the top-level control surfaces to that current no-reopen
+interpretation.

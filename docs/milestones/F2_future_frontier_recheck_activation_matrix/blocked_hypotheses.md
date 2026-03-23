@@ -5,6 +5,9 @@
 - A saved post-`H33` `R39` design was not enough to justify widened runtime
   work without a later explicit decision, and the landed `H34` freeze packet
   still does not justify widened runtime work by momentum.
+- The completed `F10` comparator bundle is still not enough to justify frontier
+  widening, because it clarifies obligations without satisfying them by
+  evidence.
 - One same-substrate question plus one narrow positive audit is still not
   enough to justify scope lift or frontier review.
 - A broader systems or headline story cannot be inferred from the current

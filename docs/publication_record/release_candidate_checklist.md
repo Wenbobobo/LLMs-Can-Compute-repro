@@ -17,8 +17,9 @@ preserved-closeout-and-pivot stack.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
-- [ ] `F7`, `F8`, and `P21` remain aligned with that same planning-only
-  no-reopen interpretation and do not imply a new evidence wave, `H35`, or a
+- [ ] `F7`, `F8`, `F10`, and `P22` remain aligned with that same planning-only
+  no-reopen interpretation, while `F9` stays blocked and `F11` stays
+  new-substrate, and none of them imply a new evidence wave, `H35`, or a
   broadened runtime family.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
@@ -33,8 +34,8 @@ preserved-closeout-and-pivot stack.
   saved post-`H34` planning-wave surface still present docs/planning
   maintenance as admissible while runtime remains inactive by default.
 - [ ] `publication_record/README.md` and the saved post-`H34` planning-wave
-  surface present `F7/F8/P21` as planning-only follow-ons while keeping
-  `F9/F10/F11` inactive.
+  surfaces present the preserved `F7/F8/P21` wave plus the current `F10/P22`
+  wave while keeping `F9` blocked and `F11` new-substrate.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 

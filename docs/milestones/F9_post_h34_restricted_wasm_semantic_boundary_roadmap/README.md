@@ -6,5 +6,6 @@ family beyond the current tiny bytecode line.
 Current status: `blocked_by_scope`.
 
 This folder exists only so later agents can keep any Wasm-like or richer
-compiled-semantic discussion explicitly downstream of `H34/P20/F5/F6`. It does
-not authorize runtime execution, frontend widening, or broader compiler claims.
+compiled-semantic discussion explicitly downstream of `H34/P20/F5/F6` and the
+completed `F10` comparator bundle. It does not authorize runtime execution,
+frontend widening, or broader compiler claims.

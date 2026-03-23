@@ -82,15 +82,22 @@ post-`H30` extension decision:
   `planning_surface_state = reopen_rules_mechanicalized_without_runtime_reauthorization`;
 - `F8` is now complete as the planning-only beyond-Origin bridge roadmap:
   `future_storage_state = roadmap_families_saved_without_scope_lift`;
-- `F9`, `F10`, and `F11` now exist only as inactive roadmap-storage surfaces
-  under `F8`;
-- `P21` is now complete as the docs-only planning-surface sync:
-  `control_surface_sync_state = post_h34_planning_wave_indexed`;
+- `F10` is now complete as the planning-only executor-value comparator matrix:
+  `planning_surface_state = richer_value_obligations_made_explicit_without_runtime_reauthorization`;
+- `F9` now remains preserved as blocked roadmap storage downstream of `F10`:
+  `future_storage_state = semantic_boundary_family_still_blocked`;
+- `F11` now remains preserved as new-substrate roadmap storage downstream of
+  `F10`:
+  `future_storage_state = hybrid_family_still_requires_new_substrate`;
+- `P21` remains complete as the prior docs-only planning-surface sync:
+  `control_surface_sync_state = first_post_h34_planning_wave_indexed`;
+- `P22` is now complete as the current docs-only planning-surface sync:
+  `control_surface_sync_state = post_f10_planning_wave_indexed`;
 - blocked future lanes remain:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
 - later frontier review remains planning-only behind
-  `F2_future_frontier_recheck_activation_matrix`.
+  `F2_future_frontier_recheck_activation_matrix` and downstream of `F10/P22`.
 
 ## Completed Order
 
@@ -139,12 +146,16 @@ The downstream closeout/support lanes are also now complete:
 
 The current admissible follow-on work is planning-only and docs-only:
 
-- `F7_post_h34_reopen_trigger_specification_bundle` makes future reopen
-  admissibility mechanical without authorizing one now;
-- `F8_post_h34_beyond_origin_bridge_roadmap` stores beyond-Origin milestone
-  families while keeping them inactive;
-- `P21_post_h34_planning_surface_sync` aligns the control surfaces to that
-  planning-only reading.
+- `F7_post_h34_reopen_trigger_specification_bundle` preserves the mechanical
+  contradiction/reopen rules without authorizing one now;
+- `F8_post_h34_beyond_origin_bridge_roadmap` preserves the broader roadmap
+  classification layer;
+- `F10_post_h34_executor_value_comparator_matrix` now makes richer
+  executor-visible value and comparator obligations explicit without opening a
+  runtime lane;
+- `P22_post_f10_planning_surface_sync` aligns the control surfaces to that
+  `F10`-led planning-only reading while keeping `F9` blocked and `F11`
+  new-substrate.
 
 The preserved execution design surface for `R39` is:
 
@@ -154,12 +165,13 @@ The preserved interpretation design surface for `H34` is:
 
 - `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
 
-The preserved planning-wave design surface after `H34/F5/F6` is:
+The preserved planning-wave design surfaces after `H34/F5/F6` are:
 
 - `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
+- `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 
-Those designs keep the line narrow and fix the current state as complete-for-now
-rather than automatically widening.
+Those designs keep the line narrow, preserve the no-reopen state, and fix the
+current planning work as comparator-first rather than automatic widening.
 
 The next required order is now:
 
@@ -199,9 +211,11 @@ no active downstream runtime lane
 - `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`
 - `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/`
 - `docs/milestones/P21_post_h34_planning_surface_sync/`
+- `docs/milestones/P22_post_f10_planning_surface_sync/`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md`
 - `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
+- `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 - `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md`
 - `docs/plans/2026-03-23-post-p20-f6-future-option-design.md`
 
@@ -209,7 +223,7 @@ no active downstream runtime lane
 
 - `R29` remains blocked and does not authorize execution.
 - `F3` remains blocked and planning-only.
-- `F2` remains planning-only.
+- `F2` remains planning-only and downstream of `H33/R39/H34/F10/P22`.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
   platform parity remain blocked until a later stage proves them.
 
@@ -235,16 +249,20 @@ no active downstream runtime lane
   richer control-surface extension gate.
 - `R39_origin_compiler_control_surface_dependency_audit` is the completed
   same-substrate dependency audit, not a routing change by itself.
-- `F7_post_h34_reopen_trigger_specification_bundle` is the current planning-only
-  contradiction/reopen specification surface under `H34`.
-- `F8_post_h34_beyond_origin_bridge_roadmap` is the current planning-only
-  beyond-Origin roadmap surface under `H34`.
-- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap`,
-  `F10_post_h34_executor_value_comparator_matrix`, and
-  `F11_post_h34_hybrid_planner_executor_bridge_roadmap` are inactive roadmap
-  storage only.
-- `P21_post_h34_planning_surface_sync` is the completed docs-only control
-  surface sync for the post-`H34` planning wave.
+- `F7_post_h34_reopen_trigger_specification_bundle` remains the preserved
+  planning-only contradiction/reopen specification surface under `H34`.
+- `F8_post_h34_beyond_origin_bridge_roadmap` remains the preserved
+  planning-only beyond-Origin roadmap surface under `H34`.
+- `F10_post_h34_executor_value_comparator_matrix` is the current
+  planning-only bridge surface for richer executor-visible value obligations.
+- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains blocked
+  roadmap storage downstream of `F10`.
+- `F11_post_h34_hybrid_planner_executor_bridge_roadmap` remains
+  new-substrate roadmap storage downstream of `F10`.
+- `P21_post_h34_planning_surface_sync` remains the preserved prior docs-only
+  control-surface sync for the first post-`H34` planning wave.
+- `P22_post_f10_planning_surface_sync` is the completed docs-only control
+  surface sync for the current `F10`-led planning wave.
 - there is no active downstream runtime lane after `H34`; any future same-
   substrate reopen requires a new contradiction-driven explicit packet.
 - `H27_refreeze_after_r32_r33_same_endpoint_decision` remains the preserved

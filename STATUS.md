@@ -47,10 +47,18 @@
 - `F8_post_h34_beyond_origin_bridge_roadmap` is now complete:
   it stores beyond-Origin future milestone families while keeping them
   planning-only and inactive.
-- `F9/F10/F11` now exist only as inactive roadmap storage under `F8`.
-- `P21_post_h34_planning_surface_sync` is now complete:
-  it aligns the driver, wave plan, and top-level indexes to the same
-  planning-only post-`H34` reading.
+- `F10_post_h34_executor_value_comparator_matrix` is now complete:
+  it makes richer executor-visible value and comparator obligations explicit
+  while keeping the line planning-only and runtime-inactive.
+- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
+  blocked roadmap storage downstream of `F10`.
+- `F11_post_h34_hybrid_planner_executor_bridge_roadmap` remains preserved as
+  new-substrate roadmap storage downstream of `F10`.
+- `P21_post_h34_planning_surface_sync` remains complete as the preserved first
+  post-`H34` planning-surface sync.
+- `P22_post_f10_planning_surface_sync` is now complete:
+  it aligns the driver, wave plan, and top-level indexes to the current
+  `F10`-led planning-only post-`H34` reading.
 - The current admitted post-`H30` extension row is
   `subroutine_braid_program(6, base_address=80)`, while
   `subroutine_braid_long_program(12, base_address=160)` remains a same-family

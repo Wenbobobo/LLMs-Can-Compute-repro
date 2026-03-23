@@ -52,8 +52,15 @@ packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
   authorizing one now; and
 - `F8` as the completed planning-only beyond-Origin bridge roadmap that stores
   future milestone families while keeping them inactive; and
-- `P21` as the completed docs-only control-surface sync that aligns the current
-  driver and wave plan to that planning-only post-`H34` state.
+- `F10` as the completed planning-only executor-value comparator matrix that
+  makes richer value/comparator obligations explicit without authorizing a
+  runtime lane; and
+- `F9` as the preserved blocked semantic-boundary roadmap downstream of `F10`;
+- `F11` as the preserved new-substrate hybrid roadmap downstream of `F10`; and
+- `P21` as the completed prior docs-only control-surface sync for the first
+  post-`H34` planning wave; and
+- `P22` as the completed docs-only control-surface sync that aligns the current
+  driver and wave plan to the `F10`-led planning-only post-`H34` state.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,

@@ -1,8 +1,11 @@
 # F10 Status
 
-- inactive placeholder only;
-- family classification: `planning_only`;
-- any later work in this folder must remain docs-only unless a separate
-  explicit packet changes routing;
-- no current runtime lane, frontend widening, or hybrid bridge is activated
-  here.
+- completed planning-only executor-value comparator matrix after
+  `H34/F7/F8/P21`;
+- defines the current richer-value-family ladder relative to the supported
+  Origin-core floor;
+- records explicit semantic obligations and comparator requirements for any
+  later richer family;
+- keeps `F9` blocked and `F11` new-substrate even after the matrix is written;
+- preserves the current no-reopen state:
+  `no active downstream runtime lane`.

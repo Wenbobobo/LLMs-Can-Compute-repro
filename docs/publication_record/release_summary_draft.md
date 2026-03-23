@@ -117,10 +117,13 @@ only closeout lanes now also align to that reading: `P20` rewrites the
 manuscript bundle to terminate on the landed `H34` state, `F5` concludes
 `no_reopen_candidate_survives`, and `F6` records docs/planning maintenance as
 the current admissible default rather than a new runtime wave. The next landed
-follow-on wave remains planning-only: `F7` makes future same-substrate reopen
+follow-on waves remain planning-only: `F7` makes future same-substrate reopen
 criteria mechanical, `F8` stores beyond-Origin milestone families without
-activating them, `F9/F10/F11` remain inactive roadmap storage only, and `P21`
-aligns the driver and handoff surfaces to that same no-reopen reading.
+activating them, `F10` now makes richer executor-visible value/comparator
+obligations explicit without authorizing runtime widening, `F9` remains
+blocked, `F11` remains new-substrate, `P21` preserves the first post-`H34`
+planning sync, and `P22` aligns the driver and handoff surfaces to that
+current `F10`-led no-reopen reading.
 
 ## Reproducibility pointers
 

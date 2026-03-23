@@ -44,8 +44,10 @@ and `H25/H23` as historical same-endpoint control context, with claim/evidence
 scope kept closed by default. The latest downstream follow-on work remains
 planning-only rather than experimental widening: `F7` preserves a mechanical
 same-substrate reopen specification, `F8` preserves beyond-Origin roadmap
-storage, `F9/F10/F11` remain inactive placeholders only, and `P21` keeps the
-driver and wave-plan surfaces aligned to that no-reopen state.
+storage, `F10` preserves the current richer-value/comparator bridge surface,
+`F9` remains blocked, `F11` remains new-substrate, `P21` preserves the first
+post-`H34` sync, and `P22` keeps the driver and wave-plan surfaces aligned to
+that current no-reopen state.
 
 ## Mandatory tables
 

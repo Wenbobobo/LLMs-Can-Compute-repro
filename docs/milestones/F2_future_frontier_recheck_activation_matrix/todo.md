@@ -5,6 +5,8 @@
 - [x] Record that the landed `H33 -> R39 -> H34` chain closes the current
   same-substrate question without authorizing automatic further runtime
   execution.
+- [x] Record that the completed `F10 -> P22` planning wave must sit upstream
+  of any later frontier-plan draft.
 - [x] Record non-goals and forbidden wording for any widened follow-up.
 - [x] Specify the minimum evidence bundle required before a widened probe can
   even be planned.

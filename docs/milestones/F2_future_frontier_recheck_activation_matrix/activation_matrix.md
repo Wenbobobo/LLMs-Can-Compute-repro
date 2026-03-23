@@ -12,10 +12,11 @@ the preserved same-endpoint control stack.
 | Origin-core evidence chain is coherent | satisfied | keep satisfied | `H28`, `H29`, `R36`, `R37`, `H30`, `H31`, `R38`, and `H32` now describe one narrow append-only / exact-retrieval / small-VM story rather than a broad compiler claim |
 | The current compiled-boundary line is explicitly delimited | satisfied | keep satisfied | `H30/H31/R38/H32` name one admitted extension row, one boundary probe, the same opcode surface, and the standing no-widening rule |
 | A concrete post-`H32` substrate gap is isolated | satisfied | keep satisfied through `H33`, `R39`, and the `H34_post_r39_later_explicit_scope_decision_packet` freeze interpretation | `H33` now isolates one narrow same-substrate question instead of letting post-`H32` work drift into broad compiled momentum |
+| The richer value-family delta is explicit | satisfied through completed `F10` | keep satisfied | any future frontier review now has to name what extra semantic/value family it thinks matters instead of jumping straight from `H34` to broader rhetoric |
 | Compiler/runtime boundary remains claim-relevant | satisfied | keep satisfied | the current materials still identify "compiler does all the work" and "accelerating only the easy part" as the main unresolved scientific risks after `H32` |
 | Broader compiled or new-substrate work is explicitly reauthorized | not satisfied | a later explicit packet would need to replace the standing `H32` no-widening state with one named new question | `H32` ends at `new_plan_required_before_any_further_compiled_boundary_or_scope_lift` |
 | Systems or frontier story changes materially | not satisfied | a later packet would need to move beyond the current narrow Origin-core result in a coherent way | the project still does not have a materially positive broad systems or general-computer story |
-| The active downstream order is exhausted or explicitly superseded | satisfied | a future explicit contradiction-driven packet would still need to land before any widened plan draft | `R39_origin_compiler_control_surface_dependency_audit` has now run and been interpreted by `H34_post_r39_later_explicit_scope_decision_packet`, so `F2` must stay downstream of `H33/R39/H34` and must not be used to backdoor a new runtime lane |
+| The active downstream order is exhausted or explicitly superseded | satisfied | a future explicit contradiction-driven packet would still need to land before any widened plan draft | `R39_origin_compiler_control_surface_dependency_audit` has now run and been interpreted by `H34_post_r39_later_explicit_scope_decision_packet`, and `F10/P22` now sharpen the planning-only bridge state, so `F2` must stay downstream of `H33/R39/H34/F10/P22` and must not be used to backdoor a new runtime lane |
 
 ## Non-goals
 
@@ -57,6 +58,9 @@ Any later frontier-plan draft should require, at minimum:
    `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`,
    `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`,
    `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`,
+   `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`,
+   `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`,
+   `docs/milestones/P22_post_f10_planning_surface_sync/`,
    `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/`,
    and `docs/milestones/F3_post_h23_scope_lift_decision_bundle/decision_gate.md`;
 4. the standing no-widening controls
@@ -75,6 +79,8 @@ still be narrower than a new frontend or a new general compiled family:
   sweep;
 - one contradiction-driven packet that reopens the line explicitly rather than
   treating `H34` as provisional by default;
+- one explicit richer value family plus comparator set that already satisfies
+  the completed `F10` matrix rules rather than bypassing them;
 - one small comparator set tied back to the current admitted row and boundary
   probe rather than a new endpoint family;
 - one fixed success/failure criterion decided before execution;

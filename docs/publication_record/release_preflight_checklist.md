@@ -22,10 +22,12 @@ current freeze candidate is assembled.
   `F6_post_p20_future_option_matrix` remain aligned with the same no-reopen
   interpretation and do not imply a new runtime lane.
 - [ ] `F7_post_h34_reopen_trigger_specification_bundle`,
-  `F8_post_h34_beyond_origin_bridge_roadmap`, and
-  `P21_post_h34_planning_surface_sync` remain aligned with that same
-  planning-only no-reopen interpretation and do not imply `H35`, `R40`, or a
-  broadened runtime family.
+  `F8_post_h34_beyond_origin_bridge_roadmap`,
+  `F10_post_h34_executor_value_comparator_matrix`, and
+  `P22_post_f10_planning_surface_sync` remain aligned with that same
+  planning-only no-reopen interpretation, while `F9` stays blocked and `F11`
+  stays new-substrate, and none of them imply `H35`, `R40`, or a broadened
+  runtime family.
 
 ## Paper-facing ledgers
 
@@ -35,8 +37,8 @@ current freeze candidate is assembled.
   `freeze_candidate_criteria.md`, `main_text_order.md`, and
   `appendix_companion_scope.md` remain synchronized.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  completed `P20/F5/F6` closeout plus the landed `F7/F8/P21` planning wave
-  without widening wording.
+  completed `P20/F5/F6` closeout plus the preserved `F7/F8/P21` wave and the
+  current `F10/P22` planning wave without widening wording.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
 ## Machine-audited guards

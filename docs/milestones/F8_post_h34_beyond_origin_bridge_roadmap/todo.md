@@ -7,6 +7,8 @@
   surfaces without widening claims.
 - [x] Draft one future-family matrix covering the immediate beyond-Origin
   families.
+- [x] Refresh the ladder and family matrix so `F10` becomes the current
+  near-term bridge surface instead of inactive storage.
 - [ ] Revisit the family ordering only if a later explicit packet changes the
   `H34` no-reopen state.
 - [ ] Link any future family to a concrete authorization packet before treating

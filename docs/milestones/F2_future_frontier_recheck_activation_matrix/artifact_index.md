@@ -1,8 +1,11 @@
 # Artifact Index
 
 - `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
+- `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md`
+- `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`
+- `docs/milestones/P22_post_f10_planning_surface_sync/`
 - `docs/milestones/H34_post_r39_later_explicit_scope_decision_packet/`
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`

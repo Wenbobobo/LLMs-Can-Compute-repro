@@ -34,15 +34,17 @@ Current scientific/control stack:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
 - future frontier review:
-  `F2_future_frontier_recheck_activation_matrix` remains planning-only.
+  `F2_future_frontier_recheck_activation_matrix` remains planning-only and
+  downstream of `H33/R39/H34/F10/P22`.
 
 Immediate active wave:
 
 Origin-core refreeze remains active while `H34` holds the docs-only control
 surface, `R39` sits as completed downstream evidence, `P20/F5/F6` preserve the
-landed no-reopen closeout state, `F7` and `F8` now serve as the current
-planning-only follow-on surfaces, `P21` records the control-surface sync, and
-there is still no active downstream runtime lane
+landed no-reopen closeout state, `F7` and `F8` remain preserved planning-only
+support surfaces, `F10` now serves as the current planning-only bridge surface,
+`P22` records the control-surface sync, `F9` remains blocked, `F11` remains
+new-substrate, and there is still no active downstream runtime lane
 
 ## Current Facts
 
@@ -80,9 +82,13 @@ there is still no active downstream runtime lane
   one explicit contradiction packet rather than hand-wavy dissatisfaction.
 - `F8` now stores beyond-Origin milestone families without relabeling them as
   current authorization.
-- `F9`, `F10`, and `F11` are now preserved as inactive roadmap storage only.
-- `P21` now synchronizes the current driver and wave plan to that
-  planning-only interpretation.
+- `F10` now makes richer executor-visible value and comparator obligations
+  explicit without authorizing a runtime lane.
+- `F9` remains blocked roadmap storage downstream of `F10`.
+- `F11` remains new-substrate roadmap storage downstream of `F10`.
+- `P21` remains the preserved first post-`H34` control-surface sync.
+- `P22` now synchronizes the current driver and wave plan to the
+  `F10`-led planning-only interpretation.
 - `R29`, `F3`, and frontier/demo widening remain blocked.
 
 ## Immediate Objectives
@@ -112,11 +118,14 @@ there is still no active downstream runtime lane
     mechanical contradiction/reopen specification surface under `H34`.
 12. Preserve `F8_post_h34_beyond_origin_bridge_roadmap` as the planning-only
     beyond-Origin storage surface.
-13. Keep `F9/F10/F11` inactive as future roadmap storage only.
-14. Preserve `P21_post_h34_planning_surface_sync` as the docs-only control
-    sync for the current planning wave.
-15. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
-    downstream of `H33/R39`.
+13. Preserve `F10_post_h34_executor_value_comparator_matrix` as the current
+    planning-only bridge surface for richer executor-visible value obligations.
+14. Keep `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` blocked and
+    keep `F11_post_h34_hybrid_planner_executor_bridge_roadmap` new-substrate.
+15. Preserve `P21_post_h34_planning_surface_sync` as the prior docs-only
+    control sync and `P22_post_f10_planning_surface_sync` as the current one.
+16. Keep `F2_future_frontier_recheck_activation_matrix` planning-only and
+    downstream of `H33/R39/H34/F10/P22`.
 
 ## Last Completed Order
 
@@ -165,7 +174,9 @@ no active downstream runtime lane
 - `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`
 - `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/`
 - `docs/milestones/P21_post_h34_planning_surface_sync/`
+- `docs/milestones/P22_post_f10_planning_surface_sync/`
 - `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
+- `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 - `docs/plans/2026-03-23-post-p20-f6-future-option-design.md`
 - `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md`
 - `docs/plans/2026-03-22-post-h30-explicit-next-wave-design.md`
@@ -190,9 +201,9 @@ no active downstream runtime lane
 - do not reopen `R29` or `F3` by wording alone;
 - do not relabel one richer compiled control family as arbitrary-language
   support;
-- do not treat `F7`, `F8`, or the inactive `F9/F10/F11` roadmap storage as
-  authorization for `H35`, `R40`, restricted Wasm execution, value-comparator
-  execution, or hybrid planner/executor runtime work;
+- do not treat `F7`, `F8`, `F10`, or the non-active `F9/F11` roadmap storage
+  as authorization for `H35`, `R40`, restricted Wasm execution,
+  value-comparator execution, or hybrid planner/executor runtime work;
 - do not skip the saved post-`H30` / `H31` / `R38` plan, the saved
   post-`H32` plan, or the landed `R39` audit when evaluating any later
   broader lane;

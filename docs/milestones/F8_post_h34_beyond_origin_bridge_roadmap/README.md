@@ -17,3 +17,5 @@ Current conclusion:
 
 - `current_origin_core_line_supported_narrowly`
 - `beyond_origin_bridge_families_indexed_planning_only`
+- `f10_is_the_current_near_term_bridge_surface`
+- `f9_remains_blocked_and_f11_remains_new_substrate`

@@ -8,6 +8,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — the preserved
+  design surface for the current `F10`-led planning-only bridge wave after the
+  first `F7/F8/P21` post-`H34` handoff.
 - `2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — the preserved
   design surface for the first planning-only follow-on wave after the landed
   `P20/F5/F6` no-reopen closeout.
@@ -52,8 +55,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — preserved design
+  surface for the current `F10`-led planning-only bridge wave.
 - `2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — preserved design
-  surface for the current post-`H34` planning-only follow-on wave.
+  surface for the first post-`H34` planning-only follow-on wave.
 - `2026-03-23-post-p20-f6-future-option-design.md` — preserved design
   surface for the post-`P20/F5` future-option matrix.
 - `2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — preserved handoff

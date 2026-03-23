@@ -60,8 +60,11 @@ planning bundles. Read the current driver first, not the directory name alone.
   and helper-doc resync so the paper-facing bundle now terminates on
   `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34`.
 - `P21_post_h34_planning_surface_sync/` — completed docs-only planning-surface
-  sync that records `F7/F8` as the current admissible follow-on surfaces while
+  sync that recorded `F7/F8` as the first admissible follow-on surfaces while
   keeping runtime inactive.
+- `P22_post_f10_planning_surface_sync/` — completed docs-only planning-surface
+  sync that records `F10` as the current planning-only bridge surface while
+  keeping `F9` blocked, `F11` new-substrate, and runtime inactive.
 
 ## Current Planning-Only Follow-ons
 
@@ -71,12 +74,15 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F8_post_h34_beyond_origin_bridge_roadmap/` — planning-only bundle that maps
   the broader Origin-facing scientific vision into saved future milestone
   families without authorizing them now.
+- `F10_post_h34_executor_value_comparator_matrix/` — planning-only bridge
+  bundle that makes richer executor-visible value and comparator obligations
+  explicit without authorizing runtime widening.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — inactive roadmap
-  storage for a later restricted-Wasm semantic-boundary family.
-- `F10_post_h34_executor_value_comparator_matrix/` — inactive roadmap storage
-  for later executor-vs-external-runtime value comparison work.
+  storage for a later restricted-Wasm semantic-boundary family that remains
+  blocked even after `F10`.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap/` — inactive roadmap
-  storage for a later planner-plus-executor interface family.
+  storage for a later planner-plus-executor interface family that still
+  requires a new substrate.
 
 ## Conditional Future Lanes
 
@@ -117,7 +123,12 @@ planning bundles. Read the current driver first, not the directory name alone.
   contradiction/reopen specification surface under `H34`.
 - `F8_post_h34_beyond_origin_bridge_roadmap/` — planning-only beyond-Origin
   roadmap surface under `H34`.
-- `F9/F10/F11` — inactive future-roadmap storage under `F8`, not active waves.
+- `F10_post_h34_executor_value_comparator_matrix/` — current planning-only
+  bridge surface under `H34`.
+- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — blocked roadmap
+  storage downstream of `F10`.
+- `F11_post_h34_hybrid_planner_executor_bridge_roadmap/` — new-substrate
+  roadmap storage downstream of `F10`.
 
 ## Current Rule
 
@@ -132,8 +143,11 @@ stack:
 - `H29` and `H28` are preserved upstream refreeze/pivot evidence.
 - `R34`, `R35`, `R36`, `R37`, and `R38` stay frozen as upstream support.
 - `R39` is complete as a downstream audit, not an active routing change.
-- `F7` and `F8` are planning-only follow-on surfaces, not runtime packets.
-- `F9`, `F10`, and `F11` are inactive roadmap storage only.
+- `F7` and `F8` are preserved planning-only follow-on surfaces, not runtime
+  packets.
+- `F10` is the current planning-only bridge surface, not a runtime packet.
+- `F9` remains blocked roadmap storage and `F11` remains new-substrate roadmap
+  storage.
 - no active downstream runtime lane exists after `H34`.
 - one richer compiled control family still does not authorize broader compiler
   or demo scope lift.

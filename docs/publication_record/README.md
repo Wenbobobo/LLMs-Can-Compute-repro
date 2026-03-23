@@ -83,14 +83,24 @@ Current control docs:
 - `docs/milestones/F8_post_h34_beyond_origin_bridge_roadmap/` — the completed
   planning-only beyond-Origin roadmap that stores future milestone families
   without activating them;
-- `docs/milestones/F9_post_h34_restricted_wasm_semantic_boundary_roadmap/`,
-  `docs/milestones/F10_post_h34_executor_value_comparator_matrix/`, and
-  `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/` —
-  inactive roadmap storage only, not active waves or runtime authorization;
-- `docs/milestones/P21_post_h34_planning_surface_sync/` — the completed
-  docs-only control-surface sync for the current post-`H34` planning wave;
+- `docs/milestones/F10_post_h34_executor_value_comparator_matrix/` — the
+  completed planning-only bridge bundle that makes richer executor-visible
+  value/comparator obligations explicit without authorizing runtime widening;
+- `docs/milestones/F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` —
+  blocked roadmap storage downstream of `F10`, not active runtime
+  authorization;
+- `docs/milestones/F11_post_h34_hybrid_planner_executor_bridge_roadmap/` —
+  new-substrate roadmap storage downstream of `F10`, not active runtime
+  authorization;
+- `docs/milestones/P21_post_h34_planning_surface_sync/` — the completed prior
+  docs-only control-surface sync for the first post-`H34` planning wave;
+- `docs/milestones/P22_post_f10_planning_surface_sync/` — the completed
+  docs-only control-surface sync for the current `F10`-led planning wave;
+- `docs/plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md` — the
+  preserved design surface for the current `F10`-led planning-only bridge
+  wave;
 - `docs/plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — the
-  preserved design surface for that first planning-only follow-on wave;
+  preserved design surface for the first planning-only follow-on wave;
 - `docs/plans/2026-03-23-post-p20-f6-future-option-design.md` — the
   preserved design surface for that post-`P20/F5` option matrix;
 - `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md` — the
