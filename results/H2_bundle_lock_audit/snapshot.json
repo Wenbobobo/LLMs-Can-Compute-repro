@@ -2,11 +2,11 @@
   "experiment": "h2_bundle_lock_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -36,13 +36,14 @@
         "`promotion_mode = explicit_merge_wave` and `merge_executed = false`.",
         "`wip/p27-promotion-merge`, keeps `merge_executed = false`, and preserves",
         "`R41` deferred, and keeps `merge_executed = false`.",
-        "- `H43_post_r44_useful_case_refreeze` is now complete as the current active"
+        "- `H43_post_r44_useful_case_refreeze` is now complete as the current active",
+        "`H43_post_r44_useful_case_refreeze` under"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `docs/milestones/P29_post_h43_release_audit_refresh/` \u2014 the current",
+        "- `docs/milestones/P29_post_h43_release_audit_refresh/` \u2014 the completed prior",
         "- `results/P29_post_h43_release_audit_refresh/summary.json` \u2014"
       ]
     },
@@ -67,7 +68,7 @@
     {
       "path": "docs/publication_record/paper_bundle_status.md",
       "matched_lines": [
-        "`P28` aligns publication-facing ledgers to landed `H43`, `F7` preserves a"
+        "`P28` aligns publication-facing ledgers to landed `H43`, `P29` aligns release"
       ]
     },
     {

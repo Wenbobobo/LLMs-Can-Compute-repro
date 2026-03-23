@@ -60,5 +60,5 @@ def test_build_summary_reports_current_polish_phase() -> None:
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the outward-facing H43 publication surface aligned while treating P29 as the current release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, H36 as the preserved routing/refreeze packet, R42/R43/R44/R45 as the completed current gate stack, and no_active_downstream_runtime_lane as the current follow-on state"
+        "keep the outward-facing H43 publication surface aligned while treating P30 as the current low-priority manuscript-surface refresh wave, P29 as the completed prior release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, H36 as the preserved routing/refreeze packet, R42/R43/R44/R45 as the completed current gate stack, and no_active_downstream_runtime_lane as the current follow-on state"
     )

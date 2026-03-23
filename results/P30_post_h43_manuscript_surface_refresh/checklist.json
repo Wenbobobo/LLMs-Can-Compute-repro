@@ -1,0 +1,43 @@
+{
+  "experiment": "p30_post_h43_manuscript_surface_refresh_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "p30_packet_docs_define_low_priority_manuscript_surface_refresh_without_scientific_widening",
+      "status": "pass",
+      "notes": "P30 should remain a docs-only operational manuscript refresh packet, not a new scientific stage."
+    },
+    {
+      "item_id": "refreshed_manuscript_surfaces_present_h43_as_current_endpoint",
+      "status": "pass",
+      "notes": "Paper-facing prose should treat H43 as the current manuscript endpoint and H32/H34 as preserved earlier support only."
+    },
+    {
+      "item_id": "index_and_handoff_surfaces_record_p30_as_current_low_priority_wave",
+      "status": "pass",
+      "notes": "Indexes and handoff docs should record P30 as the current low-priority wave downstream of H43."
+    },
+    {
+      "item_id": "upstream_h43_p28_and_p29_packets_remain_preserved",
+      "status": "pass",
+      "notes": "P30 should stay strictly downstream of the landed H43, P28, and P29 packets."
+    }
+  ]
+}

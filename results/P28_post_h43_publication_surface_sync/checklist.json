@@ -16,9 +16,9 @@
       "notes": "The paper-facing ledgers should agree that H43 is current and that no further runtime lane is active."
     },
     {
-      "item_id": "release_review_submission_indexes_and_wave_handoff_record_p28_while_preserving_h43_current",
+      "item_id": "release_review_submission_indexes_and_wave_handoff_preserve_p28_under_p30_current_state",
       "status": "pass",
-      "notes": "Release/review/submission helpers and active-wave handoff should reflect P28 while preserving H43 as the current scientific stage."
+      "notes": "Release/review/submission helpers should preserve P28 as completed prior publication sync under current P30/P29 state."
     }
   ]
 }

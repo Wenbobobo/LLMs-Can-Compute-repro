@@ -38,9 +38,14 @@ planning bundles. Read the current driver first, not the directory name alone.
   contract family.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational explicit merge packet for the clean post-`H41` stack.
-- `P29_post_h43_release_audit_refresh/` — current low-priority operational
-  release/public audit refresh packet updating stale downstream audits and the
-  last contradictory release-facing ledgers without changing scientific stage.
+- `P30_post_h43_manuscript_surface_refresh/` — current low-priority
+  operational manuscript-surface refresh packet updating stale paper-facing
+  prose baselines and derivative helper docs without changing scientific
+  stage.
+- `P29_post_h43_release_audit_refresh/` — completed prior low-priority
+  operational release/public audit refresh packet updating stale downstream
+  audits and the last contradictory release-facing ledgers without changing
+  scientific stage.
 - `P28_post_h43_publication_surface_sync/` — completed prior low-priority
   operational publication/control sync packet aligning paper-facing ledgers to
   the landed `H43` state without changing scientific stage.
@@ -151,7 +156,10 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational merge packet that stages explicit merge posture without merging
   `main`.
-- `P29_post_h43_release_audit_refresh/` — current low-priority operational
+- `P30_post_h43_manuscript_surface_refresh/` — current low-priority
+  operational manuscript-surface refresh packet that keeps `H43` current while
+  refreshing stale paper-facing prose baselines and derivative helper docs.
+- `P29_post_h43_release_audit_refresh/` — completed prior operational
   release/public audit refresh packet that keeps `H43` current while
   refreshing stale downstream audits and release ledgers.
 - `P28_post_h43_publication_surface_sync/` — completed operational

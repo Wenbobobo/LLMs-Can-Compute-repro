@@ -165,7 +165,11 @@ Current control docs:
 - `docs/milestones/H43_post_r44_useful_case_refreeze/` — the current active
   docs-only useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
-- `docs/milestones/P29_post_h43_release_audit_refresh/` — the current
+- `docs/milestones/P30_post_h43_manuscript_surface_refresh/` — the current
+  low-priority operational manuscript-surface refresh packet that updates
+  stale paper-facing prose baselines and derivative helper docs while keeping
+  `H43` current;
+- `docs/milestones/P29_post_h43_release_audit_refresh/` — the completed prior
   low-priority operational release/public audit refresh packet that updates
   stale downstream audits and the last contradictory release-facing ledgers
   while keeping `H43` current;
@@ -332,9 +336,12 @@ Current control docs:
   machine-readable current docs-only useful-case refreeze packet recording
   claim `D` as `supported_here_narrowly` and restoring
   `no_active_downstream_runtime_lane`;
-- `results/P29_post_h43_release_audit_refresh/summary.json` —
-  machine-readable current low-priority release/public audit refresh packet
+- `results/P30_post_h43_manuscript_surface_refresh/summary.json` —
+  machine-readable current low-priority manuscript-surface refresh packet
   downstream of landed `H43`;
+- `results/P29_post_h43_release_audit_refresh/summary.json` —
+  machine-readable completed prior low-priority release/public audit refresh
+  packet downstream of landed `H43`;
 - `results/P28_post_h43_publication_surface_sync/summary.json` —
   machine-readable completed prior low-priority publication/control sync
   packet downstream of landed `H43`;

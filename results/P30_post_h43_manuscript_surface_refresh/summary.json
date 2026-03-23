@@ -1,5 +1,5 @@
 {
-  "experiment": "p29_post_h43_release_audit_refresh",
+  "experiment": "p30_post_h43_manuscript_surface_refresh",
   "environment": {
     "python": {
       "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
@@ -20,13 +20,13 @@
   },
   "summary": {
     "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
-    "refresh_packet": "p29_post_h43_release_audit_refresh",
-    "refresh_scope": "release_public_audits_and_ledgers",
-    "selected_outcome": "release_audit_surfaces_refreshed_to_h43",
-    "refreshed_audit_count": 5,
+    "refresh_packet": "p30_post_h43_manuscript_surface_refresh",
+    "refresh_scope": "manuscript_and_derivative_surfaces",
+    "selected_outcome": "manuscript_surfaces_refreshed_to_h43",
+    "refreshed_surface_count": 8,
     "next_required_lane": "no_active_downstream_runtime_lane",
-    "check_count": 5,
-    "pass_count": 5,
+    "check_count": 4,
+    "pass_count": 4,
     "blocked_count": 0,
     "blocked_items": []
   }

@@ -2,11 +2,11 @@
   "experiment": "p5_public_surface_sync_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -35,9 +35,9 @@
       "notes": "STATUS should record the current H43 stack and explicit merge posture."
     },
     {
-      "item_id": "publication_record_readme_tracks_h43_and_p29",
+      "item_id": "publication_record_readme_tracks_h43_and_current_p30_state",
       "status": "pass",
-      "notes": "Publication record README should expose H43 as current and P29 as the current downstream audit refresh packet."
+      "notes": "Publication record README should expose H43 as current, P30 as the current manuscript-surface wave, and P29/P28 as completed prior sync packets."
     },
     {
       "item_id": "release_summary_stays_downstream_of_landed_h43_stack",

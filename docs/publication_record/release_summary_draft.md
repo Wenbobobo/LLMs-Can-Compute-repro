@@ -170,23 +170,25 @@ bounded-memory exact gate, `R45` lands the coequal model gate, `H42`
 authorizes exact `R44`, `R44` lands the fixed useful-case ladder, and `H43`
 refreezes that result as bounded useful-case support only. The later
 paper-facing and planning-only closeout lanes now also align to that reading:
-`P20` rewrites the manuscript bundle to terminate on the landed `H34` state,
-`F5` concludes `no_reopen_candidate_survives`, `F6` records docs/planning
-maintenance as the admissible default rather than a new runtime wave, `F7`
-makes future same-substrate reopen criteria mechanical, `F8` stores
-beyond-Origin milestone families without activating them, `F10` makes richer
-executor-visible value/comparator obligations explicit without authorizing
-runtime widening, `F12` remains the preserved earlier origin-facing claim
-delta reanchor, `F13` fixes `bounded scalar locals and flags` as the bounded
-same-substrate family-first preactivation surface, `F14` stores a conditional
+`P20` remains the preserved earlier manuscript bundle resync that terminated on
+the landed `H34` state at that stage, `P30` now refreshes the
+manuscript-facing bundle to the landed `H43` state, `F5` concludes
+`no_reopen_candidate_survives`, `F6` records docs/planning maintenance as the
+admissible default rather than a new runtime wave, `F7` makes future
+same-substrate reopen criteria mechanical, `F8` stores beyond-Origin milestone
+families without activating them, `F10` makes richer executor-visible
+value/comparator obligations explicit without authorizing runtime widening,
+`F12` remains the preserved earlier origin-facing claim delta reanchor, `F13`
+fixes `bounded scalar locals and flags` as the bounded same-substrate
+family-first preactivation surface, `F14` stores a conditional
 reopen-readiness blueprint, `F15` reanchors the origin-facing claim delta to
 the current control state, `P28` aligns publication-facing ledgers to landed
-`H43`, `F9` remains blocked, `F11` remains new-substrate, `P21` and `P22`
-remain preserved prior planning syncs, `P23/P24/P25` preserve the earlier
-driver and handoff surfaces, `P26/P27` preserve the audit-plus-explicit-merge
-operational posture, `R41` remains deferred behind a later explicit
-contradiction packet, and no active downstream runtime lane exists after
-`H43`.
+`H43`, `P29` aligns release/public audit surfaces to landed `H43`, `F9`
+remains blocked, `F11` remains new-substrate, `P21` and `P22` remain
+preserved prior planning syncs, `P23/P24/P25` preserve the earlier driver and
+handoff surfaces, `P26/P27` preserve the audit-plus-explicit-merge operational
+posture, `R41` remains deferred behind a later explicit contradiction packet,
+and no active downstream runtime lane exists after `H43`.
 
 ## Reproducibility pointers
 

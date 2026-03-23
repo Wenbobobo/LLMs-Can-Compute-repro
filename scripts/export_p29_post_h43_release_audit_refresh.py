@@ -208,20 +208,21 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "Release-facing ledgers should no longer describe H40 or H32/H34 as current control.",
         },
         {
-            "item_id": "index_and_handoff_surfaces_record_p29_as_current_low_priority_wave",
+            "item_id": "index_and_handoff_surfaces_preserve_p29_as_completed_prior_wave_under_p30_current_state",
             "status": "pass"
             if contains_all(
                 inputs["publication_readme_text"],
                 [
-                    "2026-03-24-post-h43-p29-release-audit-refresh-design.md",
+                    "docs/milestones/p30_post_h43_manuscript_surface_refresh/",
                     "docs/milestones/p29_post_h43_release_audit_refresh/",
+                    "results/p30_post_h43_manuscript_surface_refresh/summary.json",
                     "results/p29_post_h43_release_audit_refresh/summary.json",
                 ],
             )
             and contains_all(
                 inputs["plans_index_text"],
                 [
-                    "2026-03-24-post-h43-p29-release-audit-refresh-design.md",
+                    "../milestones/p30_post_h43_manuscript_surface_refresh/",
                     "../milestones/p29_post_h43_release_audit_refresh/",
                     "../milestones/p28_post_h43_publication_surface_sync/",
                 ],
@@ -229,6 +230,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["milestones_index_text"],
                 [
+                    "p30_post_h43_manuscript_surface_refresh/",
                     "p29_post_h43_release_audit_refresh/",
                     "p28_post_h43_publication_surface_sync/",
                 ],
@@ -236,14 +238,14 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["active_wave_plan_text"],
                 [
-                    "`p29_post_h43_release_audit_refresh` is the current low-priority",
-                    "`p29` is the current low-priority release/public audit refresh wave",
-                    "`p28` is the completed prior publication/control sync wave",
-                    "wip/p29-h43-release-audit-refresh",
+                    "`p30_post_h43_manuscript_surface_refresh` is the current low-priority",
+                    "`p29` is the completed prior release/public audit refresh wave",
+                    "`p28` is the completed earlier publication/control sync wave",
+                    "wip/p30-h43-manuscript-refresh",
                 ],
             )
             else "blocked",
-            "notes": "Publication/index/handoff surfaces should all record P29 as the current low-priority operational wave.",
+            "notes": "Publication/index/handoff surfaces should preserve P29 as the completed prior release-audit wave under current P30 state.",
         },
         {
             "item_id": "upstream_h43_and_p28_results_remain_preserved",
@@ -274,19 +276,27 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         ),
         "docs/publication_record/README.md": (
             "publication_readme_text",
-            ["docs/milestones/P29_post_h43_release_audit_refresh/", "results/P29_post_h43_release_audit_refresh/summary.json"],
+            [
+                "docs/milestones/P30_post_h43_manuscript_surface_refresh/",
+                "docs/milestones/P29_post_h43_release_audit_refresh/",
+                "results/P29_post_h43_release_audit_refresh/summary.json",
+            ],
         ),
         "docs/plans/README.md": (
             "plans_index_text",
-            ["2026-03-24-post-h43-p29-release-audit-refresh-design.md", "../milestones/P29_post_h43_release_audit_refresh/"],
+            ["../milestones/P30_post_h43_manuscript_surface_refresh/", "../milestones/P29_post_h43_release_audit_refresh/"],
         ),
         "docs/milestones/README.md": (
             "milestones_index_text",
-            ["P29_post_h43_release_audit_refresh/", "P28_post_h43_publication_surface_sync/"],
+            ["P30_post_h43_manuscript_surface_refresh/", "P29_post_h43_release_audit_refresh/", "P28_post_h43_publication_surface_sync/"],
         ),
         "tmp/active_wave_plan.md": (
             "active_wave_plan_text",
-            ["`P29_post_h43_release_audit_refresh` is the current low-priority", "wip/p29-h43-release-audit-refresh"],
+            [
+                "`P30_post_h43_manuscript_surface_refresh` is the current low-priority",
+                "`P29` is the completed prior release/public audit refresh wave",
+                "wip/p30-h43-manuscript-refresh",
+            ],
         ),
         "results/release_worktree_hygiene_snapshot/summary.json": (
             "hygiene_summary_text",

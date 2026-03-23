@@ -2,11 +2,11 @@
   "experiment": "p29_post_h43_release_audit_refresh_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -43,30 +43,34 @@
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `docs/milestones/P29_post_h43_release_audit_refresh/` \u2014 the current",
+        "- `docs/milestones/P30_post_h43_manuscript_surface_refresh/` \u2014 the current",
+        "- `docs/milestones/P29_post_h43_release_audit_refresh/` \u2014 the completed prior",
         "- `results/P29_post_h43_release_audit_refresh/summary.json` \u2014"
       ]
     },
     {
       "path": "docs/plans/README.md",
       "matched_lines": [
-        "- `2026-03-24-post-h43-p29-release-audit-refresh-design.md` \u2014 the current",
-        "- `../milestones/P29_post_h43_release_audit_refresh/` \u2014 current low-priority"
+        "- `../milestones/P30_post_h43_manuscript_surface_refresh/` \u2014 current",
+        "- `../milestones/P29_post_h43_release_audit_refresh/` \u2014 completed prior"
       ]
     },
     {
       "path": "docs/milestones/README.md",
       "matched_lines": [
-        "- `P29_post_h43_release_audit_refresh/` \u2014 current low-priority operational",
+        "- `P30_post_h43_manuscript_surface_refresh/` \u2014 current low-priority",
+        "- `P29_post_h43_release_audit_refresh/` \u2014 completed prior low-priority",
         "- `P28_post_h43_publication_surface_sync/` \u2014 completed prior low-priority",
+        "- `P29_post_h43_release_audit_refresh/` \u2014 completed prior operational",
         "- `P28_post_h43_publication_surface_sync/` \u2014 completed operational"
       ]
     },
     {
       "path": "tmp/active_wave_plan.md",
       "matched_lines": [
-        "`P29_post_h43_release_audit_refresh` is the current low-priority",
-        "- `wip/p29-h43-release-audit-refresh` is the clean post-`H43`"
+        "`P30_post_h43_manuscript_surface_refresh` is the current low-priority",
+        "- `wip/p30-h43-manuscript-refresh` is the clean post-`H43`",
+        "- `P29` is the completed prior release/public audit refresh wave."
       ]
     },
     {

@@ -94,8 +94,10 @@
   support and requires a new contradiction- or sharper-gap-driven packet
   before any future same-substrate reopen.
 - `P20_post_h34_manuscript_narrative_resync` is now complete:
-  the paper-facing manuscript bundle and immediate helper docs now terminate on
-  the landed `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` chain.
+  it is the preserved earlier manuscript/helper-doc resync that made the
+  paper-facing bundle terminate on the landed
+  `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` chain at that stage,
+  before the later `H43/P30` manuscript-surface refresh.
 - `F5_post_h34_contradiction_scout_matrix` is now complete:
   it preserves the current no-reopen interpretation and concludes
   `no_reopen_candidate_survives` under the present evidence bundle.
@@ -443,14 +445,18 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H36_post_r40_bounded_scalar_family_refreeze` under
+  `H43_post_r44_useful_case_refreeze` under
   `docs/publication_record/current_stage_driver.md`, with
-  `H28/R34/R35/H29/R36/R37/H30/H31/R38/H32/H33/H34/H35/R40` preserved as the
-  upstream Origin-core chain, `P24` preserved as the current docs-only sync
-  packet, the deferred `R41` design preserved as a future threat-stress lane
-  only, `H27` preserved as the negative closeout of the old same-endpoint
-  route, the completed `H24/R30/R31/H25` packet preserved as the prior
-  same-endpoint decision/refreeze layer, the completed
+  preserved prior docs-only packets `H42/H41/H40/H38/H37`, preserved active
+  routing/refreeze packet `H36_post_r40_bounded_scalar_family_refreeze`,
+  completed current `R42/R43/R44/R45` semantic-boundary gate stack, current
+  coequal-mainline model bundle `F20`, completed explicit merge packet `P27`,
+  completed prior low-priority sync packets `P28/P29`, current low-priority
+  manuscript-surface refresh wave `P30`, preserved earlier Origin-core chain
+  `H28/R34/R35/H29/R36/R37/H30/H31/R38/H32/H33/H34/H35/R40`, deferred `R41`
+  as a future threat-stress lane only, `H27` preserved as the negative closeout
+  of the old same-endpoint route, the completed `H24/R30/R31/H25` packet
+  preserved as the prior same-endpoint decision/refreeze layer, the completed
   `H22/R26/R28/R27/H23` packet preserved as the earlier frozen same-endpoint
   scientific state, and `H13/V1` preserved as the governance/runtime handoff.
 - `H8/R6/R7/H9` remains the completed direct same-endpoint baseline
@@ -469,11 +475,13 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H36` remains the
-   current active packet, `H35` remains the preserved prior docs-only control
-   packet, `P24` remains the current docs-only sync packet, `R40` remains
-   completed downstream evidence rather than a routing change by itself, and
-   no active downstream runtime lane exists after `H36`.
+   `tmp/active_wave_plan.md` aligned on the rule that `H43` remains the
+   current active docs-only packet, `H42/H41` remain the preserved prior
+   docs-only packets, `H36` remains the preserved active routing/refreeze
+   packet beneath them, `P30` remains the current low-priority
+   manuscript-surface refresh wave, `P29/P28` remain the completed prior
+   operational sync waves, `R43/R44/R45` remain completed downstream evidence,
+   and no active downstream runtime lane exists after `H43`.
 2. Treat `P17_h30_commit_hygiene_and_clean_worktree_promotion` as completed on
    `wip/p17-h30-clean`, and treat
    `P18_post_h32_clean_worktree_promotion` as the completed clean-worktree
@@ -498,8 +506,9 @@
 5. Treat `R39_origin_compiler_control_surface_dependency_audit` and
    `R40_origin_bounded_scalar_locals_and_flags_gate` as completed
    same-substrate evidence rather than active routing changes; `H34` remains
-   preserved upstream interpretation context, `H36` is the active refreeze,
-   and no active downstream runtime lane exists after `H36`.
+   preserved upstream compiled-line interpretation context, `H36` remains the
+   preserved active routing/refreeze packet beneath the current `H43` stack,
+   and no active downstream runtime lane exists after `H43`.
 6. Keep `R29_d0_same_endpoint_systems_recovery_execution_gate`,
    `F3_post_h23_scope_lift_decision_bundle`, and
    `F2_future_frontier_recheck_activation_matrix` blocked until a later

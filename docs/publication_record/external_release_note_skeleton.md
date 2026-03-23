@@ -7,16 +7,18 @@ release wave, blog post, or broader public narrative.
 
 This repository reproduces a narrow execution-substrate claim rather than a
 broad “LLMs are computers” thesis. On the current validated scope, append-only
-execution traces, exact latest-write retrieval, and a tiny typed-bytecode `D0`
-compiled endpoint remain supported, while precision stays bounded, the systems
-gate stays mixed, and broader compiled or general-computation claims remain
-blocked.
+execution traces, exact latest-write retrieval, and a bounded restricted-Wasm /
+tiny-`C` useful-case ladder on the narrow Origin-core line remain supported,
+with the preserved first `D0` compiled boundary kept as historical support
+underneath. Precision stays bounded, the systems gate stays mixed, and broader
+compiled or general-computation claims remain blocked.
 
 ## Allowed callouts
 
 - append-only trace substrate
 - exact latest-write retrieval
-- tiny typed-bytecode `D0` boundary
+- bounded restricted-Wasm / tiny-`C` useful-case ladder
+- preserved first tiny typed-bytecode `D0` boundary
 - bounded precision with explicit failure counts
 - mixed systems result with explicit limitations
 

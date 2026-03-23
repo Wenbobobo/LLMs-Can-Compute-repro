@@ -1,9 +1,11 @@
 # Abstract and Contribution Pack
 
 Status: downstream-only derivative material. The current paper-shaped prose
-baseline in `manuscript_bundle_draft.md` now terminates on the landed
-`H32 -> H33 -> R39 -> H34` chain; this pack should compress that narrow bundle
-without redefining it.
+baseline in `manuscript_bundle_draft.md` now aligns to the landed
+`H35 -> R40 -> H36 -> H37 -> H38 -> H40 -> R42 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43`
+chain while preserving the earlier `H32/H34` compiled-boundary line as
+historical context; this pack should compress that narrow bundle without
+redefining it.
 
 ## Venue-agnostic abstract
 
@@ -12,9 +14,11 @@ can support computation, but freezes the result at a narrower and auditable
 endpoint. On the current validated scope, deterministic computation can be
 encoded as an append-only execution trace, exact latest-write retrieval can be
 implemented with structured 2D hard-max retrieval, and those primitives support
-one small exact executor plus a narrow same-substrate compiled line that begins
-with one tiny lowered subset and stops after one richer control/call-family
-extension plus one declared dependency audit. The positive result is therefore
+one small exact executor, one preserved first compiled same-substrate line that
+begins with one tiny lowered subset and stops after one richer control/call
+family plus one declared dependency audit, and one bounded semantic-boundary
+ladder that reaches a fixed restricted useful-case surface while keeping model
+evidence coequal and non-substitutive. The positive result is therefore
 mechanistic rather than sweeping. The precision
 story is bounded rather than broad: float32 single-head fails on `12/25`
 tracked real/organic trace streams, with `7/25` failing already at `1x`, while
@@ -23,23 +27,25 @@ validated suite. The systems story is mixed rather than triumphant: the current
 geometry benchmark retains a strong asymptotic retrieval advantage, but the
 lowered `exec_trace` path remains about `1.82x` slower than the best current
 reference/oracle path on preserved positive same-endpoint compiled suites. We
-therefore stop at the current narrow same-substrate compiled line and keep
-arbitrary `C`, broad “LLMs are computers” framing, frontend widening, and
+therefore stop at the current narrow Origin-core / semantic-boundary line and
+keep arbitrary `C`, broad “LLMs are computers” framing, frontend widening, and
 current-scope end-to-end systems-superiority claims explicitly unsupported.
 
 ## Short abstract
 
 We reproduce a narrow execution-substrate claim rather than a broad “LLMs are
 computers” thesis. On the current scope, append-only traces, exact 2D
-latest-write retrieval, and a narrow same-substrate compiled line remain
-supported, while precision stays bounded, the systems gate stays mixed, and
-broader compiled or general-computation claims remain blocked.
+latest-write retrieval, one preserved same-substrate compiled line, and a fixed
+restricted useful-case ladder remain supported, while precision stays bounded,
+the systems gate stays mixed, and broader compiled or general-computation
+claims remain blocked.
 
 ## Contribution summary
 
 1. Freeze the public field-note narrative into a paper-grade claim boundary:
-   append-only traces, exact retrieval, bounded precision, and a narrow
-   same-substrate compiled line rather than a broad language claim.
+   append-only traces, exact retrieval, bounded precision, a preserved first
+   same-substrate compiled line, and a fixed restricted useful-case ladder
+   rather than a broad language claim.
 2. Preserve the strongest positive mechanism result while keeping negative and
    mixed outcomes explicit rather than downstreaming them into future work.
 3. Separate mechanism value from system value: exact retrieval remains
@@ -55,4 +61,4 @@ broader compiled or general-computation claims remain blocked.
   `C`.
 - This pack does not relax the current blocked-blog rule.
 - Any stronger precision, systems, or compiled-boundary claim still requires a
-  named `E1` patch lane.
+  later explicit packet beyond the landed `H43` bundle.

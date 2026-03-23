@@ -134,7 +134,7 @@ def build_sync_checklist(
             "notes": "STATUS should record the current H43 stack and explicit merge posture.",
         },
         {
-            "item_id": "publication_record_readme_tracks_h43_and_p29",
+            "item_id": "publication_record_readme_tracks_h43_and_current_p30_state",
             "status": "pass"
             if contains_all(
                 publication_readme_text,
@@ -142,6 +142,8 @@ def build_sync_checklist(
                     "current `h43` docs-only useful-case refreeze packet",
                     "`r42`, `r43`, `r44`, and `r45`",
                     "`merge_executed = false`",
+                    "docs/milestones/p30_post_h43_manuscript_surface_refresh/",
+                    "results/p30_post_h43_manuscript_surface_refresh/summary.json",
                     "2026-03-24-post-h43-p29-release-audit-refresh-design.md",
                     "docs/milestones/p29_post_h43_release_audit_refresh/",
                     "results/p29_post_h43_release_audit_refresh/summary.json",
@@ -149,7 +151,7 @@ def build_sync_checklist(
                 ],
             )
             else "blocked",
-            "notes": "Publication record README should expose H43 as current and P29 as the current downstream audit refresh packet.",
+            "notes": "Publication record README should expose H43 as current, P30 as the current manuscript-surface wave, and P29/P28 as completed prior sync packets.",
         },
         {
             "item_id": "release_summary_stays_downstream_of_landed_h43_stack",
@@ -254,6 +256,8 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         {
             "path": "docs/publication_record/README.md",
             "needles": [
+                "docs/milestones/P30_post_h43_manuscript_surface_refresh/",
+                "results/P30_post_h43_manuscript_surface_refresh/summary.json",
                 "2026-03-24-post-h43-p29-release-audit-refresh-design.md",
                 "docs/milestones/P29_post_h43_release_audit_refresh/",
                 "results/P29_post_h43_release_audit_refresh/summary.json",
@@ -332,7 +336,7 @@ def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "keep the outward-facing H43 publication surface aligned while treating P29 as the current release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, H36 as the preserved routing/refreeze packet, R42/R43/R44/R45 as the completed current gate stack, and no_active_downstream_runtime_lane as the current follow-on state"
+            "keep the outward-facing H43 publication surface aligned while treating P30 as the current low-priority manuscript-surface refresh wave, P29 as the completed prior release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, H36 as the preserved routing/refreeze packet, R42/R43/R44/R45 as the completed current gate stack, and no_active_downstream_runtime_lane as the current follow-on state"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),
@@ -389,7 +393,7 @@ def main() -> None:
                 "",
                 "Machine-readable audit of whether the current public surface stays aligned with the",
                 "landed H43 stack, the current outward release summary, and the current low-priority",
-                "release/public audit refresh packet.",
+                "manuscript/publication follow-on packets.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

@@ -296,7 +296,11 @@ bundle under `results/P1_paper_readiness/`, which contains rendered figures,
 table sources, and machine-readable bundle summaries. Second, it records how to
 regenerate the public-safe result bundles that matter for the compiled
 boundary, paper assembly, and release gate, with the current control chain
-ending explicitly at `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34`.
+ending explicitly at
+`H35 -> R40 -> H36 -> H37 -> H38 -> H40 -> R42 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43`,
+while preserving
+`R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` as the earlier
+compiled-boundary subline beneath it.
 Third, it keeps companion diagnostics such as memory-surface views, per-stream
 precision catalogs, full staged failure digests, and the richer same-substrate
 compiled audit materials visible and inspectable without letting them mutate
@@ -306,10 +310,11 @@ Release-hygiene and packaging ledgers belong here for the same reason: they
 make the research engineering process reproducible and inspectable, but they
 remain downstream of the scientific argument itself. The appendix layout stays
 anchored in four companion bundles: the `P1` paper-ready artifact set, the
-current compiled-boundary companion diagnostics (`R37/R38/R39/H34` plus the
-paper-facing tables and diagrams), the release/readiness ledgers that keep the
-package regenerable, and one preserved historical-context bundle for older
-same-endpoint rows that still inform blocked claims. Those historical rows are
-included as archived context only. They are no longer reserved as the current
-paper-assembly horizon, and they do not imply an active downstream runtime lane
-after `H34`.
+current paper/control companion diagnostics (the preserved
+`R37/R38/R39/H34` compiled-boundary materials plus the landed
+`R42/R43/R44/R45/H43` semantic-boundary control stack), the release/readiness
+ledgers that keep the package regenerable, and one preserved
+historical-context bundle for older same-endpoint rows that still inform
+blocked claims. Those historical rows are included as archived context only.
+They are no longer reserved as the current paper-assembly horizon, and they do
+not imply an active downstream runtime lane after `H43`.

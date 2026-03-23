@@ -2,11 +2,11 @@
   "experiment": "p29_post_h43_release_audit_refresh_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -35,9 +35,9 @@
       "notes": "Release-facing ledgers should no longer describe H40 or H32/H34 as current control."
     },
     {
-      "item_id": "index_and_handoff_surfaces_record_p29_as_current_low_priority_wave",
+      "item_id": "index_and_handoff_surfaces_preserve_p29_as_completed_prior_wave_under_p30_current_state",
       "status": "pass",
-      "notes": "Publication/index/handoff surfaces should all record P29 as the current low-priority operational wave."
+      "notes": "Publication/index/handoff surfaces should preserve P29 as the completed prior release-audit wave under current P30 state."
     },
     {
       "item_id": "upstream_h43_and_p28_results_remain_preserved",

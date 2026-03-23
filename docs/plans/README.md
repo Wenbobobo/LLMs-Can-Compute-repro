@@ -92,13 +92,16 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `../milestones/P29_post_h43_release_audit_refresh/` — current low-priority
-  operational release/public audit refresh packet that updates stale
-  downstream audits and release-facing ledgers without changing scientific
-  stage.
+- `../milestones/P30_post_h43_manuscript_surface_refresh/` — current
+  low-priority operational manuscript-surface refresh packet that updates
+  stale paper-facing prose baselines and derivative helper docs without
+  changing scientific stage.
 - `../milestones/H43_post_r44_useful_case_refreeze/` — current active
   docs-only refreeze packet that records `R44` as completed narrow useful-case
   evidence and restores `no_active_downstream_runtime_lane`.
+- `../milestones/P29_post_h43_release_audit_refresh/` — completed prior
+  low-priority operational release/public audit refresh packet that aligned
+  stale downstream audits and release-facing ledgers to landed `H43`.
 - `../milestones/P28_post_h43_publication_surface_sync/` — completed
   low-priority operational publication/control sync packet that aligned
   paper-facing ledgers to the landed `H43` state.
@@ -116,8 +119,12 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   completed operational promotion/artifact audit lane.
 - `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
   completed operational explicit merge packet for the post-`R42` override.
-- `../milestones/P29_post_h43_release_audit_refresh/` — current low-priority
-  operational release/public audit refresh packet downstream of `H43`.
+- `../milestones/P30_post_h43_manuscript_surface_refresh/` — current
+  low-priority operational manuscript-surface refresh packet downstream of
+  `H43`.
+- `../milestones/P29_post_h43_release_audit_refresh/` — completed prior
+  low-priority operational release/public audit refresh packet downstream of
+  `H43`.
 - `../milestones/P28_post_h43_publication_surface_sync/` — completed
   operational publication/control sync packet downstream of `H43`.
 - `../milestones/F16_post_h37_r41_candidate_isolation_bundle/` — current
