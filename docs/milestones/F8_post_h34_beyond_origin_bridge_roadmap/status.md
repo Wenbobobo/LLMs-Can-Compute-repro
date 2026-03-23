@@ -1,6 +1,7 @@
 # F8 Status
 
-Initial planning scaffold saved downstream of `H34/P20/F5/F6`.
+- completed planning-only beyond-Origin bridge roadmap downstream of
+  `H34/P20/F5/F6`;
 
 - this lane is planning-only;
 - it preserves the current `H32`/`H34` no-reopen state;

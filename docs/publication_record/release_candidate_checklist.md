@@ -29,9 +29,9 @@ preserved-closeout-and-pivot stack.
   `publication_record/README.md` all describe the same `H32` active /
   `H34` current docs-only control / `H33-R39-H31-H30-H29-H27-H28`
   preserved current control package.
-- [ ] `plans/README.md` and the saved post-`P20/F5/F6` handoff surfaces still
-  present docs/planning maintenance as admissible while runtime remains
-  inactive by default.
+- [ ] `plans/README.md`, the saved post-`P20/F5/F6` handoff surfaces, and the
+  saved post-`H34` planning-wave surface still present docs/planning
+  maintenance as admissible while runtime remains inactive by default.
 - [ ] `publication_record/README.md` and the saved post-`H34` planning-wave
   surface present `F7/F8/P21` as planning-only follow-ons while keeping
   `F9/F10/F11` inactive.
