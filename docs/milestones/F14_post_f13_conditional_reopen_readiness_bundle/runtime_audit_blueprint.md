@@ -1,10 +1,18 @@
 # Runtime Audit Blueprint
 
-Future lane name:
+Historical pre-landing lane name:
 
 - `R40_origin_runtime_irrelevance_audit`
 
-This lane does not exist yet. If it ever lands, its scope must be locked to:
+This was the pre-landing placeholder name before the bounded-scalar reopen
+actually landed as `R40_origin_bounded_scalar_locals_and_flags_gate`.
+
+Current future lane:
+
+- `R41_origin_runtime_relevance_threat_stress_audit`
+
+That lane still does not exist yet. If it ever lands, its scope must be locked
+to:
 
 - the current admitted row;
 - the current named same-family boundary probe;
