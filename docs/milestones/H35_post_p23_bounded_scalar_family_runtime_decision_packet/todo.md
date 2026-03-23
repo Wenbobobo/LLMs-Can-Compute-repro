@@ -8,6 +8,6 @@
 - keep the runtime scope explicit: frame-only bounded locals and typed flags on
   the current opcode surface;
 - keep `R41_origin_runtime_relevance_threat_stress_audit` deferred until a
-  later explicit post-`R40` packet;
+  later explicit post-`H36` packet;
 - preserve `R29`, `F3`, broader compiler rhetoric, restricted-Wasm wording,
   and hybrid/planner bridge claims as blocked by default.

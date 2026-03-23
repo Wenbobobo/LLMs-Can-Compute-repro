@@ -23,4 +23,5 @@ The packet keeps the question narrow:
   restricted-Wasm reopening, and no hybrid/planner bridge claim.
 
 `H35` records `R41_origin_runtime_relevance_threat_stress_audit` only as a
-deferred future blueprint after `R40`, not as an active runtime lane.
+deferred future blueprint after the landed `H36` refreeze, not as an active
+runtime lane.
