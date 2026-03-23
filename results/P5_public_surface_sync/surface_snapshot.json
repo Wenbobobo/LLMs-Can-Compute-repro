@@ -2,11 +2,11 @@
   "experiment": "p5_public_surface_sync_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,58 +22,56 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "| `H10-H12` | completed bounded `D0` retrieval-pressure packet: `H10` reconciles `R7` to artifact-backed wording, `H11` replaces the driver, `R8` stresses higher retrieval pressure on the same endpoint, `R9` keeps real-trace precision companion-only, `R10` attributes same-endpoint costs, and `H12` refreezes the packet |",
-        "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
-        "| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the preserved pre-reopen same-endpoint control |",
-        "| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the current frozen scientific state: `H22` locked one boundary-first reopen contract, `R26` executed `22/22` first-wave candidates without localizing a failure, `R28` audited the mechanism contract as supported with partial control isolation, `R27` extended to `12/12` second-wave candidates without localizing a failure, and `H23` refroze the packet with `P14` as the downstream docs-only lane |",
-        "| `H24-H25` | completed post-`H23` reauthorization/refreeze packet: `H24` separated reauthorization work from hygiene, `R30` authorized one future family-local boundary sharp zoom through `R32`, `R31` routed any later same-endpoint systems recovery discussion through `R33` non-retrieval overhead localization first, and `H25` refroze that decision packet without widening scope |",
-        "`H25_refreeze_after_r30_r31_decision_packet`. It preserves"
+        "now `H43_post_r44_useful_case_refreeze`, the preserved prior docs-only",
+        "`R44_origin_restricted_wasm_useful_case_execution_gate`, the current",
+        "`R45_origin_dual_mode_model_mainline_gate`, the current",
+        "- `R44_origin_restricted_wasm_useful_case_execution_gate` is now the",
+        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
+        "`R45_origin_dual_mode_model_mainline_gate`."
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
-        "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-        "gate as `healthy_but_slow`.",
-        "`H25_refreeze_after_r30_r31_decision_packet`.",
-        "- `H21` now remains the preserved pre-reopen same-endpoint control packet",
-        "- `H21` now remains the preserved pre-reopen same-endpoint control:"
+        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
+        "`H36_post_r40_bounded_scalar_family_refreeze`.",
+        "`R43_origin_bounded_memory_small_vm_execution_gate`.",
+        "- `R43_origin_bounded_memory_small_vm_execution_gate` is now fixed as the",
+        "- `H42_post_r43_route_selection_packet` is now fixed as the completed",
+        "- `H36_post_r40_bounded_scalar_family_refreeze` is now complete:"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `current_stage_driver.md` \u2014 the canonical `active_driver` for the current",
-        "boundary packet, `R33` as the completed bounded systems-audit lane, `H25` as",
-        "- `results/H25_refreeze_after_r30_r31_decision_packet/summary.json` \u2014",
-        "- `results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json` \u2014",
-        "- `results/R33_d0_non_retrieval_overhead_localization_audit/summary.json` \u2014",
-        "- `results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json` \u2014"
+        "- `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md` \u2014",
+        "- `docs/milestones/P29_post_h43_release_audit_refresh/` \u2014 the current",
+        "- `docs/milestones/P28_post_h43_publication_surface_sync/` \u2014 the completed",
+        "- `results/P29_post_h43_release_audit_refresh/summary.json` \u2014"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H27_refreeze_after_r32_r33_same_endpoint_decision`",
-        "This stage preserves `H26_refreeze_after_r32_boundary_sharp_zoom` as the",
-        "`H26_refreeze_after_r32_boundary_sharp_zoom` ->",
-        "clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->",
-        "`H27_refreeze_after_r32_r33_same_endpoint_decision`.",
-        "`systems_verdict = systems_more_sharply_negative`,"
+        "- `H43_post_r44_useful_case_refreeze`",
+        "- `R44_origin_restricted_wasm_useful_case_execution_gate`",
+        "- `R45_origin_dual_mode_model_mainline_gate`",
+        "`no_active_downstream_runtime_lane`.",
+        "`R45_origin_dual_mode_model_mainline_gate` ->",
+        "`R44_origin_restricted_wasm_useful_case_execution_gate` ->"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "This repository reproduces a narrow execution-substrate claim rather than a"
+        "`H43_post_r44_useful_case_refreeze`.",
+        "`H43_post_r44_useful_case_refreeze`, which preserves"
       ]
     },
     {
       "path": "docs/publication_record/manuscript_bundle_draft.md",
       "matched_lines": [
         "## 1. Abstract",
-        "but not for a broader source-language claim. The no-widening decision is part",
         "validate. Companion appendix material stays clearly downstream of that",
         "## 10. Reproducibility Appendix"
       ]

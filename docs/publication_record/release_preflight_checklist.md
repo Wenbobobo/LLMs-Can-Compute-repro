@@ -41,6 +41,10 @@ current freeze candidate is assembled.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`,
   `freeze_candidate_criteria.md`, `main_text_order.md`, and
   `appendix_companion_scope.md` remain synchronized.
+- [ ] `release_candidate_checklist.md`, `submission_candidate_criteria.md`,
+  `claim_ladder.md`, and `archival_repro_manifest.md` all expose the same
+  current `H43/H36/R42/R43/R44/R45/P27/P28` release-control stack and do not
+  revert current wording back to earlier `H40` or `H32/H34` control states.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
   completed `F20/H41/P27/R43/R45/H42/R44/H43` stack plus the preserved
   `H40/R42/P26/F17/F18/F19/H38/F16/P25/F15/H37` control wave, the preserved

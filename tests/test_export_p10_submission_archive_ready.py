@@ -50,7 +50,7 @@ def test_build_summary_reports_archive_ready_packet() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows, inputs["worktree_hygiene_summary"])
 
-    assert summary["current_paper_phase"] == "h19_refreeze_and_next_scope_decision_complete"
+    assert summary["current_paper_phase"] == "h43_post_r44_useful_case_refreeze_active"
     assert summary["packet_state"] == "archive_ready"
     assert summary["release_commit_state"] in {
         "dirty_worktree_release_commit_blocked",
@@ -59,7 +59,7 @@ def test_build_summary_reports_archive_ready_packet() -> None:
     assert summary["git_diff_check_state"] in {"clean", "warnings_only"}
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H19 remains the current frozen same-endpoint state, preserve H18/R19/R20/R21 as the completed same-endpoint mainline reopen packet, preserve H17 as the prior same-scope refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, preserve H13/V1 as handoff state, and keep H8/R6/R7/H9 plus H10/H11/R8/R9/R10/H12 as preserved baselines"
+        "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H43 remains the current docs-only useful-case refreeze packet, preserve H42/H41 as prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
     )
 
 

@@ -1,5 +1,5 @@
 {
-  "experiment": "release_worktree_hygiene_snapshot_checklist",
+  "experiment": "p29_post_h43_release_audit_refresh",
   "environment": {
     "python": {
       "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
@@ -18,16 +18,16 @@
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
-  "rows": [
-    {
-      "item_id": "git_status_command_completed",
-      "status": "pass",
-      "notes": "The snapshot should read current git status successfully."
-    },
-    {
-      "item_id": "git_diff_check_has_no_content_issues",
-      "status": "pass",
-      "notes": "Warnings-only diff-check output is acceptable, but content issues are not."
-    }
-  ]
+  "summary": {
+    "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+    "refresh_packet": "p29_post_h43_release_audit_refresh",
+    "refresh_scope": "release_public_audits_and_ledgers",
+    "selected_outcome": "release_audit_surfaces_refreshed_to_h43",
+    "refreshed_audit_count": 5,
+    "next_required_lane": "no_active_downstream_runtime_lane",
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": []
+  }
 }

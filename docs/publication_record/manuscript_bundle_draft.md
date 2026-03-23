@@ -1,11 +1,13 @@
 # Manuscript Bundle
 
 Status note: this file is the current paper-shaped prose baseline and is now
-aligned to the landed `H32 -> H33 -> R39 -> H34` control chain. Preserved
-same-endpoint materials below `H28` remain relevant as historical negative or
-mixed context, but the current manuscript endpoint is the narrow Origin-core
-line rather than any post-`H21` placeholder horizon. If prose and a landed
-packet ever differ, trust `current_stage_driver.md`, `claim_ladder.md`,
+aligned to the landed
+`H35 -> R40 -> H36 -> H37 -> H38 -> H40 -> R42 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43`
+control chain. Preserved same-endpoint materials below `H28` remain relevant
+as historical negative or mixed context, but the current manuscript endpoint
+is the narrow Origin-core / semantic-boundary line rather than any
+post-`H21` placeholder horizon. If prose and a landed packet ever differ,
+trust `current_stage_driver.md`, `claim_ladder.md`,
 `claim_evidence_table.md`, and `release_summary_draft.md`.
 
 ## 1. Abstract

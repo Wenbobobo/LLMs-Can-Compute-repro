@@ -2,11 +2,11 @@
   "experiment": "release_worktree_hygiene_snapshot_status_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -18,10 +18,10 @@
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
-  "branch": "wip/h27-promotion",
+  "branch": "wip/p29-h43-release-audit-refresh",
   "rows": [],
   "worktree_audit": {
-    "branch": "wip/h27-promotion",
+    "branch": "wip/p29-h43-release-audit-refresh",
     "changed_path_count": 0,
     "modified_path_count": 0,
     "tracked_dirty_count": 0,

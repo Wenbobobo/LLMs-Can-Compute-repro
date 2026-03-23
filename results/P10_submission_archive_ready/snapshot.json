@@ -1,5 +1,5 @@
 {
-  "experiment": "h2_bundle_lock_audit_snapshot",
+  "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
       "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
@@ -58,45 +58,37 @@
       ]
     },
     {
-      "path": "docs/publication_record/release_summary_draft.md",
+      "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "`H43_post_r44_useful_case_refreeze`.",
-        "`H43_post_r44_useful_case_refreeze`, which preserves"
+        "bundle. The current packet is anchored on `H43` as the current docs-only"
       ]
     },
     {
-      "path": "docs/publication_record/paper_bundle_status.md",
+      "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "`P28` aligns publication-facing ledgers to landed `H43`, `F7` preserves a"
+        "- `results/H43_post_r44_useful_case_refreeze/summary.json` records the current",
+        "The current active docs-only packet is `H43`, above the preserved active"
       ]
     },
     {
-      "path": "docs/publication_record/submission_candidate_criteria.md",
+      "path": "docs/publication_record/review_boundary_summary.md",
       "matched_lines": [
-        "frozen scope, currently anchored on the active `H43` docs-only useful-case",
-        "- `results/P28_post_h43_publication_surface_sync/summary.json`"
+        "routing/decision state is `H43_post_r44_useful_case_refreeze`, with",
+        "`supported_here_narrowly`, and restores `no_active_downstream_runtime_lane`;"
       ]
     },
     {
-      "path": "docs/publication_record/release_candidate_checklist.md",
+      "path": "docs/publication_record/external_release_note_skeleton.md",
       "matched_lines": [
-        "the current `H43` docs-only useful-case refreeze / `H36` preserved-active /",
-        "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the"
+        "This repository reproduces a narrow execution-substrate claim rather than a",
+        "- `docs/publication_record/submission_packet_index.md`"
       ]
     },
     {
-      "path": "docs/publication_record/conditional_reopen_protocol.md",
+      "path": "results/release_worktree_hygiene_snapshot/summary.json",
       "matched_lines": [
-        "State: `dormant_protocol`.",
-        "- `E1a_precision_patch`",
-        "- `E1c_compiled_boundary_patch`"
-      ]
-    },
-    {
-      "path": "docs/publication_record/layout_decision_log.md",
-      "matched_lines": [
-        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the `D0` endpoint boundary without introducing new claims or marketing-style compression. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |",
-        "| Evidence reopen discipline | Reopen evidence only through one named `E1` patch lane, and always return control to the locked paper/release lanes. | This keeps unattended runs from silently widening precision, systems, or compiled scope by wording drift. | A later scope decision intentionally replaces the current frozen endpoint with a new evidence program. | `docs/publication_record/conditional_reopen_protocol.md`, `docs/milestones/E1_conditional_evidence_reopen_protocol/result_digest.md` |"
+        "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\",",
+        "\"git_diff_check_state\": \"clean\","
       ]
     }
   ]

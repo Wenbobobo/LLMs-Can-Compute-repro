@@ -39,10 +39,14 @@ Current control docs:
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md` — the preserved
   design surface that turned landed `R44` into the completed current narrow
   useful-case gate and restored `no_active_downstream_runtime_lane`;
+- `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md` —
+  the current low-priority design surface for refreshing stale release/public
+  audits and the last contradictory release-facing ledgers downstream of
+  landed `H43` without changing scientific stage;
 - `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md` —
-  the current low-priority design surface for syncing publication-facing
-  ledgers to landed `H43/R44/R45/R43/P27` state without changing scientific
-  stage;
+  the completed prior low-priority design surface for syncing
+  publication-facing ledgers to landed `H43/R44/R45/R43/P27` state without
+  changing scientific stage;
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md` — the
   preserved post-`H38` activation design surface that landed `H40/R42` before
   the later completed `H41/P27/R43/R45/H42/R44/H43` stack;
@@ -161,9 +165,13 @@ Current control docs:
 - `docs/milestones/H43_post_r44_useful_case_refreeze/` — the current active
   docs-only useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
-- `docs/milestones/P28_post_h43_publication_surface_sync/` — the current
-  low-priority operational publication/control sync packet that aligns the
-  paper-facing ledgers to landed `H43` without changing scientific stage;
+- `docs/milestones/P29_post_h43_release_audit_refresh/` — the current
+  low-priority operational release/public audit refresh packet that updates
+  stale downstream audits and the last contradictory release-facing ledgers
+  while keeping `H43` current;
+- `docs/milestones/P28_post_h43_publication_surface_sync/` — the completed
+  prior low-priority operational publication/control sync packet that aligned
+  the paper-facing ledgers to landed `H43` without changing scientific stage;
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/` —
   the landed preserved prior docs-only post-`F16` runtime-relevance decision
   packet that keeps `H36` frozen and leaves `R41` deferred;
@@ -324,9 +332,12 @@ Current control docs:
   machine-readable current docs-only useful-case refreeze packet recording
   claim `D` as `supported_here_narrowly` and restoring
   `no_active_downstream_runtime_lane`;
+- `results/P29_post_h43_release_audit_refresh/summary.json` —
+  machine-readable current low-priority release/public audit refresh packet
+  downstream of landed `H43`;
 - `results/P28_post_h43_publication_surface_sync/summary.json` —
-  machine-readable low-priority publication/control sync packet downstream of
-  landed `H43`;
+  machine-readable completed prior low-priority publication/control sync
+  packet downstream of landed `H43`;
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
   — machine-readable preserved prior docs-only decision packet selecting
   `keep_h36_freeze` after `F16` yields `no_candidate_ready`;

@@ -56,6 +56,24 @@ uv run python scripts/export_h30_post_r36_r37_scope_decision_packet.py
 uv run python scripts/export_h33_post_h32_conditional_next_question_packet.py
 uv run python scripts/export_r39_origin_compiler_control_surface_dependency_audit.py
 uv run python scripts/export_h34_post_r39_later_explicit_scope_decision_packet.py
+uv run python scripts/export_h35_post_p23_bounded_scalar_family_runtime_decision_packet.py
+uv run python scripts/export_r40_origin_bounded_scalar_locals_and_flags_gate.py
+uv run python scripts/export_h36_post_r40_bounded_scalar_family_refreeze.py
+uv run python scripts/export_p25_post_h36_clean_promotion_prep.py
+uv run python scripts/export_h37_post_h36_runtime_relevance_decision_packet.py
+uv run python scripts/export_h38_post_f16_runtime_relevance_reopen_decision_packet.py
+uv run python scripts/export_p26_post_h37_promotion_and_artifact_hygiene_audit.py
+uv run python scripts/export_h40_post_h38_semantic_boundary_activation_packet.py
+uv run python scripts/export_r42_origin_append_only_memory_retrieval_contract_gate.py
+uv run python scripts/export_f20_post_r42_dual_mode_model_mainline_bundle.py
+uv run python scripts/export_h41_post_r42_aggressive_long_arc_decision_packet.py
+uv run python scripts/export_p27_post_h41_clean_promotion_and_explicit_merge_packet.py
+uv run python scripts/export_r43_origin_bounded_memory_small_vm_execution_gate.py
+uv run python scripts/export_r45_origin_dual_mode_model_mainline_gate.py
+uv run python scripts/export_h42_post_r43_route_selection_packet.py
+uv run python scripts/export_r44_origin_restricted_wasm_useful_case_execution_gate.py
+uv run python scripts/export_h43_post_r44_useful_case_refreeze.py
+uv run python scripts/export_p28_post_h43_publication_surface_sync.py
 uv run python scripts/export_h15_refreeze_and_decision_sync.py
 uv run python scripts/export_h14_core_first_reopen_guard.py
 uv run python scripts/export_h13_post_h12_governance_stage_health.py
@@ -83,18 +101,61 @@ uv run pytest -q
 - `results/R38_origin_compiler_control_surface_extension_gate/summary.json`
   records one richer same-substrate compiled control/call family
 - `results/H32_post_r38_compiled_boundary_refreeze/summary.json` records the
-  current active Origin-core routing/refreeze packet after the explicit
-  extension and keeps any later compiler-boundary extension conditional on a
-  new plan packet
+  preserved earlier compiled-boundary routing/refreeze packet after the
+  explicit extension and keeps any later compiler-boundary extension
+  conditional on a new plan packet
 - `results/H33_post_h32_conditional_next_question_packet/summary.json`
-  records the preserved prior docs-only packet that selected exactly one
-  same-substrate question while keeping `H32` active
+  records the preserved earlier docs-only packet that selected exactly one
+  same-substrate question on the compiled-boundary line
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`
   records one declared helper-body permutation with target renumbering
   surviving on the admitted row and the named same-family boundary probe
 - `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json`
-  records the current docs-only freeze-complete-for-now packet above `H32`
-  and the absence of any active downstream runtime lane
+  records the preserved earlier docs-only freeze-complete-for-now packet above
+  the compiled-boundary line
+- `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json`
+  records the preserved prior bounded-scalar runtime authorization packet
+- `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json`
+  records the completed bounded-scalar same-substrate runtime gate
+- `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json` records
+  the preserved active routing/refreeze packet underneath the current
+  semantic-boundary route
+- `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`
+  records the preserved prior keep-freeze decision after `H36`
+- `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
+  records the preserved prior docs-only keep-freeze packet above `F16`
+- `results/P25_post_h36_clean_promotion_prep/summary.json` records the
+  preserved prior clean promotion-prep lane
+- `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
+  records the preserved prior operational audit lane
+- `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
+  records the preserved prior activation packet that authorized exact `R42`
+- `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
+  records the completed semantic-boundary retrieval-contract gate with exact
+  value plus maximizer-row identity
+- `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
+  records the coequal-mainline model posture without replacing exact evidence
+- `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
+  records the preserved prior docs-only decision packet that authorized exact
+  `R43` plus coequal `R45`
+- `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
+  records the completed explicit merge packet and keeps `merge_executed = false`
+- `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
+  records the completed exact bounded-memory small-VM gate on `5/5` fixed
+  families
+- `results/R45_origin_dual_mode_model_mainline_gate/summary.json` records the
+  completed coequal model lane on the landed `R43` contract family
+- `results/H42_post_r43_route_selection_packet/summary.json` records the
+  preserved prior docs-only packet that authorized exact `R44`
+- `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
+  records the completed current restricted useful-case gate on the fixed
+  three-kernel ladder
+- `results/H43_post_r44_useful_case_refreeze/summary.json` records the current
+  docs-only useful-case refreeze packet and restores
+  `no_active_downstream_runtime_lane`
+- `results/P28_post_h43_publication_surface_sync/summary.json` records the
+  completed publication/control sync packet that keeps `H43` current while
+  aligning downstream ledgers
 - `results/R37_origin_compiler_boundary_gate/summary.json` records one narrow
   positive fact beyond `H29/R36`: one admitted tiny bytecode subset survives
   source reference, lowering parity, and free-running exact execution on the
@@ -172,14 +233,17 @@ This archive is evidence for a narrow mechanistic endpoint: append-only traces,
 exact latest-write retrieval, bounded precision, and one tiny compiled
 boundary on the active Origin-core substrate. It is not evidence for arbitrary
 `C`, general LLM computation, or current-scope end-to-end systems superiority.
-The landed `H32` packet preserves the `H29 -> R36 -> R37 -> H30 -> H31 -> R38`
-chain as the current active routing state, `H33` preserves the one-question
-selection packet, `R39` preserves one narrow same-substrate dependency audit,
-and `H34` preserves the complete-for-now interpretation above that chain while
-leaving no active downstream runtime lane. `H27/H28` explain the pivot away
-from the older same-endpoint route. The preserved `H23` packet strengthens same-endpoint
-boundary and mechanism evidence inside the fixed `D0` boundary, but it still
-does not localize the true executor boundary, still preserves only partial
-control isolation, and still does not overturn the mixed same-endpoint systems
-gate. The later `R30/R31/H25` stack does not widen that science claim set; it
-only records the downstream routing `R32 -> deferred R33 -> blocked R29/F3`.
+The current active docs-only packet is `H43`, above the preserved active
+`H36` routing/refreeze packet, the completed `R42/R43/R44/R45`
+semantic-boundary gate stack, and the completed `P27/P28` operational
+release-control pair. The earlier `H32 -> H33 -> R39 -> H34` compiled-boundary
+line remains preserved historical support rather than the active routing top.
+`H35/R40/H36` record the later bounded-scalar reopen and refreeze that now sit
+directly underneath the semantic-boundary route. `H27/H28` explain the pivot
+away from the older same-endpoint route. The preserved `H23` packet
+strengthens same-endpoint boundary and mechanism evidence inside the fixed
+`D0` boundary, but it still does not localize the true executor boundary,
+still preserves only partial control isolation, and still does not overturn
+the mixed same-endpoint systems gate. The later `R30/R31/H25` stack remains
+historical route-selection context only; it does not widen the current science
+claim set.

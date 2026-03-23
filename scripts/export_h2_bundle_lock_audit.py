@@ -1,9 +1,10 @@
-"""Export the H2 bundle-lock and release-hygiene audit."""
+"""Export the H2 bundle-lock audit for the current publication bundle."""
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import Any
 
 from utils import detect_runtime_environment
 
@@ -17,6 +18,7 @@ def read_text(path: str | Path) -> str:
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
@@ -53,8 +55,6 @@ def load_inputs() -> dict[str, str]:
         "status_text": read_text(ROOT / "STATUS.md"),
         "publication_readme_text": read_text(ROOT / "docs" / "publication_record" / "README.md"),
         "current_stage_driver_text": read_text(ROOT / "docs" / "publication_record" / "current_stage_driver.md"),
-        "planning_state_taxonomy_text": read_text(ROOT / "docs" / "publication_record" / "planning_state_taxonomy.md"),
-        "paper_package_plan_text": read_text(ROOT / "docs" / "publication_record" / "paper_package_plan.md"),
         "release_summary_text": read_text(ROOT / "docs" / "publication_record" / "release_summary_draft.md"),
         "paper_bundle_status_text": read_text(ROOT / "docs" / "publication_record" / "paper_bundle_status.md"),
         "submission_candidate_text": read_text(
@@ -63,7 +63,7 @@ def load_inputs() -> dict[str, str]:
         "release_candidate_text": read_text(
             ROOT / "docs" / "publication_record" / "release_candidate_checklist.md"
         ),
-        "reopen_protocol_text": read_text(
+        "conditional_reopen_text": read_text(
             ROOT / "docs" / "publication_record" / "conditional_reopen_protocol.md"
         ),
         "layout_log_text": read_text(ROOT / "docs" / "publication_record" / "layout_decision_log.md"),
@@ -76,405 +76,195 @@ def build_checklist_rows(
     status_text: str,
     publication_readme_text: str,
     current_stage_driver_text: str,
-    planning_state_taxonomy_text: str,
-    paper_package_plan_text: str,
     release_summary_text: str,
     paper_bundle_status_text: str,
     submission_candidate_text: str,
     release_candidate_text: str,
-    reopen_protocol_text: str,
+    conditional_reopen_text: str,
     layout_log_text: str,
 ) -> list[dict[str, object]]:
     return [
         {
-            "item_id": "readme_and_status_hold_locked_checkpoint_and_active_driver",
+            "item_id": "top_level_surfaces_lock_current_h43_bundle",
             "status": "pass"
-            if (
-                contains_all(
-                    readme_text,
-                    [
-                        "submission-candidate bundle",
-                        "`h10-h12` | completed bounded `d0` retrieval-pressure packet",
-                        "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
-                        "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
-                        "| `h16-h17` | completed bounded same-scope reopen/refreeze packet",
-                        "| `h18-h19` | completed bounded same-endpoint mainline reopen/refreeze packet",
-                        "the current active post-`p9` stage is `h19_refreeze_and_next_scope_decision`",
-                        "`e1c` stays conditional only",
-                    ],
-                )
-                or contains_all(
-                    readme_text,
-                    [
-                        "submission-candidate bundle",
-                        "`h10-h12` | completed bounded `d0` retrieval-pressure packet",
-                        "| `h20-h21` | completed post-`h19` reentry/refreeze packet",
-                        "the current active post-`p9` stage is `h21_refreeze_after_r22_r23`",
-                        "`e1c` stays conditional only",
-                    ],
-                )
+            if contains_all(
+                readme_text,
+                [
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
+                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "no active downstream runtime lane now follows `h43`",
+                ],
             )
-            and (
-                contains_all(
-                    status_text,
-                    [
-                        "`p8` stage is complete on the current frozen scope",
-                        "`p9` stage is complete on the same scope",
-                        "`h19_refreeze_and_next_scope_decision`",
-                        "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                        "`h14_core_first_reopen_and_scope_lock`",
-                        "`h13_post_h12_rollover_and_next_stage_staging` remains preserved",
-                        "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                        "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                        "`e1c` remains conditional only",
-                        "`healthy_but_slow`",
-                        "`h18 -> r19 -> r20 -> r21 -> h19`",
-                        "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline",
-                        "`h6/r3/r4/(inactive r5)/h7` remains the deeper completed baseline",
-                    ],
-                )
-                or contains_all(
-                    status_text,
-                    [
-                        "`p8` stage is complete on the current frozen scope",
-                        "`p9` stage is complete on the same scope",
-                        "`h21_refreeze_after_r22_r23`",
-                        "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                        "`h13_post_h12_rollover_and_next_stage_staging` remains preserved",
-                        "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                        "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                        "`e1c` remains conditional only",
-                        "`healthy_but_slow`",
-                    ],
-                )
+            and contains_all(
+                status_text,
+                [
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`h42_post_r43_route_selection_packet`",
+                    "`h36_post_r40_bounded_scalar_family_refreeze`",
+                    "`merge_executed = false`",
+                ],
             )
             else "blocked",
-            "notes": "README and STATUS should both describe the locked checkpoint plus current H19 and preserved H17/H15/H14/H13/V1 state.",
+            "notes": "README and STATUS should lock the publication bundle onto the current H43 stack.",
         },
         {
-            "item_id": "publication_record_tracks_driver_taxonomy",
+            "item_id": "publication_record_core_docs_expose_current_h43_bundle",
             "status": "pass"
             if contains_all(
                 publication_readme_text,
                 [
-                    "current_stage_driver.md",
-                    "planning_state_taxonomy.md",
-                    "paper_package_plan.md",
-                    "release_preflight_checklist.md",
-                    "submission_candidate_criteria.md",
-                    "release_candidate_checklist.md",
-                    "conditional_reopen_protocol.md",
+                    "current `h43` docs-only useful-case refreeze packet",
+                    "`r42`, `r43`, `r44`, and `r45`",
+                    "docs/milestones/p29_post_h43_release_audit_refresh/",
+                    "results/p29_post_h43_release_audit_refresh/summary.json",
                 ],
             )
             and contains_all(
-                planning_state_taxonomy_text,
-                [
-                    "`active_driver`",
-                    "`standing_gate`",
-                    "`historical_complete`",
-                    "`dormant_protocol`",
-                    "`docs/publication_record/current_stage_driver.md`",
-                    "`docs/publication_record/paper_package_plan.md`",
-                ],
-            )
-            and contains_all(
-                paper_package_plan_text,
-                ["state: `historical_complete`", "## Goal", "## Fixed Inputs", "## Package Write Set", "## Exit Gate"],
-            )
-            else "blocked",
-            "notes": "Publication record docs should expose the taxonomy-labeled controls and historical references explicitly.",
-        },
-        {
-            "item_id": "current_stage_driver_is_explicit",
-            "status": "pass"
-            if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h19_refreeze_and_next_scope_decision`",
-                    "`h18/r19/r20/r21` as the completed same-endpoint mainline reopen",
-                    "`h17_refreeze_and_conditional_frontier_recheck` as the prior",
-                    "`h16/r15/r16/r17/r18`",
-                    "`h15_refreeze_and_decision_sync`",
-                    "the completed same-scope reopen/refreeze wave ran in the order",
-                    "`h14_core_first_reopen_and_scope_lock`",
-                    "`h13_post_h12_rollover_and_next_stage_staging` remains preserved",
-                    "`v1_full_suite_validation_runtime_audit` remains a standing operational reference",
-                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint follow-up packet",
-                    "`e1c_compiled_boundary_patch`",
-                    "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline underneath",
-                    "`h6/r3/r4/(inactive r5)/h7` remains the deeper historical baseline",
-                ],
-            )
-            and contains_all(
-                planning_state_taxonomy_text,
-                [
-                    "`active_driver`",
-                    "`standing_gate`",
-                    "`historical_complete`",
-                    "`dormant_protocol`",
-                    "`docs/publication_record/current_stage_driver.md`",
+                    "the current active stage is:",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
+                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "`no_active_downstream_runtime_lane`",
                 ],
             )
             else "blocked",
-            "notes": "The repo should expose one active-driver document plus one explicit planning-state taxonomy.",
+            "notes": "Publication README and current-stage driver should expose the same H43 control bundle.",
         },
         {
-            "item_id": "release_summary_and_bundle_status_name_locked_checkpoint",
+            "item_id": "release_summary_and_bundle_status_stay_downstream",
             "status": "pass"
-            if (
-                contains_all(
-                    release_summary_text,
-                    [
-                        "locked submission-candidate bundle",
-                        "`p8` closed",
-                        "`h2` remains",
-                        "`p9` keeps outward wording downstream",
-                        "`h10/h11/r8/r9/r10/h12` is now the latest completed same-endpoint follow-up packet",
-                        "`h13/v1` is now the preserved governance/runtime handoff",
-                        "the current active post-`p9` stage is `h19_refreeze_and_next_scope_decision`",
-                        "`h17` is now the preserved prior same-scope refreeze decision",
-                        "`e1c` remains conditional only",
-                    ],
-                )
-                or contains_all(
-                    release_summary_text,
-                    [
-                        "locked submission-candidate bundle",
-                        "`p8` closed",
-                        "`h2` remains",
-                        "`p9` keeps outward wording downstream",
-                        "`h10/h11/r8/r9/r10/h12` is now the latest completed same-endpoint follow-up packet",
-                        "`h13/v1` is now the preserved governance/runtime handoff",
-                        "the current active post-`p9` stage is `h21_refreeze_after_r22_r23`",
-                        "`h19` is now the preserved pre-`r22/r23` refreeze decision",
-                        "`e1c` remains conditional only",
-                    ],
-                )
+            if contains_all(
+                release_summary_text,
+                [
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "completed current semantic-boundary gate stack",
+                    "`p28` aligns publication-facing ledgers to landed `h43`",
+                ],
             )
             and contains_all(
                 paper_bundle_status_text,
                 [
-                    "locked submission-candidate bundle",
-                    "claim/evidence scope kept closed by default",
-                    "current submission/release controls",
+                    "`h43` is the current docs-only useful-case refreeze packet",
+                    "`r42`, `r43`, `r44`, and `r45` are the completed current semantic-boundary",
+                    "`p28` aligns publication-facing ledgers to landed `h43`",
                 ],
             )
             else "blocked",
-            "notes": "The short release summary and paper bundle status should both point to the same locked checkpoint.",
+            "notes": "Release summary and paper bundle status should remain downstream of the landed H43 stack.",
         },
         {
-            "item_id": "submission_candidate_criteria_lock_scope",
+            "item_id": "submission_and_release_candidate_controls_match_current_bundle",
             "status": "pass"
             if contains_all(
                 submission_candidate_text,
                 [
-                    "freeze-candidate conditions still hold",
-                    "manuscript bundle and supporting ledgers are locked together",
-                    "appendix minimum package is explicit and complete",
-                    "standing audits remain green",
-                    "`h2`",
+                    "active `h43` docs-only useful-case",
+                    "completed `r42/r43/r44/r45` semantic-boundary gate stack",
+                    "results/p28_post_h43_publication_surface_sync/summary.json",
                 ],
             )
-            else "blocked",
-            "notes": "Submission-candidate criteria should define a real bundle-lock gate on the same frozen scope.",
-        },
-        {
-            "item_id": "release_candidate_checklist_stays_downstream",
-            "status": "pass"
-            if contains_all(
+            and contains_all(
                 release_candidate_text,
                 [
-                    "state: `standing_gate`",
-                    "results/p1_paper_readiness/summary.json",
-                    "results/p5_public_surface_sync/summary.json",
-                    "results/p5_callout_alignment/summary.json",
-                    "results/h2_bundle_lock_audit/summary.json",
-                    "results/release_preflight_checklist_audit/summary.json",
-                    "blog work remains blocked",
+                    "current `h43` docs-only useful-case refreeze",
+                    "`r42-r43-r44-r45` completed semantic-boundary gate stack",
+                    "results/h43_post_r44_useful_case_refreeze/summary.json",
                 ],
             )
             else "blocked",
-            "notes": "The release-candidate checklist should keep outward sync downstream of the locked bundle and standing audits.",
+            "notes": "Submission and release-candidate controls should describe the same H43 bundle-lock state.",
         },
         {
-            "item_id": "conditional_reopen_protocol_requires_named_patch_lane",
+            "item_id": "conditional_reopen_protocol_stays_closed_by_default",
             "status": "pass"
             if contains_all(
-                reopen_protocol_text,
+                conditional_reopen_text,
                 [
-                    "state: `dormant_protocol`",
-                    "allowed triggers",
-                    "`e1a_precision_patch`",
-                    "`e1b_systems_patch`",
-                    "`e1c_compiled_boundary_patch`",
-                    "only one patch lane may be active at a time",
-                    "returning control to `p8` or `p9`",
+                    "State: `dormant_protocol`.",
+                    "Only one patch lane may be active at a time",
+                    "`E1a_precision_patch`",
+                    "`E1b_systems_patch`",
+                    "`E1c_compiled_boundary_patch`",
                 ],
             )
             else "blocked",
-            "notes": "Reopen control should force later agents into one named patch lane and a refreeze step.",
+            "notes": "Bundle lock should still route any reopen through the dormant explicit patch protocol.",
         },
         {
-            "item_id": "layout_log_records_post_p7_governance",
+            "item_id": "layout_log_records_bundle_lock_governance",
             "status": "pass"
-            if contains_all(layout_log_text, ["Post-`P7` next phase", "Evidence reopen discipline"])
+            if contains_all(
+                layout_log_text,
+                ["Release-summary reuse", "Post-`P7` next phase", "Evidence reopen discipline"],
+            )
             else "blocked",
-            "notes": "The layout decision log should record the current governance choices explicitly.",
+            "notes": "The layout log should preserve the publication bundle governance choices.",
         },
     ]
 
 
 def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
     lookup = {
-        "README.md": (
-            "readme_text",
-            [
-                "submission-candidate bundle",
-                "`H10-H12` | completed bounded `D0` retrieval-pressure packet",
-                "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline",
-                "| `H14-H15` | completed bounded core-first reopen/refreeze packet",
-                "| `H16-H17` | completed bounded same-scope reopen/refreeze packet",
-                "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet",
-                "The current active post-`P9` stage is `H19_refreeze_and_next_scope_decision`",
-            ],
-        ),
-        "STATUS.md": (
-            "status_text",
-            [
-                "`P8` stage is complete on the current frozen scope",
-                "`P9` stage is complete on the same scope",
-                "`H19_refreeze_and_next_scope_decision`",
-                "`H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                "`H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                "`H14_core_first_reopen_and_scope_lock`",
-                "`H13_post_h12_rollover_and_next_stage_staging` remains preserved",
-                "`V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-                "`healthy_but_slow`",
-            ],
-        ),
+        "README.md": ("readme_text", ["`H43_post_r44_useful_case_refreeze`", "`R45_origin_dual_mode_model_mainline_gate`"]),
+        "STATUS.md": ("status_text", ["`H43_post_r44_useful_case_refreeze`", "`merge_executed = false`"]),
         "docs/publication_record/README.md": (
             "publication_readme_text",
             [
-                "current_stage_driver.md",
-                "planning_state_taxonomy.md",
-                "paper_package_plan.md",
-                "release_preflight_checklist.md",
-                "release_preflight_checklist_audit",
-                "release_worktree_hygiene_snapshot",
-                "healthy but multi-minute",
-                "release_candidate_checklist.md",
-                "conditional_reopen_protocol.md",
+                "docs/milestones/P29_post_h43_release_audit_refresh/",
+                "results/P29_post_h43_release_audit_refresh/summary.json",
             ],
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            [
-                "`H16_post_h15_same_scope_reopen_and_scope_lock`",
-                "`H15_refreeze_and_decision_sync`",
-                "`H14_core_first_reopen_and_scope_lock`",
-                "`H13_post_h12_rollover_and_next_stage_staging` remains preserved",
-                "`V1_full_suite_validation_runtime_audit` remains a standing operational reference",
-                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint follow-up packet",
-                "`H8/R6/R7/H9` remains the completed direct same-endpoint baseline underneath",
-            ],
-        ),
-        "docs/publication_record/planning_state_taxonomy.md": (
-            "planning_state_taxonomy_text",
-            [
-                "`active_driver`",
-                "`standing_gate`",
-                "`historical_complete`",
-                "`dormant_protocol`",
-            ],
-        ),
-        "docs/publication_record/paper_package_plan.md": (
-            "paper_package_plan_text",
-            ["State: `historical_complete`", "## Goal", "## Fixed Inputs", "## Package Write Set", "## Exit Gate"],
+            ["`H43_post_r44_useful_case_refreeze`", "`no_active_downstream_runtime_lane`"],
         ),
         "docs/publication_record/release_summary_draft.md": (
             "release_summary_text",
-            [
-                "locked submission-candidate bundle",
-                "`P8` closed",
-                "`H2` remains",
-                "`P9` keeps outward wording downstream",
-                "`H10/H11/R8/R9/R10/H12` is now the latest completed same-endpoint follow-up packet",
-                "`H13/V1` is now the preserved governance/runtime handoff",
-                "The current active post-`P9` stage is `H19_refreeze_and_next_scope_decision`",
-                "`H17` is now the preserved prior same-scope refreeze decision",
-                "`E1c` remains conditional only",
-            ],
+            ["`H43_post_r44_useful_case_refreeze`", "completed current semantic-boundary gate stack"],
         ),
         "docs/publication_record/paper_bundle_status.md": (
             "paper_bundle_status_text",
-            [
-                "locked submission-candidate bundle",
-                "claim/evidence scope kept closed by default",
-                "current submission/release controls",
-            ],
+            ["`H43` is the current docs-only useful-case refreeze packet", "`P28` aligns publication-facing ledgers to landed `H43`"],
         ),
         "docs/publication_record/submission_candidate_criteria.md": (
             "submission_candidate_text",
-            [
-                "Freeze-candidate conditions still hold",
-                "Manuscript bundle and supporting ledgers are locked together",
-                "Standing audits remain green",
-            ],
+            ["active `H43` docs-only useful-case", "results/P28_post_h43_publication_surface_sync/summary.json"],
         ),
         "docs/publication_record/release_candidate_checklist.md": (
             "release_candidate_text",
-            [
-                "State: `standing_gate`",
-                "results/P1_paper_readiness/summary.json",
-                "results/release_preflight_checklist_audit/summary.json",
-                "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
-                "results/P5_public_surface_sync/summary.json",
-                "results/H2_bundle_lock_audit/summary.json",
-                "Blog work remains blocked",
-            ],
+            ["current `H43` docs-only useful-case refreeze", "results/H43_post_r44_useful_case_refreeze/summary.json"],
         ),
         "docs/publication_record/conditional_reopen_protocol.md": (
-            "reopen_protocol_text",
-            [
-                "State: `dormant_protocol`",
-                "`E1a_precision_patch`",
-                "`E1b_systems_patch`",
-                "`E1c_compiled_boundary_patch`",
-                "Only one patch lane may be active at a time",
-            ],
+            "conditional_reopen_text",
+            ["State: `dormant_protocol`.", "`E1a_precision_patch`", "`E1c_compiled_boundary_patch`"],
         ),
         "docs/publication_record/layout_decision_log.md": (
             "layout_log_text",
-            ["Post-`P7` next phase", "Evidence reopen discipline"],
+            ["Release-summary reuse", "Evidence reopen discipline"],
         ),
     }
     rows: list[dict[str, object]] = []
     for path, (input_key, needles) in lookup.items():
-        rows.append(
-            {
-                "path": path,
-                "matched_lines": extract_matching_lines(inputs[input_key], needles=needles),
-            }
-        )
+        rows.append({"path": path, "matched_lines": extract_matching_lines(inputs[input_key], needles=needles)})
     return rows
 
 
-def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
-    blocked_items = [row["item_id"] for row in rows if row["status"] != "pass"]
+def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
+    blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h19_refreeze_and_next_scope_decision_complete",
+        "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
         "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
-        "check_count": len(rows),
-        "pass_count": sum(row["status"] == "pass" for row in rows),
-        "blocked_count": sum(row["status"] != "pass" for row in rows),
+        "check_count": len(checklist_rows),
+        "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
+        "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "keep the H2 bundle-lock audit green while H19 stays aligned as the current frozen same-endpoint state, preserve H18/R19/R20/R21 as the completed same-endpoint mainline reopen packet, preserve H17 as the prior same-scope refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, preserve H13/V1 as handoff state, and keep H8/R6/R7/H9 plus H10/H11/R8/R9/R10/H12 as preserved baselines"
+            "keep the H2 bundle-lock audit green while H43 stays aligned as the current docs-only useful-case refreeze packet, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
             if not blocked_items
-            else "resolve the blocked bundle-lock or release-hygiene items before another outward sync"
+            else "resolve the blocked H2 bundle-lock items before treating the publication bundle as locked"
         ),
     }
 
@@ -482,9 +272,9 @@ def build_summary(rows: list[dict[str, object]]) -> dict[str, object]:
 def main() -> None:
     environment = detect_runtime_environment()
     inputs = load_inputs()
-    rows = build_checklist_rows(**inputs)
+    checklist_rows = build_checklist_rows(**inputs)
     snapshot = build_snapshot(inputs)
-    summary = build_summary(rows)
+    summary = build_summary(checklist_rows)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     write_json(
@@ -492,7 +282,7 @@ def main() -> None:
         {
             "experiment": "h2_bundle_lock_audit_checklist",
             "environment": environment.as_dict(),
-            "rows": rows,
+            "rows": checklist_rows,
         },
     )
     write_json(
@@ -513,8 +303,6 @@ def main() -> None:
                 "STATUS.md",
                 "docs/publication_record/README.md",
                 "docs/publication_record/current_stage_driver.md",
-                "docs/publication_record/planning_state_taxonomy.md",
-                "docs/publication_record/paper_package_plan.md",
                 "docs/publication_record/release_summary_draft.md",
                 "docs/publication_record/paper_bundle_status.md",
                 "docs/publication_record/submission_candidate_criteria.md",
@@ -530,8 +318,8 @@ def main() -> None:
             [
                 "# H2 Bundle Lock Audit",
                 "",
-                "Machine-readable audit of the standing bundle-lock and release-hygiene",
-                "gate used by the locked checkpoint and active consolidation packet.",
+                "Machine-readable audit of whether the current publication bundle remains",
+                "locked to the landed H43 release-control stack and the dormant reopen protocol.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

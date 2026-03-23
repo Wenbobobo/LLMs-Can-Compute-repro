@@ -2,11 +2,11 @@
   "experiment": "p5_public_surface_sync_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -27,42 +27,42 @@
     {
       "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should keep H25 as the current active decision packet while preserving H23 as the frozen scientific state and the older same-endpoint baselines."
+      "notes": "README should keep H43 as current while preserving the landed H42/H41/H36/R43/R44/R45/P27 stack."
     },
     {
       "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record H25 as current, preserve H23 as the frozen scientific state, and keep the older same-endpoint baselines explicit."
+      "notes": "STATUS should record the current H43 stack and explicit merge posture."
     },
     {
-      "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
+      "item_id": "publication_record_readme_tracks_h43_and_p29",
       "status": "pass",
-      "notes": "Publication record README should name the H27 internal driver, the completed H26/R33/H27 packet, and the preserved control ledgers."
+      "notes": "Publication record README should expose H43 as current and P29 as the current downstream audit refresh packet."
     },
     {
-      "item_id": "release_summary_stays_downstream",
+      "item_id": "release_summary_stays_downstream_of_landed_h43_stack",
       "status": "pass",
-      "notes": "The release summary should stay narrow while naming H25 as current, H23 as the frozen scientific state, and frontier work as still conditional."
+      "notes": "The release summary should remain downstream of the landed H43 stack and publication sync."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
       "status": "pass",
-      "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble."
+      "notes": "The manuscript remains a section-ordered draft rather than a stage-status note."
     },
     {
       "item_id": "current_stage_driver_is_canonical",
       "status": "pass",
-      "notes": "The current-stage driver should expose the H27 internal driver, the completed H26/R33 downstream packet, and the still-blocked future lanes in one place."
+      "notes": "The current-stage driver should remain the canonical H43 control surface."
     },
     {
       "item_id": "layout_log_records_post_p7_decisions",
       "status": "pass",
-      "notes": "The layout decision log should record release-summary reuse plus the new governance choices."
+      "notes": "The layout decision log should record release-summary reuse and governance choices."
     },
     {
       "item_id": "p8_p9_checkpoint_remains_explicit",
       "status": "pass",
-      "notes": "The completed P8/P9 digests should remain explicit as the baseline for the next plan-mode stage."
+      "notes": "The completed P8/P9 digests should remain explicit as the bundle-lock baseline."
     }
   ]
 }

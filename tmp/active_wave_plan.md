@@ -48,10 +48,12 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H43` remains the current scientific stage. `P28_post_h43_publication_surface_sync`
-is the current low-priority operational/docs wave. It aligns paper-facing
-ledgers to the landed `H42/R43/R44/R45/F20/P27/H43` stack without creating a
-new runtime lane.
+`H43` remains the current scientific stage.
+`P29_post_h43_release_audit_refresh` is the current low-priority
+operational/docs wave. It refreshes stale machine release/public audits plus
+the last contradictory release-facing ledgers so the downstream control
+surface matches the landed `H42/R43/R44/R45/F20/P27/P28/H43` stack without
+creating a new runtime lane.
 
 ## Current Facts
 
@@ -68,6 +70,8 @@ new runtime lane.
 - `wip/h43-r44-refreeze` is the clean post-`R44` refreeze packet branch.
 - `wip/p28-h43-publication-sync` is the clean post-`H43` publication/control
   sync branch.
+- `wip/p29-h43-release-audit-refresh` is the clean post-`H43`
+  release/public audit refresh branch.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -113,8 +117,8 @@ new runtime lane.
 9. Keep `R41` deferred until later explicit contradiction routing.
 10. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
    frontier widening by momentum.
-11. Keep publication-facing ledgers downstream of `H43` without changing the
-    scientific stage driver.
+11. Keep release/public audit surfaces downstream of `H43` without changing
+    the scientific stage driver.
 
 ## Last Completed Order
 
@@ -173,8 +177,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   non-substitutive relative to exact `R43`.
 - `P27` is the completed operational explicit merge packet and keeps
   `merge_executed = false`.
-- `P28` is the current low-priority publication/control sync wave and does not
-  change the active scientific stage.
+- `P29` is the current low-priority release/public audit refresh wave and does
+  not change the active scientific stage.
+- `P28` is the completed prior publication/control sync wave.
 - `P26` remains the preserved prior audit-only operational lane.
 - `R41` stays deferred until a later contradiction packet.
 - `R43` is the completed current exact gate.
@@ -191,6 +196,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
+- `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
@@ -203,6 +209,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
 - `docs/milestones/H42_post_r43_route_selection_packet/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
+- `docs/milestones/P29_post_h43_release_audit_refresh/`
 - `docs/milestones/P28_post_h43_publication_surface_sync/`
 - `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
@@ -210,6 +217,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/P29_post_h43_release_audit_refresh/summary.json`
 - `results/P28_post_h43_publication_surface_sync/summary.json`
 - `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`

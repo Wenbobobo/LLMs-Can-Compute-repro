@@ -18,6 +18,7 @@ def read_text(path: str | Path) -> str:
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
@@ -87,7 +88,13 @@ def build_sync_checklist(
         {
             "item_id": "readme_keeps_narrow_scope",
             "status": "pass"
-            if contains_all(readme_text, ["does **not** claim that general llms are computers", "arbitrary c"])
+            if contains_all(
+                readme_text,
+                [
+                    "does **not** claim that general llms are computers",
+                    "arbitrary c has been reproduced",
+                ],
+            )
             else "blocked",
             "notes": "README keeps the narrow-scope guardrails explicit.",
         },
@@ -97,18 +104,16 @@ def build_sync_checklist(
             if contains_all(
                 readme_text,
                 [
-                    "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
-                    "`h10-h12` | completed bounded `d0` retrieval-pressure packet",
-                    "| `h20-h21` | completed post-`h19` reentry/refreeze packet",
-                    "| `h22-h23` | completed bounded post-`h21` dual-track reopen/refreeze packet preserved as the current frozen scientific state",
-                    "| `h24-h25` | completed post-`h23` reauthorization/refreeze packet",
-                    "`h25_refreeze_after_r30_r31_decision_packet`. it preserves",
-                    "`h23_refreeze_after_r26_r27_r28` as the frozen same-endpoint scientific state",
-                    "v1 remains a standing operational reference under the preserved `h13`",
+                    "the current active stage is",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
+                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "`promotion_mode = explicit_merge_wave` and `merge_executed = false`",
+                    "no active downstream runtime lane now follows `h43`",
                 ],
             )
             else "blocked",
-            "notes": "README should keep H25 as the current active decision packet while preserving H23 as the frozen scientific state and the older same-endpoint baselines.",
+            "notes": "README should keep H43 as current while preserving the landed H42/H41/H36/R43/R44/R45/P27 stack.",
         },
         {
             "item_id": "status_tracks_current_active_stage",
@@ -116,85 +121,51 @@ def build_sync_checklist(
             if contains_all(
                 status_text,
                 [
-                    "`p8` stage is complete on the current frozen scope",
-                    "`p9` stage is complete on the same scope",
-                    "`h25_refreeze_after_r30_r31_decision_packet`",
-                    "`h22/r26/r28/r27/h23` packet preserved as the current frozen narrow-endpoint scientific state",
-                    "`h24/r30/r31/h25` packet preserved as the current decision/refreeze layer above it",
-                    "`h21` now remains the preserved pre-reopen same-endpoint control",
-                    "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                    "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                    "`h14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
-                    "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                    "`e1c` remains conditional only",
-                    "`healthy_but_slow`",
-                    "`h18 -> r19 -> r20 -> r21 -> h19`",
-                    "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline",
-                    "`h6/r3/r4/(inactive r5)/h7` remains the deeper completed baseline",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`h42_post_r43_route_selection_packet`",
+                    "`h36_post_r40_bounded_scalar_family_refreeze`",
+                    "`r43_origin_bounded_memory_small_vm_execution_gate`",
+                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
+                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "`promotion_mode = explicit_merge_wave` and `merge_executed = false`",
                 ],
             )
             else "blocked",
-            "notes": "STATUS should record H25 as current, preserve H23 as the frozen scientific state, and keep the older same-endpoint baselines explicit.",
+            "notes": "STATUS should record the current H43 stack and explicit merge posture.",
         },
         {
-            "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
+            "item_id": "publication_record_readme_tracks_h43_and_p29",
             "status": "pass"
             if contains_all(
                 publication_readme_text,
                 [
-                    "current_stage_driver.md",
-                    "planning_state_taxonomy.md",
-                    "submission_packet_index.md",
-                    "archival_repro_manifest.md",
-                    "release_summary_draft.md",
-                    "release_preflight_checklist.md",
-                    "release_preflight_checklist_audit",
-                    "release_worktree_hygiene_snapshot",
-                    "paper_package_plan.md",
-                    "current `h27` active decision packet",
-                    "preserving `h26` as the current same-endpoint boundary packet",
-                    "`r33` as the completed bounded systems-audit lane",
-                    "`h25` as the preserved prior post-`h23` decision packet",
-                    "`h23` as the preserved earlier frozen same-endpoint scientific state",
-                    "`results/h27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`",
-                    "`results/h26_refreeze_after_r32_boundary_sharp_zoom/summary.json`",
-                    "`results/r33_d0_non_retrieval_overhead_localization_audit/summary.json`",
-                    "`results/h25_refreeze_after_r30_r31_decision_packet/summary.json`",
-                    "`results/h23_refreeze_after_r26_r27_r28/summary.json`",
-                    "`results/r30_d0_boundary_reauthorization_packet/summary.json`",
-                    "`results/r31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`",
-                    "`h21` as the immediate pre-reopen control",
-                    "`h13/v1` preserved as the governance/runtime handoff",
-                    "staged the bounded `r32 -> h26 -> r33 -> h27` wave",
-                    "submission_candidate_criteria.md",
-                    "release_candidate_checklist.md",
-                    "conditional_reopen_protocol.md",
+                    "current `h43` docs-only useful-case refreeze packet",
+                    "`r42`, `r43`, `r44`, and `r45`",
+                    "`merge_executed = false`",
+                    "2026-03-24-post-h43-p29-release-audit-refresh-design.md",
+                    "docs/milestones/p29_post_h43_release_audit_refresh/",
+                    "results/p29_post_h43_release_audit_refresh/summary.json",
+                    "docs/milestones/p28_post_h43_publication_surface_sync/",
                 ],
             )
             else "blocked",
-            "notes": "Publication record README should name the H27 internal driver, the completed H26/R33/H27 packet, and the preserved control ledgers.",
+            "notes": "Publication record README should expose H43 as current and P29 as the current downstream audit refresh packet.",
         },
         {
-            "item_id": "release_summary_stays_downstream",
+            "item_id": "release_summary_stays_downstream_of_landed_h43_stack",
             "status": "pass"
             if contains_all(
                 release_summary_text,
                 [
-                    "this repository reproduces a narrow execution-substrate claim",
-                    "`h10/h11/r8/r9/r10/h12` is now the latest completed same-endpoint follow-up packet",
-                    "`h13/v1` is now the preserved governance/runtime handoff",
-                    "the current frozen scientific state inside the post-`p9` chain is `h23_refreeze_after_r26_r27_r28`",
-                    "the downstream `p14` public-surface sync implied by `h23` is docs-only and is already complete",
-                    "the current active post-`p9` stage is now `h25_refreeze_after_r30_r31_decision_packet`",
-                    "`h21` is now the preserved immediate pre-reopen control",
-                    "`h17` remains the preserved prior same-scope refreeze decision",
-                    "`e1c` remains conditional only",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "completed current semantic-boundary gate stack",
+                    "`p28` aligns publication-facing ledgers to landed `h43`",
+                    "no active downstream runtime lane exists after `h43`",
                 ],
             )
             and contains_none(release_summary_text, ["later full plan-mode stage"])
             else "blocked",
-            "notes": "The release summary should stay narrow while naming H25 as current, H23 as the frozen scientific state, and frontier work as still conditional.",
+            "notes": "The release summary should remain downstream of the landed H43 stack and publication sync.",
         },
         {
             "item_id": "manuscript_tracks_section_draft_state",
@@ -205,12 +176,11 @@ def build_sync_checklist(
                     "## 1. Abstract",
                     "## 10. Reproducibility Appendix",
                     "Companion appendix material stays clearly downstream",
-                    "The no-widening decision is part",
                 ],
             )
             and contains_none(manuscript_text, ["Status: paper-shaped manuscript section draft"])
             else "blocked",
-            "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble.",
+            "notes": "The manuscript remains a section-ordered draft rather than a stage-status note.",
         },
         {
             "item_id": "current_stage_driver_is_canonical",
@@ -218,20 +188,17 @@ def build_sync_checklist(
             if contains_all(
                 current_stage_driver_text,
                 [
-                    "`h27_refreeze_after_r32_r33_same_endpoint_decision`",
-                    "`h26_refreeze_after_r32_boundary_sharp_zoom`",
-                    "`r33_d0_non_retrieval_overhead_localization_audit`",
-                    "`systems_verdict = systems_more_sharply_negative`",
-                    "`next_priority_lane = later_explicit_packet_required_before_new_runtime`",
-                    "`h25_refreeze_after_r30_r31_decision_packet` remains the completed prior operational decision packet",
-                    "`h23_refreeze_after_r26_r27_r28` remains the preserved earlier same-endpoint scientific control stage",
-                    "`r29_d0_same_endpoint_systems_recovery_execution_gate` remains blocked",
-                    "`f3_post_h23_scope_lift_decision_bundle` remains blocked",
-                    "`f2_future_frontier_recheck_activation_matrix` remains planning-only",
+                    "the current active stage is:",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
+                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "`p27_post_h41_clean_promotion_and_explicit_merge_packet`",
+                    "`merge_executed = false`",
+                    "`no_active_downstream_runtime_lane`",
                 ],
             )
             else "blocked",
-            "notes": "The current-stage driver should expose the H27 internal driver, the completed H26/R33 downstream packet, and the still-blocked future lanes in one place.",
+            "notes": "The current-stage driver should remain the canonical H43 control surface.",
         },
         {
             "item_id": "layout_log_records_post_p7_decisions",
@@ -241,7 +208,7 @@ def build_sync_checklist(
                 ["Release-summary reuse", "Post-`P7` next phase", "Evidence reopen discipline"],
             )
             else "blocked",
-            "notes": "The layout decision log should record release-summary reuse plus the new governance choices.",
+            "notes": "The layout decision log should record release-summary reuse and governance choices.",
         },
         {
             "item_id": "p8_p9_checkpoint_remains_explicit",
@@ -259,7 +226,7 @@ def build_sync_checklist(
                 ["What `P9` closed", "Next-stage starting point", "restrained release-candidate checkpoint"],
             )
             else "blocked",
-            "notes": "The completed P8/P9 digests should remain explicit as the baseline for the next plan-mode stage.",
+            "notes": "The completed P8/P9 digests should remain explicit as the bundle-lock baseline.",
         },
     ]
 
@@ -269,97 +236,53 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         {
             "path": "README.md",
             "needles": [
-                "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline",
-                "`H10-H12` | completed bounded `D0` retrieval-pressure packet",
-                "| `H20-H21` | completed post-`H19` reentry/refreeze packet",
-                "| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the current frozen scientific state",
-                "| `H24-H25` | completed post-`H23` reauthorization/refreeze packet",
-                "`H25_refreeze_after_r30_r31_decision_packet`. It preserves",
-                "`H23_refreeze_after_r26_r27_r28` as the frozen same-endpoint scientific state",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`R44_origin_restricted_wasm_useful_case_execution_gate`",
+                "`R45_origin_dual_mode_model_mainline_gate`",
+                "`promotion_mode = explicit_merge_wave` and `merge_executed = false`",
             ],
         },
         {
             "path": "STATUS.md",
             "needles": [
-                "`P8` stage is complete on the current frozen scope",
-                "`P9` stage is complete on the same scope",
-                "`H25_refreeze_after_r30_r31_decision_packet`",
-                "`H22/R26/R28/R27/H23` packet preserved as the current frozen narrow-endpoint scientific state",
-                "`H24/R30/R31/H25` packet preserved as the current decision/refreeze layer above it",
-                "`H21` now remains the preserved pre-reopen same-endpoint control",
-                "`H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                "`H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                "`H14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
-                "`V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-                "`healthy_but_slow`",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`H42_post_r43_route_selection_packet`",
+                "`H36_post_r40_bounded_scalar_family_refreeze`",
+                "`R43_origin_bounded_memory_small_vm_execution_gate`",
             ],
         },
         {
             "path": "docs/publication_record/README.md",
             "needles": [
-                "current_stage_driver.md",
-                "planning_state_taxonomy.md",
-                "submission_packet_index.md",
-                "archival_repro_manifest.md",
-                "release_summary_draft.md",
-                "release_preflight_checklist.md",
-                "release_preflight_checklist_audit",
-                "release_worktree_hygiene_snapshot",
-                "paper_package_plan.md",
-                "current `H27` active decision packet",
-                "preserving `H26` as the current same-endpoint boundary packet",
-                "`R33` as the completed bounded systems-audit lane",
-                "`H25` as the preserved prior post-`H23` decision packet",
-                "`H23` as the preserved earlier frozen same-endpoint scientific state",
-                "`results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json`",
-                "`results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json`",
-                "`results/R33_d0_non_retrieval_overhead_localization_audit/summary.json`",
-                "`results/H25_refreeze_after_r30_r31_decision_packet/summary.json`",
-                "`results/H23_refreeze_after_r26_r27_r28/summary.json`",
-                "`results/R30_d0_boundary_reauthorization_packet/summary.json`",
-                "`results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`",
-                "`H21` as the immediate pre-reopen control",
-                "`H13/V1` preserved as the governance/runtime handoff",
-                "staged the bounded `R32 -> H26 -> R33 -> H27` wave",
+                "2026-03-24-post-h43-p29-release-audit-refresh-design.md",
+                "docs/milestones/P29_post_h43_release_audit_refresh/",
+                "results/P29_post_h43_release_audit_refresh/summary.json",
+                "docs/milestones/P28_post_h43_publication_surface_sync/",
             ],
         },
         {
             "path": "docs/publication_record/current_stage_driver.md",
             "needles": [
-                "`H27_refreeze_after_r32_r33_same_endpoint_decision`",
-                "`H26_refreeze_after_r32_boundary_sharp_zoom`",
-                "`R33_d0_non_retrieval_overhead_localization_audit`",
-                "`systems_verdict = systems_more_sharply_negative`",
-                "`next_priority_lane = later_explicit_packet_required_before_new_runtime`",
-                "`H25_refreeze_after_r30_r31_decision_packet` remains the completed prior operational decision packet",
-                "`H23_refreeze_after_r26_r27_r28` remains the preserved earlier same-endpoint scientific control stage",
-                "`R29_d0_same_endpoint_systems_recovery_execution_gate` remains blocked",
-                "`F3_post_h23_scope_lift_decision_bundle` remains blocked",
-                "`F2_future_frontier_recheck_activation_matrix` remains planning-only",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`R44_origin_restricted_wasm_useful_case_execution_gate`",
+                "`R45_origin_dual_mode_model_mainline_gate`",
+                "`no_active_downstream_runtime_lane`",
             ],
         },
         {
             "path": "docs/publication_record/release_summary_draft.md",
             "needles": [
-                "This repository reproduces a narrow execution-substrate claim",
-                "`H10/H11/R8/R9/R10/H12` is now the latest completed same-endpoint follow-up packet",
-                "`H13/V1` is now the preserved governance/runtime handoff",
-                "The current frozen scientific state inside the post-`P9` chain is `H23_refreeze_after_r26_r27_r28`",
-                "The downstream `P14` public-surface sync implied by `H23` is docs-only and is already complete",
-                "The current active post-`P9` stage is now `H25_refreeze_after_r30_r31_decision_packet`",
-                "`H21` is now the preserved immediate pre-reopen control",
-                "`H17` remains the preserved prior same-scope refreeze decision",
-                "`E1c` remains conditional only",
+                "`H43_post_r44_useful_case_refreeze`",
+                "completed current semantic-boundary gate stack",
+                "`P28` aligns publication-facing ledgers to landed `H43`",
             ],
         },
         {
             "path": "docs/publication_record/manuscript_bundle_draft.md",
             "needles": [
                 "## 1. Abstract",
-                "## 10. Reproducibility Appendix",
                 "Companion appendix material stays clearly downstream",
-                "The no-widening decision is part",
+                "## 10. Reproducibility Appendix",
             ],
         },
         {
@@ -376,18 +299,19 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
         },
     ]
     rows: list[dict[str, object]] = []
+    input_key_by_path = {
+        "README.md": "readme_text",
+        "STATUS.md": "status_text",
+        "docs/publication_record/README.md": "publication_readme_text",
+        "docs/publication_record/current_stage_driver.md": "current_stage_driver_text",
+        "docs/publication_record/release_summary_draft.md": "release_summary_text",
+        "docs/publication_record/manuscript_bundle_draft.md": "manuscript_text",
+        "docs/publication_record/layout_decision_log.md": "layout_log_text",
+        "docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md": "p8_result_digest_text",
+        "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md": "p9_result_digest_text",
+    }
     for row in snapshots:
-        input_key = {
-            "README.md": "readme_text",
-            "STATUS.md": "status_text",
-            "docs/publication_record/README.md": "publication_readme_text",
-            "docs/publication_record/current_stage_driver.md": "current_stage_driver_text",
-            "docs/publication_record/release_summary_draft.md": "release_summary_text",
-            "docs/publication_record/manuscript_bundle_draft.md": "manuscript_text",
-            "docs/publication_record/layout_decision_log.md": "layout_log_text",
-            "docs/milestones/P8_submission_candidate_and_bundle_lock/result_digest.md": "p8_result_digest_text",
-            "docs/milestones/P9_release_candidate_and_public_surface_freeze/result_digest.md": "p9_result_digest_text",
-        }[str(row["path"])]
+        input_key = input_key_by_path[str(row["path"])]
         rows.append(
             {
                 "path": row["path"],
@@ -400,15 +324,15 @@ def build_surface_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h25_refreeze_after_r30_r31_decision_packet_active_h23_frozen",
-        "internal_driver_phase": "h27_refreeze_after_r32_r33_same_endpoint_decision_active",
+        "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+        "internal_driver_phase": "h43_post_r44_useful_case_refreeze_active",
         "release_summary_role": "approved_downstream_short_update_source",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "keep the outward-facing H25/H23 public surface aligned while treating H27 as the current internal driver, H26 as the current same-endpoint boundary packet, R33 as the completed bounded systems-audit lane, R30 and R31 as the landed reauthorization pair for the finished R32/H26/R33/H27 wave, H22/R26/R28/R27 as the completed bounded reopen packet, H21 as the preserved pre-reopen control, H19 as the earlier same-endpoint refreeze, H17 as the preserved prior same-scope refreeze, H15 as the prior refreeze decision, and H13/V1 plus H8/R6/R7/H9 and H10/H11/R8/R9/R10/H12 as preserved baselines"
+            "keep the outward-facing H43 publication surface aligned while treating P29 as the current release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, H36 as the preserved routing/refreeze packet, R42/R43/R44/R45 as the completed current gate stack, and no_active_downstream_runtime_lane as the current follow-on state"
             if not blocked_items
             else "resolve the blocked public-surface sync items before another outward wording update"
         ),
@@ -464,9 +388,8 @@ def main() -> None:
                 "# P5 Public Surface Sync",
                 "",
                 "Machine-readable audit of whether the current public surface stays aligned with the",
-                "locked checkpoint, the current outward H25/H23 surface, the internal H27 canonical",
-                "driver, and the",
-                "approved downstream release summary.",
+                "landed H43 stack, the current outward release summary, and the current low-priority",
+                "release/public audit refresh packet.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

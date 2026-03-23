@@ -22,6 +22,7 @@ def read_json(path: str | Path) -> dict[str, Any]:
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
@@ -60,6 +61,16 @@ def load_inputs() -> dict[str, Any]:
         "release_preflight_text": read_text(
             ROOT / "docs" / "publication_record" / "release_preflight_checklist.md"
         ),
+        "release_candidate_text": read_text(
+            ROOT / "docs" / "publication_record" / "release_candidate_checklist.md"
+        ),
+        "submission_candidate_text": read_text(
+            ROOT / "docs" / "publication_record" / "submission_candidate_criteria.md"
+        ),
+        "claim_ladder_text": read_text(ROOT / "docs" / "publication_record" / "claim_ladder.md"),
+        "archival_manifest_text": read_text(
+            ROOT / "docs" / "publication_record" / "archival_repro_manifest.md"
+        ),
         "manuscript_text": read_text(ROOT / "docs" / "publication_record" / "manuscript_bundle_draft.md"),
         "paper_bundle_status_text": read_text(
             ROOT / "docs" / "publication_record" / "paper_bundle_status.md"
@@ -74,10 +85,14 @@ def load_inputs() -> dict[str, Any]:
         ),
         "blog_rules_text": read_text(ROOT / "docs" / "publication_record" / "blog_release_rules.md"),
         "p1_summary": read_json(ROOT / "results" / "P1_paper_readiness" / "summary.json"),
-        "h25_summary": read_json(ROOT / "results" / "H25_refreeze_after_r30_r31_decision_packet" / "summary.json"),
-        "h23_summary": read_json(ROOT / "results" / "H23_refreeze_after_r26_r27_r28" / "summary.json"),
-        "r30_summary": read_json(ROOT / "results" / "R30_d0_boundary_reauthorization_packet" / "summary.json"),
-        "r31_summary": read_json(ROOT / "results" / "R31_d0_same_endpoint_systems_recovery_reauthorization_packet" / "summary.json"),
+        "h43_summary": read_json(ROOT / "results" / "H43_post_r44_useful_case_refreeze" / "summary.json"),
+        "r44_summary": read_json(ROOT / "results" / "R44_origin_restricted_wasm_useful_case_execution_gate" / "summary.json"),
+        "r45_summary": read_json(ROOT / "results" / "R45_origin_dual_mode_model_mainline_gate" / "summary.json"),
+        "r43_summary": read_json(ROOT / "results" / "R43_origin_bounded_memory_small_vm_execution_gate" / "summary.json"),
+        "p27_summary": read_json(
+            ROOT / "results" / "P27_post_h41_clean_promotion_and_explicit_merge_packet" / "summary.json"
+        ),
+        "p28_summary": read_json(ROOT / "results" / "P28_post_h43_publication_surface_sync" / "summary.json"),
         "p5_summary": read_json(ROOT / "results" / "P5_public_surface_sync" / "summary.json"),
         "p5_callout_summary": read_json(ROOT / "results" / "P5_callout_alignment" / "summary.json"),
         "h2_summary": read_json(ROOT / "results" / "H2_bundle_lock_audit" / "summary.json"),
@@ -129,6 +144,10 @@ def build_checklist_rows(
     status_text: str,
     release_summary_text: str,
     release_preflight_text: str,
+    release_candidate_text: str,
+    submission_candidate_text: str,
+    claim_ladder_text: str,
+    archival_manifest_text: str,
     manuscript_text: str,
     paper_bundle_status_text: str,
     layout_log_text: str,
@@ -137,10 +156,12 @@ def build_checklist_rows(
     appendix_scope_text: str,
     blog_rules_text: str,
     p1_summary: dict[str, Any],
-    h25_summary: dict[str, Any],
-    h23_summary: dict[str, Any],
-    r30_summary: dict[str, Any],
-    r31_summary: dict[str, Any],
+    h43_summary: dict[str, Any],
+    r44_summary: dict[str, Any],
+    r45_summary: dict[str, Any],
+    r43_summary: dict[str, Any],
+    p27_summary: dict[str, Any],
+    p28_summary: dict[str, Any],
     p5_summary: dict[str, Any],
     p5_callout_summary: dict[str, Any],
     h2_summary: dict[str, Any],
@@ -157,31 +178,27 @@ def build_checklist_rows(
                 [
                     "does **not** claim that general llms are computers",
                     "arbitrary c has been reproduced",
-                    "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
-                    "| `h20-h21` | completed post-`h19` reentry/refreeze packet",
-                    "| `h22-h23` | completed bounded post-`h21` dual-track reopen/refreeze packet",
-                    "| `h24-h25` | completed post-`h23` reauthorization/refreeze packet",
-                    "the current active post-`p9` stage is `h25_refreeze_after_r30_r31_decision_packet`",
+                    "the current active stage is",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
+                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "no active downstream runtime lane now follows `h43`",
                 ],
             )
             and contains_all(
                 status_text,
                 [
-                    "`h25_refreeze_after_r30_r31_decision_packet`",
-                    "`h22/r26/r28/r27/h23` packet preserved as the current frozen narrow-endpoint scientific state",
-                    "`h24/r30/r31/h25` packet preserved as the current decision/refreeze layer above it",
-                    "`h21` now remains the preserved pre-reopen same-endpoint control",
-                    "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                    "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                    "`h14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
-                    "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                    "`healthy_but_slow`",
-                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                    "`e1c` remains conditional only",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`h42_post_r43_route_selection_packet`",
+                    "`h36_post_r40_bounded_scalar_family_refreeze`",
+                    "`r43_origin_bounded_memory_small_vm_execution_gate`",
+                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
+                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "`merge_executed = false`",
                 ],
             )
             else "blocked",
-            "notes": "README and STATUS should keep the narrow scope explicit while naming current H25, frozen H23, preserved H21/H19/H17/H15/H14/H13/V1 state, and bounded runtime classification.",
+            "notes": "README and STATUS should keep the H43 release-control stack explicit while preserving narrow non-goals.",
         },
         {
             "item_id": "release_preflight_checklist_tracks_current_machine_guards",
@@ -189,28 +206,35 @@ def build_checklist_rows(
             if contains_all(
                 release_preflight_text,
                 [
-                    "results/P1_paper_readiness/summary.json",
-                    "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
-                    "results/H23_refreeze_after_r26_r27_r28/summary.json",
-                    "results/R30_d0_boundary_reauthorization_packet/summary.json",
-                    "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
-                    "results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json",
-                    "results/R26_d0_boundary_localization_execution_gate/summary.json",
-                    "results/R27_d0_boundary_localization_extension_gate/summary.json",
-                    "results/R28_d0_trace_retrieval_contract_audit/summary.json",
-                    "results/H21_refreeze_after_r22_r23/summary.json",
-                    "results/H19_refreeze_and_next_scope_decision/summary.json",
-                    "results/H17_refreeze_and_conditional_frontier_recheck/summary.json",
-                    "results/H15_refreeze_and_decision_sync/summary.json",
-                    "results/P5_public_surface_sync/summary.json",
-                    "results/P5_callout_alignment/summary.json",
-                    "results/H2_bundle_lock_audit/summary.json",
+                    "results/p1_paper_readiness/summary.json",
+                    "results/h43_post_r44_useful_case_refreeze/summary.json",
+                    "results/r44_origin_restricted_wasm_useful_case_execution_gate/summary.json",
+                    "results/r45_origin_dual_mode_model_mainline_gate/summary.json",
+                    "results/r43_origin_bounded_memory_small_vm_execution_gate/summary.json",
+                    "results/p27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json",
+                    "results/r42_origin_append_only_memory_retrieval_contract_gate/summary.json",
+                    "results/h40_post_h38_semantic_boundary_activation_packet/summary.json",
+                    "results/h38_post_f16_runtime_relevance_reopen_decision_packet/summary.json",
+                    "results/p26_post_h37_promotion_and_artifact_hygiene_audit/summary.json",
+                    "results/h37_post_h36_runtime_relevance_decision_packet/summary.json",
+                    "results/h36_post_r40_bounded_scalar_family_refreeze/summary.json",
+                    "results/p25_post_h36_clean_promotion_prep/summary.json",
+                    "results/h35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json",
+                    "results/r40_origin_bounded_scalar_locals_and_flags_gate/summary.json",
+                    "results/h34_post_r39_later_explicit_scope_decision_packet/summary.json",
+                    "results/h32_post_r38_compiled_boundary_refreeze/summary.json",
+                    "results/p5_public_surface_sync/summary.json",
+                    "results/h2_bundle_lock_audit/summary.json",
                     "results/release_worktree_hygiene_snapshot/summary.json",
-                    "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
+                    "results/v1_full_suite_validation_runtime_timing_followup/summary.json",
+                    "release_candidate_checklist.md",
+                    "submission_candidate_criteria.md",
+                    "claim_ladder.md",
+                    "archival_repro_manifest.md",
                 ],
             )
             else "blocked",
-            "notes": "The human release checklist should point at the current standing machine guards, including the V1 timing follow-up.",
+            "notes": "The human release checklist should point at the current H43-era machine guards and downstream ledgers.",
         },
         {
             "item_id": "release_summary_and_blog_rules_stay_downstream",
@@ -218,13 +242,10 @@ def build_checklist_rows(
             if contains_all(
                 release_summary_text,
                 [
-                    "narrow execution-substrate claim",
-                    "`h13/v1` is now the preserved governance/runtime handoff",
-                    "the current frozen scientific state inside the post-`p9` chain is `h23_refreeze_after_r26_r27_r28`",
-                    "the current active post-`p9` stage is now `h25_refreeze_after_r30_r31_decision_packet`",
-                    "`h21` is now the preserved immediate pre-reopen control",
-                    "`h17` remains the preserved prior same-scope refreeze decision",
-                    "`e1c` remains conditional only",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "completed current semantic-boundary gate stack",
+                    "`p28` aligns publication-facing ledgers to landed `h43`",
+                    "no active downstream runtime lane exists after `h43`",
                 ],
             )
             and contains_all(
@@ -237,32 +258,25 @@ def build_checklist_rows(
                 ],
             )
             else "blocked",
-            "notes": "Release summary and blog rules must remain downstream of the frozen manuscript bundle and current release gates.",
+            "notes": "Release summary and blog rules must remain downstream of the landed H43 stack.",
         },
         {
-            "item_id": "manuscript_bundle_stays_section_ordered",
+            "item_id": "manuscript_and_bundle_ledgers_stay_synchronized",
             "status": "pass"
             if contains_all(
                 manuscript_text,
                 [
                     "## 1. Abstract",
                     "## 10. Reproducibility Appendix",
-                    "The no-widening decision is part",
                     "Companion appendix material stays clearly downstream",
                 ],
             )
-            else "blocked",
-            "notes": "The manuscript bundle should remain a section-shaped frozen draft rather than drifting back into planning notes.",
-        },
-        {
-            "item_id": "paper_facing_ledgers_stay_synchronized",
-            "status": "pass"
-            if contains_all(
+            and contains_all(
                 paper_bundle_status_text,
                 [
-                    "locked submission-candidate bundle",
-                    "claim/evidence scope kept closed by default",
-                    "current submission/release controls",
+                    "`h43` is the current docs-only useful-case refreeze packet",
+                    "`r42`, `r43`, `r44`, and `r45` are the completed current semantic-boundary",
+                    "`p28` aligns publication-facing ledgers to landed `h43`",
                 ],
             )
             and contains_all(
@@ -272,11 +286,9 @@ def build_checklist_rows(
             and contains_all(
                 freeze_candidate_text,
                 [
-                    "claim boundaries stay fixed",
-                    "main-text artifact set stays fixed and ready",
-                    "appendix companions stay scoped and auditable",
-                    "release-facing derivatives remain downstream",
-                    "docs/publication_record/release_preflight_checklist.md",
+                    "active `h43` docs-only useful-case refreeze packet",
+                    "completed `r42/r43/r44/r45`",
+                    "results/p28_post_h43_publication_surface_sync/summary.json",
                 ],
             )
             and contains_all(
@@ -298,7 +310,47 @@ def build_checklist_rows(
                 ],
             )
             else "blocked",
-            "notes": "The frozen manuscript, bundle-status, figure-order, and appendix-scope ledgers should continue to agree.",
+            "notes": "The manuscript, bundle-status, freeze-candidate, main-text, and appendix ledgers should continue to agree.",
+        },
+        {
+            "item_id": "release_candidate_submission_claim_and_archive_ledgers_track_current_stack",
+            "status": "pass"
+            if contains_all(
+                release_candidate_text,
+                [
+                    "current `h43` docs-only useful-case refreeze",
+                    "`r42-r43-r44-r45` completed semantic-boundary gate stack",
+                    "results/h43_post_r44_useful_case_refreeze/summary.json",
+                    "results/p28_post_h43_publication_surface_sync/summary.json",
+                ],
+            )
+            and contains_all(
+                submission_candidate_text,
+                [
+                    "active `h43` docs-only useful-case",
+                    "completed `r42/r43/r44/r45` semantic-boundary gate stack",
+                    "results/p28_post_h43_publication_surface_sync/summary.json",
+                ],
+            )
+            and contains_all(
+                claim_ladder_text,
+                [
+                    "| H43 Post-R44 useful-case refreeze | validated as the current docs-only useful-case refreeze packet |",
+                    "| D2 Restricted Wasm / tiny-`C` useful-case ladder |",
+                    "| D1g Coequal dual-mode model lane |",
+                ],
+            )
+            and contains_all(
+                archival_manifest_text,
+                [
+                    "results/h43_post_r44_useful_case_refreeze/summary.json",
+                    "results/p28_post_h43_publication_surface_sync/summary.json",
+                    "current active docs-only packet is `h43`",
+                    "completed `p27/p28` operational",
+                ],
+            )
+            else "blocked",
+            "notes": "Release-candidate, submission, claim, and archival ledgers should all expose the same current H43 release-control stack.",
         },
         {
             "item_id": "release_worktree_hygiene_snapshot_classifies_commit_state",
@@ -309,6 +361,13 @@ def build_checklist_rows(
                 "clean_worktree_ready_if_other_gates_green",
             }
             and diff_check_state_from_summary(worktree_hygiene_summary) != "content_issues_present"
+            and contains_all(
+                worktree_hygiene_summary_text,
+                [
+                    '"release_commit_state":',
+                    '"git_diff_check_state":',
+                ],
+            )
             else "blocked",
             "notes": "The worktree hygiene snapshot should classify current release-commit readiness and rule out diff-check content issues.",
         },
@@ -317,17 +376,25 @@ def build_checklist_rows(
             "status": "pass"
             if ready_count_from_p1_summary(p1_summary) == 10
             and not p1_summary["blocked_or_partial_items"]
-            and blocked_count_from_summary(h25_summary) == 0
-            and blocked_count_from_summary(h23_summary) == 0
-            and blocked_count_from_summary(r30_summary) == 0
-            and blocked_count_from_summary(r31_summary) == 0
+            and str(h43_summary["summary"]["selected_outcome"]) == "freeze_r44_as_narrow_supported_here"
+            and str(h43_summary["summary"]["claim_d_state"]) == "supported_here_narrowly"
+            and str(h43_summary["summary"]["next_required_lane"]) == "no_active_downstream_runtime_lane"
+            and str(r44_summary["summary"]["gate"]["lane_verdict"]) == "useful_case_surface_supported_narrowly"
+            and int(r44_summary["summary"]["gate"]["exact_kernel_count"]) == 3
+            and str(r45_summary["summary"]["gate"]["lane_verdict"])
+            == "coequal_model_lane_supported_without_replacing_exact"
+            and int(r45_summary["summary"]["gate"]["exact_mode_count"]) == 2
+            and str(r43_summary["summary"]["gate"]["lane_verdict"]) == "keep_semantic_boundary_route"
+            and int(r43_summary["summary"]["gate"]["exact_family_count"]) == 5
+            and bool(p27_summary["summary"]["merge_executed"]) is False
+            and blocked_count_from_summary(p28_summary) == 0
             and blocked_count_from_summary(p5_summary) == 0
             and blocked_count_from_summary(p5_callout_summary) == 0
             and blocked_count_from_summary(h2_summary) == 0
             and runtime_classification_from_summary(v1_timing_summary) == "healthy_but_slow"
             and timed_out_count_from_summary(v1_timing_summary) == 0
             else "blocked",
-            "notes": "The current release-preflight surface still depends on the H25/H23/R30/R31 decision chain, the frozen P1/P5/H2 chain, and the bounded V1 timing classification.",
+            "notes": "The current release-preflight surface depends on the landed H43/R44/R45/R43/P27/P28 stack plus the standing P5/H2 and V1 audits.",
         },
     ]
 
@@ -337,71 +404,83 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         "README.md": (
             "readme_text",
             [
-                "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline",
-                "| `H20-H21` | completed post-`H19` reentry/refreeze packet",
-                "| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet",
-                "| `H24-H25` | completed post-`H23` reauthorization/refreeze packet",
-                "The current active post-`P9` stage is `H25_refreeze_after_r30_r31_decision_packet`",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`R44_origin_restricted_wasm_useful_case_execution_gate`",
+                "`R45_origin_dual_mode_model_mainline_gate`",
+                "no active downstream runtime lane now follows `H43`",
             ],
         ),
         "STATUS.md": (
             "status_text",
             [
-                "`H25_refreeze_after_r30_r31_decision_packet`",
-                "`H22/R26/R28/R27/H23` packet preserved as the current frozen narrow-endpoint scientific state",
-                "`H24/R30/R31/H25` packet preserved as the current decision/refreeze layer above it",
-                "`H21` now remains the preserved pre-reopen same-endpoint control",
-                "`H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                "`H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                "`H14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
-                "`healthy_but_slow`",
-                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`H42_post_r43_route_selection_packet`",
+                "`R43_origin_bounded_memory_small_vm_execution_gate`",
+                "`merge_executed = false`",
             ],
         ),
         "docs/publication_record/release_summary_draft.md": (
             "release_summary_text",
             [
-                "`H13/V1` is now the preserved governance/runtime handoff",
-                "The current frozen scientific state inside the post-`P9` chain is `H23_refreeze_after_r26_r27_r28`",
-                "The current active post-`P9` stage is now `H25_refreeze_after_r30_r31_decision_packet`",
-                "`H21` is now the preserved immediate pre-reopen control",
-                "`H17` remains the preserved prior same-scope refreeze decision",
-                "`E1c` remains conditional only",
+                "`H43_post_r44_useful_case_refreeze`",
+                "completed current semantic-boundary gate stack",
+                "`P28` aligns publication-facing ledgers to landed `H43`",
             ],
         ),
         "docs/publication_record/release_preflight_checklist.md": (
             "release_preflight_text",
             [
-                "results/P1_paper_readiness/summary.json",
-                "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
-                "results/H23_refreeze_after_r26_r27_r28/summary.json",
-                "results/R30_d0_boundary_reauthorization_packet/summary.json",
-                "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
-                "results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json",
-                "results/R26_d0_boundary_localization_execution_gate/summary.json",
-                "results/R27_d0_boundary_localization_extension_gate/summary.json",
-                "results/R28_d0_trace_retrieval_contract_audit/summary.json",
-                "results/H21_refreeze_after_r22_r23/summary.json",
-                "results/H19_refreeze_and_next_scope_decision/summary.json",
-                "results/H17_refreeze_and_conditional_frontier_recheck/summary.json",
-                "results/H15_refreeze_and_decision_sync/summary.json",
-                "results/H2_bundle_lock_audit/summary.json",
-                "results/release_worktree_hygiene_snapshot/summary.json",
-                "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
+                "results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json",
+                "results/R45_origin_dual_mode_model_mainline_gate/summary.json",
+                "results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json",
+                "release_candidate_checklist.md",
+                "claim_ladder.md",
+            ],
+        ),
+        "docs/publication_record/release_candidate_checklist.md": (
+            "release_candidate_text",
+            [
+                "current `H43` docs-only useful-case refreeze",
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
+                "results/P28_post_h43_publication_surface_sync/summary.json",
+            ],
+        ),
+        "docs/publication_record/submission_candidate_criteria.md": (
+            "submission_candidate_text",
+            [
+                "active `H43` docs-only useful-case",
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
+                "results/P28_post_h43_publication_surface_sync/summary.json",
+            ],
+        ),
+        "docs/publication_record/claim_ladder.md": (
+            "claim_ladder_text",
+            [
+                "H43 Post-R44 useful-case refreeze",
+                "Restricted Wasm / tiny-`C` useful-case ladder",
+                "Coequal dual-mode model lane",
+            ],
+        ),
+        "docs/publication_record/archival_repro_manifest.md": (
+            "archival_manifest_text",
+            [
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
+                "results/P28_post_h43_publication_surface_sync/summary.json",
+                "The current active docs-only packet is `H43`",
             ],
         ),
         "results/release_worktree_hygiene_snapshot/summary.json": (
             "worktree_hygiene_summary_text",
             [
-                "\"release_commit_state\":",
-                "\"git_diff_check_state\":",
+                '"release_commit_state":',
+                '"git_diff_check_state":',
             ],
         ),
         "docs/publication_record/manuscript_bundle_draft.md": (
             "manuscript_text",
             [
                 "## 1. Abstract",
-                "The no-widening decision is part",
                 "Companion appendix material stays clearly downstream",
                 "## 10. Reproducibility Appendix",
             ],
@@ -409,17 +488,17 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         "docs/publication_record/paper_bundle_status.md": (
             "paper_bundle_status_text",
             [
-                "locked submission-candidate bundle",
-                "claim/evidence scope kept closed by default",
-                "current submission/release controls",
+                "`H43` is the current docs-only useful-case refreeze packet",
+                "`R42`, `R43`, `R44`, and `R45` are the completed current semantic-boundary",
+                "`P28` aligns publication-facing ledgers to landed `H43`",
             ],
         ),
         "docs/publication_record/freeze_candidate_criteria.md": (
             "freeze_candidate_text",
             [
-                "Claim boundaries stay fixed",
-                "Appendix companions stay scoped and auditable",
-                "Release-facing derivatives remain downstream",
+                "active `H43` docs-only useful-case refreeze packet",
+                "results/P28_post_h43_publication_surface_sync/summary.json",
+                "completed `R42/R43/R44/R45`",
             ],
         ),
         "docs/publication_record/main_text_order.md": (
@@ -456,7 +535,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summary: dict[str, Any]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h25_refreeze_after_r30_r31_decision_packet_active_h23_frozen",
+        "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
         "preflight_scope": "outward_release_surface_and_frozen_paper_bundle",
         "preflight_state": "docs_and_audits_green" if not blocked_items else "blocked",
         "release_commit_state": release_commit_state_from_summary(worktree_hygiene_summary),
@@ -466,7 +545,7 @@ def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summ
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H25 remains the current active decision packet, H23 remains the frozen same-endpoint scientific state, R30 and R31 remain the landed reauthorization packet pair for the R32/R33 routing decision, H22/R26/R28/R27 remains the completed bounded reopen packet, H21 remains the preserved pre-reopen control, H19 remains the earlier same-endpoint refreeze, H17 remains the preserved prior same-scope refreeze, H15 remains the preserved prior refreeze decision, H14/R11/R12 remains the completed prior reopen packet, and H13/V1 remains preserved handoff state"
+            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H43 remains the current active docs-only useful-case refreeze packet, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, P27 remains the explicit merge packet with merge_executed = false, P28 remains the completed publication/control sync packet, and no_active_downstream_runtime_lane remains the current follow-on state"
             if not blocked_items
             else "resolve the blocked release-preflight items before treating outward-sync docs as stable"
         ),
@@ -507,6 +586,10 @@ def main() -> None:
                 "STATUS.md",
                 "docs/publication_record/release_summary_draft.md",
                 "docs/publication_record/release_preflight_checklist.md",
+                "docs/publication_record/release_candidate_checklist.md",
+                "docs/publication_record/submission_candidate_criteria.md",
+                "docs/publication_record/claim_ladder.md",
+                "docs/publication_record/archival_repro_manifest.md",
                 "docs/publication_record/manuscript_bundle_draft.md",
                 "docs/publication_record/paper_bundle_status.md",
                 "docs/publication_record/layout_decision_log.md",
@@ -515,10 +598,12 @@ def main() -> None:
                 "docs/publication_record/appendix_companion_scope.md",
                 "docs/publication_record/blog_release_rules.md",
                 "results/P1_paper_readiness/summary.json",
-                "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
-                "results/H23_refreeze_after_r26_r27_r28/summary.json",
-                "results/R30_d0_boundary_reauthorization_packet/summary.json",
-                "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
+                "results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json",
+                "results/R45_origin_dual_mode_model_mainline_gate/summary.json",
+                "results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json",
+                "results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json",
+                "results/P28_post_h43_publication_surface_sync/summary.json",
                 "results/P5_public_surface_sync/summary.json",
                 "results/P5_callout_alignment/summary.json",
                 "results/H2_bundle_lock_audit/summary.json",
@@ -533,10 +618,9 @@ def main() -> None:
             [
                 "# Release Preflight Checklist Audit",
                 "",
-                "Machine-readable audit of whether the current outward release-facing docs",
-                "and frozen paper bundle remain aligned on the current H25 active decision",
-                "packet, the preserved H23 frozen same-endpoint scientific state, the",
-                "preserved H21/H19 control chain, and the preserved H13/V1 handoff. Current release-commit readiness is carried by the",
+                "Machine-readable audit of whether the current outward release-facing docs,",
+                "release/public ledgers, and frozen paper bundle remain aligned on the current",
+                "H43 release-control stack. Current release-commit readiness is carried by the",
                 "separate worktree hygiene snapshot.",
                 "",
                 "Artifacts:",

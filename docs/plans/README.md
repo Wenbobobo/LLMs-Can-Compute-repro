@@ -30,10 +30,14 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   refreeze design surface that turns landed `R44` into the completed current
   narrow useful-case gate and returns the stack to no active downstream
   runtime lane.
-- `2026-03-24-post-h43-p28-publication-surface-sync-design.md` — the current
-  low-priority publication/control sync design surface that aligns paper-facing
-  ledgers to landed `H43/R44/R45/R43/P27` state without changing the
-  scientific stage.
+- `2026-03-24-post-h43-p29-release-audit-refresh-design.md` — the current
+  low-priority release/public audit refresh design surface that updates stale
+  downstream audits and the last contradictory release-facing ledgers
+  downstream of landed `H43`.
+- `2026-03-24-post-h43-p28-publication-surface-sync-design.md` — the
+  completed prior low-priority publication/control sync design surface that
+  aligned paper-facing ledgers to landed `H43/R44/R45/R43/P27` state without
+  changing the scientific stage.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
@@ -88,11 +92,15 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `../milestones/P29_post_h43_release_audit_refresh/` — current low-priority
+  operational release/public audit refresh packet that updates stale
+  downstream audits and release-facing ledgers without changing scientific
+  stage.
 - `../milestones/H43_post_r44_useful_case_refreeze/` — current active
   docs-only refreeze packet that records `R44` as completed narrow useful-case
   evidence and restores `no_active_downstream_runtime_lane`.
-- `../milestones/P28_post_h43_publication_surface_sync/` — current
-  low-priority operational publication/control sync packet that aligns
+- `../milestones/P28_post_h43_publication_surface_sync/` — completed
+  low-priority operational publication/control sync packet that aligned
   paper-facing ledgers to the landed `H43` state.
 - `../milestones/H42_post_r43_route_selection_packet/` — preserved prior
   docs-only route-selection packet that authorized `R44` explicitly.
@@ -108,6 +116,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   completed operational promotion/artifact audit lane.
 - `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
   completed operational explicit merge packet for the post-`R42` override.
+- `../milestones/P29_post_h43_release_audit_refresh/` — current low-priority
+  operational release/public audit refresh packet downstream of `H43`.
 - `../milestones/P28_post_h43_publication_surface_sync/` — completed
   operational publication/control sync packet downstream of `H43`.
 - `../milestones/F16_post_h37_r41_candidate_isolation_bundle/` — current
@@ -159,7 +169,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 - `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
   control-override, explicit merge-wave, dual-mode execution, post-`R43`
-  route-selection, and post-`R44` useful-case refreeze design set.
+  route-selection, post-`R44` useful-case refreeze, and post-`H43`
+  operational sync/audit-refresh design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,

@@ -2,29 +2,19 @@
   "experiment": "h2_bundle_lock_audit",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
@@ -33,8 +23,6 @@
     "STATUS.md",
     "docs/publication_record/README.md",
     "docs/publication_record/current_stage_driver.md",
-    "docs/publication_record/planning_state_taxonomy.md",
-    "docs/publication_record/paper_package_plan.md",
     "docs/publication_record/release_summary_draft.md",
     "docs/publication_record/paper_bundle_status.md",
     "docs/publication_record/submission_candidate_criteria.md",
@@ -43,12 +31,12 @@
     "docs/publication_record/layout_decision_log.md"
   ],
   "summary": {
-    "current_paper_phase": "h19_refreeze_and_next_scope_decision_complete",
+    "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
     "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
-    "check_count": 8,
-    "pass_count": 8,
+    "check_count": 6,
+    "pass_count": 6,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "keep the H2 bundle-lock audit green while H19 stays aligned as the current frozen same-endpoint state, preserve H18/R19/R20/R21 as the completed same-endpoint mainline reopen packet, preserve H17 as the prior same-scope refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, preserve H13/V1 as handoff state, and keep H8/R6/R7/H9 plus H10/H11/R8/R9/R10/H12 as preserved baselines"
+    "recommended_next_action": "keep the H2 bundle-lock audit green while H43 stays aligned as the current docs-only useful-case refreeze packet, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
   }
 }

@@ -4,10 +4,11 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H40` docs-only activation / `H36` preserved-active /
-`R42` completed-retrieval-gate /
-`P26-F16-F17-F18-F19-F15` current-control-support /
-`H38-H37-P25` preserved immediate-predecessor support /
+the current `H43` docs-only useful-case refreeze / `H36` preserved-active /
+`R42-R43-R44-R45` completed semantic-boundary gate stack /
+`P28-P27` completed downstream sync-and-explicit-merge posture /
+`F20-F16-F17-F18-F19-F15` current-control-support /
+`H42-H41-H40-H38-H37-P26-P25` preserved immediate-predecessor support /
 `H35-H34-H33-H32-H31-H30` preserved question-selection-and-decision /
 `H29` preserved-upstream-refreeze / `H27-H28`
 preserved-closeout-and-pivot stack.
@@ -16,8 +17,9 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by `H40`, preserved `H36`, completed `R42`, completed `P26`,
-  current `F16/F17/F18/F19`, preserved `H38/H37/P25`, and current `F15`.
+  recorded by `H43`, preserved `H42/H41/H40/H38/H37`, preserved `H36`,
+  completed `R42/R43/R44/R45`, completed `P28/P27`, current `F20/F16/F17/F18/F19`,
+  preserved `P26/P25`, and current `F15`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
@@ -32,19 +34,21 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same `H40` current /
-  `H36` preserved active / `R42` completed current gate /
-  `P26-F16-F17-F18-F19-F15` current support /
-  `H38-H37-P25` preserved immediate-predecessor support /
+  `publication_record/README.md` all describe the same `H43` current /
+  `H36` preserved active / `R42-R43-R44-R45` completed current gate stack /
+  `P28-P27` completed operational sync-and-explicit-merge posture /
+  `F20-F16-F17-F18-F19-F15` current support /
+  `H42-H41-H40-H38-H37-P26-P25` preserved immediate-predecessor support /
   `H35-H34-H33-H32-H31-H30-H29-H27-H28` preserved current control package.
 - [ ] `plans/README.md`, the saved post-`P20/F5/F6` handoff surfaces, and the
   saved post-`H34` planning-wave surface still present docs/planning
   maintenance as admissible while runtime remains inactive by default.
 - [ ] `publication_record/README.md` and the saved planning-wave surfaces
-  present the completed `F16/H38/P26/F17/F18/F19/H40/R42` wave, the preserved
-  `P25/F15/H37` wave, the preserved `F7/F8/P21` wave, the preserved `F10/P22`
-  bridge wave, and the preserved `F12/F13/F14/P23` family-first wave while
-  keeping `F9` blocked and `F11` new-substrate.
+  present the completed `F20/H41/P27/R43/R45/H42/R44/H43/P28` wave, the
+  preserved `H40/R42/P26/F17/F18/F19/H38/F16/P25/F15/H37` support wave, the
+  preserved `F7/F8/P21` wave, the preserved `F10/P22` bridge wave, and the
+  preserved `F12/F13/F14/P23` family-first wave while keeping `F9` blocked
+  and `F11` new-substrate.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 
@@ -52,14 +56,37 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
-- [ ] `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
-  reports the current docs-only activation packet,
-  `authorize_r42_origin_append_only_memory_retrieval_contract_gate`, and zero
-  blocked items.
+- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the
+  current docs-only useful-case refreeze packet,
+  `freeze_r44_as_narrow_supported_here`, `claim_d_state =
+  supported_here_narrowly`, and `next_required_lane =
+  no_active_downstream_runtime_lane`.
 - [ ] `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
-  reports the completed current retrieval-contract gate,
+  reports the completed preserved retrieval-contract gate,
   `keep_semantic_boundary_route`, exact value plus maximizer-row identity, and
   `later_explicit_packet_required = true`.
+- [ ] `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
+  reports the completed current exact bounded-memory gate on `5/5` fixed
+  families.
+- [ ] `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
+  reports the completed current restricted useful-case gate,
+  `useful_case_surface_supported_narrowly`, and `exact_kernel_count = 3`.
+- [ ] `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
+  reports the completed current coequal model lane without replacing exact
+  evidence.
+- [ ] `results/P28_post_h43_publication_surface_sync/summary.json` reports the
+  completed publication/control sync packet that keeps `H43` current.
+- [ ] `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
+  reports the completed explicit merge packet and keeps
+  `merge_executed = false`.
+- [ ] `results/H42_post_r43_route_selection_packet/summary.json` reports the
+  preserved prior docs-only packet that authorized exact `R44`.
+- [ ] `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
+  reports the preserved earlier docs-only decision packet that authorized
+  exact `R43` plus coequal `R45`.
+- [ ] `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
+  remains available as the preserved prior activation packet that authorized
+  `R42`.
 - [ ] `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
   reports the preserved prior docs-only decision packet, `keep_h36_freeze`,
   and no active downstream runtime lane.
@@ -112,7 +139,8 @@ preserved-closeout-and-pivot stack.
   items on the preserved earlier core-first reopen control surface.
 - [ ] `results/H13_post_h12_governance_stage_health/summary.json` reports zero
   blocked items on the preserved governance/runtime handoff.
-- [ ] `results/P5_public_surface_sync/summary.json` reports zero blocked items.
+- [ ] `results/P5_public_surface_sync/summary.json` reports zero blocked items
+  on the current `H43`-aligned public surface.
 - [ ] `results/P5_callout_alignment/summary.json` reports zero blocked rows.
 - [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.
 - [ ] `results/release_worktree_hygiene_snapshot/summary.json` classifies

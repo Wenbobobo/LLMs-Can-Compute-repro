@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h27-promotion\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p29-h43-release-audit-refresh\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,40 +22,77 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
-        "| `H20-H21` | completed post-`H19` reentry/refreeze packet: `H20` isolated dirty-tree hygiene from the next science lanes, `R22` extended the bounded executor-boundary scan to `102/102` executed candidates without localizing a failure, `R23` reran the full positive `D0` systems universe and kept `pointer_like_exact` exact on `25/25` rows but still failed to overturn the mixed systems gate, and `H21` refroze the packet as the preserved pre-reopen same-endpoint control |",
-        "| `H22-H23` | completed bounded post-`H21` dual-track reopen/refreeze packet preserved as the current frozen scientific state: `H22` locked one boundary-first reopen contract, `R26` executed `22/22` first-wave candidates without localizing a failure, `R28` audited the mechanism contract as supported with partial control isolation, `R27` extended to `12/12` second-wave candidates without localizing a failure, and `H23` refroze the packet with `P14` as the downstream docs-only lane |",
-        "| `H24-H25` | completed post-`H23` reauthorization/refreeze packet: `H24` separated reauthorization work from hygiene, `R30` authorized one future family-local boundary sharp zoom through `R32`, `R31` routed any later same-endpoint systems recovery discussion through `R33` non-retrieval overhead localization first, and `H25` refroze that decision packet without widening scope |"
+        "now `H43_post_r44_useful_case_refreeze`, the preserved prior docs-only",
+        "`R44_origin_restricted_wasm_useful_case_execution_gate`, the current",
+        "`R45_origin_dual_mode_model_mainline_gate`, the current",
+        "- `R44_origin_restricted_wasm_useful_case_execution_gate` is now the",
+        "- no active downstream runtime lane now follows `H43`;",
+        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
+        "`R45_origin_dual_mode_model_mainline_gate`.",
+        "`H43_post_r44_useful_case_refreeze`, the preserved prior route-selection"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
-        "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-        "gate as `healthy_but_slow`.",
-        "`H25_refreeze_after_r30_r31_decision_packet`.",
-        "- `H21` now remains the preserved pre-reopen same-endpoint control packet",
-        "- `H21` now remains the preserved pre-reopen same-endpoint control:",
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior"
+        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
+        "`R43_origin_bounded_memory_small_vm_execution_gate`.",
+        "`promotion_mode = explicit_merge_wave` and `merge_executed = false`.",
+        "- `R43_origin_bounded_memory_small_vm_execution_gate` is now fixed as the",
+        "- `H42_post_r43_route_selection_packet` is now fixed as the completed",
+        "`wip/p27-promotion-merge`, keeps `merge_executed = false`, and preserves",
+        "- `R43_origin_bounded_memory_small_vm_execution_gate` is now complete as the",
+        "- `H42_post_r43_route_selection_packet` is now complete as the preserved prior"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
-      "matched_lines": []
+      "matched_lines": [
+        "`H43_post_r44_useful_case_refreeze`.",
+        "`H43_post_r44_useful_case_refreeze`, which preserves"
+      ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready",
-        "- [ ] `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`",
-        "- [ ] `results/H23_refreeze_after_r26_r27_r28/summary.json` reports zero",
-        "- [ ] `results/R30_d0_boundary_reauthorization_packet/summary.json` remains",
-        "- [ ] `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`",
-        "- [ ] `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`",
-        "- [ ] `results/R26_d0_boundary_localization_execution_gate/summary.json`",
-        "- [ ] `results/R27_d0_boundary_localization_extension_gate/summary.json`"
+        "- [ ] `release_candidate_checklist.md`, `submission_candidate_criteria.md`,",
+        "`claim_ladder.md`, and `archival_repro_manifest.md` all expose the same",
+        "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports",
+        "- [ ] `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`",
+        "- [ ] `results/R45_origin_dual_mode_model_mainline_gate/summary.json` reports",
+        "- [ ] `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_candidate_checklist.md",
+      "matched_lines": [
+        "the current `H43` docs-only useful-case refreeze / `H36` preserved-active /",
+        "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the",
+        "- [ ] `results/P28_post_h43_publication_surface_sync/summary.json` reports the"
+      ]
+    },
+    {
+      "path": "docs/publication_record/submission_candidate_criteria.md",
+      "matched_lines": [
+        "frozen scope, currently anchored on the active `H43` docs-only useful-case",
+        "- `results/H43_post_r44_useful_case_refreeze/summary.json`",
+        "- `results/P28_post_h43_publication_surface_sync/summary.json`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/claim_ladder.md",
+      "matched_lines": [
+        "| D1g Coequal dual-mode model lane | supported coequally without replacing exact evidence | `results/R45_origin_dual_mode_model_mainline_gate/summary.json`, `results/R45_origin_dual_mode_model_mainline_gate/family_rows.json` | model evidence stays explicitly downstream of exact `R43`; it is not a substitute for exact execution evidence |",
+        "| D2 Restricted Wasm / tiny-`C` useful-case ladder | validated narrowly on the fixed three-kernel useful-case surface | `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`, `results/R44_origin_restricted_wasm_useful_case_execution_gate/kernel_suite_report.json` | this is bounded useful-case support only, not arbitrary `C` or broad compiled-program coverage |",
+        "| H43 Post-R44 useful-case refreeze | validated as the current docs-only useful-case refreeze packet | `results/H43_post_r44_useful_case_refreeze/summary.json`, `results/H43_post_r44_useful_case_refreeze/claim_packet.json` | records claim `D` as `supported_here_narrowly`, keeps exact `R43` decisive and `R45` coequal non-substitutive, and restores `no_active_downstream_runtime_lane` |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/archival_repro_manifest.md",
+      "matched_lines": [
+        "- `results/H43_post_r44_useful_case_refreeze/summary.json` records the current",
+        "- `results/P28_post_h43_publication_surface_sync/summary.json` records the",
+        "The current active docs-only packet is `H43`, above the preserved active"
       ]
     },
     {
@@ -69,7 +106,6 @@
       "path": "docs/publication_record/manuscript_bundle_draft.md",
       "matched_lines": [
         "## 1. Abstract",
-        "but not for a broader source-language claim. The no-widening decision is part",
         "validate. Companion appendix material stays clearly downstream of that",
         "## 10. Reproducibility Appendix"
       ]
@@ -77,17 +113,16 @@
     {
       "path": "docs/publication_record/paper_bundle_status.md",
       "matched_lines": [
-        "locked submission-candidate bundle now serves as the current frozen bundle",
-        "claim/evidence scope kept closed by default.",
-        "The current submission/release controls also live in"
+        "`R42`, `R43`, `R44`, and `R45` are the completed current semantic-boundary",
+        "`P28` aligns publication-facing ledgers to landed `H43`, `F7` preserves a"
       ]
     },
     {
       "path": "docs/publication_record/freeze_candidate_criteria.md",
       "matched_lines": [
-        "1. Claim boundaries stay fixed.",
-        "4. Appendix companions stay scoped and auditable.",
-        "5. Release-facing derivatives remain downstream."
+        "active `H43` docs-only useful-case refreeze packet, the preserved active",
+        "`H36` routing/refreeze packet, and the completed `R42/R43/R44/R45`",
+        "- `results/P28_post_h43_publication_surface_sync/summary.json`"
       ]
     },
     {
