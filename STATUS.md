@@ -63,6 +63,10 @@
 - `F14_post_f13_conditional_reopen_readiness_bundle` is now complete:
   it stores one future contradiction-driven packet blueprint and one future
   runtime-audit blueprint without activating either one.
+- `R41_origin_runtime_relevance_threat_stress_audit` is now saved as a
+  deferred future design:
+  it fixes the landed `R40` row pair, the two surviving threat families, the
+  measurement rules, and the stop conditions without authorizing execution.
 - `R40_origin_bounded_scalar_locals_and_flags_gate` is now complete:
   one admitted explicit-flag loop row and one same-family boundary row stay
   exact across source, lowering, and accelerated free-running execution while
@@ -187,7 +191,7 @@
 - `V1_full_suite_validation_runtime_audit` remains the standing bounded
   operational reference under the preserved `H13/V1` handoff.
 - The current active post-`P9` operational stage is
-  `H32_post_r38_compiled_boundary_refreeze`.
+  `H36_post_r40_bounded_scalar_family_refreeze`.
 - `H21` now remains the preserved pre-reopen same-endpoint control packet
   underneath the current stage.
 - `H22` locked the post-`H21` reopen as one bounded dual-track packet on the
@@ -313,12 +317,14 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H32_post_r38_compiled_boundary_refreeze` under
+  `H36_post_r40_bounded_scalar_family_refreeze` under
   `docs/publication_record/current_stage_driver.md`, with
-  `H28/R34/R35/H29/R36/R37/H30/H31/R38` preserved as the current upstream
-  Origin-core evidence chain, `H27` preserved as the negative closeout of the
-  old same-endpoint route, the completed `H24/R30/R31/H25` packet preserved as
-  the prior same-endpoint decision/refreeze layer, the completed
+  `H28/R34/R35/H29/R36/R37/H30/H31/R38/H32/H33/H34/H35/R40` preserved as the
+  upstream Origin-core chain, `P24` preserved as the current docs-only sync
+  packet, the deferred `R41` design preserved as a future threat-stress lane
+  only, `H27` preserved as the negative closeout of the old same-endpoint
+  route, the completed `H24/R30/R31/H25` packet preserved as the prior
+  same-endpoint decision/refreeze layer, the completed
   `H22/R26/R28/R27/H23` packet preserved as the earlier frozen same-endpoint
   scientific state, and `H13/V1` preserved as the governance/runtime handoff.
 - `H8/R6/R7/H9` remains the completed direct same-endpoint baseline
@@ -353,17 +359,21 @@
    `results/R39_origin_compiler_control_surface_dependency_audit/summary.json`,
    and `results/H32_post_r38_compiled_boundary_refreeze/summary.json` plus
    `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`
-   as the landed routing surface for the bounded-scalar wave.
+   as the landed routing surface for the bounded-scalar wave,
+   `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
+   as the saved deferred future threat-stress design,
+   `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md`
    as the preserved design/execution surface for the completed `R39` audit, and
    `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md`
    as the preserved design surface for `H34`.
 4. Keep the `H32` claim partition explicit while preserving `H30` as the prior
    tiny compiled-boundary packet, `H31` as the explicit extension-only
    decision packet, and `H27` as the negative same-endpoint closeout.
-5. Treat `R39_origin_compiler_control_surface_dependency_audit` as completed
-   same-substrate evidence, not as the current active lane; `H34` now freezes
-   the compiled-boundary line complete-for-now and leaves no active downstream
-   runtime lane.
+5. Treat `R39_origin_compiler_control_surface_dependency_audit` and
+   `R40_origin_bounded_scalar_locals_and_flags_gate` as completed
+   same-substrate evidence rather than active routing changes; `H34` remains
+   preserved upstream interpretation context, `H36` is the active refreeze,
+   and no active downstream runtime lane exists after `H36`.
 6. Keep `R29_d0_same_endpoint_systems_recovery_execution_gate`,
    `F3_post_h23_scope_lift_decision_bundle`, and
    `F2_future_frontier_recheck_activation_matrix` blocked until a later

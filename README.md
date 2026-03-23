@@ -76,6 +76,9 @@ and the current docs-only sync packet is
 - `F14` as the completed conditional reopen-readiness bundle that stores one
   future contradiction-driven packet blueprint and one future runtime-audit
   blueprint without activating either one; and
+- `R41` as the saved deferred runtime-relevance threat design that fixes the
+  future row pair, threat families, measurement rules, and stop conditions
+  without authorizing execution; and
 - `F9` as the preserved blocked semantic-boundary roadmap downstream of
   `F10/F13`;
 - `F11` as the preserved new-substrate hybrid roadmap downstream of
@@ -91,6 +94,7 @@ For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
 `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`,
+`docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`,
 `results/H35...`, `results/R40...`, `results/H36...`, and the preserved
 `results/H34...` / `results/H32...` / `results/R39...` summaries ahead of the
 historical packet inventory below.
@@ -153,6 +157,8 @@ historical packet inventory below.
   declared negatives are rejected.
 - `H36` then freezes that bounded-scalar result narrowly and does not activate
   `R41` by momentum.
+- the saved future `R41` design now fixes the smallest later threat-stress
+  audit shape without authorizing it.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
   negatively, `H30` preserved the first tiny compiled-boundary positive packet,
   and `H31` then keeps further extension behind an explicit named decision
@@ -347,8 +353,9 @@ historical packet inventory below.
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
-- `docs/plans/README.md` — plans index for the current `post-H32` planning surface, the landed `H31/R38/H32/P18` wave, and the historical design stack
+- `docs/plans/README.md` — plans index for the landed `H35/R40/H36/P24` wave, the deferred `R41` design surface, and the historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
+- `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — saved future design fixing the deferred `R41` threat-stress scope without activating it
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — preserved design that led to the completed post-`H33` same-substrate audit, `R39`
 - `docs/plans/2026-03-23-post-r39-later-explicit-scope-decision-design.md` — preserved design that led to the landed post-`R39` docs-only scope-decision packet, `H34`
 - `docs/plans/2026-03-23-post-h32-conditional-next-packet-design.md` — preserved post-`H32` planning packet that led to the landed docs-only `H33` question-selection step
@@ -370,6 +377,7 @@ historical packet inventory below.
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
 - `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/README.md` — landed current active refreeze packet for the bounded-scalar wave
 - `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/README.md` — landed docs-only sync packet after the bounded-scalar wave
+- `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/README.md` — deferred future runtime-audit design for the fixed `R40` row pair and the two surviving threat families
 - `docs/milestones/H33_post_h32_conditional_next_question_packet/README.md` — landed docs-only conditional next-question packet above the preserved `H32` refreeze that authorizes only `R39`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/README.md` — completed same-substrate dependency audit authorized by `H33`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md` — execution manifest for the completed `R39` audit
