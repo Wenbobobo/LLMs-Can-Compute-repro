@@ -44,6 +44,10 @@
   `F16_post_h37_r41_candidate_isolation_bundle`.
 - The current same-substrate exit bundle is
   `F17_post_h38_same_substrate_exit_criteria_bundle`.
+- The current long-arc planning bundle is
+  `F18_post_h38_origin_core_long_arc_bundle`.
+- The current semantic-boundary useful-case roadmap is
+  `F19_post_f18_restricted_wasm_useful_case_roadmap`.
 - There is no active downstream runtime lane after `H38`.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
   one declared helper-body permutation with target renumbering preserves exact
@@ -114,8 +118,27 @@
 - `F17_post_h38_same_substrate_exit_criteria_bundle` is now complete:
   it records the later route-selection rules without authorizing a runtime
   lane.
+- `F18_post_h38_origin_core_long_arc_bundle` is now complete:
+  it fixes the post-`H38` claim ladder, preferred route, and worktree/merge
+  policy while keeping routing frozen.
+- `F19_post_f18_restricted_wasm_useful_case_roadmap` is now complete:
+  it turns the preserved `F9` family into a bounded restricted-Wasm /
+  useful-case roadmap and freezes `R42/R43/R44` as deferred future gates.
+- `R42_origin_append_only_memory_retrieval_contract_gate` is now saved as a
+  deferred future design:
+  it fixes latest-write-by-address and stack-slot retrieval as the first
+  semantic-boundary contract gate.
+- `R43_origin_bounded_memory_small_vm_execution_gate` is now saved as a
+  deferred future design:
+  it fixes bounded-memory small-VM execution as the next gate downstream of
+  `R42`.
+- `R44_origin_restricted_wasm_useful_case_execution_gate` is now saved as a
+  deferred future design:
+  it fixes the restricted-Wasm / tiny-`C` useful-kernel ladder downstream of
+  `R43`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
-  blocked roadmap storage downstream of `F10/F13`.
+  the preferred forward semantic-boundary roadmap downstream of
+  `F10/F13/F18/F19`, but still inactive until a later explicit packet.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap` remains preserved as
   new-substrate roadmap storage downstream of `F10/F13`.
 - `P21_post_h34_planning_surface_sync` remains complete as the preserved first

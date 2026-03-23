@@ -26,6 +26,14 @@ The current same-substrate exit-criteria bundle is:
 
 - `F17_post_h38_same_substrate_exit_criteria_bundle`
 
+The current long-arc planning bundle is:
+
+- `F18_post_h38_origin_core_long_arc_bundle`
+
+The current semantic-boundary useful-case roadmap is:
+
+- `F19_post_f18_restricted_wasm_useful_case_roadmap`
+
 This stage keeps the current Origin-core chain frozen after one explicit
 bounded-scalar reopen, two later docs-only runtime-relevance decisions, and
 one clean promotion/artifact audit:
@@ -60,7 +68,11 @@ one clean promotion/artifact audit:
 - `P26` records the current clean audit branch, promotion packet split, and
   large-artifact policy without touching dirty `main`;
 - `F17` stores the next route-selection rules if no later same-substrate
-  candidate becomes uniquely isolating.
+  candidate becomes uniquely isolating;
+- `F18` fixes the post-`H38` claim ladder, preferred route, and worktree/merge
+  policy without changing routing;
+- `F19` turns the saved `F9` family into a decision-complete restricted-Wasm /
+  useful-case roadmap and freezes `R42/R43/R44` as deferred future gates.
 
 ## Current Machine-State Meaning
 
@@ -162,22 +174,36 @@ one clean promotion/artifact audit:
   `semantic_boundary_route = f9`,
   `hybrid_route = f11`,
   `maintenance_route = publication_only`;
-- `F9` remains preserved as blocked roadmap storage downstream of
-  `F10/F13/H35/R40`:
-  `future_storage_state = semantic_boundary_family_still_blocked`;
+- `F18` is now complete as the post-`H38` long-arc bundle:
+  `preferred_forward_family = f9_restricted_wasm_semantic_boundary`,
+  `same_substrate_reopen_route = r41_only_by_later_explicit_packet`,
+  `merge_policy = keep_main_unmerged_until_later_hygiene_packet`;
+- `F19` is now complete as the semantic-boundary useful-case roadmap:
+  `restricted_surface_state = bounded_pointer_free_i32_surface_specified`,
+  `future_gate_family = r42_r43_r44_indexed_planning_only`,
+  `useful_case_kernel_suite = sum_count_nonzero_histogram16`;
+- `R42` remains preserved as a deferred future retrieval-contract gate:
+  `future_lane_state = append_only_memory_retrieval_contract_saved_only`;
+- `R43` remains preserved as a deferred future bounded-memory small-vm gate:
+  `future_lane_state = bounded_memory_small_vm_execution_saved_only`;
+- `R44` remains preserved as a deferred future useful-case gate:
+  `future_lane_state = restricted_wasm_useful_case_execution_saved_only`;
+- `F9` remains preserved as the preferred forward semantic-boundary roadmap
+  downstream of `F10/F13/H35/R40/F18/F19`:
+  `future_storage_state = default_forward_route_inactive_until_later_explicit_packet`;
 - `F11` remains preserved as new-substrate roadmap storage downstream of
-  `F10/F13/H35/R40`:
+  `F10/F13/H35/R40/F18`:
   `future_storage_state = hybrid_family_still_requires_new_substrate`;
 - blocked future lanes remain:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`;
 - later frontier review remains planning-only behind
   `F2_future_frontier_recheck_activation_matrix` and downstream of
-  `H38/H36/F16/F17/P26/F15/F14`.
+  `H38/H36/F16/F17/F18/F19/P26/F15/F14`.
 
 ## Completed Order
 
-The completed order through the current active packet is:
+The completed order through the current planning surface is:
 
 `P16_h25_commit_hygiene_and_clean_worktree_promotion` ->
 clean-worktree `R32_d0_family_local_boundary_sharp_zoom` ->
@@ -206,7 +232,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `F16_post_h37_r41_candidate_isolation_bundle` ->
 `H38_post_f16_runtime_relevance_reopen_decision_packet` ->
 `P26_post_h37_promotion_and_artifact_hygiene_audit` ->
-`F17_post_h38_same_substrate_exit_criteria_bundle`
+`F17_post_h38_same_substrate_exit_criteria_bundle` ->
+`F18_post_h38_origin_core_long_arc_bundle` ->
+`F19_post_f18_restricted_wasm_useful_case_roadmap`
 
 ## Next Planned Order
 
@@ -221,9 +249,20 @@ The current admissible follow-on work is:
 - later explicit packet design only if one same-substrate candidate becomes
   uniquely isolating on the fixed landed `R40` row pair;
 - preserved planning-only roadmap work under
-  `F2/F7/F8/F9/F10/F11/F15/F16/F17`.
+  `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19`;
+- deferred future semantic-boundary gate preparation only under the saved
+  `R42/R43/R44` scope locks.
 
-If reauthorized later, the conditional order is:
+If the semantic-boundary route is activated later, the conditional order is:
+
+later explicit post-`H38` semantic-boundary packet ->
+conditional `R42_origin_append_only_memory_retrieval_contract_gate` ->
+conditional `R43_origin_bounded_memory_small_vm_execution_gate` ->
+conditional `R44_origin_restricted_wasm_useful_case_execution_gate` ->
+later explicit refreeze / route-selection packet
+
+If the same-substrate contradiction route is reauthorized later, the
+conditional order is:
 
 later explicit post-`H38` packet ->
 conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
@@ -256,8 +295,11 @@ no active downstream runtime lane
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
+- `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
 - `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
+- `docs/milestones/F18_post_h38_origin_core_long_arc_bundle/claim_ladder.md`
+- `docs/milestones/F19_post_f18_restricted_wasm_useful_case_roadmap/future_gate_matrix.md`
 - `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`
 - `docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/`
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
@@ -309,9 +351,10 @@ no active downstream runtime lane
 - `R39_origin_compiler_control_surface_dependency_audit` remains the completed
   same-substrate dependency audit, not a routing change by itself.
 - `F12`, `F13`, and `F14` remain preserved historical or planning/control
-  surfaces underneath the landed `H35/R40/H36/H37/F16/H38/P26/F17` packet
-  chain.
-- `F9` remains blocked and `F11` remains new-substrate.
+  surfaces underneath the landed
+  `H35/R40/H36/H37/F16/H38/P26/F17/F18/F19` packet chain.
+- `F9` remains the preferred forward semantic-boundary roadmap and `F11`
+  remains new-substrate.
 - there is no active downstream runtime lane after `H38`.
 
 ## Historical Reference

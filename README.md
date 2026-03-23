@@ -26,7 +26,10 @@ the completed operational audit lane is
 derivative bundle remains `F15_post_h36_origin_goal_reanchor_bundle`, the
 current candidate-isolation bundle is
 `F16_post_h37_r41_candidate_isolation_bundle`, and the current same-substrate
-exit bundle is `F17_post_h38_same_substrate_exit_criteria_bundle`, preserving:
+exit bundle is `F17_post_h38_same_substrate_exit_criteria_bundle`, the current
+long-arc planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, and
+the current semantic-boundary useful-case roadmap is
+`F19_post_f18_restricted_wasm_useful_case_roadmap`, preserving:
 
 - `H27` as the negative closeout of the old same-endpoint recovery wave;
 - `H28` as the Origin-core pivot packet;
@@ -75,6 +78,11 @@ exit bundle is `F17_post_h38_same_substrate_exit_criteria_bundle`, preserving:
 - `F17` as the current planning-only same-substrate exit bundle that routes
   future work to later explicit `R41`, `F9`, `F11`, or publication-only
   maintenance without authorizing any now;
+- `F18` as the current planning-only long-arc bundle that makes `F9` the
+  preferred forward family after `H38` while keeping `R41` deferred; and
+- `F19` as the current planning-only semantic-boundary roadmap that fixes a
+  bounded restricted-Wasm / useful-case surface and freezes
+  `R42/R43/R44` as deferred future gates;
 - `P20` as the completed paper-facing manuscript/helper-doc resync that makes
   the prose bundle terminate on the landed `H34` state; and
 - `F5` as the completed planning-only contradiction scout that currently
@@ -114,6 +122,7 @@ exit bundle is `F17_post_h38_same_substrate_exit_criteria_bundle`, preserving:
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
+`docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`,
 `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`,
 `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`,
 `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`,
@@ -167,6 +176,10 @@ historical packet inventory below.
   `F16_post_h37_r41_candidate_isolation_bundle`.
 - The current same-substrate exit bundle is
   `F17_post_h38_same_substrate_exit_criteria_bundle`.
+- The current long-arc planning bundle is
+  `F18_post_h38_origin_core_long_arc_bundle`.
+- The current semantic-boundary useful-case roadmap is
+  `F19_post_f18_restricted_wasm_useful_case_roadmap`.
 - There is no active downstream runtime lane after `H38`.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
@@ -205,6 +218,11 @@ historical packet inventory below.
 - `P26` then records the current clean audit branch, packet split, and
   large-artifact policy without authorizing a merge.
 - `F17` then stores future route-selection rules without authorizing any lane.
+- `F18` then fixes the post-`H38` claim ladder, preferred route, and
+  worktree/merge policy without changing active routing.
+- `F19` then turns the preserved `F9` family into a decision-complete
+  restricted-Wasm / useful-case roadmap and fixes `R42/R43/R44` as deferred
+  future gates.
 - the saved future `R41` design now fixes the smallest later threat-stress
   audit shape without authorizing it.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
@@ -401,7 +419,10 @@ historical packet inventory below.
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
-- `docs/plans/README.md` — plans index for the landed `F16/H38/P26/F17` control wave, the preserved `P25/F15/H37` wave, the deferred `R41` design surface, and the historical design stack
+- `docs/plans/README.md` — plans index for the landed `F16/H38/P26/F17`
+  control wave, the current `F18/F19` post-`H38` planning surface, the
+  preserved `P25/F15/H37` wave, the deferred `R41` design surface, and the
+  historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
 - `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — saved future design fixing the deferred `R41` threat-stress scope without activating it
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — preserved design that led to the completed post-`H33` same-substrate audit, `R39`

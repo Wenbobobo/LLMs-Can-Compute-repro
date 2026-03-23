@@ -16,22 +16,30 @@ Current scientific/control stack:
   `F16_post_h37_r41_candidate_isolation_bundle`;
 - current same-substrate exit bundle:
   `F17_post_h38_same_substrate_exit_criteria_bundle`;
+- current long-arc planning bundle:
+  `F18_post_h38_origin_core_long_arc_bundle`;
+- current semantic-boundary useful-case roadmap:
+  `F19_post_f18_restricted_wasm_useful_case_roadmap`;
 - preserved prior docs-only runtime-relevance decision packet:
   `H37_post_h36_runtime_relevance_decision_packet`;
 - preserved prior clean promotion-prep lane:
   `P25_post_h36_clean_promotion_prep`;
 - deferred future runtime blueprint:
   `R41_origin_runtime_relevance_threat_stress_audit`;
+- deferred future semantic-boundary gates:
+  `R42_origin_append_only_memory_retrieval_contract_gate`,
+  `R43_origin_bounded_memory_small_vm_execution_gate`,
+  `R44_origin_restricted_wasm_useful_case_execution_gate`;
 - blocked future lanes:
   `R29_d0_same_endpoint_systems_recovery_execution_gate` and
   `F3_post_h23_scope_lift_decision_bundle`.
 
 Immediate active wave:
 
-`F16` reduces the saved `R41` catalog to explicit statuses, `H38` keeps the
-`H36` freeze because `F16` yields `no_candidate_ready`, `P26` records the
-promotion/artifact audit posture, and `F17` stores the next route-selection
-rules without creating a runtime lane.
+`F18` fixes the post-`H38` claim ladder, preferred route, and worktree/merge
+policy, while `F19` turns the preserved `F9` family into a decision-complete
+semantic-boundary roadmap and freezes `R42/R43/R44` as deferred future gates
+without creating a runtime lane.
 
 ## Current Facts
 
@@ -51,6 +59,13 @@ rules without creating a runtime lane.
   present on the current clean source branch.
 - `F17` separates later same-substrate, restricted-semantics, hybrid, and
   publication-only routes without authorizing any now.
+- `F18` makes `F9` the default forward planning family after `H38`.
+- `F19` fixes a bounded restricted-Wasm / tiny-`C` surface plus the three
+  useful kernels:
+  `sum_i32_buffer`,
+  `count_nonzero_i32_buffer`,
+  `histogram16_u8`.
+- `wip/f18-f19-planning` is the clean planning branch for this wave.
 
 ## Immediate Objectives
 
@@ -59,8 +74,12 @@ rules without creating a runtime lane.
 3. Preserve `F16` as `no_candidate_ready`.
 4. Preserve `P26` as `audit_only`, not merge authorization.
 5. Preserve `F17` as planning-only route storage.
-6. Keep `R41` deferred until a later explicit post-`H38` packet authorizes it.
-7. Avoid reopening `R29`, `F3`, broader compiler/demo scope, or frontier
+6. Land `F18` as the long-arc route-fixing bundle.
+7. Land `F19` as the semantic-boundary useful-case roadmap.
+8. Keep `R41` deferred until a later explicit post-`H38` packet authorizes it.
+9. Keep `R42/R43/R44` deferred until a later explicit semantic-boundary packet
+   authorizes them.
+10. Avoid reopening `R29`, `F3`, broader compiler/demo scope, or frontier
    widening by momentum.
 
 ## Last Completed Order
@@ -94,7 +113,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `F16_post_h37_r41_candidate_isolation_bundle` ->
 `H38_post_f16_runtime_relevance_reopen_decision_packet` ->
 `P26_post_h37_promotion_and_artifact_hygiene_audit` ->
-`F17_post_h38_same_substrate_exit_criteria_bundle`
+`F17_post_h38_same_substrate_exit_criteria_bundle` ->
+`F18_post_h38_origin_core_long_arc_bundle` ->
+`F19_post_f18_restricted_wasm_useful_case_roadmap`
 
 ## Current Rule
 
@@ -103,18 +124,29 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `P26` remains audit-only and keeps dirty `main` untouched.
 - `F16` is allowed to isolate candidates but not to authorize runtime.
 - `F17` is allowed to store routes but not to activate them.
+- `F18` is allowed to fix the long-arc route but not to change active routing.
+- `F19` is allowed to fix the semantic-boundary roadmap but not to authorize a
+  gate.
 - `R41` stays deferred until a later explicit packet names exactly one
   execution-ready candidate.
+- `R42`, `R43`, and `R44` stay deferred until a later explicit semantic-
+  boundary packet names them.
 
 ## Control References
 
 - `docs/publication_record/current_stage_driver.md`
+- `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`
 - `docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/`
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
 - `docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/`
 - `docs/milestones/F17_post_h38_same_substrate_exit_criteria_bundle/`
+- `docs/milestones/F18_post_h38_origin_core_long_arc_bundle/`
+- `docs/milestones/F19_post_f18_restricted_wasm_useful_case_roadmap/`
 - `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/`
+- `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
+- `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/`
+- `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
 - `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
 - `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`

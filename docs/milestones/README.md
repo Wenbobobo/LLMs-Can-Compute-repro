@@ -20,6 +20,12 @@ planning bundles. Read the current driver first, not the directory name alone.
   current substrate.
 - `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
   operational promotion/artifact audit lane from the current clean branch.
+- `F18_post_h38_origin_core_long_arc_bundle/` — current planning-only
+  long-arc bundle fixing the post-`H38` claim ladder, preferred route, and
+  worktree/merge policy.
+- `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
+  semantic-boundary roadmap that turns the preserved `F9` family into a
+  decision-complete restricted-Wasm / useful-case surface.
 - `F16_post_h37_r41_candidate_isolation_bundle/` — current candidate-
   isolation bundle for the saved `R41` catalog.
 - `F17_post_h38_same_substrate_exit_criteria_bundle/` — current planning-only
@@ -109,6 +115,12 @@ planning bundles. Read the current driver first, not the directory name alone.
   candidate-isolation bundle for the saved `R41` catalog.
 - `F17_post_h38_same_substrate_exit_criteria_bundle/` — current planning-only
   route-selection bundle after the `H38` keep-freeze decision.
+- `F18_post_h38_origin_core_long_arc_bundle/` — current planning-only
+  long-arc bundle fixing the post-`H38` claim ladder, preferred route, and
+  worktree/merge policy.
+- `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
+  semantic-boundary roadmap that turns the preserved `F9` family into a
+  decision-complete restricted-Wasm / useful-case surface.
 - `F14_post_f13_conditional_reopen_readiness_bundle/` — preserved planning-only
   bundle that stores one future contradiction-driven packet blueprint and one
   future runtime-audit blueprint without authorizing either one.
@@ -118,6 +130,13 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
   same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
   two surviving `F14` threat families, and explicit stop rules.
+- `R42_origin_append_only_memory_retrieval_contract_gate/` — deferred future
+  semantic-boundary retrieval-contract gate for latest-write-by-address and
+  stack-slot retrieval under append-only history.
+- `R43_origin_bounded_memory_small_vm_execution_gate/` — deferred future
+  bounded-memory small-VM execution gate downstream of `R42`.
+- `R44_origin_restricted_wasm_useful_case_execution_gate/` — deferred future
+  restricted-Wasm / tiny-`C` useful-case gate downstream of `R43`.
 - `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only bundle
   that turns future same-substrate reopen admissibility into one mechanical
   contradiction-packet specification.
@@ -131,9 +150,8 @@ planning bundles. Read the current driver first, not the directory name alone.
   canonical derivative surface for the earlier `H34/F10/P22` control state.
 - `F13_post_f12_bounded_scalar_value_family_spec/` — preserved planning-only
   bounded family-first preactivation bundle for `bounded scalar locals and flags`.
-- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — inactive roadmap
-  storage for a later restricted-Wasm semantic-boundary family that remains
-  blocked.
+- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — inactive default-
+  forward roadmap storage for a later restricted-Wasm semantic-boundary family.
 - `F11_post_h34_hybrid_planner_executor_bridge_roadmap/` — inactive roadmap
   storage for a later planner-plus-executor interface family that still
   requires a new substrate.
@@ -163,6 +181,8 @@ stack:
   authorization.
 - `F16` is the current candidate-isolation bundle.
 - `F17` is the current planning-only route-selection bundle.
+- `F18` is the current planning-only long-arc bundle.
+- `F19` is the current planning-only semantic-boundary roadmap.
 - `H37` is the preserved prior docs-only runtime-relevance decision packet.
 - `P25` is the preserved prior operational promotion-prep lane.
 - `F15` is the current canonical derivative claim-delta surface.
@@ -176,10 +196,12 @@ stack:
 - `R39` and `R40` are complete downstream audits/gates, not active routing
   changes by themselves.
 - `R41` is a deferred future runtime-audit design, not active work.
+- `R42`, `R43`, and `R44` are deferred future semantic-boundary gates, not
+  active work.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
-- `F9` remains blocked roadmap storage and `F11` remains new-substrate roadmap
-  storage.
+- `F9` remains the default forward semantic-boundary roadmap and `F11`
+  remains new-substrate roadmap storage.
 - no active downstream runtime lane exists after `H38`.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new
   explicit packet.
