@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "current_paper_phase": "h42_post_r43_route_selection_packet_complete",
+    "active_stage": "h42_post_r43_route_selection_packet",
+    "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "preserved_prior_docs_only_decision_packet": "h41_post_r42_aggressive_long_arc_decision_packet",
+    "preserved_prior_active_routing_packet": "h36_post_r40_bounded_scalar_family_refreeze",
+    "current_completed_exact_runtime_gate": "r43_origin_bounded_memory_small_vm_execution_gate",
+    "current_completed_coequal_model_gate": "r45_origin_dual_mode_model_mainline_gate",
+    "current_model_mainline_bundle": "f20_post_r42_dual_mode_model_mainline_bundle",
+    "selected_outcome": "authorize_r44_origin_restricted_wasm_useful_case_execution_gate",
+    "non_selected_outcome": "hold_at_r43_and_continue_bounded_consolidation",
+    "secondary_non_selected_outcome": "keep_h41_r43_r45_state_and_continue_planning_only",
+    "authorized_next_runtime_candidate": "r44_origin_restricted_wasm_useful_case_execution_gate",
+    "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+    "explicit_merge_packet": "p27_post_h41_clean_promotion_and_explicit_merge_packet",
+    "decision_basis": "r43_exact_positive_plus_r45_coequal_support_plus_f19_useful_case_ladder",
+    "merge_executed": false,
+    "next_required_lane": "r44_origin_restricted_wasm_useful_case_execution_gate",
+    "supported_here_count": 4,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h42-route-selection\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h42-route-selection\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

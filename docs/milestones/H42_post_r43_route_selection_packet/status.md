@@ -1,5 +1,11 @@
 # H42 Status
 
-- deferred future docs-only route-selection packet after `R43`;
-- required before any `R44` execution wave;
-- not completed in the current batch.
+- completed docs-only route-selection packet after exact `R43` and coequal
+  model `R45`;
+- preserves `H41` as the prior docs-only decision packet and `H36` as the
+  active routing/refreeze packet underneath the stack;
+- authorizes exactly `R44_origin_restricted_wasm_useful_case_execution_gate`
+  as the next useful-case runtime lane;
+- keeps `R41` deferred and keeps merge explicit through `P27`; and
+- does not widen to arbitrary `C`, general-computer rhetoric, or model-as-
+  substitute evidence.

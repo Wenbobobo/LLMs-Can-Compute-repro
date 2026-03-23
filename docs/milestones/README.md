@@ -12,9 +12,12 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H41_post_r42_aggressive_long_arc_decision_packet/` — current active
-  docs-only decision packet that preserves completed `R42`, authorizes exact
-  `R43`, and admits coequal model `R45` under an explicit evidence boundary.
+- `H42_post_r43_route_selection_packet/` — current active docs-only
+  route-selection packet that preserves `H41/H36/F20/P27/R43/R45` and
+  authorizes exact `R44`.
+- `H41_post_r42_aggressive_long_arc_decision_packet/` — preserved prior
+  docs-only decision packet that preserved completed `R42`, authorized exact
+  `R43`, and admitted coequal model `R45` under an explicit evidence boundary.
 - `H36_post_r40_bounded_scalar_family_refreeze/` — preserved active
   routing/refreeze packet freezing the bounded-scalar family narrowly on the
   current substrate.
@@ -159,10 +162,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R41_origin_runtime_relevance_threat_stress_audit/` — deferred future
   same-substrate runtime-audit lane fixed to the two landed `R40` rows, the
   two surviving `F14` threat families, and explicit stop rules.
-- `H42_post_r43_route_selection_packet/` — later explicit route-selection
-  packet required before any `R44` useful-case execution wave.
-- `R44_origin_restricted_wasm_useful_case_execution_gate/` — deferred future
-  restricted-Wasm / tiny-`C` useful-case gate downstream of `H42`.
+- `R44_origin_restricted_wasm_useful_case_execution_gate/` — authorized next
+  restricted-Wasm / tiny-`C` useful-case gate downstream of completed `H42`.
 - `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only bundle
   that turns future same-substrate reopen admissibility into one mechanical
   contradiction-packet specification.
@@ -201,7 +202,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H41` is the active docs-only decision packet.
+- `H42` is the active docs-only decision packet.
+- `H41` is the preserved prior docs-only aggressive-long-arc packet.
 - `H36` is the preserved active routing/refreeze packet.
 - `R42` is the completed current retrieval-contract gate underneath `H41`.
 - `F20` is the current coequal-mainline model bundle.
@@ -231,8 +233,7 @@ stack:
 - `R43` is the completed current exact semantic-boundary gate.
 - `R45` is the completed current coequal model lane under the `F20` evidence
   rule.
-- `H42` is the later explicit route-selection packet required before `R44`.
-- `R44` remains deferred future useful-case work.
+- `R44` is the next authorized exact useful-case lane.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`

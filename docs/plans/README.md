@@ -23,6 +23,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `2026-03-24-post-r43-r45-dual-mode-execution-design.md` — the current
   narrow dual-mode execution design surface that maps `R45` onto analytic and
   fitted stack latest-write scorers on the landed `R43` family set.
+- `2026-03-24-post-r43-h42-route-selection-design.md` — the current
+  route-selection design surface that turns saved `H42` into the completed
+  packet authorizing `R44` as the next exact useful-case gate.
 - `2026-03-23-post-h38-f18-f19-long-arc-design.md` — the current post-`H38`
   planning surface that lands `F18/F19` and fixes the saved
   `R42/R43/R44` semantic-boundary gate family.
@@ -77,8 +80,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
+- `../milestones/H42_post_r43_route_selection_packet/` — current active
+  docs-only route-selection packet that authorizes `R44` explicitly.
 - `../milestones/H41_post_r42_aggressive_long_arc_decision_packet/` —
-  current active docs-only decision packet.
+  preserved prior docs-only aggressive-long-arc decision packet.
 - `../milestones/H36_post_r40_bounded_scalar_family_refreeze/` — preserved
   active routing/refreeze packet for the bounded-scalar same-substrate wave.
 - `../milestones/R42_origin_append_only_memory_retrieval_contract_gate/` —
@@ -121,11 +126,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   completed current exact bounded-memory small-VM gate downstream of `H41`.
 - `../milestones/R45_origin_dual_mode_model_mainline_gate/` — completed
   coequal model lane downstream of `H41/F20`.
-- `../milestones/H42_post_r43_route_selection_packet/` — later explicit
-  route-selection packet required before any `R44` useful-case wave.
 - `../milestones/R44_origin_restricted_wasm_useful_case_execution_gate/` —
-  deferred future restricted-Wasm / tiny-`C` useful-case gate downstream of
-  `H42`.
+  authorized next restricted-Wasm / tiny-`C` useful-case gate downstream of
+  completed `H42`.
 - `../milestones/H34_post_r39_later_explicit_scope_decision_packet/` —
   preserved prior docs-only scope-decision packet above `H32`.
 - `../milestones/H33_post_h32_conditional_next_question_packet/` — preserved
@@ -139,7 +142,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 ## Historical Plan Groups
 
 - `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
-  control-override, explicit merge-wave, and dual-mode execution design set.
+  control-override, explicit merge-wave, dual-mode execution, and post-`R43`
+  route-selection design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,

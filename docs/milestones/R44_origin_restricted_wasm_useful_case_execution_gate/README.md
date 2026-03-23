@@ -1,17 +1,19 @@
 # R44 Origin Restricted Wasm Useful-Case Execution Gate
 
-Deferred future restricted-Wasm / tiny-`C` useful-case gate after `R43`.
+Authorized next restricted-Wasm / tiny-`C` useful-case gate after completed
+`H42`.
 
-`R44` does not exist as an active lane. This milestone stores the smallest
-future gate that can validate useful kernels on the same append-only substrate
-after bounded retrieval and bounded-memory VM execution survive.
+`R44` is not completed yet, but it is now the explicit next exact runtime lane.
+This milestone stores the smallest useful-case gate that can validate fixed
+restricted kernels on the same append-only substrate after bounded retrieval
+and bounded-memory VM execution have survived.
 
 This milestone preserves:
 
-- `H38` as the active docs-only decision packet;
-- `H36` as the active routing/refreeze packet;
-- `F19` as the semantic-boundary roadmap;
-- `R43` as the required upstream bounded-memory execution gate;
-- the fixed three-kernel useful-case ladder;
-- no active downstream runtime lane unless a later explicit packet authorizes
-  this gate.
+- `H42` as the current active docs-only route-selection packet;
+- `H36` as the preserved active routing/refreeze packet;
+- `F19` as the fixed semantic-boundary useful-case roadmap;
+- `R43` as the required upstream exact bounded-memory execution gate;
+- `R45` as a coequal comparator lane that does not replace exact evidence;
+- `P27` as the explicit merge packet with `merge_executed = false`; and
+- the fixed three-kernel useful-case ladder without broader surface lift.

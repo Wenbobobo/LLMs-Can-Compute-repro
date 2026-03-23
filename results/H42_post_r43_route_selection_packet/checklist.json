@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h42_docs_authorize_r44_while_preserving_h41_h36_r43_r45_f20_p27",
+      "status": "pass",
+      "notes": "H42 should make the next useful-case lane explicit while preserving the exact/model evidence boundary and merge posture."
+    },
+    {
+      "item_id": "r43_r45_f19_and_p27_fix_the_narrow_decision_basis",
+      "status": "pass",
+      "notes": "H42 should only authorize R44 because F19 fixed the ladder, R43 stayed exact, R45 stayed coequal, and P27 still keeps merge posture operational rather than scientific."
+    },
+    {
+      "item_id": "driver_wave_plan_and_r44_surface_promote_h42_as_current_and_r44_as_next",
+      "status": "pass",
+      "notes": "The public control surfaces should treat H42 as current and R44 as the next required exact useful-case lane."
+    }
+  ]
+}

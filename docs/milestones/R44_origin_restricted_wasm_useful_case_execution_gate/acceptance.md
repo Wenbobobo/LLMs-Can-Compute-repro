@@ -5,4 +5,5 @@
 - lowered reference execution and accelerated execution must agree exactly;
 - any trainable / translated model variant is comparator-only until exact
   lowering survives;
-- `R44` remains deferred until a later explicit packet authorizes it.
+- `R44` is authorized by completed `H42`, but remains unexecuted until its own
+  exact gate artifacts land.

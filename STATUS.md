@@ -3,7 +3,8 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H41_post_r42_aggressive_long_arc_decision_packet`, not the preserved prior
+  `H42_post_r43_route_selection_packet`, not the preserved prior
+  `H41` packet, the preserved prior
   `H40` packet, the preserved prior `H30` packet, or the earlier `H25`
   same-endpoint decision packet.
 - The active routing/refreeze packet remains
@@ -44,11 +45,11 @@
   R44` ladder; `H40` activates that route explicitly; `R42` keeps it alive on
   `6/6` fixed tasks with `65/65` exact observations; `F20` records the
   coequal-mainline dual-mode model posture; `H41` authorizes exact `R43`
-  plus coequal model `R45` while keeping `R41` deferred and `R44` behind later
-  `H42`; `P27` then lands the explicit merge packet while still keeping
-  `main` untouched; `R43` validates bounded-memory exact execution on `5/5`
-  fixed families; and `R45` then validates the two admitted model modes on the
-  same fixed family set without replacing exact evidence.
+  plus coequal model `R45`; `P27` then lands the explicit merge packet while
+  still keeping `main` untouched; `R43` validates bounded-memory exact
+  execution on `5/5` fixed families; `R45` then validates the two admitted
+  model modes on the same fixed family set without replacing exact evidence;
+  and `H42` finally authorizes exact `R44` while keeping `R41` deferred.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`.
 - The preserved prior docs-only sync packet is
@@ -77,8 +78,8 @@
   completed current exact bounded-memory gate.
 - `R45_origin_dual_mode_model_mainline_gate` is now fixed as the completed
   current coequal model gate.
-- `H42_post_r43_route_selection_packet` is now fixed as the later explicit
-  route-selection packet required before any `R44` useful-case wave.
+- `H42_post_r43_route_selection_packet` is now fixed as the completed current
+  route-selection packet that authorizes `R44`.
 - `R39_origin_compiler_control_surface_dependency_audit` is now complete:
   one declared helper-body permutation with target renumbering preserves exact
   final state and workload while changing the trace on both audited rows, so
@@ -162,7 +163,8 @@
 - `F20_post_r42_dual_mode_model_mainline_bundle` is now complete:
   it records the coequal-mainline dual-mode model posture and keeps model
   evidence non-substitutive relative to exact `R43`.
-- `H41_post_r42_aggressive_long_arc_decision_packet` is now complete:
+- `H41_post_r42_aggressive_long_arc_decision_packet` is now complete as the
+  preserved prior aggressive-long-arc packet:
   it preserves completed `R42`, authorizes exact `R43`, admits coequal model
   `R45`, keeps `R41` deferred, and keeps `R44` behind later `H42`.
 - `H40_post_h38_semantic_boundary_activation_packet` is now complete:
@@ -180,12 +182,14 @@
   coequal model lane:
   both admitted modes stay exact on the fixed `R43` family set, while the
   trainable mode also stays exact on the held-out optional family.
-- `H42_post_r43_route_selection_packet` is now the saved later explicit route-
-  selection packet required before any `R44` useful-case wave.
-- `R44_origin_restricted_wasm_useful_case_execution_gate` is now saved as a
-  deferred future design:
+- `H42_post_r43_route_selection_packet` is now complete as the current active
+  docs-only route-selection packet:
+  it preserves `H41/H36/F20/P27/R43/R45`, authorizes exactly `R44`, keeps
+  `R41` deferred, and keeps `merge_executed = false`.
+- `R44_origin_restricted_wasm_useful_case_execution_gate` is now the
+  authorized next exact useful-case gate:
   it fixes the restricted-Wasm / tiny-`C` useful-kernel ladder downstream of
-  `H42`.
+  completed `H42`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
