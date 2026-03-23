@@ -51,6 +51,9 @@ def test_build_unsupported_claims_captures_arbitrary_c_and_runtime_superiority()
 
     rows = module.build_unsupported_claims()
     claim_ids = {row["claim_id"] for row in rows}
+    arbitrary_c = next(row for row in rows if row["claim_id"] == "unsupported_arbitrary_c")
 
     assert "unsupported_arbitrary_c" in claim_ids
     assert "unsupported_current_scope_end_to_end_runtime_superiority" in claim_ids
+    assert "current H43 paper endpoint" in arbitrary_c["reason"]
+    assert "current compiled boundary is intentionally fixed" not in arbitrary_c["reason"]

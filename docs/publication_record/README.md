@@ -39,10 +39,18 @@ Current control docs:
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md` — the preserved
   design surface that turned landed `R44` into the completed current narrow
   useful-case gate and restored `no_active_downstream_runtime_lane`;
+- `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md` —
+  the current low-priority design surface for refreshing blocked downstream
+  blog plus manuscript-helper guardrails downstream of landed `H43` without
+  changing scientific stage;
+- `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md` —
+  the completed auxiliary design surface for refreshing preserved
+  machine-readable and regeneration wording that still treats `D0` as the
+  whole current paper endpoint;
 - `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md` —
-  the current low-priority design surface for refreshing stale release/public
-  audits and the last contradictory release-facing ledgers downstream of
-  landed `H43` without changing scientific stage;
+  the completed earlier prior low-priority design surface for refreshing stale
+  release/public audits and the last contradictory release-facing ledgers
+  downstream of landed `H43` without changing scientific stage;
 - `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md` —
   the completed prior low-priority design surface for syncing
   publication-facing ledgers to landed `H43/R44/R45/R43/P27` state without
@@ -169,6 +177,9 @@ Current control docs:
   low-priority operational blocked-blog/helper guardrail refresh packet that
   updates stale downstream blog plus manuscript-helper controls while keeping
   `H43` current;
+- `docs/milestones/P32_post_h43_historical_wording_refresh/` — the completed
+  auxiliary historical/regeneration wording refresh packet that keeps `P31`
+  current while refreshing preserved `H0/P3` machine-readable wording;
 - `docs/milestones/P30_post_h43_manuscript_surface_refresh/` — the completed
   prior low-priority operational manuscript-surface refresh packet that
   updates stale paper-facing prose baselines and derivative helper docs while
@@ -344,6 +355,9 @@ Current control docs:
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json` — machine-
   readable current low-priority blocked-blog/helper guardrail refresh packet
   downstream of landed `H43`;
+- `results/P32_post_h43_historical_wording_refresh/summary.json` —
+  machine-readable completed auxiliary historical/regeneration wording refresh
+  packet downstream of landed `H43`;
 - `results/P30_post_h43_manuscript_surface_refresh/summary.json` —
   machine-readable completed prior low-priority manuscript-surface refresh
   packet downstream of landed `H43`;

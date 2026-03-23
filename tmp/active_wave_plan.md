@@ -56,6 +56,11 @@ current paper-grade endpoint at the preserved `H32/H34` compiled-boundary
 line, so the downstream helper/control surface matches the landed
 `H42/R43/R44/R45/F20/P27/P30/P29/P28/H43` stack without creating a new
 runtime lane or unblocking the blog.
+`P32_post_h43_historical_wording_refresh` is the completed auxiliary
+historical/regeneration wording refresh packet. It only refreshes preserved
+`H0/P3` machine-readable wording that still treated `D0` as the whole current
+paper endpoint, and it does not displace `P31` as the current low-priority
+wave.
 
 ## Current Facts
 
@@ -78,6 +83,8 @@ runtime lane or unblocking the blog.
   manuscript-surface refresh branch.
 - `wip/p31-h43-blog-guardrails-refresh` is the clean post-`H43`
   blocked-blog/helper guardrail refresh branch.
+- `wip/p32-h43-historical-wording-refresh` is the clean completed auxiliary
+  post-`H43` historical/regeneration wording refresh branch.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -185,6 +192,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   `merge_executed = false`.
 - `P31` is the current low-priority blocked-blog/helper guardrail refresh wave
   and does not change the active scientific stage.
+- `P32` is the completed auxiliary historical/regeneration wording refresh
+  packet and does not displace `P31` as the current low-priority wave.
 - `P30` is the completed prior manuscript-surface refresh wave.
 - `P29` is the completed earlier prior release/public audit refresh wave.
 - `P28` is the completed earlier publication/control sync wave.
@@ -205,6 +214,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`
+- `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p30-manuscript-surface-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
@@ -220,6 +230,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/H42_post_r43_route_selection_packet/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
 - `docs/milestones/P31_post_h43_blog_guardrails_refresh/`
+- `docs/milestones/P32_post_h43_historical_wording_refresh/`
 - `docs/milestones/P30_post_h43_manuscript_surface_refresh/`
 - `docs/milestones/P29_post_h43_release_audit_refresh/`
 - `docs/milestones/P28_post_h43_publication_surface_sync/`
@@ -230,6 +241,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json`
+- `results/P32_post_h43_historical_wording_refresh/summary.json`
 - `results/P30_post_h43_manuscript_surface_refresh/summary.json`
 - `results/P29_post_h43_release_audit_refresh/summary.json`
 - `results/P28_post_h43_publication_surface_sync/summary.json`

@@ -42,6 +42,10 @@ planning bundles. Read the current driver first, not the directory name alone.
   operational blocked-blog/helper guardrail refresh packet updating stale
   downstream blog plus manuscript-helper controls without changing scientific
   stage.
+- `P32_post_h43_historical_wording_refresh/` — completed auxiliary
+  historical/regeneration wording refresh packet updating preserved `H0/P3`
+  machine-readable wording without changing scientific stage or displacing
+  `P31`.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior low-priority
   operational manuscript-surface refresh packet updating stale paper-facing
   prose baselines and derivative helper docs without changing scientific
@@ -163,6 +167,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P31_post_h43_blog_guardrails_refresh/` — current low-priority operational
   blocked-blog/helper guardrail refresh packet that keeps `H43` current while
   refreshing stale downstream blog plus manuscript-helper controls.
+- `P32_post_h43_historical_wording_refresh/` — completed auxiliary
+  historical/regeneration wording refresh packet that keeps `P31` current
+  while refreshing preserved `H0/P3` regeneration-facing wording.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior operational
   manuscript-surface refresh packet that keeps `H43` current while refreshing
   stale paper-facing prose baselines and derivative helper docs.

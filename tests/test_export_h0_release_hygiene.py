@@ -67,3 +67,6 @@ def test_build_public_surface_audit_accepts_current_gate_shape() -> None:
     )
 
     assert all(row["status"] == "pass" for row in rows)
+    by_id = {row["check_id"]: row for row in rows}
+    assert "current H43 paper endpoint" in by_id["m7_no_widening_recorded"]["notes"]
+    assert "current compiled endpoint remains D0" not in by_id["m7_no_widening_recorded"]["notes"]

@@ -212,7 +212,7 @@ def build_public_surface_audit(
             "status": "pass"
             if m7["decision_status"] == "stay_on_tiny_typed_bytecode" and not m7["frontend_widening_authorized"]
             else "fail",
-            "notes": "The current compiled endpoint remains D0.",
+            "notes": "M7 still blocks widening; the preserved first compiled step remains D0 inside the broader current H43 paper endpoint.",
         },
         {
             "check_id": "p4_blog_hold_recorded",

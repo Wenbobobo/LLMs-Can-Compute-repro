@@ -35,6 +35,11 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   `H43` current while refreshing downstream blog plus manuscript-helper
   guardrails that still freeze the paper-grade endpoint at preserved
   `H32/H34`.
+- `2026-03-24-post-h43-p32-historical-wording-refresh-design.md` — the
+  completed auxiliary historical/regeneration wording refresh design surface
+  that keeps `P31` current while refreshing preserved `H0/P3`
+  machine-readable wording that still treats `D0` as the whole current paper
+  endpoint.
 - `2026-03-24-post-h43-p30-manuscript-surface-refresh-design.md` — the
   completed prior low-priority manuscript-surface refresh design surface that
   moved stale paper-facing prose baselines to the landed `H43` state without
@@ -105,6 +110,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   low-priority operational blocked-blog/helper guardrail refresh packet that
   updates stale downstream blog plus manuscript-helper controls without
   changing scientific stage.
+- `../milestones/P32_post_h43_historical_wording_refresh/` — completed
+  auxiliary historical/regeneration wording refresh packet that keeps `P31`
+  current while refreshing preserved `H0/P3` regeneration-facing wording.
 - `../milestones/H43_post_r44_useful_case_refreeze/` — current active
   docs-only refreeze packet that records `R44` as completed narrow useful-case
   evidence and restores `no_active_downstream_runtime_lane`.
@@ -134,6 +142,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   completed operational explicit merge packet for the post-`R42` override.
 - `../milestones/P31_post_h43_blog_guardrails_refresh/` — current low-priority
   operational blocked-blog/helper guardrail refresh packet downstream of
+  `H43`.
+- `../milestones/P32_post_h43_historical_wording_refresh/` — completed
+  auxiliary historical/regeneration wording refresh packet downstream of
   `H43`.
 - `../milestones/P30_post_h43_manuscript_surface_refresh/` — completed prior
   low-priority operational manuscript-surface refresh packet downstream of
