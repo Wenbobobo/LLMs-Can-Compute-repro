@@ -38,24 +38,26 @@ pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
 state under `docs/publication_record/paper_package_plan.md`, but authoritative
-control has moved beyond the prose baseline: `H37` is the current docs-only
-decision packet, `H36` is the preserved prior active routing/refreeze packet,
-`P25` is the completed operational promotion-prep lane, and `F15` is the
-current canonical derivative bundle. The manuscript draft still terminates on
-the landed `H34` narrative line by design, so current packet authority remains
-`current_stage_driver.md` plus the claim/evidence ledgers when prose and
-landed packet state differ. The latest downstream follow-on work remains
-planning-only rather than experimental widening: `F7` preserves a mechanical
-same-substrate reopen specification, `F8` preserves beyond-Origin roadmap
-storage, `F10` preserves the richer-value/comparator bridge surface, `F12`
-remains the preserved earlier origin-facing reanchor, `F13` preserves the
-bounded scalar-local-and-flag family-first preactivation surface, `F14`
-preserves the conditional reopen-readiness blueprint, `F15` is the current
-origin-facing derivative bundle, `R41` remains deferred under `H37`, `F9`
-remains blocked downstream of `F10/F13`, `F11` remains new-substrate
-downstream of `F10/F13`, `P21` and `P22` preserve prior post-`H34` sync
-surfaces, and `P23/P24/P25` preserve the planning/control surfaces that lead
-into the current post-`H37` no-reopen state.
+control has moved beyond the prose baseline: `H38` is the current docs-only
+decision packet, `H36` is the preserved active routing/refreeze packet,
+`P26` is the completed operational promotion/artifact audit lane, `F16` is the
+current candidate-isolation bundle, `F17` is the current same-substrate exit
+bundle, `H37/P25` remain the preserved prior decision/audit supports, and
+`F15` remains the current canonical derivative bundle. The manuscript draft
+still terminates on the landed `H34` narrative line by design, so current
+packet authority remains `current_stage_driver.md` plus the claim/evidence
+ledgers when prose and landed packet state differ. The latest downstream
+follow-on work remains planning-only rather than experimental widening: `F7`
+preserves a mechanical same-substrate reopen specification, `F8` preserves
+beyond-Origin roadmap storage, `F10` preserves the richer-value/comparator
+bridge surface, `F12` remains the preserved earlier origin-facing reanchor,
+`F13` preserves the bounded scalar-local-and-flag family-first preactivation
+surface, `F14` preserves the conditional reopen-readiness blueprint, `F15` is
+the current origin-facing derivative bundle, `R41` remains deferred under
+`H38`, `F9` remains blocked downstream of `F10/F13`, `F11` remains
+new-substrate downstream of `F10/F13`, `P21` and `P22` preserve prior
+post-`H34` sync surfaces, `P23/P24/P25` preserve the earlier planning/control
+surfaces, and `P26` preserves the current post-`H38` audit posture.
 
 ## Mandatory tables
 

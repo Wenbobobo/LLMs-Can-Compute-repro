@@ -5,43 +5,21 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
-  `H37_post_h36_runtime_relevance_decision_packet`;
-- preserved prior active routing/refreeze packet:
+  `H38_post_f16_runtime_relevance_reopen_decision_packet`;
+- preserved active routing/refreeze packet:
   `H36_post_r40_bounded_scalar_family_refreeze`;
-- completed operational promotion-prep lane:
-  `P25_post_h36_clean_promotion_prep`;
+- completed operational promotion/artifact audit lane:
+  `P26_post_h37_promotion_and_artifact_hygiene_audit`;
 - current canonical origin-facing derivative bundle:
   `F15_post_h36_origin_goal_reanchor_bundle`;
-- preserved prior docs-only control packet:
-  `H35_post_p23_bounded_scalar_family_runtime_decision_packet`;
-- preserved prior docs-only sync packet:
-  `P24_post_h36_bounded_scalar_runtime_sync`;
-- preserved earlier no-runtime interpretation packet:
-  `H34_post_r39_later_explicit_scope_decision_packet`;
-- preserved earlier compiled-boundary refreeze packet:
-  `H32_post_r38_compiled_boundary_refreeze`;
-- preserved later explicit packet:
-  `H31_post_h30_later_explicit_boundary_decision_packet`;
-- preserved prior compiled-boundary refreeze packet:
-  `H30_post_r36_r37_scope_decision_packet`;
-- preserved Origin-core refreeze packet:
-  `H29_refreeze_after_r34_r35_origin_core_gate`;
-- preserved same-endpoint closeout packet:
-  `H27_refreeze_after_r32_r33_same_endpoint_decision`;
-- preserved upstream primitive gate:
-  `R34_origin_retrieval_primitive_contract_gate`;
-- preserved upstream execution gate:
-  `R35_origin_append_only_stack_vm_execution_gate`;
-- preserved narrow precision lane:
-  `R36_origin_long_horizon_precision_scaling_gate`;
-- preserved tiny compiled-boundary lane:
-  `R37_origin_compiler_boundary_gate`;
-- preserved richer control-surface extension lane:
-  `R38_origin_compiler_control_surface_extension_gate`;
-- preserved same-substrate dependency audit lane:
-  `R39_origin_compiler_control_surface_dependency_audit`;
-- completed bounded-scalar runtime lane:
-  `R40_origin_bounded_scalar_locals_and_flags_gate`;
+- current candidate-isolation bundle:
+  `F16_post_h37_r41_candidate_isolation_bundle`;
+- current same-substrate exit bundle:
+  `F17_post_h38_same_substrate_exit_criteria_bundle`;
+- preserved prior docs-only runtime-relevance decision packet:
+  `H37_post_h36_runtime_relevance_decision_packet`;
+- preserved prior clean promotion-prep lane:
+  `P25_post_h36_clean_promotion_prep`;
 - deferred future runtime blueprint:
   `R41_origin_runtime_relevance_threat_stress_audit`;
 - blocked future lanes:
@@ -50,42 +28,38 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H37` keeps the `H36` bounded-scalar freeze, `P25` records clean promotion
-prep, `F15` becomes the current canonical derivative bundle, and there is no
-active downstream runtime lane.
+`F16` reduces the saved `R41` catalog to explicit statuses, `H38` keeps the
+`H36` freeze because `F16` yields `no_candidate_ready`, `P26` records the
+promotion/artifact audit posture, and `F17` stores the next route-selection
+rules without creating a runtime lane.
 
 ## Current Facts
 
-- `wip/h35-r40-p24-exec` remains the scientific source of truth for the landed
-  `H35 -> R40 -> H36 -> P24` wave.
-- `wip/p25-f15-h37-exec` is the clean promotion-prep branch created from that
-  source state.
+- `wip/p25-f15-h37-exec` remains the preserved prior clean source branch for
+  the landed `P25/F15/H37` wave.
+- `wip/f16-h38-p26-exec` is the current clean audit branch for the
+  `F16/H38/P26/F17` control wave.
 - dirty `main` remains untouched by design in this wave.
-- `H34` preserves
-  `freeze_compiled_boundary_as_complete_for_now` as the earlier same-substrate
-  no-reopen interpretation.
-- `H35` authorizes exactly one bounded-scalar same-substrate runtime gate.
-- `R40` validates explicit bounded frame locals plus typed `FLAG` slots on one
-  admitted row and one same-family boundary row while rejecting the declared
-  negatives.
-- `H36` freezes that result narrowly and restores
+- `H36` still preserves
+  `bounded_scalar_family_refrozen_narrowly` and
   `no_active_downstream_runtime_lane`.
-- `F14` preserves only two surviving same-substrate cautions, and no candidate
-  is yet uniquely isolated strongly enough to justify a reopen packet.
-- `F15` records the bounded-scalar family as `supported_here` narrowly and
-  ranks the two `F14` runtime-relevance cautions as the top unresolved
-  same-substrate gaps.
-- `H37` selects `keep_h36_freeze` and keeps `R41` deferred.
+- `F16` assigns `nonunique`, `nonunique`, and `inadmissible` across the three
+  saved `R41` candidates and ends at `no_candidate_ready`.
+- `H38` selects `keep_h36_freeze` and names no active runtime candidate.
+- `P26` keeps promotion posture at `audit_only` and records no immediate
+  `.gitignore` change for the user-mentioned `R20` raw file because it is not
+  present on the current clean source branch.
+- `F17` separates later same-substrate, restricted-semantics, hybrid, and
+  publication-only routes without authorizing any now.
 
 ## Immediate Objectives
 
-1. Preserve `H37` as the current active docs-only decision packet.
-2. Preserve `H36` as the prior active routing/refreeze packet.
-3. Preserve `P25` as `prepare_only`, not merge authorization.
-4. Preserve `F15` as the current canonical derivative bundle.
-5. Preserve `R40` as narrow same-substrate evidence for explicit bounded frame
-   locals plus typed `FLAG` slots only.
-6. Keep `R41` deferred until a later explicit post-`H37` packet authorizes it.
+1. Preserve `H38` as the current active docs-only decision packet.
+2. Preserve `H36` as the active routing/refreeze packet underneath the stack.
+3. Preserve `F16` as `no_candidate_ready`.
+4. Preserve `P26` as `audit_only`, not merge authorization.
+5. Preserve `F17` as planning-only route storage.
+6. Keep `R41` deferred until a later explicit post-`H38` packet authorizes it.
 7. Avoid reopening `R29`, `F3`, broader compiler/demo scope, or frontier
    widening by momentum.
 
@@ -116,43 +90,32 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `H36_post_r40_bounded_scalar_family_refreeze` ->
 `P25_post_h36_clean_promotion_prep` ->
 `F15_post_h36_origin_goal_reanchor_bundle` ->
-`H37_post_h36_runtime_relevance_decision_packet`
+`H37_post_h36_runtime_relevance_decision_packet` ->
+`F16_post_h37_r41_candidate_isolation_bundle` ->
+`H38_post_f16_runtime_relevance_reopen_decision_packet` ->
+`P26_post_h37_promotion_and_artifact_hygiene_audit` ->
+`F17_post_h38_same_substrate_exit_criteria_bundle`
 
-## Next Conditional Order
+## Current Rule
 
-no active downstream runtime lane
+- `H38` is the current active docs-only packet.
+- `H36` remains the active routing/refreeze packet underneath it.
+- `P26` remains audit-only and keeps dirty `main` untouched.
+- `F16` is allowed to isolate candidates but not to authorize runtime.
+- `F17` is allowed to store routes but not to activate them.
+- `R41` stays deferred until a later explicit packet names exactly one
+  execution-ready candidate.
 
-If reauthorized later:
+## Control References
 
-later explicit post-`H37` packet ->
-conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
-later refreeze packet
-
-## Current References
-
-- `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
-- `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`
-- `docs/milestones/P25_post_h36_clean_promotion_prep/`
-- `docs/milestones/F15_post_h36_origin_goal_reanchor_bundle/`
-- `docs/milestones/H37_post_h36_runtime_relevance_decision_packet/`
-- `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/`
-- `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
-- `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/`
+- `docs/publication_record/current_stage_driver.md`
+- `docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`
+- `docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/`
+- `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
+- `docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/`
+- `docs/milestones/F17_post_h38_same_substrate_exit_criteria_bundle/`
 - `docs/milestones/R41_origin_runtime_relevance_threat_stress_audit/`
-- `results/P25_post_h36_clean_promotion_prep/summary.json`
+- `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json`
+- `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
 - `results/H37_post_h36_runtime_relevance_decision_packet/summary.json`
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
-- `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json`
-- `docs/publication_record/current_stage_driver.md`
-- `tmp/active_wave_plan.md`
-
-## If Blocked
-
-- do not merge back into dirty `main` by momentum;
-- do not treat `P25` as merge authorization;
-- do not treat `H37` as authorization to execute `R41`;
-- do not reopen `R29` or `F3` by wording alone;
-- do not treat `F15`, `F14`, or the saved `R41` design surface as automatic
-  runtime authorization;
-- require a later explicit packet before any future same-substrate reopen or
-  routing/scope change.

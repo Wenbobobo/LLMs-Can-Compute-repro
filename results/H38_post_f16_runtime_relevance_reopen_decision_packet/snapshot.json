@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "source": "results/H37_post_h36_runtime_relevance_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h37_post_h36_runtime_relevance_decision_packet",
+        "selected_outcome": "keep_h36_freeze",
+        "decision_basis": "no_uniquely_isolated_admissible_candidate_on_fixed_r40_row_pair"
+      }
+    },
+    {
+      "source": "docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/candidate_status_matrix.md",
+      "fields": {
+        "bundle_verdict": "no_candidate_ready",
+        "execution_ready_candidate_count": 0,
+        "nonunique_candidate_count": 2,
+        "inadmissible_candidate_count": 1
+      }
+    },
+    {
+      "source": "results/H36_post_r40_bounded_scalar_family_refreeze/summary.json",
+      "fields": {
+        "active_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+        "decision_state": "bounded_scalar_family_refrozen_narrowly",
+        "next_required_lane": "no_active_downstream_runtime_lane"
+      }
+    }
+  ]
+}

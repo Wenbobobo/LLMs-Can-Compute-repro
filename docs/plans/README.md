@@ -8,8 +8,12 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md` — the
+  current control design surface for the landed `F16 -> H38 -> P26 -> F17`
+  wave after `H37`.
 - `2026-03-23-post-h36-p25-f15-h37-control-design.md` — the current control
-  design surface for the landed `P25 -> F15 -> H37` wave after `H36`.
+  design surface for the preserved prior `P25 -> F15 -> H37` wave after
+  `H36`.
 - `2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — the saved
   future design surface for the deferred `R41` runtime-relevance threat lane.
 - `2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md` — the
@@ -51,13 +55,20 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `../milestones/H37_post_h36_runtime_relevance_decision_packet/` — current
-  active docs-only decision packet.
+- `../milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/` —
+  current active docs-only decision packet.
 - `../milestones/H36_post_r40_bounded_scalar_family_refreeze/` — preserved
-  prior active routing/refreeze packet for the bounded-scalar same-substrate
-  wave.
-- `../milestones/P25_post_h36_clean_promotion_prep/` — completed operational
-  promotion-prep lane.
+  active routing/refreeze packet for the bounded-scalar same-substrate wave.
+- `../milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/` —
+  completed operational promotion/artifact audit lane.
+- `../milestones/F16_post_h37_r41_candidate_isolation_bundle/` — current
+  candidate-isolation bundle for the saved `R41` catalog.
+- `../milestones/F17_post_h38_same_substrate_exit_criteria_bundle/` —
+  current planning-only route-selection bundle after `H38`.
+- `../milestones/H37_post_h36_runtime_relevance_decision_packet/` — preserved
+  prior docs-only runtime-relevance decision packet.
+- `../milestones/P25_post_h36_clean_promotion_prep/` — preserved prior
+  operational promotion-prep lane.
 - `../milestones/F15_post_h36_origin_goal_reanchor_bundle/` — current
   canonical derivative bundle.
 - `../milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/`
@@ -103,5 +114,5 @@ its status against:
 4. the corresponding `results/<lane>/summary.json`
 
 Do not treat an older plan as authorization to reopen a blocked lane. When a
-saved plan and the landed `H37/H36/P25/F15/H35/P24/R40` stack differ, trust
-the landed packet.
+saved plan and the landed `H38/H36/P26/F16/F17/H37/P25/F15/H35/P24/R40` stack
+differ, trust the landed packet.

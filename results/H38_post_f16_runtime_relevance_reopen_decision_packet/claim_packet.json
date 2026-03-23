@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "supported_here": [
+      "H38 lands the required post-F16 docs-only runtime-relevance reopen decision packet.",
+      "F16 reduces the saved R41 catalog to explicit statuses and still produces zero execution-ready candidates.",
+      "H36 remains the active routing/refreeze packet underneath H38, so no active downstream runtime lane exists after H38.",
+      "F17 stores later route-selection rules without authorizing a new lane now."
+    ],
+    "unsupported_here": [
+      "H38 does not authorize R41 execution by wording alone.",
+      "H38 does not reopen R29, F3, broader compiler scope, or hybrid work."
+    ],
+    "disconfirmed_here": [
+      "The expectation that any saved same-substrate candidate should reopen the runtime lane once it has been named in F14 or R41 planning docs."
+    ],
+    "distilled_result": {
+      "active_stage": "h38_post_f16_runtime_relevance_reopen_decision_packet",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_decision_packet": "h37_post_h36_runtime_relevance_decision_packet",
+      "selected_outcome": "keep_h36_freeze",
+      "non_selected_outcome": "authorize_r41_origin_runtime_relevance_threat_stress_audit",
+      "authorized_next_runtime_candidate": "none",
+      "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+      "decision_basis": "f16_no_candidate_ready_on_fixed_r40_row_pair",
+      "candidate_status_counts": {
+        "execution_ready": 0,
+        "nonunique": 2,
+        "inadmissible": 1
+      },
+      "current_candidate_isolation_bundle": "f16_post_h37_r41_candidate_isolation_bundle",
+      "current_same_substrate_exit_bundle": "f17_post_h38_same_substrate_exit_criteria_bundle",
+      "next_required_lane": "no_active_downstream_runtime_lane"
+    }
+  }
+}

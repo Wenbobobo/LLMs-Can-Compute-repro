@@ -199,8 +199,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["active_wave_plan_text"],
                 [
                     "p25_post_h36_clean_promotion_prep",
-                    "wip/h35-r40-p24-exec",
                     "wip/p25-f15-h37-exec",
+                    "preserved prior clean promotion-prep lane",
                     "dirty `main` remains untouched by design in this wave",
                 ],
             )

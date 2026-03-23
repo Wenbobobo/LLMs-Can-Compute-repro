@@ -19,11 +19,14 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 
 As of `2026-03-23`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line. The current docs-only decision packet is now
-`H37_post_h36_runtime_relevance_decision_packet`, the preserved prior active
-routing/refreeze packet is `H36_post_r40_bounded_scalar_family_refreeze`, the
-completed operational prep lane is `P25_post_h36_clean_promotion_prep`, and
-the current canonical derivative bundle is
-`F15_post_h36_origin_goal_reanchor_bundle`, preserving:
+`H38_post_f16_runtime_relevance_reopen_decision_packet`, the active
+routing/refreeze packet remains `H36_post_r40_bounded_scalar_family_refreeze`,
+the completed operational audit lane is
+`P26_post_h37_promotion_and_artifact_hygiene_audit`, the current canonical
+derivative bundle remains `F15_post_h36_origin_goal_reanchor_bundle`, the
+current candidate-isolation bundle is
+`F16_post_h37_r41_candidate_isolation_bundle`, and the current same-substrate
+exit bundle is `F17_post_h38_same_substrate_exit_criteria_bundle`, preserving:
 
 - `H27` as the negative closeout of the old same-endpoint recovery wave;
 - `H28` as the Origin-core pivot packet;
@@ -55,12 +58,23 @@ the current canonical derivative bundle is
   default;
 - `P24` as the completed control-surface sync for the landed
   `H35 -> R40 -> H36` wave;
-- `P25` as the completed operational promotion-prep lane that fixes the clean
-  source-of-truth branch and keeps merge mode at `prepare_only`;
+- `P25` as the preserved prior operational promotion-prep lane that fixes the
+  clean source-of-truth branch and keeps merge mode at `prepare_only`;
 - `F15` as the current canonical derivative mapping from the origin materials
-  onto the landed `H36/P24/P25/H37` state;
-- `H37` as the current docs-only runtime-relevance decision packet that keeps
-  `H36` frozen and leaves `R41` deferred;
+  onto the landed `H36/P24/P25/H37/H38` state;
+- `H37` as the preserved prior docs-only runtime-relevance decision packet
+  that keeps `H36` frozen and leaves `R41` deferred;
+- `F16` as the current candidate-isolation bundle that reduces the saved `R41`
+  catalog to explicit statuses and still yields `no_candidate_ready`;
+- `H38` as the current docs-only runtime-relevance reopen decision packet that
+  keeps `H36` frozen again because `F16` yields zero execution-ready
+  candidates;
+- `P26` as the completed operational promotion/artifact audit lane that fixes
+  the current clean audit branch, packet split, and large-artifact policy
+  without touching dirty `main`; and
+- `F17` as the current planning-only same-substrate exit bundle that routes
+  future work to later explicit `R41`, `F9`, `F11`, or publication-only
+  maintenance without authorizing any now;
 - `P20` as the completed paper-facing manuscript/helper-doc resync that makes
   the prose bundle terminate on the landed `H34` state; and
 - `F5` as the completed planning-only contradiction scout that currently
@@ -100,12 +114,14 @@ the current canonical derivative bundle is
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,
 `tmp/active_wave_plan.md`,
+`docs/plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`,
 `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`,
 `docs/plans/2026-03-23-post-p23-h35-r40-bounded-scalar-runtime-design.md`,
 `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md`,
-`results/H37...`, `results/P25...`, `results/H36...`, `results/H35...`,
-`results/R40...`, and the preserved `results/H34...` / `results/H32...` /
-`results/R39...` summaries ahead of the historical packet inventory below.
+`results/H38...`, `results/P26...`, `results/H37...`, `results/P25...`,
+`results/H36...`, `results/H35...`, `results/R40...`, and the preserved
+`results/H34...` / `results/H32...` / `results/R39...` summaries ahead of the
+historical packet inventory below.
 
 ## Current Boundary
 
@@ -132,9 +148,9 @@ For current work, trust
 ## Current Gate Outcome
 
 - The current active stage is
-  `H37_post_h36_runtime_relevance_decision_packet`, not the preserved prior
+  `H38_post_f16_runtime_relevance_reopen_decision_packet`, not the preserved prior
   `H30` packet or the earlier `H25` same-endpoint decision packet.
-- The preserved prior active routing/refreeze packet is
+- The active routing/refreeze packet remains
   `H36_post_r40_bounded_scalar_family_refreeze`.
 - The preserved prior docs-only control packet is
   `H35_post_p23_bounded_scalar_family_runtime_decision_packet`, which names
@@ -143,10 +159,15 @@ For current work, trust
 - The preserved prior docs-only sync packet is
   `P24_post_h36_bounded_scalar_runtime_sync`.
 - The completed operational support lane is
-  `P25_post_h36_clean_promotion_prep`, and it remains `prepare_only`.
+  `P26_post_h37_promotion_and_artifact_hygiene_audit`, and it remains
+  `audit_only`.
 - The current canonical derivative bundle is
   `F15_post_h36_origin_goal_reanchor_bundle`.
-- There is no active downstream runtime lane after `H37`.
+- The current candidate-isolation bundle is
+  `F16_post_h37_r41_candidate_isolation_bundle`.
+- The current same-substrate exit bundle is
+  `F17_post_h38_same_substrate_exit_criteria_bundle`.
+- There is no active downstream runtime lane after `H38`.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -171,12 +192,19 @@ For current work, trust
   declared negatives are rejected.
 - `H36` then freezes that bounded-scalar result narrowly and does not activate
   `R41` by momentum.
-- `P25` then records the clean source-of-truth branch and no-merge promotion
-  posture.
+- `P25` then records the preserved clean source-of-truth branch and no-merge
+  promotion posture.
 - `F15` then reanchors the origin-facing scientific goal stack to the landed
   bounded-scalar result.
 - `H37` then keeps the `H36` freeze by default because no uniquely isolated
   admissible contradiction survives on the fixed landed `R40` row pair.
+- `F16` then reduces the saved `R41` catalog to explicit statuses and still
+  yields `no_candidate_ready`.
+- `H38` then keeps the `H36` freeze again because `F16` yields zero
+  execution-ready candidates.
+- `P26` then records the current clean audit branch, packet split, and
+  large-artifact policy without authorizing a merge.
+- `F17` then stores future route-selection rules without authorizing any lane.
 - the saved future `R41` design now fixes the smallest later threat-stress
   audit shape without authorizing it.
 - The old same-endpoint `D0` story is preserved historically: `H27` closes it
@@ -373,7 +401,7 @@ For current work, trust
 
 - `STATUS.md` — current repository state and immediate gates
 - `docs/publication_record/current_stage_driver.md` — canonical current stage driver
-- `docs/plans/README.md` — plans index for the landed `P25/F15/H37` control wave, the deferred `R41` design surface, and the historical design stack
+- `docs/plans/README.md` — plans index for the landed `F16/H38/P26/F17` control wave, the preserved `P25/F15/H37` wave, the deferred `R41` design surface, and the historical design stack
 - `docs/milestones/README.md` — milestones index separating the current stack, deferred lanes, blocked/planning-only bundles, and preserved historical packets
 - `docs/plans/2026-03-23-post-h36-r41-runtime-relevance-threat-design.md` — saved future design fixing the deferred `R41` threat-stress scope without activating it
 - `docs/plans/2026-03-23-post-h33-r39-origin-core-substrate-question-design.md` — preserved design that led to the completed post-`H33` same-substrate audit, `R39`
@@ -382,8 +410,10 @@ For current work, trust
 - `docs/plans/2026-03-22-post-h30-h31-r38-extension-plan.md` — preserved execution design packet that fixed the only admitted extension row, the only named boundary probe, the same-opcode-surface rule, and the landed `H32/P18` closeout path
 - `results/H35_post_p23_bounded_scalar_family_runtime_decision_packet/summary.json` — one-file summary for the preserved prior docs-only bounded-family runtime-decision packet
 - `results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json` — one-file summary for the completed bounded-scalar same-substrate runtime gate
-- `results/H37_post_h36_runtime_relevance_decision_packet/summary.json` — one-file summary for the current docs-only decision packet selecting `keep_h36_freeze`
-- `results/P25_post_h36_clean_promotion_prep/summary.json` — one-file summary for the completed operational promotion-prep lane
+- `results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json` — one-file summary for the current docs-only decision packet selecting `keep_h36_freeze` after `F16`
+- `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json` — one-file summary for the completed operational promotion/artifact audit lane
+- `results/H37_post_h36_runtime_relevance_decision_packet/summary.json` — one-file summary for the preserved prior docs-only decision packet selecting `keep_h36_freeze`
+- `results/P25_post_h36_clean_promotion_prep/summary.json` — one-file summary for the preserved prior operational promotion-prep lane
 - `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json` — one-file summary for the preserved prior active bounded-scalar refreeze packet
 - `results/H34_post_r39_later_explicit_scope_decision_packet/summary.json` — one-file summary for the preserved prior docs-only scope-decision packet freezing the compiled-boundary line complete-for-now
 - `results/R39_origin_compiler_control_surface_dependency_audit/summary.json` — one-file summary for the completed same-substrate dependency audit on one declared helper-body permutation
@@ -397,8 +427,12 @@ For current work, trust
 - `tmp/active_wave_plan.md` — short handoff file for the current active wave
 - `docs/milestones/H35_post_p23_bounded_scalar_family_runtime_decision_packet/README.md` — landed docs-only bounded-family runtime-decision packet that authorizes exactly one same-substrate runtime gate
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
-- `docs/milestones/H37_post_h36_runtime_relevance_decision_packet/README.md` — landed current docs-only decision packet after `H36/P24/P25/F15`
-- `docs/milestones/P25_post_h36_clean_promotion_prep/README.md` — completed operational promotion-prep lane after `H36`
+- `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/README.md` — landed current docs-only decision packet after `F16`
+- `docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/README.md` — completed operational promotion/artifact audit lane after `H38`
+- `docs/milestones/F16_post_h37_r41_candidate_isolation_bundle/README.md` — current candidate-isolation bundle for the saved `R41` catalog
+- `docs/milestones/F17_post_h38_same_substrate_exit_criteria_bundle/README.md` — current planning-only route-selection bundle after `H38`
+- `docs/milestones/H37_post_h36_runtime_relevance_decision_packet/README.md` — preserved prior docs-only decision packet after `H36/P24/P25/F15`
+- `docs/milestones/P25_post_h36_clean_promotion_prep/README.md` — preserved prior operational promotion-prep lane after `H36`
 - `docs/milestones/F15_post_h36_origin_goal_reanchor_bundle/README.md` — current canonical derivative bundle after `H36/P24/P25`
 - `docs/milestones/H36_post_r40_bounded_scalar_family_refreeze/README.md` — landed preserved prior active refreeze packet for the bounded-scalar wave
 - `docs/milestones/P24_post_h36_bounded_scalar_runtime_sync/README.md` — landed docs-only sync packet after the bounded-scalar wave

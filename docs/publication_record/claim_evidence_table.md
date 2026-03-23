@@ -211,14 +211,19 @@
 
 ## Current bounded mainline state
 
-- `H37` is the current active docs-only decision packet for the bounded
-  mainline after the landed `H35 -> R40 -> H36 -> P25 -> F15` wave.
-- `H36` is the preserved prior active routing/refreeze packet; it freezes the
+- `H38` is the current active docs-only decision packet for the bounded
+  mainline after the landed `H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16`
+  control wave; it still selects `keep_h36_freeze`.
+- `H36` is the preserved active routing/refreeze packet; it freezes the
   bounded-scalar family narrowly and restores no active downstream runtime
   lane.
-- `P25` is the completed operational promotion-prep lane and `F15` is the
-  current canonical derivative bundle; neither changes the scientific lane by
-  itself.
+- `P26` is the completed operational promotion/artifact audit lane, `F16` is
+  the current candidate-isolation bundle, `F17` is the current same-substrate
+  exit bundle, and `F15` is the current canonical derivative bundle; none of
+  them changes the scientific lane by itself.
+- `H37` remains the preserved prior docs-only decision packet and `P25`
+  remains the preserved prior operational promotion-prep lane underneath the
+  current `H38/P26/F16/F17` control surface.
 - `H35` is the preserved prior docs-only bounded-scalar runtime-decision
   packet, `H34` is the preserved earlier no-runtime interpretation packet,
   and `H33` remains the preserved prior docs-only question-selection packet.

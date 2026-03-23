@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "source": "results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h38_post_f16_runtime_relevance_reopen_decision_packet",
+        "selected_outcome": "keep_h36_freeze",
+        "decision_basis": "f16_no_candidate_ready_on_fixed_r40_row_pair"
+      }
+    },
+    {
+      "source": "results/H37_post_h36_runtime_relevance_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h37_post_h36_runtime_relevance_decision_packet",
+        "selected_outcome": "keep_h36_freeze",
+        "decision_basis": "no_uniquely_isolated_admissible_candidate_on_fixed_r40_row_pair"
+      }
+    },
+    {
+      "source": "docs/milestones/P26_post_h37_promotion_and_artifact_hygiene_audit/artifact_tracking_policy.md",
+      "fields": {
+        "branch_name": "wip/f16-h38-p26-exec",
+        "ahead_of_main_commit_count": 45,
+        "ahead_of_main_file_count": 663,
+        "artifact_state": "not_present_on_current_source_branch",
+        "artifact_size": null,
+        "preserved_prior_promotion_mode": "prepare_only"
+      }
+    }
+  ]
+}

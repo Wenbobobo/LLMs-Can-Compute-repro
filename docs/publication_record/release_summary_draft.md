@@ -33,7 +33,11 @@ The current execution-facing chain is now
 `H36_post_r40_bounded_scalar_family_refreeze` ->
 `P25_post_h36_clean_promotion_prep` ->
 `F15_post_h36_origin_goal_reanchor_bundle` ->
-`H37_post_h36_runtime_relevance_decision_packet`.
+`H37_post_h36_runtime_relevance_decision_packet` ->
+`F16_post_h37_r41_candidate_isolation_bundle` ->
+`H38_post_f16_runtime_relevance_reopen_decision_packet` ->
+`P26_post_h37_promotion_and_artifact_hygiene_audit` ->
+`F17_post_h38_same_substrate_exit_criteria_bundle`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
@@ -108,14 +112,18 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H37_post_h36_runtime_relevance_decision_packet`, which preserves
-`H36_post_r40_bounded_scalar_family_refreeze` as the prior active
-routing/refreeze packet, `P25_post_h36_clean_promotion_prep` as the completed
-operational promotion-prep lane, and
-`F15_post_h36_origin_goal_reanchor_bundle` as the current canonical
-derivative bundle. Under that state, `H27` remains the negative closeout of
-the old same-endpoint route, `H28` remains the Origin-core pivot packet,
-`H29` remains the positive narrow refreeze, `R36` remains the completed
+`H38_post_f16_runtime_relevance_reopen_decision_packet`, which preserves
+`H36_post_r40_bounded_scalar_family_refreeze` as the active routing/refreeze
+packet, `P26_post_h37_promotion_and_artifact_hygiene_audit` as the completed
+operational audit lane, `F16_post_h37_r41_candidate_isolation_bundle` as the
+current candidate-isolation bundle, `F17_post_h38_same_substrate_exit_criteria_bundle`
+as the current same-substrate exit bundle, and
+`F15_post_h36_origin_goal_reanchor_bundle` as the current canonical derivative
+bundle while preserving `H37_post_h36_runtime_relevance_decision_packet` and
+`P25_post_h36_clean_promotion_prep` as the immediate prior decision/audit
+support wave. Under that state, `H27` remains the negative closeout of the old
+same-endpoint route, `H28` remains the Origin-core pivot packet, `H29`
+remains the positive narrow refreeze, `R36` remains the completed
 precision-boundary follow-up, `R37` remains one tiny compiled-boundary
 confirmation, `H31` remains the explicit later-decision packet, `R38` remains
 one richer same-substrate control/call family, `H33` preserves the one-
@@ -123,23 +131,27 @@ question docs-only selection step, `R39` preserves one narrow same-substrate
 dependency audit, `H34` preserves the freeze-complete-for-now compiled line,
 `H35` authorizes exactly one bounded-scalar same-substrate runtime gate, and
 `R40` validates bounded scalar locals and typed `FLAG` slots on one admitted
-row plus one same-family boundary row. `H37` then keeps that `H36` freeze and
-leaves `R41` deferred because no uniquely isolated admissible contradiction
-yet survives on the fixed landed `R40` row pair. The later paper-facing and
-planning-only closeout lanes now also align to that reading: `P20` rewrites
-the manuscript bundle to terminate on the landed `H34` state, `F5` concludes
-`no_reopen_candidate_survives`, `F6` records docs/planning maintenance as the
-admissible default rather than a new runtime wave, `F7` makes future same-
-substrate reopen criteria mechanical, `F8` stores beyond-Origin milestone
-families without activating them, `F10` makes richer executor-visible
-value/comparator obligations explicit without authorizing runtime widening,
-`F12` remains the preserved earlier origin-facing claim delta reanchor, `F13`
-fixes `bounded scalar locals and flags` as the bounded same-substrate family-
-first preactivation surface, `F14` stores a conditional reopen-readiness
-blueprint, `F15` reanchors the origin-facing claim delta to the current
-control state, `F9` remains blocked, `F11` remains new-substrate, `P21` and
-`P22` remain preserved prior planning syncs, and `P23/P24/P25` align the
-driver and handoff surfaces to the current post-`H37` no-reopen reading.
+row plus one same-family boundary row. `H37` first keeps that `H36` freeze,
+`F16` then reduces the saved `R41` catalog to fixed candidate statuses and
+concludes `no_candidate_ready`, `H38` keeps the same freeze again because
+there is still no `execution_ready` candidate on the landed `R40` row pair,
+`P26` records an `audit_only` promotion posture, and `F17` stores the future
+same-substrate exit routes without activating any runtime lane. The later
+paper-facing and planning-only closeout lanes now also align to that reading:
+`P20` rewrites the manuscript bundle to terminate on the landed `H34` state,
+`F5` concludes `no_reopen_candidate_survives`, `F6` records docs/planning
+maintenance as the admissible default rather than a new runtime wave, `F7`
+makes future same-substrate reopen criteria mechanical, `F8` stores
+beyond-Origin milestone families without activating them, `F10` makes richer
+executor-visible value/comparator obligations explicit without authorizing
+runtime widening, `F12` remains the preserved earlier origin-facing claim
+delta reanchor, `F13` fixes `bounded scalar locals and flags` as the bounded
+same-substrate family-first preactivation surface, `F14` stores a conditional
+reopen-readiness blueprint, `F15` reanchors the origin-facing claim delta to
+the current control state, `F9` remains blocked, `F11` remains new-substrate,
+`P21` and `P22` remain preserved prior planning syncs, `P23/P24/P25` preserve
+the earlier driver and handoff surfaces, and `P26` preserves the current
+post-`H38` audit posture.
 
 ## Reproducibility pointers
 

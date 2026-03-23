@@ -13,7 +13,7 @@
     {
       "item_id": "h36_r40_driver_and_wave_keep_r41_deferred_without_broader_scope_lift",
       "status": "pass",
-      "notes": "H37 should sit on the landed H36/R40 pair and keep R41 deferred without reopening blocked same-endpoint, scope-lift, or frontier lanes."
+      "notes": "H37 should remain reproducible as the preserved prior post-H36 decision packet and keep R41 deferred without reopening blocked same-endpoint, scope-lift, or frontier lanes."
     }
   ]
 }

@@ -12,12 +12,21 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H37_post_h36_runtime_relevance_decision_packet/` — current active docs-only
-  decision packet keeping the `H36` freeze and leaving `R41` deferred.
-- `H36_post_r40_bounded_scalar_family_refreeze/` — preserved prior active
+- `H38_post_f16_runtime_relevance_reopen_decision_packet/` — current active
+  docs-only decision packet keeping the `H36` freeze after `F16` reports
+  `no_candidate_ready`.
+- `H36_post_r40_bounded_scalar_family_refreeze/` — preserved active
   routing/refreeze packet freezing the bounded-scalar family narrowly on the
   current substrate.
-- `P25_post_h36_clean_promotion_prep/` — completed operational clean
+- `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
+  operational promotion/artifact audit lane from the current clean branch.
+- `F16_post_h37_r41_candidate_isolation_bundle/` — current candidate-
+  isolation bundle for the saved `R41` catalog.
+- `F17_post_h38_same_substrate_exit_criteria_bundle/` — current planning-only
+  route-selection bundle after `H38`.
+- `H37_post_h36_runtime_relevance_decision_packet/` — preserved prior docs-
+  only runtime-relevance decision packet.
+- `P25_post_h36_clean_promotion_prep/` — preserved prior clean
   promotion-prep lane from the real source-of-truth branch.
 - `F15_post_h36_origin_goal_reanchor_bundle/` — current canonical
   origin-facing derivative bundle after the bounded-scalar wave.
@@ -88,11 +97,18 @@ planning bundles. Read the current driver first, not the directory name alone.
   recorded `H36` as active and no active downstream runtime lane after `R40`.
 - `P25_post_h36_clean_promotion_prep/` — completed operational prep that fixes
   the clean promotion branch, source-of-truth inventory, and no-merge rule.
+- `P26_post_h37_promotion_and_artifact_hygiene_audit/` — completed
+  operational audit that records packet split, branch posture, and large-
+  artifact policy above `H38`.
 
 ## Current Planning And Deferred Follow-Ons
 
 - `F15_post_h36_origin_goal_reanchor_bundle/` — current canonical
   origin-facing derivative bundle anchored to the landed bounded-scalar state.
+- `F16_post_h37_r41_candidate_isolation_bundle/` — current planning-only
+  candidate-isolation bundle for the saved `R41` catalog.
+- `F17_post_h38_same_substrate_exit_criteria_bundle/` — current planning-only
+  route-selection bundle after the `H38` keep-freeze decision.
 - `F14_post_f13_conditional_reopen_readiness_bundle/` — preserved planning-only
   bundle that stores one future contradiction-driven packet blueprint and one
   future runtime-audit blueprint without authorizing either one.
@@ -141,10 +157,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H37` is the active docs-only decision packet.
-- `H36` is the preserved prior active routing/refreeze packet.
-- `P25` is the completed operational promotion-prep lane, not merge
+- `H38` is the active docs-only decision packet.
+- `H36` is the preserved active routing/refreeze packet.
+- `P26` is the completed operational promotion/artifact audit lane, not merge
   authorization.
+- `F16` is the current candidate-isolation bundle.
+- `F17` is the current planning-only route-selection bundle.
+- `H37` is the preserved prior docs-only runtime-relevance decision packet.
+- `P25` is the preserved prior operational promotion-prep lane.
 - `F15` is the current canonical derivative claim-delta surface.
 - `H35` is the preserved prior docs-only control packet.
 - `P24` is the preserved prior docs-only sync packet.
@@ -160,6 +180,6 @@ stack:
   runtime packets.
 - `F9` remains blocked roadmap storage and `F11` remains new-substrate roadmap
   storage.
-- no active downstream runtime lane exists after `H37`.
+- no active downstream runtime lane exists after `H38`.
 - `R29`, `F3`, and wider frontier/demo claims remain blocked without a new
   explicit packet.

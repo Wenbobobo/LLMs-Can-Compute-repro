@@ -234,13 +234,14 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["active_wave_plan_text"],
                 [
                     "h37_post_h36_runtime_relevance_decision_packet",
-                    "`h37` selects `keep_h36_freeze` and keeps `r41` deferred",
-                    "no active downstream runtime lane",
-                    "do not treat `h37` as authorization to execute `r41`",
+                    "r41_origin_runtime_relevance_threat_stress_audit",
+                    "preserved prior docs-only runtime-relevance decision packet",
+                    "no_active_downstream_runtime_lane",
+                    "keep_h36_freeze",
                 ],
             )
             else "blocked",
-            "notes": "H37 should sit on the landed H36/R40 pair and keep R41 deferred without reopening blocked same-endpoint, scope-lift, or frontier lanes.",
+            "notes": "H37 should remain reproducible as the preserved prior post-H36 decision packet and keep R41 deferred without reopening blocked same-endpoint, scope-lift, or frontier lanes.",
         },
     ]
 
