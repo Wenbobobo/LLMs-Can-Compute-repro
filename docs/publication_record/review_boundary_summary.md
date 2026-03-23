@@ -33,6 +33,11 @@ underneath it.
   on the same admitted row and named same-family boundary probe;
 - `H34` records that the current compiled-boundary line is complete-for-now
   narrow support rather than an automatically reopened runtime lane;
+- `F7` preserves a mechanical contradiction/reopen specification under that
+  no-reopen state, `F8` preserves the broader roadmap classification,
+  `F10` preserves the current richer-value/comparator bridge surface, and
+  `P22` preserves the current control-surface sync for that planning-only
+  interpretation;
 - preserved historical same-endpoint evidence remains available underneath the
   current line, but it is no longer the active routing target.
 
@@ -92,8 +97,10 @@ Any later broader frontier review remains planning-only under
 `F2_future_frontier_recheck_activation_matrix` and the blocked
 `F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
 that status. The current conditional future order now starts only after the
-landed `H33 -> R39 -> H34` chain and requires a new contradiction-driven
-explicit packet before any further compiler-boundary extension. Review
-questions that can be answered by wording, packet indexing, or existing ledgers
-should stay downstream of the landed `H34/H32/H33/R39/H31/H30/H29/H28/H27`
-stack rather than reopening science.
+landed `H33 -> R39 -> H34` chain, the preserved `F7/F8` planning layer, and
+the completed `F10/P22` bridge clarification, and it still requires a new
+contradiction-driven explicit packet before any further compiler-boundary
+extension. Review questions that can be answered by wording, packet indexing,
+existing ledgers, or the completed `F10` comparator bundle should stay
+downstream of the landed `H34/H32/H33/R39/H31/H30/H29/H28/H27` stack rather
+than reopening science.
