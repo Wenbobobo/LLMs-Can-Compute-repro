@@ -46,7 +46,14 @@ packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
 - `F5` as the completed planning-only contradiction scout that currently
   concludes `no_reopen_candidate_survives`; and
 - `F6` as the completed planning-only future-option matrix that keeps
-  docs/planning work admissible while runtime remains inactive by default.
+  docs/planning work admissible while runtime remains inactive by default; and
+- `F7` as the completed planning-only contradiction/reopen specification bundle
+  that makes future same-substrate reopen criteria mechanical without
+  authorizing one now; and
+- `F8` as the completed planning-only beyond-Origin bridge roadmap that stores
+  future milestone families while keeping them inactive; and
+- `P21` as the completed docs-only control-surface sync that aligns the current
+  driver and wave plan to that planning-only post-`H34` state.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,

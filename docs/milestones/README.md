@@ -59,6 +59,24 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P20_post_h34_manuscript_narrative_resync/` — completed docs-only manuscript
   and helper-doc resync so the paper-facing bundle now terminates on
   `R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34`.
+- `P21_post_h34_planning_surface_sync/` — completed docs-only planning-surface
+  sync that records `F7/F8` as the current admissible follow-on surfaces while
+  keeping runtime inactive.
+
+## Current Planning-Only Follow-ons
+
+- `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only bundle
+  that turns future same-substrate reopen admissibility into one mechanical
+  contradiction-packet specification.
+- `F8_post_h34_beyond_origin_bridge_roadmap/` — planning-only bundle that maps
+  the broader Origin-facing scientific vision into saved future milestone
+  families without authorizing them now.
+- `F9_post_h34_restricted_wasm_semantic_boundary_roadmap/` — inactive roadmap
+  storage for a later restricted-Wasm semantic-boundary family.
+- `F10_post_h34_executor_value_comparator_matrix/` — inactive roadmap storage
+  for later executor-vs-external-runtime value comparison work.
+- `F11_post_h34_hybrid_planner_executor_bridge_roadmap/` — inactive roadmap
+  storage for a later planner-plus-executor interface family.
 
 ## Conditional Future Lanes
 
@@ -95,6 +113,11 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F6_post_p20_future_option_matrix/` — planning-only post-`P20/F5` option
   matrix that keeps docs/planning work admissible while leaving runtime
   inactive by default.
+- `F7_post_h34_reopen_trigger_specification_bundle/` — planning-only
+  contradiction/reopen specification surface under `H34`.
+- `F8_post_h34_beyond_origin_bridge_roadmap/` — planning-only beyond-Origin
+  roadmap surface under `H34`.
+- `F9/F10/F11` — inactive future-roadmap storage under `F8`, not active waves.
 
 ## Current Rule
 
@@ -109,6 +132,8 @@ stack:
 - `H29` and `H28` are preserved upstream refreeze/pivot evidence.
 - `R34`, `R35`, `R36`, `R37`, and `R38` stay frozen as upstream support.
 - `R39` is complete as a downstream audit, not an active routing change.
+- `F7` and `F8` are planning-only follow-on surfaces, not runtime packets.
+- `F9`, `F10`, and `F11` are inactive roadmap storage only.
 - no active downstream runtime lane exists after `H34`.
 - one richer compiled control family still does not authorize broader compiler
   or demo scope lift.

@@ -41,6 +41,16 @@
   it records docs/planning maintenance as the current admissible default,
   keeps contradiction-driven reopen conditional only, and leaves runtime
   inactive by default.
+- `F7_post_h34_reopen_trigger_specification_bundle` is now complete:
+  it turns the current no-reopen reading into one mechanical contradiction and
+  reopen specification surface without authorizing a new runtime lane.
+- `F8_post_h34_beyond_origin_bridge_roadmap` is now complete:
+  it stores beyond-Origin future milestone families while keeping them
+  planning-only and inactive.
+- `F9/F10/F11` now exist only as inactive roadmap storage under `F8`.
+- `P21_post_h34_planning_surface_sync` is now complete:
+  it aligns the driver, wave plan, and top-level indexes to the same
+  planning-only post-`H34` reading.
 - The current admitted post-`H30` extension row is
   `subroutine_braid_program(6, base_address=80)`, while
   `subroutine_braid_long_program(12, base_address=160)` remains a same-family
