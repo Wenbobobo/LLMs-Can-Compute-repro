@@ -182,7 +182,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "The paper-facing ledgers should agree that H43 is current and that no further runtime lane is active.",
         },
         {
-            "item_id": "release_review_submission_indexes_and_wave_handoff_preserve_p28_under_p30_current_state",
+            "item_id": "release_review_submission_indexes_and_wave_handoff_preserve_p28_under_p31_current_state",
             "status": "pass"
             if contains_all(
                 inputs["release_preflight_text"],
@@ -226,6 +226,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["plans_index_text"],
                 [
+                    "../milestones/p31_post_h43_blog_guardrails_refresh/",
                     "../milestones/p30_post_h43_manuscript_surface_refresh/",
                     "../milestones/p29_post_h43_release_audit_refresh/",
                     "../milestones/p28_post_h43_publication_surface_sync/",
@@ -234,6 +235,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["milestones_index_text"],
                 [
+                    "p31_post_h43_blog_guardrails_refresh/",
                     "p30_post_h43_manuscript_surface_refresh/",
                     "p29_post_h43_release_audit_refresh/",
                     "p28_post_h43_publication_surface_sync/",
@@ -243,6 +245,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["experiment_manifest_text"],
                 [
+                    "post-`h43` `p31` blog-guardrail refresh wave",
                     "post-`h43` `p30` manuscript-surface refresh wave",
                     "post-`h43` `p29` release-audit refresh wave",
                     "post-`h43` `p28` publication-surface sync wave",
@@ -253,10 +256,11 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["active_wave_plan_text"],
                 [
                     "`h43` remains the current scientific stage",
-                    "`p30_post_h43_manuscript_surface_refresh` is the current low-priority",
-                    "`p29` is the completed prior release/public audit refresh wave",
+                    "`p31_post_h43_blog_guardrails_refresh` is the current low-priority",
+                    "`p30` is the completed prior manuscript-surface refresh wave",
+                    "`p29` is the completed earlier prior release/public audit refresh wave",
                     "`p28` is the completed earlier publication/control sync wave",
-                    "wip/p30-h43-manuscript-refresh",
+                    "wip/p31-h43-blog-guardrails-refresh",
                 ],
             )
             and contains_all(
@@ -268,7 +272,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 ],
             )
             else "blocked",
-            "notes": "Release/review/submission helpers should preserve P28 as completed prior publication sync under current P30/P29 state.",
+            "notes": "Release/review/submission helpers should preserve P28 as completed prior publication sync under current P31/P30/P29 state.",
         },
     ]
 

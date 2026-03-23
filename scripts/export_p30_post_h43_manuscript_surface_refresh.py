@@ -172,7 +172,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["status_text"],
                 [
                     "`h43_post_r44_useful_case_refreeze` under",
-                    "current low-priority manuscript-surface refresh wave `p30`",
+                    "completed prior low-priority sync packets `p30/p29/p28`",
                     "no active downstream runtime lane exists after `h43`",
                 ],
             )
@@ -236,12 +236,14 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "Paper-facing prose should treat H43 as the current manuscript endpoint and H32/H34 as preserved earlier support only.",
         },
         {
-            "item_id": "index_and_handoff_surfaces_record_p30_as_current_low_priority_wave",
+            "item_id": "index_and_handoff_surfaces_record_p30_as_completed_prior_wave_under_p31_current_state",
             "status": "pass"
             if contains_all(
                 inputs["publication_readme_text"],
                 [
+                    "docs/milestones/p31_post_h43_blog_guardrails_refresh/",
                     "docs/milestones/p30_post_h43_manuscript_surface_refresh/",
+                    "results/p31_post_h43_blog_guardrails_refresh/summary.json",
                     "results/p30_post_h43_manuscript_surface_refresh/summary.json",
                     "docs/milestones/p29_post_h43_release_audit_refresh/",
                 ],
@@ -249,6 +251,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["plans_index_text"],
                 [
+                    "../milestones/p31_post_h43_blog_guardrails_refresh/",
                     "../milestones/p30_post_h43_manuscript_surface_refresh/",
                     "../milestones/p29_post_h43_release_audit_refresh/",
                     "../milestones/p28_post_h43_publication_surface_sync/",
@@ -257,6 +260,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["milestones_index_text"],
                 [
+                    "p31_post_h43_blog_guardrails_refresh/",
                     "p30_post_h43_manuscript_surface_refresh/",
                     "p29_post_h43_release_audit_refresh/",
                     "p28_post_h43_publication_surface_sync/",
@@ -265,21 +269,22 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["active_wave_plan_text"],
                 [
-                    "`p30_post_h43_manuscript_surface_refresh` is the current low-priority",
-                    "wip/p30-h43-manuscript-refresh",
-                    "`p29` is the completed prior release/public audit refresh wave",
+                    "`p31_post_h43_blog_guardrails_refresh` is the current low-priority",
+                    "wip/p31-h43-blog-guardrails-refresh",
+                    "`p30` is the completed prior manuscript-surface refresh wave",
                 ],
             )
             and contains_all(
                 inputs["experiment_manifest_text"],
                 [
+                    "post-`h43` `p31` blog-guardrail refresh wave",
                     "post-`h43` `p30` manuscript-surface refresh wave",
                     "scripts/export_p30_post_h43_manuscript_surface_refresh.py",
                     "results/p30_post_h43_manuscript_surface_refresh/summary.json",
                 ],
             )
             else "blocked",
-            "notes": "Indexes and handoff docs should record P30 as the current low-priority wave downstream of H43.",
+            "notes": "Indexes and handoff docs should record P30 as the completed prior manuscript wave under current P31 state.",
         },
         {
             "item_id": "upstream_h43_p28_and_p29_packets_remain_preserved",
@@ -307,7 +312,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         ),
         "STATUS.md": (
             "status_text",
-            ["`H43_post_r44_useful_case_refreeze` under", "current low-priority manuscript-surface refresh wave `P30`"],
+            ["`H43_post_r44_useful_case_refreeze` under", "completed prior low-priority sync packets `P30/P29/P28`"],
         ),
         "docs/publication_record/paper_outline.md": (
             "paper_outline_text",
@@ -327,11 +332,19 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         ),
         "docs/publication_record/README.md": (
             "publication_readme_text",
-            ["docs/milestones/P30_post_h43_manuscript_surface_refresh/", "results/P30_post_h43_manuscript_surface_refresh/summary.json"],
+            [
+                "docs/milestones/P31_post_h43_blog_guardrails_refresh/",
+                "docs/milestones/P30_post_h43_manuscript_surface_refresh/",
+                "results/P30_post_h43_manuscript_surface_refresh/summary.json",
+            ],
         ),
         "tmp/active_wave_plan.md": (
             "active_wave_plan_text",
-            ["`P30_post_h43_manuscript_surface_refresh` is the current low-priority", "wip/p30-h43-manuscript-refresh"],
+            [
+                "`P31_post_h43_blog_guardrails_refresh` is the current low-priority",
+                "`P30` is the completed prior manuscript-surface refresh wave",
+                "wip/p31-h43-blog-guardrails-refresh",
+            ],
         ),
     }
     rows: list[dict[str, object]] = []

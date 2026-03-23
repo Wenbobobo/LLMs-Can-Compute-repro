@@ -451,14 +451,15 @@
   routing/refreeze packet `H36_post_r40_bounded_scalar_family_refreeze`,
   completed current `R42/R43/R44/R45` semantic-boundary gate stack, current
   coequal-mainline model bundle `F20`, completed explicit merge packet `P27`,
-  completed prior low-priority sync packets `P28/P29`, current low-priority
-  manuscript-surface refresh wave `P30`, preserved earlier Origin-core chain
-  `H28/R34/R35/H29/R36/R37/H30/H31/R38/H32/H33/H34/H35/R40`, deferred `R41`
-  as a future threat-stress lane only, `H27` preserved as the negative closeout
-  of the old same-endpoint route, the completed `H24/R30/R31/H25` packet
-  preserved as the prior same-endpoint decision/refreeze layer, the completed
-  `H22/R26/R28/R27/H23` packet preserved as the earlier frozen same-endpoint
-  scientific state, and `H13/V1` preserved as the governance/runtime handoff.
+  completed prior low-priority sync packets `P30/P29/P28`, current low-
+  priority blocked-blog/helper guardrail refresh wave `P31`, preserved earlier
+  Origin-core chain `H28/R34/R35/H29/R36/R37/H30/H31/R38/H32/H33/H34/H35/R40`,
+  deferred `R41` as a future threat-stress lane only, `H27` preserved as the
+  negative closeout of the old same-endpoint route, the completed
+  `H24/R30/R31/H25` packet preserved as the prior same-endpoint
+  decision/refreeze layer, the completed `H22/R26/R28/R27/H23` packet
+  preserved as the earlier frozen same-endpoint scientific state, and `H13/V1`
+  preserved as the governance/runtime handoff.
 - `H8/R6/R7/H9` remains the completed direct same-endpoint baseline
   underneath the current stage.
 - `H6/R3/R4/(inactive R5)/H7` remains the deeper completed baseline
@@ -478,10 +479,10 @@
    `tmp/active_wave_plan.md` aligned on the rule that `H43` remains the
    current active docs-only packet, `H42/H41` remain the preserved prior
    docs-only packets, `H36` remains the preserved active routing/refreeze
-   packet beneath them, `P30` remains the current low-priority
-   manuscript-surface refresh wave, `P29/P28` remain the completed prior
-   operational sync waves, `R43/R44/R45` remain completed downstream evidence,
-   and no active downstream runtime lane exists after `H43`.
+   packet beneath them, `P31` remains the current low-priority blocked-
+   blog/helper guardrail refresh wave, `P30/P29/P28` remain the completed
+   prior operational sync waves, `R43/R44/R45` remain completed downstream
+   evidence, and no active downstream runtime lane exists after `H43`.
 2. Treat `P17_h30_commit_hygiene_and_clean_worktree_promotion` as completed on
    `wip/p17-h30-clean`, and treat
    `P18_post_h32_clean_worktree_promotion` as the completed clean-worktree

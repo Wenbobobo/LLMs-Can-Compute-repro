@@ -14,8 +14,9 @@ same-substrate context.
    The manuscript, release summary, README, and STATUS must keep the current
    narrow scope explicit: append-only traces, exact latest-write retrieval, the
    staged-neural caveat, the bounded precision story, the mixed systems gate,
-   and the tiny typed-bytecode `D0` endpoint. No arbitrary-C, general-LLM, or
-   broader systems-superiority language may appear.
+   and the preserved first tiny typed-bytecode `D0` compiled step inside the
+   broader `H43` paper-grade endpoint. No arbitrary-C, general-LLM, or broader
+   systems-superiority language may appear.
 2. The current main-text artifact set stays fixed and ready.
    The paper-ready bundle must continue to report the existing `10/10` ready
    figure/table items on the frozen scope, and the intended main-text order

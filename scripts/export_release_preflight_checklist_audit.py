@@ -306,7 +306,7 @@ def build_checklist_rows(
                     "## Required companions",
                     "## Allowed optional companions",
                     "## Out of scope on the current freeze candidate",
-                    "Broader compiled demos or any frontend widening beyond `D0`",
+                    "Broader compiled demos or any frontend widening beyond the preserved first",
                 ],
             )
             else "blocked",

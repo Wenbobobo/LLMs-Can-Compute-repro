@@ -30,9 +30,18 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   refreeze design surface that turns landed `R44` into the completed current
   narrow useful-case gate and returns the stack to no active downstream
   runtime lane.
-- `2026-03-24-post-h43-p29-release-audit-refresh-design.md` — the current
-  low-priority release/public audit refresh design surface that updates stale
-  downstream audits and the last contradictory release-facing ledgers
+- `2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md` — the current
+  low-priority blocked-blog/helper guardrail refresh design surface that keeps
+  `H43` current while refreshing downstream blog plus manuscript-helper
+  guardrails that still freeze the paper-grade endpoint at preserved
+  `H32/H34`.
+- `2026-03-24-post-h43-p30-manuscript-surface-refresh-design.md` — the
+  completed prior low-priority manuscript-surface refresh design surface that
+  moved stale paper-facing prose baselines to the landed `H43` state without
+  changing the scientific stage.
+- `2026-03-24-post-h43-p29-release-audit-refresh-design.md` — the completed
+  prior low-priority release/public audit refresh design surface that updates
+  stale downstream audits and the last contradictory release-facing ledgers
   downstream of landed `H43`.
 - `2026-03-24-post-h43-p28-publication-surface-sync-design.md` — the
   completed prior low-priority publication/control sync design surface that
@@ -92,13 +101,17 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `../milestones/P30_post_h43_manuscript_surface_refresh/` — current
-  low-priority operational manuscript-surface refresh packet that updates
-  stale paper-facing prose baselines and derivative helper docs without
+- `../milestones/P31_post_h43_blog_guardrails_refresh/` — current
+  low-priority operational blocked-blog/helper guardrail refresh packet that
+  updates stale downstream blog plus manuscript-helper controls without
   changing scientific stage.
 - `../milestones/H43_post_r44_useful_case_refreeze/` — current active
   docs-only refreeze packet that records `R44` as completed narrow useful-case
   evidence and restores `no_active_downstream_runtime_lane`.
+- `../milestones/P30_post_h43_manuscript_surface_refresh/` — completed prior
+  low-priority operational manuscript-surface refresh packet that aligned
+  stale paper-facing prose baselines and derivative helper docs to landed
+  `H43`.
 - `../milestones/P29_post_h43_release_audit_refresh/` — completed prior
   low-priority operational release/public audit refresh packet that aligned
   stale downstream audits and release-facing ledgers to landed `H43`.
@@ -119,10 +132,13 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   completed operational promotion/artifact audit lane.
 - `../milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/` —
   completed operational explicit merge packet for the post-`R42` override.
-- `../milestones/P30_post_h43_manuscript_surface_refresh/` — current
+- `../milestones/P31_post_h43_blog_guardrails_refresh/` — current low-priority
+  operational blocked-blog/helper guardrail refresh packet downstream of
+  `H43`.
+- `../milestones/P30_post_h43_manuscript_surface_refresh/` — completed prior
   low-priority operational manuscript-surface refresh packet downstream of
   `H43`.
-- `../milestones/P29_post_h43_release_audit_refresh/` — completed prior
+- `../milestones/P29_post_h43_release_audit_refresh/` — completed earlier prior
   low-priority operational release/public audit refresh packet downstream of
   `H43`.
 - `../milestones/P28_post_h43_publication_surface_sync/` — completed
@@ -177,7 +193,7 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `2026-03-24-*` — current post-`R42` aggressive long-arc master-plan,
   control-override, explicit merge-wave, dual-mode execution, post-`R43`
   route-selection, post-`R44` useful-case refreeze, and post-`H43`
-  operational sync/audit-refresh design set.
+  operational sync/audit-refresh/manuscript/helper-doc design set.
 - `2026-03-23-*` — current post-`H34`, post-`P23`, post-`H36`, post-`H38`,
   and post-`R42` design set for the Origin-core line.
 - `2026-03-21-*` and `2026-03-22-*` — preserved post-`H19`, post-`H21`,

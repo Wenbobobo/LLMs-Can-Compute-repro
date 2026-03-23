@@ -12,8 +12,9 @@ frozen current-scope claim set rather than reopen scope by phrasing drift.
   `current-scope only`, or `unsupported beyond the validated suite`.
 - `R2` should be written as a gate on widening, not as a teaser for future
   runtime wins.
-- `D0` should be written as the current compiled endpoint, not as an early
-  placeholder for arbitrary language or runtime claims.
+- `D0` should be written as the preserved first compiled step inside the
+  current `H43` paper-grade endpoint, not as the whole current endpoint or an
+  early placeholder for arbitrary language or runtime claims.
 - Appendix companions may strengthen auditability or reproducibility, but they
   must not silently become main-text evidence for a broader claim row.
 
@@ -28,7 +29,7 @@ frozen current-scope claim set rather than reopen scope by phrasing drift.
 | Mask dependence and failure provenance | State that the widened staged suite closes the fair positive claim rather than rescuing it. | Use the regime comparison plus provenance follow-up to show that later `step_budget` rows are downstream of earlier semantic divergence. | Do not describe `opcode_shape` or `step_budget` as partially surviving fair regimes. | staged failure taxonomy figure |
 | Precision boundary | State the `C3e` boundary in one sentence: single-head fails early on many current streams, decomposition helps on the validated suite, broader robustness remains unsupported. | Quote the current stream/family-level closure from `R1` and keep the table/figure tied to exported summaries. | Avoid open-ended horizon rhetoric or universal scaling language. | precision boundary figure + precision boundary table |
 | Systems gate | Present `R2` as the reason widening stops, not as a minor caveat. | Report both sides: geometry remains strongly positive, but current lowered `exec_trace` timing is not yet end-to-end competitive on the positive `D0` suites. | Use `not yet competitive` rather than softening the negative systems result into optimism. | likely paragraph plus optional compact inline table |
-| Compiled boundary | Open by stating that the current compiled claim ends at tiny typed bytecode `D0`. | Combine verifier parity, exact trace/final-state agreement, one stress/reference follow-up, and the explicit `M7` no-go decision. | State that these results do not authorize widening to Wasm-like or arbitrary-C claims. | frontend boundary diagram + exact-trace/final-state table |
+| Compiled boundary | Open by stating that the preserved first compiled step is the tiny typed bytecode `D0` boundary inside the broader current `H43` endpoint. | Combine verifier parity, exact trace/final-state agreement, one stress/reference follow-up, and the explicit `M7` no-go decision. | State that these results do not authorize widening to Wasm-like or arbitrary-C claims. | frontend boundary diagram + exact-trace/final-state table |
 | Negative results and threats | Frame unsupported claims, failed baselines, staged closure, narrow precision, and mixed systems value as one coherent boundary statement. | Use `negative_results.md`, `threats_to_validity.md`, and `P3` unsupported rows together. | Avoid treating negative results as temporary engineering gaps unless the ledgers already say so. | threats-to-validity table |
 | Reproducibility appendix | Describe how to regenerate figures/tables, audit the public-safe bundle, and inspect companion diagnostics. | Point to manifest, paper-ready rendered artifacts, release ledger, and appendix-only diagnostics. | Keep packaging and regeneration details downstream of the scientific argument. | appendix artifact map |
 
@@ -43,7 +44,7 @@ frozen current-scope claim set rather than reopen scope by phrasing drift.
 | Real-trace precision boundary figure | On the current exported real-trace families, float32 single-head fails early while decomposition retains exactness on the validated suite. | The figure does not establish universal long-horizon precision robustness beyond the validated suite. |
 | Real-trace precision boundary table | Family- and scheme-level boundary rows behind the current precision claim. | Boundary statements remain suite-specific and scheme-specific. |
 | Negative-control comparison | Softmax baselines share the task surface yet still fail the exact rollout target that defines the paper's executor boundary. | These failures are informative controls, not a proof that no other learned branch could exist. |
-| Frontend boundary diagram | The current compiled endpoint is a tiny typed-bytecode `D0` slice with exact parity on the frozen starter suite. | The diagram does not imply Wasm-like, arbitrary-C, or broader runtime coverage. |
+| Frontend boundary diagram | The preserved first compiled step is a tiny typed-bytecode `D0` slice with exact parity on the frozen starter suite inside the current `H43` paper endpoint. | The diagram does not imply Wasm-like, arbitrary-C, or broader runtime coverage. |
 | Exact-trace / final-state success table | Exact agreement summary for the frozen `D0` slice and its current stress/reference companion. | Companion success strengthens the present endpoint but does not authorize frontend widening. |
 | Threats-to-validity table | External and internal limits that keep mechanism, systems, and compiled-boundary claims distinct. | Mixed systems results remain part of the argument and cannot be omitted. |
 

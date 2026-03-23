@@ -208,13 +208,15 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "Release-facing ledgers should no longer describe H40 or H32/H34 as current control.",
         },
         {
-            "item_id": "index_and_handoff_surfaces_preserve_p29_as_completed_prior_wave_under_p30_current_state",
+            "item_id": "index_and_handoff_surfaces_preserve_p29_as_completed_prior_wave_under_p31_current_state",
             "status": "pass"
             if contains_all(
                 inputs["publication_readme_text"],
                 [
+                    "docs/milestones/p31_post_h43_blog_guardrails_refresh/",
                     "docs/milestones/p30_post_h43_manuscript_surface_refresh/",
                     "docs/milestones/p29_post_h43_release_audit_refresh/",
+                    "results/p31_post_h43_blog_guardrails_refresh/summary.json",
                     "results/p30_post_h43_manuscript_surface_refresh/summary.json",
                     "results/p29_post_h43_release_audit_refresh/summary.json",
                 ],
@@ -222,6 +224,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["plans_index_text"],
                 [
+                    "../milestones/p31_post_h43_blog_guardrails_refresh/",
                     "../milestones/p30_post_h43_manuscript_surface_refresh/",
                     "../milestones/p29_post_h43_release_audit_refresh/",
                     "../milestones/p28_post_h43_publication_surface_sync/",
@@ -230,6 +233,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["milestones_index_text"],
                 [
+                    "p31_post_h43_blog_guardrails_refresh/",
                     "p30_post_h43_manuscript_surface_refresh/",
                     "p29_post_h43_release_audit_refresh/",
                     "p28_post_h43_publication_surface_sync/",
@@ -238,14 +242,15 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["active_wave_plan_text"],
                 [
-                    "`p30_post_h43_manuscript_surface_refresh` is the current low-priority",
-                    "`p29` is the completed prior release/public audit refresh wave",
+                    "`p31_post_h43_blog_guardrails_refresh` is the current low-priority",
+                    "`p30` is the completed prior manuscript-surface refresh wave",
+                    "`p29` is the completed earlier prior release/public audit refresh wave",
                     "`p28` is the completed earlier publication/control sync wave",
-                    "wip/p30-h43-manuscript-refresh",
+                    "wip/p31-h43-blog-guardrails-refresh",
                 ],
             )
             else "blocked",
-            "notes": "Publication/index/handoff surfaces should preserve P29 as the completed prior release-audit wave under current P30 state.",
+            "notes": "Publication/index/handoff surfaces should preserve P29 as the completed earlier prior release-audit wave under current P31/P30 state.",
         },
         {
             "item_id": "upstream_h43_and_p28_results_remain_preserved",
@@ -277,6 +282,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         "docs/publication_record/README.md": (
             "publication_readme_text",
             [
+                "docs/milestones/P31_post_h43_blog_guardrails_refresh/",
                 "docs/milestones/P30_post_h43_manuscript_surface_refresh/",
                 "docs/milestones/P29_post_h43_release_audit_refresh/",
                 "results/P29_post_h43_release_audit_refresh/summary.json",
@@ -284,18 +290,27 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         ),
         "docs/plans/README.md": (
             "plans_index_text",
-            ["../milestones/P30_post_h43_manuscript_surface_refresh/", "../milestones/P29_post_h43_release_audit_refresh/"],
+            [
+                "../milestones/P31_post_h43_blog_guardrails_refresh/",
+                "../milestones/P30_post_h43_manuscript_surface_refresh/",
+                "../milestones/P29_post_h43_release_audit_refresh/",
+            ],
         ),
         "docs/milestones/README.md": (
             "milestones_index_text",
-            ["P30_post_h43_manuscript_surface_refresh/", "P29_post_h43_release_audit_refresh/", "P28_post_h43_publication_surface_sync/"],
+            [
+                "P31_post_h43_blog_guardrails_refresh/",
+                "P30_post_h43_manuscript_surface_refresh/",
+                "P29_post_h43_release_audit_refresh/",
+                "P28_post_h43_publication_surface_sync/",
+            ],
         ),
         "tmp/active_wave_plan.md": (
             "active_wave_plan_text",
             [
-                "`P30_post_h43_manuscript_surface_refresh` is the current low-priority",
-                "`P29` is the completed prior release/public audit refresh wave",
-                "wip/p30-h43-manuscript-refresh",
+                "`P31_post_h43_blog_guardrails_refresh` is the current low-priority",
+                "`P29` is the completed earlier prior release/public audit refresh wave",
+                "wip/p31-h43-blog-guardrails-refresh",
             ],
         ),
         "results/release_worktree_hygiene_snapshot/summary.json": (

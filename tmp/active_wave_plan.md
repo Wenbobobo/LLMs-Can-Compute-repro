@@ -49,12 +49,13 @@ Current scientific/control stack:
 Immediate active wave:
 
 `H43` remains the current scientific stage.
-`P30_post_h43_manuscript_surface_refresh` is the current low-priority
-operational/docs wave. It refreshes stale manuscript-facing prose baselines
-plus derivative helper docs that still terminate on the preserved `H32/H34`
-compiled-boundary line, so the downstream paper/control surface matches the
-landed `H42/R43/R44/R45/F20/P27/P28/P29/H43` stack without creating a new
-runtime lane.
+`P31_post_h43_blog_guardrails_refresh` is the current low-priority
+operational/docs wave. It refreshes blocked downstream blog plus
+manuscript/caption/appendix helper guardrail docs that still freeze the
+current paper-grade endpoint at the preserved `H32/H34` compiled-boundary
+line, so the downstream helper/control surface matches the landed
+`H42/R43/R44/R45/F20/P27/P30/P29/P28/H43` stack without creating a new
+runtime lane or unblocking the blog.
 
 ## Current Facts
 
@@ -73,8 +74,10 @@ runtime lane.
   sync branch.
 - `wip/p29-h43-release-audit-refresh` is the clean post-`H43`
   release/public audit refresh branch.
-- `wip/p30-h43-manuscript-refresh` is the clean post-`H43`
+- `wip/p30-h43-manuscript-refresh` is the clean completed prior post-`H43`
   manuscript-surface refresh branch.
+- `wip/p31-h43-blog-guardrails-refresh` is the clean post-`H43`
+  blocked-blog/helper guardrail refresh branch.
 - dirty `main` remains untouched by design in this wave.
 - `P27` records `promotion_mode = explicit_merge_wave`,
   `merge_recommended = false`, and `merge_executed = false`.
@@ -180,9 +183,10 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   non-substitutive relative to exact `R43`.
 - `P27` is the completed operational explicit merge packet and keeps
   `merge_executed = false`.
-- `P30` is the current low-priority manuscript-surface refresh wave and does
-  not change the active scientific stage.
-- `P29` is the completed prior release/public audit refresh wave.
+- `P31` is the current low-priority blocked-blog/helper guardrail refresh wave
+  and does not change the active scientific stage.
+- `P30` is the completed prior manuscript-surface refresh wave.
+- `P29` is the completed earlier prior release/public audit refresh wave.
 - `P28` is the completed earlier publication/control sync wave.
 - `P26` remains the preserved prior audit-only operational lane.
 - `R41` stays deferred until a later contradiction packet.
@@ -200,6 +204,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
+- `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p30-manuscript-surface-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
@@ -214,6 +219,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
 - `docs/milestones/H42_post_r43_route_selection_packet/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
+- `docs/milestones/P31_post_h43_blog_guardrails_refresh/`
 - `docs/milestones/P30_post_h43_manuscript_surface_refresh/`
 - `docs/milestones/P29_post_h43_release_audit_refresh/`
 - `docs/milestones/P28_post_h43_publication_surface_sync/`
@@ -223,6 +229,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/P31_post_h43_blog_guardrails_refresh/summary.json`
 - `results/P30_post_h43_manuscript_surface_refresh/summary.json`
 - `results/P29_post_h43_release_audit_refresh/summary.json`
 - `results/P28_post_h43_publication_surface_sync/summary.json`

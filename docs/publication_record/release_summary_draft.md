@@ -56,13 +56,13 @@ science-routing story by themselves.
 
 ## Current endpoint and non-goals
 
-The active endpoint on current evidence is still the narrower Origin-core
-substrate, now extended through one bounded richer same-substrate value
-family: explicit bounded frame locals plus typed `FLAG` slots. The earlier
-tiny typed-bytecode `D0` endpoint remains a preserved historical boundary and
-should not be read as the current bridge to arbitrary C, general LLM
-computation, or broader demo-first claims. Those broader readings remain
-explicitly unsupported on the current paper scope.
+The active endpoint on current evidence is the narrower Origin-core
+semantic-boundary line now carried through exact bounded-memory execution
+(`R43`), coequal `R45` model support, and the restricted useful-case climb
+frozen by `H43`. The earlier tiny typed-bytecode `D0` endpoint remains a
+preserved first compiled boundary and should not be read as the current bridge
+to arbitrary C, general LLM computation, or broader demo-first claims. Those
+broader readings remain explicitly unsupported on the current paper scope.
 
 ## Current paper-facing follow-up
 

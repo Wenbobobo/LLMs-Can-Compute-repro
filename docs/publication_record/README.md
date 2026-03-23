@@ -165,17 +165,22 @@ Current control docs:
 - `docs/milestones/H43_post_r44_useful_case_refreeze/` — the current active
   docs-only useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
-- `docs/milestones/P30_post_h43_manuscript_surface_refresh/` — the current
-  low-priority operational manuscript-surface refresh packet that updates
-  stale paper-facing prose baselines and derivative helper docs while keeping
+- `docs/milestones/P31_post_h43_blog_guardrails_refresh/` — the current
+  low-priority operational blocked-blog/helper guardrail refresh packet that
+  updates stale downstream blog plus manuscript-helper controls while keeping
   `H43` current;
-- `docs/milestones/P29_post_h43_release_audit_refresh/` — the completed prior
-  low-priority operational release/public audit refresh packet that updates
-  stale downstream audits and the last contradictory release-facing ledgers
-  while keeping `H43` current;
+- `docs/milestones/P30_post_h43_manuscript_surface_refresh/` — the completed
+  prior low-priority operational manuscript-surface refresh packet that
+  updates stale paper-facing prose baselines and derivative helper docs while
+  keeping `H43` current;
+- `docs/milestones/P29_post_h43_release_audit_refresh/` — the completed earlier
+  prior low-priority operational release/public audit refresh packet that
+  updates stale downstream audits and the last contradictory release-facing
+  ledgers while keeping `H43` current;
 - `docs/milestones/P28_post_h43_publication_surface_sync/` — the completed
-  prior low-priority operational publication/control sync packet that aligned
-  the paper-facing ledgers to landed `H43` without changing scientific stage;
+  earlier prior low-priority operational publication/control sync packet that
+  aligned the paper-facing ledgers to landed `H43` without changing scientific
+  stage;
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/` —
   the landed preserved prior docs-only post-`F16` runtime-relevance decision
   packet that keeps `H36` frozen and leaves `R41` deferred;
@@ -336,12 +341,15 @@ Current control docs:
   machine-readable current docs-only useful-case refreeze packet recording
   claim `D` as `supported_here_narrowly` and restoring
   `no_active_downstream_runtime_lane`;
-- `results/P30_post_h43_manuscript_surface_refresh/summary.json` —
-  machine-readable current low-priority manuscript-surface refresh packet
+- `results/P31_post_h43_blog_guardrails_refresh/summary.json` — machine-
+  readable current low-priority blocked-blog/helper guardrail refresh packet
   downstream of landed `H43`;
-- `results/P29_post_h43_release_audit_refresh/summary.json` —
-  machine-readable completed prior low-priority release/public audit refresh
+- `results/P30_post_h43_manuscript_surface_refresh/summary.json` —
+  machine-readable completed prior low-priority manuscript-surface refresh
   packet downstream of landed `H43`;
+- `results/P29_post_h43_release_audit_refresh/summary.json` —
+  machine-readable completed earlier prior low-priority release/public audit
+  refresh packet downstream of landed `H43`;
 - `results/P28_post_h43_publication_surface_sync/summary.json` —
   machine-readable completed prior low-priority publication/control sync
   packet downstream of landed `H43`;
@@ -434,7 +442,8 @@ Current control docs:
 - `release_candidate_checklist.md` — restrained outward-sync
   `standing_gate` for the locked checkpoint;
 - `conditional_reopen_protocol.md` — bounded reopen protocol still governing
-  the current bounded `D0` packet; `E1c` remains conditional only.
+  contradictions that arise from the preserved first `D0` compiled step inside
+  the current `H43` paper endpoint; `E1c` remains conditional only.
 
 Completed baselines:
 - `H14` / `R11` / `R12` / `H15` remain the completed bounded core-first
@@ -524,8 +533,8 @@ Patch-playbook references:
 - `e1b_systems_patch_playbook.md` — completed bounded-systems protocol for the
   historical `E1b` lane;
 - `e1c_compiled_boundary_patch_playbook.md` — still-dormant compiled-boundary
-  protocol, used only if the current bounded `D0` packet exposes a `D0`
-  contradiction.
+  protocol, used only if the preserved first `D0` compiled step exposes a
+  `D0` contradiction.
 
 Supporting references:
 - `release_preflight_checklist.md` — outward release checklist for README /
@@ -535,7 +544,8 @@ Supporting references:
   repo-cleanliness snapshot used to decide whether an outward sync commit is
   currently blocked by a dirty worktree;
 - `blog_release_rules.md` — explicit downstream preconditions before any future
-  blog derivative is allowed to move;
+  blog derivative is allowed to move while preserving the current `H43`
+  paper-grade endpoint;
 - `section_draft_upgrade_outline.md` — record of the structural pass that
   converted the bundle into a more paper-shaped section draft;
 - `figure_table_narrative_roles.md` — fixed argumentative role for each current
@@ -632,4 +642,5 @@ Operating rule:
   baseline;
 - `blog_outline.md` remains downstream and currently blocked: `M7` resolved as
   a no-widening decision, so broader blog prose should not outrun the present
-  paper-grade endpoint.
+  `H43` paper-grade endpoint or reinterpret the preserved first `D0`
+  compiled boundary as the whole current finish line.

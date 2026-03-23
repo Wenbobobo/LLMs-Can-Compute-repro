@@ -11,19 +11,20 @@ inflating companion diagnostics into new main-text claims. The guiding rule is
 simple: main text carries the distilled claim-bearing evidence, while the
 appendix carries regeneration commands, artifact maps, and companion views
 that strengthen auditability on the same frozen scope. The minimum appendix
-package is fixed by the submission-candidate bundle: `D0` memory-surface
-diagnostics, `D0` stress/reference companion rows, and the regeneration/
-public-safe release ledgers. These items are required because they audit the
-compiled boundary and keep the outward release disciplined, but they do not
-widen the scientific claim.
+package is fixed by the submission-candidate bundle: preserved-first-compiled-
+step `D0` memory-surface diagnostics, `D0` stress/reference companion rows,
+and the regeneration/public-safe release ledgers. These items are required
+because they audit the first compiled step and keep the outward release
+disciplined, but they do not widen the scientific claim.
 
 ## Appendix artifact-map seed
 
 The artifact map groups appendix material by role rather than by file type.
 One group covers paper assembly and rendering: `results/P1_paper_readiness/`
-plus its export and render commands. A second group covers the minimum `D0`
-appendix package: `results/M6_memory_surface_followup/` and the appendix-level
-parts of `results/M6_stress_reference_followup/`. A third group covers
+plus its export and render commands. A second group covers the minimum
+preserved-first-step `D0` appendix package:
+`results/M6_memory_surface_followup/` and the appendix-level parts of
+`results/M6_stress_reference_followup/`. A third group covers
 optional audit companions: per-stream precision catalogs and full staged
 failure/provenance rows. A final group covers outward discipline and packaging:
 the `P2` artifact release ledger, the `H0` hygiene bundle, and the `P4`
@@ -50,12 +51,13 @@ current-scope recipe rather than as an invitation to widen the claim set.
 ## Appendix-only guardrail seed
 
 The appendix keeps some material out of the main text. Memory-surface
-diagnostics remain appendix-only because they audit `D0` rather than defining
-a broader runtime claim. Per-stream precision catalogs remain optional because
-the main text already carries the distilled precision boundary. Full staged
-failure digests remain optional because the paper needs the negative closure,
-not every raw row. Packaging and hygiene ledgers also remain appendix-only
-because they regulate outward release, not the scientific core. The appendix
-says this plainly so later editing does not silently promote companion
-evidence into broader narrative claims. Systems matrix rows and broader demo
+diagnostics remain appendix-only because they audit the preserved first `D0`
+compiled step rather than defining a broader runtime claim. Per-stream
+precision catalogs remain optional because the main text already carries the
+distilled precision boundary. Full staged failure digests remain optional
+because the paper needs the negative closure, not every raw row. Packaging and
+hygiene ledgers also remain appendix-only because they regulate outward
+release, not the scientific core. The appendix says this plainly so later
+editing does not silently promote companion evidence into broader narrative
+claims. Systems matrix rows and broader demo
 evidence stay out of scope on the current submission-candidate bundle.

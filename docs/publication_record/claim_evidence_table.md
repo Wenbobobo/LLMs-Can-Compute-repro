@@ -189,9 +189,9 @@
   frozen scientific state while recording `R32` as the primary next lane,
   `R33` as the deferred systems-audit lane, and `R29/F3` as still blocked.
 - `D0` — `results/M7_frontend_candidate_decision/decision_summary.json`
-  Frontend decision bundle: the current endpoint stays on tiny typed bytecode,
-  frontend widening is not authorized, and any revisit now requires a fresh
-  scope + systems case.
+  Frontend decision bundle: the preserved first compiled step stays on tiny
+  typed bytecode, frontend widening is not authorized, and any revisit now
+  requires a fresh scope + systems case.
 - `R2` — `results/E1b_systems_patch/summary.json`
   Patch-level systems bundle: the mixed gate is restated with same-scope
   component attribution, `25` component rows, `5` suite bridges, `4` history
