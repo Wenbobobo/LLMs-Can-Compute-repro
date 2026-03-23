@@ -112,7 +112,11 @@ routing packet, `H33` preserves the one-question docs-only selection step,
 `R39` preserves one narrow same-substrate dependency audit, and `H34`
 preserves the current freeze-complete-for-now interpretation with no active
 downstream runtime lane. Any later compiler-boundary extension now requires a
-new contradiction-driven explicit packet.
+new contradiction-driven explicit packet. The later paper-facing and planning-
+only closeout lanes now also align to that reading: `P20` rewrites the
+manuscript bundle to terminate on the landed `H34` state, `F5` concludes
+`no_reopen_candidate_survives`, and `F6` records docs/planning maintenance as
+the current admissible default rather than a new runtime wave.
 
 ## Reproducibility pointers
 

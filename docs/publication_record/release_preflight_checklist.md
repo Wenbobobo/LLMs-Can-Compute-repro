@@ -17,6 +17,10 @@ current freeze candidate is assembled.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
   wording downstream of landed `H34/H32/R39/H33/H31/H30` while preserving the
   narrow Origin-core limits.
+- [ ] `P20_post_h34_manuscript_narrative_resync`,
+  `F5_post_h34_contradiction_scout_matrix`, and
+  `F6_post_p20_future_option_matrix` remain aligned with the same no-reopen
+  interpretation and do not imply a new runtime lane.
 
 ## Paper-facing ledgers
 
@@ -25,6 +29,8 @@ current freeze candidate is assembled.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`,
   `freeze_candidate_criteria.md`, `main_text_order.md`, and
   `appendix_companion_scope.md` remain synchronized.
+- [ ] `publication_record/README.md` and `plans/README.md` both expose the
+  completed `P20/F5/F6` closeout state without widening wording.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
 ## Machine-audited guards

@@ -15,6 +15,8 @@ preserved-closeout-and-pivot stack.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
   recorded by active `H32` plus current docs-only `H34`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
+- [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
+  interpretation and do not imply a new evidence wave.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
 ## Paper-facing dependencies
@@ -24,6 +26,9 @@ preserved-closeout-and-pivot stack.
   `publication_record/README.md` all describe the same `H32` active /
   `H34` current docs-only control / `H33-R39-H31-H30-H29-H27-H28`
   preserved current control package.
+- [ ] `plans/README.md` and the saved post-`P20/F5/F6` handoff surfaces still
+  present docs/planning maintenance as admissible while runtime remains
+  inactive by default.
 - [ ] The blocked-blog rule remains explicit in both `blog_release_rules.md`
   and `blog_outline.md`.
 
