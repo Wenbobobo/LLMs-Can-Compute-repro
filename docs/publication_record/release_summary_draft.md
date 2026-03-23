@@ -120,10 +120,14 @@ the current admissible default rather than a new runtime wave. The next landed
 follow-on waves remain planning-only: `F7` makes future same-substrate reopen
 criteria mechanical, `F8` stores beyond-Origin milestone families without
 activating them, `F10` now makes richer executor-visible value/comparator
-obligations explicit without authorizing runtime widening, `F9` remains
-blocked, `F11` remains new-substrate, `P21` preserves the first post-`H34`
-planning sync, and `P22` aligns the driver and handoff surfaces to that
-current `F10`-led no-reopen reading.
+obligations explicit without authorizing runtime widening, `F12` now reanchors
+the origin-facing claim delta to the current control state, `F13` now fixes
+`bounded scalar locals and flags` as the current bounded same-substrate
+family-first preactivation surface, `F14` now stores a conditional reopen
+readiness blueprint without activating `H35` or `R40`, `F9` remains blocked,
+`F11` remains new-substrate, `P21` and `P22` remain preserved prior planning
+syncs, and `P23` aligns the driver and handoff surfaces to the current
+family-first no-reopen reading.
 
 ## Reproducibility pointers
 

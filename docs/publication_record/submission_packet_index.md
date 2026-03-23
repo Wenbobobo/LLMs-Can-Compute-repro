@@ -34,13 +34,18 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `submission_candidate_criteria.md`
 - `release_candidate_checklist.md`
 - `conditional_reopen_protocol.md`
+- `../plans/2026-03-23-post-f10-family-first-preactivation-design.md`
 - `../plans/2026-03-23-post-h34-f10-p22-planning-wave-design.md`
 - `../plans/2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md`
 - `../milestones/F7_post_h34_reopen_trigger_specification_bundle/`
 - `../milestones/F8_post_h34_beyond_origin_bridge_roadmap/`
 - `../milestones/F10_post_h34_executor_value_comparator_matrix/`
+- `../milestones/F12_post_f10_origin_claim_delta_reanchor_bundle/`
+- `../milestones/F13_post_f12_bounded_scalar_value_family_spec/`
+- `../milestones/F14_post_f13_conditional_reopen_readiness_bundle/`
 - `../milestones/P21_post_h34_planning_surface_sync/`
 - `../milestones/P22_post_f10_planning_surface_sync/`
+- `../milestones/P23_post_f13_planning_surface_sync/`
 
 ## Required audit anchors
 
@@ -133,7 +138,10 @@ stack. The latest downstream follow-on wave remains planning-only:
 `F7` makes future same-substrate reopen criteria mechanical,
 `F8` stores beyond-Origin milestone families without activating them,
 `F10` now makes richer executor-visible value/comparator obligations explicit
-without authorizing runtime widening, `F9` remains blocked, `F11` remains
-new-substrate, `P21` preserves the first post-`H34` planning sync, and `P22`
-aligns the top-level control surfaces to that current no-reopen
-interpretation.
+without authorizing runtime widening, `F12` preserves the current
+origin-facing claim-delta reanchor, `F13` preserves the current bounded
+family-first preactivation surface, `F14` preserves the current conditional
+reopen-readiness blueprint while keeping `H35/R40` inactive, `F9` remains
+blocked, `F11` remains new-substrate, `P21` and `P22` remain preserved prior
+planning syncs, and `P23` aligns the top-level control surfaces to the current
+family-first no-reopen interpretation.

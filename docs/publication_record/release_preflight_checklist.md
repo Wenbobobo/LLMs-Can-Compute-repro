@@ -23,11 +23,14 @@ current freeze candidate is assembled.
   interpretation and do not imply a new runtime lane.
 - [ ] `F7_post_h34_reopen_trigger_specification_bundle`,
   `F8_post_h34_beyond_origin_bridge_roadmap`,
-  `F10_post_h34_executor_value_comparator_matrix`, and
-  `P22_post_f10_planning_surface_sync` remain aligned with that same
-  planning-only no-reopen interpretation, while `F9` stays blocked and `F11`
-  stays new-substrate, and none of them imply `H35`, `R40`, or a broadened
-  runtime family.
+  `F10_post_h34_executor_value_comparator_matrix`,
+  `F12_post_f10_origin_claim_delta_reanchor_bundle`,
+  `F13_post_f12_bounded_scalar_value_family_spec`,
+  `F14_post_f13_conditional_reopen_readiness_bundle`, and
+  `P23_post_f13_planning_surface_sync` remain aligned with that same
+  planning-only no-reopen interpretation, while `P21/P22` stay preserved
+  prior syncs, `F9` stays blocked, `F11` stays new-substrate, and none of
+  them imply `H35`, `R40`, or a broadened runtime family.
 
 ## Paper-facing ledgers
 

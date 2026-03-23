@@ -12,8 +12,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   design surface for the current family-first preactivation wave after the
   completed `F10/P22` bridge wave.
 - `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — the preserved
-  design surface for the current `F10`-led planning-only bridge wave after the
-  first `F7/F8/P21` post-`H34` handoff.
+  design surface for the preserved prior `F10`-led planning-only bridge wave
+  after the first `F7/F8/P21` post-`H34` handoff.
 - `2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — the preserved
   design surface for the first planning-only follow-on wave after the landed
   `P20/F5/F6` no-reopen closeout.
@@ -61,7 +61,7 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `2026-03-23-post-f10-family-first-preactivation-design.md` — preserved
   design surface for the current family-first preactivation wave.
 - `2026-03-23-post-h34-f10-p22-planning-wave-design.md` — preserved design
-  surface for the current `F10`-led planning-only bridge wave.
+  surface for the preserved prior `F10`-led planning-only bridge wave.
 - `2026-03-23-post-h34-f7-f8-p21-planning-wave-design.md` — preserved design
   surface for the first post-`H34` planning-only follow-on wave.
 - `2026-03-23-post-p20-f6-future-option-design.md` — preserved design

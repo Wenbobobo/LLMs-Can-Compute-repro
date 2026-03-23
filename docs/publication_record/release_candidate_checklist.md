@@ -17,10 +17,11 @@ preserved-closeout-and-pivot stack.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
-- [ ] `F7`, `F8`, `F10`, and `P22` remain aligned with that same planning-only
-  no-reopen interpretation, while `F9` stays blocked and `F11` stays
-  new-substrate, and none of them imply a new evidence wave, `H35`, or a
-  broadened runtime family.
+- [ ] `F7`, `F8`, `F10`, `F12`, `F13`, `F14`, and `P23` remain aligned with
+  that same planning-only no-reopen interpretation, while `P21/P22` stay
+  preserved prior syncs, `F9` stays blocked, `F11` stays new-substrate, and
+  none of them imply a new evidence wave, `H35`, or a broadened runtime
+  family.
 - [ ] No outward wording implies a new evidence wave or broader compiled scope.
 
 ## Paper-facing dependencies
