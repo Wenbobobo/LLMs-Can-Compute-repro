@@ -47,6 +47,10 @@ Current control docs:
   the completed auxiliary design surface for refreshing preserved
   machine-readable and regeneration wording that still treats `D0` as the
   whole current paper endpoint;
+- `docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md`
+  — the completed auxiliary design surface for refreshing dormant `E1`
+  playbooks and helper historical wording that still speak as though
+  preserved same-endpoint `R2/D0` scope were the live paper endpoint;
 - `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md` —
   the completed earlier prior low-priority design surface for refreshing stale
   release/public audits and the last contradictory release-facing ledgers
@@ -180,6 +184,10 @@ Current control docs:
 - `docs/milestones/P32_post_h43_historical_wording_refresh/` — the completed
   auxiliary historical/regeneration wording refresh packet that keeps `P31`
   current while refreshing preserved `H0/P3` machine-readable wording;
+- `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/` — the
+  completed auxiliary dormant-playbook wording refresh packet that keeps
+  `P31` current while refreshing dormant `E1` playbooks and helper historical
+  wording;
 - `docs/milestones/P30_post_h43_manuscript_surface_refresh/` — the completed
   prior low-priority operational manuscript-surface refresh packet that
   updates stale paper-facing prose baselines and derivative helper docs while
@@ -357,6 +365,9 @@ Current control docs:
   downstream of landed `H43`;
 - `results/P32_post_h43_historical_wording_refresh/summary.json` —
   machine-readable completed auxiliary historical/regeneration wording refresh
+  packet downstream of landed `H43`;
+- `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json` —
+  machine-readable completed auxiliary dormant-playbook wording refresh
   packet downstream of landed `H43`;
 - `results/P30_post_h43_manuscript_surface_refresh/summary.json` —
   machine-readable completed prior low-priority manuscript-surface refresh

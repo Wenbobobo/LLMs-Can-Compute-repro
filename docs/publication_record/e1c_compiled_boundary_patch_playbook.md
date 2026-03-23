@@ -4,22 +4,23 @@ Status: dormant protocol. This file does not activate `E1c`.
 
 ## Purpose
 
-Use this lane only to repair one evidence conflict around the current compiled
-boundary. The target is the existing tiny typed-bytecode `D0` slice: verifier
-parity, lowering equivalence, exact trace/final-state agreement, one
-stress/reference follow-up, and companion memory-surface diagnostics, all
-without frontend widening.
+Use this lane only to repair one evidence conflict around the preserved first
+compiled boundary from the old same-endpoint line. The target is the existing
+tiny typed-bytecode `D0` slice as preserved historical support inside the
+broader current `H43` paper endpoint: verifier parity, lowering equivalence,
+exact trace/final-state agreement, one stress/reference follow-up, and
+companion memory-surface diagnostics, all without frontend widening.
 
 ## Eligible triggers
 
 `E1c` may open only when at least one valid reopen trigger already exists and
-the missing evidence class is specifically about the current `D0` boundary. The
-lane is appropriate when:
+the missing evidence class is specifically about the preserved first `D0`
+compiled boundary. The lane is appropriate when:
 
 - a locked `D0` sentence or table points to missing or inconsistent compiled
   evidence;
-- a required appendix companion for the current `D0` narrative is absent or no
-  longer matches the locked paper wording;
+- a required appendix companion for the preserved-first-step `D0` narrative is
+  absent or no longer matches the locked paper wording;
 - verifier, lowering, exactness, or companion artifacts disagree on the frozen
   typed-bytecode slice and the conflict cannot be solved by wording cleanup
   alone.
@@ -28,9 +29,9 @@ If the issue is primarily about systems competitiveness, use `E1b` instead.
 
 ## Scope lock
 
-`E1c` is allowed to touch only the current `D0` boundary:
+`E1c` is allowed to touch only the preserved first `D0` boundary:
 
-- primary scope: the existing tiny typed-bytecode slice and its current
+- primary scope: the existing tiny typed-bytecode slice and its preserved
   companion diagnostics;
 - dependent read-only context: the `R2` mixed systems gate and the `M7`
   no-widening decision;
@@ -40,7 +41,8 @@ If the issue is primarily about systems competitiveness, use `E1b` instead.
 
 ## Minimum starting bundle
 
-Start from the current compiled-boundary package before proposing any new run:
+Start from the preserved compiled-boundary package before proposing any new
+run:
 
 - `results/M6_typed_bytecode_harness/verifier_rows.json`
 - `results/M6_typed_bytecode_harness/lowering_equivalence.json`
@@ -76,12 +78,12 @@ slice throughout.
 2. Name the precise `D0` evidence class at issue: verifier, lowering, exact
    trace, exact final state, memory-surface companion, or stress/reference
    companion.
-3. Freeze the suite and semantics to the current `D0` slice before any repair
-   work starts.
+3. Freeze the suite and semantics to the preserved `D0` slice before any
+   repair work starts.
 4. Produce only the smallest new compiled-boundary artifact bundle required to
    answer the named conflict.
-5. Re-state the boundary in narrow form: current `D0` supported where proven,
-   no broader frontend implication.
+5. Re-state the boundary in narrow form: preserved first-step `D0` supported
+   where proven, no broader frontend implication.
 6. Record a result digest and return to the locked paper/release lanes.
 
 ## Required boundary checks
@@ -98,11 +100,13 @@ Before refreezing, `E1c` must confirm all of the following:
 ## Failure handling
 
 If the bounded repair does not resolve the conflict, the lane must tighten the
-paper wording back to the current `D0` boundary rather than widening the
-frontend or assuming that a stronger systems pass authorizes a broader claim.
+paper wording back to the preserved first `D0` boundary rather than widening
+the frontend or assuming that a stronger systems pass authorizes a broader
+claim.
 
 ## Refreeze rule
 
 `E1c` ends only after a lane-local result digest is recorded, the relevant
 audits are rerun, and control returns to the locked paper/release surface with
-the same tiny typed-bytecode endpoint still in force.
+the same preserved tiny typed-bytecode boundary still in force as historical
+support.

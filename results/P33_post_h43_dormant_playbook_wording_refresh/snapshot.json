@@ -1,0 +1,99 @@
+{
+  "experiment": "p33_post_h43_dormant_playbook_wording_refresh",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p33-h43-dormant-playbook-wording-refresh\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p33-h43-dormant-playbook-wording-refresh\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md",
+      "matched_lines": [
+        "### Recommended: `P33_post_h43_dormant_playbook_wording_refresh`",
+        "- `dormant_playbook_wording_surfaces_refreshed_to_h43`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/e1_patch_playbook_matrix.md",
+      "matched_lines": [
+        "| `E1b_systems_patch` | one locked sentence or review/release demand requires one missing systems evidence class on the preserved same-endpoint scope | the preserved mixed `R2` systems gate and its role as a prerequisite for any later frontend revisit | `results/M2_geometry_core/benchmark_geometry.json`, `results/R2_systems_baseline_gate/summary.json`, `results/R2_systems_baseline_gate/baseline_matrix.json`, `results/R2_systems_baseline_gate/runtime_profile_rows.csv`, `results/M6_typed_bytecode_harness/short_exact_trace.json`, `results/M6_typed_bytecode_harness/long_exact_final_state.json`, `results/M6_stress_reference_followup/summary.json`, `results/M7_frontend_candidate_decision/decision_summary.json` | no frontend widening, no arbitrary-C/runtime-generalization claim, no end-to-end superiority shortcut | the named systems question is answered on the preserved positive `D0` suites from the old same-endpoint line, while the gate remains explicitly bounded to the preserved same-endpoint scope |",
+        "| `E1c_compiled_boundary_patch` | one locked `D0` sentence, artifact pairing, or appendix companion is missing or contradicted and cannot be repaired by wording alone | the preserved first tiny typed-bytecode `D0` boundary only | `results/M6_typed_bytecode_harness/verifier_rows.json`, `results/M6_typed_bytecode_harness/lowering_equivalence.json`, `results/M6_typed_bytecode_harness/short_exact_trace.json`, `results/M6_typed_bytecode_harness/long_exact_final_state.json`, `results/M6_memory_surface_followup/summary.json`, `results/M6_stress_reference_followup/summary.json`, `results/M7_frontend_candidate_decision/decision_summary.json`, `results/R2_systems_baseline_gate/summary.json` | no new frontend surface, no opcode/language widening beyond the preserved first-step `D0` boundary, no arbitrary C | the `D0` conflict is closed on the frozen typed-bytecode slice, or the locked wording is tightened back to the preserved first compiled boundary |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/e1b_systems_patch_playbook.md",
+      "matched_lines": [
+        "preserved same-endpoint scope. The target is the preserved mixed `R2` systems"
+      ]
+    },
+    {
+      "path": "docs/publication_record/e1c_compiled_boundary_patch_playbook.md",
+      "matched_lines": [
+        "broader current `H43` paper endpoint: verifier parity, lowering equivalence,"
+      ]
+    },
+    {
+      "path": "docs/publication_record/layout_decision_log.md",
+      "matched_lines": [
+        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the preserved-first-step `D0` compiled-boundary line rather than treating that older `D0` evidence as the whole current endpoint. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/experiment_manifest.md",
+      "matched_lines": [
+        "| 2026-03-24 | post-`H43` `P33` dormant-playbook wording refresh wave | docs/control plus exporter sync: save one post-`H43` auxiliary dormant-playbook wording refresh design, add `P33` milestone docs, refresh dormant `E1` playbooks plus helper layout/historical manifest wording that still speaks as though preserved same-endpoint `R2/D0` scope were the live paper endpoint, refresh minimal status/publication/plan/milestone/active-wave handoff surfaces so they record `P33` without displacing `P31`, add `P33` exporter plus focused test/results, and record the wave in the experiment manifest | new `docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md`, new `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/`, new `scripts/export_p33_post_h43_dormant_playbook_wording_refresh.py`, new `tests/test_export_p33_post_h43_dormant_playbook_wording_refresh.py`, refreshed `docs/publication_record/e1_patch_playbook_matrix.md`, refreshed `docs/publication_record/e1b_systems_patch_playbook.md`, refreshed `docs/publication_record/e1c_compiled_boundary_patch_playbook.md`, refreshed `docs/publication_record/layout_decision_log.md`, refreshed `docs/publication_record/experiment_manifest.md`, refreshed `STATUS.md`, refreshed `docs/publication_record/README.md`, refreshed `docs/plans/README.md`, refreshed `docs/milestones/README.md`, refreshed `tmp/active_wave_plan.md`, new `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json`, new `results/P33_post_h43_dormant_playbook_wording_refresh/checklist.json`, new `results/P33_post_h43_dormant_playbook_wording_refresh/snapshot.json` | CPython 3.13.9 from `D:/zWenbo/AI/LLMCompute-worktrees/p33-h43-dormant-playbook-wording-refresh/.venv`, `uv 0.9.14`, clean worktree `D:/zWenbo/AI/LLMCompute-worktrees/p33-h43-dormant-playbook-wording-refresh` on `wip/p33-h43-dormant-playbook-wording-refresh`; focused pytest on `P28/P29/P30/P31/P32/P33` exporters plus `git diff --check` should pass | no scientific widening; `P33` keeps `H43` as the active scientific stage, keeps `P31` as the current low-priority wave, keeps `P32` as the earlier completed auxiliary packet, refreshes dormant playbooks and helper historical wording so preserved same-endpoint `R2/D0` surfaces are treated as historical support inside the broader current `H43` endpoint, keeps `R41` deferred, keeps `merge_executed = false`, and preserves `next_required_lane = no_active_downstream_runtime_lane` |",
+        "| 2026-03-18 | `M6_boundary_freeze` + `M6_stress_reference_followup` planning | milestone/planning/publication docs only | `docs/milestones/M6_boundary_freeze/`, `docs/milestones/M6_stress_reference_followup/`, `docs/plans/2026-03-18-post-m6-boundary-freeze-design.md` | same recorded Python 3.12 / `uv` / CUDA environment | freezes the preserved first `D0` slice from the old same-endpoint line at the planning layer and defines the only allowed next follow-up without widening semantics |"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "priority blocked-blog/helper guardrail refresh wave `P31`, completed",
+        "auxiliary dormant playbook/historical-helper wording refresh packet `P33`,",
+        "historical/regeneration wording refresh packet, `P33` remains the completed"
+      ]
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "matched_lines": [
+        "- `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/` \u2014 the",
+        "- `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json` \u2014"
+      ]
+    },
+    {
+      "path": "docs/plans/README.md",
+      "matched_lines": [
+        "- `2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md` \u2014 the",
+        "- `../milestones/P33_post_h43_dormant_playbook_wording_refresh/` \u2014",
+        "- `../milestones/P33_post_h43_dormant_playbook_wording_refresh/` \u2014 completed"
+      ]
+    },
+    {
+      "path": "docs/milestones/README.md",
+      "matched_lines": [
+        "- `P32_post_h43_historical_wording_refresh/` \u2014 completed auxiliary",
+        "- `P33_post_h43_dormant_playbook_wording_refresh/` \u2014 completed auxiliary"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`P31_post_h43_blog_guardrails_refresh` is the current low-priority",
+        "`P33_post_h43_dormant_playbook_wording_refresh` is the completed auxiliary"
+      ]
+    }
+  ]
+}

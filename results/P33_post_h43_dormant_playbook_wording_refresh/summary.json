@@ -1,0 +1,34 @@
+{
+  "experiment": "p33_post_h43_dormant_playbook_wording_refresh",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p33-h43-dormant-playbook-wording-refresh\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p33-h43-dormant-playbook-wording-refresh\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+    "current_low_priority_wave": "p31_post_h43_blog_guardrails_refresh",
+    "refresh_packet": "p33_post_h43_dormant_playbook_wording_refresh",
+    "refresh_scope": "dormant_playbook_and_historical_helper_wording_surfaces",
+    "selected_outcome": "dormant_playbook_wording_surfaces_refreshed_to_h43",
+    "refreshed_surface_count": 11,
+    "next_required_lane": "no_active_downstream_runtime_lane",
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": []
+  }
+}

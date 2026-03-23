@@ -46,6 +46,10 @@ planning bundles. Read the current driver first, not the directory name alone.
   historical/regeneration wording refresh packet updating preserved `H0/P3`
   machine-readable wording without changing scientific stage or displacing
   `P31`.
+- `P33_post_h43_dormant_playbook_wording_refresh/` — completed auxiliary
+  dormant-playbook wording refresh packet updating dormant `E1` playbooks and
+  helper historical wording without changing scientific stage or displacing
+  `P31`.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior low-priority
   operational manuscript-surface refresh packet updating stale paper-facing
   prose baselines and derivative helper docs without changing scientific
@@ -170,6 +174,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P32_post_h43_historical_wording_refresh/` — completed auxiliary
   historical/regeneration wording refresh packet that keeps `P31` current
   while refreshing preserved `H0/P3` regeneration-facing wording.
+- `P33_post_h43_dormant_playbook_wording_refresh/` — completed auxiliary
+  dormant-playbook wording refresh packet that keeps `P31` current while
+  refreshing dormant `E1` playbook and helper historical wording.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior operational
   manuscript-surface refresh packet that keeps `H43` current while refreshing
   stale paper-facing prose baselines and derivative helper docs.
