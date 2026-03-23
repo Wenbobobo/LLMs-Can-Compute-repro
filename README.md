@@ -44,7 +44,9 @@ packet is `H34_post_r39_later_explicit_scope_decision_packet`, preserving:
 - `P20` as the completed paper-facing manuscript/helper-doc resync that makes
   the prose bundle terminate on the landed `H34` state; and
 - `F5` as the completed planning-only contradiction scout that currently
-  concludes `no_reopen_candidate_survives`.
+  concludes `no_reopen_candidate_survives`; and
+- `F6` as the completed planning-only future-option matrix that keeps
+  docs/planning work admissible while runtime remains inactive by default.
 
 For current work, trust
 `docs/publication_record/current_stage_driver.md`,

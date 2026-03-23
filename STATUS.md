@@ -37,6 +37,10 @@
 - `F5_post_h34_contradiction_scout_matrix` is now complete:
   it preserves the current no-reopen interpretation and concludes
   `no_reopen_candidate_survives` under the present evidence bundle.
+- `F6_post_p20_future_option_matrix` is now complete:
+  it records docs/planning maintenance as the current admissible default,
+  keeps contradiction-driven reopen conditional only, and leaves runtime
+  inactive by default.
 - The current admitted post-`H30` extension row is
   `subroutine_braid_program(6, base_address=80)`, while
   `subroutine_braid_long_program(12, base_address=160)` remains a same-family

@@ -115,6 +115,14 @@ The clean-worktree closeout lane
 `P18_post_h32_clean_worktree_promotion` is now complete on branch
 `wip/h31-later-explicit`, `R39` is complete as a downstream runtime audit, and
 `H34` is complete as the required later explicit interpretation packet.
+The downstream closeout/support lanes are also now complete:
+
+- `P20_post_h34_manuscript_narrative_resync` aligns the paper-facing bundle to
+  the landed `H34` state;
+- `F5_post_h34_contradiction_scout_matrix` records that
+  `no_reopen_candidate_survives`;
+- `F6_post_p20_future_option_matrix` records docs/planning maintenance as the
+  current admissible default while runtime remains inactive.
 
 The preserved execution design surface for `R39` is:
 
@@ -156,8 +164,13 @@ no active downstream runtime lane
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/`
 - `docs/milestones/R39_origin_compiler_control_surface_dependency_audit/execution_manifest.md`
 - `docs/milestones/P18_post_h32_clean_worktree_promotion/`
+- `docs/milestones/P20_post_h34_manuscript_narrative_resync/`
+- `docs/milestones/F5_post_h34_contradiction_scout_matrix/`
+- `docs/milestones/F6_post_p20_future_option_matrix/`
 - `docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md`
 - `docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md`
+- `docs/plans/2026-03-23-post-p20-f5-no-reopen-handoff-design.md`
+- `docs/plans/2026-03-23-post-p20-f6-future-option-design.md`
 
 ## Standing Gates
 
