@@ -16,10 +16,11 @@ Current scientific/control stack:
   `F28_post_h50_origin_mechanism_reentry_bundle`;
 - current low-priority operational/docs wave:
   `P37_post_h50_narrow_executor_closeout_sync`;
-- current downstream scientific lane:
+- completed current exact mechanism gate:
   `R55_origin_2d_hardmax_retrieval_equivalence_gate`;
-- fixed later mechanism sequence:
-  `R56_origin_append_only_trace_vm_semantics_gate` ->
+- next required downstream scientific lane:
+  `R56_origin_append_only_trace_vm_semantics_gate`;
+- fixed later mechanism sequence after positive `R56`:
   `R57_origin_accelerated_trace_vm_comparator_gate` ->
   `H52_post_r55_r56_r57_origin_mechanism_decision_packet`;
 - blocked future storage:
@@ -32,8 +33,8 @@ Immediate active wave:
 `F28_post_h50_origin_mechanism_reentry_bundle` is now the current planning
 bundle. It preserves negative `H50`, rewrites the active claim surface around
 the narrower mechanism chain, fixes `H51` as the only follow-up packet, fixes
-`R55` as the only next runtime candidate, and keeps `R56/R57/H52` as the only
-later exact sequence.
+`R55` as the entry runtime candidate for this lane, and keeps
+`R56/R57/H52` as the only later exact sequence.
 
 `H51_post_h50_origin_mechanism_reentry_packet` is now the current active
 docs-only decision packet. It selects
@@ -46,19 +47,26 @@ operational/docs wave. It records the clean control worktree, descendant
 execution worktrees, out-of-git policy for row dumps and artifacts above
 roughly `10 MiB`, and explicit no-merge posture for this wave.
 
+`R55_origin_2d_hardmax_retrieval_equivalence_gate` is now completed with
+`retrieval_equivalence_supported_exactly` on `5/5` fixed tasks, `45/45`
+exact value observations, and `45/45` exact maximizer-row identity
+observations. It keeps tie and duplicate-max semantics explicit and makes
+`R56` the only next runtime candidate.
+
 ## Immediate Objectives
 
 1. Preserve `H50` as a landed broader-route bounded-value falsifier.
 2. Preserve `H43` as the paper-grade endpoint.
 3. Preserve `H36` as the routing/refreeze packet underneath the current stack.
-4. Keep `R55` as the only next runtime candidate.
-5. Keep `R56` and `R57` conditional on positive exact earlier gates only.
-6. Keep `H52` as the only saved closeout packet for this mechanism lane.
-7. Keep `F27`, `R53`, and `R54` blocked.
-8. Keep dirty root `main` out of scope for scientific execution.
-9. Keep raw row dumps and artifacts above roughly `10 MiB` out of git by
+4. Preserve `R55` as completed exact retrieval-equivalence evidence only.
+5. Keep `R56` as the only next runtime candidate.
+6. Keep `R57` conditional on positive exact `R56` only.
+7. Keep `H52` as the only saved closeout packet for this mechanism lane.
+8. Keep `F27`, `R53`, and `R54` blocked.
+9. Keep dirty root `main` out of scope for scientific execution.
+10. Keep raw row dumps and artifacts above roughly `10 MiB` out of git by
    default.
-10. Prefer exact equivalence and clear falsifiers over broader demos.
+11. Prefer exact equivalence and clear falsifiers over broader demos.
 
 ## Current Order
 
@@ -81,8 +89,9 @@ Low-priority sidecar:
 - `H50` is preserved prior closeout and remains scientifically binding.
 - `F28` is the current planning bundle.
 - `P37` is the current low-priority operational/docs wave.
-- `R55` is the only next runtime candidate.
-- `R56` and `R57` remain future gates only.
+- `R55` is the completed current exact mechanism gate.
+- `R56` is the only next runtime candidate.
+- `R57` remains a future gate only.
 - `H52` remains the only saved closeout packet for this lane.
 - `F27`, `R53`, and `R54` remain blocked.
 - no merge back to `main` occurs during this wave.
@@ -102,3 +111,4 @@ Low-priority sidecar:
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
 - `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
+- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`

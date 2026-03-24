@@ -23,6 +23,10 @@ Current anchors:
   `F28_post_h50_origin_mechanism_reentry_bundle`
 - current low-priority operational/docs wave:
   `P37_post_h50_narrow_executor_closeout_sync`
+- completed current exact mechanism gate:
+  `R55_origin_2d_hardmax_retrieval_equivalence_gate`
+- next required runtime candidate:
+  `R56_origin_append_only_trace_vm_semantics_gate`
 - preserved paper-grade endpoint:
   `H43_post_r44_useful_case_refreeze`
 - preserved routing/refreeze packet:
@@ -31,7 +35,8 @@ Current anchors:
 `H50` remains scientifically binding on the broader post-`H49` bounded-value
 question: positive `R51` plus negative `R52` still close that lane as
 `stop_as_exact_without_system_value`. `H51` does not overturn that result. It
-reopens only a narrower mechanism-first lane.
+reopens only a narrower mechanism-first lane, and landed `R55` now keeps that
+lane open only as far as `R56`.
 
 ## Current Order
 
@@ -40,17 +45,20 @@ reopens only a narrower mechanism-first lane.
 - sidecar:
   `P37`
 
-`R55_origin_2d_hardmax_retrieval_equivalence_gate` is the only next runtime
-candidate. `R56`, `R57`, and `H52` are fixed later stages and open only after
-positive earlier gates.
+`R55_origin_2d_hardmax_retrieval_equivalence_gate` has landed as completed
+exact mechanism evidence with `5/5` exact tasks and `45/45` exact
+maximizer-row checks. `R56_origin_append_only_trace_vm_semantics_gate` is now
+the only next runtime candidate. `R57` and `H52` remain fixed later stages
+and open only after positive earlier gates.
 
 ## Current Scope
 
 The active wave is limited to:
 
-1. exact `2D` hard-max retrieval equivalence;
-2. exact append-only trace-VM semantics; and
-3. bounded comparator value for an accelerated trace-VM path.
+1. landed exact `R55` retrieval-equivalence evidence;
+2. exact append-only trace-VM semantics through `R56`; and
+3. bounded comparator value for an accelerated trace-VM path through `R57`
+   only after positive `R56`.
 
 Still blocked:
 
@@ -73,6 +81,7 @@ on the active wave.
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
 - `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
+- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
 
 Older milestone and plan inventories remain in the repository as historical
 records. When historical prose conflicts with current routing, trust the files

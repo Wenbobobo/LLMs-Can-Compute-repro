@@ -1,0 +1,155 @@
+{
+  "task_rows": [
+    {
+      "task_id": "overwrite_after_gap_static_memory",
+      "category": "overwrite_after_gap",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Latest-write overwrite-after-gap row on one static address with unrelated intervening stores.",
+      "operation_count": 7,
+      "observation_count": 4,
+      "candidate_row_count": 5,
+      "max_step": 9,
+      "max_address": 8,
+      "verdict": "exact",
+      "notes": "Tests that the reference and 2D hard-max path both keep the most recent relevant write only."
+    },
+    {
+      "task_id": "deep_stack_slot_trace",
+      "category": "stack_slot",
+      "space": "stack",
+      "source_kind": "program_trace",
+      "program_name": "stack_fanout_sum_18_v1",
+      "description": "Trace-derived deeper stack-slot retrieval row from the current deterministic substrate.",
+      "operation_count": 69,
+      "observation_count": 34,
+      "candidate_row_count": 53,
+      "max_step": 34,
+      "max_address": 17,
+      "verdict": "exact",
+      "notes": "Tests the same exact retrieval contract on deeper stack-relative reads."
+    },
+    {
+      "task_id": "duplicate_max_identity",
+      "category": "duplicate_max",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Exact duplicate latest rows that preserve value but still require exact maximizer-row identity.",
+      "operation_count": 3,
+      "observation_count": 1,
+      "candidate_row_count": 3,
+      "max_step": 1,
+      "max_address": 5,
+      "verdict": "exact",
+      "notes": "Value equality alone is insufficient; both duplicate rows must remain visible as maximizers."
+    },
+    {
+      "task_id": "declared_tie_average",
+      "category": "declared_tie",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Same-step tie row with different values requiring explicit averaging semantics.",
+      "operation_count": 3,
+      "observation_count": 1,
+      "candidate_row_count": 3,
+      "max_step": 1,
+      "max_address": 5,
+      "verdict": "exact",
+      "notes": "Makes tie handling first-class rather than incidental."
+    },
+    {
+      "task_id": "coordinate_offset_range_sweep",
+      "category": "coordinate_offset",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Large-step and large-address coordinate-offset row on the same latest-write contract.",
+      "operation_count": 9,
+      "observation_count": 5,
+      "candidate_row_count": 7,
+      "max_step": 4096,
+      "max_address": 16384,
+      "verdict": "exact",
+      "notes": "Stresses the geometric addressing pattern without widening substrate scope."
+    }
+  ],
+  "measurement_rows": [
+    {
+      "task_id": "overwrite_after_gap_static_memory",
+      "linear_expected_exact_count": 4,
+      "accelerated_expected_exact_count": 4,
+      "row_identity_exact_count": 4,
+      "observation_count": 4,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 1,
+      "max_step": 9,
+      "max_address": 8
+    },
+    {
+      "task_id": "deep_stack_slot_trace",
+      "linear_expected_exact_count": 34,
+      "accelerated_expected_exact_count": 34,
+      "row_identity_exact_count": 34,
+      "observation_count": 34,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 0,
+      "max_step": 34,
+      "max_address": 17
+    },
+    {
+      "task_id": "duplicate_max_identity",
+      "linear_expected_exact_count": 1,
+      "accelerated_expected_exact_count": 1,
+      "row_identity_exact_count": 1,
+      "observation_count": 1,
+      "tie_observation_count": 1,
+      "duplicate_maximizer_observation_count": 1,
+      "default_hit_observation_count": 0,
+      "max_step": 1,
+      "max_address": 5
+    },
+    {
+      "task_id": "declared_tie_average",
+      "linear_expected_exact_count": 1,
+      "accelerated_expected_exact_count": 1,
+      "row_identity_exact_count": 1,
+      "observation_count": 1,
+      "tie_observation_count": 1,
+      "duplicate_maximizer_observation_count": 1,
+      "default_hit_observation_count": 0,
+      "max_step": 1,
+      "max_address": 5
+    },
+    {
+      "task_id": "coordinate_offset_range_sweep",
+      "linear_expected_exact_count": 5,
+      "accelerated_expected_exact_count": 5,
+      "row_identity_exact_count": 5,
+      "observation_count": 5,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 1,
+      "max_step": 4096,
+      "max_address": 16384
+    }
+  ],
+  "coverage": {
+    "category_count": 5,
+    "categories": [
+      "coordinate_offset",
+      "declared_tie",
+      "duplicate_max",
+      "overwrite_after_gap",
+      "stack_slot"
+    ],
+    "total_observation_count": 45,
+    "tie_observation_count": 2,
+    "duplicate_maximizer_observation_count": 2
+  },
+  "first_failure": null
+}

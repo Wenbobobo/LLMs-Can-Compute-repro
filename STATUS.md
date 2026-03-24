@@ -14,10 +14,11 @@
   `F28_post_h50_origin_mechanism_reentry_bundle`.
 - The current low-priority operational/docs wave is
   `P37_post_h50_narrow_executor_closeout_sync`.
-- The current downstream scientific lane after `H51` is
+- The completed current exact mechanism gate under `H51` is
   `R55_origin_2d_hardmax_retrieval_equivalence_gate`.
-- The fixed later mechanism sequence is
-  `R56_origin_append_only_trace_vm_semantics_gate` ->
+- The next required downstream scientific lane after landed `R55` is
+  `R56_origin_append_only_trace_vm_semantics_gate`.
+- The fixed later mechanism sequence after positive `R56` is
   `R57_origin_accelerated_trace_vm_comparator_gate` ->
   `H52_post_r55_r56_r57_origin_mechanism_decision_packet`.
 - `H51` preserves negative `H50` as the broader-route bounded-value falsifier
@@ -26,7 +27,7 @@
   `R53_origin_transformed_executor_entry_gate`, and
   `R54_origin_trainable_executor_comparator_gate` remain blocked.
 - Completed exact support underneath the reentry remains `R42`, `R43`, `R44`,
-  `R46`, `R47`, `R49`, `R50`, and `R51`.
+  `R46`, `R47`, `R49`, `R50`, `R51`, and `R55`.
 - `R52` remains the landed broader-route value falsifier.
 - `R45` remains coequal non-substitutive model evidence only.
 - Dirty root `main` remains quarantined and `merge_executed = false` remains
@@ -35,6 +36,8 @@
 ## Current Rule
 
 - Do not treat `H50` as overturned.
+- Do not treat landed `R55` as trace-VM semantics or system-value evidence by
+  itself.
 - Do not reopen transformed or trainable entry by momentum.
 - Do not widen into arbitrary `C`, broad Wasm, or demo-first claims.
 - Do not count external execution during tested runtime as internal execution
@@ -63,3 +66,4 @@
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
 - `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
+- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`

@@ -18,6 +18,8 @@ mapping.
   current active docs-only packet
 - `../milestones/P37_post_h50_narrow_executor_closeout_sync/`
   current low-priority operational/docs wave
+- `../milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/`
+  completed current exact mechanism gate
 
 ## Current Publication State
 
@@ -30,6 +32,8 @@ The live scientific reading is:
 - `H43_post_r44_useful_case_refreeze`
   current paper-grade endpoint
 - `R55_origin_2d_hardmax_retrieval_equivalence_gate`
+  completed exact mechanism gate
+- `R56_origin_append_only_trace_vm_semantics_gate`
   only next runtime candidate
 
 The active publication stance is mechanism-first and falsification-first:
@@ -45,6 +49,7 @@ The active publication stance is mechanism-first and falsification-first:
 - `../../results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `../../results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
 - `../../results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
+- `../../results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
 - `../../results/H43_post_r44_useful_case_refreeze/summary.json`
 
 ## Historical Note

@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "supported_here": [
+      "The claimed 2D hard-max retrieval path matches the transparent reference latest-relevant-state lookup exactly on the fixed bounded R55 suite.",
+      "R55 keeps maximizer-row identity explicit rather than collapsing the gate to value parity only.",
+      "R55 makes duplicate-max and tie semantics first-class, machine-readable gate criteria."
+    ],
+    "unsupported_here": [
+      "R55 does not establish trace-VM semantics or fast-path system value by itself.",
+      "R55 does not authorize transformed-model entry, trainable entry, arbitrary C, or broad Wasm claims.",
+      "R55 does not permit R56 to open if exact retrieval equivalence fails."
+    ],
+    "disconfirmed_here": [
+      "The idea that retrieval equivalence can be inferred from end-to-end demo success without exact maximizer-row parity."
+    ],
+    "distilled_result": {
+      "current_active_docs_only_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+      "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
+      "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+      "active_runtime_lane": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+      "lane_verdict": "retrieval_equivalence_supported_exactly",
+      "planned_task_count": 5,
+      "executed_task_count": 5,
+      "exact_task_count": 5,
+      "observation_count": 45,
+      "linear_expected_exact_observation_count": 45,
+      "accelerated_expected_exact_observation_count": 45,
+      "row_identity_exact_observation_count": 45,
+      "tie_observation_count": 2,
+      "duplicate_maximizer_observation_count": 2,
+      "first_failure_task_id": null,
+      "next_required_packet": "r56_origin_append_only_trace_vm_semantics_gate",
+      "stop_rule_triggered": false
+    }
+  }
+}

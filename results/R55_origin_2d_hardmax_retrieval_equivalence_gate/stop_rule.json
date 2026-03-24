@@ -1,0 +1,9 @@
+{
+  "experiment": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+  "stop_rule_triggered": false,
+  "stop_reason": null,
+  "r56_open": true,
+  "r57_open": false,
+  "next_required_packet": "r56_origin_append_only_trace_vm_semantics_gate",
+  "first_failure": null
+}
