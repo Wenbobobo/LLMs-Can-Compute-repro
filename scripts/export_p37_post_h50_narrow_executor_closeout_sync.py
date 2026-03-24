@@ -179,6 +179,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "keeps descendant clean worktrees as the only scientific execution surfaces for `r55`, `r56`, and `r57`",
                     "keeps `merge_executed = false` explicit",
                     "codifies compact-summary-in-git and raw-row-dump-out-of-git defaults",
+                    ".gitignore`-backed raw-row ignore rules",
+                    "zero tracked `>=10 mib` artifacts in the clean worktree",
                 ],
             )
             and contains_all(
@@ -188,6 +190,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "record clean descendant execution-worktree rules for `r55` and `r56`",
                     "record one artifact policy",
                     "record one commit cadence",
+                    "keep `.gitignore` carrying the concrete raw-row ignore rules",
                     "keep row-level artifacts above roughly `10 mib` out of git",
                 ],
             )
@@ -198,6 +201,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "`h52` remains the current active docs-only packet",
                     "`h51` remains the preserved prior mechanism-reentry packet",
                     "raw step rows, trace rows, per-read rows, and artifacts above roughly",
+                    ".gitignore` carries the concrete raw-row ignore rules",
+                    "clean worktree tracks no artifacts at or above roughly `10 mib`",
                     "compact summaries, manifests, stop rules, and first-fail digests stay in git",
                     "merge back to `main` does not occur during the closed wave",
                 ],
@@ -225,7 +230,9 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "compact summaries, checklists, manifests, stop rules, first-fail digests",
                     "`probe_read_rows.json`",
                     "`per_read_rows.json`",
+                    "`.gitignore` carries the concrete raw-row ignore patterns",
                     "any artifact above roughly `10 mib` should be treated as out-of-git",
+                    "clean worktrees should track no artifacts at or above roughly `10 mib`",
                     "git lfs remains inactive by default",
                 ],
             )

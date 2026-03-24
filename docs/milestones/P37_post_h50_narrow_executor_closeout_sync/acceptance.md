@@ -11,6 +11,9 @@
   `R55`, `R56`, and `R57`;
 - raw step rows, trace rows, per-read rows, and artifacts above roughly
   `10 MiB` stay out of git by default;
+- `.gitignore` carries the concrete raw-row ignore rules for the clean
+  worktree;
+- the clean worktree tracks no artifacts at or above roughly `10 MiB`;
 - compact summaries, manifests, stop rules, and first-fail digests stay in
   git; and
 - merge back to `main` does not occur during the closed wave.

@@ -12,7 +12,9 @@
 - quarantines dirty root `main` from scientific execution;
 - keeps `merge_executed = false` explicit and keeps `main` untouched during
   `F28/H51/R55/R56/R57/H52`;
-- codifies compact-summary-in-git and raw-row-dump-out-of-git defaults; and
+- codifies compact-summary-in-git and raw-row-dump-out-of-git defaults,
+  `.gitignore`-backed raw-row ignore rules, and zero tracked `>=10 MiB`
+  artifacts in the clean worktree; and
 - records the commit cadence for planning, docs-only packets, exact gates, the
   comparator gate, and the final decision packet after the lane closes to
   `no_active_downstream_runtime_lane`.
