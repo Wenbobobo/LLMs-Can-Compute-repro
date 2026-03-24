@@ -55,9 +55,9 @@ def test_build_summary_reports_zero_blocked_items() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h43_post_r44_useful_case_refreeze_active"
+    assert summary["current_paper_phase"] == "h52_current_control_with_h43_paper_endpoint"
     assert summary["bundle_lock_scope"] == "publication_record_bundle_and_supporting_ledgers"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the H2 bundle-lock audit green while H43 stays aligned as the current docs-only useful-case refreeze packet, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
+        "keep the H2 bundle-lock audit green while H52 stays explicit as the current docs-only mechanism closeout packet, preserve H50 as the broader-route value closeout, preserve H51 as the prior mechanism-reentry packet, preserve H43 as the paper-grade endpoint, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed semantic-boundary gate stack, keep R55/R56 as exact mechanism evidence, keep R57 as negative fast-path comparator evidence, preserve P27/P28/P37 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
     )

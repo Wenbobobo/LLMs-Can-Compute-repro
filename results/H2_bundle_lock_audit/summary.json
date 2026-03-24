@@ -2,11 +2,11 @@
   "experiment": "h2_bundle_lock_audit",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
       "installed": false,
@@ -31,12 +31,12 @@
     "docs/publication_record/layout_decision_log.md"
   ],
   "summary": {
-    "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+    "current_paper_phase": "h52_current_control_with_h43_paper_endpoint",
     "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
     "check_count": 6,
     "pass_count": 6,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "keep the H2 bundle-lock audit green while H43 stays aligned as the current docs-only useful-case refreeze packet, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
+    "recommended_next_action": "keep the H2 bundle-lock audit green while H52 stays explicit as the current docs-only mechanism closeout packet, preserve H50 as the broader-route value closeout, preserve H51 as the prior mechanism-reentry packet, preserve H43 as the paper-grade endpoint, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed semantic-boundary gate stack, keep R55/R56 as exact mechanism evidence, keep R57 as negative fast-path comparator evidence, preserve P27/P28/P37 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
   }
 }

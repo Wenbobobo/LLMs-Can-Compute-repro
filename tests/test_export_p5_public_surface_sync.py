@@ -55,10 +55,10 @@ def test_build_summary_reports_current_polish_phase() -> None:
     rows = module.build_sync_checklist(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h43_post_r44_useful_case_refreeze_active"
-    assert summary["internal_driver_phase"] == "h45_post_r46_surface_decision_packet_active"
+    assert summary["current_paper_phase"] == "h52_current_control_with_h43_paper_endpoint"
+    assert summary["internal_driver_phase"] == "h52_post_r55_r56_r57_origin_mechanism_decision_packet_active"
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the outward-facing H43 publication surface aligned while recording H45 as the active docs-only packet, H44 as the preserved prior route packet, R46 as the completed preserved prior post-H44 exact runtime gate, R47 as the next required exact runtime candidate, F22 as the saved blocked comparator bundle, P30 as the current low-priority manuscript-surface refresh wave, P29 as the completed prior release/public audit refresh wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, and H36 as the preserved routing/refreeze packet"
+        "keep the outward-facing surface aligned while recording H52 as the current docs-only mechanism closeout packet, H50 as the preserved broader-route value closeout, H51 as the preserved prior mechanism-reentry packet, H43 as the paper-grade endpoint, R55/R56 as exact mechanism evidence, R57 as negative fast-path comparator evidence, P37 as the current low-priority operational/docs wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, H36 as the preserved routing/refreeze packet, and no_active_downstream_runtime_lane as the current follow-on state"
     )

@@ -1,7 +1,7 @@
 # H2 Bundle Lock Audit
 
 Machine-readable audit of whether the current publication bundle remains
-locked to the landed H43 release-control stack and the dormant reopen protocol.
+locked to the current H52 control stack while preserving the H43 paper-grade endpoint and the dormant reopen protocol.
 
 Artifacts:
 - `summary.json`

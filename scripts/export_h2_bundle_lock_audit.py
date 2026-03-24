@@ -85,53 +85,66 @@ def build_checklist_rows(
 ) -> list[dict[str, object]]:
     return [
         {
-            "item_id": "top_level_surfaces_lock_current_h43_bundle",
+            "item_id": "top_level_surfaces_lock_current_h52_h43_bundle",
             "status": "pass"
             if contains_all(
                 readme_text,
                 [
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h51_post_h50_origin_mechanism_reentry_packet`",
                     "`h43_post_r44_useful_case_refreeze`",
-                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
-                    "`r45_origin_dual_mode_model_mainline_gate`",
-                    "no active downstream runtime lane now follows `h43`",
+                    "`r55_origin_2d_hardmax_retrieval_equivalence_gate`",
+                    "`r56_origin_append_only_trace_vm_semantics_gate`",
+                    "`r57_origin_accelerated_trace_vm_comparator_gate`",
+                    "`no_active_downstream_runtime_lane`",
                 ],
             )
             and contains_all(
                 status_text,
                 [
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h51_post_h50_origin_mechanism_reentry_packet`",
                     "`h43_post_r44_useful_case_refreeze`",
-                    "`h42_post_r43_route_selection_packet`",
                     "`h36_post_r40_bounded_scalar_family_refreeze`",
+                    "`p37_post_h50_narrow_executor_closeout_sync`",
                     "`merge_executed = false`",
                 ],
             )
             else "blocked",
-            "notes": "README and STATUS should lock the publication bundle onto the current H43 stack.",
+            "notes": "README and STATUS should lock the publication bundle onto the current H52 control stack while preserving H43 as the paper-grade endpoint.",
         },
         {
-            "item_id": "publication_record_core_docs_expose_current_h43_bundle",
+            "item_id": "publication_record_core_docs_expose_current_h52_h43_bundle",
             "status": "pass"
             if contains_all(
                 publication_readme_text,
                 [
-                    "current `h43` docs-only useful-case refreeze packet",
-                    "`r42`, `r43`, `r44`, and `r45`",
-                    "docs/milestones/p29_post_h43_release_audit_refresh/",
-                    "results/p29_post_h43_release_audit_refresh/summary.json",
+                    "## current control docs",
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "../milestones/p37_post_h50_narrow_executor_closeout_sync/",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r55_origin_2d_hardmax_retrieval_equivalence_gate`",
+                    "`r56_origin_append_only_trace_vm_semantics_gate`",
+                    "`r57_origin_accelerated_trace_vm_comparator_gate`",
                 ],
             )
             and contains_all(
                 current_stage_driver_text,
                 [
                     "the current active stage is:",
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h51_post_h50_origin_mechanism_reentry_packet`",
+                    "`p37_post_h50_narrow_executor_closeout_sync`",
                     "`h43_post_r44_useful_case_refreeze`",
-                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
-                    "`r45_origin_dual_mode_model_mainline_gate`",
                     "`no_active_downstream_runtime_lane`",
                 ],
             )
             else "blocked",
-            "notes": "Publication README and current-stage driver should expose the same H43 control bundle.",
+            "notes": "Publication README and current-stage driver should expose the same H52 current-control plus preserved H43 paper bundle.",
         },
         {
             "item_id": "release_summary_and_bundle_status_stay_downstream",
@@ -139,24 +152,26 @@ def build_checklist_rows(
             if contains_all(
                 release_summary_text,
                 [
-                    "`h43_post_r44_useful_case_refreeze`",
-                    "completed current semantic-boundary gate stack",
-                    "`p28` aligns publication-facing ledgers to landed `h43`",
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h43` remains the paper-grade endpoint",
+                    "`r57` as negative fast-path comparator evidence",
+                    "`p37_post_h50_narrow_executor_closeout_sync`",
                 ],
             )
             and contains_all(
                 paper_bundle_status_text,
                 [
-                    "`h43` is the current docs-only useful-case refreeze packet",
-                    "`r42`, `r43`, `r44`, and `r45` are the completed current semantic-boundary",
-                    "`p28` aligns publication-facing ledgers to landed `h43`",
+                    "`h52` is the current active docs-only closeout packet",
+                    "`h43` remains the paper-grade endpoint",
+                    "`r57` is the completed negative fast-path comparator gate",
+                    "`p37` is the aligned low-priority",
                 ],
             )
             else "blocked",
-            "notes": "Release summary and paper bundle status should remain downstream of the landed H43 stack.",
+            "notes": "Release summary and paper bundle status should remain downstream of the current H52 control state while preserving H43 as the paper-grade endpoint.",
         },
         {
-            "item_id": "submission_and_release_candidate_controls_match_current_bundle",
+            "item_id": "submission_and_release_candidate_controls_preserve_h43_bundle_under_h52_control",
             "status": "pass"
             if contains_all(
                 submission_candidate_text,
@@ -169,13 +184,15 @@ def build_checklist_rows(
             and contains_all(
                 release_candidate_text,
                 [
-                    "current `h43` docs-only useful-case refreeze",
-                    "`r42-r43-r44-r45` completed semantic-boundary gate stack",
+                    "current `h52` active docs-only mechanism closeout packet",
+                    "`h43` paper-grade endpoint",
+                    "`r42-r43-r44-r45-r55-r56-r57` completed evidence",
+                    "results/h52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json",
                     "results/h43_post_r44_useful_case_refreeze/summary.json",
                 ],
             )
             else "blocked",
-            "notes": "Submission and release-candidate controls should describe the same H43 bundle-lock state.",
+            "notes": "Submission and release-candidate controls should preserve the paper-grade H43 bundle while exposing H52 as the current control state.",
         },
         {
             "item_id": "conditional_reopen_protocol_stays_closed_by_default",
@@ -208,26 +225,62 @@ def build_checklist_rows(
 
 def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
     lookup = {
-        "README.md": ("readme_text", ["`H43_post_r44_useful_case_refreeze`", "`R45_origin_dual_mode_model_mainline_gate`"]),
-        "STATUS.md": ("status_text", ["`H43_post_r44_useful_case_refreeze`", "`merge_executed = false`"]),
+        "README.md": (
+            "readme_text",
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H50_post_r51_r52_scope_decision_packet`",
+                "`H51_post_h50_origin_mechanism_reentry_packet`",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`R57_origin_accelerated_trace_vm_comparator_gate`",
+            ],
+        ),
+        "STATUS.md": (
+            "status_text",
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H50_post_r51_r52_scope_decision_packet`",
+                "`H51_post_h50_origin_mechanism_reentry_packet`",
+                "`P37_post_h50_narrow_executor_closeout_sync`",
+                "`merge_executed = false`",
+            ],
+        ),
         "docs/publication_record/README.md": (
             "publication_readme_text",
             [
-                "docs/milestones/P29_post_h43_release_audit_refresh/",
-                "results/P29_post_h43_release_audit_refresh/summary.json",
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`P37_post_h50_narrow_executor_closeout_sync`",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`R57_origin_accelerated_trace_vm_comparator_gate`",
             ],
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            ["`H43_post_r44_useful_case_refreeze`", "`no_active_downstream_runtime_lane`"],
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H50_post_r51_r52_scope_decision_packet`",
+                "`H51_post_h50_origin_mechanism_reentry_packet`",
+                "`P37_post_h50_narrow_executor_closeout_sync`",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`no_active_downstream_runtime_lane`",
+            ],
         ),
         "docs/publication_record/release_summary_draft.md": (
             "release_summary_text",
-            ["`H43_post_r44_useful_case_refreeze`", "completed current semantic-boundary gate stack"],
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H43` remains the paper-grade endpoint",
+                "`R57` as negative fast-path comparator evidence",
+            ],
         ),
         "docs/publication_record/paper_bundle_status.md": (
             "paper_bundle_status_text",
-            ["`H43` is the current docs-only useful-case refreeze packet", "`P28` aligns publication-facing ledgers to landed `H43`"],
+            [
+                "`H52` is the current active docs-only closeout packet",
+                "`H43` remains the paper-grade endpoint",
+                "`R57` is the completed negative fast-path comparator gate",
+                "`P37` is the aligned low-priority",
+            ],
         ),
         "docs/publication_record/submission_candidate_criteria.md": (
             "submission_candidate_text",
@@ -255,14 +308,14 @@ def build_snapshot(inputs: dict[str, str]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+        "current_paper_phase": "h52_current_control_with_h43_paper_endpoint",
         "bundle_lock_scope": "publication_record_bundle_and_supporting_ledgers",
         "check_count": len(checklist_rows),
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "keep the H2 bundle-lock audit green while H43 stays aligned as the current docs-only useful-case refreeze packet, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
+            "keep the H2 bundle-lock audit green while H52 stays explicit as the current docs-only mechanism closeout packet, preserve H50 as the broader-route value closeout, preserve H51 as the prior mechanism-reentry packet, preserve H43 as the paper-grade endpoint, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed semantic-boundary gate stack, keep R55/R56 as exact mechanism evidence, keep R57 as negative fast-path comparator evidence, preserve P27/P28/P37 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
             if not blocked_items
             else "resolve the blocked H2 bundle-lock items before treating the publication bundle as locked"
         ),
@@ -319,7 +372,7 @@ def main() -> None:
                 "# H2 Bundle Lock Audit",
                 "",
                 "Machine-readable audit of whether the current publication bundle remains",
-                "locked to the landed H43 release-control stack and the dormant reopen protocol.",
+                "locked to the current H52 control stack while preserving the H43 paper-grade endpoint and the dormant reopen protocol.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

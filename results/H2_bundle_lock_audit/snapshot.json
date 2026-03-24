@@ -2,11 +2,11 @@
   "experiment": "h2_bundle_lock_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,53 +22,58 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "now `H43_post_r44_useful_case_refreeze`, the preserved prior docs-only",
-        "`R45_origin_dual_mode_model_mainline_gate`, the current",
-        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
-        "`R45_origin_dual_mode_model_mainline_gate`.",
-        "`H43_post_r44_useful_case_refreeze`, the preserved prior route-selection"
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "`H50_post_r51_r52_scope_decision_packet`",
+        "`H51_post_h50_origin_mechanism_reentry_packet`",
+        "`R57_origin_accelerated_trace_vm_comparator_gate`",
+        "`H43_post_r44_useful_case_refreeze`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
-        "`promotion_mode = explicit_merge_wave` and `merge_executed = false`.",
-        "`wip/p27-promotion-merge`, keeps `merge_executed = false`, and preserves",
-        "`R41` deferred, and keeps `merge_executed = false`.",
-        "- `H43_post_r44_useful_case_refreeze` is now complete as the current active",
-        "`H43_post_r44_useful_case_refreeze` under"
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
+        "`H50_post_r51_r52_scope_decision_packet`.",
+        "`H51_post_h50_origin_mechanism_reentry_packet`.",
+        "`P37_post_h50_narrow_executor_closeout_sync`.",
+        "- Dirty root `main` remains quarantined and `merge_executed = false` remains"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `docs/milestones/P29_post_h43_release_audit_refresh/` \u2014 the completed prior",
-        "- `results/P29_post_h43_release_audit_refresh/summary.json` \u2014"
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "- `H43_post_r44_useful_case_refreeze`",
+        "- `R57_origin_accelerated_trace_vm_comparator_gate`"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "- `H50_post_r51_r52_scope_decision_packet`",
+        "- `H51_post_h50_origin_mechanism_reentry_packet`",
+        "- `P37_post_h50_narrow_executor_closeout_sync`",
         "- `H43_post_r44_useful_case_refreeze`",
-        "`no_active_downstream_runtime_lane`.",
-        "`H43_post_r44_useful_case_refreeze`",
-        "`no_active_downstream_runtime_lane`",
-        "- `H43_post_r44_useful_case_refreeze` is completed and remains the current",
-        "- `H43_post_r44_useful_case_refreeze` is the current active docs-only"
+        "- `no_active_downstream_runtime_lane`",
+        "- `no_active_downstream_runtime_lane` is restored as the current downstream",
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the current"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "`H43_post_r44_useful_case_refreeze`.",
-        "`H43_post_r44_useful_case_refreeze`, which preserves"
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
+        "baselines on that suite (`R57`). `H43` remains the paper-grade endpoint for",
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`, which preserves"
       ]
     },
     {
       "path": "docs/publication_record/paper_bundle_status.md",
       "matched_lines": [
-        "`P28` aligns publication-facing ledgers to landed `H43`, `P29` aligns release"
+        "gate, and `R57` is the completed negative fast-path comparator gate. `F20` is",
+        "packet with `merge_executed = false`, `P37` is the aligned low-priority"
       ]
     },
     {
@@ -81,7 +86,6 @@
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
-        "the current `H43` docs-only useful-case refreeze / `H36` preserved-active /",
         "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the"
       ]
     },
@@ -96,7 +100,7 @@
     {
       "path": "docs/publication_record/layout_decision_log.md",
       "matched_lines": [
-        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the `D0` endpoint boundary without introducing new claims or marketing-style compression. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |",
+        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the preserved-first-step `D0` compiled-boundary line rather than treating that older `D0` evidence as the whole current endpoint. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |",
         "| Evidence reopen discipline | Reopen evidence only through one named `E1` patch lane, and always return control to the locked paper/release lanes. | This keeps unattended runs from silently widening precision, systems, or compiled scope by wording drift. | A later scope decision intentionally replaces the current frozen endpoint with a new evidence program. | `docs/publication_record/conditional_reopen_protocol.md`, `docs/milestones/E1_conditional_evidence_reopen_protocol/result_digest.md` |"
       ]
     }

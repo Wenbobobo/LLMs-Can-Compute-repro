@@ -2,11 +2,11 @@
   "experiment": "p5_public_surface_sync_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
       "installed": false,
@@ -27,22 +27,22 @@
     {
       "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should keep H44 active, preserve H43 as the paper-grade endpoint, and record landed R46 plus required H45 follow-on."
+      "notes": "README should keep H52 active, preserve H43 as the paper-grade endpoint, and record the closed R55/R56/R57 mechanism lane."
     },
     {
       "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record the current H44/H43/R46 stack and explicit merge posture."
+      "notes": "STATUS should record the current H52/H50/H51/H43/P37/R55/R56/R57 stack and explicit merge posture."
     },
     {
-      "item_id": "publication_record_readme_tracks_h45_r47_and_current_p30_state",
+      "item_id": "publication_record_readme_tracks_h52_current_control_state",
       "status": "pass",
-      "notes": "Publication record README should expose H45 as active, H43 as the paper-grade endpoint, R47 as next, F22 as blocked, and P30/P29/P28 as current prior sync packets."
+      "notes": "Publication record README should expose H52 as current control, H43 as the paper-grade endpoint, and P37 as the current low-priority sidecar."
     },
     {
-      "item_id": "release_summary_stays_downstream_of_landed_h43_stack",
+      "item_id": "release_summary_stays_downstream_of_h52_h43_split",
       "status": "pass",
-      "notes": "The release summary should remain downstream of the landed H43 stack and publication sync."
+      "notes": "The release summary should remain downstream of the current H52 control state while preserving H43 as the paper-grade endpoint."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
@@ -52,7 +52,7 @@
     {
       "item_id": "current_stage_driver_is_canonical",
       "status": "pass",
-      "notes": "The current-stage driver should remain the canonical H45/H44/H43/R46 control surface."
+      "notes": "The current-stage driver should remain the canonical H52/H50/H51/H43/P37/R55/R56/R57 control surface."
     },
     {
       "item_id": "layout_log_records_post_p7_decisions",
