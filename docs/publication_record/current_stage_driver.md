@@ -30,16 +30,17 @@ The preserved active routing/refreeze packet is:
 
 - `H36_post_r40_bounded_scalar_family_refreeze`
 
-The completed current exact mechanism gate under `H51` is:
+The completed exact mechanism gates under `H51` are:
 
 - `R55_origin_2d_hardmax_retrieval_equivalence_gate`
-
-The next required downstream scientific lane after landed `R55` is:
-
 - `R56_origin_append_only_trace_vm_semantics_gate`
 
-The fixed later mechanism sequence after positive `R56` is:
+The next required downstream scientific lane after landed `R56` is:
+
 - `R57_origin_accelerated_trace_vm_comparator_gate`
+
+The fixed later mechanism closeout after positive `R57` is:
+
 - `H52_post_r55_r56_r57_origin_mechanism_decision_packet`
 
 The blocked future executor-entry bundle remains:
@@ -69,9 +70,10 @@ The blocked future trainable gate remains:
 - `R55` is now completed exact mechanism evidence with
   `retrieval_equivalence_supported_exactly` on `5/5` fixed tasks and
   `45/45` exact maximizer-row identity observations.
-- `R56` is now the only next runtime candidate.
-- `R57` remains a saved future comparator gate that can open only after
-  positive exact `R56`.
+- `R56` is now completed exact trace-VM semantics evidence with
+  `trace_vm_semantics_supported_exactly` on `5/5` fixed rows and `288`
+  exported transition rows.
+- `R57` is now the only next runtime candidate.
 - `H52` remains the only saved closeout packet for the explicit mechanism
   lane.
 - `H43` remains the current paper-grade endpoint and `H36` remains the
@@ -79,8 +81,8 @@ The blocked future trainable gate remains:
 - Completed exact substrate support underneath the new reentry remains
   `R42`, `R43`, `R44`, `R46`, `R47`, `R49`, `R50`, and `R51`, while `R52`
   remains the broader-route value falsifier, `R55` now lands the exact
-  retrieval-equivalence gate, and `R45` remains coequal non-substitutive
-  model evidence.
+  retrieval-equivalence gate, `R56` now lands the exact trace-VM semantics
+  gate, and `R45` remains coequal non-substitutive model evidence.
 - Dirty root `main` remains quarantined and `merge_executed = false` remains
   explicit through `P27` and `P37`.
 - General LLM-computer claims, arbitrary `C`, broad Wasm, transformed entry,
@@ -105,10 +107,10 @@ The blocked future trainable gate remains:
   operational/docs wave.
 - `R55_origin_2d_hardmax_retrieval_equivalence_gate` is the completed current
   exact mechanism gate.
-- `R56_origin_append_only_trace_vm_semantics_gate` is the only next runtime
-  candidate after landed `R55`.
-- `R57_origin_accelerated_trace_vm_comparator_gate` is saved future comparator
-  work downstream of positive exact `R56` only.
+- `R56_origin_append_only_trace_vm_semantics_gate` is the completed current
+  exact trace-VM semantics gate.
+- `R57_origin_accelerated_trace_vm_comparator_gate` is the only next runtime
+  candidate after landed `R56`.
 - `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the only saved
   closeout packet for this lane.
 - `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`,
@@ -135,6 +137,7 @@ The blocked future trainable gate remains:
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
 - `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
 - `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
+- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
 - `results/R51_origin_memory_control_surface_sufficiency_gate/summary.json`
 - `results/R52_origin_internal_vs_external_executor_value_gate/summary.json`

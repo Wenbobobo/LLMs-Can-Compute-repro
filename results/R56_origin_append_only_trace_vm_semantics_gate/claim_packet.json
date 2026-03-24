@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "supported_here": [
+      "The bounded append-only trace VM candidate matches the transparent reference semantics exactly on the fixed R56 row set.",
+      "R56 keeps full step-trace parity explicit rather than collapsing the gate to final-state agreement only.",
+      "R56 keeps runtime semantics separate from any fast-path value question, which stays deferred to R57."
+    ],
+    "unsupported_here": [
+      "R56 does not establish fast-path system value by itself.",
+      "R56 does not authorize transformed-model entry, trainable entry, arbitrary C, or broad Wasm claims.",
+      "R56 does not permit R57 to open if exact trace semantics fails."
+    ],
+    "disconfirmed_here": [
+      "The idea that a bounded free-running internal executor can be credited from teacher forcing, compiler replay, or final-answer-only agreement."
+    ],
+    "distilled_result": {
+      "current_active_docs_only_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+      "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
+      "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+      "preserved_exact_retrieval_gate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+      "active_runtime_lane": "r56_origin_append_only_trace_vm_semantics_gate",
+      "lane_verdict": "trace_vm_semantics_supported_exactly",
+      "planned_task_count": 5,
+      "executed_task_count": 5,
+      "exact_task_count": 5,
+      "exact_trace_task_count": 5,
+      "exact_final_state_task_count": 5,
+      "transition_count": 288,
+      "stack_read_count": 206,
+      "memory_read_count": 52,
+      "call_read_count": 2,
+      "first_failure_task_id": null,
+      "next_required_packet": "r57_origin_accelerated_trace_vm_comparator_gate",
+      "stop_rule_triggered": false
+    }
+  }
+}

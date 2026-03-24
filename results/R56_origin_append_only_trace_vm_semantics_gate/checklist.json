@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "item_id": "r56_requires_positive_r55_retrieval_equivalence_basis",
+      "status": "pass",
+      "notes": "R56 opens only after positive exact R55 under the preserved H51/F28 route."
+    },
+    {
+      "item_id": "r56_docs_fix_trace_vm_contract_and_trace_requirements",
+      "status": "pass",
+      "notes": "R56 docs must keep the semantics contract and per-step trace requirements explicit."
+    },
+    {
+      "item_id": "reference_and_candidate_step_traces_match_on_every_declared_row",
+      "status": "pass",
+      "notes": "Every declared R56 row must keep full step-trace parity, not answer-only agreement."
+    },
+    {
+      "item_id": "reference_and_candidate_final_states_match_on_every_declared_row",
+      "status": "pass",
+      "notes": "Final-state parity remains required in addition to step-trace parity."
+    },
+    {
+      "item_id": "candidate_route_stays_free_running_internal_without_runtime_external_execution",
+      "status": "pass",
+      "notes": "R56 forbids hidden mutable side state, teacher forcing, and external execution at tested runtime."
+    },
+    {
+      "item_id": "instruction_level_transition_logs_exported_for_all_rows",
+      "status": "pass",
+      "notes": "Each row must export bounded instruction-level transition logs for both reference and candidate routes."
+    },
+    {
+      "item_id": "r56_opens_r57_only_if_exact",
+      "status": "pass",
+      "notes": "R57 can open only after positive exact R56; otherwise the lane stops and hands off to H52."
+    }
+  ]
+}

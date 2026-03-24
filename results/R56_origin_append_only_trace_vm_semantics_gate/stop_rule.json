@@ -1,0 +1,8 @@
+{
+  "experiment": "r56_origin_append_only_trace_vm_semantics_gate",
+  "stop_rule_triggered": false,
+  "stop_reason": null,
+  "r57_open": true,
+  "next_required_packet": "r57_origin_accelerated_trace_vm_comparator_gate",
+  "first_failure": null
+}

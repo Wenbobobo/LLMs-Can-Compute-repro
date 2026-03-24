@@ -16,12 +16,13 @@ Current scientific/control stack:
   `F28_post_h50_origin_mechanism_reentry_bundle`;
 - current low-priority operational/docs wave:
   `P37_post_h50_narrow_executor_closeout_sync`;
-- completed current exact mechanism gate:
+- completed exact retrieval-equivalence gate:
   `R55_origin_2d_hardmax_retrieval_equivalence_gate`;
-- next required downstream scientific lane:
+- completed exact trace-VM semantics gate:
   `R56_origin_append_only_trace_vm_semantics_gate`;
-- fixed later mechanism sequence after positive `R56`:
-  `R57_origin_accelerated_trace_vm_comparator_gate` ->
+- next required downstream scientific lane:
+  `R57_origin_accelerated_trace_vm_comparator_gate`;
+- fixed later mechanism closeout after positive `R57`:
   `H52_post_r55_r56_r57_origin_mechanism_decision_packet`;
 - blocked future storage:
   `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`,
@@ -50,8 +51,12 @@ roughly `10 MiB`, and explicit no-merge posture for this wave.
 `R55_origin_2d_hardmax_retrieval_equivalence_gate` is now completed with
 `retrieval_equivalence_supported_exactly` on `5/5` fixed tasks, `45/45`
 exact value observations, and `45/45` exact maximizer-row identity
-observations. It keeps tie and duplicate-max semantics explicit and makes
-`R56` the only next runtime candidate.
+observations. It keeps tie and duplicate-max semantics explicit.
+
+`R56_origin_append_only_trace_vm_semantics_gate` is now completed with
+`trace_vm_semantics_supported_exactly` on `5/5` fixed rows, `288` exported
+transition rows, and exact free-running stack, memory, and call retrieval on
+the declared bounded suite. It makes `R57` the only next runtime candidate.
 
 ## Immediate Objectives
 
@@ -59,8 +64,8 @@ observations. It keeps tie and duplicate-max semantics explicit and makes
 2. Preserve `H43` as the paper-grade endpoint.
 3. Preserve `H36` as the routing/refreeze packet underneath the current stack.
 4. Preserve `R55` as completed exact retrieval-equivalence evidence only.
-5. Keep `R56` as the only next runtime candidate.
-6. Keep `R57` conditional on positive exact `R56` only.
+5. Preserve `R56` as completed exact trace-VM semantics evidence only.
+6. Keep `R57` as the only next runtime candidate.
 7. Keep `H52` as the only saved closeout packet for this mechanism lane.
 8. Keep `F27`, `R53`, and `R54` blocked.
 9. Keep dirty root `main` out of scope for scientific execution.
@@ -89,9 +94,9 @@ Low-priority sidecar:
 - `H50` is preserved prior closeout and remains scientifically binding.
 - `F28` is the current planning bundle.
 - `P37` is the current low-priority operational/docs wave.
-- `R55` is the completed current exact mechanism gate.
-- `R56` is the only next runtime candidate.
-- `R57` remains a future gate only.
+- `R55` is the completed exact retrieval-equivalence gate.
+- `R56` is the completed exact trace-VM semantics gate.
+- `R57` is the only next runtime candidate.
 - `H52` remains the only saved closeout packet for this lane.
 - `F27`, `R53`, and `R54` remain blocked.
 - no merge back to `main` occurs during this wave.
@@ -112,3 +117,4 @@ Low-priority sidecar:
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
 - `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
 - `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
+- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`

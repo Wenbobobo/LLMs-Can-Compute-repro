@@ -1,11 +1,14 @@
 # R56 Status
 
-- saved future exact trace-semantics gate after positive `R55`;
-- preserves `H51` as the active docs-only packet;
-- preserves `H50` as the preserved prior closeout;
+- executed as the only exact runtime lane opened by landed `R55`;
+- preserves `H51` as the active docs-only packet during execution;
+- preserves `H50` as the preserved prior broader-route closeout;
 - preserves `H43` as the paper-grade endpoint;
-- requires a bounded free-running trace-VM contract rather than teacher
-  forcing or final-answer-only agreement;
-- requires append-only state updates with no hidden mutable side channels;
-- requires external execution to stay out of tested runtime semantics; and
-- remains unexecuted here.
+- completed with `5/5` exact step-trace tasks and `5/5` exact final-state
+  tasks on the fixed bounded suite;
+- completed with `288` exported transition rows across stack, memory, and
+  call surfaces;
+- keeps hidden mutable side state, teacher forcing, and external execution
+  out of tested runtime semantics; and
+- hands the next comparator lane to
+  `R57_origin_accelerated_trace_vm_comparator_gate`.
