@@ -241,8 +241,9 @@
   held-out useful-case variants exact with instruction-identical lowering
   across the fixed `3/3` kernels and records
   `restricted_frontend_supported_narrowly`.
-- `H46` is now the next required docs-only interpretation packet, while `F22`
-  remains saved only as a blocked comparator bundle.
+- `H46` is now the current active docs-only interpretation packet; it
+  authorizes exactly `R48`, while `F22` becomes the current
+  comparator-planning bundle.
 - `R44` is the completed current restricted useful-case gate on the fixed
   three-kernel ladder.
 - `R45` is the completed current coequal model gate and remains explicitly

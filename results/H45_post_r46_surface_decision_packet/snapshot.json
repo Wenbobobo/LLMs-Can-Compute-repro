@@ -15,35 +15,35 @@
       ]
     },
     {
-      "path": "docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/README.md",
+      "path": "docs/milestones/H46_post_r47_frontend_bridge_decision_packet/README.md",
       "matched_lines": [
-        "It does not authorize model execution, it does not authorize `R48` by"
+        "`authorize_r48_origin_dual_mode_useful_case_model_gate`;",
+        "`freeze_r47_as_frontend_only_and_stop`."
       ]
     },
     {
       "path": "docs/milestones/R47_origin_restricted_frontend_translation_gate/README.md",
       "matched_lines": [
-        "`R47` is not a new runtime stack. It is the narrowest admissible frontend",
-        "existing `R44/R46` exactness pipeline;"
+        "`R47` is not a new runtime stack. It is the narrowest admitted structured"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H45_post_r46_surface_decision_packet`",
+        "- `H46_post_r47_frontend_bridge_decision_packet`",
         "- `R47_origin_restricted_frontend_translation_gate`",
         "`deferred_future_runtime_candidate = r47_origin_restricted_frontend_translation_gate`,",
-        "`next_required_lane = h45_post_r46_surface_decision_packet`;",
         "`selected_outcome = authorize_r47_origin_restricted_frontend_translation_gate`,",
         "`authorized_next_runtime_candidate = r47_origin_restricted_frontend_translation_gate`,",
         "`next_required_lane = r47_origin_restricted_frontend_translation_gate`;",
-        "`H45_post_r46_surface_decision_packet`"
+        "`next_required_lane = h46_post_r47_frontend_bridge_decision_packet`;",
+        "`R47_origin_restricted_frontend_translation_gate` ->"
       ]
     },
     {
       "path": "tmp/active_wave_plan.md",
       "matched_lines": [
-        "`H45_post_r46_surface_decision_packet` is the current active docs-only"
+        "`H46_post_r47_frontend_bridge_decision_packet` is the current active docs-only"
       ]
     }
   ]

@@ -5,6 +5,8 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
+  `H46_post_r47_frontend_bridge_decision_packet`;
+- preserved prior docs-only decision packet:
   `H45_post_r46_surface_decision_packet`;
 - preserved prior docs-only route packet:
   `H44_post_h43_route_reauthorization_packet`;
@@ -26,6 +28,8 @@ Current scientific/control stack:
   `F20_post_r42_dual_mode_model_mainline_bundle`;
 - current exact post-`H43` planning bundle:
   `F21_post_h43_exact_useful_case_expansion_bundle`;
+- current comparator-planning bundle:
+  `F22_post_r46_useful_case_model_bridge_bundle`;
 - completed operational explicit merge packet:
   `P27_post_h41_clean_promotion_and_explicit_merge_packet`;
 - preserved prior operational promotion/artifact audit lane:
@@ -56,7 +60,9 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H45_post_r46_surface_decision_packet` is the current active docs-only
+`H46_post_r47_frontend_bridge_decision_packet` is the current active docs-only
+frontend-bridge decision packet.
+`H45_post_r46_surface_decision_packet` is the preserved prior docs-only
 surface-decision packet.
 `F21_post_h43_exact_useful_case_expansion_bundle` is the current planning
 bundle.
@@ -65,10 +71,10 @@ bundle.
 post-`H44` exact runtime gate on the fixed held-out useful-case surface.
 `R47_origin_restricted_frontend_translation_gate` is now the completed current
 exact frontend bridge lane.
-`H46_post_r47_frontend_bridge_decision_packet` is now the next required
-docs-only interpretation lane.
-`F22_post_r46_useful_case_model_bridge_bundle` is saved only as a blocked
-future comparator bundle.
+`R48_origin_dual_mode_useful_case_model_gate` is now the next required
+comparator-only model lane.
+`F22_post_r46_useful_case_model_bridge_bundle` is now the current
+comparator-planning bundle.
 `P31_post_h43_blog_guardrails_refresh` is the current low-priority
 operational/docs wave. It refreshes blocked downstream blog plus
 manuscript/caption/appendix helper guardrail docs that still freeze the
@@ -261,9 +267,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R45` is the completed current coequal model lane.
 - `R46` is the completed preserved prior post-`H44` exact runtime gate.
 - `R47` is the completed current exact frontend bridge gate.
-- `H46` is the next required docs-only interpretation packet.
-- `F22` is saved only as a blocked future comparator bundle.
-- no active downstream runtime lane follows the paper-grade `H43` closeout.
+- `H46` is the current active docs-only interpretation packet.
+- `F22` is the current comparator-planning bundle.
+- `R48` is the next required comparator-only model gate.
 
 ## Control References
 
@@ -276,6 +282,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
+- `docs/plans/2026-03-24-post-r47-h46-frontend-bridge-decision-design.md`
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md`

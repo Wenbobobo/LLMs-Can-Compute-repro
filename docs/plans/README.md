@@ -13,14 +13,20 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`
   docs-only route reauthorization packet, `R46` exact surface-generalization
   gate, conditional `R47`, conditional `R48`, and later low-priority rollup.
-- `2026-03-24-post-r46-h45-surface-decision-design.md` — the current
+- `2026-03-24-post-r47-h46-frontend-bridge-decision-design.md` — the current
+  execution design surface for the landed docs-only `H46` interpretation
+  packet that reads completed `R47`, authorizes exactly `R48`, and turns
+  `F22` into the current comparator-planning bundle.
+- `2026-03-24-post-r46-h45-surface-decision-design.md` — the preserved prior
   execution design surface for the landed docs-only `H45` interpretation
   packet that reads completed `R46`, authorizes exactly `R47`, keeps `F22`
-  blocked, and keeps `R48` deferred behind later explicit `H46`.
+  blocked at that stage, and keeps `R48` deferred behind later explicit
+  `H46`.
 - `2026-03-24-post-h45-r47-restricted-frontend-translation-design.md` — the
-  current execution design surface for the landed `R47` restricted frontend
-  bridge that lowers one structured `i32` / static-memory frontend onto the
-  existing useful-case kernels exactly and hands interpretation to `H46`.
+  preserved prior execution design surface for the landed `R47` restricted
+  frontend bridge that lowers one structured `i32` / static-memory frontend
+  onto the existing useful-case kernels exactly and hands interpretation to
+  `H46`.
 - `2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md` —
   the preserved prior execution design surface for the landed post-`H44`
   exact held-out useful-case surface-generalization gate and the `H45`

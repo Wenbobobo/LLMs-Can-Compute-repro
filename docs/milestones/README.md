@@ -12,11 +12,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H45_post_r46_surface_decision_packet/` — current active docs-only
+- `H46_post_r47_frontend_bridge_decision_packet/` — current active docs-only
+  frontend-bridge decision packet that preserves `H45/H44/H43/H36/F20/F21/P27`,
+  interprets completed `R47`, promotes `F22` into the current
+  comparator-planning bundle, and authorizes exactly `R48`.
+- `H45_post_r46_surface_decision_packet/` — preserved prior docs-only
   surface-decision packet that preserves `H44/H43/H36/F20/F21/P27/R43/R44/R45`,
-  interprets completed `R46`, preserves landed `R47` as the current exact
-  frontend bridge gate underneath it, saves `F22` as blocked comparator
-  storage, and keeps `R48` deferred behind later explicit `H46`.
+  interprets completed `R46`, authorizes exactly `R47`, and keeps later
+  `F22/R48` explicit.
 - `H44_post_h43_route_reauthorization_packet/` — preserved prior docs-only
   route reauthorization packet that preserves `H43/H42/H36/F20/P27/R43/R44/R45`,
   incorporates `F21`, and authorizes exactly `R46`.
@@ -92,15 +95,15 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
   semantic-boundary roadmap that turns the preserved `F9` family into a
   decision-complete restricted-Wasm / useful-case surface.
-- `F22_post_r46_useful_case_model_bridge_bundle/` — saved blocked
-  comparator-only bundle that stays downstream of exact frontend evidence plus
-  later explicit `H46`.
+- `F22_post_r46_useful_case_model_bridge_bundle/` — current comparator-
+  planning bundle that stays downstream of exact frontend evidence and scopes
+  the authorized `R48` lane.
 - `R47_origin_restricted_frontend_translation_gate/` — completed current
-  exact frontend bridge lane, downstream of completed `H45` and upstream of
+  exact frontend bridge lane, downstream of completed `H45` and underneath
   explicit `H46`.
-- `R48_origin_dual_mode_useful_case_model_gate/` — deferred future
-  comparator-only model lane on the preserved useful-case contract, blocked
-  behind exact `R47` plus later explicit `H46`.
+- `R48_origin_dual_mode_useful_case_model_gate/` — next required
+  comparator-only model lane on the preserved useful-case contract, now
+  authorized by exact `R47` plus explicit `H46`.
 - `H40_post_h38_semantic_boundary_activation_packet/` — preserved prior
   semantic-boundary activation packet above `H38`.
 - `F16_post_h37_r41_candidate_isolation_bundle/` — current candidate-
@@ -279,7 +282,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H45` is the active docs-only decision packet.
+- `H46` is the active docs-only decision packet.
+- `H45` is the preserved prior docs-only decision packet.
 - `H44` is the preserved prior docs-only route reauthorization packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint.
@@ -317,11 +321,11 @@ stack:
   rule.
 - `R44` is the completed current restricted useful-case gate.
 - `R46` is the completed preserved prior post-`H44` exact runtime gate.
-- `F22` is a saved blocked comparator bundle, not active execution work.
+- `F22` is the current comparator-planning bundle, not active execution work.
 - `R47` is the completed current exact frontend bridge gate.
-- `H46` is the next required docs-only interpretation packet.
-- `R48` remains deferred behind exact `R47` plus later explicit `H46`.
-- `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
+- `R48` is the next required comparator-only model gate.
+- `H43` remains the landed paper-grade closeout underneath the later explicit
+  reentry ladder.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`

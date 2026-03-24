@@ -7,7 +7,8 @@ rather than speculative.
 
 Current control docs:
 - `current_stage_driver.md` — the canonical `active_driver` for the current
-  `H45` docs-only surface-decision packet, preserving `H44` as the preserved
+  `H46` docs-only frontend-bridge decision packet, preserving `H45` as the
+  preserved prior docs-only decision packet, preserving `H44` as the preserved
   prior docs-only route packet, preserving `H43` as the preserved prior
   useful-case refreeze packet and present `H43` paper-grade endpoint,
   preserving `H42/H41` as the earlier docs-only decision packets, preserving
@@ -15,7 +16,8 @@ Current control docs:
   routing/refreeze packet, recording completed `R42`, `R43`, `R44`, and `R45`
   as the current semantic-boundary gate stack, preserving `F20` as the
   coequal-mainline model bundle, preserving `F21` as the current exact-first
-  post-`H43` planning bundle, preserving `P27` as the completed explicit
+  post-`H43` planning bundle, preserving `F22` as the current
+  comparator-planning bundle, preserving `P27` as the completed explicit
   merge packet with `merge_executed = false`, preserving `P26` as the prior
   operational audit lane, preserving `F18/F19/F16/F17/F15` as the current
   planning/control bundles, preserving `H40/H38/H37/P25` as the prior
@@ -25,19 +27,27 @@ Current control docs:
   preserving `H29/R36/R37/H30/H31/R38/H32/H33/H34` as upstream
   evidence/control context, treating `R39` and `R40` as completed
   same-substrate downstream evidence rather than automatic routing changes,
-  recording `H45` as the current active docs-only stage, `R46` as the
-  completed preserved prior post-`H44` exact runtime gate, `R47` as the
-  completed current exact frontend bridge gate, `H46` as the next required
-  docs-only interpretation packet, `F22` as a saved blocked comparator
-  bundle, and preserving `H43` with
-  `no_active_downstream_runtime_lane` as the landed paper-grade closeout;
+  recording `H46` as the current active docs-only stage, `H45` as the
+  preserved prior decision packet, `R46` as the completed preserved prior
+  post-`H44` exact runtime gate, `R47` as the completed current exact frontend
+  bridge gate, `R48` as the next required comparator-only model gate, `F22`
+  as the current comparator-planning bundle, and preserving `H43` as the
+  landed paper-grade closeout;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
   current master plan for exact-first post-`H43` reentry, fixing `F21`,
   `H44`, `R46`, `H45`, authorized `R47`, blocked `F22`, and conditional
   `R48`;
+- `docs/plans/2026-03-24-post-r47-h46-frontend-bridge-decision-design.md` —
+  the current execution design surface that lands `H46`, authorizes exactly
+  `R48`, and turns `F22` into the current comparator-planning bundle without
+  widening the paper-grade endpoint;
 - `docs/plans/2026-03-24-post-r46-h45-surface-decision-design.md` — the
-  current execution design surface that lands `H45`, authorizes exactly
-  `R47`, and keeps `F22/R48` behind later explicit packets;
+  preserved prior execution design surface that landed `H45`, authorized
+  exactly `R47`, and kept `F22/R48` behind later explicit packets;
+- `docs/plans/2026-03-24-post-h45-r47-restricted-frontend-translation-design.md`
+  — the preserved prior execution design surface for the landed `R47`
+  restricted frontend bridge that lowers one structured `i32` / static-memory
+  frontend onto the existing useful-case kernels exactly;
 - `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md` — the
   preserved design surface that landed `F20/H41` and turned post-`R42`
   aggressive-long-arc routing into the current exact-versus-model evidence
@@ -55,9 +65,9 @@ Current control docs:
   design surface that turned landed `R44` into the completed current narrow
   useful-case gate and restored `no_active_downstream_runtime_lane`;
 - `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
-  — the current execution design surface that landed exact held-out useful-case
-  surface generalization under `H44` and fixed `H45` as the next required
-  interpretation packet;
+  — the preserved earlier execution design surface that landed exact held-out
+  useful-case surface generalization under `H44` and fixed `H45` as the next
+  required interpretation packet at that stage;
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md` —
   the current low-priority design surface for refreshing blocked downstream
   blog plus manuscript-helper guardrails downstream of landed `H43` without

@@ -20,11 +20,13 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 As of `2026-03-24`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line, and it is no longer parked at the preserved
 `H40 -> R42` activation state alone. The current docs-only decision packet is
-now `H45_post_r46_surface_decision_packet`, the preserved prior docs-only
-decision packet is now `H44_post_h43_route_reauthorization_packet`, the
-preserved prior useful-case refreeze packet and current paper-grade endpoint
-is now `H43_post_r44_useful_case_refreeze`, the preserved earlier docs-only
-decision packets are `H42_post_r43_route_selection_packet` and
+now `H46_post_r47_frontend_bridge_decision_packet`, the preserved prior
+docs-only decision packet is now `H45_post_r46_surface_decision_packet`, the
+preserved prior route reauthorization packet is now
+`H44_post_h43_route_reauthorization_packet`, the preserved prior useful-case
+refreeze packet and current paper-grade endpoint is now
+`H43_post_r44_useful_case_refreeze`, the preserved earlier docs-only decision
+packets are `H42_post_r43_route_selection_packet` and
 `H41_post_r42_aggressive_long_arc_decision_packet`, the preserved active
 routing/refreeze packet remains `H36_post_r40_bounded_scalar_family_refreeze`,
 the current completed semantic-boundary retrieval-contract gate remains
@@ -38,31 +40,32 @@ completed coequal model gate is now
 coequal-mainline model bundle is
 `F20_post_r42_dual_mode_model_mainline_bundle`, the current exact post-`H43`
 planning bundle is `F21_post_h43_exact_useful_case_expansion_bundle`, the
-completed operational explicit merge packet is
+current comparator-planning bundle is
+`F22_post_r46_useful_case_model_bridge_bundle`, the completed operational
+explicit merge packet is
 `P27_post_h41_clean_promotion_and_explicit_merge_packet`, the preserved prior
 operational audit lane remains
 `P26_post_h37_promotion_and_artifact_hygiene_audit`, the current canonical
-derivative bundle remains
-`F15_post_h36_origin_goal_reanchor_bundle`, the current candidate-isolation
-bundle is `F16_post_h37_r41_candidate_isolation_bundle`, the current
-same-substrate exit bundle is
-`F17_post_h38_same_substrate_exit_criteria_bundle`, the current long-arc
-planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, the current
-semantic-boundary roadmap is
+derivative bundle remains `F15_post_h36_origin_goal_reanchor_bundle`, the
+current candidate-isolation bundle is
+`F16_post_h37_r41_candidate_isolation_bundle`, the current same-substrate exit
+bundle is `F17_post_h38_same_substrate_exit_criteria_bundle`, the current
+long-arc planning bundle is `F18_post_h38_origin_core_long_arc_bundle`, the
+current semantic-boundary roadmap is
 `F19_post_f18_restricted_wasm_useful_case_roadmap`, and the preserved prior
 semantic-boundary activation packet is
 `H40_post_h38_semantic_boundary_activation_packet`. The current paper-grade
 endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while
-`H45` remains the active docs-only surface-decision packet, `H44` remains the
-preserved prior docs-only route packet, landed exact `R46` remains the
-preserved prior post-`H44` exact runtime gate that kept all `8/8` held-out
-in-surface useful-case variants exact across the fixed `3/3` kernels,
-landed exact `R47` is now the completed current restricted frontend bridge
-gate that kept all `8/8` held-out useful-case variants exact with
-instruction-identical lowering across the same fixed `3/3` kernels, `H46` is
-now the next required docs-only interpretation packet, `F22` is saved only as
-a blocked comparator bundle, `R48` remains conditional behind later explicit
-`H46`, and `P31` remains the current low-priority docs wave.
+`H46` remains the active docs-only frontend-bridge decision packet, `H45`
+remains the preserved prior docs-only surface-decision packet, landed exact
+`R46` remains the preserved prior post-`H44` exact runtime gate that kept all
+`8/8` held-out in-surface useful-case variants exact across the fixed `3/3`
+kernels, landed exact `R47` is now the completed current restricted frontend
+bridge gate that kept all `8/8` held-out useful-case variants exact with
+instruction-identical lowering across the same fixed `3/3` kernels, `F22` is
+now the current comparator-planning bundle, `R48` is now the next required
+comparator-only model gate, and `P31` remains the current low-priority docs
+wave.
 
 The narrow current stack is:
 
@@ -95,13 +98,16 @@ What stays blocked or deferred:
   completed current restricted-Wasm / tiny-`C` useful-case gate;
 - `R46_origin_useful_case_surface_generalization_gate` is now the completed
   preserved prior post-`H44` exact runtime gate on `8/8` held-out in-surface
-  variants, while `H45_post_r46_surface_decision_packet` is now the active
-  docs-only interpretation packet that authorizes exactly
-  `R47_origin_restricted_frontend_translation_gate`, keeps
-  `F22_post_r46_useful_case_model_bridge_bundle` blocked, and keeps
-  `R48_origin_dual_mode_useful_case_model_gate` deferred behind later
-  explicit `H46`;
-- no active downstream runtime lane follows the paper-grade `H43` closeout;
+  variants, `H45_post_r46_surface_decision_packet` is now the preserved prior
+  docs-only interpretation packet that authorized exactly
+  `R47_origin_restricted_frontend_translation_gate`, and
+  `H46_post_r47_frontend_bridge_decision_packet` is now the active docs-only
+  interpretation packet that authorizes exactly
+  `R48_origin_dual_mode_useful_case_model_gate` while making
+  `F22_post_r46_useful_case_model_bridge_bundle` the current
+  comparator-planning bundle;
+- the paper-grade `H43` closeout remains preserved even while the later
+  `H44 -> R46 -> H45 -> R47 -> H46` ladder is tracked explicitly downstream;
 - `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
   scope widening remain blocked.
 

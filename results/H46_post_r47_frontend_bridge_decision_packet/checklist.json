@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h46_docs_authorize_r48_and_promote_f22",
+      "status": "pass",
+      "notes": "H46 should authorize exactly R48 while turning F22 into the current comparator-planning bundle."
+    },
+    {
+      "item_id": "upstream_h45_r47_and_h43_support_the_h46_decision",
+      "status": "pass",
+      "notes": "H46 is only justified if H45 authorized R47 and R47 really preserved narrow exact frontend support on the fixed useful-case ladder."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h46_current_with_r48_next",
+      "status": "pass",
+      "notes": "Shared control surfaces should make H46 current, preserve H45 as prior, and fix R48 as the only authorized next comparator-only model lane."
+    }
+  ]
+}

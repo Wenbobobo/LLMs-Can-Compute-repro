@@ -1,12 +1,12 @@
 # F22 Post-R46 Useful-Case Model Bridge Bundle
 
-Saved minimal blocked comparator-only bundle after positive `R46` and executed
-`H45`.
+Current minimal comparator-only planning bundle after positive `R47` and
+executed `H46`.
 
-`F22` exists only to keep the future model-side bridge explicit after `H45`
-selected `authorize_r47_origin_restricted_frontend_translation_gate`.
+`F22` exists to keep the model-side bridge explicit after `H46` selected
+`authorize_r48_origin_dual_mode_useful_case_model_gate`.
 
-It does not authorize model execution, it does not authorize `R48` by
-momentum, and it does not widen the claim ceiling beyond bounded useful cases.
-`F22` remains blocked until exact frontend evidence survives in `R47` and a
-later explicit `H46` packet admits the comparator lane.
+It remains planning-only and comparator-only. It does not let model positives
+replace exact failures, it does not widen the claim ceiling beyond bounded
+useful cases, and it does not authorize broader Wasm/C or hybrid model work by
+momentum.

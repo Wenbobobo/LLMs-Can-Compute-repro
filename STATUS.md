@@ -3,8 +3,9 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H45_post_r46_surface_decision_packet`, not the preserved prior `H44`
-  packet, the preserved prior `H43` packet, the preserved earlier `H42`
+  `H46_post_r47_frontend_bridge_decision_packet`, not the preserved prior
+  `H45` packet, the preserved prior `H44` packet, the preserved prior `H43`
+  packet, the preserved earlier `H42`
   packet, the preserved earlier `H41` packet, the preserved prior `H40`
   packet, the preserved prior `H30` packet, or the earlier `H25`
   same-endpoint decision packet.
@@ -18,8 +19,8 @@
   `R46_origin_useful_case_surface_generalization_gate`.
 - The current completed exact frontend bridge gate is
   `R47_origin_restricted_frontend_translation_gate`.
-- The next required docs-only interpretation packet is
-  `H46_post_r47_frontend_bridge_decision_packet`.
+- The next required comparator-only model gate is
+  `R48_origin_dual_mode_useful_case_model_gate`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -27,6 +28,8 @@
 - `F21_post_h43_exact_useful_case_expansion_bundle` is now complete as the
   current exact post-`H43` planning bundle fixing the exact-first reentry
   route.
+- `F22_post_r46_useful_case_model_bridge_bundle` is now the current
+  comparator-planning bundle scoped by exact `R47` and explicit `H46`.
 - `P31_post_h43_blog_guardrails_refresh` remains the current low-priority
   blocked-blog/helper guardrail refresh wave.
 - The active scientific target is now the narrower Origin-core line:
