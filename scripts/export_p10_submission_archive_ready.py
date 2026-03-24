@@ -92,6 +92,14 @@ def timed_out_count_from_summary(summary_doc: dict[str, Any]) -> int:
     return int(summary_doc["summary"]["timed_out_file_count"])
 
 
+def tracked_large_artifact_count_from_summary(summary_doc: dict[str, Any]) -> int:
+    return int(summary_doc["summary"].get("tracked_large_artifact_count", 0))
+
+
+def large_artifact_default_policy_from_summary(summary_doc: dict[str, Any]) -> str:
+    return str(summary_doc["summary"].get("large_artifact_default_policy", ""))
+
+
 def load_inputs() -> dict[str, Any]:
     return {
         "readme_text": read_text(ROOT / "README.md"),
@@ -120,6 +128,8 @@ def load_inputs() -> dict[str, Any]:
         "p5_summary": read_json(ROOT / "results" / "P5_public_surface_sync" / "summary.json"),
         "p5_callout_summary": read_json(ROOT / "results" / "P5_callout_alignment" / "summary.json"),
         "h2_summary": read_json(ROOT / "results" / "H2_bundle_lock_audit" / "summary.json"),
+        "p37_summary": read_json(ROOT / "results" / "P37_post_h50_narrow_executor_closeout_sync" / "summary.json"),
+        "p37_summary_text": read_text(ROOT / "results" / "P37_post_h50_narrow_executor_closeout_sync" / "summary.json"),
     }
 
 
@@ -141,6 +151,8 @@ def build_checklist_rows(
     p5_summary: dict[str, Any],
     p5_callout_summary: dict[str, Any],
     h2_summary: dict[str, Any],
+    p37_summary: dict[str, Any],
+    p37_summary_text: str,
 ) -> list[dict[str, object]]:
     return [
         {
@@ -263,6 +275,10 @@ def build_checklist_rows(
             and blocked_count_from_summary(p5_summary) == 0
             and blocked_count_from_summary(p5_callout_summary) == 0
             and blocked_count_from_summary(h2_summary) == 0
+            and blocked_count_from_summary(p37_summary) == 0
+            and tracked_large_artifact_count_from_summary(p37_summary) == 0
+            and large_artifact_default_policy_from_summary(p37_summary)
+            == "raw_step_trace_and_per_read_rows_out_of_git"
             and runtime_classification_from_summary(v1_timing_summary) == "healthy_but_slow"
             and timed_out_count_from_summary(v1_timing_summary) == 0
             else "blocked",
@@ -363,6 +379,13 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         "results/release_worktree_hygiene_snapshot/summary.json": (
             "worktree_hygiene_summary_text",
             ['"release_commit_state":', '"git_diff_check_state":'],
+        ),
+        "results/P37_post_h50_narrow_executor_closeout_sync/summary.json": (
+            "p37_summary_text",
+            [
+                '"tracked_large_artifact_count": 0',
+                '"large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git"',
+            ],
         ),
     }
     rows: list[dict[str, object]] = []

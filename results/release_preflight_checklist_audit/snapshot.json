@@ -103,6 +103,13 @@
       ]
     },
     {
+      "path": "results/P37_post_h50_narrow_executor_closeout_sync/summary.json",
+      "matched_lines": [
+        "\"large_artifact_default_policy\": \"raw_step_trace_and_per_read_rows_out_of_git\",",
+        "\"tracked_large_artifact_count\": 0,"
+      ]
+    },
+    {
       "path": "docs/publication_record/manuscript_bundle_draft.md",
       "matched_lines": [
         "## 1. Abstract",

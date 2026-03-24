@@ -107,6 +107,7 @@ def load_inputs() -> dict[str, Any]:
         ),
         "p28_summary": read_json(ROOT / "results" / "P28_post_h43_publication_surface_sync" / "summary.json"),
         "p37_summary": read_json(ROOT / "results" / "P37_post_h50_narrow_executor_closeout_sync" / "summary.json"),
+        "p37_summary_text": read_text(ROOT / "results" / "P37_post_h50_narrow_executor_closeout_sync" / "summary.json"),
         "p5_summary": read_json(ROOT / "results" / "P5_public_surface_sync" / "summary.json"),
         "p5_callout_summary": read_json(ROOT / "results" / "P5_callout_alignment" / "summary.json"),
         "h2_summary": read_json(ROOT / "results" / "H2_bundle_lock_audit" / "summary.json"),
@@ -152,6 +153,14 @@ def diff_check_state_from_summary(summary_doc: dict[str, Any]) -> str:
     return str(summary_doc["summary"]["git_diff_check_state"])
 
 
+def tracked_large_artifact_count_from_summary(summary_doc: dict[str, Any]) -> int:
+    return int(summary_doc["summary"].get("tracked_large_artifact_count", 0))
+
+
+def large_artifact_default_policy_from_summary(summary_doc: dict[str, Any]) -> str:
+    return str(summary_doc["summary"].get("large_artifact_default_policy", ""))
+
+
 def build_checklist_rows(
     *,
     readme_text: str,
@@ -182,6 +191,7 @@ def build_checklist_rows(
     p27_summary: dict[str, Any],
     p28_summary: dict[str, Any],
     p37_summary: dict[str, Any],
+    p37_summary_text: str,
     p5_summary: dict[str, Any],
     p5_callout_summary: dict[str, Any],
     h2_summary: dict[str, Any],
@@ -418,6 +428,9 @@ def build_checklist_rows(
             and bool(p27_summary["summary"]["merge_executed"]) is False
             and blocked_count_from_summary(p28_summary) == 0
             and blocked_count_from_summary(p37_summary) == 0
+            and tracked_large_artifact_count_from_summary(p37_summary) == 0
+            and large_artifact_default_policy_from_summary(p37_summary)
+            == "raw_step_trace_and_per_read_rows_out_of_git"
             and blocked_count_from_summary(p5_summary) == 0
             and blocked_count_from_summary(p5_callout_summary) == 0
             and blocked_count_from_summary(h2_summary) == 0
@@ -515,6 +528,13 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
             [
                 '"release_commit_state":',
                 '"git_diff_check_state":',
+            ],
+        ),
+        "results/P37_post_h50_narrow_executor_closeout_sync/summary.json": (
+            "p37_summary_text",
+            [
+                '"tracked_large_artifact_count": 0',
+                '"large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git"',
             ],
         ),
         "docs/publication_record/manuscript_bundle_draft.md": (
