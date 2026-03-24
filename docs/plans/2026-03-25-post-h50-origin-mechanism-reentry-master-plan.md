@@ -30,6 +30,17 @@ The fixed low-priority sidecar is:
 
 `P37_post_h50_narrow_executor_closeout_sync`.
 
+## Execution Status
+
+This plan is now a preserved record for a closed wave. The fixed
+`F28 -> H51 -> R55 -> R56 -> R57 -> H52` sequence has completed, `H52` is
+landed as the active closeout packet, and the downstream lane is restored to
+`no_active_downstream_runtime_lane`.
+
+No additional runtime gate or docs-only follow-up packet remains open under
+this plan. Any later work must start from a new explicit planning packet
+rather than by extending this preserved mechanism lane.
+
 ## Scientific Target
 
 This wave narrows the current scientific target to one explicit mechanism
@@ -70,8 +81,8 @@ The chosen route is:
   relative to transparent reference execution on the exact `R56` rows; and
 - `H52` closes the lane explicitly without widening the claim ceiling.
 
-`P37` runs in parallel as an operational/docs sync packet for worktree
-discipline, artifact slimming, and branch hygiene during this wave.
+`P37` serves as the operational/docs sync packet that preserved worktree
+discipline, artifact slimming, and branch hygiene for the closed wave.
 
 ## F28 Contract
 
@@ -87,9 +98,10 @@ discipline, artifact slimming, and branch hygiene during this wave.
 
 ## P37 Contract
 
-`P37` remains operational/docs-only and must codify:
+`P37` remains operational/docs-only and codifies:
 
-- the clean `F28/H51` worktree as the control surface for this wave;
+- the clean `F28/H51` worktree as the historical control surface for the
+  closed wave;
 - descendant clean worktrees as the only scientific execution surfaces for
   `R55` and `R56`;
 - raw step rows, per-read rows, and any artifact above roughly `10 MiB` as
@@ -181,7 +193,7 @@ Allowed outcomes:
 - `stop_as_partial_mechanism_only`.
 
 `H52` must preserve `H43` as the paper-grade endpoint unless a later explicit
-packet raises the claim ceiling on stronger evidence than this wave.
+packet raises the claim ceiling on stronger evidence than this closed wave.
 
 ## Defaults
 

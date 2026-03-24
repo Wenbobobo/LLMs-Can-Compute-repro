@@ -18,3 +18,6 @@ The packet fixes:
 - one acceptance note keeping dirty root `main` untouched during this wave; and
 - one explicit split between compact in-git summaries and raw row dumps that
   stay out of git by default.
+
+The packet is now preserved as a completed sidecar for a closed wave. It does
+not authorize further execution on this branch.
