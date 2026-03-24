@@ -92,12 +92,18 @@ def load_inputs() -> dict[str, Any]:
         "active_wave_plan_text": read_text(ROOT / "tmp" / "active_wave_plan.md"),
         "h50_summary": read_json(ROOT / "results" / "H50_post_r51_r52_scope_decision_packet" / "summary.json"),
         "h43_summary": read_json(ROOT / "results" / "H43_post_r44_useful_case_refreeze" / "summary.json"),
+        "h51_summary": read_json(ROOT / "results" / "H51_post_h50_origin_mechanism_reentry_packet" / "summary.json"),
+        "h52_summary": read_json(ROOT / "results" / "H52_post_r55_r56_r57_origin_mechanism_decision_packet" / "summary.json"),
+        "r57_summary": read_json(ROOT / "results" / "R57_origin_accelerated_trace_vm_comparator_gate" / "summary.json"),
     }
 
 
 def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
     h50 = inputs["h50_summary"]["summary"]
     h43 = inputs["h43_summary"]["summary"]
+    h51 = inputs["h51_summary"]["summary"]
+    h52 = inputs["h52_summary"]["summary"]
+    r57 = inputs["r57_summary"]["summary"]
     return [
         {
             "item_id": "p37_docs_define_post_h50_hygiene_sync_packet",
@@ -106,8 +112,9 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["p37_readme_text"],
                 [
                     "completed low-priority operational/docs sync packet",
-                    "`h51` as the current active docs-only packet",
-                    "`h50` as the preserved prior closeout",
+                    "`h51` as the preserved prior mechanism-reentry packet",
+                    "`h52` as the current active docs-only closeout",
+                    "`h50` as the preserved prior broader-route closeout",
                     "`h43` as the paper-grade endpoint",
                     "`f28 -> h51 -> r55 -> r56 -> r57 -> h52`",
                 ],
@@ -116,8 +123,10 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["p37_status_text"],
                 [
                     "completed operational/docs sync packet after landed `h50` and landed `h51`",
+                    "preserves `h52` as the current active docs-only closeout",
+                    "preserves `h51` as the preserved prior mechanism-reentry packet",
                     "promotes the clean `f28/h51` worktree as the control surface for this wave",
-                    "keeps descendant clean worktrees as the only scientific execution surfaces for `r55` and `r56`",
+                    "keeps descendant clean worktrees as the only scientific execution surfaces for `r55`, `r56`, and `r57`",
                     "keeps `merge_executed = false` explicit",
                     "codifies compact-summary-in-git and raw-row-dump-out-of-git defaults",
                 ],
@@ -136,14 +145,15 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["p37_acceptance_text"],
                 [
                     "`p37` remains operational/docs-only",
-                    "`h51` remains the current active docs-only packet",
+                    "`h52` remains the current active docs-only packet",
+                    "`h51` remains the preserved prior mechanism-reentry packet",
                     "raw step rows, trace rows, per-read rows, and artifacts above roughly",
                     "compact summaries, manifests, stop rules, and first-fail digests stay in git",
                     "merge back to `main` does not occur during this wave",
                 ],
             )
             else "blocked",
-            "notes": "P37 should codify hygiene and no-merge policy for the H51 mechanism-reentry wave without changing scientific stage.",
+            "notes": "P37 should codify hygiene and no-merge policy for the closed mechanism-reentry wave without changing scientific stage.",
         },
         {
             "item_id": "p37_records_worktree_artifact_and_commit_policy",
@@ -154,8 +164,9 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "f28-h51-post-h50-origin-mechanism-reentry",
                     "r55-origin-2d-hardmax-retrieval-equivalence",
                     "r56-origin-append-only-trace-vm-semantics",
+                    "r57-origin-accelerated-trace-vm-comparator",
                     "dirty root `main` is not a scientific execution surface",
-                    "`r57` should fork only after `r56` fixes an exact row set worth comparing",
+                    "`r57` forks only after `r56` fixes an exact row set worth comparing",
                 ],
             )
             and contains_all(
@@ -193,6 +204,10 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "item_id": "shared_control_surfaces_make_p37_current_low_priority_wave",
             "status": "pass"
             if str(h50["selected_outcome"]) == "stop_as_exact_without_system_value"
+            and str(h51["selected_outcome"]) == "authorize_origin_mechanism_reentry_through_r55_first"
+            and str(h52["selected_outcome"]) == "freeze_origin_mechanism_supported_without_fastpath_value"
+            and str(h52["next_required_lane"]) == "no_active_downstream_runtime_lane"
+            and str(r57["gate"]["lane_verdict"]) == "accelerated_trace_vm_lacks_bounded_value"
             and str(h43["active_stage"]) == "h43_post_r44_useful_case_refreeze"
             and bool(h43["merge_executed"]) is False
             and contains_all(
@@ -206,7 +221,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["status_text"],
                 [
-                    "the current low-priority operational/docs wave is",
+                    "the current low-priority operational/docs wave remains",
                     "`p37_post_h50_narrow_executor_closeout_sync`",
                     "dirty root `main` remains quarantined and `merge_executed = false` remains",
                 ],
@@ -216,13 +231,13 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 [
                     "the current low-priority operational/docs wave is:",
                     "- `p37_post_h50_narrow_executor_closeout_sync`",
-                    "`p37` records clean worktree discipline, raw-artifact slimming, and explicit",
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
                 ],
             )
             and contains_all(
                 inputs["active_wave_plan_text"],
                 [
-                    "`p37_post_h50_narrow_executor_closeout_sync` is now the current low-priority",
+                    "`p37_post_h50_narrow_executor_closeout_sync` remains the current low-priority",
                     "out-of-git policy for row dumps and artifacts above roughly `10 mib`",
                     "no merge back to `main` occurs during this wave",
                 ],
@@ -245,31 +260,32 @@ def build_claim_packet() -> dict[str, object]:
     return {
         "supported_here": [
             "P37 promotes the clean F28/H51 worktree as the control surface for the current wave.",
-            "P37 keeps descendant clean worktrees as the only scientific execution surfaces for R55 and R56.",
+            "P37 keeps descendant clean worktrees as the only scientific execution surfaces for R55, R56, and R57.",
             "P37 keeps raw row dumps and artifacts above roughly 10 MiB out of git by default while preserving explicit no-merge posture.",
         ],
         "unsupported_here": [
             "P37 does not change the active scientific stage or overturn H50.",
             "P37 does not merge dirty root main back into the clean line.",
-            "P37 does not authorize a runtime lane beyond the already selected R55 next step.",
+            "P37 does not reopen a downstream runtime lane after the landed H52 closeout.",
         ],
         "disconfirmed_here": [
             "The idea that convenience alone is enough reason to keep large raw row artifacts in git or to execute science from dirty root main.",
         ],
         "distilled_result": {
-            "current_active_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+            "current_active_stage": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
             "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+            "preserved_prior_mechanism_reentry_packet": "h51_post_h50_origin_mechanism_reentry_packet",
             "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
             "refresh_packet": "p37_post_h50_narrow_executor_closeout_sync",
-            "selected_outcome": "mechanism_reentry_hygiene_saved_without_scientific_widening",
+            "selected_outcome": "mechanism_reentry_hygiene_preserved_through_h52_closeout",
             "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
             "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
-            "current_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+            "preserved_comparator_gate": "r57_origin_accelerated_trace_vm_comparator_gate",
             "current_merge_posture": "explicit_merge_wave",
             "merge_executed": False,
             "root_dirty_main_quarantined": True,
             "large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git",
-            "next_required_lane": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+            "next_required_lane": "no_active_downstream_runtime_lane",
         },
     }
 
@@ -279,7 +295,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         (
             "docs/milestones/P37_post_h50_narrow_executor_closeout_sync/worktree_strategy.md",
             inputs["worktree_strategy_text"],
-            ["f28-h51-post-h50-origin-mechanism-reentry", "dirty root `main` is not a scientific execution surface"],
+            ["f28-h51-post-h50-origin-mechanism-reentry", "r57-origin-accelerated-trace-vm-comparator"],
         ),
         (
             "docs/milestones/P37_post_h50_narrow_executor_closeout_sync/artifact_policy.md",
@@ -309,7 +325,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         (
             "tmp/active_wave_plan.md",
             inputs["active_wave_plan_text"],
-            ["`P37_post_h50_narrow_executor_closeout_sync` is now the current low-priority", "no merge back to `main` occurs during this wave"],
+            ["`P37_post_h50_narrow_executor_closeout_sync` remains the current low-priority", "no merge back to `main` occurs during this wave"],
         ),
         (
             "docs/publication_record/experiment_manifest.md",
@@ -326,12 +342,13 @@ def build_summary(checklist_rows: list[dict[str, object]], claim_packet: dict[st
     return {
         "current_active_stage": distilled["current_active_stage"],
         "preserved_prior_docs_only_closeout": distilled["preserved_prior_docs_only_closeout"],
+        "preserved_prior_mechanism_reentry_packet": distilled["preserved_prior_mechanism_reentry_packet"],
         "current_paper_grade_endpoint": distilled["current_paper_grade_endpoint"],
         "refresh_packet": distilled["refresh_packet"],
         "selected_outcome": distilled["selected_outcome"],
         "current_low_priority_wave": distilled["current_low_priority_wave"],
         "current_planning_bundle": distilled["current_planning_bundle"],
-        "current_next_runtime_candidate": distilled["current_next_runtime_candidate"],
+        "preserved_comparator_gate": distilled["preserved_comparator_gate"],
         "current_merge_posture": distilled["current_merge_posture"],
         "merge_executed": distilled["merge_executed"],
         "root_dirty_main_quarantined": distilled["root_dirty_main_quarantined"],

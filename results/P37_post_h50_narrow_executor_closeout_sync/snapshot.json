@@ -4,7 +4,7 @@
       "path": "docs/milestones/P37_post_h50_narrow_executor_closeout_sync/worktree_strategy.md",
       "matched_lines": [
         "- `D:/zWenbo/AI/LLMCompute-worktrees/f28-h51-post-h50-origin-mechanism-reentry`",
-        "- dirty root `main` is not a scientific execution surface."
+        "- `D:/zWenbo/AI/LLMCompute-worktrees/r57-origin-accelerated-trace-vm-comparator`"
       ]
     },
     {
@@ -46,7 +46,7 @@
     {
       "path": "tmp/active_wave_plan.md",
       "matched_lines": [
-        "`P37_post_h50_narrow_executor_closeout_sync` is now the current low-priority",
+        "`P37_post_h50_narrow_executor_closeout_sync` remains the current low-priority",
         "- no merge back to `main` occurs during this wave."
       ]
     },

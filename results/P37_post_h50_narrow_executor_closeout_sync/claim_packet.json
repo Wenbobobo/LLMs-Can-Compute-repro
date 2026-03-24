@@ -2,31 +2,32 @@
   "summary": {
     "supported_here": [
       "P37 promotes the clean F28/H51 worktree as the control surface for the current wave.",
-      "P37 keeps descendant clean worktrees as the only scientific execution surfaces for R55 and R56.",
+      "P37 keeps descendant clean worktrees as the only scientific execution surfaces for R55, R56, and R57.",
       "P37 keeps raw row dumps and artifacts above roughly 10 MiB out of git by default while preserving explicit no-merge posture."
     ],
     "unsupported_here": [
       "P37 does not change the active scientific stage or overturn H50.",
       "P37 does not merge dirty root main back into the clean line.",
-      "P37 does not authorize a runtime lane beyond the already selected R55 next step."
+      "P37 does not reopen a downstream runtime lane after the landed H52 closeout."
     ],
     "disconfirmed_here": [
       "The idea that convenience alone is enough reason to keep large raw row artifacts in git or to execute science from dirty root main."
     ],
     "distilled_result": {
-      "current_active_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+      "current_active_stage": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
       "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+      "preserved_prior_mechanism_reentry_packet": "h51_post_h50_origin_mechanism_reentry_packet",
       "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
       "refresh_packet": "p37_post_h50_narrow_executor_closeout_sync",
-      "selected_outcome": "mechanism_reentry_hygiene_saved_without_scientific_widening",
+      "selected_outcome": "mechanism_reentry_hygiene_preserved_through_h52_closeout",
       "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
       "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
-      "current_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+      "preserved_comparator_gate": "r57_origin_accelerated_trace_vm_comparator_gate",
       "current_merge_posture": "explicit_merge_wave",
       "merge_executed": false,
       "root_dirty_main_quarantined": true,
       "large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git",
-      "next_required_lane": "r55_origin_2d_hardmax_retrieval_equivalence_gate"
+      "next_required_lane": "no_active_downstream_runtime_lane"
     }
   }
 }

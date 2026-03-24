@@ -40,15 +40,18 @@ def test_export_p37_writes_narrow_executor_closeout_sync(tmp_path: Path) -> None
     claim_packet = json.loads((temp_out_dir / "claim_packet.json").read_text(encoding="utf-8"))["summary"]
     snapshot_rows = json.loads((temp_out_dir / "snapshot.json").read_text(encoding="utf-8"))["rows"]
 
-    assert payload["summary"]["current_active_stage"] == "h51_post_h50_origin_mechanism_reentry_packet"
+    assert payload["summary"]["current_active_stage"] == "h52_post_r55_r56_r57_origin_mechanism_decision_packet"
     assert payload["summary"]["preserved_prior_docs_only_closeout"] == "h50_post_r51_r52_scope_decision_packet"
+    assert payload["summary"]["preserved_prior_mechanism_reentry_packet"] == (
+        "h51_post_h50_origin_mechanism_reentry_packet"
+    )
     assert payload["summary"]["current_paper_grade_endpoint"] == "h43_post_r44_useful_case_refreeze"
     assert payload["summary"]["refresh_packet"] == "p37_post_h50_narrow_executor_closeout_sync"
-    assert payload["summary"]["selected_outcome"] == "mechanism_reentry_hygiene_saved_without_scientific_widening"
+    assert payload["summary"]["selected_outcome"] == "mechanism_reentry_hygiene_preserved_through_h52_closeout"
     assert payload["summary"]["current_low_priority_wave"] == "p37_post_h50_narrow_executor_closeout_sync"
     assert payload["summary"]["current_planning_bundle"] == "f28_post_h50_origin_mechanism_reentry_bundle"
-    assert payload["summary"]["current_next_runtime_candidate"] == (
-        "r55_origin_2d_hardmax_retrieval_equivalence_gate"
+    assert payload["summary"]["preserved_comparator_gate"] == (
+        "r57_origin_accelerated_trace_vm_comparator_gate"
     )
     assert payload["summary"]["current_merge_posture"] == "explicit_merge_wave"
     assert payload["summary"]["merge_executed"] is False
@@ -56,7 +59,7 @@ def test_export_p37_writes_narrow_executor_closeout_sync(tmp_path: Path) -> None
     assert payload["summary"]["large_artifact_default_policy"] == (
         "raw_step_trace_and_per_read_rows_out_of_git"
     )
-    assert payload["summary"]["next_required_lane"] == "r55_origin_2d_hardmax_retrieval_equivalence_gate"
+    assert payload["summary"]["next_required_lane"] == "no_active_downstream_runtime_lane"
     assert payload["summary"]["blocked_count"] == 0
     assert payload["summary"]["pass_count"] == len(checklist_rows)
     assert claim_packet["distilled_result"]["current_low_priority_wave"] == (

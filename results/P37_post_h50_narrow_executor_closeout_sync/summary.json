@@ -1,18 +1,19 @@
 {
   "summary": {
-    "current_active_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+    "current_active_stage": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
     "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+    "preserved_prior_mechanism_reentry_packet": "h51_post_h50_origin_mechanism_reentry_packet",
     "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
     "refresh_packet": "p37_post_h50_narrow_executor_closeout_sync",
-    "selected_outcome": "mechanism_reentry_hygiene_saved_without_scientific_widening",
+    "selected_outcome": "mechanism_reentry_hygiene_preserved_through_h52_closeout",
     "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
     "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
-    "current_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+    "preserved_comparator_gate": "r57_origin_accelerated_trace_vm_comparator_gate",
     "current_merge_posture": "explicit_merge_wave",
     "merge_executed": false,
     "root_dirty_main_quarantined": true,
     "large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git",
-    "next_required_lane": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+    "next_required_lane": "no_active_downstream_runtime_lane",
     "supported_here_count": 3,
     "unsupported_here_count": 3,
     "disconfirmed_here_count": 1,
@@ -23,11 +24,11 @@
   },
   "runtime_environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f28-h51-post-h50-origin-mechanism-reentry\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f28-h51-post-h50-origin-mechanism-reentry\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
       "installed": false,
