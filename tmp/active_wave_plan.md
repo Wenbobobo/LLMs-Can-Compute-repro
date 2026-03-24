@@ -5,450 +5,100 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
+  `H51_post_h50_origin_mechanism_reentry_packet`;
+- preserved prior docs-only closeout:
   `H50_post_r51_r52_scope_decision_packet`;
-- preserved prior docs-only decision packet:
-  `H49_post_r50_tinyc_lowering_decision_packet`;
-- preserved earlier docs-only decision packet:
-  `H48_post_r49_numeric_scaling_decision_packet`;
-- preserved earlier docs-only decision packet before that:
-  `H47_post_r48_useful_case_bridge_refreeze`;
-- preserved earlier docs-only decision packet before that:
-  `H46_post_r47_frontend_bridge_decision_packet`;
-- preserved prior docs-only route packet:
-  `H44_post_h43_route_reauthorization_packet`;
-- preserved prior useful-case refreeze packet and current paper-grade endpoint:
+- preserved prior paper-grade endpoint:
   `H43_post_r44_useful_case_refreeze`;
 - preserved active routing/refreeze packet:
   `H36_post_r40_bounded_scalar_family_refreeze`;
-- current completed semantic-boundary retrieval-contract gate:
-  `R42_origin_append_only_memory_retrieval_contract_gate`;
-- current completed exact bounded-memory small-VM gate:
-  `R43_origin_bounded_memory_small_vm_execution_gate`;
-- current completed useful-case gate:
-  `R44_origin_restricted_wasm_useful_case_execution_gate`;
-- current completed post-`H44` exact runtime gate:
-  `R46_origin_useful_case_surface_generalization_gate`;
-- current completed exact frontend bridge gate:
-  `R47_origin_restricted_frontend_translation_gate`;
-- current completed comparator-only useful-case model gate:
-  `R48_origin_dual_mode_useful_case_model_gate`;
-- current downstream scientific lane:
-  `no_active_downstream_runtime_lane`;
-- completed post-`H49` planning bundle:
-  `F26_post_h49_origin_claim_delta_and_next_question_bundle`;
-- completed post-`H49` runtime sufficiency gate fixed by `F26`:
-  `R51_origin_memory_control_surface_sufficiency_gate`;
-- completed post-`H49` comparator/value gate fixed by `F26`:
-  `R52_origin_internal_vs_external_executor_value_gate`;
-- completed post-`R51/R52` closeout packet fixed by `F26`:
-  `H50_post_r51_r52_scope_decision_packet`;
-- saved future bundle left non-selected after negative `H50`:
-  `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`;
-- current completed numeric-scaling gate:
-  `R49_origin_useful_case_numeric_scaling_gate`;
-- current post-`H48` planning bundle:
-  `F25_post_h48_restricted_tinyc_lowering_bundle`;
-- current completed restricted tiny-`C` lowering gate:
-  `R50_origin_restricted_tinyc_lowering_gate`;
-- preserved prior docs-only closeout after `R50`:
-  `H49_post_r50_tinyc_lowering_decision_packet`;
-- current completed coequal model gate:
-  `R45_origin_dual_mode_model_mainline_gate`;
-- current coequal-mainline model bundle:
-  `F20_post_r42_dual_mode_model_mainline_bundle`;
-- current exact post-`H43` planning bundle:
-  `F21_post_h43_exact_useful_case_expansion_bundle`;
-- current comparator-planning bundle:
-  `F22_post_r46_useful_case_model_bridge_bundle`;
-- current post-`H47` numeric-scaling planning bundle:
-  `F23_post_h47_numeric_scaling_bundle`;
-- completed operational explicit merge packet:
-  `P27_post_h41_clean_promotion_and_explicit_merge_packet`;
-- preserved prior operational promotion/artifact audit lane:
-  `P26_post_h37_promotion_and_artifact_hygiene_audit`;
+- current planning bundle:
+  `F28_post_h50_origin_mechanism_reentry_bundle`;
 - current low-priority operational/docs wave:
-  `P36_post_h49_cleanline_hygiene_and_artifact_policy`;
-- preserved prior low-priority operational/docs wave:
-  `P35_post_h47_research_record_rollup`;
-- current canonical origin-facing derivative bundle:
-  `F15_post_h36_origin_goal_reanchor_bundle`;
-- current candidate-isolation bundle:
-  `F16_post_h37_r41_candidate_isolation_bundle`;
-- current same-substrate exit bundle:
-  `F17_post_h38_same_substrate_exit_criteria_bundle`;
-- current long-arc planning bundle:
-  `F18_post_h38_origin_core_long_arc_bundle`;
-- current semantic-boundary useful-case roadmap:
-  `F19_post_f18_restricted_wasm_useful_case_roadmap`;
-- preserved prior semantic-boundary activation packet:
-  `H40_post_h38_semantic_boundary_activation_packet`;
-- preserved prior docs-only reopen-decision packet:
-  `H38_post_f16_runtime_relevance_reopen_decision_packet`;
-- preserved prior clean promotion-prep lane:
-  `P25_post_h36_clean_promotion_prep`;
-- deferred contradiction runtime blueprint:
-  `R41_origin_runtime_relevance_threat_stress_audit`;
-- preserved prior completed route-selection packet:
-  `H42_post_r43_route_selection_packet`;
-- blocked future lanes:
-  `R29_d0_same_endpoint_systems_recovery_execution_gate` and
-  `F3_post_h23_scope_lift_decision_bundle`.
+  `P37_post_h50_narrow_executor_closeout_sync`;
+- current downstream scientific lane:
+  `R55_origin_2d_hardmax_retrieval_equivalence_gate`;
+- fixed later mechanism sequence:
+  `R56_origin_append_only_trace_vm_semantics_gate` ->
+  `R57_origin_accelerated_trace_vm_comparator_gate` ->
+  `H52_post_r55_r56_r57_origin_mechanism_decision_packet`;
+- blocked future storage:
+  `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`,
+  `R53_origin_transformed_executor_entry_gate`, and
+  `R54_origin_trainable_executor_comparator_gate`.
 
 Immediate active wave:
 
-`H50_post_r51_r52_scope_decision_packet` is now the current active docs-only
-packet. It reads positive `R51` plus negative `R52` together, selects
-`stop_as_exact_without_system_value`, restores
-`no_active_downstream_runtime_lane`, and keeps
-`F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
-non-selected and inactive.
-`F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the
-completed post-`H49` planning bundle. Its fixed sequence has now fully
-landed: `R51_origin_memory_control_surface_sufficiency_gate` completed with
-`memory_control_surface_supported_narrowly`, `R52_origin_internal_vs_external_executor_value_gate`
-completed with `internal_route_lacks_bounded_value`, and
-`H50_post_r51_r52_scope_decision_packet` completed as the explicit closeout.
-`P36_post_h49_cleanline_hygiene_and_artifact_policy` is the current
-low-priority operational/docs wave. It records that dirty root `main` remains
-quarantined, that clean descendant worktrees are the only scientific
-execution surfaces for this wave, that raw probe/per-read dumps remain out of
-git by default, and that merge back to `main` remains non-executed during the
-completed `F26 -> R51 -> R52 -> H50` sequence.
-`P35_post_h47_research_record_rollup` is now the preserved prior low-priority
-wave, while `P31/P32/P33/P34` remain preserved prior helper refresh packets.
+`F28_post_h50_origin_mechanism_reentry_bundle` is now the current planning
+bundle. It preserves negative `H50`, rewrites the active claim surface around
+the narrower mechanism chain, fixes `H51` as the only follow-up packet, fixes
+`R55` as the only next runtime candidate, and keeps `R56/R57/H52` as the only
+later exact sequence.
 
-## Current Facts
+`H51_post_h50_origin_mechanism_reentry_packet` is now the current active
+docs-only decision packet. It selects
+`authorize_origin_mechanism_reentry_through_r55_first`, keeps `H50` visible
+as the preserved prior broader-route closeout, preserves `H43` as the
+paper-grade endpoint, and does not reactivate `F27`.
 
-- `wip/h41-r43-mainline` remains the clean scientific source branch for the
-  current aggressive long-arc line.
-- `wip/h41-r43-mainline` is synced to `origin/wip/h41-r43-mainline`.
-- `wip/h40-r42-exec` remains the preserved activation branch that landed the
-  `H40 -> R42` wave.
-- `wip/p27-promotion-merge` is the clean explicit merge packet branch.
-- `wip/r45-dualmode-model` remains a clean parallel worktree for model-lane
-  follow-up.
-- `wip/h42-route-selection` is the clean preserved route-selection packet branch.
-- `wip/r44-useful-case-gate` is the clean restricted useful-case execution branch.
-- `wip/h43-r44-refreeze` is the clean post-`R44` refreeze packet branch.
-- `wip/f21-h44-post-h43-route` is the clean post-`H43` reentry control branch.
-- `wip/r46-useful-case-surface-generalization` is the clean post-`H44`
-  held-out useful-case surface-generalization branch.
-- `wip/r48-origin-dual-mode-useful-case-model` is the clean post-`H46`
-  comparator-only useful-case model branch.
-- `wip/p28-h43-publication-sync` is the clean post-`H43` publication/control
-  sync branch.
-- `wip/p29-h43-release-audit-refresh` is the clean post-`H43`
-  release/public audit refresh branch.
-- `wip/p30-h43-manuscript-refresh` is the clean completed prior post-`H43`
-  manuscript-surface refresh branch.
-- `wip/p31-h43-blog-guardrails-refresh` is the clean post-`H43`
-  blocked-blog/helper guardrail refresh branch.
-- `wip/p32-h43-historical-wording-refresh` is the clean completed auxiliary
-  post-`H43` historical/regeneration wording refresh branch.
-- `wip/p33-h43-dormant-playbook-wording-refresh` is the clean completed
-  auxiliary post-`H43` dormant-playbook wording refresh branch.
-- `wip/p34-h43-wording-guardrail-lint` is the clean completed auxiliary
-  post-`H43` live-surface wording guardrail branch.
-- `wip/p35-f23-post-h47-mainline-extension` is the clean post-`H47`
-  extension branch for the current low-priority rollup plus next numeric
-  planning wave.
-- `wip/f26-h50-post-h49-next-wave` is the clean parent control branch for the
-  landed `F26 -> R51 -> R52 -> H50` wave.
-- `wip/f26-h50-post-h49-next-wave` is synced to
-  `origin/wip/f26-h50-post-h49-next-wave`.
-- `wip/r51-post-h49-memory-control-sufficiency` is the clean post-`H49`
-  runtime/comparator execution branch for landed `R51/R52`.
-- `wip/r51-post-h49-memory-control-sufficiency` is synced to
-  `origin/wip/r51-post-h49-memory-control-sufficiency`.
-- dirty `main` remains untouched by design in this wave.
-- `P27` records `promotion_mode = explicit_merge_wave`,
-  `merge_recommended = false`, and `merge_executed = false`.
-- `H36` still preserves
-  `bounded_scalar_family_refrozen_narrowly`.
-- `H40` remains the preserved prior activation packet that selected
-  `authorize_r42_origin_append_only_memory_retrieval_contract_gate`.
-- `R42` returns `keep_semantic_boundary_route` on `6` fixed tasks and `65`
-  exact observations, including `1` duplicate/tie maximizer case and `3`
-  default-row hits.
-- `R43` returns `keep_semantic_boundary_route` on `5` fixed families, with
-  `5/5` exact families, `4/4` exact core families, and the gated optional
-  call/return family also exact.
-- `R45` returns
-  `coequal_model_lane_supported_without_replacing_exact` with `2/2` exact
-  model modes and `10/10` exact family-mode rows.
-- `F20` records
-  `coequal_mainline_exact_non_substitutive`
-  and the admitted dual model implementations
-  `compiled_weight_executor` and `trainable_2d_executor`.
-- `H41` selects
-  `authorize_r43_exact_mainline_and_coequal_r45_model_lane`.
-- `H42` selects
-  `authorize_r44_origin_restricted_wasm_useful_case_execution_gate`.
-- `R44` returns `useful_case_surface_supported_narrowly` on the fixed
-  `3/3` kernel ladder and exceeds article-level substrate evidence narrowly.
-- `H43` selects `freeze_r44_as_narrow_supported_here`.
-- `H43` records `next_required_lane = no_active_downstream_runtime_lane`.
-- `R46` returns `surface_generalizes_narrowly` on `8/8` held-out in-surface
-  variants across the fixed `3/3` useful-case kernels.
-- `R46` records `next_required_lane = h45_post_r46_surface_decision_packet`.
-- `R47` returns `restricted_frontend_supported_narrowly` on `8/8` held-out
-  useful-case variants across the fixed `3/3` kernel ladder and keeps
-  `translation_identity_exact_count = 8`.
-- `R48` returns
-  `useful_case_model_lane_supported_without_replacing_exact` with `2/2`
-  admitted modes exact on the preserved `8/8` useful-case variants, while the
-  trainable mode also stays exact on the explicit held-out `histogram16_u8`
-  family (`3/3`).
-- `R49` returns `numeric_scaling_survives_through_bucket_c` with `9/9`
-  widened variants exact across the fixed `3/3` useful-case kernels, `30`
-  precision rows exported, `7/9` `float32_single_head` failures by
-  `tie_collapse`, and both admitted float32 recovery regimes exact on
-  `bucket_a`, `bucket_b`, and `bucket_c`.
+`P37_post_h50_narrow_executor_closeout_sync` is now the current low-priority
+operational/docs wave. It records the clean control worktree, descendant
+execution worktrees, out-of-git policy for row dumps and artifacts above
+roughly `10 MiB`, and explicit no-merge posture for this wave.
 
 ## Immediate Objectives
 
-1. Preserve `H50` as the current active docs-only decision packet.
-2. Preserve `H49` as the preserved prior docs-only decision packet and `H48`
-   as the preserved earlier docs-only decision packet.
-3. Preserve `H43` as the current paper-grade endpoint and `H36` as the
-   routing/refreeze packet underneath the stack.
-4. Treat completed `R51` as narrow substrate-sufficiency evidence only, not
-   as authorization to widen scope.
-5. Treat completed `R52` as the bounded value falsifier that closes the
-   post-`H49` route negatively.
-6. Keep `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
-   blocked and non-selected after negative `H50`.
-7. Keep `no_active_downstream_runtime_lane` restored after landed `H50`.
-8. Preserve completed `R47` as the decisive exact frontend bridge gate.
-9. Preserve completed `R48` as comparator-only, non-substitutive useful-case
-   model evidence.
-10. Preserve completed `R50` as restricted tiny-`C` evidence only, not as
-    widening authorization.
-11. Keep `F22` current as the comparator-planning bundle, not as substitute
-    evidence.
-12. Preserve completed `P27` as the operational merge packet without merging
-    `main`.
-13. Keep `P36` as the current low-priority operational/docs wave and `P35` as
-    the preserved prior low-priority wave while `P31/P32/P33/P34` remain
-    preserved prior helper refresh packets.
-14. Keep `R41` deferred until later explicit contradiction routing.
-15. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
-    frontier widening by momentum.
-16. Keep release/public audit surfaces downstream of `H43` without changing
-    the scientific stage driver.
-17. Preserve `F23` as the current saved post-`H47` numeric-scaling planning
-    bundle and keep `F24_post_h47_hybrid_executor_growth_bundle` dormant.
-18. Treat `F25_post_h48_restricted_tinyc_lowering_bundle` as the completed
-    current post-`H48` planning bundle rather than as pending future work.
+1. Preserve `H50` as a landed broader-route bounded-value falsifier.
+2. Preserve `H43` as the paper-grade endpoint.
+3. Preserve `H36` as the routing/refreeze packet underneath the current stack.
+4. Keep `R55` as the only next runtime candidate.
+5. Keep `R56` and `R57` conditional on positive exact earlier gates only.
+6. Keep `H52` as the only saved closeout packet for this mechanism lane.
+7. Keep `F27`, `R53`, and `R54` blocked.
+8. Keep dirty root `main` out of scope for scientific execution.
+9. Keep raw row dumps and artifacts above roughly `10 MiB` out of git by
+   default.
+10. Prefer exact equivalence and clear falsifiers over broader demos.
 
-## Last Completed Order
+## Current Order
 
-Immediate completed order:
+Immediate forward order:
 
-`P16_h25_commit_hygiene_and_clean_worktree_promotion` ->
-clean-worktree `R32_d0_family_local_boundary_sharp_zoom` ->
-`H26_refreeze_after_r32_boundary_sharp_zoom` ->
-clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
-`H27_refreeze_after_r32_r33_same_endpoint_decision` ->
-`H28_post_h27_origin_core_reanchor_packet` ->
-`R34_origin_retrieval_primitive_contract_gate` ->
-`R35_origin_append_only_stack_vm_execution_gate` ->
-`H29_refreeze_after_r34_r35_origin_core_gate` ->
-`R36_origin_long_horizon_precision_scaling_gate` ->
-`R37_origin_compiler_boundary_gate` ->
-`H30_post_r36_r37_scope_decision_packet` ->
-`H31_post_h30_later_explicit_boundary_decision_packet` ->
-`R38_origin_compiler_control_surface_extension_gate` ->
-`H32_post_r38_compiled_boundary_refreeze` ->
-`H33_post_h32_conditional_next_question_packet` ->
-`R39_origin_compiler_control_surface_dependency_audit` ->
-`H34_post_r39_later_explicit_scope_decision_packet` ->
-`H35_post_p23_bounded_scalar_family_runtime_decision_packet` ->
-`R40_origin_bounded_scalar_locals_and_flags_gate` ->
-`H36_post_r40_bounded_scalar_family_refreeze` ->
-`P25_post_h36_clean_promotion_prep` ->
-`F15_post_h36_origin_goal_reanchor_bundle` ->
-`H37_post_h36_runtime_relevance_decision_packet` ->
-`F16_post_h37_r41_candidate_isolation_bundle` ->
-`H38_post_f16_runtime_relevance_reopen_decision_packet` ->
-`P26_post_h37_promotion_and_artifact_hygiene_audit` ->
-`F17_post_h38_same_substrate_exit_criteria_bundle` ->
-`F18_post_h38_origin_core_long_arc_bundle` ->
-`F19_post_f18_restricted_wasm_useful_case_roadmap` ->
-`H40_post_h38_semantic_boundary_activation_packet` ->
-`R42_origin_append_only_memory_retrieval_contract_gate` ->
-`F20_post_r42_dual_mode_model_mainline_bundle` ->
-`H41_post_r42_aggressive_long_arc_decision_packet` ->
-`P27_post_h41_clean_promotion_and_explicit_merge_packet` ->
-`R43_origin_bounded_memory_small_vm_execution_gate` ->
-`R45_origin_dual_mode_model_mainline_gate` ->
-`H42_post_r43_route_selection_packet` ->
-`R44_origin_restricted_wasm_useful_case_execution_gate` ->
-`H43_post_r44_useful_case_refreeze` ->
-`F21_post_h43_exact_useful_case_expansion_bundle` ->
-`H44_post_h43_route_reauthorization_packet` ->
-`R46_origin_useful_case_surface_generalization_gate` ->
-`H45_post_r46_surface_decision_packet` ->
-`R47_origin_restricted_frontend_translation_gate` ->
-`H46_post_r47_frontend_bridge_decision_packet` ->
-`R48_origin_dual_mode_useful_case_model_gate` ->
-`H47_post_r48_useful_case_bridge_refreeze` ->
-`P35_post_h47_research_record_rollup` ->
-`F23_post_h47_numeric_scaling_bundle` ->
-`R49_origin_useful_case_numeric_scaling_gate` ->
-`H48_post_r49_numeric_scaling_decision_packet` ->
-`F25_post_h48_restricted_tinyc_lowering_bundle` ->
-`R50_origin_restricted_tinyc_lowering_gate` ->
-`H49_post_r50_tinyc_lowering_decision_packet` ->
-`F26_post_h49_origin_claim_delta_and_next_question_bundle` ->
-`P36_post_h49_cleanline_hygiene_and_artifact_policy` ->
-`R51_origin_memory_control_surface_sufficiency_gate` ->
-`R52_origin_internal_vs_external_executor_value_gate` ->
-`H50_post_r51_r52_scope_decision_packet`
+`F28_post_h50_origin_mechanism_reentry_bundle` ->
+`H51_post_h50_origin_mechanism_reentry_packet` ->
+`R55_origin_2d_hardmax_retrieval_equivalence_gate` ->
+`R56_origin_append_only_trace_vm_semantics_gate` ->
+`R57_origin_accelerated_trace_vm_comparator_gate` ->
+`H52_post_r55_r56_r57_origin_mechanism_decision_packet`
+
+Low-priority sidecar:
+
+`P37_post_h50_narrow_executor_closeout_sync`
 
 ## Current Rule
 
-- `H50` is the current active docs-only packet.
-- `H49` is the preserved prior docs-only decision packet.
-- `H48` is the preserved earlier docs-only decision packet.
-- `H47` is the preserved earlier docs-only decision packet.
-- `H46` is the preserved earlier docs-only decision packet before that.
-- `H45` is the preserved earlier docs-only decision packet.
-- `H44` is the preserved prior docs-only route packet.
-- `H43` is the preserved prior useful-case refreeze packet and current
-  paper-grade endpoint.
-- `H42` is the preserved earlier docs-only packet.
-- `H41` is the preserved earlier docs-only packet.
-- `H36` remains the routing/refreeze packet underneath it.
-- `R42` is a completed gate that justifies exact `R43`, but does not itself
-  count as bounded-memory small-VM execution evidence.
-- `F20` is the current model-mainline bundle and keeps model evidence
-  non-substitutive relative to exact `R43`.
-- `F21` is the current exact-first post-`H43` planning bundle.
-- `P27` is the completed operational explicit merge packet and keeps
-  `merge_executed = false`.
-- `P35` is the preserved prior low-priority operational/docs wave and does not
-  change the active scientific stage.
-- `P31`, `P32`, `P33`, and `P34` are completed prior helper refresh packets
-  underneath prior `P35`.
-- `P30` is the completed prior manuscript-surface refresh wave.
-- `P29` is the completed earlier prior release/public audit refresh wave.
-- `P28` is the completed earlier publication/control sync wave.
-- `P26` remains the preserved prior audit-only operational lane.
-- `R41` stays deferred until a later contradiction packet.
-- `R43` is the completed current exact gate.
-- `R44` is the completed current restricted useful-case gate.
-- `R45` is the completed current coequal model lane.
-- `R46` is the completed preserved prior post-`H44` exact runtime gate.
-- `R47` is the completed current exact frontend bridge gate.
-- `R48` is the completed current comparator-only useful-case model gate.
-- `F25_post_h48_restricted_tinyc_lowering_bundle` is the completed current
-  post-`H48` planning bundle.
-- `R50_origin_restricted_tinyc_lowering_gate` is the completed preserved prior
-  restricted tiny-`C` lowering gate.
-- `H49_post_r50_tinyc_lowering_decision_packet` is now the preserved prior
-  docs-only interpretation packet and restores
-  `no_active_downstream_runtime_lane`.
-- `F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the
-  completed post-`H49` planning bundle fixing only `R51`, `R52`, and `H50`.
-- `P36_post_h49_cleanline_hygiene_and_artifact_policy` is now the current
-  low-priority operational/docs wave.
-- `R51_origin_memory_control_surface_sufficiency_gate` is now the completed
-  post-`H49` runtime sufficiency gate.
-- `R52_origin_internal_vs_external_executor_value_gate` is now the completed
-  post-`H49` comparator/value gate.
-- `H50_post_r51_r52_scope_decision_packet` is now the current active
-  docs-only interpretation packet and selects
-  `stop_as_exact_without_system_value`.
-- `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle` is
-  saved only, blocked, and non-selected after negative `H50`.
-- `F22` is the current comparator-planning bundle.
-- `F23` is the current post-`H47` numeric-scaling planning bundle.
-- `R49` is the completed current numeric-scaling gate.
+- `H51` is the current active docs-only packet.
+- `H50` is preserved prior closeout and remains scientifically binding.
+- `F28` is the current planning bundle.
+- `P37` is the current low-priority operational/docs wave.
+- `R55` is the only next runtime candidate.
+- `R56` and `R57` remain future gates only.
+- `H52` remains the only saved closeout packet for this lane.
+- `F27`, `R53`, and `R54` remain blocked.
+- no merge back to `main` occurs during this wave.
 
 ## Control References
 
 - `docs/publication_record/current_stage_driver.md`
-- `docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`
-- `docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md`
-- `docs/plans/2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md`
-- `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md`
-- `docs/plans/2026-03-24-post-r42-aggressive-long-arc-master-plan.md`
-- `docs/plans/2026-03-24-post-r42-f20-h41-control-override-design.md`
-- `docs/plans/2026-03-24-post-h41-p27-explicit-merge-wave-design.md`
-- `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
-- `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
-- `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
-- `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
-- `docs/plans/2026-03-24-post-h49-origin-core-next-wave-design.md`
-- `docs/plans/2026-03-24-post-r50-h49-tinyc-lowering-decision-design.md`
-- `docs/plans/2026-03-24-post-r47-h46-frontend-bridge-decision-design.md`
-- `docs/plans/2026-03-24-post-h46-r48-dual-mode-useful-case-model-design.md`
-- `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`
-- `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md`
-- `docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md`
-- `docs/plans/2026-03-24-post-h43-p34-live-surface-wording-guardrail-design.md`
-- `docs/plans/2026-03-24-post-h43-p30-manuscript-surface-refresh-design.md`
-- `docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md`
-- `docs/plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
-- `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
-- `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
-- `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
-- `docs/milestones/F21_post_h43_exact_useful_case_expansion_bundle/`
-- `docs/milestones/H44_post_h43_route_reauthorization_packet/`
-- `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/`
-- `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
-- `docs/milestones/H40_post_h38_semantic_boundary_activation_packet/`
-- `docs/milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
-- `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/`
-- `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
-- `docs/milestones/H42_post_r43_route_selection_packet/`
-- `docs/milestones/H43_post_r44_useful_case_refreeze/`
-- `docs/milestones/R46_origin_useful_case_surface_generalization_gate/`
-- `docs/milestones/H45_post_r46_surface_decision_packet/`
-- `docs/milestones/R47_origin_restricted_frontend_translation_gate/`
-- `docs/milestones/H46_post_r47_frontend_bridge_decision_packet/`
-- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/`
-- `docs/milestones/H47_post_r48_useful_case_bridge_refreeze/`
-- `docs/milestones/P35_post_h47_research_record_rollup/`
-- `docs/milestones/F23_post_h47_numeric_scaling_bundle/`
-- `docs/milestones/P31_post_h43_blog_guardrails_refresh/`
-- `docs/milestones/P32_post_h43_historical_wording_refresh/`
-- `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/`
-- `docs/milestones/P34_post_h43_live_surface_wording_guardrail/`
-- `docs/milestones/P30_post_h43_manuscript_surface_refresh/`
-- `docs/milestones/P29_post_h43_release_audit_refresh/`
-- `docs/milestones/P28_post_h43_publication_surface_sync/`
-- `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
-- `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json`
-- `results/F21_post_h43_exact_useful_case_expansion_bundle/summary.json`
-- `results/H44_post_h43_route_reauthorization_packet/summary.json`
-- `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`
-- `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
-- `results/H42_post_r43_route_selection_packet/summary.json`
-- `results/H43_post_r44_useful_case_refreeze/summary.json`
-- `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
-- `results/R47_origin_restricted_frontend_translation_gate/summary.json`
-- `results/H46_post_r47_frontend_bridge_decision_packet/summary.json`
-- `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`
-- `results/F26_post_h49_origin_claim_delta_and_next_question_bundle/summary.json`
-- `results/P36_post_h49_cleanline_hygiene_and_artifact_policy/summary.json`
-- `results/R51_origin_memory_control_surface_sufficiency_gate/summary.json`
-- `results/R52_origin_internal_vs_external_executor_value_gate/summary.json`
+- `docs/plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
+- `docs/milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
+- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/`
+- `docs/milestones/P37_post_h50_narrow_executor_closeout_sync/`
+- `docs/milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/`
+- `docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/`
+- `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/`
+- `docs/milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json`
-- `results/P35_post_h47_research_record_rollup/summary.json`
-- `results/F23_post_h47_numeric_scaling_bundle/summary.json`
-- `results/P31_post_h43_blog_guardrails_refresh/summary.json`
-- `results/P32_post_h43_historical_wording_refresh/summary.json`
-- `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json`
-- `results/P34_post_h43_live_surface_wording_guardrail/summary.json`
-- `results/P30_post_h43_manuscript_surface_refresh/summary.json`
-- `results/P29_post_h43_release_audit_refresh/summary.json`
-- `results/P28_post_h43_publication_surface_sync/summary.json`
-- `results/R45_origin_dual_mode_model_mainline_gate/summary.json`
-- `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
-- `results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json`
-- `results/H40_post_h38_semantic_boundary_activation_packet/summary.json`
-- `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
-- `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
-- `results/H36_post_r40_bounded_scalar_family_refreeze/summary.json`
+- `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
+- `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
+- `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
