@@ -17,6 +17,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   execution design surface for the landed docs-only `H45` interpretation
   packet that reads completed `R46`, authorizes exactly `R47`, keeps `F22`
   blocked, and keeps `R48` deferred behind later explicit `H46`.
+- `2026-03-24-post-h45-r47-restricted-frontend-translation-design.md` — the
+  current execution design surface for the landed `R47` restricted frontend
+  bridge that lowers one structured `i32` / static-memory frontend onto the
+  existing useful-case kernels exactly and hands interpretation to `H46`.
 - `2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md` —
   the preserved prior execution design surface for the landed post-`H44`
   exact held-out useful-case surface-generalization gate and the `H45`
@@ -148,8 +152,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F22_post_r46_useful_case_model_bridge_bundle/` — saved
   blocked comparator bundle downstream of exact frontend evidence plus later
   explicit `H46`.
-- `../milestones/R47_origin_restricted_frontend_translation_gate/` — next
-  authorized exact frontend bridge lane.
+- `../milestones/R47_origin_restricted_frontend_translation_gate/` —
+  completed current exact frontend bridge lane that now hands off to `H46`.
 - `../milestones/P32_post_h43_historical_wording_refresh/` — completed
   auxiliary historical/regeneration wording refresh packet that keeps `P31`
   current while refreshing preserved `H0/P3` regeneration-facing wording.

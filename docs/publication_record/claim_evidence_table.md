@@ -237,7 +237,11 @@
 - `R46` is the completed preserved prior post-`H44` exact runtime gate on
   held-out in-surface useful-case variants; it keeps `8/8` variants exact
   across the fixed `3/3` kernels and records `surface_generalizes_narrowly`.
-- `R47` is now the next authorized exact runtime candidate, while `F22`
+- `R47` is the completed current exact frontend bridge gate; it keeps `8/8`
+  held-out useful-case variants exact with instruction-identical lowering
+  across the fixed `3/3` kernels and records
+  `restricted_frontend_supported_narrowly`.
+- `H46` is now the next required docs-only interpretation packet, while `F22`
   remains saved only as a blocked comparator bundle.
 - `R44` is the completed current restricted useful-case gate on the fixed
   three-kernel ladder.

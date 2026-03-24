@@ -63,8 +63,10 @@ bundle.
 `H43` remains the current paper-grade endpoint.
 `R46_origin_useful_case_surface_generalization_gate` is now the completed
 post-`H44` exact runtime gate on the fixed held-out useful-case surface.
-`R47_origin_restricted_frontend_translation_gate` is now the next required
-exact runtime lane.
+`R47_origin_restricted_frontend_translation_gate` is now the completed current
+exact frontend bridge lane.
+`H46_post_r47_frontend_bridge_decision_packet` is now the next required
+docs-only interpretation lane.
 `F22_post_r46_useful_case_model_bridge_bundle` is saved only as a blocked
 future comparator bundle.
 `P31_post_h43_blog_guardrails_refresh` is the current low-priority
@@ -151,6 +153,9 @@ current low-priority wave.
 - `R46` returns `surface_generalizes_narrowly` on `8/8` held-out in-surface
   variants across the fixed `3/3` useful-case kernels.
 - `R46` records `next_required_lane = h45_post_r46_surface_decision_packet`.
+- `R47` returns `restricted_frontend_supported_narrowly` on `8/8` held-out
+  useful-case variants across the fixed `3/3` kernel ladder and keeps
+  `translation_identity_exact_count = 8`.
 
 ## Immediate Objectives
 
@@ -255,7 +260,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R44` is the completed current restricted useful-case gate.
 - `R45` is the completed current coequal model lane.
 - `R46` is the completed preserved prior post-`H44` exact runtime gate.
-- `R47` is the next required exact runtime gate.
+- `R47` is the completed current exact frontend bridge gate.
+- `H46` is the next required docs-only interpretation packet.
 - `F22` is saved only as a blocked future comparator bundle.
 - no active downstream runtime lane follows the paper-grade `H43` closeout.
 

@@ -7,5 +7,6 @@
   static memory only;
 - excluded features remain explicit: no heap, no alias-heavy pointers, no
   recursion, no float, no IO, and no hidden mutable state;
+- `translation_identity_match = true` on all `8/8` admitted rows;
 - outputs stay machine-readable enough for later explicit `H46` review; and
 - no broader Wasm/C, hybrid model work, or merge posture is authorized here.

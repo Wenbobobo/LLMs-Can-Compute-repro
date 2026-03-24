@@ -57,8 +57,11 @@ endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while
 preserved prior docs-only route packet, landed exact `R46` remains the
 preserved prior post-`H44` exact runtime gate that kept all `8/8` held-out
 in-surface useful-case variants exact across the fixed `3/3` kernels,
-`R47` is now the next exact runtime candidate, `F22` is saved only as a
-blocked comparator bundle, `R48` remains conditional behind later explicit
+landed exact `R47` is now the completed current restricted frontend bridge
+gate that kept all `8/8` held-out useful-case variants exact with
+instruction-identical lowering across the same fixed `3/3` kernels, `H46` is
+now the next required docs-only interpretation packet, `F22` is saved only as
+a blocked comparator bundle, `R48` remains conditional behind later explicit
 `H46`, and `P31` remains the current low-priority docs wave.
 
 The narrow current stack is:

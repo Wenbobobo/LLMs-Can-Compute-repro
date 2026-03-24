@@ -26,8 +26,9 @@ Current control docs:
   evidence/control context, treating `R39` and `R40` as completed
   same-substrate downstream evidence rather than automatic routing changes,
   recording `H45` as the current active docs-only stage, `R46` as the
-  completed preserved prior post-`H44` exact runtime gate, `R47` as the next
-  required exact runtime candidate, `F22` as a saved blocked comparator
+  completed preserved prior post-`H44` exact runtime gate, `R47` as the
+  completed current exact frontend bridge gate, `H46` as the next required
+  docs-only interpretation packet, `F22` as a saved blocked comparator
   bundle, and preserving `H43` with
   `no_active_downstream_runtime_lane` as the landed paper-grade closeout;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
@@ -687,7 +688,8 @@ Operating rule:
   completed current exact bounded-memory small-VM gate, `R44` is the completed
   current restricted useful-case gate, `R45` is the completed current coequal
   model gate, `R46` is the completed preserved prior post-`H44` exact runtime
-  gate, `R47` is the next required exact runtime candidate, `F22` is the saved
+  gate, `R47` is the completed current exact frontend bridge gate, `H46` is
+  the next required docs-only interpretation packet, `F22` is the saved
   blocked comparator bundle, `F20` is the current coequal-mainline model
   bundle, `P27` is the completed explicit merge packet with
   `merge_executed = false`, `P26` is the

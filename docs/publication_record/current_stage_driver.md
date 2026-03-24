@@ -26,9 +26,13 @@ The current completed post-`H44` exact runtime gate is:
 
 - `R46_origin_useful_case_surface_generalization_gate`
 
-The next authorized exact runtime candidate is:
+The current completed restricted frontend bridge gate is:
 
 - `R47_origin_restricted_frontend_translation_gate`
+
+The next required docs-only decision packet is:
+
+- `H46_post_r47_frontend_bridge_decision_packet`
 
 The current completed coequal model gate is:
 
@@ -147,7 +151,12 @@ above `R42`, and one completed operational merge packet:
   interpretation packet; and
 - `H45` then reads completed `R46` exactly as landed, authorizes exactly
   `R47`, saves `F22` only as a blocked future comparator bundle, and keeps
-  `R48` deferred behind later exact frontend evidence plus explicit `H46`.
+  `R48` deferred behind later exact frontend evidence plus explicit `H46`; and
+- `R47` then lowers one structured `i32` / static-memory frontend surface
+  instruction-identically onto the preserved useful-case kernels, stays exact
+  on `8/8` held-out variants across the fixed `3/3` kernel ladder, records
+  `restricted_frontend_supported_narrowly`, and fixes `H46` as the next
+  required interpretation packet.
 
 ## Current Machine-State Meaning
 
@@ -393,6 +402,15 @@ above `R42`, and one completed operational merge packet:
   `explicit_merge_packet = p27_post_h41_clean_promotion_and_explicit_merge_packet`,
   `later_explicit_packet_required_before_scope_widening = true`,
   `next_required_lane = r47_origin_restricted_frontend_translation_gate`;
+- `R47` is now complete as the current restricted frontend bridge gate:
+  `lane_verdict = restricted_frontend_supported_narrowly`,
+  `restricted_frontend_surface = structured_i32_static_memory_only`,
+  `planned_variant_count = 8`,
+  `exact_variant_count = 8`,
+  `exact_kernel_count = 3`,
+  `translation_identity_exact_count = 8`,
+  `claim_ceiling = bounded_useful_cases_only`,
+  `next_required_lane = h46_post_r47_frontend_bridge_decision_packet`;
 - claim `D` is now supported_here_narrowly on the current fixed useful-case
   ladder and remains bounded to useful kernels only;
 - `F9` remains preserved as the preferred forward semantic-boundary roadmap
@@ -594,9 +612,11 @@ The next required order is now:
   preserved prior docs-only route reauthorization packet.
 - `H45_post_r46_surface_decision_packet` is completed and remains the current
   active docs-only surface-decision packet.
+- `R47_origin_restricted_frontend_translation_gate` is completed and remains
+  the current exact frontend bridge gate.
 - `F22_post_r46_useful_case_model_bridge_bundle` remains saved and blocked.
-- `R47_origin_restricted_frontend_translation_gate` is the next required exact
-  runtime gate.
+- `H46_post_r47_frontend_bridge_decision_packet` is the next required docs-only
+  interpretation packet.
 - merge back to `main` remains unexecuted; `P27` records explicit merge
   posture only.
 - headline claims such as general LLM-computer, arbitrary `C`, or million-step
@@ -659,10 +679,11 @@ The next required order is now:
 - `R41_origin_runtime_relevance_threat_stress_audit` remains deferred.
 - `R46_origin_useful_case_surface_generalization_gate` is the completed
   preserved prior post-`H44` exact runtime gate, while
-  `R47_origin_restricted_frontend_translation_gate` is the next required exact
-  runtime lane, `F22_post_r46_useful_case_model_bridge_bundle` remains
-  blocked, and `no_active_downstream_runtime_lane` remains the landed `H43`
-  closeout.
+  `R47_origin_restricted_frontend_translation_gate` is the completed current
+  exact frontend bridge lane, `F22_post_r46_useful_case_model_bridge_bundle`
+  remains blocked, `H46_post_r47_frontend_bridge_decision_packet` is the next
+  required interpretation packet, and `no_active_downstream_runtime_lane`
+  remains the landed `H43` closeout.
 - `H34_post_r39_later_explicit_scope_decision_packet` and
   `H32_post_r38_compiled_boundary_refreeze` remain preserved earlier
   control packets.
@@ -674,7 +695,7 @@ The next required order is now:
 - `F9` remains the preferred forward semantic-boundary roadmap and `F11`
   remains new-substrate.
 - the current forward execution ladder is
-  `H45`.
+  `H45 -> R47`.
 
 ## Historical Reference
 

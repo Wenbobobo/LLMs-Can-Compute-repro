@@ -16,8 +16,10 @@
   `R43_origin_bounded_memory_small_vm_execution_gate`.
 - The current completed post-`H44` exact runtime gate is
   `R46_origin_useful_case_surface_generalization_gate`.
-- The next authorized exact runtime candidate is
+- The current completed exact frontend bridge gate is
   `R47_origin_restricted_frontend_translation_gate`.
+- The next required docs-only interpretation packet is
+  `H46_post_r47_frontend_bridge_decision_packet`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -232,6 +234,13 @@
   `F22_post_r46_useful_case_model_bridge_bundle` only as a blocked future
   comparator bundle, keeps `R48/R41` deferred behind later explicit packets,
   and keeps `merge_executed = false`.
+- `R47_origin_restricted_frontend_translation_gate` is now complete as the
+  current exact frontend bridge gate:
+  it keeps `8/8` held-out useful-case variants exact with
+  `translation_identity_exact_count = 8` across the fixed `3/3` kernels,
+  records `restricted_frontend_supported_narrowly`, routes the next
+  interpretation step through `H46_post_r47_frontend_bridge_decision_packet`,
+  and does not widen the claim ceiling beyond `bounded_useful_cases_only`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.

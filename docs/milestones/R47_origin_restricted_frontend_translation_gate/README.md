@@ -1,19 +1,26 @@
 # R47 Origin Restricted Frontend Translation Gate
 
-Authorized next exact frontend bridge gate after landed `R46` and executed
-`H45`.
+Completed exact frontend bridge gate authorized by landed `H45`.
 
-`R47` is not a new runtime stack. It is the narrowest admissible frontend
-translation bridge onto the already-landed useful-case contract:
+`R47` is not a new runtime stack. It is the narrowest admitted structured
+frontend bridge onto the already-landed useful-case contract:
 
-- restricted frontend forms lower onto the existing bytecode kernels and the
-  existing `R44/R46` exactness pipeline;
-- execution must stay exact on the same bounded useful-case contract rather
-  than introducing a new evaluator;
+- restricted frontend forms lower instruction-identically onto the existing
+  useful-case bytecode kernels;
+- execution stays exact on the same bounded useful-case contract rather than
+  introducing a new evaluator or new substrate;
 - the scope stays below heap allocation, alias-heavy pointers, recursion,
   float, IO, hidden mutable state, and any broader compiler/runtime claim.
 
-The goal is not to prove arbitrary Wasm/C. The goal is only to test whether
-one extremely narrow structured frontend can preserve the already-landed exact
-useful-case semantics closely enough to justify a later explicit `H46`
-interpretation packet.
+The landed gate records `restricted_frontend_supported_narrowly` on `8/8`
+held-out useful-case variants across the fixed `3/3` kernel ladder while
+keeping `claim_ceiling = bounded_useful_cases_only`.
+
+This wave preserves:
+
+- `H45` as the current active docs-only decision packet above the runtime lane;
+- `H44` as the preserved prior route packet;
+- `H43` as the current paper-grade endpoint;
+- `R46` as the preserved prior post-`H44` exact runtime gate;
+- `F21` as the current exact-first planning bundle; and
+- `F22` as a blocked future comparator bundle until later explicit `H46`.

@@ -14,9 +14,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 - `H45_post_r46_surface_decision_packet/` — current active docs-only
   surface-decision packet that preserves `H44/H43/H36/F20/F21/P27/R43/R44/R45`,
-  interprets completed `R46`, authorizes exactly `R47`, saves `F22` as
-  blocked comparator storage, and keeps `R48` deferred behind later explicit
-  `H46`.
+  interprets completed `R46`, preserves landed `R47` as the current exact
+  frontend bridge gate underneath it, saves `F22` as blocked comparator
+  storage, and keeps `R48` deferred behind later explicit `H46`.
 - `H44_post_h43_route_reauthorization_packet/` — preserved prior docs-only
   route reauthorization packet that preserves `H43/H42/H36/F20/P27/R43/R44/R45`,
   incorporates `F21`, and authorizes exactly `R46`.
@@ -95,8 +95,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F22_post_r46_useful_case_model_bridge_bundle/` — saved blocked
   comparator-only bundle that stays downstream of exact frontend evidence plus
   later explicit `H46`.
-- `R47_origin_restricted_frontend_translation_gate/` — next authorized exact
-  frontend bridge lane, downstream of completed `H45`.
+- `R47_origin_restricted_frontend_translation_gate/` — completed current
+  exact frontend bridge lane, downstream of completed `H45` and upstream of
+  explicit `H46`.
 - `R48_origin_dual_mode_useful_case_model_gate/` — deferred future
   comparator-only model lane on the preserved useful-case contract, blocked
   behind exact `R47` plus later explicit `H46`.
@@ -317,7 +318,8 @@ stack:
 - `R44` is the completed current restricted useful-case gate.
 - `R46` is the completed preserved prior post-`H44` exact runtime gate.
 - `F22` is a saved blocked comparator bundle, not active execution work.
-- `R47` is the next required exact runtime gate.
+- `R47` is the completed current exact frontend bridge gate.
+- `H46` is the next required docs-only interpretation packet.
 - `R48` remains deferred behind exact `R47` plus later explicit `H46`.
 - `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
