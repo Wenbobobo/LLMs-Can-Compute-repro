@@ -96,6 +96,14 @@ The blocked future trainable gate remains:
 - sidecar: `P37`
 - blocked by default: `F27`, `R53`, and `R54`
 
+## Execution Posture
+
+- The `F28/H51/R55/R56/R57/H52` mechanism wave is closed.
+- No remaining runtime gate or docs-only follow-up packet is open on this
+  branch.
+- The next meaningful action is a new explicit planning packet in a successor
+  worktree; this branch should not be extended by momentum.
+
 ## Standing Gates
 
 - `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the current

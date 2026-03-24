@@ -54,6 +54,13 @@ downstream runtime lane.
 - sidecar:
   `P37`
 
+## Execution Posture
+
+There are no remaining runtime or docs-only execution tasks on this closed
+wave. This branch is now a preserved closeout surface. The next meaningful
+step is a new explicit planning packet in a successor worktree, not more
+mechanism-wave execution on this branch.
+
 ## Current Scope
 
 The closed wave is limited to:

@@ -107,6 +107,13 @@ Low-priority sidecar:
 - `F27`, `R53`, and `R54` remain blocked.
 - no merge back to `main` occurs during this wave.
 
+## Execution Posture
+
+- This wave is already closed at `H52`.
+- No remaining runtime gate or docs-only packet is pending on this branch.
+- If later work is authorized, it must start from a new planning packet rather
+  than by extending this closed mechanism lane.
+
 ## Control References
 
 - `docs/publication_record/current_stage_driver.md`
