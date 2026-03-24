@@ -20,14 +20,18 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   planning surface for the only admissible post-`H47` runtime question,
   fixing `R49` as the only next runtime candidate while keeping `H47/H43`
   intact.
-- `2026-03-24-post-r49-h48-numeric-scaling-decision-design.md` — the current
-  docs-only decision surface that reads completed `R49`, records `H48` as the
-  active interpretation packet, and authorizes exactly `F25` as the next
-  planning-only bundle.
+- `2026-03-24-post-r49-h48-numeric-scaling-decision-design.md` — the
+  preserved prior docs-only decision surface that reads completed `R49`,
+  records landed `H48`, and authorizes exactly `F25` as the next planning-only
+  bundle.
 - `2026-03-24-post-h48-f25-restricted-tinyc-lowering-design.md` — the current
   planning surface for the only admissible post-`H48` runtime question,
   fixing `R50` as the only next runtime candidate and `H49` as the only
   follow-up packet while preserving the `R47` useful-case contract first.
+- `2026-03-24-post-r50-h49-tinyc-lowering-decision-design.md` — the current
+  docs-only decision surface that reads completed `R50`, records `H49` as the
+  active interpretation packet, freezes `R50` as narrow exact tiny-`C`
+  support only, and restores `no_active_downstream_runtime_lane`.
 - `2026-03-24-post-f25-r50-restricted-tinyc-lowering-design.md` — the current
   execution design surface for the landed `R50` restricted tiny-`C` lowering
   gate, preserving `H48/H43`, executing only the admitted single-function
@@ -181,10 +185,13 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current
   exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
   fixes `R46` as the first admissible next runtime candidate.
-- `../milestones/H48_post_r49_numeric_scaling_decision_packet/` — current
-  active docs-only interpretation packet that reads completed `R49`,
-  preserves `H43` as the paper-grade endpoint, restores
-  `no_active_downstream_runtime_lane`, and authorizes exactly `F25`.
+- `../milestones/H49_post_r50_tinyc_lowering_decision_packet/` — current
+  active docs-only interpretation packet that reads completed `R50`,
+  preserves `H43` as the paper-grade endpoint, freezes `R50` narrowly, and
+  restores `no_active_downstream_runtime_lane`.
+- `../milestones/H48_post_r49_numeric_scaling_decision_packet/` — preserved
+  prior docs-only interpretation packet that reads completed `R49`,
+  preserves `H43` as the paper-grade endpoint, and authorizes exactly `F25`.
 - `../milestones/H47_post_r48_useful_case_bridge_refreeze/` — preserved prior
   docs-only interpretation packet that freezes landed comparator-only `R48`
   narrowly before the later completed `H48` decision.
@@ -215,8 +222,8 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   current restricted tiny-`C` lowering gate downstream of completed `F25`,
   preserving `8/8` exact admitted variants across the fixed `3/3` useful-case
   kernels and fixing `H49` as the next required packet.
-- `../milestones/H49_post_r50_tinyc_lowering_decision_packet/` — next
-  required docs-only follow-up packet after completed `R50`.
+- `../milestones/H49_post_r50_tinyc_lowering_decision_packet/` — current
+  active docs-only follow-up packet after completed `R50`.
 - `../milestones/R49_origin_useful_case_numeric_scaling_gate/` — completed
   current numeric-scaling gate downstream of completed `F23` and before
   landed `H48`.

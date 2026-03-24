@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h49_docs_freeze_r50_narrowly_without_scope_widening",
+      "status": "pass",
+      "notes": "H49 must freeze positive R50 evidence narrowly, reject scope widening by momentum, and restore no active downstream runtime lane."
+    },
+    {
+      "item_id": "upstream_h48_f25_and_r50_support_the_h49_freeze",
+      "status": "pass",
+      "notes": "H49 should freeze R50 narrowly only because H48/F25 explicitly authorized it and the landed gate stayed exact on the admitted narrow surface."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h49_current_and_restore_no_active_lane",
+      "status": "pass",
+      "notes": "Shared control surfaces should make H49 current, preserve H48 as prior, and show that no downstream runtime lane remains authorized."
+    },
+    {
+      "item_id": "publication_ledgers_record_h49_as_narrow_closeout",
+      "status": "pass",
+      "notes": "Publication ledgers should reflect H49 as narrow closeout control while preserving H43 as the paper-grade endpoint."
+    }
+  ]
+}

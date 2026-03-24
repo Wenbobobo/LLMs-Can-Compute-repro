@@ -3,8 +3,8 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H48_post_r49_numeric_scaling_decision_packet`, not the preserved prior
-  `H47` packet, the preserved earlier `H46` packet, the preserved earlier `H45`
+  `H49_post_r50_tinyc_lowering_decision_packet`, not the preserved prior
+  `H48` packet, the preserved earlier `H47` packet, the preserved earlier `H46` packet, the preserved earlier `H45`
   packet, the preserved prior `H44`
   packet, the preserved prior `H43` packet, the preserved earlier `H42`
   packet, the preserved earlier `H41` packet, the preserved prior `H40`
@@ -24,14 +24,14 @@
   `R48_origin_dual_mode_useful_case_model_gate`.
 - The current completed numeric-scaling gate is
   `R49_origin_useful_case_numeric_scaling_gate`.
-- The current downstream scientific lane after `H48` is
-  `R50_origin_restricted_tinyc_lowering_gate`.
+- The current downstream scientific lane after `H49` is
+  `no_active_downstream_runtime_lane`.
 - `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current post-`H48`
   planning bundle.
 - `R50_origin_restricted_tinyc_lowering_gate` is now the completed current
   restricted tiny-`C` lowering gate fixed by `F25`.
-- `H49_post_r50_tinyc_lowering_decision_packet` is now the only next required
-  follow-up packet after completed `R50`.
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the current active
+  docs-only closeout packet after completed `R50`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -292,7 +292,7 @@
   ceilings bounded to useful cases only, and records the narrow comparator-only
   bridge state passed to `H48`.
 - `H48_post_r49_numeric_scaling_decision_packet` is now complete as the
-  current active docs-only numeric-scaling decision packet:
+  preserved prior docs-only numeric-scaling decision packet:
   it preserves `H47` as the preserved prior docs-only packet, preserves `H43`
   as the current paper-grade endpoint, records `R49` as the completed current
   numeric-scaling gate, selects
@@ -300,6 +300,15 @@
   `freeze_post_h47_as_practical_falsifier_for_clean_widening` non-selected,
   restores `no_active_downstream_runtime_lane`, and sets
   `next_required_lane = f25_post_h48_restricted_tinyc_lowering_bundle`.
+- `H49_post_r50_tinyc_lowering_decision_packet` is now complete as the
+  current active docs-only tiny-`C` lowering decision packet:
+  it preserves `H48` as the preserved prior docs-only packet, preserves `H43`
+  as the current paper-grade endpoint, records `R50` as the completed current
+  restricted tiny-`C` lowering gate, selects
+  `freeze_r50_as_narrow_exact_tinyc_support_only`, leaves
+  `treat_r50_as_scope_widening_authorization` non-selected, restores
+  `no_active_downstream_runtime_lane`, and sets
+  `next_required_lane = no_active_downstream_runtime_lane`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
@@ -544,9 +553,9 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H48_post_r49_numeric_scaling_decision_packet` under
+  `H49_post_r50_tinyc_lowering_decision_packet` under
   `docs/publication_record/current_stage_driver.md`, with
-  preserved prior docs-only packets `H47/H46/H45/H44/H43/H42/H41/H40/H38/H37`,
+  preserved prior docs-only packets `H48/H47/H46/H45/H44/H43/H42/H41/H40/H38/H37`,
   preserved active routing/refreeze packet
   `H36_post_r40_bounded_scalar_family_refreeze`, completed current
   `R42/R43/R44/R45` semantic-boundary gate stack, current coequal-mainline
@@ -555,7 +564,7 @@
   gate `R47`, completed current comparator-only useful-case model gate `R48`,
   completed current numeric-scaling gate `R49`, completed current post-`H48`
   planning bundle `F25`, completed current restricted tiny-`C` lowering gate
-  `R50`, only next required follow-up packet `H49`,
+  `R50`, and no active downstream runtime lane after landed `H49`,
   completed explicit merge packet `P27`, completed prior
   low-priority sync packets `P30/P29/P28`, current low-priority operational
   rollup wave `P35`, completed prior blocked-blog/helper guardrail refresh
@@ -587,15 +596,12 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H48` is the current
-   active docs-only packet, `H47` is the preserved prior docs-only decision
+   `tmp/active_wave_plan.md` aligned on the rule that `H49` is the current
+   active docs-only packet, `H48` is the preserved prior docs-only decision
    packet, `H43` remains the current paper-grade endpoint,
-   `R49_origin_useful_case_numeric_scaling_gate` is the completed current
-   numeric-scaling gate, `F25_post_h48_restricted_tinyc_lowering_bundle` is the
-   completed current post-`H48` planning bundle,
-   `R50_origin_restricted_tinyc_lowering_gate` is the completed current active
-   runtime lane, and `H49_post_r50_tinyc_lowering_decision_packet` is the only
-   next required follow-up packet.
+   `R50_origin_restricted_tinyc_lowering_gate` is the completed current
+   restricted tiny-`C` lowering gate, and
+   `next_required_lane = no_active_downstream_runtime_lane`.
 2. Treat `R48_origin_dual_mode_useful_case_model_gate` as narrow comparator-
    only evidence on the preserved useful-case contract: exact evidence remains
    decisive, broader Wasm/C remains unauthorized, and model positives do not

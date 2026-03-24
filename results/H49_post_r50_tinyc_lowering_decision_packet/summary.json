@@ -1,0 +1,40 @@
+{
+  "experiment": "h49_post_r50_tinyc_lowering_decision_packet",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p35-f23-post-h47-mainline-extension\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p35-f23-post-h47-mainline-extension\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "active_stage": "h49_post_r50_tinyc_lowering_decision_packet",
+    "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "preserved_prior_docs_only_decision_packet": "h48_post_r49_numeric_scaling_decision_packet",
+    "preserved_earlier_docs_only_decision_packet": "h47_post_r48_useful_case_bridge_refreeze",
+    "current_exact_first_planning_bundle": "f23_post_h47_numeric_scaling_bundle",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "selected_outcome": "freeze_r50_as_narrow_exact_tinyc_support_only",
+    "current_completed_numeric_scaling_gate": "r49_origin_useful_case_numeric_scaling_gate",
+    "current_completed_post_h48_planning_bundle": "f25_post_h48_restricted_tinyc_lowering_bundle",
+    "current_completed_tinyc_lowering_gate": "r50_origin_restricted_tinyc_lowering_gate",
+    "current_low_priority_wave": "p35_post_h47_research_record_rollup",
+    "snapshot_surface_count": 8,
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "next_required_lane": "no_active_downstream_runtime_lane"
+  }
+}

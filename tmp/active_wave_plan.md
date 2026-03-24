@@ -5,10 +5,12 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
-  `H48_post_r49_numeric_scaling_decision_packet`;
+  `H49_post_r50_tinyc_lowering_decision_packet`;
 - preserved prior docs-only decision packet:
-  `H47_post_r48_useful_case_bridge_refreeze`;
+  `H48_post_r49_numeric_scaling_decision_packet`;
 - preserved earlier docs-only decision packet:
+  `H47_post_r48_useful_case_bridge_refreeze`;
+- preserved earlier docs-only decision packet before that:
   `H46_post_r47_frontend_bridge_decision_packet`;
 - preserved prior docs-only route packet:
   `H44_post_h43_route_reauthorization_packet`;
@@ -29,14 +31,14 @@ Current scientific/control stack:
 - current completed comparator-only useful-case model gate:
   `R48_origin_dual_mode_useful_case_model_gate`;
 - current downstream scientific lane:
-  `R50_origin_restricted_tinyc_lowering_gate`;
+  `no_active_downstream_runtime_lane`;
 - current completed numeric-scaling gate:
   `R49_origin_useful_case_numeric_scaling_gate`;
 - current post-`H48` planning bundle:
   `F25_post_h48_restricted_tinyc_lowering_bundle`;
 - current completed restricted tiny-`C` lowering gate:
   `R50_origin_restricted_tinyc_lowering_gate`;
-- next required follow-up packet after `R50`:
+- current active docs-only closeout after `R50`:
   `H49_post_r50_tinyc_lowering_decision_packet`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
@@ -80,18 +82,21 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H48_post_r49_numeric_scaling_decision_packet` remains the current active
-docs-only numeric-scaling decision packet.
+`H49_post_r50_tinyc_lowering_decision_packet` is now the current active
+docs-only tiny-`C` lowering decision packet.
+`H48_post_r49_numeric_scaling_decision_packet` is the preserved prior
+docs-only decision packet.
+`H47_post_r48_useful_case_bridge_refreeze` is the preserved earlier docs-only
+decision packet.
 `F25_post_h48_restricted_tinyc_lowering_bundle` remains the completed current
 post-`H48` planning bundle.
 `R50_origin_restricted_tinyc_lowering_gate` is now the completed current
 restricted tiny-`C` lowering gate, and it starts from the preserved `R47`
 `8/8` useful-case variants across the fixed `3/3` kernel ladder before any
 later packet considers broader wording.
-`H49_post_r50_tinyc_lowering_decision_packet` is now the only next required
-follow-up packet.
-`H47_post_r48_useful_case_bridge_refreeze` is the preserved prior docs-only
-decision packet.
+`H49_post_r50_tinyc_lowering_decision_packet` selects
+`freeze_r50_as_narrow_exact_tinyc_support_only` and restores
+`no_active_downstream_runtime_lane`.
 `H46_post_r47_frontend_bridge_decision_packet` is the preserved earlier
 docs-only decision packet.
 `H45_post_r46_surface_decision_packet` is the preserved earlier docs-only
@@ -124,8 +129,9 @@ restricted tiny-`C` lowering gate. It records
 `restricted_tinyc_lowering_supported_narrowly`, keeps `8/8` admitted variants
 exact across the fixed `3/3` kernels, and preserves
 `translation_identity_exact_count = 8`.
-`H49_post_r50_tinyc_lowering_decision_packet` is the only next required
-follow-up packet.
+`H49_post_r50_tinyc_lowering_decision_packet` is now the current active
+docs-only closeout packet and restores
+`no_active_downstream_runtime_lane`.
 `P36_post_h48_falsification_closeout_bundle` remains the explicit non-selected
 closeout bundle.
 `P35_post_h47_research_record_rollup` is the current low-priority
@@ -218,13 +224,15 @@ the current low-priority wave.
 
 ## Immediate Objectives
 
-1. Preserve `H48` as the current active docs-only decision packet.
-2. Preserve `H47` as the preserved prior docs-only decision packet.
+1. Preserve `H49` as the current active docs-only decision packet.
+2. Preserve `H48` as the preserved prior docs-only decision packet.
 3. Preserve `H43` as the current paper-grade endpoint and `H36` as the
    routing/refreeze packet underneath the stack.
 4. Preserve completed `R47` as the decisive exact frontend bridge gate.
 5. Preserve completed `R48` as comparator-only, non-substitutive useful-case
    model evidence.
+6. Preserve completed `R50` as restricted tiny-`C` evidence only and restore
+   `no_active_downstream_runtime_lane`.
 6. Treat `H47` as the explicit narrow refreeze packet rather than widening by
    momentum.
 7. Keep `F22` current as the comparator-planning bundle, not as substitute
@@ -248,9 +256,11 @@ the current low-priority wave.
 16. Treat `F25_post_h48_restricted_tinyc_lowering_bundle` as the completed
     current post-`H48` planning bundle rather than as pending future work.
 17. Treat `R50_origin_restricted_tinyc_lowering_gate` as the completed current
-    restricted tiny-`C` lowering lane waiting only for explicit `H49`
-    interpretation.
-18. Keep `P36_post_h48_falsification_closeout_bundle` as the explicit
+    restricted tiny-`C` lowering gate interpreted by landed `H49`.
+18. Treat `H49_post_r50_tinyc_lowering_decision_packet` as the current active
+    docs-only closeout packet and restore
+    `no_active_downstream_runtime_lane`.
+19. Keep `P36_post_h48_falsification_closeout_bundle` as the explicit
     non-selected closeout route.
 
 ## Last Completed Order
@@ -310,13 +320,15 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R49_origin_useful_case_numeric_scaling_gate` ->
 `H48_post_r49_numeric_scaling_decision_packet` ->
 `F25_post_h48_restricted_tinyc_lowering_bundle` ->
-`R50_origin_restricted_tinyc_lowering_gate`
+`R50_origin_restricted_tinyc_lowering_gate` ->
+`H49_post_r50_tinyc_lowering_decision_packet`
 
 ## Current Rule
 
-- `H48` is the current active docs-only packet.
-- `H47` is the preserved prior docs-only decision packet.
-- `H46` is the preserved earlier docs-only decision packet.
+- `H49` is the current active docs-only packet.
+- `H48` is the preserved prior docs-only decision packet.
+- `H47` is the preserved earlier docs-only decision packet.
+- `H46` is the preserved earlier docs-only decision packet before that.
 - `H45` is the preserved earlier docs-only decision packet.
 - `H44` is the preserved prior docs-only route packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
@@ -350,8 +362,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
   post-`H48` planning bundle.
 - `R50_origin_restricted_tinyc_lowering_gate` is the completed current
   restricted tiny-`C` lowering gate.
-- `H49_post_r50_tinyc_lowering_decision_packet` is the only next required
-  follow-up packet.
+- `H49_post_r50_tinyc_lowering_decision_packet` is now the current active
+  docs-only interpretation packet and restores
+  `no_active_downstream_runtime_lane`.
 - `F22` is the current comparator-planning bundle.
 - `F23` is the current post-`H47` numeric-scaling planning bundle.
 - `R49` is the completed current numeric-scaling gate.
@@ -370,6 +383,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
 - `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
+- `docs/plans/2026-03-24-post-r50-h49-tinyc-lowering-decision-design.md`
 - `docs/plans/2026-03-24-post-r47-h46-frontend-bridge-decision-design.md`
 - `docs/plans/2026-03-24-post-h46-r48-dual-mode-useful-case-model-design.md`
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`

@@ -12,17 +12,18 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H48_post_r49_numeric_scaling_decision_packet/` — current active docs-only
+- `H49_post_r50_tinyc_lowering_decision_packet/` — current active docs-only
+  tiny-`C` lowering decision packet that preserves `H48/H43/H36/F20/F21/F22/P27`,
+  records completed `R50`, freezes narrow exact tiny-`C` support only, and
+  restores `no_active_downstream_runtime_lane`.
+- `H48_post_r49_numeric_scaling_decision_packet/` — preserved prior docs-only
   numeric-scaling decision packet that preserves `H47/H43/H36/F20/F21/F22/P27`,
-  records completed `R49`, restores `no_active_downstream_runtime_lane`, and
-  authorizes exactly `F25`.
+  records completed `R49`, and authorizes exactly `F25`.
 - `R50_origin_restricted_tinyc_lowering_gate/` — completed current restricted
   tiny-`C` lowering gate that preserves `H48/H43`, keeps the admitted
   single-function static `i32` surface exact on `8/8` variants across the
   fixed `3/3` useful-case kernels, and preserves
   `translation_identity_exact_count = 8`.
-- `H49_post_r50_tinyc_lowering_decision_packet/` — only next required
-  docs-only interpretation packet after completed `R50`.
 - `F25_post_h48_restricted_tinyc_lowering_bundle/` — current post-`H48`
   planning-only bundle that preserves `H48/H43`, records completed `R49`,
   fixes `R50` as the only admitted runtime candidate, and fixes `H49` as the
@@ -130,8 +131,9 @@ planning bundles. Read the current driver first, not the directory name alone.
   `bucket_c_8x`.
 - `R50_origin_restricted_tinyc_lowering_gate/` — completed current restricted
   tiny-`C` lowering gate on the preserved `R47` useful-case contract.
-- `H49_post_r50_tinyc_lowering_decision_packet/` — only explicit follow-up
-  packet now required for interpreting landed `R50`.
+- `H49_post_r50_tinyc_lowering_decision_packet/` — current active docs-only
+  interpretation packet that freezes landed `R50` narrowly and restores
+  `no_active_downstream_runtime_lane`.
 - `R47_origin_restricted_frontend_translation_gate/` — completed current
   exact frontend bridge lane, downstream of completed `H45` and underneath
   explicit `H46`.
@@ -319,9 +321,10 @@ planning bundles. Read the current driver first, not the directory name alone.
 Do not activate a blocked or historical milestone from momentum. On the current
 stack:
 
-- `H48` is the current active docs-only decision packet.
-- `H47` is the preserved prior docs-only decision packet.
-- `H46` is the preserved earlier docs-only decision packet.
+- `H49` is the current active docs-only decision packet.
+- `H48` is the preserved prior docs-only decision packet.
+- `H47` is the preserved earlier docs-only decision packet.
+- `H46` is the preserved earlier docs-only decision packet before that.
 - `H45` is the preserved earlier docs-only decision packet.
 - `H44` is the preserved prior docs-only route reauthorization packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
@@ -365,7 +368,8 @@ stack:
 - `R48` is the completed current comparator-only useful-case model gate.
 - `F25` is the completed current post-`H48` planning bundle.
 - `R50` is the completed current restricted tiny-`C` lowering gate.
-- `H49` is the only next required follow-up packet.
+- `H49` is the current active docs-only closeout packet and restores
+  `no_active_downstream_runtime_lane`.
 - `H43` remains the landed paper-grade closeout underneath the later explicit
   reentry ladder.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
