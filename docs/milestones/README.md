@@ -13,8 +13,10 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H51_post_h50_origin_mechanism_reentry_packet/`
+- `H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
   current active docs-only packet
+- `H51_post_h50_origin_mechanism_reentry_packet/`
+  preserved prior mechanism-reentry packet
 - `H50_post_r51_r52_scope_decision_packet/`
   preserved prior broader-route closeout
 - `F28_post_h50_origin_mechanism_reentry_bundle/`
@@ -22,13 +24,11 @@ historical and may use then-current wording.
 - `P37_post_h50_narrow_executor_closeout_sync/`
   current low-priority operational/docs wave
 - `R55_origin_2d_hardmax_retrieval_equivalence_gate/`
-  only next runtime candidate
+  completed exact retrieval-equivalence gate
 - `R56_origin_append_only_trace_vm_semantics_gate/`
-  saved future exact gate after positive `R55`
+  completed exact trace-VM semantics gate
 - `R57_origin_accelerated_trace_vm_comparator_gate/`
-  saved future comparator gate after positive exact `R56`
-- `H52_post_r55_r56_r57_origin_mechanism_decision_packet/`
-  saved future mechanism closeout packet
+  completed comparator gate
 
 ## Preserved Anchors
 
@@ -46,9 +46,9 @@ historical and may use then-current wording.
 ## Current Rule
 
 - preserve negative `H50`
+- keep `H52` as the current closeout
+- keep the downstream scientific lane at `no_active_downstream_runtime_lane`
 - do not reopen transformed or trainable entry by momentum
-- run `R55` first or stop
-- keep `R56/R57/H52` conditional on positive earlier gates
 - keep dirty root `main` out of scientific execution
 
 ## Historical Note
