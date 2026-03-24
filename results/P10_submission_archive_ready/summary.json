@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
       "installed": false,
@@ -33,10 +33,18 @@
     "results/release_preflight_checklist_audit/summary.json",
     "results/P5_public_surface_sync/summary.json",
     "results/P5_callout_alignment/summary.json",
-    "results/H2_bundle_lock_audit/summary.json"
+    "results/H2_bundle_lock_audit/summary.json",
+    "results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json",
+    "results/H50_post_r51_r52_scope_decision_packet/summary.json",
+    "results/H51_post_h50_origin_mechanism_reentry_packet/summary.json",
+    "results/P37_post_h50_narrow_executor_closeout_sync/summary.json",
+    "results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json",
+    "results/R56_origin_append_only_trace_vm_semantics_gate/summary.json",
+    "results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json",
+    "results/H43_post_r44_useful_case_refreeze/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+    "current_paper_phase": "h52_current_control_with_h43_paper_endpoint",
     "packet_state": "archive_ready",
     "release_commit_state": "clean_worktree_ready_if_other_gates_green",
     "git_diff_check_state": "clean",
@@ -44,6 +52,6 @@
     "pass_count": 5,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H43 remains the current docs-only useful-case refreeze packet, preserve H42/H41 as prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
+    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H52 remains the current docs-only mechanism closeout packet, preserve H50 as the broader-route value closeout, preserve H51 as the prior mechanism-reentry packet, preserve H43 as the paper-grade endpoint, keep R55/R56 as exact mechanism evidence, keep R57 as negative fast-path comparator evidence, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed semantic-boundary gate stack, preserve P28 as publication alignment to H43, preserve P27/P37 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
   }
 }

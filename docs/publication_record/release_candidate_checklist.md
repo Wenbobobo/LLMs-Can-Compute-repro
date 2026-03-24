@@ -4,12 +4,12 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H45` active docs-only decision packet plus preserved prior `H44`
-route packet plus `H43` paper-grade useful-case refreeze /
-`H36` preserved-active / `R42-R43-R44-R45-R46` completed semantic-boundary
-gate stack / next exact `R47` plus blocked `F22` /
-`P28-P27` completed downstream sync-and-explicit-merge posture /
-`F20-F16-F17-F18-F19-F15` current-control-support /
+the current `H52` active docs-only mechanism closeout packet plus preserved
+prior `H50/H51` control context plus `H43` paper-grade useful-case refreeze /
+`H36` preserved-active / `R42-R43-R44-R45-R55-R56-R57` completed evidence
+stack / blocked `F27/R53/R54` /
+`P37-P28-P27` completed downstream sync-and-explicit-merge posture /
+`F20-F16-F17-F18-F19-F15-F28` current-control-support /
 `H42-H41-H40-H38-H37-P26-P25` preserved immediate-predecessor support /
 `H35-H34-H33-H32-H31-H30` preserved question-selection-and-decision /
 `H29` preserved-upstream-refreeze / `H27-H28`
@@ -19,11 +19,11 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by active `H45`, preserved prior `H44`, landed `R46`, preserved
+  recorded by active `H52`, preserved `H50/H51`, preserved
   `H43/H42/H41/H40/H38/H37`, preserved `H36`, completed
-  `R42/R43/R44/R45/R46`, next exact `R47`, blocked `F22`, completed
-  `P28/P27`, current `F20/F16/F17/F18/F19`, preserved `P26/P25`, and current
-  `F15`.
+  `R42/R43/R44/R45/R55/R56/R57`, blocked `F27/R53/R54`, completed
+  `P37/P28/P27`, current `F20/F16/F17/F18/F19/F28`, preserved `P26/P25`, and
+  current `F15`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
@@ -38,18 +38,20 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same `H43` current /
-  `H36` preserved active / `R42-R43-R44-R45` completed current gate stack /
-  `P28-P27` completed operational sync-and-explicit-merge posture /
-  `F20-F16-F17-F18-F19-F15` current support /
+  `publication_record/README.md` all describe the same `H52` current control /
+  `H43` paper-grade endpoint / `H36` preserved active /
+  `R42-R43-R44-R45-R55-R56-R57` completed current gate stack /
+  `P37-P28-P27` completed operational sync-and-explicit-merge posture /
+  `F20-F16-F17-F18-F19-F15-F28` current support /
   `H42-H41-H40-H38-H37-P26-P25` preserved immediate-predecessor support /
   `H35-H34-H33-H32-H31-H30-H29-H27-H28` preserved current control package.
 - [ ] `plans/README.md`, the saved post-`P20/F5/F6` handoff surfaces, and the
   saved post-`H34` planning-wave surface still present docs/planning
   maintenance as admissible while runtime remains inactive by default.
 - [ ] `publication_record/README.md` and the saved planning-wave surfaces
-  present the completed `F20/H41/P27/R43/R45/H42/R44/H43/P28` wave, the
-  preserved `H40/R42/P26/F17/F18/F19/H38/F16/P25/F15/H37` support wave, the
+  present the completed `F28/H51/R55/R56/R57/H52` wave above preserved
+  `H50/H43/H36`, the preserved `H40/R42/P26/F17/F18/F19/H38/F16/P25/F15/H37`
+  support wave, the
   preserved `F7/F8/P21` wave, the preserved `F10/P22` bridge wave, and the
   preserved `F12/F13/F14/P23` family-first wave while keeping `F9` blocked
   and `F11` new-substrate.
@@ -60,21 +62,22 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
+- [ ] `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
+  reports the current active docs-only closeout packet,
+  `freeze_origin_mechanism_supported_without_fastpath_value`, and
+  `next_required_lane = no_active_downstream_runtime_lane`.
 - [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the
-  current docs-only useful-case refreeze packet,
-  `freeze_r44_as_narrow_supported_here`, `claim_d_state =
-  supported_here_narrowly`, and `next_required_lane =
-  no_active_downstream_runtime_lane`.
-- [ ] `results/H45_post_r46_surface_decision_packet/summary.json` reports the
-  current active docs-only decision packet,
-  `authorize_r47_origin_restricted_frontend_translation_gate`,
-  `authorized_next_runtime_candidate =
-  r47_origin_restricted_frontend_translation_gate`, and blocked
-  `f22_post_r46_useful_case_model_bridge_bundle`.
-- [ ] `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
-  reports the completed preserved prior post-`H44` exact runtime gate,
-  `surface_generalizes_narrowly`, and `next_required_lane =
-  h45_post_r46_surface_decision_packet`.
+  preserved paper-grade useful-case refreeze packet,
+  `freeze_r44_as_narrow_supported_here`, and `claim_d_state =
+  supported_here_narrowly`.
+- [ ] `results/H50_post_r51_r52_scope_decision_packet/summary.json` reports the
+  preserved broader-route closeout packet and `stop_as_exact_without_system_value`.
+- [ ] `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
+  reports the completed exact retrieval-equivalence gate.
+- [ ] `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`
+  reports the completed exact trace-VM semantics gate.
+- [ ] `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
+  reports the completed negative fast-path comparator gate.
 - [ ] `results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json`
   reports the completed preserved retrieval-contract gate,
   `keep_semantic_boundary_route`, exact value plus maximizer-row identity, and
@@ -89,10 +92,13 @@ preserved-closeout-and-pivot stack.
   reports the completed current coequal model lane without replacing exact
   evidence.
 - [ ] `results/P28_post_h43_publication_surface_sync/summary.json` reports the
-  completed publication/control sync packet that keeps `H43` current.
+  completed publication/control sync packet that keeps the paper-grade `H43`
+  bundle aligned.
 - [ ] `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
   reports the completed explicit merge packet and keeps
   `merge_executed = false`.
+- [ ] `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
+  reports the completed operational/docs sidecar for the closed mechanism wave.
 - [ ] `results/H42_post_r43_route_selection_packet/summary.json` reports the
   preserved prior docs-only packet that authorized exact `R44`.
 - [ ] `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json`

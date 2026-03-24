@@ -49,25 +49,31 @@ The current execution-facing chain is now
 `R45_origin_dual_mode_model_mainline_gate` ->
 `H42_post_r43_route_selection_packet` ->
 `R44_origin_restricted_wasm_useful_case_execution_gate` ->
-`H43_post_r44_useful_case_refreeze`.
+`H43_post_r44_useful_case_refreeze` ->
+`H50_post_r51_r52_scope_decision_packet` ->
+`F28_post_h50_origin_mechanism_reentry_bundle` ->
+`H51_post_h50_origin_mechanism_reentry_packet` ->
+`R55_origin_2d_hardmax_retrieval_equivalence_gate` ->
+`R56_origin_append_only_trace_vm_semantics_gate` ->
+`R57_origin_accelerated_trace_vm_comparator_gate` ->
+`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
 
 ## Current endpoint and non-goals
 
-The active endpoint on current evidence is the narrower Origin-core
-semantic-boundary line now carried through exact bounded-memory execution
-(`R43`), coequal `R45` model support, and the restricted useful-case climb
-frozen by `H43`. The earlier tiny typed-bytecode `D0` endpoint remains a
-preserved first compiled boundary and should not be read as the current bridge
-to arbitrary C, general LLM computation, or broader demo-first claims. Those
-broader readings remain explicitly unsupported on the current paper scope. A
-later internal follow-on under preserved `H44` and landed `R46` kept the
-held-out in-surface useful-case matrix exact on `8/8` variants, and the
-now-landed `H45` interpretation packet authorizes exactly one restricted
-frontend bridge through `R47` while keeping `F22` blocked and keeping `R48`
-deferred behind later explicit `H46`.
+The current live control state is the narrower Origin-core mechanism closeout
+selected by `H52`: exact append-only retrieval (`R55`) and exact append-only
+trace-VM semantics (`R56`) survive on the fixed bounded suite, but the
+accelerated route does not retain bounded value over simpler transparent
+baselines on that suite (`R57`). `H43` remains the paper-grade endpoint for
+the useful-case semantic-boundary story; `H52` does not widen that endpoint,
+it only closes one later mechanism-only reentry lane above it. The earlier
+tiny typed-bytecode `D0` endpoint remains a preserved first compiled boundary
+and should not be read as the current bridge to arbitrary C, general LLM
+computation, or broader demo-first claims. Those broader readings remain
+explicitly unsupported on both the paper-grade and the current control scope.
 
 ## Current paper-facing follow-up
 
@@ -129,71 +135,39 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H43_post_r44_useful_case_refreeze`, which preserves
-`H42_post_r43_route_selection_packet` and
-`H41_post_r42_aggressive_long_arc_decision_packet` as the prior docs-only
-decision packets, preserves
-`H36_post_r40_bounded_scalar_family_refreeze` as the active routing/refreeze
-packet, records `R42_origin_append_only_memory_retrieval_contract_gate`,
+`H52_post_r55_r56_r57_origin_mechanism_decision_packet`, which preserves
+`H50_post_r51_r52_scope_decision_packet` as the broader-route value closeout,
+preserves `H51_post_h50_origin_mechanism_reentry_packet` as the prior
+mechanism-reentry packet, preserves
+`H43_post_r44_useful_case_refreeze` as the paper-grade endpoint, preserves
+`H36_post_r40_bounded_scalar_family_refreeze` as the routing/refreeze packet,
+records `R42_origin_append_only_memory_retrieval_contract_gate`,
 `R43_origin_bounded_memory_small_vm_execution_gate`,
 `R44_origin_restricted_wasm_useful_case_execution_gate`, and
-`R45_origin_dual_mode_model_mainline_gate` as the completed current
-semantic-boundary gate stack, records
-`F20_post_r42_dual_mode_model_mainline_bundle` as the coequal-mainline model
-bundle, records `P27_post_h41_clean_promotion_and_explicit_merge_packet` as
-the completed explicit merge packet with `merge_executed = false`, records
-`P26_post_h37_promotion_and_artifact_hygiene_audit` as the preserved prior
-operational audit lane, records
-`F16_post_h37_r41_candidate_isolation_bundle`,
-`F17_post_h38_same_substrate_exit_criteria_bundle`,
-`F18_post_h38_origin_core_long_arc_bundle`,
-`F19_post_f18_restricted_wasm_useful_case_roadmap`, and
-`F15_post_h36_origin_goal_reanchor_bundle` as the current planning/control
-bundle set, and keeps `H40_post_h38_semantic_boundary_activation_packet`,
-`H38_post_f16_runtime_relevance_reopen_decision_packet`,
-`H37_post_h36_runtime_relevance_decision_packet`, and
-`P25_post_h36_clean_promotion_prep` as the prior decision/audit support wave.
-Under that state, `H27` remains the negative closeout of the old
-same-endpoint route, `H28` remains the Origin-core pivot packet, `H29`
-remains the positive narrow refreeze, `R36` remains the completed
-precision-boundary follow-up, `R37` remains one tiny compiled-boundary
-confirmation, `H31` remains the explicit later-decision packet, `R38` remains
-one richer same-substrate control/call family, `H33` preserves the one-
-question docs-only selection step, `R39` preserves one narrow same-substrate
-dependency audit, `H34` preserves the freeze-complete-for-now compiled line,
-`H35` authorizes exactly one bounded-scalar same-substrate runtime gate, and
-`R40` validates bounded scalar locals and typed `FLAG` slots on one admitted
-row plus one same-family boundary row. `H37` first keeps that `H36` freeze,
-`F16` then reduces the saved `R41` catalog to fixed candidate statuses and
-concludes `no_candidate_ready`, `H38` keeps the same freeze again because
-there is still no `execution_ready` candidate on the landed `R40` row pair,
-`P26` records an `audit_only` promotion posture, `F17/F18/F19` select and
-constrain the semantic-boundary route, `H40` authorizes exactly `R42`, `R42`
-validates the first append-only retrieval contract, `F20/H41/P27` make the
-later exact-versus-model and explicit-merge posture canonical, `R43` lands the
-bounded-memory exact gate, `R45` lands the coequal model gate, `H42`
-authorizes exact `R44`, `R44` lands the fixed useful-case ladder, and `H43`
-refreezes that result as bounded useful-case support only. The later
-paper-facing and planning-only closeout lanes now also align to that reading:
-`P20` remains the preserved earlier manuscript bundle resync that terminated on
-the landed `H34` state at that stage, `P30` now refreshes the
-manuscript-facing bundle to the landed `H43` state, `F5` concludes
-`no_reopen_candidate_survives`, `F6` records docs/planning maintenance as the
-admissible default rather than a new runtime wave, `F7` makes future
-same-substrate reopen criteria mechanical, `F8` stores beyond-Origin milestone
-families without activating them, `F10` makes richer executor-visible
-value/comparator obligations explicit without authorizing runtime widening,
-`F12` remains the preserved earlier origin-facing claim delta reanchor, `F13`
-fixes `bounded scalar locals and flags` as the bounded same-substrate
-family-first preactivation surface, `F14` stores a conditional
-reopen-readiness blueprint, `F15` reanchors the origin-facing claim delta to
-the current control state, `P28` aligns publication-facing ledgers to landed
-`H43`, `P29` aligns release/public audit surfaces to landed `H43`, `F9`
-remains blocked, `F11` remains new-substrate, `P21` and `P22` remain
-preserved prior planning syncs, `P23/P24/P25` preserve the earlier driver and
-handoff surfaces, `P26/P27` preserve the audit-plus-explicit-merge operational
-posture, `R41` remains deferred behind a later explicit contradiction packet,
-and no active downstream runtime lane exists after `H43`.
+`R45_origin_dual_mode_model_mainline_gate` as the completed semantic-boundary
+gate stack underneath the paper endpoint, records `R51/R52` as the broader
+post-`H49` exactness-versus-value closeout pair, records `R55/R56` as exact
+mechanism evidence only, records `R57` as negative fast-path comparator
+evidence, records `F20_post_r42_dual_mode_model_mainline_bundle` as the
+coequal-mainline model bundle, records `P27_post_h41_clean_promotion_and_explicit_merge_packet`
+and `P37_post_h50_narrow_executor_closeout_sync` as the current operational
+posture, and keeps `merge_executed = false` explicit while returning the
+downstream lane to `no_active_downstream_runtime_lane`.
+
+The later paper-facing and planning-only closeout lanes align to that reading:
+`P28/P29/P30` keep publication, release, and manuscript ledgers downstream of
+the preserved `H43` paper-grade endpoint; `F5` concludes
+`no_reopen_candidate_survives`; `F6` records docs/planning maintenance as the
+admissible default rather than a new runtime wave; `F7` makes future
+same-substrate reopen criteria mechanical; `F8` stores beyond-Origin
+milestone families without activating them; `F10` makes richer
+executor-visible value/comparator obligations explicit without authorizing
+runtime widening; `F12/F13/F14/F15` preserve origin-facing claim-delta and
+conditional-reopen planning; `F9` remains blocked; `F11` remains
+new-substrate; `P21/P22/P23/P24/P25/P26/P27/P37` preserve the earlier driver,
+handoff, audit, and explicit-merge surfaces; `R41` remains deferred behind a
+later explicit contradiction packet; and no active downstream runtime lane
+exists after `H52`.
 
 ## Reproducibility pointers
 

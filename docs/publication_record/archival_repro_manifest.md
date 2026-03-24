@@ -150,12 +150,28 @@ uv run pytest -q
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
   records the completed current restricted useful-case gate on the fixed
   three-kernel ladder
-- `results/H43_post_r44_useful_case_refreeze/summary.json` records the current
-  docs-only useful-case refreeze packet and restores
+- `results/H43_post_r44_useful_case_refreeze/summary.json` records the
+  preserved paper-grade useful-case refreeze packet and restores
   `no_active_downstream_runtime_lane`
 - `results/P28_post_h43_publication_surface_sync/summary.json` records the
-  completed publication/control sync packet that keeps `H43` current while
+  completed publication/control sync packet that keeps the paper-grade `H43`
+  bundle aligned while
   aligning downstream ledgers
+- `results/H50_post_r51_r52_scope_decision_packet/summary.json` records the
+  preserved broader-route value closeout after `R51/R52`
+- `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json` records
+  the preserved planning bundle that fixed the later mechanism-only sequence
+- `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json` records
+  the preserved prior mechanism-reentry packet
+- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
+  records exact retrieval-equivalence support only
+- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`
+  records exact trace-VM semantics support only
+- `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
+  records negative fast-path value on the exact `R56` suite
+- `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
+  records the current active docs-only mechanism closeout and restores
+  `no_active_downstream_runtime_lane`
 - `results/R37_origin_compiler_boundary_gate/summary.json` records one narrow
   positive fact beyond `H29/R36`: one admitted tiny bytecode subset survives
   source reference, lowering parity, and free-running exact execution on the
@@ -230,20 +246,24 @@ only as excluded inputs, never as required release artifacts.
 ## Archive interpretation rule
 
 This archive is evidence for a narrow mechanistic endpoint: append-only traces,
-exact latest-write retrieval, bounded precision, and one tiny compiled
-boundary on the active Origin-core substrate. It is not evidence for arbitrary
-`C`, general LLM computation, or current-scope end-to-end systems superiority.
-The current active docs-only packet is `H43`, above the preserved active
-`H36` routing/refreeze packet, the completed `R42/R43/R44/R45`
-semantic-boundary gate stack, and the completed `P27/P28` operational
-release-control pair. The earlier `H32 -> H33 -> R39 -> H34` compiled-boundary
-line remains preserved historical support rather than the active routing top.
-`H35/R40/H36` record the later bounded-scalar reopen and refreeze that now sit
-directly underneath the semantic-boundary route. `H27/H28` explain the pivot
-away from the older same-endpoint route. The preserved `H23` packet
-strengthens same-endpoint boundary and mechanism evidence inside the fixed
-`D0` boundary, but it still does not localize the true executor boundary,
-still preserves only partial control isolation, and still does not overturn
-the mixed same-endpoint systems gate. The later `R30/R31/H25` stack remains
-historical route-selection context only; it does not widen the current science
-claim set.
+exact latest-write retrieval, bounded precision, and one restricted useful-case
+semantic boundary on the active Origin-core substrate. It is not evidence for
+arbitrary `C`, general LLM computation, or current-scope end-to-end systems
+superiority. The current active docs-only control packet is `H52`, above the
+preserved broader-route closeout `H50`, the preserved prior mechanism-reentry
+packet `H51`, and the preserved paper-grade endpoint `H43`. Under that stack,
+`H36` remains the preserved active routing/refreeze packet, `R42/R43/R44/R45`
+remain the semantic-boundary gate stack, `R55/R56` remain exact mechanism
+support only, `R57` remains negative fast-path comparator evidence, and
+`P27/P37` preserve the current operational release-control posture with
+`merge_executed = false`. The earlier `H32 -> H33 -> R39 -> H34`
+compiled-boundary line remains preserved historical support rather than the
+active routing top. `H35/R40/H36` record the later bounded-scalar reopen and
+refreeze that now sit directly underneath the semantic-boundary route.
+`H27/H28` explain the pivot away from the older same-endpoint route. The
+preserved `H23` packet strengthens same-endpoint boundary and mechanism
+evidence inside the fixed `D0` boundary, but it still does not localize the
+true executor boundary, still preserves only partial control isolation, and
+still does not overturn the mixed same-endpoint systems gate. The later
+`R30/R31/H25` stack remains historical route-selection context only; it does
+not widen the current science claim set.

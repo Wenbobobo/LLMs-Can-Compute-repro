@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
       "installed": false,
@@ -20,19 +20,19 @@
   },
   "rows": [
     {
-      "item_id": "top_level_surfaces_and_driver_are_current_h43",
+      "item_id": "top_level_surfaces_and_driver_are_current_h52_control",
       "status": "pass",
-      "notes": "Top-level surfaces and the canonical driver should all expose the current H43 stack."
+      "notes": "Top-level surfaces and the canonical driver should all expose the current H52/H50/H51 control stack while preserving H43 as the paper-grade endpoint."
     },
     {
-      "item_id": "submission_packet_index_and_archival_manifest_track_current_h43_bundle",
+      "item_id": "submission_packet_index_and_archival_manifest_track_current_h52_h43_bundle",
       "status": "pass",
-      "notes": "Submission packet index and archival manifest should point at the same H43/P27/P28 bundle."
+      "notes": "Submission packet index and archival manifest should point at the same H52 current-control plus preserved H43 paper-grade bundle."
     },
     {
-      "item_id": "review_boundary_and_external_release_note_stay_downstream",
+      "item_id": "review_boundary_and_external_release_note_stay_downstream_of_h52_control",
       "status": "pass",
-      "notes": "Review and release-note helpers should stay downstream of the current narrow H43 bundle."
+      "notes": "Review and release-note helpers should stay downstream of the current H52 control state and preserved H43 paper bundle."
     },
     {
       "item_id": "standing_release_audits_remain_green",

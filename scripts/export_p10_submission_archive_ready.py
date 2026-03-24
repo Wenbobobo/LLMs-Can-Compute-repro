@@ -144,77 +144,96 @@ def build_checklist_rows(
 ) -> list[dict[str, object]]:
     return [
         {
-            "item_id": "top_level_surfaces_and_driver_are_current_h43",
+            "item_id": "top_level_surfaces_and_driver_are_current_h52_control",
             "status": "pass"
             if contains_all(
                 readme_text,
                 [
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h51_post_h50_origin_mechanism_reentry_packet`",
                     "`h43_post_r44_useful_case_refreeze`",
-                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
-                    "`r45_origin_dual_mode_model_mainline_gate`",
+                    "`r57_origin_accelerated_trace_vm_comparator_gate`",
+                    "`no_active_downstream_runtime_lane`",
                 ],
             )
             and contains_all(
                 status_text,
                 [
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h51_post_h50_origin_mechanism_reentry_packet`",
                     "`h43_post_r44_useful_case_refreeze`",
-                    "`h42_post_r43_route_selection_packet`",
+                    "`p37_post_h50_narrow_executor_closeout_sync`",
                     "`merge_executed = false`",
                 ],
             )
             and contains_all(
                 publication_readme_text,
                 [
-                    "current `h43` docs-only useful-case refreeze packet",
-                    "docs/milestones/p29_post_h43_release_audit_refresh/",
-                    "results/p29_post_h43_release_audit_refresh/summary.json",
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "current active packet",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r57_origin_accelerated_trace_vm_comparator_gate`",
+                    "`no_active_downstream_runtime_lane`",
                 ],
             )
             and contains_all(
                 current_stage_driver_text,
                 [
                     "the current active stage is:",
-                    "`h43_post_r44_useful_case_refreeze`",
+                    "`h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h51_post_h50_origin_mechanism_reentry_packet`",
+                    "`p37_post_h50_narrow_executor_closeout_sync`",
                     "`no_active_downstream_runtime_lane`",
                 ],
             )
             else "blocked",
-            "notes": "Top-level surfaces and the canonical driver should all expose the current H43 stack.",
+            "notes": "Top-level surfaces and the canonical driver should all expose the current H52/H50/H51 control stack while preserving H43 as the paper-grade endpoint.",
         },
         {
-            "item_id": "submission_packet_index_and_archival_manifest_track_current_h43_bundle",
+            "item_id": "submission_packet_index_and_archival_manifest_track_current_h52_h43_bundle",
             "status": "pass"
             if contains_all(
                 submission_packet_index_text,
                 [
-                    "the current packet is anchored on `h43` as the current docs-only",
-                    "`r42`, `r43`, `r44`, and `r45` as the completed current semantic-boundary",
-                    "`merge_executed = false`",
-                    "`p28` only aligns publication-facing ledgers to landed `h43`",
+                    "current repo control state is `h52` as the active docs-only",
+                    "`h50` preserved as the broader-route value closeout",
+                    "`h51` preserved as the prior mechanism-reentry packet",
+                    "`h43` preserved as the paper-grade useful-case refreeze packet",
+                    "`r55` and `r56` remain exact mechanism evidence only",
+                    "`r57` remains negative fast-path comparator",
+                    "`p26/p27/p37` preserve the current audit-plus-explicit-merge operational",
                 ],
             )
             and contains_all(
                 archival_manifest_text,
                 [
+                    "results/h52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json",
                     "results/h43_post_r44_useful_case_refreeze/summary.json",
-                    "results/p28_post_h43_publication_surface_sync/summary.json",
-                    "the current active docs-only packet is `h43`",
-                    "completed `p27/p28` operational release-control pair",
+                    "current active docs-only control packet is `h52`",
+                    "`r55/r56` remain exact mechanism support only",
+                    "`r57` remains negative fast-path comparator evidence",
+                    "`p27/p37` preserve the current operational release-control posture",
                 ],
             )
             else "blocked",
-            "notes": "Submission packet index and archival manifest should point at the same H43/P27/P28 bundle.",
+            "notes": "Submission packet index and archival manifest should point at the same H52 current-control plus preserved H43 paper-grade bundle.",
         },
         {
-            "item_id": "review_boundary_and_external_release_note_stay_downstream",
+            "item_id": "review_boundary_and_external_release_note_stay_downstream_of_h52_control",
             "status": "pass"
             if contains_all(
                 review_boundary_text,
                 [
-                    "routing/decision state is `h43_post_r44_useful_case_refreeze`",
-                    "`r44_origin_restricted_wasm_useful_case_execution_gate`",
-                    "`r45_origin_dual_mode_model_mainline_gate`",
-                    "`merge_executed = false`",
+                    "routing/decision state is `h52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                    "`h50_post_r51_r52_scope_decision_packet`",
+                    "`h51_post_h50_origin_mechanism_reentry_packet`",
+                    "`h43_post_r44_useful_case_refreeze`",
+                    "`r55_origin_2d_hardmax_retrieval_equivalence_gate`",
+                    "`r56_origin_append_only_trace_vm_semantics_gate`",
+                    "`r57_origin_accelerated_trace_vm_comparator_gate`",
                     "`supported_here_narrowly`",
                     "`no_active_downstream_runtime_lane`",
                 ],
@@ -234,7 +253,7 @@ def build_checklist_rows(
                 ["docs/origin/", "docs/Origin/"],
             )
             else "blocked",
-            "notes": "Review and release-note helpers should stay downstream of the current narrow H43 bundle.",
+            "notes": "Review and release-note helpers should stay downstream of the current H52 control state and preserved H43 paper bundle.",
         },
         {
             "item_id": "standing_release_audits_remain_green",
@@ -270,31 +289,76 @@ def build_checklist_rows(
 
 def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     lookup = {
-        "README.md": ("readme_text", ["`H43_post_r44_useful_case_refreeze`", "`R45_origin_dual_mode_model_mainline_gate`"]),
-        "STATUS.md": ("status_text", ["`H43_post_r44_useful_case_refreeze`", "`merge_executed = false`"]),
+        "README.md": (
+            "readme_text",
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H50_post_r51_r52_scope_decision_packet`",
+                "`R57_origin_accelerated_trace_vm_comparator_gate`",
+                "`H43_post_r44_useful_case_refreeze`",
+            ],
+        ),
+        "STATUS.md": (
+            "status_text",
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H50_post_r51_r52_scope_decision_packet`",
+                "`H51_post_h50_origin_mechanism_reentry_packet`",
+                "`merge_executed = false`",
+            ],
+        ),
         "docs/publication_record/README.md": (
             "publication_readme_text",
-            ["docs/milestones/P29_post_h43_release_audit_refresh/", "results/P29_post_h43_release_audit_refresh/summary.json"],
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H43_post_r44_useful_case_refreeze`",
+                "`R57_origin_accelerated_trace_vm_comparator_gate`",
+                "`no_active_downstream_runtime_lane`",
+            ],
         ),
         "docs/publication_record/current_stage_driver.md": (
             "current_stage_driver_text",
-            ["`H43_post_r44_useful_case_refreeze`", "`no_active_downstream_runtime_lane`"],
+            [
+                "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`H50_post_r51_r52_scope_decision_packet`",
+                "`H51_post_h50_origin_mechanism_reentry_packet`",
+                "`P37_post_h50_narrow_executor_closeout_sync`",
+                "`no_active_downstream_runtime_lane`",
+            ],
         ),
         "docs/publication_record/submission_packet_index.md": (
             "submission_packet_index_text",
-            ["The current packet is anchored on `H43`", "`P28` only aligns publication-facing ledgers to landed `H43`"],
+            [
+                "The current repo control state is `H52` as the active docs-only",
+                "`H43` preserved as the paper-grade useful-case refreeze packet",
+                "`P26/P27/P37` preserve the current audit-plus-explicit-merge operational",
+            ],
         ),
         "docs/publication_record/archival_repro_manifest.md": (
             "archival_manifest_text",
-            ["results/H43_post_r44_useful_case_refreeze/summary.json", "The current active docs-only packet is `H43`"],
+            [
+                "results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json",
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
+                "The current active docs-only control packet is `H52`",
+            ],
         ),
         "docs/publication_record/review_boundary_summary.md": (
             "review_boundary_text",
-            ["routing/decision state is `H43_post_r44_useful_case_refreeze`", "`supported_here_narrowly`"],
+            [
+                "routing/decision state is `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+                "`R57_origin_accelerated_trace_vm_comparator_gate`",
+                "`supported_here_narrowly`",
+                "`no_active_downstream_runtime_lane`",
+            ],
         ),
         "docs/publication_record/external_release_note_skeleton.md": (
             "external_release_note_text",
-            ["narrow execution-substrate claim", "docs/publication_record/submission_packet_index.md"],
+            [
+                "narrow execution-substrate claim",
+                "general “llms are computers”",
+                "arbitrary C reproduction",
+                "docs/publication_record/submission_packet_index.md",
+            ],
         ),
         "results/release_worktree_hygiene_snapshot/summary.json": (
             "worktree_hygiene_summary_text",
@@ -310,7 +374,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summary: dict[str, Any]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+        "current_paper_phase": "h52_current_control_with_h43_paper_endpoint",
         "packet_state": "archive_ready" if not blocked_items else "blocked",
         "release_commit_state": release_commit_state_from_summary(worktree_hygiene_summary),
         "git_diff_check_state": diff_check_state_from_summary(worktree_hygiene_summary),
@@ -319,7 +383,7 @@ def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summ
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H43 remains the current docs-only useful-case refreeze packet, preserve H42/H41 as prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed current gate stack, preserve P27/P28 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
+            "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H52 remains the current docs-only mechanism closeout packet, preserve H50 as the broader-route value closeout, preserve H51 as the prior mechanism-reentry packet, preserve H43 as the paper-grade endpoint, keep R55/R56 as exact mechanism evidence, keep R57 as negative fast-path comparator evidence, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed semantic-boundary gate stack, preserve P28 as publication alignment to H43, preserve P27/P37 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
             if not blocked_items
             else "resolve the blocked archive-ready items before using the submission/archive handoff"
         ),
@@ -371,6 +435,14 @@ def main() -> None:
                 "results/P5_public_surface_sync/summary.json",
                 "results/P5_callout_alignment/summary.json",
                 "results/H2_bundle_lock_audit/summary.json",
+                "results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json",
+                "results/H50_post_r51_r52_scope_decision_packet/summary.json",
+                "results/H51_post_h50_origin_mechanism_reentry_packet/summary.json",
+                "results/P37_post_h50_narrow_executor_closeout_sync/summary.json",
+                "results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json",
+                "results/R56_origin_append_only_trace_vm_semantics_gate/summary.json",
+                "results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json",
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
             ],
             "summary": summary,
         },
@@ -381,7 +453,8 @@ def main() -> None:
                 "# P10 Submission Archive Ready",
                 "",
                 "Machine-readable audit of whether the current submission/archive handoff",
-                "surfaces stay aligned with the landed H43 release-control stack.",
+                "surfaces stay aligned with the current H52 control stack while preserving",
+                "H43 as the paper-grade endpoint.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",
