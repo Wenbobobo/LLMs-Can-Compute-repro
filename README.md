@@ -86,10 +86,17 @@ current restricted tiny-`C` lowering gate with
 `H49_post_r50_tinyc_lowering_decision_packet` is now the current active
 docs-only closeout packet that freezes `R50` narrowly and restores
 `no_active_downstream_runtime_lane`. `P36_post_h48_falsification_closeout_bundle`
-remains the explicit non-selected closeout route inherited from `H48`. `P35`
-is now the current
-low-priority research-record rollup/docs wave while `P31/P32/P33/P34` remain
-preserved prior helper refresh packets.
+remains the explicit non-selected closeout route inherited from `H48`.
+`F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the current
+post-`H49` planning bundle, fixing
+`R51_origin_memory_control_surface_sufficiency_gate` as the only next runtime
+candidate, `R52_origin_internal_vs_external_executor_value_gate` as the only
+later comparator/value gate, and
+`H50_post_r51_r52_scope_decision_packet` as the only follow-up packet.
+`P36_post_h49_cleanline_hygiene_and_artifact_policy` is now the current
+low-priority operational/docs wave, while
+`P35_post_h47_research_record_rollup` is now the preserved prior low-priority
+wave and `P31/P32/P33/P34` remain preserved prior helper refresh packets.
 
 The narrow current stack is:
 

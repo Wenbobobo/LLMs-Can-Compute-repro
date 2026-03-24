@@ -26,6 +26,16 @@
   `R49_origin_useful_case_numeric_scaling_gate`.
 - The current downstream scientific lane after `H49` is
   `no_active_downstream_runtime_lane`.
+- `F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the
+  current post-`H49` planning bundle.
+- `R51_origin_memory_control_surface_sufficiency_gate` as the only next
+  runtime candidate is now fixed by `F26`.
+- `R52_origin_internal_vs_external_executor_value_gate` is now the only later
+  comparator/value gate fixed by `F26`.
+- `H50_post_r51_r52_scope_decision_packet` is now the only follow-up packet
+  fixed by `F26`.
+- `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
+  remains planning-only and blocked behind later explicit `H50`.
 - `F25_post_h48_restricted_tinyc_lowering_bundle` is now the current post-`H48`
   planning bundle.
 - `R50_origin_restricted_tinyc_lowering_gate` is now the completed current
@@ -50,9 +60,11 @@
   current post-`H48` planning bundle: it preserves `H48/H43`, records `R49`
   as completed evidence, fixes `R50` as the only next runtime candidate, and
   fixes `H49` as the only follow-up packet.
-- `P35_post_h47_research_record_rollup` is now the current low-priority
-  operational/docs wave recording post-`H47` research state, hygiene rules,
-  and preserved negative-result accounting.
+- `P36_post_h49_cleanline_hygiene_and_artifact_policy` is now the current
+  low-priority operational/docs wave recording cleanline execution posture,
+  artifact policy, and explicit no-merge discipline for the post-`H49` wave.
+- `P35_post_h47_research_record_rollup` is now the preserved prior
+  low-priority operational/docs wave.
 - `P31/P32/P33/P34` remain preserved prior low-priority helper refresh
   packets.
 - The active scientific target is now the narrower Origin-core line:

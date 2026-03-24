@@ -32,6 +32,14 @@ Current scientific/control stack:
   `R48_origin_dual_mode_useful_case_model_gate`;
 - current downstream scientific lane:
   `no_active_downstream_runtime_lane`;
+- current post-`H49` planning bundle:
+  `F26_post_h49_origin_claim_delta_and_next_question_bundle`;
+- only next runtime candidate fixed by `F26`:
+  `R51_origin_memory_control_surface_sufficiency_gate`;
+- only later comparator/value gate fixed by `F26`:
+  `R52_origin_internal_vs_external_executor_value_gate`;
+- only follow-up packet fixed by `F26`:
+  `H50_post_r51_r52_scope_decision_packet`;
 - current completed numeric-scaling gate:
   `R49_origin_useful_case_numeric_scaling_gate`;
 - current post-`H48` planning bundle:
@@ -55,6 +63,8 @@ Current scientific/control stack:
 - preserved prior operational promotion/artifact audit lane:
   `P26_post_h37_promotion_and_artifact_hygiene_audit`;
 - current low-priority operational/docs wave:
+  `P36_post_h49_cleanline_hygiene_and_artifact_policy`;
+- preserved prior low-priority operational/docs wave:
   `P35_post_h47_research_record_rollup`;
 - current canonical origin-facing derivative bundle:
   `F15_post_h36_origin_goal_reanchor_bundle`;
@@ -82,65 +92,29 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H49_post_r50_tinyc_lowering_decision_packet` is now the current active
-docs-only tiny-`C` lowering decision packet.
-`H48_post_r49_numeric_scaling_decision_packet` is the preserved prior
-docs-only decision packet.
-`H47_post_r48_useful_case_bridge_refreeze` is the preserved earlier docs-only
-decision packet.
-`F25_post_h48_restricted_tinyc_lowering_bundle` remains the completed current
-post-`H48` planning bundle.
-`R50_origin_restricted_tinyc_lowering_gate` is now the completed current
-restricted tiny-`C` lowering gate, and it starts from the preserved `R47`
-`8/8` useful-case variants across the fixed `3/3` kernel ladder before any
-later packet considers broader wording.
-`H49_post_r50_tinyc_lowering_decision_packet` selects
-`freeze_r50_as_narrow_exact_tinyc_support_only` and restores
-`no_active_downstream_runtime_lane`.
-`H46_post_r47_frontend_bridge_decision_packet` is the preserved earlier
-docs-only decision packet.
-`H45_post_r46_surface_decision_packet` is the preserved earlier docs-only
-surface-decision packet.
-`F21_post_h43_exact_useful_case_expansion_bundle` is the current planning
-bundle.
-`H43` remains the current paper-grade endpoint.
-`R46_origin_useful_case_surface_generalization_gate` is now the completed
-post-`H44` exact runtime gate on the fixed held-out useful-case surface.
-`R47_origin_restricted_frontend_translation_gate` is now the completed current
-exact frontend bridge lane.
-`R48_origin_dual_mode_useful_case_model_gate` is now the completed current
-comparator-only useful-case model lane.
-`F22_post_r46_useful_case_model_bridge_bundle` is now the current
-comparator-planning bundle.
-`F23_post_h47_numeric_scaling_bundle` is now the current post-`H47`
-numeric-scaling planning bundle. It fixes
-`R49_origin_useful_case_numeric_scaling_gate` as the only next runtime
-candidate, keeps `F24_post_h47_hybrid_executor_growth_bundle` dormant, and
-leaves `F25/P36` as placeholders only.
-`R49_origin_useful_case_numeric_scaling_gate` is now the completed current
-numeric-scaling gate. It records `numeric_scaling_survives_through_bucket_c`,
-keeps all `9/9` widened rows exact across the fixed `3/3` useful-case
-kernels, exposes `7/9` `float32_single_head` failures, and is now interpreted
-through landed `H48_post_r49_numeric_scaling_decision_packet`.
-`F25_post_h48_restricted_tinyc_lowering_bundle` remains the completed current
-post-`H48` planning bundle.
-`R50_origin_restricted_tinyc_lowering_gate` is now the completed current
-restricted tiny-`C` lowering gate. It records
-`restricted_tinyc_lowering_supported_narrowly`, keeps `8/8` admitted variants
-exact across the fixed `3/3` kernels, and preserves
-`translation_identity_exact_count = 8`.
-`H49_post_r50_tinyc_lowering_decision_packet` is now the current active
-docs-only closeout packet and restores
-`no_active_downstream_runtime_lane`.
-`P36_post_h48_falsification_closeout_bundle` remains the explicit non-selected
-closeout bundle.
-`P35_post_h47_research_record_rollup` is the current low-priority
-operational/docs wave. It records post-`H47` research state, quarantines dirty
-root `main`, records explicit no-merge posture, preserves negative-result
-accounting, and keeps large raw artifacts out of git by default without
-changing scientific stage.
-`P31/P32/P33/P34` remain preserved prior helper refresh packets rather than
-the current low-priority wave.
+`H49_post_r50_tinyc_lowering_decision_packet` remains the current active
+docs-only packet.
+`H49` continues to select
+`freeze_r50_as_narrow_exact_tinyc_support_only` and continues to restore
+`no_active_downstream_runtime_lane` after the completed narrow `R50` result.
+`F26_post_h49_origin_claim_delta_and_next_question_bundle` is now the current
+post-`H49` planning bundle. It preserves `H49/H43/H36`, maps claim layers
+`A/B/C/D` onto the landed evidence stack, fixes
+`R51_origin_memory_control_surface_sufficiency_gate` is the only next runtime
+candidate, fixes
+`R52_origin_internal_vs_external_executor_value_gate` as the only later
+comparator/value gate, fixes
+`H50_post_r51_r52_scope_decision_packet` as the only follow-up packet, and
+keeps `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
+planning-only and inactive.
+`P36_post_h49_cleanline_hygiene_and_artifact_policy` is the current
+low-priority operational/docs wave. It records that dirty root `main` remains
+quarantined, that clean descendant worktrees are the only scientific
+execution surfaces for this wave, that raw probe/per-read dumps remain out of
+git by default, and that merge back to `main` remains non-executed during the
+`F26 -> R51 -> R52 -> H50` sequence.
+`P35_post_h47_research_record_rollup` is now the preserved prior low-priority
+wave, while `P31/P32/P33/P34` remain preserved prior helper refresh packets.
 
 ## Current Facts
 
@@ -244,8 +218,8 @@ the current low-priority wave.
     frontier widening by momentum.
 11. Keep release/public audit surfaces downstream of `H43` without changing
     the scientific stage driver.
-12. Promote `P35` as the current low-priority operational/docs wave while
-    keeping `P31/P32/P33/P34` preserved prior helper refresh packets.
+12. Record `P35` as the preserved prior low-priority operational/docs wave
+    while keeping `P31/P32/P33/P34` preserved prior helper refresh packets.
 13. Preserve `F23` as the current saved post-`H47` numeric-scaling planning
     bundle.
 14. Treat completed `R49_origin_useful_case_numeric_scaling_gate` as the
@@ -343,10 +317,10 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `F21` is the current exact-first post-`H43` planning bundle.
 - `P27` is the completed operational explicit merge packet and keeps
   `merge_executed = false`.
-- `P35` is the current low-priority operational/docs wave and does not change
-  the active scientific stage.
+- `P35` is the preserved prior low-priority operational/docs wave and does not
+  change the active scientific stage.
 - `P31`, `P32`, `P33`, and `P34` are completed prior helper refresh packets
-  underneath current `P35`.
+  underneath prior `P35`.
 - `P30` is the completed prior manuscript-surface refresh wave.
 - `P29` is the completed earlier prior release/public audit refresh wave.
 - `P28` is the completed earlier publication/control sync wave.

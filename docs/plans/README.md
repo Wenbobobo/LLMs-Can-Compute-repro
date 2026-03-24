@@ -8,6 +8,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 
 ## Current Start Points
 
+- `2026-03-24-post-h49-origin-core-next-wave-design.md` — the current saved
+  post-`H49` next-wave design that fixes the route:
+  `F26 -> P36 -> R51 -> R52 -> H50`, while keeping `F27` saved only.
 - `2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md` — the
   current saved post-`H47` master plan that fixes the next wave order:
   `P35` research-record rollup, `F23` numeric-scaling bundle, one narrow
@@ -178,8 +181,14 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   routing order, and standing gates.
 - `../../tmp/active_wave_plan.md` — short current-wave handoff and closeout
   notes.
-- `../milestones/P35_post_h47_research_record_rollup/` — current low-priority
-  operational/docs rollup packet that records post-`H47` research state,
+- `../milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/` —
+  current post-`H49` planning-only claim-delta bundle fixing `R51`, `R52`,
+  and `H50` while preserving `H49/H43/H36`.
+- `../milestones/P36_post_h49_cleanline_hygiene_and_artifact_policy/` —
+  current low-priority operational/docs packet fixing cleanline execution
+  posture, artifact policy, and no-merge discipline for the post-`H49` wave.
+- `../milestones/P35_post_h47_research_record_rollup/` — preserved prior
+  low-priority operational/docs rollup packet that records post-`H47` research state,
   hygiene policy, and preserved negative-result accounting without changing
   scientific stage.
 - `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current

@@ -1,0 +1,8 @@
+# F27 Artifact Index
+
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/README.md`
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/status.md`
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/todo.md`
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/acceptance.md`
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/artifact_index.md`
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/entry_scope.md`

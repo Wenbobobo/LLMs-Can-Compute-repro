@@ -42,6 +42,26 @@ The current downstream scientific lane after `H49` is:
 
 - `no_active_downstream_runtime_lane`
 
+The current post-`H49` planning bundle is:
+
+- `F26_post_h49_origin_claim_delta_and_next_question_bundle`
+
+The only next runtime candidate fixed by `F26` is:
+
+- `R51_origin_memory_control_surface_sufficiency_gate`
+
+The only later comparator/value gate fixed by `F26` is:
+
+- `R52_origin_internal_vs_external_executor_value_gate`
+
+The only follow-up packet fixed by `F26` is:
+
+- `H50_post_r51_r52_scope_decision_packet`
+
+The saved future bundle blocked behind later explicit `H50` is:
+
+- `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
+
 The current post-`H48` planning bundle is:
 
 - `F25_post_h48_restricted_tinyc_lowering_bundle`
@@ -83,6 +103,10 @@ The preserved prior operational promotion/artifact audit lane is:
 - `P26_post_h37_promotion_and_artifact_hygiene_audit`
 
 The current low-priority operational/docs wave is:
+
+- `P36_post_h49_cleanline_hygiene_and_artifact_policy`
+
+The preserved prior low-priority operational/docs wave is:
 
 - `P35_post_h47_research_record_rollup`
 
@@ -830,8 +854,8 @@ The next required order is now:
 - `F23_post_h47_numeric_scaling_bundle` is now the current post-`H47`
   numeric-scaling planning bundle fixing `R49` as the only next runtime
   candidate while keeping `F24` dormant.
-- `P35_post_h47_research_record_rollup` is now the current low-priority
-  operational/docs wave.
+- `P35_post_h47_research_record_rollup` is now the preserved prior
+  low-priority operational/docs wave.
 - `R49_origin_useful_case_numeric_scaling_gate` is completed and remains the
   current numeric-scaling gate.
 - `H46_post_r47_frontend_bridge_decision_packet` is completed and remains the

@@ -38,8 +38,11 @@ Current control docs:
   comparator-planning bundle, `F23` as the completed post-`H47`
   numeric-scaling planning bundle, `F25` as the completed current post-`H48`
   planning bundle, `R50` as the completed current restricted tiny-`C`
-  lowering gate, `no_active_downstream_runtime_lane` restored by `H49`, and
-  preserving `H43` as the landed paper-grade closeout;
+  lowering gate, `F26` as the current post-`H49` planning bundle, `P36` as
+  the current low-priority operational/docs wave, `P35` as the preserved prior
+  low-priority wave, `R51` as the only next runtime candidate,
+  `no_active_downstream_runtime_lane` restored by `H49`, and preserving `H43`
+  as the landed paper-grade closeout;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
   current master plan for exact-first post-`H43` reentry, fixing `F21`,
   `H44`, `R46`, `H45`, authorized `R47`, blocked `F22`, and conditional
@@ -274,7 +277,7 @@ Current control docs:
 - `docs/milestones/H43_post_r44_useful_case_refreeze/` — the preserved prior
   useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;
-- `docs/milestones/P35_post_h47_research_record_rollup/` — the current
+- `docs/milestones/P35_post_h47_research_record_rollup/` — the preserved prior
   low-priority operational/docs rollup packet that records post-`H47`
   research state, hygiene policy, and preserved negative-result accounting
   without changing scientific stage;

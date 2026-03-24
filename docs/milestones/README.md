@@ -16,6 +16,14 @@ planning bundles. Read the current driver first, not the directory name alone.
   tiny-`C` lowering decision packet that preserves `H48/H43/H36/F20/F21/F22/P27`,
   records completed `R50`, freezes narrow exact tiny-`C` support only, and
   restores `no_active_downstream_runtime_lane`.
+- `F26_post_h49_origin_claim_delta_and_next_question_bundle/` — current
+  post-`H49` planning-only claim-delta bundle that preserves `H49/H43/H36`,
+  fixes `R51` as the only next runtime candidate, fixes `R52` as the only
+  later comparator/value gate, fixes `H50` as the only follow-up packet, and
+  keeps `F27` blocked behind later explicit `H50`.
+- `P36_post_h49_cleanline_hygiene_and_artifact_policy/` — current
+  low-priority operational/docs packet that fixes clean worktree execution
+  posture, artifact policy, and no-merge discipline for the post-`H49` wave.
 - `H48_post_r49_numeric_scaling_decision_packet/` — preserved prior docs-only
   numeric-scaling decision packet that preserves `H47/H43/H36/F20/F21/F22/P27`,
   records completed `R49`, and authorizes exactly `F25`.
@@ -72,7 +80,7 @@ planning bundles. Read the current driver first, not the directory name alone.
   kernels.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational explicit merge packet for the clean post-`H41` stack.
-- `P35_post_h47_research_record_rollup/` — current low-priority
+- `P35_post_h47_research_record_rollup/` — preserved prior low-priority
   operational/docs rollup packet recording post-`H47` research state,
   hygiene policy, and preserved negative-result accounting without changing
   scientific stage.
@@ -235,7 +243,7 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational merge packet that stages explicit merge posture without merging
   `main`.
-- `P35_post_h47_research_record_rollup/` — current low-priority
+- `P35_post_h47_research_record_rollup/` — preserved prior low-priority
   operational/docs rollup packet that records post-`H47` research state,
   hygiene policy, and preserved negative-result accounting without changing
   scientific stage.
@@ -244,12 +252,12 @@ planning bundles. Read the current driver first, not the directory name alone.
   current while refreshing stale downstream blog plus manuscript-helper
   controls.
 - `P32_post_h43_historical_wording_refresh/` — completed auxiliary
-  historical/regeneration wording refresh packet preserved underneath current
+  historical/regeneration wording refresh packet preserved underneath prior
   `P35`.
 - `P33_post_h43_dormant_playbook_wording_refresh/` — completed auxiliary
-  dormant-playbook wording refresh packet preserved underneath current `P35`.
+  dormant-playbook wording refresh packet preserved underneath prior `P35`.
 - `P34_post_h43_live_surface_wording_guardrail/` — completed auxiliary
-  live-surface wording guardrail packet preserved underneath current `P35`.
+  live-surface wording guardrail packet preserved underneath prior `P35`.
 - `P30_post_h43_manuscript_surface_refresh/` — completed prior operational
   manuscript-surface refresh packet that keeps `H43` current while refreshing
   stale paper-facing prose baselines and derivative helper docs.
