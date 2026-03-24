@@ -20,6 +20,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   planning surface for the only admissible post-`H47` runtime question,
   fixing `R49` as the only next runtime candidate while keeping `H47/H43`
   intact.
+- `2026-03-24-post-r49-h48-numeric-scaling-decision-design.md` — the current
+  docs-only decision surface that reads completed `R49`, records `H48` as the
+  active interpretation packet, and authorizes exactly `F25` as the next
+  planning-only bundle.
 - `2026-03-24-post-h47-r49-useful-case-numeric-scaling-design.md` — the
   current execution design surface for the landed `R49` numeric-scaling gate,
   preserving `H47/H43`, executing the fixed three-kernel ladder through the
@@ -30,9 +34,9 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   docs-only route reauthorization packet, `R46` exact surface-generalization
   gate, conditional `R47`, conditional `R48`, and later low-priority rollup.
 - `2026-03-24-post-r48-h47-useful-case-bridge-refreeze-design.md` — the
-  current execution design surface for the landed docs-only `H47` refreeze
-  packet that freezes positive comparator-only `R48` narrowly and restores
-  `no_active_downstream_runtime_lane`.
+  preserved prior execution design surface for the landed docs-only `H47`
+  refreeze packet that freezes positive comparator-only `R48` narrowly before
+  the later completed `H48` decision packet.
 - `2026-03-24-post-r47-h46-frontend-bridge-decision-design.md` — the
   preserved prior execution design surface for the landed docs-only `H46`
   interpretation packet that reads completed `R47`, authorizes exactly `R48`,
@@ -169,10 +173,13 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F21_post_h43_exact_useful_case_expansion_bundle/` — current
   exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
   fixes `R46` as the first admissible next runtime candidate.
-- `../milestones/H47_post_r48_useful_case_bridge_refreeze/` — current active
+- `../milestones/H48_post_r49_numeric_scaling_decision_packet/` — current
+  active docs-only interpretation packet that reads completed `R49`,
+  preserves `H43` as the paper-grade endpoint, restores
+  `no_active_downstream_runtime_lane`, and authorizes exactly `F25`.
+- `../milestones/H47_post_r48_useful_case_bridge_refreeze/` — preserved prior
   docs-only interpretation packet that freezes landed comparator-only `R48`
-  narrowly, preserves `H43` as the paper-grade endpoint, and restores
-  `no_active_downstream_runtime_lane`.
+  narrowly before the later completed `H48` decision.
 - `../milestones/H46_post_r47_frontend_bridge_decision_packet/` — preserved
   prior docs-only interpretation packet that reads completed `R47`,
   authorizes the landed `R48` lane, and keeps `F22` current without widening
@@ -193,6 +200,11 @@ current stage driver, the milestone/result artifacts, and the machine-readable
 - `../milestones/F23_post_h47_numeric_scaling_bundle/` — current post-`H47`
   planning-only numeric-scaling bundle fixing `R49` as the only next runtime
   candidate while keeping `F24` dormant.
+- `../milestones/F25_post_h48_restricted_tinyc_lowering_bundle/` — next
+  authorized planning-only bundle selected by completed `H48`.
+- `../milestones/R49_origin_useful_case_numeric_scaling_gate/` — completed
+  current numeric-scaling gate downstream of completed `F23` and before
+  landed `H48`.
 - `../milestones/R47_origin_restricted_frontend_translation_gate/` —
   completed current exact frontend bridge lane that now underwrites landed
   `R48`.

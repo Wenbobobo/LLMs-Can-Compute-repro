@@ -20,9 +20,11 @@ arbitrary C has been reproduced, or that demo-first presentation is evidence.
 As of `2026-03-24`, the canonical current stage is no longer the old
 same-endpoint `D0` recovery line, and it is no longer parked at the preserved
 `H40 -> R42` activation state alone. The current docs-only decision packet is
-now `H47_post_r48_useful_case_bridge_refreeze`, the preserved prior docs-only
+now `H48_post_r49_numeric_scaling_decision_packet`, the preserved prior
+docs-only decision packet is now
+`H47_post_r48_useful_case_bridge_refreeze`, the preserved earlier docs-only
 decision packet is now `H46_post_r47_frontend_bridge_decision_packet`, the
-preserved earlier docs-only decision packet is now
+preserved earlier docs-only interpretation packet is now
 `H45_post_r46_surface_decision_packet`, the preserved prior route
 reauthorization packet is now
 `H44_post_h43_route_reauthorization_packet`, the preserved prior useful-case
@@ -58,8 +60,9 @@ current semantic-boundary roadmap is
 semantic-boundary activation packet is
 `H40_post_h38_semantic_boundary_activation_packet`. The current paper-grade
 endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while
-`H47` is now the active docs-only useful-case bridge refreeze packet, `H46`
-is now the preserved prior docs-only frontend-bridge decision packet, `H45`
+`H48` is now the active docs-only numeric-scaling decision packet, `H47` is
+now the preserved prior docs-only useful-case bridge refreeze packet, `H46` is
+now the preserved earlier docs-only frontend-bridge decision packet, `H45`
 remains the preserved earlier docs-only surface-decision packet, landed exact
 `R46` remains the preserved prior post-`H44` exact runtime gate that kept all
 `8/8` held-out in-surface useful-case variants exact across the fixed `3/3`
@@ -69,12 +72,15 @@ instruction-identical lowering across the same fixed `3/3` kernels, `F22`
 remains the current comparator-planning bundle, `F23` is now the current
 post-`H47` numeric-scaling planning bundle that preserves the saved `F23`
 envelope, `R49_origin_useful_case_numeric_scaling_gate` is now the completed
-current active runtime lane with `numeric_scaling_survives_through_bucket_c`,
+current numeric-scaling gate with `numeric_scaling_survives_through_bucket_c`,
 `F24` remains dormant, `R48` remains the completed current comparator-only
-useful-case model gate, the next required packet is now
-`H48_post_r49_numeric_scaling_decision_packet`, and `P35` is now the current
-low-priority research-record rollup/docs wave while `P31/P32/P33/P34` remain
-preserved prior helper refresh packets.
+useful-case model gate, `no_active_downstream_runtime_lane` now follows the
+scientific stack after `H48`, `F25_post_h48_restricted_tinyc_lowering_bundle`
+is now the next authorized planning bundle, and
+`P36_post_h48_falsification_closeout_bundle` remains the explicit non-selected
+closeout route. `P35` is now the current low-priority research-record
+rollup/docs wave while `P31/P32/P33/P34` remain preserved prior helper refresh
+packets.
 
 The narrow current stack is:
 
@@ -109,15 +115,17 @@ What stays blocked or deferred:
   preserved prior post-`H44` exact runtime gate on `8/8` held-out in-surface
   variants, `H45_post_r46_surface_decision_packet` is now the preserved prior
   docs-only interpretation packet that authorized exactly
-  `R47_origin_restricted_frontend_translation_gate`, and
-  `H46_post_r47_frontend_bridge_decision_packet` is now the preserved prior
+  `R47_origin_restricted_frontend_translation_gate`,
+  `H46_post_r47_frontend_bridge_decision_packet` is now the preserved earlier
   docs-only interpretation packet that authorized the now-completed
   comparator-only useful-case model gate
-  `R48_origin_dual_mode_useful_case_model_gate`, while
-  `H47_post_r48_useful_case_bridge_refreeze` is now the active docs-only
-  refreeze packet that freezes `R48` as narrow comparator-only support, keeps
-  `F22_post_r46_useful_case_model_bridge_bundle` current as planning-only
-  context, and restores `no_active_downstream_runtime_lane`;
+  `R48_origin_dual_mode_useful_case_model_gate`,
+  `H47_post_r48_useful_case_bridge_refreeze` is now the preserved prior
+  docs-only refreeze packet that froze `R48` as narrow comparator-only
+  support, and `H48_post_r49_numeric_scaling_decision_packet` is now the
+  current docs-only decision packet that records completed `R49`, restores
+  `no_active_downstream_runtime_lane`, and authorizes only
+  `F25_post_h48_restricted_tinyc_lowering_bundle`;
 - the paper-grade `H43` closeout remains preserved even while the later
   `H44 -> R46 -> H45 -> R47 -> H46` ladder is tracked explicitly downstream;
 - `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
@@ -174,8 +182,9 @@ historical packet inventory below.
 ## Current Gate Outcome
 
 - The current active stage is
-  `H47_post_r48_useful_case_bridge_refreeze`, not the preserved prior
-  `H46` packet, the preserved earlier `H45` packet, the preserved prior
+  `H48_post_r49_numeric_scaling_decision_packet`, not the preserved prior
+  `H47` packet, the preserved earlier `H46` packet, the preserved earlier
+  `H45` packet, the preserved prior
   `H44` packet, the preserved prior `H43` packet, the preserved earlier
   `H42` packet, the preserved earlier `H41` packet, the preserved prior
   `H40` packet, the earlier `H30` packet, or the earlier `H25`
@@ -194,8 +203,12 @@ historical packet inventory below.
   `R47_origin_restricted_frontend_translation_gate`.
 - The current completed comparator-only useful-case model gate is
   `R48_origin_dual_mode_useful_case_model_gate`.
-- The current downstream scientific lane after `H47` is
+- The current completed numeric-scaling gate is
+  `R49_origin_useful_case_numeric_scaling_gate`.
+- The current downstream scientific lane after `H48` is
   `no_active_downstream_runtime_lane`.
+- The next authorized planning bundle is
+  `F25_post_h48_restricted_tinyc_lowering_bundle`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -229,13 +242,15 @@ historical packet inventory below.
 - The preserved prior docs-only reopen-decision packet is
   `H38_post_f16_runtime_relevance_reopen_decision_packet`.
 - The current active docs-only decision packet is
-  `H47_post_r48_useful_case_bridge_refreeze`, the preserved prior docs-only
-  decision packet is `H46_post_r47_frontend_bridge_decision_packet`, the
+  `H48_post_r49_numeric_scaling_decision_packet`, the preserved prior
+  docs-only decision packet is `H47_post_r48_useful_case_bridge_refreeze`, the
   preserved earlier docs-only decision packet is
-  `H45_post_r46_surface_decision_packet`, the preserved prior docs-only route
-  packet is `H44_post_h43_route_reauthorization_packet`, the preserved prior
-  useful-case refreeze packet is `H43_post_r44_useful_case_refreeze`, the
-  preserved prior route-selection packet is
+  `H46_post_r47_frontend_bridge_decision_packet`, the preserved earlier
+  interpretation packet is `H45_post_r46_surface_decision_packet`, the
+  preserved prior docs-only route packet is
+  `H44_post_h43_route_reauthorization_packet`, the preserved prior useful-case
+  refreeze packet is `H43_post_r44_useful_case_refreeze`, the preserved prior
+  route-selection packet is
   `H42_post_r43_route_selection_packet`, and `H43` remains the current
   paper-grade endpoint rather than a widened runtime claim.
 - The current completed post-`H44` exact runtime gate is
@@ -243,14 +258,17 @@ historical packet inventory below.
   `surface_generalizes_narrowly` on the fixed held-out in-surface `8/8`
   variant set without widening the claim ceiling; the current completed exact
   frontend bridge gate is `R47_origin_restricted_frontend_translation_gate`,
-  and the current completed comparator-only useful-case model gate is
+  the current completed comparator-only useful-case model gate is
   `R48_origin_dual_mode_useful_case_model_gate`, which records
   `useful_case_model_lane_supported_without_replacing_exact` with both admitted
   modes exact on all `8/8` preserved useful-case variants and the trainable
   mode exact on the explicit held-out `histogram16_u8` family (`3/3`
-  variants). `H47_post_r48_useful_case_bridge_refreeze` is now the active
-  docs-only refreeze packet, and `no_active_downstream_runtime_lane` now
-  follows the scientific stack.
+  variants). `R49_origin_useful_case_numeric_scaling_gate` is now the
+  completed current numeric-scaling gate, `H48_post_r49_numeric_scaling_decision_packet`
+  is now the current active docs-only interpretation packet, and
+  `F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized
+  planning bundle while `no_active_downstream_runtime_lane` follows the
+  scientific stack.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.

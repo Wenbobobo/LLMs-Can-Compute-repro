@@ -12,11 +12,14 @@ planning bundles. Read the current driver first, not the directory name alone.
 
 ## Current Top Of Stack
 
-- `H47_post_r48_useful_case_bridge_refreeze/` — current active docs-only
+- `H48_post_r49_numeric_scaling_decision_packet/` — current active docs-only
+  numeric-scaling decision packet that preserves `H47/H43/H36/F20/F21/F22/P27`,
+  records completed `R49`, restores `no_active_downstream_runtime_lane`, and
+  authorizes exactly `F25`.
+- `H47_post_r48_useful_case_bridge_refreeze/` — preserved prior docs-only
   useful-case refreeze packet that preserves `H46/H43/H36/F20/F21/F22/P27`,
-  freezes landed comparator-only `R48` narrowly, and restores
-  `no_active_downstream_runtime_lane`.
-- `H46_post_r47_frontend_bridge_decision_packet/` — preserved prior docs-only
+  freezes landed comparator-only `R48` narrowly, and hands the stack to `H48`.
+- `H46_post_r47_frontend_bridge_decision_packet/` — preserved earlier docs-only
   frontend-bridge decision packet that preserves `H45/H44/H43/H36/F20/F21/P27`,
   interprets completed `R47`, promotes `F22` into the current
   comparator-planning bundle, and authorizes the landed `R48`.
@@ -109,8 +112,11 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F23_post_h47_numeric_scaling_bundle/` — current planning-only post-`H47`
   numeric-scaling bundle fixing `R49` as the only next runtime candidate,
   keeping `F24` dormant, and leaving `F25/P36` as placeholders only.
-- `R49_origin_useful_case_numeric_scaling_gate/` — completed current active
-  runtime numeric-scaling gate validating `9/9` widened useful-case rows
+- `F25_post_h48_restricted_tinyc_lowering_bundle/` — next authorized
+  planning-only bundle selected by completed `H48` for one restricted tiny-`C`
+  lowering question.
+- `R49_origin_useful_case_numeric_scaling_gate/` — completed current
+  numeric-scaling gate validating `9/9` widened useful-case rows
   across the fixed `3/3` kernels, exposing `7/9` `float32_single_head`
   failures, and preserving both admitted float32 recovery regimes through
   `bucket_c_8x`.
@@ -344,7 +350,8 @@ stack:
 - `F22` is the current comparator-planning bundle, not active execution work.
 - `R47` is the completed current exact frontend bridge gate.
 - `R48` is the completed current comparator-only useful-case model gate.
-- `H47` restores `no_active_downstream_runtime_lane`.
+- `H48` restores `no_active_downstream_runtime_lane` and authorizes exactly
+  `F25` as the next planning-only bundle.
 - `H43` remains the landed paper-grade closeout underneath the later explicit
   reentry ladder.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not

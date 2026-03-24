@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h48_docs_select_f25_without_scope_widening",
+      "status": "pass",
+      "notes": "H48 should select F25 narrowly, keep P36 explicit but non-selected, and avoid widening scope by momentum."
+    },
+    {
+      "item_id": "upstream_r49_and_f23_support_the_h48_positive_route",
+      "status": "pass",
+      "notes": "H48 should authorize F25 only if R49 stayed exact, escaped the saved kill criteria, and kept admitted float32 recovery alive on bucket_a and bucket_b."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h48_current_and_authorize_f25",
+      "status": "pass",
+      "notes": "Shared control surfaces should make H48 current, preserve H47 as prior, and expose F25 as the next authorized planning bundle."
+    }
+  ]
+}

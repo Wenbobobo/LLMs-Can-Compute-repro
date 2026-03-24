@@ -5,11 +5,11 @@
 Current scientific/control stack:
 
 - current active docs-only decision packet:
-  `H47_post_r48_useful_case_bridge_refreeze`;
+  `H48_post_r49_numeric_scaling_decision_packet`;
 - preserved prior docs-only decision packet:
-  `H46_post_r47_frontend_bridge_decision_packet`;
+  `H47_post_r48_useful_case_bridge_refreeze`;
 - preserved earlier docs-only decision packet:
-  `H45_post_r46_surface_decision_packet`;
+  `H46_post_r47_frontend_bridge_decision_packet`;
 - preserved prior docs-only route packet:
   `H44_post_h43_route_reauthorization_packet`;
 - preserved prior useful-case refreeze packet and current paper-grade endpoint:
@@ -29,7 +29,11 @@ Current scientific/control stack:
 - current completed comparator-only useful-case model gate:
   `R48_origin_dual_mode_useful_case_model_gate`;
 - current downstream scientific lane:
+  `no_active_downstream_runtime_lane`;
+- current completed numeric-scaling gate:
   `R49_origin_useful_case_numeric_scaling_gate`;
+- next authorized planning bundle:
+  `F25_post_h48_restricted_tinyc_lowering_bundle`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
@@ -72,9 +76,11 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H47_post_r48_useful_case_bridge_refreeze` is the current active docs-only
-useful-case bridge refreeze packet.
-`H46_post_r47_frontend_bridge_decision_packet` is the preserved prior
+`H48_post_r49_numeric_scaling_decision_packet` is the current active docs-only
+numeric-scaling decision packet.
+`H47_post_r48_useful_case_bridge_refreeze` is the preserved prior docs-only
+decision packet.
+`H46_post_r47_frontend_bridge_decision_packet` is the preserved earlier
 docs-only decision packet.
 `H45_post_r46_surface_decision_packet` is the preserved earlier docs-only
 surface-decision packet.
@@ -95,10 +101,14 @@ numeric-scaling planning bundle. It fixes
 candidate, keeps `F24_post_h47_hybrid_executor_growth_bundle` dormant, and
 leaves `F25/P36` as placeholders only.
 `R49_origin_useful_case_numeric_scaling_gate` is now the completed current
-active runtime lane. It records `numeric_scaling_survives_through_bucket_c`,
+numeric-scaling gate. It records `numeric_scaling_survives_through_bucket_c`,
 keeps all `9/9` widened rows exact across the fixed `3/3` useful-case
-kernels, exposes `7/9` `float32_single_head` failures, and hands
-interpretation to `H48_post_r49_numeric_scaling_decision_packet`.
+kernels, exposes `7/9` `float32_single_head` failures, and is now interpreted
+through landed `H48_post_r49_numeric_scaling_decision_packet`.
+`F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized
+planning bundle.
+`P36_post_h48_falsification_closeout_bundle` remains the explicit non-selected
+closeout bundle.
 `P35_post_h47_research_record_rollup` is the current low-priority
 operational/docs wave. It records post-`H47` research state, quarantines dirty
 root `main`, records explicit no-merge posture, preserves negative-result
@@ -189,8 +199,8 @@ the current low-priority wave.
 
 ## Immediate Objectives
 
-1. Preserve `H47` as the current active docs-only decision packet.
-2. Preserve `H46` as the preserved prior docs-only decision packet.
+1. Preserve `H48` as the current active docs-only decision packet.
+2. Preserve `H47` as the preserved prior docs-only decision packet.
 3. Preserve `H43` as the current paper-grade endpoint and `H36` as the
    routing/refreeze packet underneath the stack.
 4. Preserve completed `R47` as the decisive exact frontend bridge gate.
@@ -212,13 +222,14 @@ the current low-priority wave.
 13. Preserve `F23` as the current saved post-`H47` numeric-scaling planning
     bundle.
 14. Treat completed `R49_origin_useful_case_numeric_scaling_gate` as the
-    current active runtime lane and hand interpretation to
+    completed current numeric-scaling gate interpreted by landed
     `H48_post_r49_numeric_scaling_decision_packet`.
 15. Keep `F24_post_h47_hybrid_executor_growth_bundle` dormant and
     non-authorized.
-16. Keep `F25_post_h48_restricted_tinyc_lowering_bundle` and
-    `P36_post_h48_falsification_closeout_bundle` downstream of `H48` rather
-    than auto-authorized by momentum.
+16. Keep `F25_post_h48_restricted_tinyc_lowering_bundle` as the next
+    authorized planning bundle and
+    `P36_post_h48_falsification_closeout_bundle` as the explicit non-selected
+    closeout route.
 
 ## Last Completed Order
 
@@ -273,12 +284,15 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R48_origin_dual_mode_useful_case_model_gate` ->
 `H47_post_r48_useful_case_bridge_refreeze` ->
 `P35_post_h47_research_record_rollup` ->
-`F23_post_h47_numeric_scaling_bundle`
+`F23_post_h47_numeric_scaling_bundle` ->
+`R49_origin_useful_case_numeric_scaling_gate` ->
+`H48_post_r49_numeric_scaling_decision_packet`
 
 ## Current Rule
 
-- `H47` is the current active docs-only packet.
-- `H45` is the preserved prior docs-only decision packet.
+- `H48` is the current active docs-only packet.
+- `H47` is the preserved prior docs-only decision packet.
+- `H45` is the preserved earlier docs-only decision packet.
 - `H44` is the preserved prior docs-only route packet.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint.
@@ -310,7 +324,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `H47` is the current active docs-only interpretation packet.
 - `F22` is the current comparator-planning bundle.
 - `F23` is the current post-`H47` numeric-scaling planning bundle.
-- `R49` is the only next runtime candidate fixed by current planning.
+- `R49` is the completed current numeric-scaling gate.
+- `F25_post_h48_restricted_tinyc_lowering_bundle` is the next authorized
+  planning bundle.
 
 ## Control References
 

@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-24-post-r49-h48-numeric-scaling-decision-design.md",
+      "matched_lines": [
+        "`authorize_f25_restricted_tinyc_lowering_bundle`;",
+        "`freeze_post_h47_as_practical_falsifier_for_clean_widening`."
+      ]
+    },
+    {
+      "path": "docs/milestones/H48_post_r49_numeric_scaling_decision_packet/README.md",
+      "matched_lines": [
+        "`authorize_f25_restricted_tinyc_lowering_bundle`;",
+        "`P36_post_h48_falsification_closeout_bundle` remains the non-selected"
+      ]
+    },
+    {
+      "path": "docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/README.md",
+      "matched_lines": [
+        "Authorized next planning-only bundle after completed `H48`.",
+        "Current status: `authorized_by_h48_not_yet_executed`."
+      ]
+    },
+    {
+      "path": "docs/milestones/P36_post_h48_falsification_closeout_bundle/README.md",
+      "matched_lines": [
+        "Non-selected downstream closeout bundle.",
+        "Current status: `not_selected_by_h48`."
+      ]
+    },
+    {
+      "path": "docs/claims_matrix.md",
+      "matched_lines": [
+        "| D2d | The preserved useful-case ladder survives one more narrow numeric-scaling widening under admitted float32 recovery regimes without scope lift | `R49_origin_useful_case_numeric_scaling_gate` over the saved `F23` three-bucket ladder on `sum_i32_buffer`, `count_nonzero_i32_buffer`, and `histogram16_u8` | validated narrowly on `9/9` widened variants across `3/3` kernels; `float32_single_head` fails on `7/9` rows by `tie_collapse` while both admitted recovery regimes (`radix2`, `block_recentered`) stay exact on all buckets; still bounded useful-case only and not arbitrary `C` or broader Wasm |",
+        "| H48 | The post-`R49` useful-case line can authorize exactly one restricted tiny-`C` lowering planning bundle or freeze as a practical falsifier, with the landed packet selecting the positive planning-only route | `H48_post_r49_numeric_scaling_decision_packet` over `H47`, `F23`, `R49`, `H43`, `P35`, and `P27` | validated as a docs-only packet; preserves `H43` as the paper-grade endpoint, preserves `H47` as the prior decision packet, records `R49` as the completed current numeric-scaling gate, selects `authorize_f25_restricted_tinyc_lowering_bundle`, leaves `P36` explicit but non-selected, restores `no_active_downstream_runtime_lane`, and sets `next_required_lane = f25_post_h48_restricted_tinyc_lowering_bundle` |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `F25_post_h48_restricted_tinyc_lowering_bundle`",
+        "`F25_post_h48_restricted_tinyc_lowering_bundle`.",
+        "- planning-only `F25_post_h48_restricted_tinyc_lowering_bundle` as the next",
+        "`F25_post_h48_restricted_tinyc_lowering_bundle`",
+        "- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized",
+        "- `F25_post_h48_restricted_tinyc_lowering_bundle` is the next authorized",
+        "docs-only decision packet, `F25_post_h48_restricted_tinyc_lowering_bundle`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/experiment_manifest.md",
+      "matched_lines": [
+        "| 2026-03-24 | post-`R49` `H48` numeric-scaling decision wave | docs/control plus exporter sync: save one dedicated `H48` numeric-scaling decision design, complete the `H48` milestone docs, promote `F25` from placeholder to the next authorized planning bundle while keeping `P36` explicit as the non-selected closeout route, add one `H48` exporter plus focused test/results, and refresh shared root/current-stage/index/handoff surfaces so `H48` becomes the current active docs-only packet while `H47` becomes preserved prior and `R49` becomes the completed current numeric-scaling gate | new `docs/plans/2026-03-24-post-r49-h48-numeric-scaling-decision-design.md`, new `docs/milestones/H48_post_r49_numeric_scaling_decision_packet/*`, refreshed `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/README.md`, new `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/status.md`, new `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/todo.md`, refreshed `docs/milestones/P36_post_h48_falsification_closeout_bundle/README.md`, refreshed `README.md`, refreshed `STATUS.md`, refreshed `docs/publication_record/README.md`, refreshed `docs/plans/README.md`, refreshed `docs/milestones/README.md`, refreshed `docs/claims_matrix.md`, refreshed `docs/publication_record/current_stage_driver.md`, refreshed `docs/publication_record/experiment_manifest.md`, refreshed `tmp/active_wave_plan.md`, new `scripts/export_h48_post_r49_numeric_scaling_decision_packet.py`, new `tests/test_export_h48_post_r49_numeric_scaling_decision_packet.py`, new `results/H48_post_r49_numeric_scaling_decision_packet/summary.json`, new `results/H48_post_r49_numeric_scaling_decision_packet/checklist.json`, new `results/H48_post_r49_numeric_scaling_decision_packet/claim_packet.json`, new `results/H48_post_r49_numeric_scaling_decision_packet/snapshot.json` | CPython 3.13.9 from `D:/zWenbo/AI/LLMCompute-worktrees/p35-f23-post-h47-mainline-extension/.venv`, `uv 0.9.14`, clean successor worktree `D:/zWenbo/AI/LLMCompute-worktrees/p35-f23-post-h47-mainline-extension` on `wip/p35-f23-post-h47-mainline-extension`; focused exporter run plus pytest on `H48` and `git diff --check` should pass | no scientific widening; `H48` becomes the current active docs-only packet, `H47` becomes the preserved prior decision packet, `H43` stays the paper-grade endpoint, `R49` becomes the completed current numeric-scaling gate, `no_active_downstream_runtime_lane` follows the stack again, `F25` becomes the next authorized planning bundle, `P36` remains explicit but non-selected, and `merge_executed = false` stays explicit |"
+      ]
+    }
+  ]
+}

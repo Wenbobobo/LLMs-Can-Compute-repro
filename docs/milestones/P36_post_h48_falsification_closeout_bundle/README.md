@@ -1,9 +1,9 @@
 # P36 Post-H48 Falsification Closeout Bundle
 
-Placeholder only.
+Non-selected downstream closeout bundle.
 
-If `H48` selects the negative route after `R49`, `P36` will become the next
-docs-only closeout bundle for packaging a practical falsifier of clean
-useful-case widening.
+`H48` selected the positive route after `R49`, so `P36` remains the explicit
+non-selected docs-only closeout bundle for packaging a practical falsifier of
+clean useful-case widening if a later packet needs it.
 
-Current status: `not_authorized_yet`.
+Current status: `not_selected_by_h48`.

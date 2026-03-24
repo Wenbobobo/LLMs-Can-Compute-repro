@@ -3,8 +3,9 @@
 ## Current Scientific State
 
 - The current active docs-only decision packet is
-  `H47_post_r48_useful_case_bridge_refreeze`, not the preserved prior
-  `H46` packet, the preserved earlier `H45` packet, the preserved prior `H44`
+  `H48_post_r49_numeric_scaling_decision_packet`, not the preserved prior
+  `H47` packet, the preserved earlier `H46` packet, the preserved earlier `H45`
+  packet, the preserved prior `H44`
   packet, the preserved prior `H43` packet, the preserved earlier `H42`
   packet, the preserved earlier `H41` packet, the preserved prior `H40`
   packet, the preserved prior `H30` packet, or the earlier `H25`
@@ -21,9 +22,12 @@
   `R47_origin_restricted_frontend_translation_gate`.
 - The current completed comparator-only useful-case model gate is
   `R48_origin_dual_mode_useful_case_model_gate`.
-- The current active runtime lane after `H47` is
-  `R49_origin_useful_case_numeric_scaling_gate`, with the next required
-  packet now `H48_post_r49_numeric_scaling_decision_packet`.
+- The current completed numeric-scaling gate is
+  `R49_origin_useful_case_numeric_scaling_gate`.
+- The current downstream scientific lane after `H48` is
+  `no_active_downstream_runtime_lane`.
+- `F25_post_h48_restricted_tinyc_lowering_bundle` is now the next authorized
+  planning bundle.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -271,14 +275,23 @@
   explicit held-out `histogram16_u8` family (`3/3` variants), keeps exact
   evidence decisive relative to model evidence, and routes the next
   interpretation through `H47_post_r48_useful_case_bridge_refreeze`.
-- `H47_post_r48_useful_case_bridge_refreeze` is now complete as the current
-  active docs-only useful-case bridge refreeze packet:
-  it preserves `H46` as the preserved prior docs-only decision packet,
+- `H47_post_r48_useful_case_bridge_refreeze` is now complete as the preserved
+  prior docs-only useful-case bridge refreeze packet:
+  it preserves `H46` as the preserved earlier docs-only decision packet,
   preserves `H43` as the current paper-grade endpoint, preserves `R47` as the
   completed current exact frontend bridge gate, preserves `R48` as the
   completed current comparator-only useful-case model gate, keeps claim
-  ceilings bounded to useful cases only, and restores
-  `no_active_downstream_runtime_lane`.
+  ceilings bounded to useful cases only, and records the narrow comparator-only
+  bridge state passed to `H48`.
+- `H48_post_r49_numeric_scaling_decision_packet` is now complete as the
+  current active docs-only numeric-scaling decision packet:
+  it preserves `H47` as the preserved prior docs-only packet, preserves `H43`
+  as the current paper-grade endpoint, records `R49` as the completed current
+  numeric-scaling gate, selects
+  `authorize_f25_restricted_tinyc_lowering_bundle`, leaves
+  `freeze_post_h47_as_practical_falsifier_for_clean_widening` non-selected,
+  restores `no_active_downstream_runtime_lane`, and sets
+  `next_required_lane = f25_post_h48_restricted_tinyc_lowering_bundle`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.
@@ -523,17 +536,18 @@
 - `P8` stage is complete on the current frozen scope.
 - `P9` stage is complete on the same scope.
 - The current active post-`P9` operational stage is
-  `H47_post_r48_useful_case_bridge_refreeze` under
+  `H48_post_r49_numeric_scaling_decision_packet` under
   `docs/publication_record/current_stage_driver.md`, with
-  preserved prior docs-only packets `H46/H45/H44/H43/H42/H41/H40/H38/H37`,
+  preserved prior docs-only packets `H47/H46/H45/H44/H43/H42/H41/H40/H38/H37`,
   preserved active routing/refreeze packet
   `H36_post_r40_bounded_scalar_family_refreeze`, completed current
   `R42/R43/R44/R45` semantic-boundary gate stack, current coequal-mainline
   model bundle `F20`, current exact post-`H43` planning bundle `F21`, current
   comparator-planning bundle `F22`, completed current exact frontend bridge
   gate `R47`, completed current comparator-only useful-case model gate `R48`,
-  restored downstream lane `no_active_downstream_runtime_lane`, completed explicit merge
-  packet `P27`, completed prior
+  completed current numeric-scaling gate `R49`, restored downstream lane
+  `no_active_downstream_runtime_lane`, next authorized planning bundle `F25`,
+  completed explicit merge packet `P27`, completed prior
   low-priority sync packets `P30/P29/P28`, current low-priority operational
   rollup wave `P35`, completed prior blocked-blog/helper guardrail refresh
   packet `P31`, completed auxiliary historical/regeneration wording refresh
@@ -564,13 +578,13 @@
 
 1. Keep `README.md`, `STATUS.md`, `docs/publication_record/README.md`,
    `docs/publication_record/current_stage_driver.md`, and
-   `tmp/active_wave_plan.md` aligned on the rule that `H47` is the current
-   active docs-only packet, `H46` is the preserved prior docs-only decision
-   packet, `H43` remains the current paper-grade endpoint, `R47` remains the
-   completed current exact frontend bridge gate, `R48` remains the completed
-   current comparator-only useful-case model gate, `F22` remains the current
-   comparator-planning bundle, and `no_active_downstream_runtime_lane` now
-   follows the scientific stack.
+   `tmp/active_wave_plan.md` aligned on the rule that `H48` is the current
+   active docs-only packet, `H47` is the preserved prior docs-only decision
+   packet, `H43` remains the current paper-grade endpoint,
+   `R49_origin_useful_case_numeric_scaling_gate` is the completed current
+   numeric-scaling gate, `F25_post_h48_restricted_tinyc_lowering_bundle` is the
+   next authorized planning bundle, and `no_active_downstream_runtime_lane`
+   now follows the scientific stack.
 2. Treat `R48_origin_dual_mode_useful_case_model_gate` as narrow comparator-
    only evidence on the preserved useful-case contract: exact evidence remains
    decisive, broader Wasm/C remains unauthorized, and model positives do not
