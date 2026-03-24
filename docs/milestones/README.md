@@ -39,6 +39,9 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `R45_origin_dual_mode_model_mainline_gate/` — completed current coequal
   model gate evaluating both admitted model modes on the landed `R43`
   contract family.
+- `R46_origin_useful_case_surface_generalization_gate/` — completed current
+  post-`H44` exact runtime gate validating held-out in-surface generalization
+  on `8/8` variants across the fixed `3/3` useful-case kernels.
 - `P27_post_h41_clean_promotion_and_explicit_merge_packet/` — completed
   operational explicit merge packet for the clean post-`H41` stack.
 - `P31_post_h43_blog_guardrails_refresh/` — current low-priority
@@ -83,10 +86,8 @@ planning bundles. Read the current driver first, not the directory name alone.
 - `F19_post_f18_restricted_wasm_useful_case_roadmap/` — current planning-only
   semantic-boundary roadmap that turns the preserved `F9` family into a
   decision-complete restricted-Wasm / useful-case surface.
-- `R46_origin_useful_case_surface_generalization_gate/` — next authorized
-  exact runtime lane under `H44`, still pending execution.
-- `H45_post_r46_surface_decision_packet/` — saved future decision packet that
-  interprets `R46` before any frontend/model widening.
+- `H45_post_r46_surface_decision_packet/` — saved next docs-only decision
+  packet that interprets landed `R46` before any frontend/model widening.
 - `R47_origin_restricted_frontend_translation_gate/` — conditional future
   exact frontend bridge lane, downstream of positive `R46`.
 - `R48_origin_dual_mode_useful_case_model_gate/` — conditional future
@@ -305,8 +306,9 @@ stack:
 - `R45` is the completed current coequal model lane under the `F20` evidence
   rule.
 - `R44` is the completed current restricted useful-case gate.
-- `R46` is the current authorized next exact runtime lane under `H44`, while
-  `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
+- `R46` is the completed current post-`H44` exact runtime gate.
+- `H45` is the next required docs-only interpretation packet.
+- `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
 - `F12`, `F13`, and `F14` are preserved historical or planning surfaces, not
   runtime packets.
 - `F9` remains the default forward semantic-boundary roadmap and `F11`

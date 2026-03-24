@@ -7,14 +7,14 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects current `H43` as the active docs-only refreeze
-  packet, preserved `H42/H41` prior docs-only packets, preserved `H36`
-  routing/refreeze packet, completed `R42/R43/R44/R45` gate stack, current
-  `F20/F16/F17/F18/F19` bundles, completed `P27` explicit merge posture,
-  preserved `P26/H40/H38/H37/P25` prior support lanes, current `F15`
-  derivative bundle, preserved `H35/H34/H33/H32/H31/H30/H29/H28/H27` stack
-  context, keeps `R41`, `R29`, and `F3` non-active, and keeps
-  `merge_executed = false`.
+- [ ] `STATUS.md` reflects current `H44` as the active docs-only route packet,
+  preserved `H43` as the paper-grade endpoint, preserved `H42/H41` prior
+  docs-only packets, preserved `H36` routing/refreeze packet, completed
+  `R42/R43/R44/R45/R46` gate stack, current `F20/F16/F17/F18/F19` bundles,
+  completed `P27` explicit merge posture, preserved `P26/H40/H38/H37/P25`
+  prior support lanes, current `F15` derivative bundle, preserved
+  `H35/H34/H33/H32/H31/H30/H29/H28/H27` stack context, keeps `R41`, `R29`,
+  and `F3` non-active, and keeps `merge_executed = false`.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
   wording downstream of landed
   `H43/H42/H41/F20/P27/R45/R44/R43/H40/H36/R42/H38/F16/F17/F18/F19/P26/H37/P25/F15/H35/H34/H32/R40/R39`
@@ -61,6 +61,9 @@ current freeze candidate is assembled.
   `freeze_r44_as_narrow_supported_here`, `claim_d_state =
   supported_here_narrowly`, and `next_required_lane =
   no_active_downstream_runtime_lane`.
+- [ ] `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
+  reports `surface_generalizes_narrowly`, `exact_variant_count = 8`, and
+  `next_required_lane = h45_post_r46_surface_decision_packet`.
 - [ ] `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
   reports `useful_case_surface_supported_narrowly`, `exact_kernel_count = 3`,
   and bounded useful-case support only.

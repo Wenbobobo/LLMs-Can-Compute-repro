@@ -86,6 +86,7 @@ def load_inputs() -> dict[str, Any]:
         "blog_rules_text": read_text(ROOT / "docs" / "publication_record" / "blog_release_rules.md"),
         "p1_summary": read_json(ROOT / "results" / "P1_paper_readiness" / "summary.json"),
         "h43_summary": read_json(ROOT / "results" / "H43_post_r44_useful_case_refreeze" / "summary.json"),
+        "r46_summary": read_json(ROOT / "results" / "R46_origin_useful_case_surface_generalization_gate" / "summary.json"),
         "r44_summary": read_json(ROOT / "results" / "R44_origin_restricted_wasm_useful_case_execution_gate" / "summary.json"),
         "r45_summary": read_json(ROOT / "results" / "R45_origin_dual_mode_model_mainline_gate" / "summary.json"),
         "r43_summary": read_json(ROOT / "results" / "R43_origin_bounded_memory_small_vm_execution_gate" / "summary.json"),
@@ -157,6 +158,7 @@ def build_checklist_rows(
     blog_rules_text: str,
     p1_summary: dict[str, Any],
     h43_summary: dict[str, Any],
+    r46_summary: dict[str, Any],
     r44_summary: dict[str, Any],
     r45_summary: dict[str, Any],
     r43_summary: dict[str, Any],
@@ -179,26 +181,31 @@ def build_checklist_rows(
                     "does **not** claim that general llms are computers",
                     "arbitrary c has been reproduced",
                     "the current active stage is",
+                    "`h44_post_h43_route_reauthorization_packet`",
                     "`h43_post_r44_useful_case_refreeze`",
                     "`r44_origin_restricted_wasm_useful_case_execution_gate`",
                     "`r45_origin_dual_mode_model_mainline_gate`",
-                    "no active downstream runtime lane now follows `h43`",
+                    "`r46_origin_useful_case_surface_generalization_gate`",
+                    "`h45_post_r46_surface_decision_packet`",
+                    "no active downstream runtime lane follows the paper-grade `h43` closeout",
                 ],
             )
             and contains_all(
                 status_text,
                 [
+                    "`h44_post_h43_route_reauthorization_packet`",
                     "`h43_post_r44_useful_case_refreeze`",
                     "`h42_post_r43_route_selection_packet`",
                     "`h36_post_r40_bounded_scalar_family_refreeze`",
                     "`r43_origin_bounded_memory_small_vm_execution_gate`",
                     "`r44_origin_restricted_wasm_useful_case_execution_gate`",
                     "`r45_origin_dual_mode_model_mainline_gate`",
+                    "`r46_origin_useful_case_surface_generalization_gate`",
                     "`merge_executed = false`",
                 ],
             )
             else "blocked",
-            "notes": "README and STATUS should keep the H43 release-control stack explicit while preserving narrow non-goals.",
+            "notes": "README and STATUS should keep the H44/H43/R46 release-control stack explicit while preserving narrow non-goals.",
         },
         {
             "item_id": "release_preflight_checklist_tracks_current_machine_guards",
@@ -318,9 +325,10 @@ def build_checklist_rows(
             if contains_all(
                 release_candidate_text,
                 [
-                    "current `h43` docs-only useful-case refreeze",
-                    "`r42-r43-r44-r45` completed semantic-boundary gate stack",
+                    "current `h44` active docs-only route packet plus `h43` paper-grade",
+                    "`r42-r43-r44-r45-r46` completed semantic-boundary gate stack",
                     "results/h43_post_r44_useful_case_refreeze/summary.json",
+                    "results/r46_origin_useful_case_surface_generalization_gate/summary.json",
                     "results/p28_post_h43_publication_surface_sync/summary.json",
                 ],
             )
@@ -379,6 +387,10 @@ def build_checklist_rows(
             and str(h43_summary["summary"]["selected_outcome"]) == "freeze_r44_as_narrow_supported_here"
             and str(h43_summary["summary"]["claim_d_state"]) == "supported_here_narrowly"
             and str(h43_summary["summary"]["next_required_lane"]) == "no_active_downstream_runtime_lane"
+            and str(r46_summary["summary"]["gate"]["lane_verdict"]) == "surface_generalizes_narrowly"
+            and int(r46_summary["summary"]["gate"]["exact_variant_count"]) == 8
+            and str(r46_summary["summary"]["gate"]["next_required_lane"])
+            == "h45_post_r46_surface_decision_packet"
             and str(r44_summary["summary"]["gate"]["lane_verdict"]) == "useful_case_surface_supported_narrowly"
             and int(r44_summary["summary"]["gate"]["exact_kernel_count"]) == 3
             and str(r45_summary["summary"]["gate"]["lane_verdict"])
@@ -545,7 +557,7 @@ def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summ
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
         "recommended_next_action": (
-            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H43 remains the current active docs-only useful-case refreeze packet, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, P27 remains the explicit merge packet with merge_executed = false, P28 remains the completed publication/control sync packet, and no_active_downstream_runtime_lane remains the current follow-on state"
+            "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H44 remains the active docs-only route packet, H43 remains the paper-grade endpoint, R46 remains the completed post-H44 exact runtime gate, H45 remains the next required decision packet, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, and P27/P28 remain the explicit merge and publication-control sync packets"
             if not blocked_items
             else "resolve the blocked release-preflight items before treating outward-sync docs as stable"
         ),
@@ -599,6 +611,7 @@ def main() -> None:
                 "docs/publication_record/blog_release_rules.md",
                 "results/P1_paper_readiness/summary.json",
                 "results/H43_post_r44_useful_case_refreeze/summary.json",
+                "results/R46_origin_useful_case_surface_generalization_gate/summary.json",
                 "results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json",
                 "results/R45_origin_dual_mode_model_mainline_gate/summary.json",
                 "results/R43_origin_bounded_memory_small_vm_execution_gate/summary.json",
@@ -620,8 +633,9 @@ def main() -> None:
                 "",
                 "Machine-readable audit of whether the current outward release-facing docs,",
                 "release/public ledgers, and frozen paper bundle remain aligned on the current",
-                "H43 release-control stack. Current release-commit readiness is carried by the",
-                "separate worktree hygiene snapshot.",
+                "H43 paper lane plus active H44/R46 internal control stack. Current",
+                "release-commit readiness is carried by the separate worktree hygiene",
+                "snapshot.",
                 "",
                 "Artifacts:",
                 "- `summary.json`",

@@ -22,6 +22,10 @@ The current completed restricted useful-case gate is:
 
 - `R44_origin_restricted_wasm_useful_case_execution_gate`
 
+The current completed post-`H44` exact runtime gate is:
+
+- `R46_origin_useful_case_surface_generalization_gate`
+
 The current completed coequal model gate is:
 
 - `R45_origin_dual_mode_model_mainline_gate`
@@ -132,7 +136,11 @@ above `R42`, and one completed operational merge packet:
   `useful_case_surface_supported_narrowly`; and
 - `H43` interprets that landed `R44` result explicitly, records claim `D` as
   `supported_here_narrowly`, preserves `H42/H36`, and restores
-  `no_active_downstream_runtime_lane`.
+  `no_active_downstream_runtime_lane`; and
+- `R46` then keeps the held-out useful-case surface exact on `8/8` fixed
+  in-surface variants across the landed `3/3` kernel ladder, records
+  `surface_generalizes_narrowly`, and fixes `H45` as the next required
+  interpretation packet.
 
 ## Current Machine-State Meaning
 
@@ -349,13 +357,20 @@ above `R42`, and one completed operational merge packet:
   `preserved_prior_docs_only_decision_packet = h43_post_r44_useful_case_refreeze`,
   `current_planning_bundle = f21_post_h43_exact_useful_case_expansion_bundle`,
   `current_paper_grade_endpoint = h43_post_r44_useful_case_refreeze`,
-  `selected_outcome = authorize_r46_origin_useful_case_surface_generalization_gate`,
-  `authorized_next_runtime_candidate = r46_origin_useful_case_surface_generalization_gate`,
+  `selected_outcome = preserve_r46_origin_useful_case_surface_generalization_gate_as_completed`,
+  `current_completed_post_h44_exact_runtime_gate = r46_origin_useful_case_surface_generalization_gate`,
   `deferred_future_runtime_candidate = r47_origin_restricted_frontend_translation_gate`,
   `deferred_future_model_candidate = r48_origin_dual_mode_useful_case_model_gate`,
   `explicit_merge_packet = p27_post_h41_clean_promotion_and_explicit_merge_packet`,
   `later_explicit_packet_required_before_scope_widening = true`,
-  `next_required_lane = r46_origin_useful_case_surface_generalization_gate`;
+  `next_required_lane = h45_post_r46_surface_decision_packet`;
+- `R46` is now complete as the current post-`H44` exact runtime gate:
+  `lane_verdict = surface_generalizes_narrowly`,
+  `planned_variant_count = 8`,
+  `exact_variant_count = 8`,
+  `exact_kernel_count = 3`,
+  `claim_ceiling = bounded_useful_cases_only`,
+  `next_required_lane = h45_post_r46_surface_decision_packet`;
 - claim `D` is now supported_here_narrowly on the current fixed useful-case
   ladder and remains bounded to useful kernels only;
 - `F9` remains preserved as the preferred forward semantic-boundary roadmap
@@ -416,7 +431,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R44_origin_restricted_wasm_useful_case_execution_gate` ->
 `H43_post_r44_useful_case_refreeze` ->
 `F21_post_h43_exact_useful_case_expansion_bundle` ->
-`H44_post_h43_route_reauthorization_packet`
+`H44_post_h43_route_reauthorization_packet` ->
+`R46_origin_useful_case_surface_generalization_gate`
 
 ## Next Planned Order
 
@@ -424,20 +440,21 @@ The current justified next move is no longer a post-`R42` control-override
 design, an unresolved merge wave, exact `R43` execution, coequal `R45`
 execution, later `H42` route-selection preparation, exact `R44` useful-case
 execution, or a hold-at-`H43` no-runtime posture. `F20`, `H41`, `P27`, `R43`,
-`R45`, `H42`, `R44`, `H43`, `F21`, and `H44` have already landed. The stack
-now fixes one completed operational merge packet, one completed exact bounded-
-memory gate, one completed restricted useful-case gate, one completed coequal
-model gate, one preserved paper-grade `H43` refreeze packet, one current exact-
-first planning bundle, and one current docs-only reauthorization packet that
-points to `R46`.
+`R45`, `H42`, `R44`, `H43`, `F21`, `H44`, and `R46` have already landed. The
+stack now fixes one completed operational merge packet, one completed exact
+bounded-memory gate, one completed restricted useful-case gate, one completed
+coequal model gate, one preserved paper-grade `H43` refreeze packet, one
+current exact-first planning bundle, one current docs-only reauthorization
+packet, and one completed post-`H44` exact surface-generalization gate that
+now points to `H45`.
 
 The current admissible follow-on work is:
 
 - low-priority manuscript / README / blog alignment work;
 - preserved planning-only roadmap work under
   `F2/F7/F8/F9/F10/F11/F15/F16/F17/F18/F19/F20/F21`;
-- exact `R46_origin_useful_case_surface_generalization_gate` as the current
-  authorized next runtime lane;
+- docs-only `H45_post_r46_surface_decision_packet` as the current required
+  follow-on lane;
 - later explicit planning for any broader semantic-boundary, contradiction, or
   merge review packet, but not arbitrary surface widening by momentum; and
 - later explicit merge review only if a future operational packet decides to
@@ -445,7 +462,7 @@ The current admissible follow-on work is:
 
 The current forward order is:
 
-`R46_origin_useful_case_surface_generalization_gate`
+`H45_post_r46_surface_decision_packet`
 
 If the same-substrate contradiction route is reauthorized later, the
 conditional order is still:
@@ -456,7 +473,7 @@ conditional `R41_origin_runtime_relevance_threat_stress_audit` ->
 
 The next required order is now:
 
-`R46_origin_useful_case_surface_generalization_gate`
+`H45_post_r46_surface_decision_packet`
 
 ## Control References
 
@@ -488,6 +505,7 @@ The next required order is now:
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/P25_post_h36_clean_promotion_prep/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
@@ -497,6 +515,7 @@ The next required order is now:
 - `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
+- `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
 - `docs/plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `docs/plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
 - `docs/plans/2026-03-23-post-h36-p25-f15-h37-control-design.md`
@@ -512,6 +531,8 @@ The next required order is now:
 - `docs/milestones/R43_origin_bounded_memory_small_vm_execution_gate/`
 - `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
 - `docs/milestones/R44_origin_restricted_wasm_useful_case_execution_gate/`
+- `docs/milestones/R46_origin_useful_case_surface_generalization_gate/`
+- `docs/milestones/H45_post_r46_surface_decision_packet/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/`
 - `docs/milestones/H38_post_f16_runtime_relevance_reopen_decision_packet/`
@@ -537,6 +558,8 @@ The next required order is now:
   current coequal model lane.
 - `R44_origin_restricted_wasm_useful_case_execution_gate` is completed and
   remains the current restricted useful-case gate.
+- `R46_origin_useful_case_surface_generalization_gate` is completed and
+  remains the current post-`H44` exact runtime gate.
 - `H43_post_r44_useful_case_refreeze` is completed and remains the preserved
   prior useful-case refreeze packet plus current paper-grade endpoint.
 - `F21_post_h43_exact_useful_case_expansion_bundle` is completed and remains
@@ -601,9 +624,10 @@ The next required order is now:
 - `F19_post_f18_restricted_wasm_useful_case_roadmap` remains the current
   semantic-boundary roadmap behind `H40/R42/R43`.
 - `R41_origin_runtime_relevance_threat_stress_audit` remains deferred.
-- `R46_origin_useful_case_surface_generalization_gate` is the current
-  authorized next exact runtime lane under `H44`, while
-  `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
+- `R46_origin_useful_case_surface_generalization_gate` is the completed
+  current post-`H44` exact runtime gate, while
+  `H45_post_r46_surface_decision_packet` is the next required docs-only lane
+  and `no_active_downstream_runtime_lane` remains the landed `H43` closeout.
 - `H34_post_r39_later_explicit_scope_decision_packet` and
   `H32_post_r38_compiled_boundary_refreeze` remain preserved earlier
   control packets.
@@ -615,7 +639,7 @@ The next required order is now:
 - `F9` remains the preferred forward semantic-boundary roadmap and `F11`
   remains new-substrate.
 - the current forward execution ladder is
-  `R46`.
+  `H45`.
 
 ## Historical Reference
 

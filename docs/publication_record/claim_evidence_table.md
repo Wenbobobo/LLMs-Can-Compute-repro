@@ -211,11 +211,14 @@
 
 ## Current bounded mainline state
 
-- `H43` is the current active docs-only useful-case refreeze packet for the
-  bounded mainline after the landed
-  `F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44` follow-on stack above
-  `H40/R42`; it records claim `D` as `supported_here_narrowly` and restores
-  `no_active_downstream_runtime_lane`.
+- `H44` is the current active docs-only route packet for the bounded mainline
+  after the landed
+  `F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> F21 -> R46`
+  follow-on stack above `H40/R42`; it preserves `H43` as the paper-grade
+  endpoint and requires `H45` before any broader surface lift.
+- `H43` is the preserved prior useful-case refreeze packet and current
+  paper-grade endpoint; it records claim `D` as `supported_here_narrowly` and
+  restores `no_active_downstream_runtime_lane`.
 - `H42` and `H41` are the preserved prior docs-only decision packets that
   respectively authorized exact `R44` and authorized exact `R43` plus coequal
   `R45`.
@@ -228,6 +231,9 @@
   completed `R43/R44/R45` stack.
 - `R43` is the completed current exact bounded-memory small-VM gate on five
   fixed families.
+- `R46` is the completed current post-`H44` exact runtime gate on held-out
+  in-surface useful-case variants; it keeps `8/8` variants exact across the
+  fixed `3/3` kernels and records `surface_generalizes_narrowly`.
 - `R44` is the completed current restricted useful-case gate on the fixed
   three-kernel ladder.
 - `R45` is the completed current coequal model gate and remains explicitly

@@ -177,7 +177,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             if contains_all(
                 inputs["release_candidate_text"],
                 [
-                    "current `h43` docs-only useful-case refreeze",
+                    "current `h44` active docs-only route packet plus `h43` paper-grade",
+                    "results/r46_origin_useful_case_surface_generalization_gate/summary.json",
                     "results/p28_post_h43_publication_surface_sync/summary.json",
                 ],
             )

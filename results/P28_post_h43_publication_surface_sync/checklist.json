@@ -11,14 +11,14 @@
       "notes": "The synced publication surface must stay grounded in the landed H43/R44/R45/R43/P27 result stack."
     },
     {
-      "item_id": "publication_ledgers_now_present_h43_as_current_and_no_runtime_lane_after_it",
+      "item_id": "publication_ledgers_now_preserve_h43_as_paper_endpoint_under_h44_r46_current_stack",
       "status": "pass",
-      "notes": "The paper-facing ledgers should agree that H43 is current and that no further runtime lane is active."
+      "notes": "The paper-facing ledgers should preserve H43 as the paper endpoint while current internal control moves through H44/R46."
     },
     {
-      "item_id": "release_review_submission_indexes_and_wave_handoff_preserve_p28_under_p30_current_state",
+      "item_id": "release_review_submission_indexes_and_wave_handoff_preserve_p28_under_p31_current_state",
       "status": "pass",
-      "notes": "Release/review/submission helpers should preserve P28 as completed prior publication sync under current P30/P29 state."
+      "notes": "Release/review/submission helpers should preserve P28 as completed prior publication sync under current H44/R46 plus P31/P30/P29 state."
     }
   ]
 }

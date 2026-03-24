@@ -85,6 +85,17 @@ class RestrictedWasmKernelCase:
     program: BytecodeProgram
 
 
+@dataclass(frozen=True, slots=True)
+class UsefulCaseSurfaceGeneralizationCase:
+    kernel_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+
+
 def _frame_cell(
     address: int,
     cell_type: BytecodeType,
@@ -251,6 +262,7 @@ def sum_i32_buffer_program(
     input_values: tuple[int, ...] = (7, 0, -3, 5),
     input_base_address: int = 400,
     output_address: int = 404,
+    name: str | None = None,
 ) -> BytecodeProgram:
     rows: list[AssemblyRow] = []
     for offset, value in enumerate(input_values):
@@ -285,7 +297,7 @@ def sum_i32_buffer_program(
         _frame_cell(output_address, BytecodeType.I32, "sum_output"),
     )
     return _assemble_program(
-        name="bytecode_sum_i32_buffer_fixed4",
+        name=name or "bytecode_sum_i32_buffer_fixed4",
         rows=rows,
         memory_layout=memory_layout,
     )
@@ -296,6 +308,7 @@ def count_nonzero_i32_buffer_program(
     input_values: tuple[int, ...] = (5, 0, -2, 0, 3),
     input_base_address: int = 416,
     output_address: int = 432,
+    name: str | None = None,
 ) -> BytecodeProgram:
     rows: list[AssemblyRow] = []
     for offset, value in enumerate(input_values):
@@ -339,7 +352,7 @@ def count_nonzero_i32_buffer_program(
         _frame_cell(output_address, BytecodeType.I32, "count_nonzero_output"),
     )
     return _assemble_program(
-        name="bytecode_count_nonzero_i32_buffer_fixed5",
+        name=name or "bytecode_count_nonzero_i32_buffer_fixed5",
         rows=rows,
         memory_layout=memory_layout,
     )
@@ -384,6 +397,7 @@ def histogram16_u8_program(
     input_values: tuple[int, ...] = (3, 1, 3, 15),
     input_base_address: int = 448,
     bin_base_address: int = 464,
+    name: str | None = None,
 ) -> BytecodeProgram:
     rows: list[AssemblyRow] = []
     for offset, value in enumerate(input_values):
@@ -417,7 +431,7 @@ def histogram16_u8_program(
         "histogram_bin",
     )
     return _assemble_program(
-        name="bytecode_histogram16_u8_fixed4",
+        name=name or "bytecode_histogram16_u8_fixed4",
         rows=rows,
         memory_layout=memory_layout,
     )
@@ -1442,6 +1456,123 @@ def r44_restricted_wasm_useful_case_cases() -> tuple[RestrictedWasmKernelCase, .
             comparison_mode="long_exact_final_state",
             max_steps=2048,
             program=histogram16_u8_program(),
+        ),
+    )
+
+
+def r46_useful_case_surface_generalization_cases() -> tuple[UsefulCaseSurfaceGeneralizationCase, ...]:
+    return (
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len6_shifted_base",
+            description="Longer fixed-buffer sum with shifted base address and mixed-sign values.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=384,
+            program=sum_i32_buffer_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="bytecode_sum_i32_buffer_len6_a520",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len8_dense_mixed_sign",
+            description="Wider fixed-buffer sum with denser mixed-sign values on a new static range.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            program=sum_i32_buffer_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="bytecode_sum_i32_buffer_len8_a560",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_sparse_len8_shifted_base",
+            description="Sparse nonzero count with low branch-taken density and shifted base range.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            program=count_nonzero_i32_buffer_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="bytecode_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_dense_len7_shifted_base",
+            description="Dense nonzero count with near-max branch-taken density on a new static range.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            program=count_nonzero_i32_buffer_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="bytecode_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_mixed_len9_shifted_base",
+            description="Longer mixed-density nonzero count with alternating zero runs and later nonzero bursts.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1024,
+            program=count_nonzero_i32_buffer_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="bytecode_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_bimodal_len6_shifted_base",
+            description="Bimodal histogram with repeated pressure on bins 0 and 15 only.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=3072,
+            program=histogram16_u8_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="bytecode_histogram16_u8_bimodal_len6_a720",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_low_bin_skew_len8",
+            description="Low-bin skew histogram with repeated hits concentrated on bins 1 and 2.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            program=histogram16_u8_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="bytecode_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_wide_len10_shifted_base",
+            description="Longer histogram with wider bin coverage and repeated late-bin revisits.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=6144,
+            program=histogram16_u8_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="bytecode_histogram16_u8_wide_len10_a800",
+            ),
         ),
     )
 

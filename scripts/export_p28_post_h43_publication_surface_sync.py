@@ -154,21 +154,22 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             "notes": "The synced publication surface must stay grounded in the landed H43/R44/R45/R43/P27 result stack.",
         },
         {
-            "item_id": "publication_ledgers_now_present_h43_as_current_and_no_runtime_lane_after_it",
+            "item_id": "publication_ledgers_now_preserve_h43_as_paper_endpoint_under_h44_r46_current_stack",
             "status": "pass"
             if contains_all(
                 inputs["publication_readme_text"],
                 [
-                    "`h43` docs-only useful-case refreeze packet",
-                    "`no_active_downstream_runtime_lane`",
+                    "`h44` as the current active docs-only stage",
+                    "`r46` as the completed current post-`h44` exact runtime gate",
+                    "`no_active_downstream_runtime_lane` as the landed paper-grade closeout",
                 ],
             )
             and contains_all(
                 inputs["claim_evidence_text"],
                 [
-                    "`h43` is the current active docs-only useful-case refreeze packet",
-                    "`r44` is the completed current restricted useful-case gate",
-                    "`r41` remains deferred until a later explicit contradiction packet",
+                    "`h44` is the current active docs-only route packet",
+                    "`h43` is the preserved prior useful-case refreeze packet and current",
+                    "`r46` is the completed current post-`h44` exact runtime gate",
                 ],
             )
             and contains_all(
@@ -179,7 +180,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 ],
             )
             else "blocked",
-            "notes": "The paper-facing ledgers should agree that H43 is current and that no further runtime lane is active.",
+            "notes": "The paper-facing ledgers should preserve H43 as the paper endpoint while current internal control moves through H44/R46.",
         },
         {
             "item_id": "release_review_submission_indexes_and_wave_handoff_preserve_p28_under_p31_current_state",
@@ -187,7 +188,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             if contains_all(
                 inputs["release_preflight_text"],
                 [
-                    "`h43` as the active docs-only refreeze packet",
+                    "`h44` as the active docs-only route packet",
+                    "preserved `h43` as the paper-grade endpoint",
                     "`merge_executed = false`",
                     "`results/h43_post_r44_useful_case_refreeze/summary.json` reports",
                 ],
@@ -255,7 +257,8 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
             and contains_all(
                 inputs["active_wave_plan_text"],
                 [
-                    "`h43` remains the current scientific stage",
+                    "`h44_post_h43_route_reauthorization_packet` is the current active docs-only",
+                    "`h43` remains the current paper-grade endpoint",
                     "`p31_post_h43_blog_guardrails_refresh` is the current low-priority",
                     "`p30` is the completed prior manuscript-surface refresh wave",
                     "`p29` is the completed earlier prior release/public audit refresh wave",
@@ -267,12 +270,13 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                 inputs["driver_text"],
                 [
                     "the current active stage is:",
+                    "h44_post_h43_route_reauthorization_packet",
                     "h43_post_r44_useful_case_refreeze",
-                    "no_active_downstream_runtime_lane",
+                    "h45_post_r46_surface_decision_packet",
                 ],
             )
             else "blocked",
-            "notes": "Release/review/submission helpers should preserve P28 as completed prior publication sync under current P31/P30/P29 state.",
+            "notes": "Release/review/submission helpers should preserve P28 as completed prior publication sync under current H44/R46 plus P31/P30/P29 state.",
         },
     ]
 

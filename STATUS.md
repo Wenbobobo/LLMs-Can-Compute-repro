@@ -13,6 +13,8 @@
   `R42_origin_append_only_memory_retrieval_contract_gate`.
 - The current completed exact bounded-memory small-VM gate is
   `R43_origin_bounded_memory_small_vm_execution_gate`.
+- The current completed post-`H44` exact runtime gate is
+  `R46_origin_useful_case_surface_generalization_gate`.
 - The current completed coequal model gate is
   `R45_origin_dual_mode_model_mainline_gate`.
 - The current coequal-mainline model bundle is
@@ -209,10 +211,16 @@
 - `H44_post_h43_route_reauthorization_packet` is now complete as the current
   active docs-only route reauthorization packet:
   it preserves `H43/H42/H36/F20/P27/R43/R44/R45`, incorporates
-  `F21_post_h43_exact_useful_case_expansion_bundle`, authorizes exactly
+  `F21_post_h43_exact_useful_case_expansion_bundle`, preserves the completed
   `R46_origin_useful_case_surface_generalization_gate`, keeps `R47/R48/R41`
-  deferred, keeps `merge_executed = false`, and requires a later explicit
-  packet before any scope widening.
+  deferred behind a later explicit packet, keeps `merge_executed = false`, and
+  requires `H45_post_r46_surface_decision_packet` before any scope widening.
+- `R46_origin_useful_case_surface_generalization_gate` is now complete as the
+  current post-`H44` exact runtime gate:
+  it keeps the held-out useful-case surface exact on `8/8` variants across the
+  fixed `3/3` kernels, records `surface_generalizes_narrowly`, keeps the claim
+  ceiling `bounded_useful_cases_only`, and routes the next interpretation step
+  through `H45_post_r46_surface_decision_packet`.
 - `F9_post_h34_restricted_wasm_semantic_boundary_roadmap` remains preserved as
   the preferred forward semantic-boundary roadmap downstream of
   `F10/F13/F18/F19`, now activated once through `H40 -> R42`.

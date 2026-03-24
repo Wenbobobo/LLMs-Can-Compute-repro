@@ -13,6 +13,10 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   `Wave 0` save/fork/reindex, `F21` exact-first planning bundle, `H44`
   docs-only route reauthorization packet, `R46` exact surface-generalization
   gate, conditional `R47`, conditional `R48`, and later low-priority rollup.
+- `2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md` —
+  the current execution design surface for the landed post-`H44` exact
+  held-out useful-case surface-generalization gate and the `H45` follow-on
+  interpretation requirement.
 - `2026-03-24-post-r42-aggressive-long-arc-master-plan.md` — the current
   post-`R42` saved master plan that fixes the aggressive long-arc wave order:
   `Wave 0` save/push/fork, `F20/H41` control override, `P27` explicit merge
@@ -128,8 +132,13 @@ current stage driver, the milestone/result artifacts, and the machine-readable
   exact-first planning bundle that keeps `H43` as the paper-grade endpoint and
   fixes `R46` as the first admissible next runtime candidate.
 - `../milestones/H44_post_h43_route_reauthorization_packet/` — current
-  docs-only route reauthorization packet that preserves `H43` and authorizes
-  exactly `R46`.
+  docs-only route reauthorization packet that preserves `H43` and remains the
+  active packet above completed `R46`.
+- `../milestones/R46_origin_useful_case_surface_generalization_gate/` —
+  completed post-`H44` exact runtime gate that keeps `8/8` held-out in-surface
+  variants exact across the fixed `3/3` useful-case kernels.
+- `../milestones/H45_post_r46_surface_decision_packet/` — saved next
+  docs-only interpretation packet downstream of landed `R46`.
 - `../milestones/P32_post_h43_historical_wording_refresh/` — completed
   auxiliary historical/regeneration wording refresh packet that keeps `P31`
   current while refreshing preserved `H0/P3` regeneration-facing wording.

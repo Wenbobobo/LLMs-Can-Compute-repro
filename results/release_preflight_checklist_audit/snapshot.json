@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,27 +22,26 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "now `H43_post_r44_useful_case_refreeze`, the preserved prior docs-only",
+        "decision packet is now `H43_post_r44_useful_case_refreeze`, the preserved",
         "`R44_origin_restricted_wasm_useful_case_execution_gate`, the current",
         "`R45_origin_dual_mode_model_mainline_gate`, the current",
+        "endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while",
         "- `R44_origin_restricted_wasm_useful_case_execution_gate` is now the",
-        "- no active downstream runtime lane now follows `H43`;",
-        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
         "`R45_origin_dual_mode_model_mainline_gate`.",
-        "`H43_post_r44_useful_case_refreeze`, the preserved prior route-selection"
+        "useful-case refreeze packet is `H43_post_r44_useful_case_refreeze`, the"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H43_post_r44_useful_case_refreeze`, not the preserved prior",
         "`R43_origin_bounded_memory_small_vm_execution_gate`.",
         "`promotion_mode = explicit_merge_wave` and `merge_executed = false`.",
         "- `R43_origin_bounded_memory_small_vm_execution_gate` is now fixed as the",
         "- `H42_post_r43_route_selection_packet` is now fixed as the completed",
         "`wip/p27-promotion-merge`, keeps `merge_executed = false`, and preserves",
         "- `R43_origin_bounded_memory_small_vm_execution_gate` is now complete as the",
-        "- `H42_post_r43_route_selection_packet` is now complete as the preserved prior"
+        "- `H42_post_r43_route_selection_packet` is now complete as the preserved prior",
+        "`R41` deferred, and keeps `merge_executed = false`."
       ]
     },
     {
@@ -66,7 +65,6 @@
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
-        "the current `H43` docs-only useful-case refreeze / `H36` preserved-active /",
         "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the",
         "- [ ] `results/P28_post_h43_publication_surface_sync/summary.json` reports the"
       ]

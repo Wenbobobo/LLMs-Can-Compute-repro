@@ -65,5 +65,5 @@ def test_build_summary_reports_green_preflight_state() -> None:
     assert summary["git_diff_check_state"] in {"clean", "warnings_only"}
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H43 remains the current active docs-only useful-case refreeze packet, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, P27 remains the explicit merge packet with merge_executed = false, P28 remains the completed publication/control sync packet, and no_active_downstream_runtime_lane remains the current follow-on state"
+        "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H44 remains the active docs-only route packet, H43 remains the paper-grade endpoint, R46 remains the completed post-H44 exact runtime gate, H45 remains the next required decision packet, H42/H41 remain the preserved prior docs-only packets, H36 remains the preserved routing/refreeze packet, R42/R43/R44/R45 remain the completed current gate stack, and P27/P28 remain the explicit merge and publication-control sync packets"
     )

@@ -16,6 +16,8 @@ Current scientific/control stack:
   `R43_origin_bounded_memory_small_vm_execution_gate`;
 - current completed useful-case gate:
   `R44_origin_restricted_wasm_useful_case_execution_gate`;
+- current completed post-`H44` exact runtime gate:
+  `R46_origin_useful_case_surface_generalization_gate`;
 - current completed coequal model gate:
   `R45_origin_dual_mode_model_mainline_gate`;
 - current coequal-mainline model bundle:
@@ -57,6 +59,9 @@ packet.
 `F21_post_h43_exact_useful_case_expansion_bundle` is the current planning
 bundle.
 `H43` remains the current paper-grade endpoint.
+`R46_origin_useful_case_surface_generalization_gate` is now the completed
+post-`H44` exact runtime gate on the fixed held-out useful-case surface, and
+`H45_post_r46_surface_decision_packet` is the next required docs-only lane.
 `P31_post_h43_blog_guardrails_refresh` is the current low-priority
 operational/docs wave. It refreshes blocked downstream blog plus
 manuscript/caption/appendix helper guardrail docs that still freeze the
@@ -94,6 +99,8 @@ current low-priority wave.
 - `wip/r44-useful-case-gate` is the clean restricted useful-case execution branch.
 - `wip/h43-r44-refreeze` is the clean post-`R44` refreeze packet branch.
 - `wip/f21-h44-post-h43-route` is the clean post-`H43` reentry control branch.
+- `wip/r46-useful-case-surface-generalization` is the clean post-`H44`
+  held-out useful-case surface-generalization branch.
 - `wip/p28-h43-publication-sync` is the clean post-`H43` publication/control
   sync branch.
 - `wip/p29-h43-release-audit-refresh` is the clean post-`H43`
@@ -136,10 +143,13 @@ current low-priority wave.
   `3/3` kernel ladder and exceeds article-level substrate evidence narrowly.
 - `H43` selects `freeze_r44_as_narrow_supported_here`.
 - `H43` records `next_required_lane = no_active_downstream_runtime_lane`.
+- `R46` returns `surface_generalizes_narrowly` on `8/8` held-out in-surface
+  variants across the fixed `3/3` useful-case kernels.
+- `R46` records `next_required_lane = h45_post_r46_surface_decision_packet`.
 
 ## Immediate Objectives
 
-1. Preserve `H43` as the current active docs-only decision packet.
+1. Preserve `H44` as the current active docs-only decision packet.
 2. Preserve `H42` as the preserved prior route-selection packet.
 3. Preserve `H36` as the routing/refreeze packet underneath the stack.
 4. Preserve completed `R42` as the first semantic-boundary retrieval-contract
@@ -148,12 +158,14 @@ current low-priority wave.
    `main`.
 6. Preserve completed exact `R43` as the decisive upstream exact runtime gate.
 7. Preserve completed `R44` as the current narrow useful-case gate.
-8. Preserve completed `R45` as the current coequal model lane without
+8. Preserve completed `R46` as the current held-out in-surface exact runtime
+   gate without widening the claim ceiling.
+9. Preserve completed `R45` as the current coequal model lane without
    weakening the exact evidence boundary.
-9. Keep `R41` deferred until later explicit contradiction routing.
-10. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
+10. Keep `R41` deferred until later explicit contradiction routing.
+11. Avoid reopening `R29`, `F3`, `F11`, broader compiler/demo scope, or
    frontier widening by momentum.
-11. Keep release/public audit surfaces downstream of `H43` without changing
+12. Keep release/public audit surfaces downstream of `H43` without changing
     the scientific stage driver.
 
 ## Last Completed Order
@@ -201,7 +213,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 `R44_origin_restricted_wasm_useful_case_execution_gate` ->
 `H43_post_r44_useful_case_refreeze` ->
 `F21_post_h43_exact_useful_case_expansion_bundle` ->
-`H44_post_h43_route_reauthorization_packet`
+`H44_post_h43_route_reauthorization_packet` ->
+`R46_origin_useful_case_surface_generalization_gate`
 
 ## Current Rule
 
@@ -234,8 +247,9 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `R43` is the completed current exact gate.
 - `R44` is the completed current restricted useful-case gate.
 - `R45` is the completed current coequal model lane.
-- `R46` is the current authorized next exact runtime lane under `H44`.
-- no active downstream runtime lane follows `H43`.
+- `R46` is the completed current post-`H44` exact runtime gate.
+- `H45` is the next required docs-only interpretation packet.
+- no active downstream runtime lane follows the paper-grade `H43` closeout.
 
 ## Control References
 
@@ -247,6 +261,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/plans/2026-03-24-post-r43-r45-dual-mode-execution-design.md`
 - `docs/plans/2026-03-24-post-r43-h42-route-selection-design.md`
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md`
+- `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md`
 - `docs/plans/2026-03-24-post-h43-p33-dormant-playbook-wording-refresh-design.md`
@@ -267,6 +282,8 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `docs/milestones/R45_origin_dual_mode_model_mainline_gate/`
 - `docs/milestones/H42_post_r43_route_selection_packet/`
 - `docs/milestones/H43_post_r44_useful_case_refreeze/`
+- `docs/milestones/R46_origin_useful_case_surface_generalization_gate/`
+- `docs/milestones/H45_post_r46_surface_decision_packet/`
 - `docs/milestones/P31_post_h43_blog_guardrails_refresh/`
 - `docs/milestones/P32_post_h43_historical_wording_refresh/`
 - `docs/milestones/P33_post_h43_dormant_playbook_wording_refresh/`
@@ -282,6 +299,7 @@ clean-worktree `R33_d0_non_retrieval_overhead_localization_audit` ->
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json`
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
 - `results/P31_post_h43_blog_guardrails_refresh/summary.json`
 - `results/P32_post_h43_historical_wording_refresh/summary.json`
 - `results/P33_post_h43_dormant_playbook_wording_refresh/summary.json`

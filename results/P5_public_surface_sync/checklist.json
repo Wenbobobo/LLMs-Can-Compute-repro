@@ -2,11 +2,11 @@
   "experiment": "p5_public_surface_sync_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p30-h43-manuscript-refresh\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r46-useful-case-surface-generalization\\.venv"
     },
     "torch": {
       "installed": false,
@@ -27,17 +27,17 @@
     {
       "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should keep H43 as current while preserving the landed H42/H41/H36/R43/R44/R45/P27 stack."
+      "notes": "README should keep H44 active, preserve H43 as the paper-grade endpoint, and record landed R46 plus required H45 follow-on."
     },
     {
       "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record the current H43 stack and explicit merge posture."
+      "notes": "STATUS should record the current H44/H43/R46 stack and explicit merge posture."
     },
     {
-      "item_id": "publication_record_readme_tracks_h43_and_current_p30_state",
+      "item_id": "publication_record_readme_tracks_h44_r46_and_current_p30_state",
       "status": "pass",
-      "notes": "Publication record README should expose H43 as current, P30 as the current manuscript-surface wave, and P29/P28 as completed prior sync packets."
+      "notes": "Publication record README should expose H44 as active, H43 as the paper-grade endpoint, R46 as completed, and P30/P29/P28 as current prior sync packets."
     },
     {
       "item_id": "release_summary_stays_downstream_of_landed_h43_stack",
@@ -52,7 +52,7 @@
     {
       "item_id": "current_stage_driver_is_canonical",
       "status": "pass",
-      "notes": "The current-stage driver should remain the canonical H43 control surface."
+      "notes": "The current-stage driver should remain the canonical H44/H43/R46 control surface."
     },
     {
       "item_id": "layout_log_records_post_p7_decisions",

@@ -24,8 +24,9 @@ Current control docs:
   preserving `H29/R36/R37/H30/H31/R38/H32/H33/H34` as upstream
   evidence/control context, treating `R39` and `R40` as completed
   same-substrate downstream evidence rather than automatic routing changes,
-  recording `H44` as the current stage plus `R46` as the current follow-on
-  state, and preserving `H43` with
+  recording `H44` as the current active docs-only stage, `R46` as the
+  completed current post-`H44` exact runtime gate, `H45` as the next required
+  docs-only decision packet, and preserving `H43` with
   `no_active_downstream_runtime_lane` as the landed paper-grade closeout;
 - `docs/plans/2026-03-24-post-h43-mainline-reentry-master-plan.md` — the
   current master plan for exact-first post-`H43` reentry, fixing `F21`,
@@ -46,6 +47,10 @@ Current control docs:
 - `docs/plans/2026-03-24-post-r44-h43-refreeze-design.md` — the preserved
   design surface that turned landed `R44` into the completed current narrow
   useful-case gate and restored `no_active_downstream_runtime_lane`;
+- `docs/plans/2026-03-24-post-h44-r46-useful-case-surface-generalization-design.md`
+  — the current execution design surface that landed exact held-out useful-case
+  surface generalization under `H44` and fixed `H45` as the next required
+  interpretation packet;
 - `docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md` —
   the current low-priority design surface for refreshing blocked downstream
   blog plus manuscript-helper guardrails downstream of landed `H43` without
@@ -191,6 +196,12 @@ Current control docs:
 - `docs/milestones/H44_post_h43_route_reauthorization_packet/` — the current
   `H44` docs-only route reauthorization packet that preserves `H43` as the
   paper-grade endpoint and authorizes exactly `R46`;
+- `docs/milestones/R46_origin_useful_case_surface_generalization_gate/` — the
+  completed current post-`H44` exact runtime gate that keeps the held-out
+  in-surface useful-case matrix exact on `8/8` variants across `3/3` kernels;
+- `docs/milestones/H45_post_r46_surface_decision_packet/` — the saved next
+  docs-only decision packet that interprets landed `R46` before any broader
+  surface lift;
 - `docs/milestones/H43_post_r44_useful_case_refreeze/` — the preserved prior
   useful-case refreeze packet that records claim `D` as
   `supported_here_narrowly` and restores `no_active_downstream_runtime_lane`;

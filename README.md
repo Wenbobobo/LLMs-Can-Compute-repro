@@ -52,8 +52,10 @@ semantic-boundary roadmap is
 semantic-boundary activation packet is
 `H40_post_h38_semantic_boundary_activation_packet`. The current paper-grade
 endpoint remains the preserved `H43_post_r44_useful_case_refreeze` line, while
-`H44` authorizes exact `R46` as the next runtime candidate and keeps `P31` as
-the current low-priority docs wave.
+`H44` remains the active docs-only route packet, landed exact `R46` now keeps
+all `8/8` held-out in-surface useful-case variants exact across the fixed
+`3/3` kernels, `H45` is the next required interpretation packet, and `P31`
+remains the current low-priority docs wave.
 
 The narrow current stack is:
 
@@ -84,7 +86,10 @@ What stays blocked or deferred:
 - merge back to `main` remains staged and unexecuted inside `P27`;
 - `R44_origin_restricted_wasm_useful_case_execution_gate` is now the
   completed current restricted-Wasm / tiny-`C` useful-case gate;
-- no active downstream runtime lane now follows `H43`;
+- `R46_origin_useful_case_surface_generalization_gate` is now the completed
+  post-`H44` exact runtime gate on `8/8` held-out in-surface variants, and
+  `H45_post_r46_surface_decision_packet` is now the next required lane;
+- no active downstream runtime lane follows the paper-grade `H43` closeout;
 - `R29`, `F3`, arbitrary `C`, general “LLMs are computers”, and demo-first
   scope widening remain blocked.
 
@@ -183,6 +188,10 @@ historical packet inventory below.
   preserved prior route-selection packet is
   `H42_post_r43_route_selection_packet`, and `H43` remains the current
   paper-grade endpoint rather than a widened runtime claim.
+- The current completed post-`H44` exact runtime gate is
+  `R46_origin_useful_case_surface_generalization_gate`, and it records
+  `surface_generalizes_narrowly` on the fixed held-out in-surface `8/8`
+  variant set without widening the claim ceiling.
 - The current active scientific target is the narrower Origin-core line:
   append-only traces, exact `2D` hard-max retrieval, and a small exact stack/VM
   executor.
@@ -450,6 +459,7 @@ historical packet inventory below.
 - `results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json` — one-file summary for the current coequal-mainline model bundle
 - `results/H42_post_r43_route_selection_packet/summary.json` — one-file summary for the preserved prior docs-only route-selection packet authorizing `R44`
 - `results/H43_post_r44_useful_case_refreeze/summary.json` — one-file summary for the current docs-only useful-case refreeze packet after completed `R44`
+- `results/R46_origin_useful_case_surface_generalization_gate/summary.json` — one-file summary for the completed post-`H44` held-out useful-case surface-generalization gate
 - `results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json` — one-file summary for the preserved prior docs-only aggressive long-arc decision packet
 - `results/P27_post_h41_clean_promotion_and_explicit_merge_packet/summary.json` — one-file summary for the completed operational explicit merge packet
 - `results/R45_origin_dual_mode_model_mainline_gate/summary.json` — one-file summary for the completed coequal dual-mode model gate
@@ -475,6 +485,7 @@ historical packet inventory below.
 - `docs/milestones/R40_origin_bounded_scalar_locals_and_flags_gate/README.md` — landed bounded-scalar runtime gate for explicit frame locals and typed `FLAG` slots
 - `docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/README.md` — landed coequal-mainline model bundle fixing the exact-versus-model evidence boundary
 - `docs/milestones/H43_post_r44_useful_case_refreeze/README.md` — landed current docs-only useful-case refreeze packet above `R44`
+- `docs/milestones/R46_origin_useful_case_surface_generalization_gate/README.md` — landed post-`H44` exact useful-case surface-generalization gate above `R44`
 - `docs/milestones/H42_post_r43_route_selection_packet/README.md` — landed preserved prior docs-only route-selection packet above `R43/R45`
 - `docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/README.md` — landed preserved prior docs-only aggressive long-arc decision packet above `R42`
 - `docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/README.md` — completed operational explicit merge packet that stages merge posture without merging `main`
