@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p36_docs_define_post_h49_cleanline_hygiene_packet",
+      "status": "pass",
+      "notes": "P36 should save the cleanline execution and artifact policy without changing scientific stage."
+    },
+    {
+      "item_id": "p36_records_worktree_artifact_and_commit_policy",
+      "status": "pass",
+      "notes": "P36 should codify worktree strategy, artifact slimming, and commit cadence explicitly."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_p36_current_low_priority_wave",
+      "status": "pass",
+      "notes": "Shared control surfaces should promote P36 into the current low-priority wave while preserving H49 as active stage."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "path": "docs/milestones/P36_post_h49_cleanline_hygiene_and_artifact_policy/worktree_strategy.md",
+      "matched_lines": [
+        "- dirty root `main` is not a scientific execution surface."
+      ]
+    },
+    {
+      "path": "docs/milestones/P36_post_h49_cleanline_hygiene_and_artifact_policy/artifact_policy.md",
+      "matched_lines": [
+        "- raw per-read dumps, full probe rows, and large exploratory scratch outputs",
+        "- Git LFS remains inactive by default for this wave; and"
+      ]
+    },
+    {
+      "path": "docs/milestones/P36_post_h49_cleanline_hygiene_and_artifact_policy/commit_cadence.md",
+      "matched_lines": [
+        "- commit `F26` planning surfaces separately from all runtime work;",
+        "- commit `H50` decision surfaces only after `R51/R52` are explicit; and"
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": []
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": []
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The current low-priority operational/docs wave is:",
+        "- `P36_post_h49_cleanline_hygiene_and_artifact_policy`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "matched_lines": []
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": []
+    }
+  ]
+}
