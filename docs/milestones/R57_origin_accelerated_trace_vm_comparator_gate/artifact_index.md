@@ -8,6 +8,8 @@
 - `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/artifact_index.md`
 - `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/comparator_matrix.md`
 - `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/value_rule.md`
+- `scripts/export_r57_origin_accelerated_trace_vm_comparator_gate.py`
+- `tests/test_export_r57_origin_accelerated_trace_vm_comparator_gate.py`
 - `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
 - `results/R57_origin_accelerated_trace_vm_comparator_gate/checklist.json`
 - `results/R57_origin_accelerated_trace_vm_comparator_gate/claim_packet.json`
