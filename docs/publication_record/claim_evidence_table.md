@@ -211,20 +211,24 @@
 
 ## Current bounded mainline state
 
-- `H50` is now the current active docs-only interpretation packet for the
+- `H52` is now the current active docs-only interpretation packet for the
+  closed mechanism reentry lane after landed `R55/R56/R57`; it preserves
+  `H50` as the broader-route bounded-value closeout, preserves `H51` as the
+  prior mechanism-reentry packet, preserves `H43` as the paper-grade
+  endpoint, selects
+  `freeze_origin_mechanism_supported_without_fastpath_value`, keeps
+  `F27/R53/R54` blocked, and restores `no_active_downstream_runtime_lane`.
+- `H51` is now the preserved prior docs-only interpretation packet for the
+  narrowed mechanism reentry lane; it preserved negative `H50`, preserved
+  `H43` as the paper-grade endpoint, and authorized exactly
+  `R55 -> R56 -> R57 -> H52` without reopening transformed or trainable
+  entry.
+- `H50` is now the preserved prior docs-only interpretation packet for the
   bounded mainline after completed `R51/R52`; it preserves `H49` as the prior
   decision packet, preserves `H48` as the earlier decision packet, preserves
   `H43` as the paper-grade endpoint, selects
   `stop_as_exact_without_system_value`, keeps `F27` blocked and non-selected,
   and restores `no_active_downstream_runtime_lane`.
-- `H49` is now the preserved prior docs-only interpretation packet for the
-  bounded mainline after the landed
-  `F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> F21 -> R46 -> H45 -> R47 -> R48 -> H47 -> F23 -> R49 -> H48 -> F25 -> R50`
-  follow-on stack above `H40/R42`; it preserves `H48` as the prior decision
-  packet, preserves `H47` as the earlier decision packet, preserves `H44` as
-  the prior route packet, preserves `H43` as the paper-grade endpoint, keeps
-  `F22` current without widening the claim ceiling, and restores
-  `no_active_downstream_runtime_lane`.
 - `H48` is the preserved prior docs-only interpretation packet that authorized
   exactly `F25` after completed `R49`.
 - `H47` is the preserved earlier docs-only interpretation packet that froze
@@ -284,6 +288,21 @@
   three comparators exact on `5/5` rows but records
   `internal_route_lacks_bounded_value` because the internal accelerated route
   fails to show bounded value over simpler baselines.
+- `F28` is now the completed preserved planning bundle that fixed
+  `H51 -> R55 -> R56 -> R57 -> H52` as the only admissible mechanism-first
+  sequence above preserved `H50/H43/H36`.
+- `R55` is now the completed exact retrieval-equivalence gate; it keeps the
+  claimed `2D` hard-max retrieval path exactly aligned with the transparent
+  latest-relevant-state reference on `5/5` fixed tasks with `45/45` exact
+  maximizer-row identity observations.
+- `R56` is now the completed exact trace-VM semantics gate; it keeps the
+  append-only trace plus exact retrieval route exact on `5/5` fixed rows with
+  `288` exported transition rows and exact final states throughout.
+- `R57` is now the completed mechanism-lane comparator gate; it keeps all
+  accelerated, linear, and transparent external comparator routes exact on
+  `5/5` rows but records `accelerated_trace_vm_lacks_bounded_value` because
+  accelerated wins are `0/5` against both the linear internal route and the
+  external interpreter baseline.
 - `R44` is the completed current restricted useful-case gate on the fixed
   three-kernel ladder.
 - `R45` is the completed current coequal model gate and remains explicitly

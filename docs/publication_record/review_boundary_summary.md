@@ -2,33 +2,38 @@
 
 Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
-appendix, claim/evidence ledgers, and landed result packets. The current active
-routing/decision state is `H43_post_r44_useful_case_refreeze`, with
-`H42_post_r43_route_selection_packet` and
-`H41_post_r42_aggressive_long_arc_decision_packet` as the preserved prior
-docs-only decision packets, `H36_post_r40_bounded_scalar_family_refreeze` as
-the preserved active routing/refreeze packet,
-`R42_origin_append_only_memory_retrieval_contract_gate`,
+appendix, claim/evidence ledgers, and landed result packets. The current
+active routing/decision state is
+`H52_post_r55_r56_r57_origin_mechanism_decision_packet`, with
+`H50_post_r51_r52_scope_decision_packet` as the preserved prior broader-route
+closeout packet, `H51_post_h50_origin_mechanism_reentry_packet` as the
+preserved prior mechanism-reentry packet,
+`H43_post_r44_useful_case_refreeze` as the preserved paper-grade endpoint,
+`H36_post_r40_bounded_scalar_family_refreeze` as the preserved active
+routing/refreeze packet, `R42_origin_append_only_memory_retrieval_contract_gate`,
 `R43_origin_bounded_memory_small_vm_execution_gate`,
-`R44_origin_restricted_wasm_useful_case_execution_gate`, and
-`R45_origin_dual_mode_model_mainline_gate` as the completed current
-semantic-boundary gate stack, `F20_post_r42_dual_mode_model_mainline_bundle`
+`R44_origin_restricted_wasm_useful_case_execution_gate`,
+`R45_origin_dual_mode_model_mainline_gate`,
+`R55_origin_2d_hardmax_retrieval_equivalence_gate`,
+`R56_origin_append_only_trace_vm_semantics_gate`, and
+`R57_origin_accelerated_trace_vm_comparator_gate` as the completed current
+evidence stack relevant to the narrow endpoint, `F20_post_r42_dual_mode_model_mainline_bundle`
 as the current coequal-mainline model bundle,
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` as the completed
 explicit merge packet with `merge_executed = false`,
-`P26_post_h37_promotion_and_artifact_hygiene_audit` as the preserved prior
-operational audit lane, `F15_post_h36_origin_goal_reanchor_bundle` as the
-current canonical derivative bundle,
-`F16_post_h37_r41_candidate_isolation_bundle` as the current
-candidate-isolation bundle,
-`F17_post_h38_same_substrate_exit_criteria_bundle` as the current
-same-substrate exit bundle,
+`P37_post_h50_narrow_executor_closeout_sync` as the aligned operational/docs
+sidecar for the closed mechanism wave, `P26_post_h37_promotion_and_artifact_hygiene_audit`
+as the preserved prior operational audit lane,
+`F15_post_h36_origin_goal_reanchor_bundle` as the current canonical derivative
+bundle, `F16_post_h37_r41_candidate_isolation_bundle` as the current
+candidate-isolation bundle, `F17_post_h38_same_substrate_exit_criteria_bundle`
+as the current same-substrate exit bundle,
 `F18_post_h38_origin_core_long_arc_bundle` as the current long-arc planning
 bundle, and `F19_post_f18_restricted_wasm_useful_case_roadmap` as the current
-semantic-boundary roadmap, while preserving `H40/H38/H37` as prior docs-only
-decision packets, `P25` as the prior promotion-prep lane, `H27` as the
-negative closeout of the old same-endpoint line, and `H28` as the Origin-core
-pivot packet underneath it.
+semantic-boundary roadmap, while preserving `H42/H41/H40/H38/H37` as prior
+docs-only decision packets, `P25` as the prior promotion-prep lane, `H27` as
+the negative closeout of the old same-endpoint line, and `H28` as the
+Origin-core pivot packet underneath it.
 
 ## Supported here on the current frozen scope
 
@@ -98,6 +103,16 @@ pivot packet underneath it.
   `useful_case_surface_supported_narrowly`;
 - `H43` refreezes that landed `R44` result, records claim `D` as
   `supported_here_narrowly`, and restores `no_active_downstream_runtime_lane`;
+- `H50` records that the broader post-`H49` internal-route value question
+  stops as exact-without-system-value rather than widening by momentum;
+- `H51` reopens exactly one narrower mechanism-first lane without overturning
+  `H50`;
+- `R55` validates exact `2D` hard-max retrieval equivalence on `5/5` fixed
+  tasks with `45/45` exact maximizer-row identity observations;
+- `R56` validates exact append-only trace-VM semantics on `5/5` fixed rows
+  with `288` exported transition rows and exact final states throughout;
+- `H52` closes that narrower mechanism lane as support without fast-path
+  value and restores `no_active_downstream_runtime_lane`;
 - `F7` preserves a mechanical contradiction/reopen specification under that
   no-reopen state, `F8` preserves the broader roadmap classification,
   `F10` preserves the richer-value/comparator bridge surface, `F12` preserves
@@ -131,6 +146,10 @@ pivot packet underneath it.
 - the narrower expectation that the executed `R21` grid had already exposed an
   exactness failure is disconfirmed on the current bounded scan and remains
   disconfirmed after `R22`, `R26`, and `R27`.
+- the accelerated trace-VM path does not retain bounded value over simpler
+  transparent baselines on the exact `R56` suite: `R57` keeps all comparator
+  routes exact on `5/5` rows but accelerated wins are `0/5` against both the
+  linear internal route and the external interpreter baseline.
 
 ## Canonical evidence anchors
 
@@ -164,6 +183,13 @@ pivot packet underneath it.
 - `results/H42_post_r43_route_selection_packet/summary.json`
 - `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`
+- `results/H50_post_r51_r52_scope_decision_packet/summary.json`
+- `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
+- `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
+- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`
+- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`
+- `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`
+- `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
 - `results/P26_post_h37_promotion_and_artifact_hygiene_audit/summary.json`
 - `claim_ladder.md`
 - `claim_evidence_table.md`
@@ -185,13 +211,13 @@ Any later broader frontier review remains planning-only under
 `F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
 that status. The current conditional future order now starts only after the
 landed
-`H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19 -> H40 -> R42 -> F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43`
+`H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19 -> H40 -> R42 -> F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> H50 -> F28 -> H51 -> R55 -> R56 -> R57 -> H52`
 chain above the earlier `H34/H32/H33/R39/H31/H30/H29/H28/H27` stack. A later
 explicit contradiction packet is still required before any `R41`
 same-substrate contradiction route, and no active downstream runtime lane
-exists after `H43`. Review questions
+exists after `H52`. Review questions
 that can be answered by wording, packet indexing, existing ledgers, or the
 completed `F10` bridge plus the preserved `F12/F13/F14` planning surfaces
 should stay downstream of the landed
-`H43/H42/H41/F20/P27/R45/R44/R43/H40/H36/R42/H38/F16/F17/F18/F19/P26/H37/P25/F15/H35/H34/H32/H33/R39/H31/H30/H29/H28/H27`
+`H52/R57/R56/R55/H51/F28/H50/H43/H42/H41/F20/P27/R45/R44/R43/H40/H36/R42/H38/F16/F17/F18/F19/P26/H37/P25/F15/H35/H34/H32/H33/R39/H31/H30/H29/H28/H27`
 stack rather than reopening science.

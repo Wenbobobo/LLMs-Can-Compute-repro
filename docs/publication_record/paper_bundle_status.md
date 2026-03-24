@@ -40,41 +40,42 @@ pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
 state under `docs/publication_record/paper_package_plan.md`, but authoritative
-control has moved beyond the prose baseline: `H50` is the current active
-docs-only closeout packet, `H49` is the preserved prior docs-only decision
-packet, `H48` is the preserved earlier docs-only decision packet, `H43`
+control has moved beyond the prose baseline: `H52` is the current active
+docs-only closeout packet, `H50` is the preserved prior broader-route
+closeout packet, `H51` is the preserved prior mechanism-reentry packet, `H43`
 remains the paper-grade endpoint, `H42/H41` remain preserved prior docs-only
 decision packets, `H36` is the preserved active routing/refreeze packet,
-`R42`, `R43`, `R44`, `R45`, `R49`, `R50`, `R51`, and `R52`
-are the completed current evidence stack, `R50` is the completed preserved
-prior restricted tiny-`C` lowering gate, `R51` is the completed post-`H49`
-runtime sufficiency gate, `R52` is the completed post-`H49` comparator gate,
-`F20` is the current coequal-mainline model bundle, `F25` is the completed
-current post-`H48` planning bundle, `F26` is the completed post-`H49`
-planning bundle, `P27` is the completed explicit merge packet with
-`merge_executed = false`, `P26` is the preserved prior operational audit lane,
-`F18/F19/F16/F17` remain the current planning/control bundles, `H40/H38/H37/P25`
-remain the preserved prior decision/audit supports, and `F15` remains the
-current canonical derivative bundle. The manuscript draft no longer terminates
-on the landed `H34` narrative line by design; it now treats `H34` as
-preserved earlier compiled support inside the broader landed `H43` paper
-endpoint, so current packet authority remains `current_stage_driver.md` plus
-the claim/evidence ledgers when prose and landed packet state differ. The
-latest downstream follow-on work remains publication/planning maintenance
-rather than experimental widening: `P28` aligns publication-facing ledgers to
-landed `H43`, `P29` aligns release and audit-facing ledgers to landed `H43`,
-`P30` aligns manuscript-facing prose baselines to landed `H43`, `F7`
-preserves a mechanical same-substrate reopen specification, `F8` preserves
-beyond-Origin roadmap storage, `F10` preserves the richer-value/comparator
-bridge surface, `F12` remains the preserved earlier origin-facing reanchor,
-`F13` preserves the bounded scalar-local-and-flag family-first preactivation
-surface, `F14` preserves the conditional reopen-readiness blueprint, `F15` is
-the current origin-facing derivative bundle, `R41` remains deferred behind a
-later explicit contradiction packet, no active downstream runtime lane exists
-after `H50`, `F9` remains blocked downstream of `F10/F13`, `F11` remains
+`R42`, `R43`, `R44`, `R45`, `R49`, `R50`, `R51`, `R52`, `R55`, `R56`, and
+`R57` are the completed current evidence stack, `R55` is the completed exact
+retrieval-equivalence gate, `R56` is the completed exact trace-VM semantics
+gate, and `R57` is the completed negative fast-path comparator gate. `F20` is
+the current coequal-mainline model bundle, `F25/F26/F28` are the completed
+planning bundles on the landed route, `P27` is the completed explicit merge
+packet with `merge_executed = false`, `P37` is the aligned low-priority
+operational/docs sidecar for the closed mechanism wave, `P26` is the
+preserved prior operational audit lane, `F18/F19/F16/F17` remain the current
+planning/control bundles, `H40/H38/H37/P25` remain the preserved prior
+decision/audit supports, and `F15` remains the current canonical derivative
+bundle. The manuscript draft no longer terminates on the landed `H34`
+narrative line by design; it now treats `H34` as preserved earlier compiled
+support inside the broader landed `H43` paper endpoint, so current packet
+authority remains `current_stage_driver.md` plus the claim/evidence ledgers
+when prose and landed packet state differ. The latest downstream follow-on
+work remains publication/planning maintenance rather than experimental
+widening: `P28` aligns publication-facing ledgers to landed `H43`, `P29`
+aligns release and audit-facing ledgers to landed `H43`, `P30` aligns
+manuscript-facing prose baselines to landed `H43`, `F7` preserves a
+mechanical same-substrate reopen specification, `F8` preserves beyond-Origin
+roadmap storage, `F10` preserves the richer-value/comparator bridge surface,
+`F12` remains the preserved earlier origin-facing reanchor, `F13` preserves
+the bounded scalar-local-and-flag family-first preactivation surface, `F14`
+preserves the conditional reopen-readiness blueprint, `F15` is the current
+origin-facing derivative bundle, `R41` remains deferred behind a later
+explicit contradiction packet, no active downstream runtime lane exists after
+`H52`, `F9` remains blocked downstream of `F10/F13`, `F11` remains
 new-substrate downstream of `F10/F13`, `P21` and `P22` preserve prior
 post-`H34` sync surfaces, `P23/P24/P25` preserve the earlier planning/control
-surfaces, and `P26/P27` preserve the current audit-plus-explicit-merge
+surfaces, and `P26/P27/P37` preserve the current audit-plus-explicit-merge
 operational posture without merging `main`.
 
 ## Mandatory tables
