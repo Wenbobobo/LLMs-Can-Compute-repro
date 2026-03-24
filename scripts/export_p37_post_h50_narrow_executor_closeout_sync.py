@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import subprocess
 from typing import Any
 
 from utils import detect_runtime_environment
@@ -11,6 +12,13 @@ from utils import detect_runtime_environment
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "results" / "P37_post_h50_narrow_executor_closeout_sync"
+LARGE_ARTIFACT_THRESHOLD_BYTES = 10 * 1024 * 1024
+RAW_ROW_IGNORE_PATTERNS = [
+    "results/**/probe_read_rows.json",
+    "results/**/per_read_rows.json",
+    "results/**/trace_rows.json",
+    "results/**/step_rows.json",
+]
 
 
 def read_text(path: str | Path) -> str:
@@ -59,7 +67,47 @@ def extract_matching_lines(text: str, *, needles: list[str], max_lines: int = 8)
     return hits
 
 
+def git_output(args: list[str]) -> str:
+    result = subprocess.run(
+        ["git", *args],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    return result.stdout
+
+
+def collect_tracked_large_artifacts(
+    root: Path = ROOT,
+    *,
+    tracked_paths: list[str] | None = None,
+    threshold_bytes: int = LARGE_ARTIFACT_THRESHOLD_BYTES,
+) -> list[dict[str, object]]:
+    if tracked_paths is None:
+        tracked_paths = [path for path in git_output(["ls-files", "-z"]).split("\0") if path]
+
+    oversized: list[dict[str, object]] = []
+    for rel_path in tracked_paths:
+        path = root / rel_path
+        if not path.exists() or not path.is_file():
+            continue
+        size_bytes = path.stat().st_size
+        if size_bytes < threshold_bytes:
+            continue
+        oversized.append(
+            {
+                "path": rel_path.replace("\\", "/"),
+                "size_bytes": size_bytes,
+                "size_mib": round(size_bytes / (1024 * 1024), 2),
+            }
+        )
+    return sorted(oversized, key=lambda row: (int(row["size_bytes"]), str(row["path"])), reverse=True)
+
+
 def load_inputs() -> dict[str, Any]:
+    tracked_large_artifacts = collect_tracked_large_artifacts()
     return {
         "p37_readme_text": read_text(
             ROOT / "docs" / "milestones" / "P37_post_h50_narrow_executor_closeout_sync" / "README.md"
@@ -85,6 +133,7 @@ def load_inputs() -> dict[str, Any]:
         "commit_cadence_text": read_text(
             ROOT / "docs" / "milestones" / "P37_post_h50_narrow_executor_closeout_sync" / "commit_cadence.md"
         ),
+        "gitignore_text": read_text(ROOT / ".gitignore"),
         "readme_text": read_text(ROOT / "README.md"),
         "status_text": read_text(ROOT / "STATUS.md"),
         "current_stage_driver_text": read_text(ROOT / "docs" / "publication_record" / "current_stage_driver.md"),
@@ -95,6 +144,7 @@ def load_inputs() -> dict[str, Any]:
         "h51_summary": read_json(ROOT / "results" / "H51_post_h50_origin_mechanism_reentry_packet" / "summary.json"),
         "h52_summary": read_json(ROOT / "results" / "H52_post_r55_r56_r57_origin_mechanism_decision_packet" / "summary.json"),
         "r57_summary": read_json(ROOT / "results" / "R57_origin_accelerated_trace_vm_comparator_gate" / "summary.json"),
+        "tracked_large_artifacts": tracked_large_artifacts,
     }
 
 
@@ -125,7 +175,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "completed operational/docs sync packet after landed `h50` and landed `h51`",
                     "preserves `h52` as the current active docs-only closeout",
                     "preserves `h51` as the preserved prior mechanism-reentry packet",
-                    "promotes the clean `f28/h51` worktree as the control surface for this wave",
+                    "preserves the clean `f28/h51` worktree as the historical control surface for the closed wave",
                     "keeps descendant clean worktrees as the only scientific execution surfaces for `r55`, `r56`, and `r57`",
                     "keeps `merge_executed = false` explicit",
                     "codifies compact-summary-in-git and raw-row-dump-out-of-git defaults",
@@ -149,7 +199,7 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "`h51` remains the preserved prior mechanism-reentry packet",
                     "raw step rows, trace rows, per-read rows, and artifacts above roughly",
                     "compact summaries, manifests, stop rules, and first-fail digests stay in git",
-                    "merge back to `main` does not occur during this wave",
+                    "merge back to `main` does not occur during the closed wave",
                 ],
             )
             else "blocked",
@@ -194,11 +244,20 @@ def build_checklist_rows(inputs: dict[str, Any]) -> list[dict[str, object]]:
                     "docs/milestones/p37_post_h50_narrow_executor_closeout_sync/worktree_strategy.md",
                     "docs/milestones/p37_post_h50_narrow_executor_closeout_sync/artifact_policy.md",
                     "docs/milestones/p37_post_h50_narrow_executor_closeout_sync/commit_cadence.md",
+                    ".gitignore",
                     "results/p37_post_h50_narrow_executor_closeout_sync/summary.json",
                 ],
             )
             else "blocked",
             "notes": "P37 should make the worktree policy, large-artifact policy, and commit cadence explicit for this wave.",
+        },
+        {
+            "item_id": "p37_repo_state_matches_large_artifact_policy",
+            "status": "pass"
+            if contains_all(inputs["gitignore_text"], RAW_ROW_IGNORE_PATTERNS)
+            and not inputs["tracked_large_artifacts"]
+            else "blocked",
+            "notes": "The clean worktree should enforce raw-row ignore rules and keep tracked artifacts under the roughly 10 MiB default limit.",
         },
         {
             "item_id": "shared_control_surfaces_make_p37_current_low_priority_wave",
@@ -262,6 +321,7 @@ def build_claim_packet() -> dict[str, object]:
             "P37 promotes the clean F28/H51 worktree as the control surface for the current wave.",
             "P37 keeps descendant clean worktrees as the only scientific execution surfaces for R55, R56, and R57.",
             "P37 keeps raw row dumps and artifacts above roughly 10 MiB out of git by default while preserving explicit no-merge posture.",
+            "P37 can now audit that the clean worktree keeps the raw-row ignore rules in .gitignore and tracks no artifacts at or above roughly 10 MiB.",
         ],
         "unsupported_here": [
             "P37 does not change the active scientific stage or overturn H50.",
@@ -308,6 +368,11 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
             ["commit `F28` planning surfaces separately", "commit `R57` comparator outputs separately from `H52` decision surfaces"],
         ),
         (
+            ".gitignore",
+            inputs["gitignore_text"],
+            RAW_ROW_IGNORE_PATTERNS,
+        ),
+        (
             "README.md",
             inputs["readme_text"],
             ["`P37_post_h50_narrow_executor_closeout_sync`", "artifacts above roughly `10 MiB` stay out of git by default"],
@@ -339,6 +404,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
 def build_summary(checklist_rows: list[dict[str, object]], claim_packet: dict[str, object]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     distilled = claim_packet["distilled_result"]
+    tracked_large_artifacts = collect_tracked_large_artifacts()
     return {
         "current_active_stage": distilled["current_active_stage"],
         "preserved_prior_docs_only_closeout": distilled["preserved_prior_docs_only_closeout"],
@@ -353,6 +419,8 @@ def build_summary(checklist_rows: list[dict[str, object]], claim_packet: dict[st
         "merge_executed": distilled["merge_executed"],
         "root_dirty_main_quarantined": distilled["root_dirty_main_quarantined"],
         "large_artifact_default_policy": distilled["large_artifact_default_policy"],
+        "tracked_large_artifact_count": len(tracked_large_artifacts),
+        "tracked_large_artifact_paths": [str(row["path"]) for row in tracked_large_artifacts],
         "next_required_lane": distilled["next_required_lane"],
         "supported_here_count": len(claim_packet["supported_here"]),
         "unsupported_here_count": len(claim_packet["unsupported_here"]),

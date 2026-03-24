@@ -11,7 +11,7 @@
       "path": "docs/milestones/P37_post_h50_narrow_executor_closeout_sync/artifact_policy.md",
       "matched_lines": [
         "- raw step rows, trace rows, `probe_read_rows.json`, `per_read_rows.json`,",
-        "- Git LFS remains inactive by default for this wave; and"
+        "- Git LFS remains inactive by default for the closed wave; and"
       ]
     },
     {
@@ -19,6 +19,15 @@
       "matched_lines": [
         "- commit `F28` planning surfaces separately from all packet or runtime work;",
         "- commit `R57` comparator outputs separately from `H52` decision surfaces; and"
+      ]
+    },
+    {
+      "path": ".gitignore",
+      "matched_lines": [
+        "results/**/probe_read_rows.json",
+        "results/**/per_read_rows.json",
+        "results/**/trace_rows.json",
+        "results/**/step_rows.json"
       ]
     },
     {

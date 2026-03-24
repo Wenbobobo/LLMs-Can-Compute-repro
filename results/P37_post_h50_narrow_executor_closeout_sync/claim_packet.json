@@ -3,7 +3,8 @@
     "supported_here": [
       "P37 promotes the clean F28/H51 worktree as the control surface for the current wave.",
       "P37 keeps descendant clean worktrees as the only scientific execution surfaces for R55, R56, and R57.",
-      "P37 keeps raw row dumps and artifacts above roughly 10 MiB out of git by default while preserving explicit no-merge posture."
+      "P37 keeps raw row dumps and artifacts above roughly 10 MiB out of git by default while preserving explicit no-merge posture.",
+      "P37 can now audit that the clean worktree keeps the raw-row ignore rules in .gitignore and tracks no artifacts at or above roughly 10 MiB."
     ],
     "unsupported_here": [
       "P37 does not change the active scientific stage or overturn H50.",

@@ -9,6 +9,7 @@
 - `docs/milestones/P37_post_h50_narrow_executor_closeout_sync/worktree_strategy.md`
 - `docs/milestones/P37_post_h50_narrow_executor_closeout_sync/artifact_policy.md`
 - `docs/milestones/P37_post_h50_narrow_executor_closeout_sync/commit_cadence.md`
+- `.gitignore`
 - `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`
 - `results/P37_post_h50_narrow_executor_closeout_sync/checklist.json`
 - `results/P37_post_h50_narrow_executor_closeout_sync/claim_packet.json`

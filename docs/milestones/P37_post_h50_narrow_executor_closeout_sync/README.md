@@ -17,7 +17,8 @@ The packet fixes:
 - one commit-cadence note;
 - one acceptance note keeping dirty root `main` untouched during this wave; and
 - one explicit split between compact in-git summaries and raw row dumps that
-  stay out of git by default.
+  stay out of git by default, with `.gitignore` carrying the concrete raw-row
+  ignore rules for the clean worktree.
 
 The packet is now preserved as a completed sidecar for a closed wave. It does
 not authorize further execution on this branch.

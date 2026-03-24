@@ -59,10 +59,33 @@ def test_export_p37_writes_narrow_executor_closeout_sync(tmp_path: Path) -> None
     assert payload["summary"]["large_artifact_default_policy"] == (
         "raw_step_trace_and_per_read_rows_out_of_git"
     )
+    assert payload["summary"]["tracked_large_artifact_count"] == 0
+    assert payload["summary"]["tracked_large_artifact_paths"] == []
     assert payload["summary"]["next_required_lane"] == "no_active_downstream_runtime_lane"
     assert payload["summary"]["blocked_count"] == 0
     assert payload["summary"]["pass_count"] == len(checklist_rows)
     assert claim_packet["distilled_result"]["current_low_priority_wave"] == (
         "p37_post_h50_narrow_executor_closeout_sync"
     )
-    assert len(snapshot_rows) == 8
+    assert len(snapshot_rows) == 9
+
+
+def test_collect_tracked_large_artifacts_filters_threshold(tmp_path: Path) -> None:
+    module = _load_export_module()
+    small = tmp_path / "small.txt"
+    small.write_bytes(b"0" * (module.LARGE_ARTIFACT_THRESHOLD_BYTES - 1))
+    large = tmp_path / "large.bin"
+    large.write_bytes(b"0" * module.LARGE_ARTIFACT_THRESHOLD_BYTES)
+
+    rows = module.collect_tracked_large_artifacts(
+        tmp_path,
+        tracked_paths=["small.txt", "large.bin", "missing.bin"],
+    )
+
+    assert rows == [
+        {
+            "path": "large.bin",
+            "size_bytes": module.LARGE_ARTIFACT_THRESHOLD_BYTES,
+            "size_mib": 10.0,
+        }
+    ]
