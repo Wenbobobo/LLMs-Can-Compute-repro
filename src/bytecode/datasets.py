@@ -22,6 +22,7 @@ from .restricted_frontend import (
 )
 from .restricted_tinyc import (
     RestrictedTinyCProgram,
+    compile_restricted_tinyc_program,
     count_nonzero_i32_buffer_tinyc_program,
     histogram16_u8_tinyc_program,
     sum_i32_buffer_tinyc_program,
@@ -143,6 +144,18 @@ class RestrictedTinyCLoweringCase:
     max_steps: int
     tinyc_program: RestrictedTinyCProgram
     canonical_program: BytecodeProgram
+
+
+@dataclass(frozen=True, slots=True)
+class MemoryControlSurfaceSufficiencyCase:
+    family_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    tinyc_program: RestrictedTinyCProgram | None = None
 
 
 def _frame_cell(
@@ -1970,6 +1983,63 @@ def r50_restricted_tinyc_lowering_cases() -> tuple[RestrictedTinyCLoweringCase, 
                 bin_base_address=816,
                 name="bytecode_histogram16_u8_wide_len10_a800",
             ),
+        ),
+    )
+
+
+def r51_origin_memory_control_surface_sufficiency_cases() -> tuple[MemoryControlSurfaceSufficiencyCase, ...]:
+    widened_histogram_program = histogram16_u8_tinyc_program(
+        input_values=(15, 3, 7, 3, 15, 2, 3, 2, 0, 7, 9, 2),
+        input_base_address=832,
+        bin_base_address=864,
+        name="tinyc_histogram16_u8_len12_a832",
+    )
+    return (
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="latest_write_overwrite_after_gap",
+            variant_id="checkpoint_replay_long_start8_shift96",
+            description="Checkpointed three-bank replay forces delayed last-write recovery after repeated overwrites and selector gaps.",
+            axis_tags=("latest_write", "overwrite_after_gap", "checkpoint_replay", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            program=checkpoint_replay_long_program(8, base_address=96),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="stack_relative_read_under_deeper_control",
+            variant_id="stack_memory_braid_start7_shift208",
+            description="Branchy stack-memory braid exercises stack-relative reads under deeper control and alternating indirect updates.",
+            axis_tags=("stack_relative", "deeper_control", "branchy_surface", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            program=stack_memory_braid_program(7, base_address=208),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="loop_carried_state",
+            variant_id="alternating_memory_loop_start9_shift144",
+            description="Alternating memory loop keeps loop-carried state alive across repeated flag-controlled updates and delayed reads.",
+            axis_tags=("loop_carried_state", "flag_control", "latest_write", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=3072,
+            program=alternating_memory_loop_bytecode_program(9, base_address=144),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="nested_call_return",
+            variant_id="call_chain_smoke_nested_two_level",
+            description="Two-level nested call/return chain tests return-target reconstruction without hidden call-stack side state.",
+            axis_tags=("nested_call_return", "return_target_identity", "control_surface", "memory_control_surface"),
+            comparison_mode="medium_exact_trace",
+            max_steps=256,
+            program=call_chain_smoke_program(),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="bounded_static_memory_lowered_row",
+            variant_id="tinyc_histogram_len12_shift832",
+            description="Restricted tiny-C histogram row increases bounded static-memory pressure without widening to arbitrary C.",
+            axis_tags=("restricted_tinyc", "static_memory", "lowered_row", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=8192,
+            program=compile_restricted_tinyc_program(widened_histogram_program),
+            tinyc_program=widened_histogram_program,
         ),
     )
 

@@ -6,7 +6,8 @@
 - required outputs include full-trace parity, final-state parity,
   maximizer-row identity, and first-fail artifacts;
 - the lane ends with exactly one verdict:
-  `surface_extends_narrowly`, `mixed_with_explicit_boundary`, or
-  `fails_memory_control_sufficiency`; and
+  `memory_control_surface_supported_narrowly`,
+  `memory_control_surface_mixed_with_explicit_boundary`, or
+  `memory_control_surface_not_supported`; and
 - no broader useful-case, trainable, or transformed-executor lane is activated
   directly from `R51`.

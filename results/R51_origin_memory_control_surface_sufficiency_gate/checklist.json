@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "r51_docs_define_mandatory_memory_control_families",
+      "status": "pass",
+      "notes": "R51 docs should keep the mandatory family set and hard stop conditions explicit."
+    },
+    {
+      "item_id": "upstream_h49_f26_fix_r51_as_only_next_runtime_candidate",
+      "status": "pass",
+      "notes": "R51 must remain the only post-H49 runtime lane authorized by H49/F26."
+    },
+    {
+      "item_id": "r51_runtime_rows_stay_exact_without_identity_or_budget_break",
+      "status": "pass",
+      "notes": "All five mandatory R51 rows should stay exact and keep identity/budget guardrails intact."
+    }
+  ]
+}

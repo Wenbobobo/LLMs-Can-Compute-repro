@@ -1,0 +1,6 @@
+{
+  "experiment": "r51_origin_memory_control_surface_sufficiency_gate",
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "next_required_packet": "r52_origin_internal_vs_external_executor_value_gate"
+}

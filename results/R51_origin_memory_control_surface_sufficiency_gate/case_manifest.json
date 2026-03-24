@@ -1,0 +1,84 @@
+{
+  "rows": [
+    {
+      "case_order": 1,
+      "family_id": "latest_write_overwrite_after_gap",
+      "variant_id": "checkpoint_replay_long_start8_shift96",
+      "description": "Checkpointed three-bank replay forces delayed last-write recovery after repeated overwrites and selector gaps.",
+      "axis_tags": [
+        "latest_write",
+        "overwrite_after_gap",
+        "checkpoint_replay",
+        "memory_control_surface"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_checkpoint_replay_long_8_a96",
+      "source_kind": "bytecode"
+    },
+    {
+      "case_order": 2,
+      "family_id": "stack_relative_read_under_deeper_control",
+      "variant_id": "stack_memory_braid_start7_shift208",
+      "description": "Branchy stack-memory braid exercises stack-relative reads under deeper control and alternating indirect updates.",
+      "axis_tags": [
+        "stack_relative",
+        "deeper_control",
+        "branchy_surface",
+        "memory_control_surface"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_stack_memory_braid_7_a208",
+      "source_kind": "bytecode"
+    },
+    {
+      "case_order": 3,
+      "family_id": "loop_carried_state",
+      "variant_id": "alternating_memory_loop_start9_shift144",
+      "description": "Alternating memory loop keeps loop-carried state alive across repeated flag-controlled updates and delayed reads.",
+      "axis_tags": [
+        "loop_carried_state",
+        "flag_control",
+        "latest_write",
+        "memory_control_surface"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 3072,
+      "program_name": "bytecode_alternating_memory_loop_9_a144",
+      "source_kind": "bytecode"
+    },
+    {
+      "case_order": 4,
+      "family_id": "nested_call_return",
+      "variant_id": "call_chain_smoke_nested_two_level",
+      "description": "Two-level nested call/return chain tests return-target reconstruction without hidden call-stack side state.",
+      "axis_tags": [
+        "nested_call_return",
+        "return_target_identity",
+        "control_surface",
+        "memory_control_surface"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "program_name": "bytecode_call_chain_smoke",
+      "source_kind": "bytecode"
+    },
+    {
+      "case_order": 5,
+      "family_id": "bounded_static_memory_lowered_row",
+      "variant_id": "tinyc_histogram_len12_shift832",
+      "description": "Restricted tiny-C histogram row increases bounded static-memory pressure without widening to arbitrary C.",
+      "axis_tags": [
+        "restricted_tinyc",
+        "static_memory",
+        "lowered_row",
+        "memory_control_surface"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 8192,
+      "program_name": "tinyc_histogram16_u8_len12_a832",
+      "source_kind": "restricted_tinyc"
+    }
+  ]
+}

@@ -5,7 +5,6 @@
   plain external runtime baselines explicitly;
 - exactness remains the first constraint, not a secondary metric;
 - the lane ends with exactly one verdict:
-  `internal_route_has_bounded_value`,
-  `exact_but_no_system_value`, or
-  `no_value_over_external_baseline`; and
+  `internal_route_retains_bounded_value` or
+  `internal_route_lacks_bounded_value`; and
 - no broader runtime or model lane is authorized directly from `R52`.
