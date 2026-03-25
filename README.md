@@ -3,33 +3,33 @@
 Careful reproduction of a narrow execution-substrate reading of Percepta's
 _Can LLMs Be Computers?_ field note.
 
-The repository does not target a general "LLMs are computers" claim. The
-current closed question is narrower: one restricted typed stack-bytecode
-lowering surface and its lowered trace-VM execution remain exact on a fixed
-five-row compiled-boundary suite, but that result still does not justify a
-fast-path or broader systems-value claim.
+The repository still does not target a general "LLMs are computers" claim. The
+current closed question is narrower: the current compiled-boundary route can
+carry one minimal preserved useful-kernel pair exactly, but that route still
+does not retain bounded value over simpler baselines once compiler/lowering
+overhead is counted.
 
 ## Current Stage
 
 As of `2026-03-25`, the current active packet is
-`H54_post_r58_r59_compiled_boundary_decision_packet`.
+`H56_post_r60_r61_useful_kernel_decision_packet`.
 
 Current anchors:
 
 - active docs-only packet:
-  `H54_post_r58_r59_compiled_boundary_decision_packet`
+  `H56_post_r60_r61_useful_kernel_decision_packet`
 - preserved prior docs-only closeout:
-  `H52_post_r55_r56_r57_origin_mechanism_decision_packet`
-- preserved prior compiled-boundary reentry packet:
-  `H53_post_h52_compiled_boundary_reentry_packet`
+  `H54_post_r58_r59_compiled_boundary_decision_packet`
+- preserved prior useful-kernel reentry packet:
+  `H55_post_h54_useful_kernel_reentry_packet`
 - current planning bundle:
-  `F29_post_h52_restricted_compiled_boundary_bundle`
+  `F30_post_h54_useful_kernel_bridge_bundle`
 - current low-priority operational/docs wave:
-  `P38_post_h52_compiled_boundary_hygiene_sync`
-- completed lowering gate under the current compiled-boundary lane:
-  `R58_origin_restricted_stack_bytecode_lowering_contract_gate`
-- completed execution gate under the current compiled-boundary lane:
-  `R59_origin_compiled_trace_vm_execution_gate`
+  `P39_post_h54_successor_worktree_hygiene_sync`
+- completed useful-kernel carryover gate:
+  `R60_origin_compiled_useful_kernel_carryover_gate`
+- completed value gate:
+  `R61_origin_compiled_useful_kernel_value_gate`
 - current downstream scientific lane:
   `no_active_downstream_runtime_lane`
 - preserved paper-grade endpoint:
@@ -37,46 +37,50 @@ Current anchors:
 - preserved routing/refreeze packet:
   `H36_post_r40_bounded_scalar_family_refreeze`
 
-The current planning bundle is
-`F29_post_h52_restricted_compiled_boundary_bundle`. `H54` closes the current
-compiled-boundary lane as
-`freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`:
-landed `R58` keeps exact source/spec/lowered parity on `5/5` fixed typed
-stack-bytecode rows, and landed `R59` keeps exact lowered execution on those
-same `5/5` rows across both linear and accelerated internal routes. The repo
-therefore returns to no active downstream runtime lane without authorizing
-arbitrary `C`, broad Wasm, or a general compiler-systems claim.
+`F30_post_h54_useful_kernel_bridge_bundle` fixed one narrow stop/go wave above
+`H54`. `H55` authorized only the minimal useful-kernel pair
+`sum_i32_buffer` and `count_nonzero_i32_buffer` through `R60`. `R60` then
+landed exact carryover on `5/5` preserved variants with exact source/spec,
+source/lowered, canonical/compiled, and linear/accelerated internal execution
+parity. `R61` kept all declared comparators exact on those same `5/5` rows,
+but the accelerated internal route was slower than linear, transparent source,
+transparent lowered execution, and a plain external reference runtime once
+compiler/lowering overhead was counted. `H56` therefore selects
+`freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`.
 
 ## Current Order
 
 - completed mainline:
-  `F29 -> H53 -> R58 -> R59 -> H54`
+  `F30 -> H55 -> R60 -> R61 -> H56`
 - sidecar:
-  `P38`
+  `P39`
 
 ## Execution Posture
 
 There are no remaining runtime or docs-only execution tasks on this closed
 wave. This branch is now a preserved closeout surface. The next meaningful
 step is a new explicit planning packet in a successor worktree, not more
-compiled-boundary execution on this branch.
+compiled useful-kernel execution on this branch.
 
 ## Current Scope
 
 The closed wave is limited to:
 
-1. landed planning-only `F29` routing for one restricted compiled-boundary
-   lane;
-2. landed docs-only `H53` authorization through `R58` only;
-3. landed exact `R58` typed stack-bytecode lowering evidence;
-4. landed exact `R59` lowered trace-VM execution evidence; and
-5. landed docs-only `H54` compiled-boundary closeout.
+1. landed planning-only `F30` routing for one compiled useful-kernel stop/go
+   wave;
+2. landed docs-only `H55` authorization through `R60` only;
+3. landed exact `R60` useful-kernel carryover evidence on the fixed
+   `sum/count` suite;
+4. landed `R61` value-negative comparator evidence on the exact `R60` rows;
+   and
+5. landed docs-only `H56` closeout.
 
 Still blocked:
 
 - `F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle`
 - `R53_origin_transformed_executor_entry_gate`
 - `R54_origin_trainable_executor_comparator_gate`
+- `histogram16_u8` carryover on this first compiled useful-kernel wave
 - arbitrary `C`
 - broad Wasm claims
 - merge back to dirty root `main`
@@ -88,14 +92,15 @@ on the active wave.
 
 - `docs/publication_record/current_stage_driver.md`
 - `tmp/active_wave_plan.md`
-- `docs/plans/2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
-- `results/F29_post_h52_restricted_compiled_boundary_bundle/summary.json`
-- `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`
-- `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`
-- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
-- `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
+- `docs/plans/2026-03-25-post-h54-useful-kernel-stopgo-design.md`
+- `results/F30_post_h54_useful_kernel_bridge_bundle/summary.json`
 - `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
-- `results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json`
+- `results/H55_post_h54_useful_kernel_reentry_packet/summary.json`
+- `results/R60_origin_compiled_useful_kernel_carryover_gate/summary.json`
+- `results/R61_origin_compiled_useful_kernel_value_gate/summary.json`
+- `results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
+- `results/P39_post_h54_successor_worktree_hygiene_sync/summary.json`
+- `results/H43_post_r44_useful_case_refreeze/summary.json`
 
 Older milestone and plan inventories remain in the repository as historical
 records. When historical prose conflicts with current routing, trust the files
