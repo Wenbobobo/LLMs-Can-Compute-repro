@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "r60_docs_define_saved_successor_carryover_gate_only",
+      "status": "pass",
+      "notes": "R60 should remain saved successor gate storage only and should predeclare exactness, scope, and stop conditions."
+    },
+    {
+      "item_id": "r60_scope_and_kernel_selection_stay_below_r44_family_lift",
+      "status": "pass",
+      "notes": "R60 should keep the first carryover pass on the smallest preserved useful-kernel pair and leave histogram16_u8 out of scope."
+    },
+    {
+      "item_id": "indices_record_r60_as_saved_successor_gate_not_active_runtime_lane",
+      "status": "pass",
+      "notes": "Shared successor indexes should expose R60 as saved gate storage while H54 remains the current closeout."
+    }
+  ]
+}

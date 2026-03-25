@@ -1,0 +1,45 @@
+{
+  "rows": [
+    {
+      "path": "docs/milestones/R61_origin_compiled_useful_kernel_value_gate/README.md",
+      "matched_lines": [
+        "Saved successor comparator/value gate for the post-`H54` design.",
+        "If activated later, `R61` should run only after a positive exact `R60`."
+      ]
+    },
+    {
+      "path": "docs/milestones/R61_origin_compiled_useful_kernel_value_gate/comparator_matrix.md",
+      "matched_lines": [
+        "- transparent source execution",
+        "- plain external reference runtime"
+      ]
+    },
+    {
+      "path": "docs/milestones/R61_origin_compiled_useful_kernel_value_gate/value_risk_notes.md",
+      "matched_lines": [
+        "must answer one bounded value question on the exact `R60` rows only.",
+        "not admissible as bounded value;"
+      ]
+    },
+    {
+      "path": "docs/milestones/R61_origin_compiled_useful_kernel_value_gate/execution_manifest.md",
+      "matched_lines": [
+        "Only execute on exact positive `R60` rows."
+      ]
+    },
+    {
+      "path": "docs/plans/2026-03-25-post-h54-useful-kernel-stopgo-design.md",
+      "matched_lines": [
+        "`R61_origin_compiled_useful_kernel_value_gate` ->",
+        "- compiler/export overhead accounting; and"
+      ]
+    },
+    {
+      "path": "docs/milestones/README.md",
+      "matched_lines": [
+        "- `R61_origin_compiled_useful_kernel_value_gate/`",
+        "saved successor value gate; not active"
+      ]
+    }
+  ]
+}

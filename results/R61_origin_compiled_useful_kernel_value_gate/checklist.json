@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "r61_docs_define_saved_successor_value_gate_only",
+      "status": "pass",
+      "notes": "R61 should remain saved successor value-gate storage only and should predeclare comparators, accounting, and stop conditions."
+    },
+    {
+      "item_id": "r61_value_risk_notes_preserve_strict_negative_interpretation",
+      "status": "pass",
+      "notes": "R61 should treat exact-but-value-negative outcomes as real negative evidence rather than partial systems success."
+    },
+    {
+      "item_id": "indices_record_r61_as_saved_successor_gate_not_active_runtime_lane",
+      "status": "pass",
+      "notes": "Shared successor indexes should expose R61 as saved gate storage while H54 remains the current closeout."
+    }
+  ]
+}

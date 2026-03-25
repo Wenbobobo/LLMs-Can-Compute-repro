@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "path": "docs/milestones/R60_origin_compiled_useful_kernel_carryover_gate/README.md",
+      "matched_lines": [
+        "Saved successor exact runtime gate for the post-`H54` design.",
+        "compiled-boundary route can carry a minimal preserved useful-kernel suite"
+      ]
+    },
+    {
+      "path": "docs/milestones/R60_origin_compiled_useful_kernel_carryover_gate/carryover_scope.md",
+      "matched_lines": [
+        "- `sum_i32_buffer`",
+        "- `count_nonzero_i32_buffer`",
+        "- `histogram16_u8`"
+      ]
+    },
+    {
+      "path": "docs/milestones/R60_origin_compiled_useful_kernel_carryover_gate/kernel_selection.md",
+      "matched_lines": [
+        "- both avoid introducing the wider bucket-update and aliasing pressure of"
+      ]
+    },
+    {
+      "path": "docs/milestones/R60_origin_compiled_useful_kernel_carryover_gate/execution_manifest.md",
+      "matched_lines": [
+        "- transparent source execution",
+        "- current accelerated trace-VM execution"
+      ]
+    },
+    {
+      "path": "docs/milestones/R60_origin_compiled_useful_kernel_carryover_gate/stop_conditions.md",
+      "matched_lines": [
+        "- exactness failure on any admitted row",
+        "- compiler-side work leakage beyond the declared runtime boundary"
+      ]
+    },
+    {
+      "path": "docs/plans/2026-03-25-post-h54-useful-kernel-stopgo-design.md",
+      "matched_lines": [
+        "`R60_origin_compiled_useful_kernel_carryover_gate` ->",
+        "- `sum_i32_buffer`",
+        "- `count_nonzero_i32_buffer`"
+      ]
+    },
+    {
+      "path": "docs/milestones/README.md",
+      "matched_lines": [
+        "- `R60_origin_compiled_useful_kernel_carryover_gate/`",
+        "saved successor exact useful-kernel carryover gate; not active"
+      ]
+    }
+  ]
+}

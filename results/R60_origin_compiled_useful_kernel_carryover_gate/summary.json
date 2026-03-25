@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "active_stage": "r60_origin_compiled_useful_kernel_carryover_gate",
+    "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
+    "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
+    "selected_outcome": "saved_successor_carryover_gate_only",
+    "admitted_kernel_suite": [
+      "sum_i32_buffer",
+      "count_nonzero_i32_buffer"
+    ],
+    "out_of_scope_examples": [
+      "histogram16_u8",
+      "arbitrary_c",
+      "broad_wasm"
+    ],
+    "only_followup_packet_if_activated": "r61_origin_compiled_useful_kernel_value_gate",
+    "next_required_lane_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate",
+    "supported_here_count": 3,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\wt\\f30\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\wt\\f30\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}
