@@ -1,6 +1,6 @@
 param(
     [string]$AliasRoot = "",
-    [switch]$MirrorLegacyShortcuts = $true
+    [switch]$MirrorLegacyShortcuts
 )
 
 $ErrorActionPreference = "Stop"
@@ -35,10 +35,18 @@ function Ensure-Junction {
     if (Test-Path $AliasPath) {
         $item = Get-Item $AliasPath -Force
         $existingTarget = $null
+        $rawTargetIsReparsePoint = $false
         if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {
             $rawTarget = @($item.Target) | Where-Object { $_ } | Select-Object -First 1
             if ($rawTarget) {
-                $existingTarget = Resolve-NormalizedPath $rawTarget
+                if (Test-Path $rawTarget) {
+                    $existingTarget = Resolve-NormalizedPath $rawTarget
+                    $rawTargetItem = Get-Item $rawTarget -Force
+                    $rawTargetIsReparsePoint = [bool]($rawTargetItem.Attributes -band [IO.FileAttributes]::ReparsePoint)
+                }
+                else {
+                    $existingTarget = [IO.Path]::GetFullPath($rawTarget)
+                }
             }
         }
 
@@ -46,14 +54,24 @@ function Ensure-Junction {
             $existingTarget = $item.FullName
         }
 
-        if ($existingTarget -ne $desiredTarget) {
+        if ($existingTarget -eq $desiredTarget -and -not $rawTargetIsReparsePoint) {
+            return [pscustomobject]@{
+                Alias = $AliasPath
+                Target = $desiredTarget
+                Status = "existing"
+            }
+        }
+
+        if (-not ($item.Attributes -band [IO.FileAttributes]::ReparsePoint)) {
             throw "Alias conflict at '$AliasPath': existing target '$existingTarget' != desired '$desiredTarget'."
         }
 
+        cmd /c rmdir $AliasPath | Out-Null
+        New-Item -ItemType Junction -Path $AliasPath -Target $desiredTarget | Out-Null
         return [pscustomobject]@{
             Alias = $AliasPath
             Target = $desiredTarget
-            Status = "existing"
+            Status = "rewired"
         }
     }
 
@@ -63,6 +81,23 @@ function Ensure-Junction {
         Target = $desiredTarget
         Status = "created"
     }
+}
+
+$shortAliasPattern = '^[A-Za-z]\d+[A-Za-z0-9]*$'
+
+function Get-AliasNames {
+    param([string]$NormalizedPath)
+
+    $leaf = Split-Path $NormalizedPath -Leaf
+    $aliasNames = [System.Collections.Generic.List[string]]::new()
+    $aliasNames.Add($leaf)
+
+    $prefix = $leaf.Split("-")[0]
+    if ($prefix -ne $leaf -and $prefix -match $shortAliasPattern) {
+        $aliasNames.Add($prefix)
+    }
+
+    return $aliasNames | Select-Object -Unique
 }
 
 $registeredAliases = @()
@@ -78,9 +113,10 @@ foreach ($worktreePath in $worktreePaths) {
         continue
     }
 
-    $aliasName = Split-Path $normalized -Leaf
-    if ($seenAliasNames.Add($aliasName)) {
-        $registeredAliases += Ensure-Junction (Join-Path $AliasRoot $aliasName) $normalized
+    foreach ($aliasName in Get-AliasNames $normalized) {
+        if ($seenAliasNames.Add($aliasName)) {
+            $registeredAliases += Ensure-Junction (Join-Path $AliasRoot $aliasName) $normalized
+        }
     }
 }
 

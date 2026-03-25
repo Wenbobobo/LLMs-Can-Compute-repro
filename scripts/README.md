@@ -112,5 +112,6 @@
   layout after the tree is clean enough to branch, now rooted by default at
   `../wt`
 - `sync_repo_local_worktree_aliases.ps1` — create or refresh the repo-local
-  `../wt` junction aliases for registered worktrees and legacy `D:/wt/*`
-  shortcuts
+  `../wt` junction aliases for registered worktrees, including direct short
+  aliases like `f29` and `f31`; legacy `D:/wt/*` mirroring is now opt-in via
+  `-MirrorLegacyShortcuts`
