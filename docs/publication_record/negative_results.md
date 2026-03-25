@@ -108,6 +108,13 @@
   admitted bytecode subset lowers and executes exactly on the active
   Origin-core substrate, but that does not reopen arbitrary `C`, broader
   language support, or same-endpoint systems claims.
+- `R62` extends that value-negative boundary onto native useful-kernel rows:
+  even after removing compiler/lowering time from the measured executor
+  comparator and running native `sum/count` trace programs directly, the
+  accelerated route stays exact on `4/4` rows but remains slower than native
+  linear on the longest row of both kernels and stays far outside the external
+  scalar comparator's order of magnitude, so `H58` closes the mainline as
+  mechanism-supported but value-negative.
 - `R39` is narrow same-substrate follow-up evidence, not a broader compiler
   opening: one declared helper-body permutation with target renumbering
   survives on the admitted row and named same-family boundary probe, but that

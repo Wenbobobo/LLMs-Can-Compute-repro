@@ -211,43 +211,69 @@
 
 ## Current bounded mainline state
 
-- `H54` is now the current active docs-only interpretation packet for the
-  closed compiled-boundary lane after landed `R58/R59`; it preserves `H52`
-  as the prior mechanism closeout, preserves `H53` as the prior
-  compiled-boundary reentry packet, preserves `H43` as the paper-grade
-  endpoint, selects
-  `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`,
+- `H58` is now the current active docs-only closeout packet for the final
+  post-`H56` discriminator wave; it preserves `H56` as the prior compiled
+  useful-kernel closeout, preserves `H57` as the prior authorization packet,
+  preserves `H43` as the paper-grade endpoint, selects
+  `stop_as_mechanism_supported_but_no_bounded_executor_value`, keeps
+  `F27/R53/R54` blocked, and restores `no_active_downstream_runtime_lane`.
+- `F31` is the completed preserved planning bundle that fixed
+  `H57 -> R62 -> H58` as the only admissible post-`H56` sequence and kept
+  `P40` as the only operational sidecar.
+- `H57` is the preserved prior docs-only authorization packet for the last
+  native useful-kernel discriminator lane; it preserved `H56`, preserved
+  `H43`, and authorized exactly `R62 -> H58` without reopening transformed or
+  trainable entry.
+- `R62` is the completed native useful-kernel value discriminator gate; it
+  keeps all declared native comparators exact on `4/4` rows across `2/2`
+  kernels but records `native_useful_kernel_route_lacks_bounded_value`
+  because accelerated wins are `0/2` on the longest kernel rows and
+  external-scalar same-order behavior is `0/2`.
+- `P40` is the current low-priority operational/docs wave; it records the
+  clean successor worktree, keeps `merge_executed = false` explicit, and
+  confirms zero tracked artifacts at or above roughly `10 MiB`.
+- `H56` is the preserved prior docs-only interpretation packet for the closed
+  compiled useful-kernel bridge lane after landed `R60/R61`; it preserves
+  `H54` as the prior compiled-boundary closeout, preserves `H55` as the prior
+  useful-kernel reentry packet, preserves `H43` as the paper-grade endpoint,
+  selects
+  `freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`,
   keeps `F27/R53/R54` blocked, and restores
   `no_active_downstream_runtime_lane`.
-- `H53` is now the preserved prior docs-only interpretation packet for the
+- `F30` is the completed preserved planning bundle that fixed
+  `H55 -> R60 -> R61 -> H56` as the only admissible useful-kernel bridge
+  sequence above preserved `H54/H52/H43/H36`.
+- `H55` is the preserved prior docs-only interpretation packet for the
+  minimal useful-kernel carryover lane; it preserved `H54`, preserved `H52`,
+  preserved `H43`, and authorized exactly `R60 -> R61 -> H56`.
+- `R60` is the completed preserved prior compiled useful-kernel carryover
+  gate; it keeps `5/5` declared variants exact across `2/2` preserved kernels
+  with zero compiler-leakage breaks.
+- `R61` is the completed preserved prior useful-kernel comparator gate; it
+  keeps all comparators exact on the declared `R60` rows but records
+  `compiled_useful_kernel_route_lacks_bounded_value` because accelerated wins
+  are `0/5`.
+- `H54` is the preserved prior docs-only interpretation packet for the closed
+  compiled-boundary lane after landed `R58/R59`; it preserves `H52` as the
+  prior mechanism closeout, preserves `H53` as the prior compiled-boundary
+  reentry packet, preserves `H43` as the paper-grade endpoint, selects
+  `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`,
+  and restores `no_active_downstream_runtime_lane`.
+- `H53` is the preserved prior docs-only interpretation packet for the
   narrowed compiled-boundary reentry lane; it preserved negative `H52`,
-  preserved `H43` as the paper-grade endpoint, and authorized exactly
-  `R58 -> R59 -> H54` without reopening transformed or trainable entry.
-- `H52` is now the preserved prior docs-only interpretation packet for the
-  closed mechanism reentry lane after landed `R55/R56/R57`; it preserves
-  `H50` as the broader-route bounded-value closeout, preserves `H51` as the
-  prior mechanism-reentry packet, preserves `H43` as the paper-grade
-  endpoint, selects
-  `freeze_origin_mechanism_supported_without_fastpath_value`, keeps
-  `F27/R53/R54` blocked, and restores `no_active_downstream_runtime_lane`.
-- `H50` is now the preserved prior docs-only interpretation packet for the
-  bounded mainline after completed `R51/R52`; it preserves `H49` as the prior
+  preserved `H43`, and authorized exactly `R58 -> R59 -> H54`.
+- `H52` is the preserved prior docs-only interpretation packet for the closed
+  mechanism reentry lane after landed `R55/R56/R57`; it preserves `H50` as
+  the broader-route bounded-value closeout, preserves `H51` as the prior
+  mechanism-reentry packet, preserves `H43` as the paper-grade endpoint,
+  selects `freeze_origin_mechanism_supported_without_fastpath_value`, and
+  restores `no_active_downstream_runtime_lane`.
+- `H50` is the preserved prior docs-only interpretation packet for the bounded
+  mainline after completed `R51/R52`; it preserves `H49` as the prior
   decision packet, preserves `H48` as the earlier decision packet, preserves
   `H43` as the paper-grade endpoint, selects
-  `stop_as_exact_without_system_value`, keeps `F27` blocked and non-selected,
-  and restores `no_active_downstream_runtime_lane`.
-- `H48` is the preserved prior docs-only interpretation packet that authorized
-  exactly `F25` after completed `R49`.
-- `H47` is the preserved earlier docs-only interpretation packet that froze
-  `R48` as narrow comparator-only support and restored
-  `no_active_downstream_runtime_lane` at that stage.
-- `H46` is the preserved earlier docs-only interpretation packet that
-  authorized exactly `R48`, while `F22` became the current
-  comparator-planning bundle.
-- `H45` is the preserved earlier docs-only decision packet that authorized
-  exact `R47` while keeping `F22/R48` explicit at that stage.
-- `H44` is the preserved prior docs-only route packet that authorized exact
-  `R46` without widening the paper-grade endpoint.
+  `stop_as_exact_without_system_value`, keeps `F27` blocked and
+  non-selected, and restores `no_active_downstream_runtime_lane`.
 - `H43` is the preserved prior useful-case refreeze packet and current
   paper-grade endpoint; it records claim `D` as `supported_here_narrowly` and
   restores `no_active_downstream_runtime_lane`.
@@ -256,88 +282,21 @@
   `R45`.
 - `H36` is the preserved active routing/refreeze packet; it freezes the
   bounded-scalar family narrowly and remains the routing packet underneath the
-  later semantic-boundary stack.
-- `R42` is the completed current semantic-boundary retrieval-contract gate;
-  it validates exact latest-write retrieval by address and stack slot on six
-  fixed tasks with exact value and maximizer-row identity underneath the later
-  completed `R43/R44/R45` stack.
-- `R43` is the completed current exact bounded-memory small-VM gate on five
-  fixed families.
-- `R46` is the completed preserved prior post-`H44` exact runtime gate on
-  held-out in-surface useful-case variants; it keeps `8/8` variants exact
-  across the fixed `3/3` kernels and records `surface_generalizes_narrowly`.
-- `R47` is the completed current exact frontend bridge gate; it keeps `8/8`
-  held-out useful-case variants exact with instruction-identical lowering
-  across the fixed `3/3` kernels and records
-  `restricted_frontend_supported_narrowly`.
-- `R48` is now the completed current comparator-only useful-case model gate;
-  it keeps both admitted modes exact on the preserved `8/8` useful-case
-  variants across the fixed `3/3` kernels, keeps the trainable mode exact on
-  the explicit held-out `histogram16_u8` family, and remains non-substitutive
-  relative to exact `R46/R47`.
-- `R49` is now the completed current numeric-scaling gate; it keeps `9/9`
-  widened rows exact across the fixed `3/3` kernels while both admitted
-  float32 recovery regimes stay exact through `bucket_c`.
-- `F25` is now the completed current post-`H48` planning bundle; it fixed
-  `R50` as the only admitted runtime candidate and `H49` as the only follow-up
-  packet while keeping the claim ceiling bounded to useful cases only.
-- `R50` is now the completed preserved prior restricted tiny-`C` lowering
-  gate; it keeps the admitted `8/8` tiny-`C` variants exact across the fixed
-  `3/3` useful-case kernels and preserves
-  `translation_identity_exact_count = 8`.
-- `H49` is now the preserved prior docs-only interpretation packet; it freezes
-  `R50` as narrow exact tiny-`C` support only, rejects scope widening by
-  momentum, and restores `no_active_downstream_runtime_lane`.
-- `R51` is now the completed post-`H49` runtime sufficiency gate; it keeps
-  the bounded richer memory/control surface exact on `5/5` declared families
-  with `5/5` maximizer-row identity passes and `5/5` budget-clean rows.
-- `R52` is now the completed post-`H49` comparator/value gate; it keeps all
-  three comparators exact on `5/5` rows but records
-  `internal_route_lacks_bounded_value` because the internal accelerated route
-  fails to show bounded value over simpler baselines.
-- `F28` is now the completed preserved planning bundle that fixed
-  `H51 -> R55 -> R56 -> R57 -> H52` as the only admissible mechanism-first
-  sequence above preserved `H50/H43/H36`.
-- `R55` is now the completed exact retrieval-equivalence gate; it keeps the
-  claimed `2D` hard-max retrieval path exactly aligned with the transparent
-  latest-relevant-state reference on `5/5` fixed tasks with `45/45` exact
-  maximizer-row identity observations.
-- `R56` is now the completed exact trace-VM semantics gate; it keeps the
-  append-only trace plus exact retrieval route exact on `5/5` fixed rows with
-  `288` exported transition rows and exact final states throughout.
-- `R57` is now the completed mechanism-lane comparator gate; it keeps all
-  accelerated, linear, and transparent external comparator routes exact on
-  `5/5` rows but records `accelerated_trace_vm_lacks_bounded_value` because
-  accelerated wins are `0/5` against both the linear internal route and the
-  external interpreter baseline.
-- `R44` is the completed current restricted useful-case gate on the fixed
-  three-kernel ladder.
-- `R45` is the completed current coequal model gate and remains explicitly
-  non-substitutive relative to exact `R43`.
-- `P27` is the completed operational explicit merge packet with
+  later semantic-boundary and useful-case stacks.
+- `R42`, `R43`, `R44`, and `R45` remain the preserved semantic-boundary and
+  useful-case evidence stack underneath `H43`; exact evidence remains
+  decisive and model evidence remains explicitly non-substitutive.
+- `R46`, `R47`, `R48`, `R49`, `R50`, `R51`, and `R52` remain the preserved
+  post-`H43` useful-case extension stack; those packets stay historically
+  informative but do not override the later `H50/H52/H54/H56/H58` stop chain.
+- `F28`, `F29`, `F20`, `F18`, `F19`, `F17`, `F16`, and `F15` remain
+  preserved planning/control bundles; none changes the scientific lane by
+  itself.
+- `P27` remains the preserved explicit merge packet with
   `merge_executed = false`; `P26` remains the preserved prior operational
   promotion/artifact audit lane.
-- `F20` is the current coequal-mainline model bundle, while `F16`, `F17`,
-  `F18`, `F19`, and `F15` remain the current planning/control bundles; none of
-  them changes the scientific lane by itself.
-- `H40`, `H38`, and `H37` remain preserved prior docs-only decision packets,
-  and `P25` remains the preserved prior operational promotion-prep lane
-  underneath the current `H43/H42/H41/R45/R44/R43/R42/P27/P26/F20/F18/F19`
-  control surface.
-- `H35` is the preserved prior docs-only bounded-scalar runtime-decision
-  packet, `H34` is the preserved earlier no-runtime interpretation packet,
-  and `H33` remains the preserved prior docs-only question-selection packet.
-- `R40` and `R39` remain completed downstream same-substrate evidence rather
-  than routing changes by themselves.
-- `H32` remains the preserved earlier active routing/refreeze packet for the
-  compiled-boundary line after the preserved `H31 -> R38` extension chain.
-- `H31` remains the preserved later explicit authorization packet and `H30`
-  remains the preserved prior compiled-boundary refreeze packet.
-- `H29` remains the preserved upstream Origin-core refreeze packet, and `H28`
-  remains the pivot packet that reanchored the project around append-only
-  traces, exact retrieval, and a small exact stack/VM executor.
-- `R36`, `R37`, and `R38` remain the upstream support set for the current
-  narrow same-substrate claim.
+- `H40`, `H38`, `H37`, `H35`, `H34`, `H33`, `H32`, `H31`, `H30`, `H29`, and
+  `H28` remain preserved routing/control history underneath the current stack.
 - `R41` remains deferred until a later explicit contradiction packet.
 - `H27` remains the preserved negative closeout of the old same-endpoint
   recovery route.
@@ -348,5 +307,5 @@
   underneath that historical route.
 - `E1c` remains inactive unless the active Origin-core packet exposes a
   concrete frozen-`D0` contradiction that wording alone cannot repair.
-- `H3` / `P10` / `P11` / `F1` remain the documentation/archive baseline while
+- `H3/P10/P11/F1` remain the documentation/archive baseline while
   `H4/E1a/E1b/H5` remain the completed bounded return baseline.

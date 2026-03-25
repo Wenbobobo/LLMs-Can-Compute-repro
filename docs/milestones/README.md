@@ -13,20 +13,18 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H56_post_r60_r61_useful_kernel_decision_packet/`
+- `H58_post_r62_origin_value_boundary_closeout_packet/`
   current active docs-only packet
-- `H55_post_h54_useful_kernel_reentry_packet/`
-  preserved prior useful-kernel reentry packet
-- `H54_post_r58_r59_compiled_boundary_decision_packet/`
-  preserved prior compiled-boundary closeout
-- `F30_post_h54_useful_kernel_bridge_bundle/`
-  current planning-only useful-kernel stop/go bundle
-- `P39_post_h54_successor_worktree_hygiene_sync/`
+- `H57_post_h56_last_discriminator_authorization_packet/`
+  preserved prior last-discriminator authorization packet
+- `H56_post_r60_r61_useful_kernel_decision_packet/`
+  preserved prior compiled useful-kernel closeout
+- `F31_post_h56_final_discriminating_value_boundary_bundle/`
+  current planning-only final discriminator bundle
+- `P40_post_h56_successor_worktree_and_artifact_hygiene_sync/`
   current low-priority operational/docs wave
-- `R60_origin_compiled_useful_kernel_carryover_gate/`
-  completed exact compiled useful-kernel carryover gate
-- `R61_origin_compiled_useful_kernel_value_gate/`
-  completed value gate
+- `R62_origin_native_useful_kernel_value_discriminator_gate/`
+  completed native value discriminator gate
 
 ## Preserved Recent Upstream Wave
 
@@ -56,8 +54,8 @@ historical and may use then-current wording.
 
 ## Current Rule
 
-- preserve negative `H54` on bounded fast-path/system value
-- keep `H56` as the current closeout
+- preserve negative `H56` on bounded executor/system value
+- keep `H58` as the current closeout
 - keep the downstream scientific lane at `no_active_downstream_runtime_lane`
 - do not reopen transformed or trainable entry by momentum
 - keep dirty root `main` out of scientific execution

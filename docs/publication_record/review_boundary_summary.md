@@ -4,7 +4,13 @@ Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
 appendix, claim/evidence ledgers, and landed result packets. The current
 active routing/decision state is
-`H54_post_r58_r59_compiled_boundary_decision_packet`, with
+`H58_post_r62_origin_value_boundary_closeout_packet`, with
+`H56_post_r60_r61_useful_kernel_decision_packet` as the preserved prior
+compiled useful-kernel closeout packet,
+`H57_post_h56_last_discriminator_authorization_packet` as the preserved prior
+last-discriminator authorization packet,
+`H54_post_r58_r59_compiled_boundary_decision_packet` as the preserved prior
+compiled-boundary closeout packet,
 `H52_post_r55_r56_r57_origin_mechanism_decision_packet` as the preserved prior
 mechanism closeout packet, `H53_post_h52_compiled_boundary_reentry_packet` as
 the preserved prior compiled-boundary reentry packet,
@@ -16,18 +22,24 @@ routing/refreeze packet, `R42_origin_append_only_memory_retrieval_contract_gate`
 `R43_origin_bounded_memory_small_vm_execution_gate`,
 `R44_origin_restricted_wasm_useful_case_execution_gate`,
 `R45_origin_dual_mode_model_mainline_gate`,
+`R60_origin_compiled_useful_kernel_carryover_gate`,
+`R61_origin_compiled_useful_kernel_value_gate`,
+`R62_origin_native_useful_kernel_value_discriminator_gate`,
 `R58_origin_restricted_stack_bytecode_lowering_contract_gate`, and
 `R59_origin_compiled_trace_vm_execution_gate` as the completed current
 evidence stack relevant to the narrow endpoint, while
 `R55_origin_2d_hardmax_retrieval_equivalence_gate`,
 `R56_origin_append_only_trace_vm_semantics_gate`, and
 `R57_origin_accelerated_trace_vm_comparator_gate` remain the preserved prior
-mechanism evidence stack, `F20_post_r42_dual_mode_model_mainline_bundle`
-as the current coequal-mainline model bundle,
+mechanism evidence stack, `F31_post_h56_final_discriminating_value_boundary_bundle`
+as the current planning bundle, `F20_post_r42_dual_mode_model_mainline_bundle`
+as the preserved coequal-mainline model bundle,
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` as the completed
 explicit merge packet with `merge_executed = false`,
-`P38_post_h52_compiled_boundary_hygiene_sync` as the aligned operational/docs
-sidecar for the closed compiled-boundary wave, `P26_post_h37_promotion_and_artifact_hygiene_audit`
+`P40_post_h56_successor_worktree_and_artifact_hygiene_sync` as the aligned
+operational/docs sidecar for the closed final-discriminator wave,
+`P38_post_h52_compiled_boundary_hygiene_sync` as the preserved prior
+compiled-boundary sidecar, `P26_post_h37_promotion_and_artifact_hygiene_audit`
 as the preserved prior operational audit lane,
 `F15_post_h36_origin_goal_reanchor_bundle` as the current canonical derivative
 bundle, `F16_post_h37_r41_candidate_isolation_bundle` as the current
@@ -129,6 +141,30 @@ Origin-core pivot packet underneath it.
   across both linear and accelerated internal routes;
 - `H54` closes that narrower compiled-boundary lane as support without
   fast-path value and restores `no_active_downstream_runtime_lane`;
+- `F30` preserves exactly one planning-only useful-kernel bridge bundle above
+  `H54` and fixes `H55 -> R60 -> R61 -> H56` as the only later admissible
+  sequence;
+- `H55` preserves the prior compiled-boundary closeout while authorizing one
+  minimal useful-kernel carryover reentry through `R60` only;
+- `R60` validates one compiled useful-kernel carryover surface exactly on
+  `5/5` fixed rows across `2/2` preserved kernels;
+- `R61` keeps those declared useful-kernel rows exact but disconfirms bounded
+  value because accelerated wins are `0/5`;
+- `H56` closes that compiled useful-kernel bridge lane as support without
+  bounded value and restores `no_active_downstream_runtime_lane`;
+- `F31` preserves exactly one final discriminator bundle above `H56` and fixes
+  `H57 -> R62 -> H58` as the only later admissible sequence, with `P40` as
+  the only operational sidecar;
+- `H57` preserves the prior useful-kernel closeout while authorizing one last
+  native useful-kernel value discriminator through `R62` only;
+- `R62` keeps native `sum/count` trace programs exact on `4/4` declared rows
+  across `2/2` kernels but still disconfirms bounded executor value because
+  accelerated wins are `0/2` on the longest kernel rows and external-scalar
+  same-order behavior is `0/2`;
+- `H58` closes the active mainline as mechanism-supported but value-negative
+  and restores `no_active_downstream_runtime_lane`;
+- `P40` records the clean successor worktree plus tracked-artifact hygiene
+  without reopening science;
 - `F7` preserves a mechanical contradiction/reopen specification under that
   no-reopen state, `F8` preserves the broader roadmap classification,
   `F10` preserves the richer-value/comparator bridge surface, `F12` preserves
@@ -166,6 +202,13 @@ Origin-core pivot packet underneath it.
   transparent baselines on the exact `R56` suite: `R57` keeps all comparator
   routes exact on `5/5` rows but accelerated wins are `0/5` against both the
   linear internal route and the external interpreter baseline.
+- the compiled useful-kernel bridge does not retain bounded value on the exact
+  `R60` suite: `R61` keeps all declared rows exact but accelerated wins are
+  `0/5` against the simpler baselines.
+- the native useful-kernel route does not retain bounded value even after
+  compiler/lowering time is removed from the measured comparator: `R62` keeps
+  all declared rows exact on `4/4` native cases but accelerated wins are
+  `0/2` on the longest kernel rows and external same-order counts are `0/2`.
 
 ## Canonical evidence anchors
 
@@ -204,6 +247,16 @@ Origin-core pivot packet underneath it.
 - `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`
 - `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
 - `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+- `results/F30_post_h54_useful_kernel_bridge_bundle/summary.json`
+- `results/H55_post_h54_useful_kernel_reentry_packet/summary.json`
+- `results/R60_origin_compiled_useful_kernel_carryover_gate/summary.json`
+- `results/R61_origin_compiled_useful_kernel_value_gate/summary.json`
+- `results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
+- `results/F31_post_h56_final_discriminating_value_boundary_bundle/summary.json`
+- `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
+- `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
+- `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
+- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json`
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
@@ -232,13 +285,13 @@ Any later broader frontier review remains planning-only under
 `F3_post_h23_scope_lift_decision_bundle` until a later explicit packet changes
 that status. The current conditional future order now starts only after the
 landed
-`H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19 -> H40 -> R42 -> F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> H50 -> F28 -> H51 -> R55 -> R56 -> R57 -> H52 -> F29 -> H53 -> R58 -> R59 -> H54`
+`H35 -> R40 -> H36 -> P25 -> F15 -> H37 -> F16 -> H38 -> P26 -> F17 -> F18 -> F19 -> H40 -> R42 -> F20 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43 -> H50 -> F28 -> H51 -> R55 -> R56 -> R57 -> H52 -> F29 -> H53 -> R58 -> R59 -> H54 -> F30 -> H55 -> R60 -> R61 -> H56 -> F31 -> H57 -> R62 -> H58`
 chain above the earlier `H34/H32/H33/R39/H31/H30/H29/H28/H27` stack. A later
 explicit contradiction packet is still required before any `R41`
 same-substrate contradiction route, and no active downstream runtime lane
-exists after `H54`. Review questions
+exists after `H58`. Review questions
 that can be answered by wording, packet indexing, existing ledgers, or the
 completed `F10` bridge plus the preserved `F12/F13/F14` planning surfaces
 should stay downstream of the landed
-`H52/R57/R56/R55/H51/F28/H50/H43/H42/H41/F20/P27/R45/R44/R43/H40/H36/R42/H38/F16/F17/F18/F19/P26/H37/P25/F15/H35/H34/H32/H33/R39/H31/H30/H29/H28/H27`
+`H58/R62/H57/F31/H56/R61/R60/H55/F30/H54/H52/R57/R56/R55/H51/F28/H50/H43/H42/H41/F20/P27/R45/R44/R43/H40/H36/R42/H38/F16/F17/F18/F19/P26/H37/P25/F15/H35/H34/H32/H33/R39/H31/H30/H29/H28/H27`
 stack rather than reopening science.
