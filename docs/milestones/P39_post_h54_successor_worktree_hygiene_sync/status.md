@@ -1,5 +1,4 @@
-# Status
-
-- state: `saved_successor_design_only`
-- active: `false`
-- role: `successor_worktree_hygiene_sidecar`
+- status: `current_low_priority_wave`
+- selected_outcome: `successor_worktree_hygiene_rules_active_and_clean`
+- active: `true`
+- merge_posture: `no_merge_back_to_dirty_root_main`

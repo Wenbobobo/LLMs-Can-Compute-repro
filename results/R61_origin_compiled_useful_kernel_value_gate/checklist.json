@@ -1,19 +1,24 @@
 {
   "rows": [
     {
-      "item_id": "r61_docs_define_saved_successor_value_gate_only",
+      "item_id": "r61_requires_positive_exact_r60_basis",
       "status": "pass",
-      "notes": "R61 should remain saved successor value-gate storage only and should predeclare comparators, accounting, and stop conditions."
+      "notes": "R61 runs only after a positive exact R60 carryover gate."
     },
     {
-      "item_id": "r61_value_risk_notes_preserve_strict_negative_interpretation",
+      "item_id": "r61_declared_comparators_keep_exactness_where_applicable",
       "status": "pass",
-      "notes": "R61 should treat exact-but-value-negative outcomes as real negative evidence rather than partial systems success."
+      "notes": "Source, lowered, internal linear, internal accelerated, and external final-value comparators must stay exact on the admitted rows."
     },
     {
-      "item_id": "indices_record_r61_as_saved_successor_gate_not_active_runtime_lane",
+      "item_id": "r61_accounts_for_compiler_and_lowering_overhead",
       "status": "pass",
-      "notes": "Shared successor indexes should expose R61 as saved gate storage while H54 remains the current closeout."
+      "notes": "R61 reports compile, frontend-lowering, trace-lowering, and end-to-end timing rather than headline runtime only."
+    },
+    {
+      "item_id": "r61_route_retains_bounded_value_after_overhead",
+      "status": "blocked",
+      "notes": "Accelerated internal execution must remain exact and beat simpler transparent baselines after overhead accounting to count as bounded value."
     }
   ]
 }

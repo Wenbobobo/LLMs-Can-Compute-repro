@@ -1,6 +1,5 @@
-# Status
-
-- state: `saved_successor_design_only`
-- active: `false`
-- admitted default kernels:
-  `sum_i32_buffer`, `count_nonzero_i32_buffer`
+- status: `completed_exact_gate`
+- selected_outcome: `compiled_useful_kernel_carryover_supported_exactly`
+- admitted_kernel_suite: `sum_i32_buffer`, `count_nonzero_i32_buffer`
+- exact_rows: `5/5`
+- next_required_packet: `R61_origin_compiled_useful_kernel_value_gate`

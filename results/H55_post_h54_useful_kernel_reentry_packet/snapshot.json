@@ -1,39 +1,13 @@
 {
   "rows": [
     {
-      "path": "docs/milestones/H55_post_h54_useful_kernel_reentry_packet/README.md",
-      "matched_lines": [
-        "Saved successor docs-only interpretation packet above `H54`.",
-        "useful-kernel carryover route may open through `R60` only."
-      ]
+      "decision": "authorize_useful_kernel_carryover_through_r60_first",
+      "reason": "H54 closed the toy compiled-boundary lane positively enough to justify one minimal useful-kernel falsification pass."
     },
     {
-      "path": "docs/milestones/H55_post_h54_useful_kernel_reentry_packet/decision_matrix.md",
-      "matched_lines": [
-        "- `authorize_useful_kernel_carryover_through_r60_first`",
-        "- `keep_h54_terminal_and_stop_before_useful_kernel_reentry`"
-      ]
-    },
-    {
-      "path": "docs/milestones/H55_post_h54_useful_kernel_reentry_packet/status.md",
-      "matched_lines": [
-        "- state: `saved_successor_design_only`",
-        "`authorize_useful_kernel_carryover_through_r60_first`"
-      ]
-    },
-    {
-      "path": "docs/plans/2026-03-25-post-h54-useful-kernel-stopgo-design.md",
-      "matched_lines": [
-        "`H55_post_h54_useful_kernel_reentry_packet` ->",
-        "`R60_origin_compiled_useful_kernel_carryover_gate` ->"
-      ]
-    },
-    {
-      "path": "docs/milestones/README.md",
-      "matched_lines": [
-        "- `H55_post_h54_useful_kernel_reentry_packet/`",
-        "saved successor docs-only reentry packet; not active"
-      ]
+      "decision": "keep_h54_terminal_and_stop_before_useful_kernel_reentry",
+      "selected": false,
+      "reason": "Not selected because the minimal useful-kernel question remains scientifically material."
     }
   ]
 }

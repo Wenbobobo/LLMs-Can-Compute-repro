@@ -1,19 +1,24 @@
 {
   "rows": [
     {
-      "item_id": "r60_docs_define_saved_successor_carryover_gate_only",
+      "item_id": "r60_requires_h55_reentry_authorization",
       "status": "pass",
-      "notes": "R60 should remain saved successor gate storage only and should predeclare exactness, scope, and stop conditions."
+      "notes": "R60 runs only under the explicit H55 useful-kernel reentry packet."
     },
     {
-      "item_id": "r60_scope_and_kernel_selection_stay_below_r44_family_lift",
+      "item_id": "r60_admitted_pair_stays_exact_on_all_rows",
       "status": "pass",
-      "notes": "R60 should keep the first carryover pass on the smallest preserved useful-kernel pair and leave histogram16_u8 out of scope."
+      "notes": "All admitted sum/count preserved useful-kernel rows must keep exact source/spec/lowered and linear/accelerated internal execution parity."
     },
     {
-      "item_id": "indices_record_r60_as_saved_successor_gate_not_active_runtime_lane",
+      "item_id": "r60_shows_no_compiler_work_leakage_on_declared_rows",
       "status": "pass",
-      "notes": "Shared successor indexes should expose R60 as saved gate storage while H54 remains the current closeout."
+      "notes": "Compiled tiny-C lowering should stay translation-identical to the preserved canonical rows on the admitted suite."
+    },
+    {
+      "item_id": "r60_keeps_histogram_and_scope_lift_out",
+      "status": "pass",
+      "notes": "The carryover gate remains fixed to sum_i32_buffer and count_nonzero_i32_buffer only."
     }
   ]
 }

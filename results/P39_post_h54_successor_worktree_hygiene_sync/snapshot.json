@@ -1,48 +1,16 @@
 {
   "rows": [
     {
-      "path": "docs/milestones/P39_post_h54_successor_worktree_hygiene_sync/worktree_strategy.md",
-      "matched_lines": [
-        "- keep `f29` preserved as the closed execution surface;",
-        "- do not run science on dirty root `main`."
-      ]
+      "policy": "large_artifact_threshold_mib",
+      "value": 10.0
     },
     {
-      "path": "docs/milestones/P39_post_h54_successor_worktree_hygiene_sync/artifact_policy.md",
-      "matched_lines": [
-        "- keep raw row dumps and long per-step traces out of git by default;",
-        "- treat files above roughly `10 MiB` as out-of-git unless review-critical."
-      ]
+      "policy": "tracked_large_artifact_count",
+      "value": 0
     },
     {
-      "path": "docs/milestones/P39_post_h54_successor_worktree_hygiene_sync/commit_cadence.md",
-      "matched_lines": [
-        "- planning packet commit",
-        "- docs-only decision commit"
-      ]
-    },
-    {
-      "path": ".gitignore",
-      "matched_lines": [
-        "results/**/probe_read_rows.json",
-        "results/**/per_read_rows.json",
-        "results/**/trace_rows.json",
-        "results/**/step_rows.json"
-      ]
-    },
-    {
-      "path": "docs/plans/README.md",
-      "matched_lines": [
-        "- `2026-03-25-post-h54-useful-kernel-stopgo-design.md`",
-        "saved successor design for the next explicit post-`H54` stop/go packet"
-      ]
-    },
-    {
-      "path": "docs/milestones/README.md",
-      "matched_lines": [
-        "- `P39_post_h54_successor_worktree_hygiene_sync/`",
-        "saved successor hygiene sidecar; not active"
-      ]
+      "policy": "merge_posture",
+      "value": "no_merge_back_to_dirty_root_main"
     }
   ]
 }

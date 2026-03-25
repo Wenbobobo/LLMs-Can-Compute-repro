@@ -1,17 +1,14 @@
 {
   "summary": {
-    "supported_here": [
-      "H55 stores one saved successor decision matrix above H54 without activating a new runtime lane yet.",
-      "H55 preserves H54 as the current compiled-boundary closeout and keeps H43 as the paper-grade endpoint.",
-      "H55 allows at most one future positive route through R60 if the successor wave is later activated."
+    "supports": [
+      "H55 authorizes one minimal useful-kernel carryover reentry through R60 only.",
+      "H55 preserves H54 as the prior compiled-boundary closeout and H52 as the prior mechanism closeout.",
+      "H55 keeps H43 as the paper-grade endpoint and leaves F27/R53/R54 blocked."
     ],
-    "unsupported_here": [
-      "H55 does not replace H54 as the current active docs-only packet.",
-      "H55 does not reopen F27, R53, or R54.",
-      "H55 does not itself claim useful-kernel carryover success."
-    ],
-    "disconfirmed_here": [
-      "The idea that post-H54 successor storage should silently reopen a new runtime lane without an explicit reentry packet."
+    "does_not_support": [
+      "automatic widening into histogram16_u8 on first reentry",
+      "automatic reopening of transformed or trainable entry",
+      "any claim that useful-kernel carryover has already succeeded"
     ],
     "distilled_result": {
       "active_stage": "h55_post_h54_useful_kernel_reentry_packet",
@@ -19,12 +16,8 @@
       "preserved_prior_mechanism_closeout": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
       "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
       "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
-      "selected_outcome": "saved_successor_reentry_packet_only",
-      "admissible_positive_outcome": "authorize_useful_kernel_carryover_through_r60_first",
-      "non_selected_alternatives": [
-        "keep_h54_terminal_and_stop_before_useful_kernel_reentry"
-      ],
-      "saved_successor_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+      "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+      "selected_outcome": "authorize_useful_kernel_carryover_through_r60_first",
       "only_next_runtime_candidate_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate",
       "next_required_lane_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate"
     }

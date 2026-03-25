@@ -1,0 +1,5 @@
+{
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "stop_policy": "stop at first scope, compiler-leakage, parity, or free-running exactness break"
+}

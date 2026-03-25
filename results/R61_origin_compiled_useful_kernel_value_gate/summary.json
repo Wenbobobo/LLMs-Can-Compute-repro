@@ -1,34 +1,12 @@
 {
-  "summary": {
-    "active_stage": "r61_origin_compiled_useful_kernel_value_gate",
-    "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
-    "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
-    "selected_outcome": "saved_successor_value_gate_only",
-    "prerequisite_gate_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate",
-    "only_followup_packet_if_activated": "h56_post_r60_r61_useful_kernel_decision_packet",
-    "declared_comparators": [
-      "transparent_source_execution",
-      "transparent_lowered_trace_execution",
-      "free_running_exact_linear_trace_vm_execution",
-      "free_running_exact_accelerated_trace_vm_execution",
-      "plain_external_reference_runtime"
-    ],
-    "next_required_lane_if_activated": "r61_origin_compiled_useful_kernel_value_gate",
-    "supported_here_count": 3,
-    "unsupported_here_count": 3,
-    "disconfirmed_here_count": 1,
-    "check_count": 3,
-    "pass_count": 3,
-    "blocked_count": 0,
-    "blocked_items": []
-  },
+  "experiment": "r61_origin_compiled_useful_kernel_value_gate",
   "runtime_environment": {
     "python": {
-      "executable": "D:\\wt\\f30\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\wt\\f31\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\wt\\f30\\.venv"
+      "virtual_env": "D:\\wt\\f31\\.venv"
     },
     "torch": {
       "installed": false,
@@ -39,5 +17,28 @@
       "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "current_active_docs_only_stage": "h55_post_h54_useful_kernel_reentry_packet",
+    "current_post_h54_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
+    "current_completed_r60_gate": "r60_origin_compiled_useful_kernel_carryover_gate",
+    "active_runtime_lane": "r61_origin_compiled_useful_kernel_value_gate",
+    "gate": {
+      "lane_verdict": "compiled_useful_kernel_route_lacks_bounded_value",
+      "planned_case_count": 5,
+      "executed_case_count": 5,
+      "exact_case_count": 5,
+      "external_exact_case_count": 5,
+      "accelerated_faster_than_linear_count": 0,
+      "accelerated_faster_than_source_count": 0,
+      "accelerated_faster_than_lowered_count": 0,
+      "accelerated_faster_than_external_count": 0,
+      "accelerated_end_to_end_faster_than_source_total_count": 0,
+      "accelerated_end_to_end_faster_than_external_count": 0,
+      "selected_h56_outcome": "freeze_minimal_useful_kernel_bridge_supported_without_bounded_value",
+      "next_required_packet": "h56_post_r60_r61_useful_kernel_decision_packet"
+    },
+    "pass_count": 3,
+    "blocked_count": 1
   }
 }

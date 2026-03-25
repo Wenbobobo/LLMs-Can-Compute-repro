@@ -1,39 +1,16 @@
 {
   "rows": [
     {
-      "path": "docs/milestones/H56_post_r60_r61_useful_kernel_decision_packet/README.md",
-      "matched_lines": [
-        "Saved successor docs-only decision packet for the post-`H54` stop/go design.",
-        "If activated later, `H56` should interpret `R60` and `R61` together and close"
-      ]
+      "source": "r60",
+      "lane_verdict": "compiled_useful_kernel_carryover_supported_exactly"
     },
     {
-      "path": "docs/milestones/H56_post_r60_r61_useful_kernel_decision_packet/decision_matrix.md",
-      "matched_lines": [
-        "- `freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`",
-        "- `authorize_later_compiled_useful_family_packet`"
-      ]
+      "source": "r61",
+      "lane_verdict": "compiled_useful_kernel_route_lacks_bounded_value"
     },
     {
-      "path": "docs/milestones/H56_post_r60_r61_useful_kernel_decision_packet/acceptance.md",
-      "matched_lines": [
-        "- stays docs-only;",
-        "- leaves any later scope lift to a separate explicit packet."
-      ]
-    },
-    {
-      "path": "docs/plans/2026-03-25-post-h54-useful-kernel-stopgo-design.md",
-      "matched_lines": [
-        "`H56_post_r60_r61_useful_kernel_decision_packet`",
-        "- `stop_as_compiled_boundary_toy_only`; or"
-      ]
-    },
-    {
-      "path": "docs/milestones/README.md",
-      "matched_lines": [
-        "- `H56_post_r60_r61_useful_kernel_decision_packet/`",
-        "saved successor docs-only decision packet; not active"
-      ]
+      "source": "h56",
+      "selected_outcome": "freeze_minimal_useful_kernel_bridge_supported_without_bounded_value"
     }
   ]
 }

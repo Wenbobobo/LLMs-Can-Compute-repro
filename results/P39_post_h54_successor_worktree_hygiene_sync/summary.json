@@ -1,30 +1,22 @@
 {
   "summary": {
-    "current_active_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
-    "current_low_priority_wave": "p38_post_h52_compiled_boundary_hygiene_sync",
-    "saved_successor_hygiene_packet": "p39_post_h54_successor_worktree_hygiene_sync",
-    "selected_outcome": "successor_worktree_hygiene_packet_saved_not_activated",
-    "current_merge_posture": "explicit_no_merge_during_closed_h54_wave",
+    "current_active_stage": "h56_post_r60_r61_useful_kernel_decision_packet",
+    "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+    "selected_outcome": "successor_worktree_hygiene_rules_active_and_clean",
     "root_dirty_main_quarantined": true,
-    "large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git",
     "tracked_large_artifact_count": 0,
-    "tracked_large_artifact_paths": [],
     "next_required_lane": "no_active_downstream_runtime_lane",
-    "supported_here_count": 3,
-    "unsupported_here_count": 3,
-    "disconfirmed_here_count": 1,
-    "check_count": 4,
     "pass_count": 4,
     "blocked_count": 0,
-    "blocked_items": []
+    "tracked_large_artifact_paths": []
   },
   "runtime_environment": {
     "python": {
-      "executable": "D:\\wt\\f30\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\wt\\f31\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\wt\\f30\\.venv"
+      "virtual_env": "D:\\wt\\f31\\.venv"
     },
     "torch": {
       "installed": false,

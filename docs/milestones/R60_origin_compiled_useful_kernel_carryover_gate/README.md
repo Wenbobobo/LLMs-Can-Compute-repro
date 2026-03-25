@@ -1,9 +1,12 @@
 # R60 Origin Compiled Useful-Kernel Carryover Gate
 
-Saved successor exact runtime gate for the post-`H54` design.
+Actual exact runtime gate for the post-`H54` useful-kernel wave.
 
-Current status: `saved_successor_design_only`.
+Current status: `completed_exact_gate`.
 
-If activated later, `R60` should test only whether the current
-compiled-boundary route can carry a minimal preserved useful-kernel suite
-exactly.
+Landed result:
+
+- `compiled_useful_kernel_carryover_supported_exactly`
+
+`R60` carried the admitted useful-kernel pair `sum_i32_buffer` and
+`count_nonzero_i32_buffer` exactly on the fixed five-row preserved suite.

@@ -1,24 +1,24 @@
 {
   "rows": [
     {
-      "item_id": "p39_docs_define_saved_successor_hygiene_sidecar",
+      "item_id": "p39_keeps_successor_execution_off_dirty_root_main",
       "status": "pass",
-      "notes": "P39 should stay a saved successor hygiene sidecar and should not present itself as the current low-priority wave."
+      "notes": "This wave runs in a clean successor worktree rather than on the dirty root checkout."
     },
     {
-      "item_id": "p39_records_successor_worktree_artifact_and_commit_policy",
+      "item_id": "p39_keeps_uv_as_default_execution_path",
       "status": "pass",
-      "notes": "P39 should save the successor worktree strategy, artifact policy, and commit cadence before any later execution wave opens."
+      "notes": "All focused exporters and tests for this wave execute through uv."
     },
     {
-      "item_id": "p39_repo_state_matches_large_artifact_policy",
+      "item_id": "p39_keeps_large_raw_artifacts_out_of_git_by_default",
       "status": "pass",
-      "notes": "The clean successor branch should keep tracked artifacts under the roughly 10 MiB default limit."
+      "notes": "Tracked artifacts above roughly 10 MiB remain disallowed on the clean execution line."
     },
     {
-      "item_id": "indices_record_p39_as_saved_successor_not_current_low_priority_wave",
+      "item_id": "p39_preserves_no_merge_posture_for_dirty_root_main",
       "status": "pass",
-      "notes": "Shared indexes should keep P38 current and record P39 only as saved successor hygiene storage."
+      "notes": "No merge back to the dirty root mainline is part of this wave."
     }
   ]
 }

@@ -1,35 +1,12 @@
 {
-  "summary": {
-    "active_stage": "r60_origin_compiled_useful_kernel_carryover_gate",
-    "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
-    "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
-    "selected_outcome": "saved_successor_carryover_gate_only",
-    "admitted_kernel_suite": [
-      "sum_i32_buffer",
-      "count_nonzero_i32_buffer"
-    ],
-    "out_of_scope_examples": [
-      "histogram16_u8",
-      "arbitrary_c",
-      "broad_wasm"
-    ],
-    "only_followup_packet_if_activated": "r61_origin_compiled_useful_kernel_value_gate",
-    "next_required_lane_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate",
-    "supported_here_count": 3,
-    "unsupported_here_count": 3,
-    "disconfirmed_here_count": 1,
-    "check_count": 3,
-    "pass_count": 3,
-    "blocked_count": 0,
-    "blocked_items": []
-  },
+  "experiment": "r60_origin_compiled_useful_kernel_carryover_gate",
   "runtime_environment": {
     "python": {
-      "executable": "D:\\wt\\f30\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\wt\\f31\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\wt\\f30\\.venv"
+      "virtual_env": "D:\\wt\\f31\\.venv"
     },
     "torch": {
       "installed": false,
@@ -40,5 +17,35 @@
       "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "current_active_docs_only_stage": "h55_post_h54_useful_kernel_reentry_packet",
+    "current_post_h54_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
+    "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+    "preserved_prior_closeout": "h54_post_r58_r59_compiled_boundary_decision_packet",
+    "active_runtime_lane": "r60_origin_compiled_useful_kernel_carryover_gate",
+    "gate": {
+      "lane_verdict": "compiled_useful_kernel_carryover_supported_exactly",
+      "restricted_surface": "compiled_tinyc_useful_kernel_pair_on_current_compiled_boundary_route",
+      "planned_variant_count": 5,
+      "executed_variant_count": 5,
+      "exact_variant_count": 5,
+      "failed_variant_count": 0,
+      "planned_kernel_count": 2,
+      "exact_kernel_count": 2,
+      "exact_kernel_ids": [
+        "count_nonzero_i32_buffer",
+        "sum_i32_buffer"
+      ],
+      "translation_identity_exact_count": 5,
+      "linear_exact_variant_count": 5,
+      "accelerated_exact_variant_count": 5,
+      "compiler_work_leakage_break_count": 0,
+      "claim_ceiling": "bounded_useful_cases_only",
+      "selected_h55_outcome": "authorize_useful_kernel_carryover_through_r60_first",
+      "next_required_packet": "r61_origin_compiled_useful_kernel_value_gate"
+    },
+    "pass_count": 4,
+    "blocked_count": 0
   }
 }

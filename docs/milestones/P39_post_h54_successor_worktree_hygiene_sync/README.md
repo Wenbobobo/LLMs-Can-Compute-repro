@@ -1,9 +1,9 @@
 # P39 Post-H54 Successor Worktree Hygiene Sync
 
-Saved successor operational/docs sidecar for the next explicit post-`H54`
-wave.
+Operational/docs sidecar for the closed post-`H54` useful-kernel wave.
 
-Current status: `saved_successor_design_only`.
+Current status: `current_low_priority_wave`.
 
-`P39` is not active. It exists only to store hygiene rules before any later
-runtime work starts.
+`P39` keeps this wave on a clean successor worktree, keeps `uv` as the
+default execution path, keeps large raw artifacts out of git by default, and
+preserves explicit no-merge posture for dirty root `main`.

@@ -1,34 +1,28 @@
 {
   "summary": {
-    "supported_here": [
-      "R60 stores one saved successor carryover gate for a minimal preserved useful-kernel pair.",
-      "R60 fixes exact source/spec/lowered parity and compiler-leakage accounting as the only admissible acceptance criteria if activated later.",
-      "R60 keeps the first carryover pass below the preserved R44 three-kernel family by excluding histogram16_u8."
+    "supports": [
+      "The current compiled-boundary route carries the minimal preserved useful-kernel pair exactly on the declared five-row suite.",
+      "The compiled tiny-C lowering stays translation-identical to the preserved canonical bytecode on all admitted rows.",
+      "Both linear and accelerated free-running lowered execution remain exact on the admitted compiled useful-kernel rows."
     ],
-    "unsupported_here": [
-      "R60 does not represent an executed runtime gate yet.",
-      "R60 does not widen into arbitrary C or broader Wasm.",
-      "R60 does not itself prove useful-kernel carryover success."
-    ],
-    "disconfirmed_here": [
-      "The idea that post-H54 compiled useful-kernel carryover should start by reopening the full preserved useful-case family instead of the smallest preserved pair."
+    "does_not_support": [
+      "bounded value over simpler baselines",
+      "histogram16_u8 carryover on this wave",
+      "arbitrary C or broad Wasm claims"
     ],
     "distilled_result": {
       "active_stage": "r60_origin_compiled_useful_kernel_carryover_gate",
-      "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
+      "current_active_docs_only_stage": "h55_post_h54_useful_kernel_reentry_packet",
       "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
-      "selected_outcome": "saved_successor_carryover_gate_only",
+      "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+      "selected_outcome": "compiled_useful_kernel_carryover_supported_exactly",
       "admitted_kernel_suite": [
         "sum_i32_buffer",
         "count_nonzero_i32_buffer"
       ],
-      "out_of_scope_examples": [
-        "histogram16_u8",
-        "arbitrary_c",
-        "broad_wasm"
-      ],
-      "only_followup_packet_if_activated": "r61_origin_compiled_useful_kernel_value_gate",
-      "next_required_lane_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate"
+      "exact_variant_count": 5,
+      "compiler_work_leakage_break_count": 0,
+      "next_required_packet": "r61_origin_compiled_useful_kernel_value_gate"
     }
   }
 }

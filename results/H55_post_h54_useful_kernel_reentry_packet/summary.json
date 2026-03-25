@@ -5,29 +5,20 @@
     "preserved_prior_mechanism_closeout": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
     "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
     "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
-    "selected_outcome": "saved_successor_reentry_packet_only",
-    "admissible_positive_outcome": "authorize_useful_kernel_carryover_through_r60_first",
-    "non_selected_alternatives": [
-      "keep_h54_terminal_and_stop_before_useful_kernel_reentry"
-    ],
-    "saved_successor_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+    "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+    "selected_outcome": "authorize_useful_kernel_carryover_through_r60_first",
     "only_next_runtime_candidate_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate",
     "next_required_lane_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate",
-    "supported_here_count": 3,
-    "unsupported_here_count": 3,
-    "disconfirmed_here_count": 1,
-    "check_count": 3,
     "pass_count": 3,
-    "blocked_count": 0,
-    "blocked_items": []
+    "blocked_count": 0
   },
   "runtime_environment": {
     "python": {
-      "executable": "D:\\wt\\f30\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\wt\\f31\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\wt\\f30\\.venv"
+      "virtual_env": "D:\\wt\\f31\\.venv"
     },
     "torch": {
       "installed": false,

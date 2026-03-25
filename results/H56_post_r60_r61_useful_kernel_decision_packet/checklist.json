@@ -1,19 +1,24 @@
 {
   "rows": [
     {
-      "item_id": "h56_docs_define_saved_successor_decision_packet_only",
+      "item_id": "h56_reads_positive_r60_carryover_result",
       "status": "pass",
-      "notes": "H56 should remain saved successor decision storage only, with one explicit later stop/go matrix."
+      "notes": "H56 must read the actual R60 carryover gate rather than the old planning placeholder."
     },
     {
-      "item_id": "h56_preserves_h54_closeout_and_h43_ceiling",
+      "item_id": "h56_reads_r61_value_result_and_stops_scope_lift_on_negative_value",
       "status": "pass",
-      "notes": "H56 must preserve the current H54 closeout and H43 claim ceiling while storing later decision options only."
+      "notes": "Negative value at R61 should freeze the bridge rather than authorize broader family lift."
     },
     {
-      "item_id": "indices_record_h56_as_saved_successor_not_active_closeout",
+      "item_id": "h56_preserves_h43_ceiling_and_keeps_f27_r53_r54_blocked",
       "status": "pass",
-      "notes": "Shared successor indexes should expose H56 as saved decision storage while H54 remains the current active closeout."
+      "notes": "The closeout remains below the preserved H43 bounded useful-case ceiling."
+    },
+    {
+      "item_id": "h56_restores_no_active_downstream_runtime_lane",
+      "status": "pass",
+      "notes": "This wave closes explicitly and does not authorize an active downstream runtime lane."
     }
   ]
 }

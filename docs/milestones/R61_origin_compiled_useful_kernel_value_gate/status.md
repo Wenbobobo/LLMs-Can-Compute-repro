@@ -1,5 +1,5 @@
-# Status
-
-- state: `saved_successor_design_only`
-- active: `false`
-- dependency: `R60_origin_compiled_useful_kernel_carryover_gate`
+- status: `completed_value_gate`
+- selected_outcome: `compiled_useful_kernel_route_lacks_bounded_value`
+- exact_rows: `5/5`
+- bounded_value: `negative`
+- next_required_packet: `H56_post_r60_r61_useful_kernel_decision_packet`

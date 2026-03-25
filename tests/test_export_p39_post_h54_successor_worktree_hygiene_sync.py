@@ -24,7 +24,7 @@ def _load_export_module():
     return module
 
 
-def test_export_p39_writes_saved_successor_hygiene_packet(tmp_path: Path) -> None:
+def test_export_p39_writes_actual_hygiene_sidecar(tmp_path: Path) -> None:
     module = _load_export_module()
     original_out_dir = module.OUT_DIR
     temp_out_dir = tmp_path / "P39_post_h54_successor_worktree_hygiene_sync"
@@ -38,19 +38,17 @@ def test_export_p39_writes_saved_successor_hygiene_packet(tmp_path: Path) -> Non
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
     checklist_rows = json.loads((temp_out_dir / "checklist.json").read_text(encoding="utf-8"))["rows"]
     claim_packet = json.loads((temp_out_dir / "claim_packet.json").read_text(encoding="utf-8"))["summary"]
-    snapshot_rows = json.loads((temp_out_dir / "snapshot.json").read_text(encoding="utf-8"))["rows"]
+    snapshot = json.loads((temp_out_dir / "snapshot.json").read_text(encoding="utf-8"))
 
-    assert payload["summary"]["current_active_stage"] == "h54_post_r58_r59_compiled_boundary_decision_packet"
-    assert payload["summary"]["current_low_priority_wave"] == "p38_post_h52_compiled_boundary_hygiene_sync"
-    assert payload["summary"]["saved_successor_hygiene_packet"] == (
+    assert payload["summary"]["current_active_stage"] == (
+        "h56_post_r60_r61_useful_kernel_decision_packet"
+    )
+    assert payload["summary"]["current_low_priority_wave"] == (
         "p39_post_h54_successor_worktree_hygiene_sync"
     )
-    assert payload["summary"]["selected_outcome"] == "successor_worktree_hygiene_packet_saved_not_activated"
+    assert payload["summary"]["selected_outcome"] == "successor_worktree_hygiene_rules_active_and_clean"
     assert payload["summary"]["tracked_large_artifact_count"] == 0
-    assert payload["summary"]["blocked_count"] == 0
     assert payload["summary"]["pass_count"] == len(checklist_rows)
-    assert claim_packet["distilled_result"]["current_low_priority_wave"] == (
-        "p38_post_h52_compiled_boundary_hygiene_sync"
-    )
-    assert len(snapshot_rows) == 6
-
+    assert payload["summary"]["blocked_count"] == 0
+    assert claim_packet["distilled_result"]["next_required_lane"] == "no_active_downstream_runtime_lane"
+    assert len(snapshot["rows"]) == 3

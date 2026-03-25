@@ -1,7 +1,13 @@
 # R61 Origin Compiled Useful-Kernel Value Gate
 
-Saved successor comparator/value gate for the post-`H54` design.
+Actual comparator/value gate for the exact `R60` row set.
 
-Current status: `saved_successor_design_only`.
+Current status: `completed_value_gate`.
 
-If activated later, `R61` should run only after a positive exact `R60`.
+Landed result:
+
+- `compiled_useful_kernel_route_lacks_bounded_value`
+
+`R61` kept all declared comparators exact on the admitted `R60` rows, but the
+accelerated internal route did not retain bounded value over simpler baselines
+once compiler/lowering overhead was counted.

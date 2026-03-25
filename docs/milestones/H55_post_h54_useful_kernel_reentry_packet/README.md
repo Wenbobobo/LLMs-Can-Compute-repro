@@ -1,8 +1,13 @@
 # H55 Post-H54 Useful-Kernel Reentry Packet
 
-Saved successor docs-only interpretation packet above `H54`.
+Docs-only reentry packet above `H54`.
 
-Current status: `saved_successor_design_only`.
+Current status: `completed_prior_packet`.
 
-`H55` is not active. If later activated, it should decide whether one minimal
-useful-kernel carryover route may open through `R60` only.
+Selected outcome:
+
+- `authorize_useful_kernel_carryover_through_r60_first`
+
+`H55` preserved `H54` as the prior compiled-boundary closeout, preserved
+`H52` as the prior mechanism closeout, preserved `H43` as the paper-grade
+endpoint, and authorized exactly one runtime follow-up through `R60`.

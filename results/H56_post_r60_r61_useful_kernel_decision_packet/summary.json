@@ -1,35 +1,28 @@
 {
   "summary": {
     "active_stage": "h56_post_r60_r61_useful_kernel_decision_packet",
-    "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
+    "preserved_prior_docs_only_closeout": "h54_post_r58_r59_compiled_boundary_decision_packet",
+    "preserved_prior_reentry_packet": "h55_post_h54_useful_kernel_reentry_packet",
+    "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
+    "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
     "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
-    "selected_outcome": "saved_successor_decision_packet_only",
-    "declared_decision_matrix": [
-      "freeze_minimal_useful_kernel_bridge_supported_without_bounded_value",
-      "authorize_later_compiled_useful_family_packet",
-      "stop_as_compiled_boundary_toy_only",
-      "stop_due_to_compiler_work_leakage"
+    "selected_outcome": "freeze_minimal_useful_kernel_bridge_supported_without_bounded_value",
+    "current_downstream_scientific_lane": "no_active_downstream_runtime_lane",
+    "blocked_future_storage": [
+      "f27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle",
+      "r53_origin_transformed_executor_entry_gate",
+      "r54_origin_trainable_executor_comparator_gate"
     ],
-    "prerequisite_inputs_if_activated": [
-      "r60_origin_compiled_useful_kernel_carryover_gate",
-      "r61_origin_compiled_useful_kernel_value_gate"
-    ],
-    "next_required_lane_if_activated": "h56_post_r60_r61_useful_kernel_decision_packet",
-    "supported_here_count": 3,
-    "unsupported_here_count": 3,
-    "disconfirmed_here_count": 1,
-    "check_count": 3,
-    "pass_count": 3,
-    "blocked_count": 0,
-    "blocked_items": []
+    "pass_count": 4,
+    "blocked_count": 0
   },
   "runtime_environment": {
     "python": {
-      "executable": "D:\\wt\\f30\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\wt\\f31\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\wt\\f30\\.venv"
+      "virtual_env": "D:\\wt\\f31\\.venv"
     },
     "torch": {
       "installed": false,

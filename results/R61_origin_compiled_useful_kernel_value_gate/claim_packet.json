@@ -1,33 +1,24 @@
 {
   "summary": {
-    "supported_here": [
-      "R61 stores one saved successor value gate that runs only on exact positive R60 rows if activated later.",
-      "R61 fixes internal and external comparators plus overhead accounting as the only admissible bounded-value question.",
-      "R61 preserves a strict reading where exact-but-value-negative outcomes count as negative evidence."
+    "supports": [
+      "The admitted compiled useful-kernel rows remain exact across transparent source, transparent lowered-trace, internal linear, internal accelerated, and external scalar-reference comparators where applicable.",
+      "The current compiled useful-kernel route does not retain bounded value over simpler baselines once compiler and lowering overhead are counted."
     ],
-    "unsupported_here": [
-      "R61 does not represent an executed comparator/value gate yet.",
-      "R61 does not itself prove bounded value.",
-      "R61 does not widen into broader compiled-family claims."
-    ],
-    "disconfirmed_here": [
-      "The idea that any exact useful-kernel carryover would automatically count as systems success without explicit bounded-value accounting."
+    "does_not_support": [
+      "a systems-value claim for the compiled useful-kernel route",
+      "automatic authorization of a broader compiled useful-family packet",
+      "any claim above the preserved H43 bounded useful-case ceiling"
     ],
     "distilled_result": {
       "active_stage": "r61_origin_compiled_useful_kernel_value_gate",
-      "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
-      "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
-      "selected_outcome": "saved_successor_value_gate_only",
-      "prerequisite_gate_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate",
-      "only_followup_packet_if_activated": "h56_post_r60_r61_useful_kernel_decision_packet",
-      "declared_comparators": [
-        "transparent_source_execution",
-        "transparent_lowered_trace_execution",
-        "free_running_exact_linear_trace_vm_execution",
-        "free_running_exact_accelerated_trace_vm_execution",
-        "plain_external_reference_runtime"
-      ],
-      "next_required_lane_if_activated": "r61_origin_compiled_useful_kernel_value_gate"
+      "current_active_docs_only_stage": "h55_post_h54_useful_kernel_reentry_packet",
+      "current_completed_r60_gate": "r60_origin_compiled_useful_kernel_carryover_gate",
+      "selected_outcome": "compiled_useful_kernel_route_lacks_bounded_value",
+      "selected_h56_outcome": "freeze_minimal_useful_kernel_bridge_supported_without_bounded_value",
+      "accelerated_faster_than_linear_count": 0,
+      "accelerated_end_to_end_faster_than_source_total_count": 0,
+      "accelerated_end_to_end_faster_than_external_count": 0,
+      "next_required_packet": "h56_post_r60_r61_useful_kernel_decision_packet"
     }
   }
 }

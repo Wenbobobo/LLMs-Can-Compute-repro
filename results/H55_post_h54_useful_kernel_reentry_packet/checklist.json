@@ -1,19 +1,19 @@
 {
   "rows": [
     {
-      "item_id": "h55_docs_record_saved_successor_reentry_decision_only",
+      "item_id": "h55_preserves_h54_as_prior_compiled_boundary_closeout",
       "status": "pass",
-      "notes": "H55 should remain a saved successor decision packet only, with one admissible positive route through R60."
+      "notes": "H55 reopens only one later packet above H54 rather than treating H54 as overturned."
     },
     {
-      "item_id": "upstream_h54_closeout_and_h43_ceiling_are_preserved",
+      "item_id": "h55_authorizes_only_r60_as_next_runtime_candidate",
       "status": "pass",
-      "notes": "H55 must preserve H54 as current closeout storage and keep H43 as the paper-grade endpoint."
+      "notes": "The only admissible positive route is authorize_useful_kernel_carryover_through_r60_first."
     },
     {
-      "item_id": "indices_record_h55_as_saved_successor_not_active_packet",
+      "item_id": "h55_keeps_h43_ceiling_and_f27_r53_r54_blocked",
       "status": "pass",
-      "notes": "Shared successor indexes should expose H55 as saved decision storage rather than as the active packet."
+      "notes": "The reentry packet does not widen above the preserved H43 bounded useful-case ceiling."
     }
   ]
 }
