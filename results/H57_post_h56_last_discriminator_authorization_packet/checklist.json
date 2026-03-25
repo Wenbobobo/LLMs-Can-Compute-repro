@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h57_reads_h56_closeout_before_reopening",
+      "status": "pass",
+      "notes": "H57 preserves H56 rather than treating the closed useful-kernel bridge lane as open."
+    },
+    {
+      "item_id": "h57_reads_f31_fixed_sequence",
+      "status": "pass",
+      "notes": "H57 authorizes only the single R62 native discriminator fixed by F31."
+    },
+    {
+      "item_id": "h57_writes_stop_rule_up_front",
+      "status": "pass",
+      "notes": "If R62 cannot show bounded value on the declared native useful-kernel rows, the mainline stops at H58."
+    },
+    {
+      "item_id": "h57_keeps_scope_ceiling_narrow",
+      "status": "pass",
+      "notes": "A positive R62 would authorize at most one later narrow coprocessor packet."
+    }
+  ]
+}

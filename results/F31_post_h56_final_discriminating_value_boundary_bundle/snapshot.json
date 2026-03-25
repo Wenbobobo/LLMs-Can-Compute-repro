@@ -1,0 +1,17 @@
+{
+  "rows": [
+    {
+      "source": "h56",
+      "selected_outcome": "freeze_minimal_useful_kernel_bridge_supported_without_bounded_value",
+      "current_downstream_scientific_lane": "no_active_downstream_runtime_lane"
+    },
+    {
+      "source": "f31",
+      "fixed_sequence": [
+        "h57_post_h56_last_discriminator_authorization_packet",
+        "r62_origin_native_useful_kernel_value_discriminator_gate",
+        "h58_post_r62_origin_value_boundary_closeout_packet"
+      ]
+    }
+  ]
+}

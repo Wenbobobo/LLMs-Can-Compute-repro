@@ -1,0 +1,4 @@
+- `R62` is the only next runtime candidate
+- `H58` is the only follow-up packet
+- negative `R62` closes the mainline
+- positive `R62` would authorize at most one later narrow coprocessor packet

@@ -1,0 +1,4 @@
+- `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
+- `results/H57_post_h56_last_discriminator_authorization_packet/checklist.json`
+- `results/H57_post_h56_last_discriminator_authorization_packet/claim_packet.json`
+- `results/H57_post_h56_last_discriminator_authorization_packet/snapshot.json`

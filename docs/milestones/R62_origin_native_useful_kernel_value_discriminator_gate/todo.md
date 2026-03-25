@@ -1,0 +1,4 @@
+- keep all declared rows exact across native linear and native accelerated execution
+- report native build cost separately from measured runtime
+- compare against transparent external trace interpretation and external scalar reference
+- close to `H58` without broadening scope

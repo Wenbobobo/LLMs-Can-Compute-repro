@@ -1,0 +1,4 @@
+- preserve `H56` as a closed prior lane rather than an open execution surface
+- authorize only `H57 -> R62 -> H58`
+- keep `P40` as the only low-priority sidecar
+- keep `F27/R53/R54` blocked

@@ -1,0 +1,4 @@
+- `H56` remains preserved and visible
+- `R62` is the only next runtime candidate
+- `H58` is the only follow-up packet
+- broader executor-entry and language claims remain blocked

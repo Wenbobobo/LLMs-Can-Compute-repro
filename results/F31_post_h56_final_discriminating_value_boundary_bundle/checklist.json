@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "f31_starts_only_after_closed_h56_lane",
+      "status": "pass",
+      "notes": "F31 opens only after the H56 useful-kernel bridge lane is explicitly closed."
+    },
+    {
+      "item_id": "f31_fixes_one_last_sequence_only",
+      "status": "pass",
+      "notes": "F31 fixes H57 -> R62 -> H58 as the only admissible post-H56 runtime sequence."
+    },
+    {
+      "item_id": "f31_keeps_broader_routes_blocked",
+      "status": "pass",
+      "notes": "F27, R53, and R54 remain blocked; arbitrary C and broad Wasm stay out of scope."
+    },
+    {
+      "item_id": "f31_uses_successor_worktree_sidecar_only",
+      "status": "pass",
+      "notes": "P40 is the only active low-priority operational sidecar for the successor wave."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
+- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/checklist.json`
+- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/claim_packet.json`
+- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/snapshot.json`
