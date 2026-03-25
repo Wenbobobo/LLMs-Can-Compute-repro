@@ -7,6 +7,8 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-03-25-post-h54-useful-kernel-stopgo-design.md`
+  saved successor design for the next explicit post-`H54` stop/go packet
 - `2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
   preserved master plan for the now-closed compiled-boundary wave
 - `../milestones/F29_post_h52_restricted_compiled_boundary_bundle/`
