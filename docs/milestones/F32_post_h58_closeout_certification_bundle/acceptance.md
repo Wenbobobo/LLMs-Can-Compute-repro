@@ -1,0 +1,4 @@
+- `H58` remains scientifically binding
+- the downstream lane stays closed on the same runtime/cost structure
+- a later reopen requires a materially different cost structure
+- no merge back to dirty root `main` is implied by this bundle

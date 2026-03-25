@@ -1,0 +1,4 @@
+- `results/F32_post_h58_closeout_certification_bundle/summary.json`
+- `results/F32_post_h58_closeout_certification_bundle/checklist.json`
+- `results/F32_post_h58_closeout_certification_bundle/claim_packet.json`
+- `results/F32_post_h58_closeout_certification_bundle/snapshot.json`

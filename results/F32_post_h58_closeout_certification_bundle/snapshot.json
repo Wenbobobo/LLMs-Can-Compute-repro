@@ -1,0 +1,12 @@
+{
+  "rows": [
+    {
+      "source": "h58",
+      "selected_outcome": "stop_as_mechanism_supported_but_no_bounded_executor_value"
+    },
+    {
+      "source": "f32",
+      "certified_stop": "same_lane_reopen_not_admissible_without_new_cost_structure"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+Allowed outcomes:
+
+- `freeze_reproduction_gap_and_require_different_cost_structure_for_reopen`
+- `authorize_one_materially_different_cost_structure_probe`
+- `stop_project_as_current_gap_too_large_without_credible_reopen`
+
+Landed outcome:
+
+- `freeze_reproduction_gap_and_require_different_cost_structure_for_reopen`

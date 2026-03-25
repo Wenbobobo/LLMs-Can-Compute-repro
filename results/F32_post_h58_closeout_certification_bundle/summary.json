@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "active_stage_at_certification_time": "h58_post_r62_origin_value_boundary_closeout_packet",
+    "planning_bundle": "f32_post_h58_closeout_certification_bundle",
+    "certified_stop": "same_lane_reopen_not_admissible_without_new_cost_structure",
+    "preserved_current_closeout": "h58_post_r62_origin_value_boundary_closeout_packet",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "next_docs_only_packet": "h59_post_h58_reproduction_gap_decision_packet",
+    "next_publication_sidecar": "p41_post_h58_publication_and_archive_sync",
+    "next_low_priority_wave": "p42_post_h59_gptpro_reinterview_packet",
+    "next_planning_bundle": "f33_post_h59_different_cost_structure_reopen_bundle",
+    "blocked_future_storage": [
+      "f27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle",
+      "r53_origin_transformed_executor_entry_gate",
+      "r54_origin_trainable_executor_comparator_gate"
+    ],
+    "pass_count": 4,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}
