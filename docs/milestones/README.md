@@ -28,6 +28,21 @@ historical and may use then-current wording.
 - `R59_origin_compiled_trace_vm_execution_gate/`
   completed exact compiled-boundary execution gate
 
+## Saved Successor Placeholders
+
+- `F30_post_h54_useful_kernel_bridge_bundle/`
+  saved successor planning-only bundle for the next explicit stop/go wave
+- `H55_post_h54_useful_kernel_reentry_packet/`
+  saved successor docs-only reentry packet; not active
+- `P39_post_h54_successor_worktree_hygiene_sync/`
+  saved successor hygiene sidecar; not active
+- `R60_origin_compiled_useful_kernel_carryover_gate/`
+  saved successor exact useful-kernel carryover gate; not active
+- `R61_origin_compiled_useful_kernel_value_gate/`
+  saved successor value gate; not active
+- `H56_post_r60_r61_useful_kernel_decision_packet/`
+  saved successor docs-only decision packet; not active
+
 ## Preserved Anchors
 
 - `H43_post_r44_useful_case_refreeze/`
