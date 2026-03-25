@@ -61,25 +61,37 @@ The current execution-facing chain is now
 `H53_post_h52_compiled_boundary_reentry_packet` ->
 `R58_origin_restricted_stack_bytecode_lowering_contract_gate` ->
 `R59_origin_compiled_trace_vm_execution_gate` ->
-`H54_post_r58_r59_compiled_boundary_decision_packet`.
+`H54_post_r58_r59_compiled_boundary_decision_packet` ->
+`F30_post_h54_useful_kernel_bridge_bundle` ->
+`H55_post_h54_useful_kernel_reentry_packet` ->
+`R60_origin_compiled_useful_kernel_carryover_gate` ->
+`R61_origin_compiled_useful_kernel_value_gate` ->
+`H56_post_r60_r61_useful_kernel_decision_packet` ->
+`F31_post_h56_final_discriminating_value_boundary_bundle` ->
+`H57_post_h56_last_discriminator_authorization_packet` ->
+`R62_origin_native_useful_kernel_value_discriminator_gate` ->
+`H58_post_r62_origin_value_boundary_closeout_packet`.
 Earlier paper/release controls such as `P3`, `R1`, `R2`, `M7`, and `P4`
 remain relevant guardrails, but they are no longer the current
 science-routing story by themselves.
 
 ## Current endpoint and non-goals
 
-The current live control state is the narrower restricted compiled-boundary
-closeout selected by `H54`: exact typed stack-bytecode lowering (`R58`) and
-exact lowered trace-VM execution (`R59`) survive on the fixed bounded suite,
-while preserving `H52` as the prior negative mechanism fast-path closeout and
-without promoting the result into a broader fast-path or systems-value claim.
-`H43` remains the paper-grade endpoint for the useful-case semantic-boundary
-story; `H54` does not widen that endpoint, it only closes one later
-compiled-boundary lane above it. The earlier tiny typed-bytecode `D0`
-endpoint remains a preserved first compiled boundary and should not be read as
-the current bridge to arbitrary C, general LLM computation, or broader
-demo-first claims. Those broader readings remain explicitly unsupported on
-both the paper-grade and the current control scope.
+The current live control state is the post-`R62` closeout selected by `H58`:
+the append-only executor stack remains mechanistically supported on narrow
+admitted surfaces, but bounded executor value remains negative even after the
+runtime is collapsed down to native useful-kernel trace programs. `H58`
+preserves `H56` as the prior compiled useful-kernel closeout, preserves
+`H54` as the prior compiled-boundary closeout, preserves `H52` as the prior
+mechanism closeout, and does not promote the current route into a broader
+fast-path or systems-value claim. `H43` remains the paper-grade endpoint for
+the useful-case semantic-boundary story; `H58` does not widen that endpoint,
+it only closes the final admitted executor-value discriminator lane above it.
+The earlier tiny typed-bytecode `D0` endpoint remains a preserved first
+compiled boundary and should not be read as the current bridge to arbitrary
+`C`, general LLM computation, or broader demo-first claims. Those broader
+readings remain explicitly unsupported on both the paper-grade and the current
+control scope.
 
 ## Current paper-facing follow-up
 
@@ -141,11 +153,15 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H54_post_r58_r59_compiled_boundary_decision_packet`, which preserves
+`H58_post_r62_origin_value_boundary_closeout_packet`, which preserves
+`H56_post_r60_r61_useful_kernel_decision_packet` as the prior compiled
+useful-kernel closeout, preserves
+`H57_post_h56_last_discriminator_authorization_packet` as the prior
+last-discriminator authorization packet, preserves
+`H54_post_r58_r59_compiled_boundary_decision_packet` as the prior
+compiled-boundary closeout, preserves
 `H52_post_r55_r56_r57_origin_mechanism_decision_packet` as the prior
-mechanism closeout, preserves
-`H53_post_h52_compiled_boundary_reentry_packet` as the prior compiled-boundary
-reentry packet, preserves `H50_post_r51_r52_scope_decision_packet` as the
+mechanism closeout, preserves `H50_post_r51_r52_scope_decision_packet` as the
 broader-route value closeout, preserves `H43_post_r44_useful_case_refreeze`
 as the paper-grade endpoint, preserves
 `H36_post_r40_bounded_scalar_family_refreeze` as the routing/refreeze packet,
@@ -156,12 +172,15 @@ records `R42_origin_append_only_memory_retrieval_contract_gate`,
 gate stack underneath the paper endpoint, records `R51/R52` as the broader
 post-`H49` exactness-versus-value closeout pair, records `R55/R56/R57` as the
 preserved prior mechanism evidence stack, records `R58/R59` as exact narrow
-compiled-boundary evidence only, records `F20_post_r42_dual_mode_model_mainline_bundle`
-as the coequal-mainline model bundle, records
-`P27_post_h41_clean_promotion_and_explicit_merge_packet` and
-`P38_post_h52_compiled_boundary_hygiene_sync` as the current operational
-posture, and keeps `merge_executed = false` explicit while returning the
-downstream lane to `no_active_downstream_runtime_lane`.
+compiled-boundary evidence only, records `R60/R61` as exact-but-value-negative
+compiled useful-kernel bridge evidence, records `R62` as the final native
+value-negative discriminator, records
+`F31_post_h56_final_discriminating_value_boundary_bundle` as the current
+planning bundle above preserved `F30/F29/F28/F20`, records
+`P40_post_h56_successor_worktree_and_artifact_hygiene_sync` as the current
+operational/docs sidecar above preserved `P38/P27/P26/P25`, and keeps
+`merge_executed = false` explicit while returning the downstream lane to
+`no_active_downstream_runtime_lane`.
 
 The later paper-facing and planning-only closeout lanes align to that reading:
 `P28/P29/P30` keep publication, release, and manuscript ledgers downstream of
@@ -173,10 +192,10 @@ milestone families without activating them; `F10` makes richer
 executor-visible value/comparator obligations explicit without authorizing
 runtime widening; `F12/F13/F14/F15` preserve origin-facing claim-delta and
 conditional-reopen planning; `F9` remains blocked; `F11` remains
-new-substrate; `P21/P22/P23/P24/P25/P26/P27/P38` preserve the earlier driver,
+new-substrate; `P21/P22/P23/P24/P25/P26/P27/P38/P40` preserve the earlier driver,
 handoff, audit, and explicit-merge surfaces; `R41` remains deferred behind a
 later explicit contradiction packet; and no active downstream runtime lane
-exists after `H54`.
+exists after `H58`.
 
 ## Reproducibility pointers
 

@@ -50,6 +50,9 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `../plans/2026-03-24-post-h43-p28-publication-surface-sync-design.md`
 - `../plans/2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md`
 - `../plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
+- `../plans/2026-03-25-post-h54-useful-kernel-stopgo-design.md`
+- `../plans/2026-03-25-post-h56-last-discriminator-design.md`
+- `../plans/2026-03-25-post-h58-closeout-and-reopen-criteria-analysis.md`
 - `../milestones/H40_post_h38_semantic_boundary_activation_packet/`
 - `../milestones/R42_origin_append_only_memory_retrieval_contract_gate/`
 - `../milestones/F20_post_r42_dual_mode_model_mainline_bundle/`
@@ -67,6 +70,16 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `../milestones/R59_origin_compiled_trace_vm_execution_gate/`
 - `../milestones/H54_post_r58_r59_compiled_boundary_decision_packet/`
 - `../milestones/P38_post_h52_compiled_boundary_hygiene_sync/`
+- `../milestones/F30_post_h54_useful_kernel_bridge_bundle/`
+- `../milestones/H55_post_h54_useful_kernel_reentry_packet/`
+- `../milestones/R60_origin_compiled_useful_kernel_carryover_gate/`
+- `../milestones/R61_origin_compiled_useful_kernel_value_gate/`
+- `../milestones/H56_post_r60_r61_useful_kernel_decision_packet/`
+- `../milestones/F31_post_h56_final_discriminating_value_boundary_bundle/`
+- `../milestones/H57_post_h56_last_discriminator_authorization_packet/`
+- `../milestones/R62_origin_native_useful_kernel_value_discriminator_gate/`
+- `../milestones/H58_post_r62_origin_value_boundary_closeout_packet/`
+- `../milestones/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/`
 - `../milestones/H50_post_r51_r52_scope_decision_packet/`
 - `../milestones/F28_post_h50_origin_mechanism_reentry_bundle/`
 - `../milestones/H51_post_h50_origin_mechanism_reentry_packet/`
@@ -124,6 +137,16 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `results/R59_origin_compiled_trace_vm_execution_gate/summary.json`
 - `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
 - `results/P38_post_h52_compiled_boundary_hygiene_sync/summary.json`
+- `results/F30_post_h54_useful_kernel_bridge_bundle/summary.json`
+- `results/H55_post_h54_useful_kernel_reentry_packet/summary.json`
+- `results/R60_origin_compiled_useful_kernel_carryover_gate/summary.json`
+- `results/R61_origin_compiled_useful_kernel_value_gate/summary.json`
+- `results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
+- `results/F31_post_h56_final_discriminating_value_boundary_bundle/summary.json`
+- `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
+- `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
+- `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
+- `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
 - `results/H50_post_r51_r52_scope_decision_packet/summary.json`
 - `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
 - `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`
@@ -197,6 +220,29 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `scripts/export_r44_origin_restricted_wasm_useful_case_execution_gate.py`
 - `scripts/export_h43_post_r44_useful_case_refreeze.py`
 - `scripts/export_p28_post_h43_publication_surface_sync.py`
+- `scripts/export_h50_post_r51_r52_scope_decision_packet.py`
+- `scripts/export_f28_post_h50_origin_mechanism_reentry_bundle.py`
+- `scripts/export_h51_post_h50_origin_mechanism_reentry_packet.py`
+- `scripts/export_r55_origin_2d_hardmax_retrieval_equivalence_gate.py`
+- `scripts/export_r56_origin_append_only_trace_vm_semantics_gate.py`
+- `scripts/export_r57_origin_accelerated_trace_vm_comparator_gate.py`
+- `scripts/export_h52_post_r55_r56_r57_origin_mechanism_decision_packet.py`
+- `scripts/export_f29_post_h52_restricted_compiled_boundary_bundle.py`
+- `scripts/export_h53_post_h52_compiled_boundary_reentry_packet.py`
+- `scripts/export_r58_origin_restricted_stack_bytecode_lowering_contract_gate.py`
+- `scripts/export_r59_origin_compiled_trace_vm_execution_gate.py`
+- `scripts/export_h54_post_r58_r59_compiled_boundary_decision_packet.py`
+- `scripts/export_p38_post_h52_compiled_boundary_hygiene_sync.py`
+- `scripts/export_f30_post_h54_useful_kernel_bridge_bundle.py`
+- `scripts/export_h55_post_h54_useful_kernel_reentry_packet.py`
+- `scripts/export_r60_origin_compiled_useful_kernel_carryover_gate.py`
+- `scripts/export_r61_origin_compiled_useful_kernel_value_gate.py`
+- `scripts/export_h56_post_r60_r61_useful_kernel_decision_packet.py`
+- `scripts/export_f31_post_h56_final_discriminating_value_boundary_bundle.py`
+- `scripts/export_h57_post_h56_last_discriminator_authorization_packet.py`
+- `scripts/export_p40_post_h56_successor_worktree_and_artifact_hygiene_sync.py`
+- `scripts/export_r62_origin_native_useful_kernel_value_discriminator_gate.py`
+- `scripts/export_h58_post_r62_origin_value_boundary_closeout_packet.py`
 - `scripts/export_p26_post_h37_promotion_and_artifact_hygiene_audit.py`
 - `scripts/export_h20_post_h19_mainline_reentry_and_hygiene_split.py`
 - `scripts/export_r22_d0_true_boundary_localization_gate.py`
@@ -225,19 +271,23 @@ not part of the public submission/archive handoff.
 
 Venue-specific formatting may fork from this packet, but that formatting must
 not widen claims, activate an `E1` patch lane, or outrun the locked manuscript
-bundle. The current repo control state is `H54` as the active docs-only
-compiled-boundary closeout packet, with `H52` preserved as the prior
-mechanism closeout, `H53` preserved as the prior compiled-boundary reentry
-packet, and `H43` preserved as the paper-grade useful-case refreeze packet.
-Under that stack, `H42/H41` remain preserved prior docs-only decision packets,
-`H36` remains the preserved active routing/refreeze packet, `R42`, `R43`,
-`R44`, and `R45` remain the completed semantic-boundary gate stack,
-`R55/R56` remain exact mechanism evidence only, `R57` remains negative
+bundle. The current repo control state is `H58` as the active docs-only
+closeout packet, with `H56` preserved as the prior compiled useful-kernel
+closeout, `H57` preserved as the prior authorization packet, `H54` preserved
+as the prior compiled-boundary closeout, `H52` preserved as the prior
+mechanism closeout, and `H43` preserved as the paper-grade useful-case
+refreeze packet. Under that stack, `H42/H41` remain preserved prior docs-only
+decision packets, `H36` remains the preserved active routing/refreeze packet,
+`R42`, `R43`, `R44`, and `R45` remain the completed semantic-boundary gate
+stack, `R55/R56` remain exact mechanism evidence only, `R57` remains negative
 fast-path comparator evidence, `R58/R59` remain exact compiled-boundary
-evidence only, `F20` remains the coequal-mainline model bundle, `P27` remains
-the completed explicit merge packet with `merge_executed = false`, `P38`
-remains the aligned low-priority operational/docs sidecar, `P26` remains the
-preserved prior operational audit lane, `F18/F19/F16/F17/F28/F29` remain the
+evidence only, `R60` remains exact compiled useful-kernel carryover evidence,
+`R61` remains compiled useful-kernel value-negative evidence, `R62` remains
+native useful-kernel value-negative evidence, `F20` remains the
+coequal-mainline model bundle, `P27` remains the completed explicit merge
+packet with `merge_executed = false`, `P40` remains the aligned low-priority
+operational/docs sidecar above preserved `P38`, `P26` remains the preserved
+prior operational audit lane, `F18/F19/F16/F17/F28/F29/F30/F31` remain the
 current planning/control bundle set, `H40/H38/H37/P25` remain the preserved
 prior decision/audit support wave, and `F15` remains the current canonical
 derivative bundle. The latest downstream follow-on wave remains non-active
@@ -247,8 +297,8 @@ beyond-Origin milestone families without activating them, `F10` makes richer
 executor-visible value/comparator obligations explicit without authorizing
 runtime widening, `F12/F13/F14` preserve origin-facing planning storage,
 `R41` remains deferred behind a later explicit contradiction packet, no active
-downstream runtime lane exists after `H54`, `F9` remains blocked, `F11`
+downstream runtime lane exists after `H58`, `F9` remains blocked, `F11`
 remains new-substrate, `P21` and `P22` remain preserved prior planning syncs,
 `P23/P24/P25` preserve the earlier top-level control surfaces, and
-`P26/P27/P37/P38` preserve the current audit-plus-explicit-merge operational
-interpretation without merging `main`.
+`P26/P27/P37/P38/P40` preserve the current audit-plus-explicit-merge
+operational interpretation without merging `main`.

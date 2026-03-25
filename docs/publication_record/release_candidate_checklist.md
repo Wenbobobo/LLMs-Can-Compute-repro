@@ -4,14 +4,15 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H54` active docs-only compiled-boundary closeout packet plus
-preserved prior `H52/H53/H50` control context plus `H43` paper-grade
-useful-case refreeze / `H36` preserved-active /
-`R42-R43-R44-R45-R58-R59` completed current evidence stack /
-preserved prior `R49-R50-R51-R52-R55-R56-R57` useful-case and mechanism stack /
-blocked `F27/R53/R54` / `P38-P28-P27` completed downstream
-sync-and-explicit-no-merge posture / `F20-F16-F17-F18-F19-F15-F29`
-current-control-support / `H53-H52-H50-H42-H41-H40-H38-H37-P26-P25`
+the current `H58` active docs-only closeout packet plus preserved prior
+`H56/H57/H54/H52/H50` control context plus `H43` paper-grade useful-case
+refreeze / `H36` preserved-active /
+`R42-R43-R44-R45-R58-R59-R60-R61-R62` completed current and preserved-late
+evidence stack / preserved prior `R49-R50-R51-R52-R55-R56-R57` useful-case
+and mechanism stack / blocked `F27/R53/R54` /
+`P40-P38-P28-P27` completed downstream sync-and-explicit-no-merge posture /
+`F31-F20-F16-F17-F18-F19-F15-F30-F29` current-control-support /
+`H57-H56-H54-H53-H52-H50-H42-H41-H40-H38-H37-P26-P25`
 preserved immediate-predecessor support /
 `H35-H34-H33-H32-H31-H30` preserved question-selection-and-decision /
 `H29` preserved-upstream-refreeze / `H27-H28`
@@ -21,11 +22,11 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by active `H54`, preserved `H52/H53/H50`, preserved
+  recorded by active `H58`, preserved `H56/H57/H54/H52/H50`, preserved
   `H43/H42/H41/H40/H38/H37`, preserved `H36`, completed
-  `R42/R43/R44/R45/R58/R59`, blocked `F27/R53/R54`, completed
-  `P38/P28/P27`, current `F20/F16/F17/F18/F19/F29`, preserved `P26/P25`, and
-  current `F15`.
+  `R42/R43/R44/R45/R58/R59/R60/R61/R62`, blocked `F27/R53/R54`, completed
+  `P40/P38/P28/P27`, current `F31/F20/F16/F17/F18/F19`, preserved `P26/P25`,
+  and current `F15`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
@@ -40,21 +41,21 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same `H54` current control /
+  `publication_record/README.md` all describe the same `H58` current control /
   `H43` paper-grade endpoint / `H36` preserved active /
-  `R42-R43-R44-R45-R58-R59` completed current gate stack /
+  `R42-R43-R44-R45-R58-R59-R60-R61-R62` completed current gate stack /
   preserved prior `R49-R50-R51-R52-R55-R56-R57` support stack /
-  `P38-P28-P27` completed operational sync-and-explicit-no-merge posture /
-  `F20-F16-F17-F18-F19-F15-F29` current support /
-  `H53-H52-H50-H42-H41-H40-H38-H37-P26-P25`
+  `P40-P38-P28-P27` completed operational sync-and-explicit-no-merge posture /
+  `F31-F20-F16-F17-F18-F19-F15-F30-F29` current support /
+  `H57-H56-H54-H53-H52-H50-H42-H41-H40-H38-H37-P26-P25`
   preserved immediate-predecessor support /
   `H35-H34-H33-H32-H31-H30-H29-H27-H28` preserved current control package.
 - [ ] `plans/README.md`, the saved post-`P20/F5/F6` handoff surfaces, and the
   saved post-`H34` planning-wave surface still present docs/planning
   maintenance as admissible while runtime remains inactive by default.
 - [ ] `publication_record/README.md` and the saved planning-wave surfaces
-  present the completed `F29/H53/R58/R59/H54` wave above preserved
-  `H52/H43/H36`, the preserved `H40/R42/P26/F17/F18/F19/H38/F16/P25/F15/H37`
+  present the completed `F31/H57/R62/H58` wave above preserved
+  `H56/H54/H52/H43/H36`, the preserved `H40/R42/P26/F17/F18/F19/H38/F16/P25/F15/H37`
   support wave, the
   preserved `F7/F8/P21` wave, the preserved `F10/P22` bridge wave, and the
   preserved `F12/F13/F14/P23` family-first wave while keeping `F9` blocked
@@ -66,8 +67,29 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
-- [ ] `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+- [ ] `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
   reports the current active docs-only closeout packet,
+  `stop_as_mechanism_supported_but_no_bounded_executor_value`, and
+  `next_required_lane = no_active_downstream_runtime_lane`.
+- [ ] `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
+  reports the preserved prior last-discriminator authorization packet and
+  `authorize_one_last_native_useful_kernel_value_discriminator_gate`.
+- [ ] `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
+  reports the completed native value-negative discriminator on `4/4` exact rows
+  across `2/2` kernels.
+- [ ] `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
+  reports the completed operational/docs sidecar for the closed final
+  discriminator wave.
+- [ ] `results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
+  reports the preserved prior compiled useful-kernel closeout packet,
+  `freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`, and
+  `next_required_lane = no_active_downstream_runtime_lane`.
+- [ ] `results/R61_origin_compiled_useful_kernel_value_gate/summary.json`
+  reports the preserved prior compiled useful-kernel value-negative gate.
+- [ ] `results/R60_origin_compiled_useful_kernel_carryover_gate/summary.json`
+  reports the preserved prior exact compiled useful-kernel carryover gate.
+- [ ] `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
+  reports the preserved prior compiled-boundary closeout packet,
   `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`,
   and `next_required_lane = no_active_downstream_runtime_lane`.
 - [ ] `results/H53_post_h52_compiled_boundary_reentry_packet/summary.json`

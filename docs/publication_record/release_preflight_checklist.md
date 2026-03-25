@@ -7,18 +7,18 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects current `H54` as the active docs-only closeout
-  packet, preserved prior `H52/H53/H50` as the mechanism-closeout and
-  compiled-boundary reentry history, preserved `H43` as the paper-grade endpoint,
-  preserved `H42/H41` prior docs-only packets, preserved `H36`
-  routing/refreeze packet, completed `R42/R43/R44/R45/R58/R59` gate
-  stack, blocked `F27/R53/R54`, current `F20/F16/F17/F18/F19/F29` bundles,
-  completed `P27/P38` operational posture, preserved `P26/H40/H38/H37/P25`
-  prior support lanes, current `F15` derivative bundle, and keeps
-  `merge_executed = false`.
+- [ ] `STATUS.md` reflects current `H58` as the active docs-only closeout
+  packet, preserved prior `H56/H57/H54/H52/H50` as the useful-kernel,
+  compiled-boundary, mechanism, and broader-route closeout history,
+  preserved `H43` as the paper-grade endpoint, preserved `H42/H41` prior
+  docs-only packets, preserved `H36` routing/refreeze packet, completed
+  `R42/R43/R44/R45/R58/R59/R60/R61/R62` gate stack, blocked `F27/R53/R54`,
+  current `F31/F20/F16/F17/F18/F19` bundles, completed `P40/P27` operational
+  posture, preserved `P38/P26/H40/H38/H37/P25` prior support lanes, current
+  `F15` derivative bundle, and keeps `merge_executed = false`.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
   wording downstream of landed
-  `H54/R59/R58/H53/F29/H52/H50/H43/H42/H41/F20/P27/P38/R45/R44/R43/H40/H36/R42`
+  `H58/R62/H57/F31/H56/R61/R60/H55/F30/H54/R59/R58/H53/F29/H52/H50/H43/H42/H41/F20/P40/P27/P38/R45/R44/R43/H40/H36/R42`
   while preserving the narrow Origin-core limits and the paper-grade role of
   `H43`.
 - [ ] `P20_post_h34_manuscript_narrative_resync`,
@@ -45,12 +45,12 @@ current freeze candidate is assembled.
   `appendix_companion_scope.md` remain synchronized.
 - [ ] `release_candidate_checklist.md`, `submission_candidate_criteria.md`,
   `claim_ladder.md`, and `archival_repro_manifest.md` all expose the same
-  current `H54/H52/H53/H50/H43/H36/R42/R43/R44/R45/R58/R59/P27/P38`
+  current `H58/H56/H57/H54/H52/H50/H43/H36/R42/R43/R44/R45/R58/R59/R60/R61/R62/P40/P27/P38`
   release-control stack while preserving `H43` as the paper-grade endpoint and
   do not revert wording back to earlier `H40` or `H32/H34` control states.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  completed `F29/H53/R58/R59/H54` closeout stack above preserved
-  `H52/H43/H36`, the preserved `F7/F8/P21` wave, the preserved `F10/P22`
+  completed `F31/H57/R62/H58` closeout stack above preserved
+  `H56/H54/H52/H43/H36`, the preserved `F7/F8/P21` wave, the preserved `F10/P22`
   bridge wave, and the preserved `F12/F13/F14/P23` family-first planning wave
   without widening wording.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
@@ -59,6 +59,25 @@ current freeze candidate is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
+- [ ] `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
+  reports `stop_as_mechanism_supported_but_no_bounded_executor_value` and
+  `next_required_lane = no_active_downstream_runtime_lane`.
+- [ ] `results/H57_post_h56_last_discriminator_authorization_packet/summary.json`
+  reports `authorize_one_last_native_useful_kernel_value_discriminator_gate`.
+- [ ] `results/R62_origin_native_useful_kernel_value_discriminator_gate/summary.json`
+  reports `native_useful_kernel_route_lacks_bounded_value` on `4/4` exact rows
+  across `2/2` kernels.
+- [ ] `results/P40_post_h56_successor_worktree_and_artifact_hygiene_sync/summary.json`
+  reports zero blocked items and preserves the closed-wave operational/docs
+  sync posture for the final discriminator wave.
+- [ ] `results/H56_post_r60_r61_useful_kernel_decision_packet/summary.json`
+  reports `freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`
+  and `next_required_lane = no_active_downstream_runtime_lane`.
+- [ ] `results/R61_origin_compiled_useful_kernel_value_gate/summary.json`
+  reports `compiled_useful_kernel_route_lacks_bounded_value`.
+- [ ] `results/R60_origin_compiled_useful_kernel_carryover_gate/summary.json`
+  reports `compiled_useful_kernel_carryover_supported_exactly` on `5/5`
+  exact rows.
 - [ ] `results/H54_post_r58_r59_compiled_boundary_decision_packet/summary.json`
   reports `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`
   and `next_required_lane = no_active_downstream_runtime_lane`.
