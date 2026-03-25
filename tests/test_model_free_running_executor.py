@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import pytest
 
+from bytecode import BytecodeInterpreter, lower_program, r58_restricted_compiled_boundary_cases
 from exec_trace import (
     TraceInterpreter,
     call_chain_program,
@@ -134,6 +135,31 @@ def test_free_running_rejects_partitioned_stack_strategy() -> None:
             stack_strategy="partitioned_exact",
             memory_strategy="accelerated",
         )
+
+
+def test_free_running_exact_matches_restricted_compiled_boundary_lowered_cases() -> None:
+    source_interpreter = BytecodeInterpreter()
+    lowered_interpreter = TraceInterpreter()
+    executor = FreeRunningTraceExecutor(
+        stack_strategy="accelerated",
+        memory_strategy="accelerated",
+        validate_exact_reads=False,
+    )
+
+    for case in r58_restricted_compiled_boundary_cases():
+        source_result = source_interpreter.run(case.program, max_steps=case.max_steps)
+        lowered_program = lower_program(case.program)
+        lowered_reference = lowered_interpreter.run(lowered_program, max_steps=case.max_steps)
+        execution = executor.run(lowered_program, max_steps=max(source_result.final_state.steps + 8, case.max_steps))
+        outcome = compare_execution_to_reference(lowered_program, execution, reference=None)
+
+        assert source_result.events == lowered_reference.events
+        assert source_result.final_state == lowered_reference.final_state
+        assert execution.events == lowered_reference.events
+        assert execution.final_state == lowered_reference.final_state
+        assert outcome.exact_trace_match is True
+        assert outcome.exact_final_state_match is True
+        assert outcome.first_mismatch_step is None
 
 
 def test_compare_execution_to_reference_reports_exact_match() -> None:

@@ -101,6 +101,10 @@ from .restricted_tinyc import (
     sum_i32_buffer_tinyc_program,
     validate_restricted_tinyc_program,
 )
+from .restricted_compiled_boundary import (
+    RestrictedCompiledBoundaryCase,
+    r58_restricted_compiled_boundary_cases,
+)
 from .memory_harness import run_memory_surface_case, run_memory_surface_harness
 from .memory_surfaces import (
     MemoryAccessRecord,
@@ -143,6 +147,7 @@ __all__ = [
     "LongHorizonScalingCase",
     "MemoryControlSurfaceSufficiencyCase",
     "RestrictedTinyCLoweringCase",
+    "RestrictedCompiledBoundaryCase",
     "RestrictedFrontendTranslationCase",
     "RestrictedFrontendProgram",
     "RestrictedTinyCProgram",
@@ -217,6 +222,7 @@ __all__ = [
     "r49_useful_case_numeric_scaling_cases",
     "r50_restricted_tinyc_lowering_cases",
     "r51_origin_memory_control_surface_sufficiency_cases",
+    "r58_restricted_compiled_boundary_cases",
     "r3_d0_exact_execution_stress_cases",
     "r15_d0_remaining_family_retrieval_pressure_cases",
     "r6_d0_long_horizon_scaling_cases",
