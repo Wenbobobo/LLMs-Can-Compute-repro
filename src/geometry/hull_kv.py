@@ -186,7 +186,7 @@ class HullKVCache:
         envelope = self._upper_envelope if qy > 0 else self._negated_upper_envelope
         point_index = envelope.point_index_for_slope(slope)
         point = self._points[point_index]
-        score = dot_2d(point.key, query_key)
+        score = (point.key[0] * qx) + (point.key[1] * qy)
 
         if envelope.is_breakpoint(slope):
             return self._scan_maximizers(query_key, target_score=score)
@@ -244,8 +244,9 @@ class HullKVCache:
         best_score = target_score
         maximizers: list[_PointAggregate] = []
 
+        qx, qy = query
         for point in self._points:
-            score = dot_2d(point.key, query)
+            score = (point.key[0] * qx) + (point.key[1] * qy)
             if best_score is None or score > best_score:
                 best_score = score
                 maximizers = [point]
