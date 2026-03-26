@@ -13,16 +13,24 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H60_post_f34_next_lane_decision_packet/`
+- `H61_post_h60_archive_first_position_packet/`
   current active docs-only packet
-- `F34_post_h59_compiled_online_retrieval_reopen_screen/`
-  current planning-only future bundle
-- `P44_post_h59_publication_surface_and_claim_lock/`
-  current low-priority publication/docs wave
-- `P43_post_h59_repo_graph_hygiene_and_merge_map/`
+- `F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/`
+  current qualification-only future bundle
+- `P46_post_h60_archive_first_publication_sync/`
+  current publication/docs sync wave
+- `P45_post_h60_clean_descendant_integration_readiness/`
   current repo-hygiene sidecar
 - `F35_post_h59_far_future_model_and_weights_horizon_log/`
   current far-future storage bundle
+- `H60_post_f34_next_lane_decision_packet/`
+  preserved prior active docs-only packet
+- `F34_post_h59_compiled_online_retrieval_reopen_screen/`
+  preserved prior reopen screen
+- `P44_post_h59_publication_surface_and_claim_lock/`
+  preserved prior publication/docs wave
+- `P43_post_h59_repo_graph_hygiene_and_merge_map/`
+  preserved prior repo-hygiene sidecar
 - `P42_post_h59_gptpro_reinterview_packet/`
   preserved advisory dossier sidecar
 - `P41_post_h58_publication_and_archive_sync/`
@@ -51,8 +59,8 @@ historical and may use then-current wording.
 
 - preserve the narrow positive mechanism/execution result;
 - preserve the landed value-negative closeout at `H58`;
-- keep `H60` as the current active interpretation packet;
-- keep `H59` as the preserved prior reproduction-gap packet;
+- keep `H61` as the current archive-first interpretation packet;
+- keep `H60` and `H59` as preserved prior decision packets;
 - keep the downstream scientific lane at `planning_only_or_project_stop`;
 - do not reopen the same executor-value lane by momentum; and
 - keep dirty root `main` out of scientific execution.

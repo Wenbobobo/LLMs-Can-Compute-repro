@@ -213,26 +213,36 @@ Lock note: narrow positive mechanism result survives; broad headline reproductio
 
 ## Current bounded mainline state
 
-- `H60` is now the current active docs-only packet; it preserves `H59` as the
-  prior reproduction-gap packet, preserves `H58` as the prior value-negative
+- `H61` is now the current active docs-only packet; it preserves `H60` and
+  `H59` as prior decision packets, preserves `H58` as the prior value-negative
   closeout, preserves `F32` as the closeout certification bundle, preserves
   `H43` as the paper-grade endpoint, selects
-  `remain_planning_only_and_prepare_stop_or_archive`, keeps `F27/R53/R54`
+  `archive_first_consolidation_becomes_default_posture`, keeps `F27/R53/R54`
   blocked, and leaves the downstream lane at `planning_only_or_project_stop`.
-- `F34` is the current planning bundle; it preserves `H59` as the prior
-  reproduction-gap packet, names only
+- `F36` is the current qualification-only bundle; it preserves the one
+  admissible future family
   `compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route`,
-  keeps same-lane executor-value microvariants inadmissible, and keeps project
-  stop / archive admissible by default.
-- `P44` is the current low-priority publication/docs wave; it keeps the narrow
-  positive mechanism result explicit, keeps the broad headline negative
-  explicit, and keeps the compiled-online route conditional only.
-- `P43` is the current repo-hygiene sidecar; it records the preferred
-  repo-local worktree graph, keeps dirty root `main` quarantined, and records
+  fixes strict baseline and stop-rule discipline, and keeps runtime closed.
+- `P46` is the current publication/docs wave; it keeps the narrow positive
+  mechanism result explicit, keeps the broad headline negative explicit, makes
+  narrow mechanistic reproduction plus executor-value partial falsification the
+  outward shorthand, and keeps the compiled-online route qualification-only.
+  archive-first consolidation is now the default live posture.
+- `P45` is the current repo-hygiene sidecar; it records the clean successor
+  line, keeps dirty root `main` quarantined, and records
   `clean_descendant_only_never_dirty_root_main`.
 - `F35` is the current far-future storage bundle; it records
   `high_cost_model_route_far_future_only` and
   `programs_into_weights_route_far_future_only`.
+- `H60` is the preserved prior active packet; it records
+  `remain_planning_only_and_prepare_stop_or_archive`.
+- `F34` is the preserved prior reopen screen; it names only the one compiled-
+  online family and keeps same-lane executor-value microvariants inadmissible.
+- `P44` is the preserved prior publication/docs wave; it keeps the narrow
+  positive mechanism result explicit, keeps the broad headline negative
+  explicit, and keeps the compiled-online route conditional only at that stage.
+- `P43` is the preserved prior repo-hygiene sidecar; it records the preferred
+  repo-local worktree graph and the original descendant-only merge posture.
 - `P42` is the preserved prior advisory/docs wave; it records the
   self-contained GPTPro dossier and keeps it advisory rather than
   claim-bearing.

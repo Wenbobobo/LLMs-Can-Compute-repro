@@ -156,7 +156,8 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H60_post_f34_next_lane_decision_packet`, which preserves
+`H61_post_h60_archive_first_position_packet`, which preserves
+`H60_post_f34_next_lane_decision_packet` as the prior active packet, preserves
 `H59_post_h58_reproduction_gap_decision_packet` as the prior reproduction-gap
 packet, preserves `H58_post_r62_origin_value_boundary_closeout_packet` as the
 prior value-negative closeout, preserves
@@ -183,24 +184,29 @@ preserved prior mechanism evidence stack, records `R58/R59` as exact narrow
 compiled-boundary evidence only, records `R60/R61` as exact-but-value-negative
 compiled useful-kernel bridge evidence, records `R62` as the final native
 value-negative discriminator, records
-`F34_post_h59_compiled_online_retrieval_reopen_screen` as the current
-planning bundle above preserved `F32/F31/F30/F29/F28/F20`, records
-`P44_post_h59_publication_surface_and_claim_lock` as the current
+`F36_post_h60_conditional_compiled_online_reopen_qualification_bundle` as the
+current qualification-only bundle above preserved `F34/F32/F31/F30/F29/F28`,
+records `P46_post_h60_archive_first_publication_sync` as the current
 publication/docs sidecar, records
-`P43_post_h59_repo_graph_hygiene_and_merge_map` as the current repo-hygiene
-sidecar, records `F35_post_h59_far_future_model_and_weights_horizon_log` as
-the current far-future storage bundle, preserves
+`P45_post_h60_clean_descendant_integration_readiness` as the current
+repo-hygiene sidecar, records
+`F35_post_h59_far_future_model_and_weights_horizon_log` as the current
+far-future storage bundle, preserves
 `P42_post_h59_gptpro_reinterview_packet` as the prior advisory/docs sidecar
 above preserved `P41/P38/P27/P26/P25`, keeps `merge_executed = false`
-explicit, and sets the downstream lane to `planning_only_or_project_stop`.
+explicit, and leaves the downstream lane at `planning_only_or_project_stop`.
 
 The narrow positive mechanism result survives. Broad headline reproduction did
-not land. Same-lane executor-value microvariants remain inadmissible.
-Compiled-online exact retrieval or attention-coprocessor route remains
-conditional only. Default outcome remains planning-only, archive, or explicit
-stop.
+not land. Archive-first consolidation is now the default repo meaning.
+Narrow mechanistic reproduction plus executor-value partial falsification is
+the correct outward shorthand. Same-lane executor-value microvariants remain
+inadmissible. Compiled-online exact retrieval or attention-coprocessor route
+remains qualification-only on paper.
 
-Lock note: default outcome remains planning-only, archive, or explicit stop.
+archive-first consolidation is now the default repo meaning.
+narrow mechanistic reproduction plus executor-value partial falsification.
+
+Lock note: archive-first consolidation is the default repo meaning.
 
 The later paper-facing and planning-only closeout lanes align to that reading:
 `P28/P29/P30` keep publication, release, and manuscript ledgers downstream of

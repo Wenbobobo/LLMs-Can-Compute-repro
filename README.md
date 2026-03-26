@@ -11,26 +11,34 @@ currently justified useful-kernel lane is disconfirmed.
 ## Current Stage
 
 As of `2026-03-26`, the current active packet is
-`H60_post_f34_next_lane_decision_packet`.
+`H61_post_h60_archive_first_position_packet`.
 
 Current anchors:
 
 - active docs-only packet:
-  `H60_post_f34_next_lane_decision_packet`
+  `H61_post_h60_archive_first_position_packet`
 - preserved prior active docs-only packet:
+  `H60_post_f34_next_lane_decision_packet`
+- preserved prior reproduction-gap packet:
   `H59_post_h58_reproduction_gap_decision_packet`
 - preserved prior docs-only closeout:
   `H58_post_r62_origin_value_boundary_closeout_packet`
 - preserved prior closeout certification:
   `F32_post_h58_closeout_certification_bundle`
-- current planning bundle:
-  `F34_post_h59_compiled_online_retrieval_reopen_screen`
-- current low-priority publication/docs wave:
-  `P44_post_h59_publication_surface_and_claim_lock`
+- current reopen qualification bundle:
+  `F36_post_h60_conditional_compiled_online_reopen_qualification_bundle`
+- current publication/docs wave:
+  `P46_post_h60_archive_first_publication_sync`
 - current repo-hygiene sidecar:
-  `P43_post_h59_repo_graph_hygiene_and_merge_map`
+  `P45_post_h60_clean_descendant_integration_readiness`
 - current far-future horizon log:
   `F35_post_h59_far_future_model_and_weights_horizon_log`
+- preserved prior reopen screen:
+  `F34_post_h59_compiled_online_retrieval_reopen_screen`
+- preserved prior publication/claim-lock wave:
+  `P44_post_h59_publication_surface_and_claim_lock`
+- preserved prior repo-hygiene sidecar:
+  `P43_post_h59_repo_graph_hygiene_and_merge_map`
 - preserved prior advisory dossier sidecar:
   `P42_post_h59_gptpro_reinterview_packet`
 - preserved prior publication/archive sync sidecar:
@@ -49,22 +57,25 @@ accelerated execution was faster than linear on `0/2` longest kernel rows and
 did not approach the external scalar comparator on either kernel. `H58`
 therefore selected
 `stop_as_mechanism_supported_but_no_bounded_executor_value`. `F32` certified
-that stop, `H59` made the reproduction gap explicit, `F34` screened only one
-conditional later route, and `H60` now selects
-`remain_planning_only_and_prepare_stop_or_archive`.
+that stop, `H59` made the reproduction gap explicit, `H60` selected
+`remain_planning_only_and_prepare_stop_or_archive`, `F36` kept the only future
+route qualification-only, and `H61` now selects
+`archive_first_consolidation_becomes_default_posture`.
 
 ## Current Order
 
 - completed scientific closeout chain:
-  `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60`
+  `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60 -> F36 -> H61`
 - preserved publication/archive sidecar:
   `P41`
 - preserved advisory dossier sidecar:
   `P42`
+- preserved prior repo-hygiene and wording-lock sidecars:
+  `P43`, `P44`
 - current repo-hygiene sidecar:
-  `P43`
-- current publication/claim-lock wave:
-  `P44`
+  `P45`
+- current publication/claim-sync wave:
+  `P46`
 - current far-future storage bundle:
   `F35`
 
@@ -74,9 +85,11 @@ There are no open runtime tasks on this branch.
 
 The next meaningful action is one of:
 
-- archive / stop / hygiene work under the current `H60` posture; or
-- a later explicit authorization packet for a materially different compiled /
-  online exact-retrieval family.
+- archive / stop / hygiene work under the current `H61` archive-first posture;
+  or
+- a later explicit authorization packet that first clears the `F36`
+  qualification bundle for a materially different compiled / online
+  exact-retrieval family.
 
 The branch should not be extended by momentum into another `R62`-like value
 probe on the same runtime path. Same-lane executor-value microvariants remain
@@ -90,10 +103,11 @@ The live post-closeout wave is limited to:
 2. preserving the landed value-negative closeout at `H58`;
 3. preserving the closeout certification through `F32`;
 4. preserving the reproduction gap packet through `H59`;
-5. recording repo graph and merge posture through `P43`;
-6. locking outward wording through `P44`;
-7. screening only the compiled-online exact-retrieval family through `F34`; and
-8. storing far-future model/weights ideas only through `F35`.
+5. recording clean-descendant integration posture through `P45`;
+6. keeping only one future route alive on paper through `F36`;
+7. making archive-first consolidation the default live posture through `H61`;
+8. locking outward wording through `P46`; and
+9. storing far-future model/weights ideas only through `F35`.
 
 Still blocked:
 
@@ -111,14 +125,15 @@ on the clean worktree line.
 
 - `docs/publication_record/current_stage_driver.md`
 - `tmp/active_wave_plan.md`
-- `docs/plans/2026-03-26-post-h59-archive-and-reopen-screen-design.md`
-- `docs/plans/2026-03-26-post-h59-far-future-horizon-log.md`
-- `docs/plans/2026-03-25-post-h59-gptpro-reinterview-dossier.md`
+- `docs/plans/2026-03-26-post-h60-archive-first-consolidation-design.md`
+- `docs/plans/2026-03-26-post-h60-next-planmode-handoff.md`
+- `results/H61_post_h60_archive_first_position_packet/summary.json`
+- `results/P45_post_h60_clean_descendant_integration_readiness/summary.json`
+- `results/F36_post_h60_conditional_compiled_online_reopen_qualification_bundle/summary.json`
+- `results/P46_post_h60_archive_first_publication_sync/summary.json`
+- `results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
 - `results/H60_post_f34_next_lane_decision_packet/summary.json`
 - `results/F34_post_h59_compiled_online_retrieval_reopen_screen/summary.json`
-- `results/P44_post_h59_publication_surface_and_claim_lock/summary.json`
-- `results/P43_post_h59_repo_graph_hygiene_and_merge_map/summary.json`
-- `results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
 - `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
 - `results/F32_post_h58_closeout_certification_bundle/summary.json`
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
