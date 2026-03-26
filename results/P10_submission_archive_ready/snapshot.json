@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,44 +22,44 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
-        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`",
+        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.",
+        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
         "`archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
+        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.",
         "`F38_post_h62_r63_dormant_eligibility_profile_dossier`."
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`",
+        "- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`",
         "current active docs-only packet"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P52_post_h62_clean_descendant_hygiene_and_merge_prep`",
+        "- `P55_post_h63_clean_descendant_promotion_prep`",
         "- `archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`",
-        "- `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`",
-        "- `results/P51_post_h62_paper_facing_partial_falsification_package/summary.json`"
+        "- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`",
+        "- `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`",
+        "- `results/P53_post_h63_paper_archive_claim_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P50_post_h62_archive_first_control_sync/summary.json`",
+        "- `results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`",
         "- `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`"
       ]
     },

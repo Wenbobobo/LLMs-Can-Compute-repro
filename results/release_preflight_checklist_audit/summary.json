@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -21,31 +21,34 @@
   "source_artifacts": [
     "README.md",
     "STATUS.md",
+    "docs/publication_record/README.md",
+    "docs/plans/README.md",
     "docs/publication_record/release_summary_draft.md",
     "docs/publication_record/release_preflight_checklist.md",
     "docs/publication_record/release_candidate_checklist.md",
     "docs/publication_record/submission_candidate_criteria.md",
     "docs/publication_record/claim_ladder.md",
     "docs/publication_record/archival_repro_manifest.md",
+    "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
     "results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json",
-    "results/P50_post_h62_archive_first_control_sync/summary.json",
-    "results/P51_post_h62_paper_facing_partial_falsification_package/summary.json",
-    "results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json",
+    "results/P53_post_h63_paper_archive_claim_sync/summary.json",
+    "results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json",
+    "results/P55_post_h63_clean_descendant_promotion_prep/summary.json",
     "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
     "results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json",
     "results/H43_post_r44_useful_case_refreeze/summary.json",
     "results/release_worktree_hygiene_snapshot/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h63_archive_first_closeout_with_preserved_h58_h43_endpoints",
-    "preflight_scope": "outward_release_surface_and_archive_first_closeout_bundle",
+    "current_paper_phase": "h64_archive_first_freeze_with_preserved_h63_h58_h43_endpoints",
+    "preflight_scope": "outward_release_surface_and_archive_first_freeze_bundle",
     "preflight_state": "docs_and_audits_green",
     "release_commit_state": "clean_worktree_ready_if_other_gates_green",
     "git_diff_check_state": "clean",
-    "check_count": 6,
-    "pass_count": 6,
+    "check_count": 7,
+    "pass_count": 7,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H63 remains the current active docs-only packet, P50/P51/P52 remain the current archive-first closeout sidecars, F38 remains the only dormant non-runtime future dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
+    "recommended_next_action": "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H64 remains the current active docs-only packet, H63 remains the preserved prior active packet, P53/P54/P55 remain the current archive-first freeze sidecars, F38 remains the only dormant non-runtime future dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
   }
 }

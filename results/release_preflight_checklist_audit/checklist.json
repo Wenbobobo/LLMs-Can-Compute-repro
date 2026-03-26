@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -20,19 +20,24 @@
   },
   "rows": [
     {
-      "item_id": "top_level_release_surface_stays_narrow_and_h63_explicit",
+      "item_id": "top_level_release_surface_stays_narrow_and_h64_explicit",
       "status": "pass",
-      "notes": "README, STATUS, and release summary should all expose the H63 archive-first closeout posture."
+      "notes": "README, STATUS, and release summary should all expose the H64 archive-first freeze posture."
     },
     {
-      "item_id": "release_candidate_submission_claim_and_archive_ledgers_align_on_h63_h58_h43_split",
+      "item_id": "publication_and_plan_indexes_expose_current_h64_route",
       "status": "pass",
-      "notes": "Release, submission, claim, and archive ledgers should expose the same H63 plus preserved H58/H43 split."
+      "notes": "Publication and planning indexes should both expose the current H64 freeze chain."
+    },
+    {
+      "item_id": "release_candidate_submission_claim_and_archive_ledgers_align_on_h64_h58_h43_split",
+      "status": "pass",
+      "notes": "Release, submission, claim, and archive ledgers should expose the same H64 plus preserved H63/H58/H43 split."
     },
     {
       "item_id": "paper_bundle_ledgers_stay_downstream_of_archive_first_partial_falsification",
       "status": "pass",
-      "notes": "Paper bundle ledgers should keep H43 explicit while H63 controls outward archive-first framing."
+      "notes": "Paper bundle ledgers should keep H43 explicit while H64 controls outward archive-first framing."
     },
     {
       "item_id": "blog_rules_keep_restrained_release_surface",
@@ -45,9 +50,9 @@
       "notes": "The worktree hygiene snapshot should classify current release-commit readiness."
     },
     {
-      "item_id": "standing_h63_audits_remain_green_or_honestly_dormant",
+      "item_id": "standing_h64_audits_remain_green_or_honestly_dormant",
       "status": "pass",
-      "notes": "Standing release-preflight state depends on H63/P50/P51/P52/F38 plus preserved H58/H43."
+      "notes": "Standing release-preflight state depends on H64/P53/P54/P55/F38 plus preserved H63/H58/H43."
     }
   ]
 }

@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,40 +22,60 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
-        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`",
+        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.",
+        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
         "`archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
+        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.",
         "`F38_post_h62_r63_dormant_eligibility_profile_dossier`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "matched_lines": [
+        "- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`",
+        "- `../milestones/P53_post_h63_paper_archive_claim_sync/`"
+      ]
+    },
+    {
+      "path": "docs/plans/README.md",
+      "matched_lines": [
+        "- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`",
+        "- `../milestones/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/`",
+        "- `../../results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`",
+        "- `../../results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "archive-first closeout is now the default repo meaning.",
-        "R63 remains dormant."
+        "archive-first freeze is now the default repo meaning.",
+        "R63 remains dormant, non-runtime, and only discussable through a later"
       ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- [ ] `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`",
+        "- [ ] `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`",
         "- [ ] `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
-      "matched_lines": []
+      "matched_lines": [
+        "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet` stack.",
+        "`H58/H43`.",
+        "`F38` as the dormant future dossier, and `H58/H43` as preserved scientific"
+      ]
     },
     {
       "path": "docs/publication_record/submission_candidate_criteria.md",
       "matched_lines": [
-        "`P52_post_h62_clean_descendant_hygiene_and_merge_prep`, and",
+        "`P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`,",
         "executor-value closeout and `H43_post_r44_useful_case_refreeze` as the"
       ]
     },
@@ -63,13 +83,13 @@
       "path": "docs/publication_record/claim_ladder.md",
       "matched_lines": [
         "| H58 Value-negative closeout | validated as the preserved closeout of the strongest executor-value lane | `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`, `results/H58_post_r62_origin_value_boundary_closeout_packet/claim_packet.json` | preserves narrow mechanism support while closing bounded executor value negative |",
-        "| H63 archive-first closeout packet | validated as the current active docs-only packet | `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`, `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/claim_packet.json` | makes archive-first closeout the active repo route, preserves `H62` as the prior active packet, keeps `archive_or_hygiene_stop` as default, and keeps `R63` dormant and non-runtime only |"
+        "| H64 archive-first freeze packet | validated as the current active docs-only packet | `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`, `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/claim_packet.json` | makes archive-first freeze the active repo route, preserves `H63` as the prior active packet, keeps `archive_or_hygiene_stop` as default, and keeps `R63` dormant and non-runtime only |"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json`",
+        "- `results/P55_post_h63_clean_descendant_promotion_prep/summary.json`",
         "- `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`"
       ]
     },
