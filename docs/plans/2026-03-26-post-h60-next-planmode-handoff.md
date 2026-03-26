@@ -40,7 +40,8 @@ Validation state at handoff time:
 - focused exporter tests passed: `5 passed`;
 - `git diff --check` was clean;
 - `P44` locked all `12/12` audited files with `blocked_count = 0`; and
-- the branch was committed clean at `b96e6584b74ad11d036fab846ce4f69884294c71`.
+- the branch is currently committed clean at
+  `46c115560c782889497985f68e4eebf25b951fdc`.
 
 ## Branch And Merge Posture
 
@@ -50,10 +51,11 @@ Validation state at handoff time:
   `wip/root-main-parking-2026-03-24`
 - root repo `main` is not the integration target for scientific work
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
-- this branch currently has no upstream tracking branch configured
+- this branch now tracks
+  `origin/wip/f34-post-h59-archive-and-reopen-screen`
 
-That last point is operational only. It is not a reason to merge into dirty
-root `main`.
+That upstream is operational only. It is not a reason to merge into dirty root
+`main`.
 
 ## Hard Constraints For The Next Plan
 
