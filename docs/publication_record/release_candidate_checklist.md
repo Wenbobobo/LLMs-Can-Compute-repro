@@ -4,13 +4,13 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a
 restrained release-candidate posture after the current
-`H63_post_p50_p51_p52_f38_archive_first_closeout_packet` stack.
+`H64_post_p53_p54_p55_f38_archive_first_freeze_packet` stack.
 
 ## Wording and scope
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
-- [ ] `STATUS.md` matches active `H63`, preserved prior active `H62`, current
-  `P50/P51/P52/F38`, default downstream lane `archive_or_hygiene_stop`, and
+- [ ] `STATUS.md` matches active `H64`, preserved prior active `H63`, current
+  `P53/P54/P55/F38`, default downstream lane `archive_or_hygiene_stop`, and
   closed runtime.
 - [ ] `release_summary_draft.md` remains the short public-surface source for
   archive-first partial falsification.
@@ -23,12 +23,13 @@ restrained release-candidate posture after the current
   state.
 - [ ] `paper_bundle_status.md`, `review_boundary_summary.md`,
   `publication_record/README.md`, and `current_stage_driver.md` all describe
-  the same current `H63/P50/P51/P52/F38` package together with preserved
+  the same current `H64/P53/P54/P55/F38` package together with preserved
   `H58/H43`.
 - [ ] `submission_packet_index.md` and `archival_repro_manifest.md` present
-  the same handoff: `H63` as current active packet, `P51` as paper-facing
-  package, `P52` as hygiene sidecar, `F38` as the dormant future dossier, and
-  `H58/H43` as preserved scientific endpoints underneath.
+  the same handoff: `H64` as current active packet, `P53` as paper/archive
+  claim-sync wave, `P54` as hygiene sidecar, `P55` as promotion-prep wave,
+  `F38` as the dormant future dossier, and `H58/H43` as preserved scientific
+  endpoints underneath.
 - [ ] `external_release_note_skeleton.md` stays downstream of archive-first
   partial falsification, keeps the broad headline negative, and keeps `R63`
   dormant and non-runtime only.
@@ -39,16 +40,15 @@ restrained release-candidate posture after the current
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
-- [ ] `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`
+- [ ] `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
   reports the current active packet and archive-first closeout outcome.
-- [ ] `results/P50_post_h62_archive_first_control_sync/summary.json` reports
-  locked control surfaces.
-- [ ] `results/P51_post_h62_paper_facing_partial_falsification_package/summary.json`
-  reports archive-first partial falsification with dormant non-runtime future
-  posture.
-- [ ] `results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json`
+- [ ] `results/P53_post_h63_paper_archive_claim_sync/summary.json` reports
+  locked paper/archive/review surfaces under the `H64` freeze.
+- [ ] `results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`
   reports clean-descendant-only hygiene, zero tracked oversize artifacts, and
   active raw-row ignore rules.
+- [ ] `results/P55_post_h63_clean_descendant_promotion_prep/summary.json`
+  reports explicit promotion-prep with `merge_execution_state = false`.
 - [ ] `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
   keeps runtime closed and the cost-profile fields unresolved.
 - [ ] `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`

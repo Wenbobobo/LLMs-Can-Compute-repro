@@ -5,15 +5,15 @@
 Current scientific/control stack:
 
 - current active docs-only packet:
-  `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`;
+  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`;
 - preserved prior active docs-only packet:
-  `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet`;
-- current control sync wave:
-  `P50_post_h62_archive_first_control_sync`;
-- current paper-facing package wave:
-  `P51_post_h62_paper_facing_partial_falsification_package`;
+  `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`;
+- current paper/archive claim-sync wave:
+  `P53_post_h63_paper_archive_claim_sync`;
 - current repo-hygiene sidecar:
-  `P52_post_h62_clean_descendant_hygiene_and_merge_prep`;
+  `P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`;
+- current promotion-prep wave:
+  `P55_post_h63_clean_descendant_promotion_prep`;
 - current dormant future dossier:
   `F38_post_h62_r63_dormant_eligibility_profile_dossier`;
 - default downstream lane:
@@ -23,15 +23,15 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H63_post_p50_p51_p52_f38_archive_first_closeout_packet` is the current active
+`H64_post_p53_p54_p55_f38_archive_first_freeze_packet` is the current active
 packet and selects
-`archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`.
+`archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant`.
 
 ## Execution Closeout Status
 
-- standing release/archive audits now read the `H63` state directly;
+- standing release/archive audits now read the `H64` state directly;
 - `release_preflight_checklist_audit` is green;
 - `P10_submission_archive_ready` is green;
-- the clean descendant branch is published and clean; and
-- there is no remaining open execution-side wave under the current `H63`
+- the active clean descendant branch remains merge-prep only; and
+- there is no remaining open execution-side wave under the current `H64`
   packet.

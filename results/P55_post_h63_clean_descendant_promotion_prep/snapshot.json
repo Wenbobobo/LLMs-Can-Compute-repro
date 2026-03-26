@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "field": "current_planning_branch",
+      "value": "wip/h64-post-h63-archive-first-freeze"
+    },
+    {
+      "field": "current_planning_branch_upstream",
+      "value": ""
+    },
+    {
+      "field": "handoff_path",
+      "value": "docs/plans/2026-03-26-post-h64-next-planmode-handoff.md"
+    },
+    {
+      "field": "startup_prompt_path",
+      "value": "docs/plans/2026-03-26-post-h64-next-planmode-startup-prompt.md"
+    }
+  ]
+}

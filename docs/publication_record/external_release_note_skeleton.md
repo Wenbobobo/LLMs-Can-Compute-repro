@@ -9,7 +9,9 @@ This repository now presents archive-first partial falsification as the
 strongest honest public shorthand. Narrow mechanistic execution support
 survives on the admitted surfaces, but the strongest justified
 executor-value lane is closed negative and the broad “LLMs are computers”
-headline does not land. The preserved paper-grade endpoint remains
+headline does not land. The current outward control packet is
+`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`. The preserved
+paper-grade endpoint remains
 `H43_post_r44_useful_case_refreeze`, the preserved value-negative closeout
 remains `H58_post_r62_origin_value_boundary_closeout_packet`, and the only
 future family left on paper is the dormant non-runtime `F38` dossier rather

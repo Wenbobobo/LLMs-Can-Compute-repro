@@ -7,24 +7,26 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
-- `2026-03-26-post-h62-archive-first-closeout-design.md`
-  current design for the archive-first closeout wave
-- `2026-03-26-post-h63-next-planmode-handoff.md`
-  current shortest handoff from the post-`H63` closeout stack
-- `2026-03-26-post-h63-next-planmode-startup-prompt.md`
+- `2026-03-26-post-h63-archive-first-closeout-design.md`
+  current design for the archive-first freeze wave
+- `2026-03-26-post-h64-next-planmode-handoff.md`
+  current shortest handoff from the post-`H64` freeze stack
+- `2026-03-26-post-h64-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
+- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
   current active docs-only packet
-- `../milestones/P50_post_h62_archive_first_control_sync/`
-  current control sync wave
-- `../milestones/P51_post_h62_paper_facing_partial_falsification_package/`
-  current paper-facing package wave
-- `../milestones/P52_post_h62_clean_descendant_hygiene_and_merge_prep/`
+- `../milestones/P53_post_h63_paper_archive_claim_sync/`
+  current paper/archive claim-sync wave
+- `../milestones/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/`
   current clean-descendant hygiene sidecar
+- `../milestones/P55_post_h63_clean_descendant_promotion_prep/`
+  current promotion-prep wave
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
   current dormant future dossier
 - `2026-03-26-post-h60-next-planmode-handoff.md`
   preserved shorter handoff into the post-`H60/H61` archive-first stack
+- `2026-03-26-post-h63-next-planmode-handoff.md`
+  preserved shorter handoff into the post-`H63` closeout stack
 - `2026-03-26-post-h59-far-future-horizon-log.md`
   current far-future storage note
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
@@ -35,7 +37,7 @@ driver and machine-readable `results/` summaries first.
 ## Current Route
 
 - completed scientific closeout and narrowing chain:
-  `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60 -> F36 -> H61 -> F37 -> H62 -> P50 -> P51 -> P52 -> F38 -> H63`
+  `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60 -> F36 -> H61 -> F37 -> H62 -> P50 -> P51 -> P52 -> F38 -> H63 -> P53 -> P54 -> P55 -> H64`
 - preserved publication/archive sidecar:
   `P41`
 - preserved advisory dossier sidecar:
@@ -49,7 +51,7 @@ driver and machine-readable `results/` summaries first.
 - preserved prior hygiene/advisory sync sidecars:
   `P47`, `P48`, `P49`
 - current closeout sidecars:
-  `P50`, `P51`, `P52`
+  `P53`, `P54`, `P55`
 - current dormant future dossier:
   `F38`
 - current far-future storage bundle:
@@ -76,17 +78,19 @@ Blocked by default:
 
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
-- `2026-03-26-post-h62-archive-first-closeout-design.md`
+- `2026-03-26-post-h63-archive-first-closeout-design.md`
+- `2026-03-26-post-h64-next-planmode-handoff.md`
+- `2026-03-26-post-h64-next-planmode-startup-prompt.md`
 - `2026-03-26-post-h63-next-planmode-handoff.md`
-- `2026-03-26-post-h63-next-planmode-startup-prompt.md`
 - `2026-03-26-post-h60-next-planmode-handoff.md`
 - `2026-03-26-post-h59-far-future-horizon-log.md`
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
-- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
-- `../milestones/P50_post_h62_archive_first_control_sync/`
-- `../milestones/P51_post_h62_paper_facing_partial_falsification_package/`
-- `../milestones/P52_post_h62_clean_descendant_hygiene_and_merge_prep/`
+- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
+- `../milestones/P53_post_h63_paper_archive_claim_sync/`
+- `../milestones/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/`
+- `../milestones/P55_post_h63_clean_descendant_promotion_prep/`
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
+- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
 - `../milestones/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/`
 - `../milestones/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/`
 - `../milestones/P49_post_h61_origin_advisory_sync/`
@@ -94,11 +98,12 @@ Blocked by default:
 - `../milestones/P47_post_h61_root_quarantine_and_main_merge_planning/`
 - `../milestones/P46_post_h60_archive_first_publication_sync/`
 - `../milestones/H61_post_h60_archive_first_position_packet/`
-- `../../results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`
-- `../../results/P50_post_h62_archive_first_control_sync/summary.json`
-- `../../results/P51_post_h62_paper_facing_partial_falsification_package/summary.json`
-- `../../results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json`
+- `../../results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
+- `../../results/P53_post_h63_paper_archive_claim_sync/summary.json`
+- `../../results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`
+- `../../results/P55_post_h63_clean_descendant_promotion_prep/summary.json`
 - `../../results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
+- `../../results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`
 - `../../results/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/summary.json`
 - `../../results/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/summary.json`
 - `../../results/P49_post_h61_origin_advisory_sync/summary.json`

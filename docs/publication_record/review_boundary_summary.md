@@ -6,7 +6,7 @@ formatting passes.
 ## Current stack
 
 The current active routing/decision state is
-`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.
+`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
 
 ## Honest scientific reading
 
@@ -15,4 +15,4 @@ The current active routing/decision state is
 - executor-value on the strongest justified lane is closed negative; and
 - the only remaining future route is a dormant no-go dossier at `F38`.
 
-Archive-first closeout is now the default live posture.
+Archive-first freeze is now the default live posture.

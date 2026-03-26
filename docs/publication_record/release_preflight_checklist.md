@@ -8,10 +8,10 @@ current archive-first closeout bundle is assembled.
 - [ ] `README.md` stays a restrained landing page and keeps the blocked broad
   non-goals explicit.
 - [ ] `STATUS.md` reflects current
-  `H63_post_p50_p51_p52_f38_archive_first_closeout_packet` as the active
+  `H64_post_p53_p54_p55_f38_archive_first_freeze_packet` as the active
   docs-only packet, preserves
-  `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet` as the prior
-  active packet, and exposes `P50/P51/P52/F38` plus
+  `H63_post_p50_p51_p52_f38_archive_first_closeout_packet` as the prior
+  active packet, and exposes `P53/P54/P55/F38` plus
   `archive_or_hygiene_stop`.
 - [ ] `release_summary_draft.md` uses archive-first partial falsification as
   the outward shorthand: narrow mechanistic reproduction survives, the broad
@@ -19,11 +19,11 @@ current archive-first closeout bundle is assembled.
   negative, and `R63` remains dormant and non-runtime only.
 - [ ] `release_candidate_checklist.md`,
   `submission_candidate_criteria.md`, `claim_ladder.md`, and
-  `archival_repro_manifest.md` expose the same current `H63/P50/P51/P52/F38`
+  `archival_repro_manifest.md` expose the same current `H64/P53/P54/P55/F38`
   stack while preserving `H58` as the value-negative closeout and `H43` as the
   preserved paper-grade endpoint.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  completed `H63/P50/P51/P52/F38` chain above preserved `H62/H61/H60/H59/H58`
+  completed `H64/P53/P54/P55/F38` chain above preserved `H63/H62/H61/H60/H59/H58`
   and preserved paper-grade `H43`.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
@@ -47,20 +47,19 @@ current archive-first closeout bundle is assembled.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
-- [ ] `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`
+- [ ] `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
   reports
-  `archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`,
+  `archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant`,
   `archive_or_hygiene_stop`, and closed runtime.
-- [ ] `results/P50_post_h62_archive_first_control_sync/summary.json` reports
-  `control_surfaces_locked_to_post_h62_archive_first_closeout`.
-- [ ] `results/P51_post_h62_paper_facing_partial_falsification_package/summary.json`
+- [ ] `results/P53_post_h63_paper_archive_claim_sync/summary.json` reports
+  `paper_archive_review_surfaces_locked_to_h64_archive_first_freeze`.
+- [ ] `results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`
   reports
-  `paper_surfaces_locked_to_archive_first_partial_falsification_closeout` and
-  `future_route_posture = dormant_non_runtime_only`.
-- [ ] `results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json`
-  reports
-  `clean_descendant_hygiene_and_merge_prep_locked_without_dirty_root_merge`,
+  `clean_descendant_hygiene_and_artifact_policy_locked_without_merge_execution`,
   `tracked_oversize_count = 0`, and `raw_row_ignore_rules_active = true`.
+- [ ] `results/P55_post_h63_clean_descendant_promotion_prep/summary.json`
+  reports `clean_descendant_promotion_prep_refreshed_for_h64_archive_first_freeze`
+  and `merge_execution_state = false`.
 - [ ] `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
   reports `runtime_authorization = closed`, keeps the exact target declared,
   and keeps cost share, query:insert ratio, tie burden, and materially

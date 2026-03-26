@@ -3,9 +3,10 @@
 This file defines the minimum conditions for upgrading the current
 archive-first closeout checkpoint into a submission-candidate bundle on the
 same frozen paper scope. Active control is now anchored on
-`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`,
-`P51_post_h62_paper_facing_partial_falsification_package`,
-`P52_post_h62_clean_descendant_hygiene_and_merge_prep`, and
+`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`,
+`P53_post_h63_paper_archive_claim_sync`,
+`P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`,
+`P55_post_h63_clean_descendant_promotion_prep`, and
 `F38_post_h62_r63_dormant_eligibility_profile_dossier`, while preserving
 `H58_post_r62_origin_value_boundary_closeout_packet` as the strongest
 executor-value closeout and `H43_post_r44_useful_case_refreeze` as the
@@ -32,23 +33,25 @@ preserved paper-grade endpoint.
    and `R63` remains dormant and non-runtime only.
 5. Release-facing summaries remain downstream.
    `release_summary_draft.md`, `README.md`, and `STATUS.md` may summarize the
-   locked bundle, but they may not outrun it, blur active `H63` control with
+   locked bundle, but they may not outrun it, blur active `H64` control with
    preserved `H58/H43`, or imply a new runtime lane.
 6. Standing audits remain green.
    `P1`, `P5` public-surface sync, `P5` callout alignment, the `H2`
    bundle-lock audit, and `release_preflight_checklist_audit` must all report
    zero blocked release-facing items on the current repo state.
 7. Repo hygiene stays publication-safe.
-   `P52` and `release_worktree_hygiene_snapshot` must keep clean-descendant-only
-   merge posture explicit, dirty root `main` quarantined, and large raw-row
-   artifacts out of git.
+   `P54`, `P55`, and `release_worktree_hygiene_snapshot` must keep
+   clean-descendant-only merge posture explicit, dirty root `main`
+   quarantined, promotion-prep separate from merge execution, and large
+   raw-row artifacts out of git.
 
 ## Required evidence anchors
 
 - `results/P1_paper_readiness/summary.json`
-- `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`
-- `results/P51_post_h62_paper_facing_partial_falsification_package/summary.json`
-- `results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json`
+- `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
+- `results/P53_post_h63_paper_archive_claim_sync/summary.json`
+- `results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json`
+- `results/P55_post_h63_clean_descendant_promotion_prep/summary.json`
 - `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
 - `results/H43_post_r44_useful_case_refreeze/summary.json`

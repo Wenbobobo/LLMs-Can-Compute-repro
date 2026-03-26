@@ -5,17 +5,17 @@ facing control surfaces.
 
 ## Current Start Points
 
-- `../plans/2026-03-26-post-h62-archive-first-closeout-design.md`
-  current design for the archive-first closeout wave
-- `../plans/2026-03-26-post-h63-next-planmode-handoff.md`
-  current shortest handoff from the post-`H63` closeout stack
-- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`
+- `../plans/2026-03-26-post-h63-archive-first-closeout-design.md`
+  current design for the archive-first freeze wave
+- `../plans/2026-03-26-post-h64-next-planmode-handoff.md`
+  current shortest handoff from the post-`H64` freeze stack
+- `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`
   current active docs-only packet
-- `../milestones/P50_post_h62_archive_first_control_sync/`
-  current control sync wave
-- `../milestones/P51_post_h62_paper_facing_partial_falsification_package/`
-  current paper-facing package wave
-- `../milestones/P52_post_h62_clean_descendant_hygiene_and_merge_prep/`
+- `../milestones/P53_post_h63_paper_archive_claim_sync/`
+  current paper/archive claim-sync wave
+- `../milestones/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/`
   current repo-hygiene sidecar
+- `../milestones/P55_post_h63_clean_descendant_promotion_prep/`
+  current promotion-prep wave
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
   current dormant future dossier

@@ -213,27 +213,30 @@ Lock note: narrow positive mechanism result survives; broad headline reproductio
 
 ## Current bounded mainline state
 
-- `H63` is now the current active docs-only packet; it preserves `H62` as the
-  prior active packet, preserves `P50/P51/P52/F38` as the current closeout
+- `H64` is now the current active docs-only packet; it preserves `H63` as the
+  prior active packet, preserves `P53/P54/P55/F38` as the current closeout
   sidecars/dossier, selects
-  `archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`,
+  `archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant`,
   keeps the default downstream lane at `archive_or_hygiene_stop`, and leaves
   runtime closed.
-- `P52` is the current repo-hygiene sidecar; it records
+- `P55` is the current promotion-prep wave; it keeps promotion-prep explicit,
+  keeps merge execution false, and locks the next handoff to the active
+  `H64` stack.
+- `P54` is the current repo-hygiene sidecar; it records
   `clean_descendant_only_never_dirty_root_main`, keeps dirty root `main`
-  quarantined, keeps raw-row ignore rules active, and does not execute a
-  merge.
-- `P51` is the current paper-facing partial-falsification package; it keeps
-  the narrow positive mechanism result explicit, keeps the broad headline
-  negative explicit, makes archive-first partial falsification the outward
-  shorthand, and keeps `F38` dormant.
-- `P50` is the current control sync wave; it locks root and control surfaces
-  to the post-`H62` archive-first closeout posture without reopening runtime.
+  quarantined, keeps raw-row ignore rules active, keeps oversize tracked
+  artifacts at zero, and does not execute a merge.
+- `P53` is the current paper/archive claim-sync wave; it keeps the narrow
+  positive mechanism result explicit, keeps the broad headline negative
+  explicit, preserves `H58/H43`, makes archive-first partial falsification the
+  outward shorthand, and keeps `F38` dormant.
 - `F38` is the current dormant future dossier; it names the exact lifted
   useful target, keeps retrieval-head cost share, query:insert ratio, tie
   burden, and material cost-structure delta unresolved, and therefore keeps
   `R63` ineligible and non-runtime only.
-- `H62` is the preserved prior active packet; it records
+- `H63` is the preserved prior active packet; it records
+  `archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`.
+- `H62` is the preserved earlier active packet; it records
   `hygiene_first_scope_decision_keeps_archive_default_and_limits_any_reopen_to_r63_profile_gate`.
 - `H61` is the preserved prior active-before-that docs-only packet; it
   preserves `H60` and `H59` as earlier decision packets, preserves `H58` as

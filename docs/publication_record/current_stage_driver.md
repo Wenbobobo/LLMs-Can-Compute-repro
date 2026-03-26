@@ -4,23 +4,23 @@
 
 The current active stage is:
 
-- `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
+- `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
 
 The preserved prior active packet is:
 
-- `H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet`
+- `H63_post_p50_p51_p52_f38_archive_first_closeout_packet`
 
-The current control sync wave is:
+The current paper/archive claim-sync wave is:
 
-- `P50_post_h62_archive_first_control_sync`
-
-The current paper-facing package wave is:
-
-- `P51_post_h62_paper_facing_partial_falsification_package`
+- `P53_post_h63_paper_archive_claim_sync`
 
 The current repo hygiene sidecar is:
 
-- `P52_post_h62_clean_descendant_hygiene_and_merge_prep`
+- `P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`
+
+The current promotion-prep wave is:
+
+- `P55_post_h63_clean_descendant_promotion_prep`
 
 The current dormant future dossier is:
 
@@ -32,15 +32,15 @@ The default downstream lane is:
 
 ## Current Machine-State Meaning
 
-- `P50` locks root and control surfaces to the post-`H62` archive-first
-  closeout state.
-- `P51` locks paper/review/archive wording to archive-first partial
-  falsification.
-- `P52` keeps clean-descendant-only hygiene and merge-prep explicit while dirty
-  root `main` remains quarantined.
+- `P53` locks paper/review/archive/submission wording to the `H64`
+  archive-first freeze state.
+- `P54` keeps clean-descendant-only hygiene, artifact-slimming, and merge-prep
+  explicit while dirty root `main` remains quarantined.
+- `P55` keeps clean-descendant promotion-prep and the next handoff explicit
+  while merge execution remains absent.
 - merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - `F38` records the only surviving future family as a dormant no-go dossier and
   leaves the key cost-profile fields unresolved.
-- `H63` is now the current active docs-only packet and selects
-  `archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`.
-- archive-first closeout is now the active route.
+- `H64` is now the current active docs-only packet and selects
+  `archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant`.
+- archive-first freeze is now the active route.

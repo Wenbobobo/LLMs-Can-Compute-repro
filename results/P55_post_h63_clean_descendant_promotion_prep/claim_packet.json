@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "supports": [
+      "P55 locks promotion-prep to the H64 stack without claiming merge execution.",
+      "P55 makes the next handoff and startup prompt start from H64 rather than preserved H63.",
+      "P55 preserves descendant-only merge posture and keeps R63 planning-only."
+    ],
+    "does_not_support": [
+      "merge execution",
+      "dirty-root integration",
+      "runtime reopening"
+    ],
+    "distilled_result": {
+      "active_stage_at_promotion_time": "h63_post_p50_p51_p52_f38_archive_first_closeout_packet",
+      "current_promotion_prep_wave": "p55_post_h63_clean_descendant_promotion_prep",
+      "preserved_prior_promotion_prep_wave": "p48_post_h61_clean_descendant_promotion_prep",
+      "current_planning_branch": "wip/h64-post-h63-archive-first-freeze",
+      "current_planning_branch_upstream": "",
+      "publication_handoff_present": true,
+      "merge_execution_state": false,
+      "selected_outcome": "clean_descendant_promotion_prep_refreshed_for_h64_archive_first_freeze",
+      "next_required_lane": "h64_docs_only_freeze_packet"
+    }
+  }
+}
