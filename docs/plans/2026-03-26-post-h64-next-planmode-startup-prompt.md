@@ -17,6 +17,9 @@ Current locked facts:
 - The default downstream lane is `archive_or_hygiene_stop`.
 - The only conditional later gate is
   `r63_post_h62_coprocessor_eligibility_profile_gate`.
+- The current clean descendant branch is
+  `wip/h64-post-h63-archive-first-freeze`, published at
+  `origin/wip/h64-post-h63-archive-first-freeze`.
 - Runtime remains closed.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.

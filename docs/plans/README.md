@@ -10,7 +10,8 @@ driver and machine-readable `results/` summaries first.
 - `2026-03-26-post-h63-archive-first-closeout-design.md`
   current design for the archive-first freeze wave
 - `2026-03-26-post-h64-next-planmode-handoff.md`
-  current shortest handoff from the post-`H64` freeze stack
+  current shortest handoff from the post-`H64` freeze stack on the published
+  clean descendant branch
 - `2026-03-26-post-h64-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
 - `../milestones/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/`

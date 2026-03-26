@@ -44,6 +44,8 @@ read the `H64` state directly rather than the older `H63` wording.
 ## Branch And Merge Posture
 
 - current branch: `wip/h64-post-h63-archive-first-freeze`
+- current upstream:
+  `origin/wip/h64-post-h63-archive-first-freeze`
 - current worktree:
   `D:/zWenbo/AI/wt/h64-post-h63-archive-first-freeze`
 - preserved source branch:
@@ -75,7 +77,8 @@ Do not plan any of the following as the next execution wave:
 ## Current Closeout Status
 
 - current branch `wip/h64-post-h63-archive-first-freeze` is the live clean
-  descendant freeze line;
+  descendant freeze line, is published, and tracks
+  `origin/wip/h64-post-h63-archive-first-freeze`;
 - standing release/archive audits now read the `H64` stack directly;
 - no runtime execution wave is open on this branch; and
 - the next useful step is another plan-mode decision or publication/hygiene
