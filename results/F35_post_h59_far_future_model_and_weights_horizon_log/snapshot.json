@@ -1,0 +1,12 @@
+{
+  "rows": [
+    {
+      "route_family": "high_cost_model_route",
+      "status": "far_future_only"
+    },
+    {
+      "route_family": "programs_into_weights_route",
+      "status": "far_future_only"
+    }
+  ]
+}

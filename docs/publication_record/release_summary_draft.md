@@ -156,9 +156,10 @@ only and contradiction-only on current evidence.
 
 The downstream `P14` public-surface sync implied by `H23` is docs-only and is
 already complete. The current active post-`P9` stage is now
-`H59_post_h58_reproduction_gap_decision_packet`, which preserves
-`H58_post_r62_origin_value_boundary_closeout_packet` as the prior
-value-negative closeout, preserves
+`H60_post_f34_next_lane_decision_packet`, which preserves
+`H59_post_h58_reproduction_gap_decision_packet` as the prior reproduction-gap
+packet, preserves `H58_post_r62_origin_value_boundary_closeout_packet` as the
+prior value-negative closeout, preserves
 `F32_post_h58_closeout_certification_bundle` as the prior closeout
 certification bundle, preserves
 `H56_post_r60_r61_useful_kernel_decision_packet` as the prior compiled
@@ -182,11 +183,24 @@ preserved prior mechanism evidence stack, records `R58/R59` as exact narrow
 compiled-boundary evidence only, records `R60/R61` as exact-but-value-negative
 compiled useful-kernel bridge evidence, records `R62` as the final native
 value-negative discriminator, records
-`F33_post_h59_different_cost_structure_reopen_bundle` as the current
+`F34_post_h59_compiled_online_retrieval_reopen_screen` as the current
 planning bundle above preserved `F32/F31/F30/F29/F28/F20`, records
-`P42_post_h59_gptpro_reinterview_packet` as the current operational/docs
-sidecar above preserved `P41/P38/P27/P26/P25`, keeps `merge_executed = false`
+`P44_post_h59_publication_surface_and_claim_lock` as the current
+publication/docs sidecar, records
+`P43_post_h59_repo_graph_hygiene_and_merge_map` as the current repo-hygiene
+sidecar, records `F35_post_h59_far_future_model_and_weights_horizon_log` as
+the current far-future storage bundle, preserves
+`P42_post_h59_gptpro_reinterview_packet` as the prior advisory/docs sidecar
+above preserved `P41/P38/P27/P26/P25`, keeps `merge_executed = false`
 explicit, and sets the downstream lane to `planning_only_or_project_stop`.
+
+The narrow positive mechanism result survives. Broad headline reproduction did
+not land. Same-lane executor-value microvariants remain inadmissible.
+Compiled-online exact retrieval or attention-coprocessor route remains
+conditional only. Default outcome remains planning-only, archive, or explicit
+stop.
+
+Lock note: default outcome remains planning-only, archive, or explicit stop.
 
 The later paper-facing and planning-only closeout lanes align to that reading:
 `P28/P29/P30` keep publication, release, and manuscript ledgers downstream of

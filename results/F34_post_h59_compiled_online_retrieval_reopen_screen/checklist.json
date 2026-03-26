@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "f34_starts_after_h59",
+      "status": "pass",
+      "notes": "F34 begins only after H59 makes the reproduction gap explicit."
+    },
+    {
+      "item_id": "f34_preserves_f33_cost_structure_rule",
+      "status": "pass",
+      "notes": "The admissible family must still change the cost structure materially."
+    },
+    {
+      "item_id": "f34_uses_p42_as_advisory_input_only",
+      "status": "pass",
+      "notes": "The GPTPro dossier remains advisory and does not become evidence."
+    },
+    {
+      "item_id": "f34_names_only_one_conditional_reopen_family",
+      "status": "pass",
+      "notes": "Only the compiled-online exact-retrieval / attention-coprocessor family stays conditionally credible."
+    },
+    {
+      "item_id": "f34_keeps_runtime_lane_closed",
+      "status": "pass",
+      "notes": "No runtime lane opens until later explicit authorization."
+    },
+    {
+      "item_id": "f34_excludes_far_future_model_and_weights_routes",
+      "status": "pass",
+      "notes": "High-cost model and programs-into-weights routes are not current candidates."
+    }
+  ]
+}

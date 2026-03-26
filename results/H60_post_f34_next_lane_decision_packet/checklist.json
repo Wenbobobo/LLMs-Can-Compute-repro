@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "h60_preserves_h59",
+      "status": "pass",
+      "notes": "H59 stays the preserved prior reproduction-gap packet."
+    },
+    {
+      "item_id": "h60_reads_f34_conditional_family",
+      "status": "pass",
+      "notes": "H60 keeps only the F34 conditional compiled-online family on record."
+    },
+    {
+      "item_id": "h60_reads_p43_merge_posture",
+      "status": "pass",
+      "notes": "Dirty root main remains quarantined; merge posture stays descendant-only."
+    },
+    {
+      "item_id": "h60_reads_f35_far_future_storage",
+      "status": "pass",
+      "notes": "Far-future model and weights routes remain stored but inactive."
+    },
+    {
+      "item_id": "h60_keeps_runtime_lane_closed",
+      "status": "pass",
+      "notes": "The selected outcome is still planning-only, archive, or stop."
+    }
+  ]
+}

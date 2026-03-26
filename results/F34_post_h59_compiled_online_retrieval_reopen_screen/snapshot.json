@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "route_family": "same_lane_executor_value_microvariants",
+      "status": "inadmissible"
+    },
+    {
+      "route_family": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route",
+      "status": "conditional_only"
+    },
+    {
+      "route_family": "high_cost_model_route",
+      "status": "far_future_only"
+    },
+    {
+      "route_family": "programs_into_weights_route",
+      "status": "far_future_only"
+    }
+  ]
+}

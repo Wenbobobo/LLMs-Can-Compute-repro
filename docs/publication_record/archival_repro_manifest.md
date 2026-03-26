@@ -97,6 +97,11 @@ uv run python scripts/export_h57_post_h56_last_discriminator_authorization_packe
 uv run python scripts/export_p40_post_h56_successor_worktree_and_artifact_hygiene_sync.py
 uv run python scripts/export_r62_origin_native_useful_kernel_value_discriminator_gate.py
 uv run python scripts/export_h58_post_r62_origin_value_boundary_closeout_packet.py
+uv run python scripts/export_p43_post_h59_repo_graph_hygiene_and_merge_map.py
+uv run python scripts/export_f34_post_h59_compiled_online_retrieval_reopen_screen.py
+uv run python scripts/export_f35_post_h59_far_future_model_and_weights_horizon_log.py
+uv run python scripts/export_h60_post_f34_next_lane_decision_packet.py
+uv run python scripts/export_p44_post_h59_publication_surface_and_claim_lock.py
 uv run python scripts/export_h15_refreeze_and_decision_sync.py
 uv run python scripts/export_h14_core_first_reopen_guard.py
 uv run python scripts/export_h13_post_h12_governance_stage_health.py
@@ -226,6 +231,20 @@ uv run pytest -q
 - `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
   records the current active reproduction-gap packet and sets the downstream
   lane to `planning_only_or_project_stop`
+- `results/P43_post_h59_repo_graph_hygiene_and_merge_map/summary.json`
+  records the current repo-local worktree graph and descendant-only
+  merge posture
+- `results/F34_post_h59_compiled_online_retrieval_reopen_screen/summary.json`
+  records the current planning bundle and the only conditional compiled-online
+  route family
+- `results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
+  records far-future-only model and weights routes with zero execution
+  candidates
+- `results/H60_post_f34_next_lane_decision_packet/summary.json`
+  records the current active docs-only decision and selects
+  `remain_planning_only_and_prepare_stop_or_archive`
+- `results/P44_post_h59_publication_surface_and_claim_lock/summary.json`
+  records the current publication/claim lock wave
 - `results/P41_post_h58_publication_and_archive_sync/summary.json`
   records archive/release sync plus current artifact-hygiene posture
 - `results/P42_post_h59_gptpro_reinterview_packet/summary.json`
@@ -323,22 +342,24 @@ exact latest-write retrieval, bounded precision, and one restricted compiled-
 boundary lowering-plus-execution surface on the active Origin-core substrate.
 It is not evidence for arbitrary `C`, general LLM computation, or current-
 scope end-to-end systems superiority. The current active docs-only control
-packet is `H59`, above the preserved prior value-negative closeout `H58`, the
-preserved prior closeout certification bundle `F32`, the current planning
-bundle `F33`, the current low-priority dossier sidecar `P42`, the preserved
-prior publication/archive sync sidecar `P41`, the preserved prior compiled
-useful-kernel closeout `H56`, the preserved prior authorization packet `H57`,
-the preserved prior compiled-boundary closeout `H54`, the preserved prior
-mechanism closeout `H52`, and the preserved paper-grade endpoint `H43`. Under
-that stack, `H36` remains the preserved active routing/refreeze packet,
-`R42/R43/R44/R45` remain the semantic-boundary gate stack, `R55/R56` remain
-exact mechanism support only, `R57` remains negative fast-path comparator
-evidence, `R58/R59` remain exact narrow compiled-boundary support only, `R60`
-remains exact compiled useful-kernel carryover support, `R61` remains compiled
-useful-kernel value-negative evidence, `R62` remains native useful-kernel
-value-negative evidence, and `P27/P38/P41/P42` preserve the current
-operational release-control posture with `merge_executed = false`. The earlier
-`H32 -> H33 -> R39 -> H34`
+packet is `H60`, above the preserved prior reproduction-gap packet `H59`, the
+preserved prior value-negative closeout `H58`, the preserved prior closeout
+certification bundle `F32`, the current planning bundle `F34`, the current
+publication/claim-lock wave `P44`, the current repo-hygiene sidecar `P43`,
+the current far-future horizon log `F35`, the preserved prior advisory dossier
+sidecar `P42`, the preserved prior publication/archive sync sidecar `P41`, the
+preserved prior compiled useful-kernel closeout `H56`, the preserved prior
+authorization packet `H57`, the preserved prior compiled-boundary closeout
+`H54`, the preserved prior mechanism closeout `H52`, and the preserved
+paper-grade endpoint `H43`. Under that stack, `H36` remains the preserved
+active routing/refreeze packet, `R42/R43/R44/R45` remain the semantic-boundary
+gate stack, `R55/R56` remain exact mechanism support only, `R57` remains
+negative fast-path comparator evidence, `R58/R59` remain exact narrow
+compiled-boundary support only, `R60` remains exact compiled useful-kernel
+carryover support, `R61` remains compiled useful-kernel value-negative
+evidence, `R62` remains native useful-kernel value-negative evidence, and
+`P27/P38/P41/P42/P43/P44` preserve the current operational release-control
+posture with `merge_executed = false`. The earlier `H32 -> H33 -> R39 -> H34`
 compiled-boundary line remains preserved historical support rather than the
 active routing top. `H35/R40/H36` record the later bounded-scalar reopen and
 refreeze that now sit directly underneath the semantic-boundary route.

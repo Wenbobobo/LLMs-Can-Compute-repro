@@ -7,15 +7,11 @@ current freeze candidate is assembled.
 
 - [ ] `README.md` stays a restrained landing page and keeps the current narrow
   non-goals explicit.
-- [ ] `STATUS.md` reflects current `H58` as the active docs-only closeout
-  packet, preserved prior `H56/H57/H54/H52/H50` as the useful-kernel,
-  compiled-boundary, mechanism, and broader-route closeout history,
-  preserved `H43` as the paper-grade endpoint, preserved `H42/H41` prior
-  docs-only packets, preserved `H36` routing/refreeze packet, completed
-  `R42/R43/R44/R45/R58/R59/R60/R61/R62` gate stack, blocked `F27/R53/R54`,
-  current `F31/F20/F16/F17/F18/F19` bundles, completed `P40/P27` operational
-  posture, preserved `P38/P26/H40/H38/H37/P25` prior support lanes, current
-  `F15` derivative bundle, and keeps `merge_executed = false`.
+- [ ] `STATUS.md` reflects current `H60` as the active docs-only packet,
+  preserved prior `H59/H58/F32` closeout context, current `F34/P44/P43/F35`
+  planning/lock/hygiene storage, preserved prior `P42/P41` sidecars,
+  preserved `H43/H36`, blocked `F27/R53/R54`, and keeps
+  `merge_executed = false`.
 - [ ] `release_summary_draft.md` remains the source for short public-surface
   wording downstream of landed
   `H58/R62/H57/F31/H56/R61/R60/H55/F30/H54/R59/R58/H53/F29/H52/H50/H43/H42/H41/F20/P40/P27/P38/R45/R44/R43/H40/H36/R42`
@@ -49,16 +45,27 @@ current freeze candidate is assembled.
   release-control stack while preserving `H43` as the paper-grade endpoint and
   do not revert wording back to earlier `H40` or `H32/H34` control states.
 - [ ] `publication_record/README.md` and `plans/README.md` both expose the
-  completed `F31/H57/R62/H58` closeout stack above preserved
-  `H56/H54/H52/H43/H36`, the preserved `F7/F8/P21` wave, the preserved `F10/P22`
-  bridge wave, and the preserved `F12/F13/F14/P23` family-first planning wave
-  without widening wording.
+  completed `F31/H57/R62/H58/H59/F34/H60` chain above preserved
+  `H56/H54/H52/H43/H36`, together with current `P44/P43/F35` and preserved
+  `P42/P41`, without widening wording.
 - [ ] `blog_release_rules.md` still records the blocked-blog state explicitly.
 
 ## Machine-audited guards
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   figure/table items on the frozen scope.
+- [ ] `results/H60_post_f34_next_lane_decision_packet/summary.json` reports
+  `remain_planning_only_and_prepare_stop_or_archive` and
+  `current_downstream_scientific_lane = planning_only_or_project_stop`.
+- [ ] `results/F34_post_h59_compiled_online_retrieval_reopen_screen/summary.json`
+  reports
+  `compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route`.
+- [ ] `results/P44_post_h59_publication_surface_and_claim_lock/summary.json`
+  reports the current publication/claim lock wave with zero blocked files.
+- [ ] `results/P43_post_h59_repo_graph_hygiene_and_merge_map/summary.json`
+  reports `clean_descendant_only_never_dirty_root_main`.
+- [ ] `results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
+  reports zero current execution candidates.
 - [ ] `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
   reports `freeze_reproduction_gap_and_require_different_cost_structure_for_reopen`
   and `current_downstream_scientific_lane = planning_only_or_project_stop`.

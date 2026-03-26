@@ -34,6 +34,8 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `submission_candidate_criteria.md`
 - `release_candidate_checklist.md`
 - `conditional_reopen_protocol.md`
+- `../plans/2026-03-26-post-h59-archive-and-reopen-screen-design.md`
+- `../plans/2026-03-26-post-h59-far-future-horizon-log.md`
 - `../plans/2026-03-23-post-h38-h40-r42-activation-design.md`
 - `../plans/2026-03-23-post-h37-f16-h38-p26-candidate-isolation-design.md`
 - `../plans/2026-03-23-post-h38-f18-f19-long-arc-design.md`
@@ -81,6 +83,11 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `../milestones/H58_post_r62_origin_value_boundary_closeout_packet/`
 - `../milestones/F32_post_h58_closeout_certification_bundle/`
 - `../milestones/H59_post_h58_reproduction_gap_decision_packet/`
+- `../milestones/P43_post_h59_repo_graph_hygiene_and_merge_map/`
+- `../milestones/F34_post_h59_compiled_online_retrieval_reopen_screen/`
+- `../milestones/F35_post_h59_far_future_model_and_weights_horizon_log/`
+- `../milestones/H60_post_f34_next_lane_decision_packet/`
+- `../milestones/P44_post_h59_publication_surface_and_claim_lock/`
 - `../milestones/P41_post_h58_publication_and_archive_sync/`
 - `../milestones/P42_post_h59_gptpro_reinterview_packet/`
 - `../milestones/F33_post_h59_different_cost_structure_reopen_bundle/`
@@ -152,6 +159,11 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
 - `results/F32_post_h58_closeout_certification_bundle/summary.json`
 - `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
+- `results/P43_post_h59_repo_graph_hygiene_and_merge_map/summary.json`
+- `results/F34_post_h59_compiled_online_retrieval_reopen_screen/summary.json`
+- `results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
+- `results/H60_post_f34_next_lane_decision_packet/summary.json`
+- `results/P44_post_h59_publication_surface_and_claim_lock/summary.json`
 - `results/P41_post_h58_publication_and_archive_sync/summary.json`
 - `results/P42_post_h59_gptpro_reinterview_packet/summary.json`
 - `results/F33_post_h59_different_cost_structure_reopen_bundle/summary.json`
@@ -248,6 +260,11 @@ downstream of `manuscript_bundle_draft.md` and does not widen scientific scope.
 - `scripts/export_h56_post_r60_r61_useful_kernel_decision_packet.py`
 - `scripts/export_f31_post_h56_final_discriminating_value_boundary_bundle.py`
 - `scripts/export_h57_post_h56_last_discriminator_authorization_packet.py`
+- `scripts/export_p43_post_h59_repo_graph_hygiene_and_merge_map.py`
+- `scripts/export_f34_post_h59_compiled_online_retrieval_reopen_screen.py`
+- `scripts/export_f35_post_h59_far_future_model_and_weights_horizon_log.py`
+- `scripts/export_h60_post_f34_next_lane_decision_packet.py`
+- `scripts/export_p44_post_h59_publication_surface_and_claim_lock.py`
 - `scripts/export_p40_post_h56_successor_worktree_and_artifact_hygiene_sync.py`
 - `scripts/export_r62_origin_native_useful_kernel_value_discriminator_gate.py`
 - `scripts/export_h58_post_r62_origin_value_boundary_closeout_packet.py`
@@ -279,8 +296,14 @@ not part of the public submission/archive handoff.
 
 Venue-specific formatting may fork from this packet, but that formatting must
 not widen claims, activate an `E1` patch lane, or outrun the locked manuscript
-bundle. The current repo control state is `H58` as the active docs-only
-closeout packet, with `H56` preserved as the prior compiled useful-kernel
+bundle. The current repo control state is `H60` as the active docs-only
+decision packet, with `H59` preserved as the prior reproduction-gap packet,
+`H58` preserved as the prior closeout, `F32` preserved as the prior closeout
+certification bundle, `F34` as the current planning bundle, `P44` as the
+current publication/claim-lock wave, `P43` as the current repo-hygiene
+sidecar, `F35` as the current far-future horizon log, `P42` preserved as the
+prior advisory dossier sidecar, `P41` preserved as the prior publication
+archive sync sidecar, `H56` preserved as the prior compiled useful-kernel
 closeout, `H57` preserved as the prior authorization packet, `H54` preserved
 as the prior compiled-boundary closeout, `H52` preserved as the prior
 mechanism closeout, and `H43` preserved as the paper-grade useful-case
@@ -305,8 +328,8 @@ beyond-Origin milestone families without activating them, `F10` makes richer
 executor-visible value/comparator obligations explicit without authorizing
 runtime widening, `F12/F13/F14` preserve origin-facing planning storage,
 `R41` remains deferred behind a later explicit contradiction packet, no active
-downstream runtime lane exists after `H58`, `F9` remains blocked, `F11`
+downstream runtime lane exists after `H60`, `F9` remains blocked, `F11`
 remains new-substrate, `P21` and `P22` remain preserved prior planning syncs,
 `P23/P24/P25` preserve the earlier top-level control surfaces, and
-`P26/P27/P37/P38/P40` preserve the current audit-plus-explicit-merge
+`P26/P27/P37/P38/P40/P43/P44` preserve the current audit-plus-explicit-merge
 operational interpretation without merging `main`.

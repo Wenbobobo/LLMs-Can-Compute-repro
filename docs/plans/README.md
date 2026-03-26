@@ -7,27 +7,37 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
-- `2026-03-25-post-h59-reproduction-gap-and-different-cost-structure-design.md`
-  current design for the post-`H59` gap packet and guarded future planning
+- `2026-03-26-post-h59-archive-and-reopen-screen-design.md`
+  current design for the post-`H59` archive/reopen-screen wave
+- `2026-03-26-post-h59-far-future-horizon-log.md`
+  current far-future storage note
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
   self-contained GPTPro consultation dossier
-- `../milestones/H59_post_h58_reproduction_gap_decision_packet/`
+- `../milestones/H60_post_f34_next_lane_decision_packet/`
   current active docs-only packet
-- `../milestones/F33_post_h59_different_cost_structure_reopen_bundle/`
+- `../milestones/F34_post_h59_compiled_online_retrieval_reopen_screen/`
   current planning-only future bundle
-- `../milestones/P42_post_h59_gptpro_reinterview_packet/`
-  current low-priority dossier sidecar
+- `../milestones/P44_post_h59_publication_surface_and_claim_lock/`
+  current low-priority publication/docs wave
+- `../milestones/P43_post_h59_repo_graph_hygiene_and_merge_map/`
+  current repo-hygiene sidecar
+- `../milestones/F35_post_h59_far_future_model_and_weights_horizon_log/`
+  current far-future storage bundle
 
 ## Current Route
 
 - completed scientific closeout chain:
-  `F31 -> H57 -> R62 -> H58 -> F32 -> H59`
+  `F31 -> H57 -> R62 -> H58 -> F32 -> H59 -> F34 -> H60`
 - preserved publication/archive sidecar:
   `P41`
-- current low-priority dossier sidecar:
+- preserved advisory dossier sidecar:
   `P42`
-- current planning-only future bundle:
-  `F33`
+- current repo-hygiene sidecar:
+  `P43`
+- current publication/claim-lock wave:
+  `P44`
+- current far-future storage bundle:
+  `F35`
 
 Blocked by default:
 
@@ -50,18 +60,27 @@ Blocked by default:
 
 - `../publication_record/current_stage_driver.md`
 - `../../tmp/active_wave_plan.md`
-- `2026-03-25-post-h59-reproduction-gap-and-different-cost-structure-design.md`
+- `2026-03-26-post-h59-archive-and-reopen-screen-design.md`
+- `2026-03-26-post-h59-far-future-horizon-log.md`
 - `2026-03-25-post-h59-gptpro-reinterview-dossier.md`
+- `../milestones/H60_post_f34_next_lane_decision_packet/`
+- `../milestones/F34_post_h59_compiled_online_retrieval_reopen_screen/`
+- `../milestones/P43_post_h59_repo_graph_hygiene_and_merge_map/`
+- `../milestones/P44_post_h59_publication_surface_and_claim_lock/`
+- `../milestones/F35_post_h59_far_future_model_and_weights_horizon_log/`
 - `../milestones/F32_post_h58_closeout_certification_bundle/`
 - `../milestones/H59_post_h58_reproduction_gap_decision_packet/`
 - `../milestones/P41_post_h58_publication_and_archive_sync/`
 - `../milestones/P42_post_h59_gptpro_reinterview_packet/`
-- `../milestones/F33_post_h59_different_cost_structure_reopen_bundle/`
+- `../../results/H60_post_f34_next_lane_decision_packet/summary.json`
+- `../../results/F34_post_h59_compiled_online_retrieval_reopen_screen/summary.json`
+- `../../results/P43_post_h59_repo_graph_hygiene_and_merge_map/summary.json`
+- `../../results/P44_post_h59_publication_surface_and_claim_lock/summary.json`
+- `../../results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
 - `../../results/F32_post_h58_closeout_certification_bundle/summary.json`
 - `../../results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
 - `../../results/P41_post_h58_publication_and_archive_sync/summary.json`
 - `../../results/P42_post_h59_gptpro_reinterview_packet/summary.json`
-- `../../results/F33_post_h59_different_cost_structure_reopen_bundle/summary.json`
 
 Historical design files remain useful for lineage reconstruction, but they are
 not the live control surface for the current wave.

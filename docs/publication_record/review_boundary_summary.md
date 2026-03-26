@@ -4,7 +4,9 @@ Status: packet-level summary for reviewers, archivists, and future submission
 formatting passes. The authoritative evidence still lives in the manuscript,
 appendix, claim/evidence ledgers, and landed result packets. The current
 active routing/decision state is
-`H59_post_h58_reproduction_gap_decision_packet`, with
+`H60_post_f34_next_lane_decision_packet`, with
+`H59_post_h58_reproduction_gap_decision_packet` as the preserved prior
+reproduction-gap packet,
 `H58_post_r62_origin_value_boundary_closeout_packet` as the preserved prior
 value-negative closeout packet,
 `F32_post_h58_closeout_certification_bundle` as the preserved prior closeout
@@ -35,14 +37,19 @@ evidence stack relevant to the narrow endpoint, while
 `R55_origin_2d_hardmax_retrieval_equivalence_gate`,
 `R56_origin_append_only_trace_vm_semantics_gate`, and
 `R57_origin_accelerated_trace_vm_comparator_gate` remain the preserved prior
-mechanism evidence stack, `F33_post_h59_different_cost_structure_reopen_bundle`
+mechanism evidence stack, `F34_post_h59_compiled_online_retrieval_reopen_screen`
 as the current planning bundle, `F20_post_r42_dual_mode_model_mainline_bundle`
 as the preserved coequal-mainline model bundle,
 `P27_post_h41_clean_promotion_and_explicit_merge_packet` as the completed
 explicit merge packet with `merge_executed = false`,
-`P42_post_h59_gptpro_reinterview_packet` as the current low-priority
-operational/docs sidecar, `P41_post_h58_publication_and_archive_sync` as the
-preserved prior publication/archive sync sidecar,
+`P44_post_h59_publication_surface_and_claim_lock` as the current low-priority
+publication/docs sidecar, `P43_post_h59_repo_graph_hygiene_and_merge_map` as
+the current repo-hygiene sidecar,
+`F35_post_h59_far_future_model_and_weights_horizon_log` as the current
+far-future storage bundle,
+`P42_post_h59_gptpro_reinterview_packet` as the preserved prior advisory/docs
+sidecar, `P41_post_h58_publication_and_archive_sync` as the preserved prior
+publication/archive sync sidecar,
 `P38_post_h52_compiled_boundary_hygiene_sync` as the preserved prior
 compiled-boundary sidecar, `P26_post_h37_promotion_and_artifact_hygiene_audit`
 as the preserved prior operational audit lane,
@@ -56,6 +63,15 @@ semantic-boundary roadmap, while preserving `H42/H41/H40/H38/H37` as prior
 docs-only decision packets, `P25` as the prior promotion-prep lane, `H27` as
 the negative closeout of the old same-endpoint line, and `H28` as the
 Origin-core pivot packet underneath it.
+
+The narrow positive mechanism result survives. Broad headline reproduction did
+not land. Same-lane executor-value microvariants remain inadmissible.
+Compiled-online exact retrieval or attention-coprocessor route remains
+conditional only, and no runtime lane is open until later explicit
+authorization.
+
+Lock note: same-lane executor-value microvariants remain inadmissible;
+compiled-online exact retrieval or attention-coprocessor route remains conditional only.
 
 ## Supported here on the current frozen scope
 

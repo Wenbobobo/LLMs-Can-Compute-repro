@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "supports": [
+      "F35 stores farther-future model and weights routes so they are not forgotten.",
+      "F35 keeps those routes out of the current F34 reopen screen.",
+      "F35 preserves the current planning-only / archive / stop posture."
+    ],
+    "does_not_support": [
+      "current execution authorization",
+      "automatic reopening of F27, R53, or R54",
+      "treating far-future storage as evidence"
+    ],
+    "distilled_result": {
+      "active_stage_at_log_time": "h59_post_h58_reproduction_gap_decision_packet",
+      "horizon_log": "f35_post_h59_far_future_model_and_weights_horizon_log",
+      "selected_outcome": "far_future_routes_logged_without_current_authorization",
+      "high_cost_model_route_status": "high_cost_model_route_far_future_only",
+      "programs_into_weights_route_status": "programs_into_weights_route_far_future_only",
+      "current_execution_candidate_count": 0,
+      "current_downstream_scientific_lane": "planning_only_or_project_stop",
+      "later_authorization_gate": "no_runtime_lane_open_until_later_explicit_authorization",
+      "next_required_lane": "later_explicit_authorization_or_archive"
+    }
+  }
+}

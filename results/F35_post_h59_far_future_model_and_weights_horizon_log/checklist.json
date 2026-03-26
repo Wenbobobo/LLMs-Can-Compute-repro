@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "f35_starts_after_h59",
+      "status": "pass",
+      "notes": "F35 is storage only after the landed H59 closeout state."
+    },
+    {
+      "item_id": "f35_reads_f34_no_runtime_lane_rule",
+      "status": "pass",
+      "notes": "F35 inherits the same no-runtime-lane-open posture as F34/H60."
+    },
+    {
+      "item_id": "f35_high_cost_model_route_is_far_future_only",
+      "status": "pass",
+      "notes": "The model route is stored only as a farther-future idea."
+    },
+    {
+      "item_id": "f35_programs_into_weights_route_is_far_future_only",
+      "status": "pass",
+      "notes": "The programs-into-weights route is stored only as a farther-future idea."
+    }
+  ]
+}

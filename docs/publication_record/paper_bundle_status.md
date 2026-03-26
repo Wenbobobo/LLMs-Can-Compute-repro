@@ -22,6 +22,9 @@ The current paper-shaped manuscript baseline now lives in
 `docs/publication_record/manuscript_bundle_draft.md`, and the current
 systems-gate placement choice is recorded in
 `docs/publication_record/layout_decision_log.md`.
+Current lock anchors:
+`H60_post_f34_next_lane_decision_packet` and
+`F35_post_h59_far_future_model_and_weights_horizon_log`.
 That manuscript draft is now resynchronized to the landed
 `H35 -> R40 -> H36 -> H37 -> H38 -> H40 -> R42 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43`
 chain while still treating the preserved
@@ -40,11 +43,13 @@ pairings stay fixed, the Methods section stays prose-first, and the systems
 gate remains inline rather than promoted to a standalone main-text table. The
 locked submission-candidate bundle now serves as the current frozen bundle
 state under `docs/publication_record/paper_package_plan.md`, but authoritative
-control has moved beyond the prose baseline: `H59` is the current active
-docs-only reproduction-gap packet, `H58` is the preserved prior
-value-negative closeout packet, `F32` is the preserved prior closeout
-certification bundle, `F33` is the current planning bundle, `P42` is the
-current low-priority dossier sidecar, `P41` is the preserved prior
+control has moved beyond the prose baseline: `H60` is the current active
+docs-only packet, `H59` is the preserved prior reproduction-gap packet, `H58`
+is the preserved prior value-negative closeout packet, `F32` is the preserved
+prior closeout certification bundle, `F34` is the current planning bundle,
+`P44` is the current publication/claim-lock wave, `P43` is the current
+repo-hygiene sidecar, `F35` is the current far-future horizon log, `P42` is
+the preserved prior advisory dossier sidecar, `P41` is the preserved prior
 publication/archive sync sidecar, `H56` is the preserved prior compiled
 useful-kernel closeout packet, `H57` is the preserved prior authorization
 packet, `H54` is the preserved prior compiled-boundary closeout packet,

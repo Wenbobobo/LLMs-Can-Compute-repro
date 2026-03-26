@@ -4,14 +4,14 @@ State: `standing_gate`.
 
 This checklist defines the minimum outward-facing sync required for a restrained
 release-candidate state after the current submission-candidate bundle lock on
-the current `H58` active docs-only closeout packet plus preserved prior
-`H56/H57/H54/H52/H50` control context plus `H43` paper-grade useful-case
-refreeze / `H36` preserved-active /
-`R42-R43-R44-R45-R58-R59-R60-R61-R62` completed current and preserved-late
-evidence stack / preserved prior `R49-R50-R51-R52-R55-R56-R57` useful-case
-and mechanism stack / blocked `F27/R53/R54` /
+the current `H60` active docs-only packet plus preserved prior
+`H59/H58/F32` closeout context plus current `F34/P44/P43/F35`
+planning/lock/hygiene storage plus preserved prior `P42/P41`
+publication/advisory sidecars plus `H43` paper-grade useful-case refreeze /
+`H36` preserved-active / `R42-R43-R44-R45-R58-R59-R60-R61-R62` completed
+current and preserved-late evidence stack / blocked `F27/R53/R54` /
 `P40-P38-P28-P27` completed downstream sync-and-explicit-no-merge posture /
-`F31-F20-F16-F17-F18-F19-F15-F30-F29` current-control-support /
+`F31-F20-F16-F17-F18-F19-F15-F30-F29` preserved current-control-support /
 `H57-H56-H54-H53-H52-H50-H42-H41-H40-H38-H37-P26-P25`
 preserved immediate-predecessor support /
 `H35-H34-H33-H32-H31-H30` preserved question-selection-and-decision /
@@ -22,11 +22,10 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `README.md` keeps the narrow endpoint and blocked non-goals explicit.
 - [ ] `STATUS.md` matches the same frozen scope and the current next action
-  recorded by active `H58`, preserved `H56/H57/H54/H52/H50`, preserved
-  `H43/H42/H41/H40/H38/H37`, preserved `H36`, completed
-  `R42/R43/R44/R45/R58/R59/R60/R61/R62`, blocked `F27/R53/R54`, completed
-  `P40/P38/P28/P27`, current `F31/F20/F16/F17/F18/F19`, preserved `P26/P25`,
-  and current `F15`.
+  recorded by active `H60`, preserved `H59/H58/F32`, current `F34/P44/P43/F35`,
+  preserved `P42/P41`, preserved `H43/H42/H41/H40/H38/H37`, preserved `H36`,
+  completed `R42/R43/R44/R45/R58/R59/R60/R61/R62`, blocked `F27/R53/R54`,
+  completed `P40/P38/P28/P27`, preserved `P26/P25`, and current `F15`.
 - [ ] `release_summary_draft.md` remains the short public-surface source.
 - [ ] `P20`, `F5`, and `F6` remain aligned with the same no-reopen
   interpretation and do not imply a new evidence wave.
@@ -41,15 +40,9 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `submission_candidate_criteria.md` is satisfied on the current repo state.
 - [ ] `paper_bundle_status.md`, `layout_decision_log.md`, and
-  `publication_record/README.md` all describe the same `H58` current control /
-  `H43` paper-grade endpoint / `H36` preserved active /
-  `R42-R43-R44-R45-R58-R59-R60-R61-R62` completed current gate stack /
-  preserved prior `R49-R50-R51-R52-R55-R56-R57` support stack /
-  `P40-P38-P28-P27` completed operational sync-and-explicit-no-merge posture /
-  `F31-F20-F16-F17-F18-F19-F15-F30-F29` current support /
-  `H57-H56-H54-H53-H52-H50-H42-H41-H40-H38-H37-P26-P25`
-  preserved immediate-predecessor support /
-  `H35-H34-H33-H32-H31-H30-H29-H27-H28` preserved current control package.
+  `publication_record/README.md` all describe the same `H60/H59/H58/F32/F34/P44/P43/F35`
+  current control package together with preserved `H43/H36` and the landed
+  `R42-R43-R44-R45-R58-R59-R60-R61-R62` evidence stack.
 - [ ] `plans/README.md`, the saved post-`P20/F5/F6` handoff surfaces, and the
   saved post-`H34` planning-wave surface still present docs/planning
   maintenance as admissible while runtime remains inactive by default.
@@ -67,6 +60,18 @@ preserved-closeout-and-pivot stack.
 
 - [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready
   items on the frozen scope.
+- [ ] `results/H60_post_f34_next_lane_decision_packet/summary.json` reports
+  the current active docs-only packet and
+  `remain_planning_only_and_prepare_stop_or_archive`.
+- [ ] `results/F34_post_h59_compiled_online_retrieval_reopen_screen/summary.json`
+  reports the current planning bundle and the only conditional compiled-online
+  family.
+- [ ] `results/P44_post_h59_publication_surface_and_claim_lock/summary.json`
+  reports the current publication/claim-lock wave.
+- [ ] `results/P43_post_h59_repo_graph_hygiene_and_merge_map/summary.json`
+  reports the current repo-hygiene sidecar and descendant-only merge posture.
+- [ ] `results/F35_post_h59_far_future_model_and_weights_horizon_log/summary.json`
+  reports the current far-future storage bundle and zero execution candidates.
 - [ ] `results/H59_post_h58_reproduction_gap_decision_packet/summary.json`
   reports the current active docs-only reproduction-gap packet,
   `freeze_reproduction_gap_and_require_different_cost_structure_for_reopen`,

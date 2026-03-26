@@ -13,12 +13,18 @@ historical and may use then-current wording.
 
 ## Current Top Of Stack
 
-- `H59_post_h58_reproduction_gap_decision_packet/`
+- `H60_post_f34_next_lane_decision_packet/`
   current active docs-only packet
-- `F33_post_h59_different_cost_structure_reopen_bundle/`
+- `F34_post_h59_compiled_online_retrieval_reopen_screen/`
   current planning-only future bundle
+- `P44_post_h59_publication_surface_and_claim_lock/`
+  current low-priority publication/docs wave
+- `P43_post_h59_repo_graph_hygiene_and_merge_map/`
+  current repo-hygiene sidecar
+- `F35_post_h59_far_future_model_and_weights_horizon_log/`
+  current far-future storage bundle
 - `P42_post_h59_gptpro_reinterview_packet/`
-  current low-priority operational/docs wave
+  preserved advisory dossier sidecar
 - `P41_post_h58_publication_and_archive_sync/`
   preserved prior publication/archive sidecar
 - `F32_post_h58_closeout_certification_bundle/`
@@ -45,7 +51,8 @@ historical and may use then-current wording.
 
 - preserve the narrow positive mechanism/execution result;
 - preserve the landed value-negative closeout at `H58`;
-- keep `H59` as the current active interpretation packet;
+- keep `H60` as the current active interpretation packet;
+- keep `H59` as the preserved prior reproduction-gap packet;
 - keep the downstream scientific lane at `planning_only_or_project_stop`;
 - do not reopen the same executor-value lane by momentum; and
 - keep dirty root `main` out of scientific execution.
