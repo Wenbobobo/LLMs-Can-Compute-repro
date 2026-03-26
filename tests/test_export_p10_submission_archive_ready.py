@@ -50,7 +50,7 @@ def test_build_summary_reports_archive_ready_packet() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows, inputs["worktree_hygiene_summary"])
 
-    assert summary["current_paper_phase"] == "h63_archive_first_closeout_with_preserved_h58_h43_endpoints"
+    assert summary["current_paper_phase"] == "h64_archive_first_freeze_with_preserved_h63_h58_h43_endpoints"
     assert summary["packet_state"] == "archive_ready"
     assert summary["release_commit_state"] in {
         "dirty_worktree_release_commit_blocked",
@@ -59,7 +59,7 @@ def test_build_summary_reports_archive_ready_packet() -> None:
     assert summary["git_diff_check_state"] in {"clean", "warnings_only"}
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H63 remains the current active docs-only packet, P51 remains the current paper-facing package, P52 remains the current hygiene sidecar, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
+        "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H64 remains the current active docs-only packet, H63 remains the preserved prior active packet, P53 remains the current paper/archive claim-sync wave, P54 remains the current hygiene sidecar, P55 remains the current promotion-prep wave, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
     )
 
 

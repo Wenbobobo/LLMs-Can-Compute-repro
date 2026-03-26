@@ -55,8 +55,8 @@ def test_build_summary_reports_green_preflight_state() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows, inputs["worktree_hygiene_summary"])
 
-    assert summary["current_paper_phase"] == "h63_archive_first_closeout_with_preserved_h58_h43_endpoints"
-    assert summary["preflight_scope"] == "outward_release_surface_and_archive_first_closeout_bundle"
+    assert summary["current_paper_phase"] == "h64_archive_first_freeze_with_preserved_h63_h58_h43_endpoints"
+    assert summary["preflight_scope"] == "outward_release_surface_and_archive_first_freeze_bundle"
     assert summary["preflight_state"] == "docs_and_audits_green"
     assert summary["release_commit_state"] in {
         "dirty_worktree_release_commit_blocked",
@@ -65,5 +65,5 @@ def test_build_summary_reports_green_preflight_state() -> None:
     assert summary["git_diff_check_state"] in {"clean", "warnings_only"}
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H63 remains the current active docs-only packet, P50/P51/P52 remain the current archive-first closeout sidecars, F38 remains the only dormant non-runtime future dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
+        "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while H64 remains the current active docs-only packet, H63 remains the preserved prior active packet, P53/P54/P55 remain the current archive-first freeze sidecars, F38 remains the only dormant non-runtime future dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
     )

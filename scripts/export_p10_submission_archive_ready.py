@@ -11,13 +11,14 @@ from utils import detect_runtime_environment
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "results" / "P10_submission_archive_ready"
 
-CURRENT_PAPER_PHASE = "h63_archive_first_closeout_with_preserved_h58_h43_endpoints"
+CURRENT_PAPER_PHASE = "h64_archive_first_freeze_with_preserved_h63_h58_h43_endpoints"
 GREEN_ACTION = (
-    "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H63 remains "
-    "the current active docs-only packet, P51 remains the current paper-facing package, P52 remains the current "
-    "hygiene sidecar, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value "
-    "closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default "
-    "downstream lane, and no dirty-root-main merge or runtime reopen is implied"
+    "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H64 remains "
+    "the current active docs-only packet, H63 remains the preserved prior active packet, P53 remains the current "
+    "paper/archive claim-sync wave, P54 remains the current hygiene sidecar, P55 remains the current promotion-prep "
+    "wave, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 "
+    "remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and "
+    "no dirty-root-main merge or runtime reopen is implied"
 )
 
 
@@ -103,9 +104,11 @@ def load_inputs() -> dict[str, Any]:
     }
     json_files = {
         "p1_summary": "results/P1_paper_readiness/summary.json",
+        "h64_summary": "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
         "h63_summary": "results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json",
-        "p51_summary": "results/P51_post_h62_paper_facing_partial_falsification_package/summary.json",
-        "p52_summary": "results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json",
+        "p53_summary": "results/P53_post_h63_paper_archive_claim_sync/summary.json",
+        "p54_summary": "results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json",
+        "p55_summary": "results/P55_post_h63_clean_descendant_promotion_prep/summary.json",
         "f38_summary": "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
         "h58_summary": "results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json",
         "h43_summary": "results/H43_post_r44_useful_case_refreeze/summary.json",
@@ -124,15 +127,17 @@ def load_inputs() -> dict[str, Any]:
 def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
     checks = [
         (
-            "top_level_surfaces_and_driver_are_current_h63_control",
+            "top_level_surfaces_and_driver_are_current_h64_control",
             all(
                 (
                     contains_all(
                         inputs["readme_text"],
                         [
+                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
                             "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`",
-                            "`P51_post_h62_paper_facing_partial_falsification_package`",
-                            "`P52_post_h62_clean_descendant_hygiene_and_merge_prep`",
+                            "`P53_post_h63_paper_archive_claim_sync`",
+                            "`P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`",
+                            "`P55_post_h63_clean_descendant_promotion_prep`",
                             "`F38_post_h62_r63_dormant_eligibility_profile_dossier`",
                             "`archive_or_hygiene_stop`",
                         ],
@@ -140,11 +145,11 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["status_text"],
                         [
+                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
                             "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`",
-                            "`H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet`",
-                            "`P50_post_h62_archive_first_control_sync`",
-                            "`P51_post_h62_paper_facing_partial_falsification_package`",
-                            "`P52_post_h62_clean_descendant_hygiene_and_merge_prep`",
+                            "`P53_post_h63_paper_archive_claim_sync`",
+                            "`P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`",
+                            "`P55_post_h63_clean_descendant_promotion_prep`",
                             "`F38_post_h62_r63_dormant_eligibility_profile_dossier`",
                             "`archive_or_hygiene_stop`",
                         ],
@@ -153,62 +158,66 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["publication_readme_text"],
                         [
                             "current active docs-only packet",
-                            "H63_post_p50_p51_p52_f38_archive_first_closeout_packet",
-                            "P51_post_h62_paper_facing_partial_falsification_package",
-                            "P52_post_h62_clean_descendant_hygiene_and_merge_prep",
-                            "F38_post_h62_r63_dormant_eligibility_profile_dossier",
+                            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+                            "P53_post_h63_paper_archive_claim_sync",
+                            "P54_post_h63_clean_descendant_hygiene_and_artifact_slimming",
+                            "P55_post_h63_clean_descendant_promotion_prep",
                         ],
                     ),
                     contains_all(
                         inputs["current_stage_driver_text"],
                         [
+                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
                             "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`",
-                            "`P50_post_h62_archive_first_control_sync`",
-                            "`P51_post_h62_paper_facing_partial_falsification_package`",
-                            "`P52_post_h62_clean_descendant_hygiene_and_merge_prep`",
+                            "`P53_post_h63_paper_archive_claim_sync`",
+                            "`P54_post_h63_clean_descendant_hygiene_and_artifact_slimming`",
+                            "`P55_post_h63_clean_descendant_promotion_prep`",
                             "`F38_post_h62_r63_dormant_eligibility_profile_dossier`",
                             "`archive_or_hygiene_stop`",
                         ],
                     ),
                 )
             ),
-            "Top-level surfaces and the canonical driver should all expose the current H63 archive-first closeout stack.",
+            "Top-level surfaces and the canonical driver should all expose the current H64 archive-first freeze stack.",
         ),
         (
-            "submission_packet_index_and_archival_manifest_track_current_h63_bundle",
+            "submission_packet_index_and_archival_manifest_track_current_h64_bundle",
             all(
                 (
                     contains_all(
                         inputs["submission_packet_index_text"],
                         [
-                            "P51_post_h62_paper_facing_partial_falsification_package",
+                            "P53_post_h63_paper_archive_claim_sync",
+                            "P54_post_h63_clean_descendant_hygiene_and_artifact_slimming",
+                            "P55_post_h63_clean_descendant_promotion_prep",
                             "F38_post_h62_r63_dormant_eligibility_profile_dossier",
-                            "H63_post_p50_p51_p52_f38_archive_first_closeout_packet",
-                            "results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json",
+                            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+                            "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
                         ],
                     ),
                     contains_all(
                         inputs["archival_manifest_text"],
                         [
-                            "results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json",
-                            "results/P50_post_h62_archive_first_control_sync/summary.json",
-                            "results/P51_post_h62_paper_facing_partial_falsification_package/summary.json",
-                            "results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json",
+                            "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
+                            "results/P53_post_h63_paper_archive_claim_sync/summary.json",
+                            "results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json",
+                            "results/P55_post_h63_clean_descendant_promotion_prep/summary.json",
                             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
+                            "results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json",
                         ],
                     ),
                 )
             ),
-            "Submission packet index and archival manifest should point at the same H63 current-control package.",
+            "Submission packet index and archival manifest should point at the same H64 current-control package.",
         ),
         (
-            "review_boundary_and_external_release_note_stay_downstream_of_h63_closeout",
+            "review_boundary_and_external_release_note_stay_downstream_of_h64_freeze",
             all(
                 (
                     contains_all(
                         inputs["review_boundary_text"],
                         [
-                            "H63_post_p50_p51_p52_f38_archive_first_closeout_packet",
+                            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
                             "narrow positive mechanism support survives",
                             "broad headline reproduction did not land",
                             "executor-value on the strongest justified lane is closed negative",
@@ -234,15 +243,22 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             "standing_release_audits_remain_green",
             ready_count(inputs["p1_summary"]) == 10
             and preflight_state_from_summary(inputs["preflight_summary"]) == "docs_and_audits_green"
+            and inputs["h64_summary"]["summary"]["selected_outcome"]
+            == "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant"
+            and inputs["h64_summary"]["summary"]["default_downstream_lane"] == "archive_or_hygiene_stop"
+            and inputs["h64_summary"]["summary"]["runtime_authorization"] == "closed"
             and inputs["h63_summary"]["summary"]["selected_outcome"]
             == "archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant"
-            and inputs["p51_summary"]["summary"]["selected_outcome"]
-            == "paper_surfaces_locked_to_archive_first_partial_falsification_closeout"
-            and inputs["p51_summary"]["summary"]["future_route_posture"] == "dormant_non_runtime_only"
-            and inputs["p52_summary"]["summary"]["selected_outcome"]
-            == "clean_descendant_hygiene_and_merge_prep_locked_without_dirty_root_merge"
-            and int(inputs["p52_summary"]["summary"]["tracked_oversize_count"]) == 0
-            and bool(inputs["p52_summary"]["summary"]["raw_row_ignore_rules_active"]) is True
+            and inputs["p53_summary"]["summary"]["selected_outcome"]
+            == "paper_archive_review_surfaces_locked_to_h64_archive_first_freeze"
+            and inputs["p53_summary"]["summary"]["future_route_posture"] == "dormant_non_runtime_only"
+            and inputs["p54_summary"]["summary"]["selected_outcome"]
+            == "clean_descendant_hygiene_and_artifact_policy_locked_without_merge_execution"
+            and int(inputs["p54_summary"]["summary"]["tracked_oversize_count"]) == 0
+            and bool(inputs["p54_summary"]["summary"]["raw_row_ignore_rules_active"]) is True
+            and inputs["p55_summary"]["summary"]["selected_outcome"]
+            == "clean_descendant_promotion_prep_refreshed_for_h64_archive_first_freeze"
+            and bool(inputs["p55_summary"]["summary"]["merge_execution_state"]) is False
             and inputs["f38_summary"]["summary"]["selected_outcome"]
             == "r63_profile_remains_dormant_and_ineligible_without_cost_profile_fields"
             and inputs["f38_summary"]["summary"]["runtime_authorization"] == "closed"
@@ -254,7 +270,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             and blocked_count(inputs["h2_summary"]) == 0
             and inputs["v1_timing_summary"]["summary"]["runtime_classification"] == "healthy_but_slow"
             and int(inputs["v1_timing_summary"]["summary"]["timed_out_file_count"]) == 0,
-            "Archive readiness depends on current H63-side audits plus preserved H58/H43 endpoints.",
+            "Archive readiness depends on current H64-side audits plus preserved H63/H58/H43 endpoints.",
         ),
         (
             "worktree_hygiene_snapshot_classifies_commit_state",
@@ -270,12 +286,12 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
 
 def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     lookup = {
-        "README.md": ("readme_text", ["`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`", "`archive_or_hygiene_stop`"]),
-        "STATUS.md": ("status_text", ["`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`", "`F38_post_h62_r63_dormant_eligibility_profile_dossier`"]),
-        "docs/publication_record/README.md": ("publication_readme_text", ["current active docs-only packet", "H63_post_p50_p51_p52_f38_archive_first_closeout_packet"]),
-        "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P52_post_h62_clean_descendant_hygiene_and_merge_prep`", "`archive_or_hygiene_stop`"]),
-        "docs/publication_record/submission_packet_index.md": ("submission_packet_index_text", ["H63_post_p50_p51_p52_f38_archive_first_closeout_packet", "results/P51_post_h62_paper_facing_partial_falsification_package/summary.json"]),
-        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/P50_post_h62_archive_first_control_sync/summary.json", "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json"]),
+        "README.md": ("readme_text", ["`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`", "`archive_or_hygiene_stop`"]),
+        "STATUS.md": ("status_text", ["`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`", "`F38_post_h62_r63_dormant_eligibility_profile_dossier`"]),
+        "docs/publication_record/README.md": ("publication_readme_text", ["current active docs-only packet", "H64_post_p53_p54_p55_f38_archive_first_freeze_packet"]),
+        "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P55_post_h63_clean_descendant_promotion_prep`", "`archive_or_hygiene_stop`"]),
+        "docs/publication_record/submission_packet_index.md": ("submission_packet_index_text", ["H64_post_p53_p54_p55_f38_archive_first_freeze_packet", "results/P53_post_h63_paper_archive_claim_sync/summary.json"]),
+        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json", "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json"]),
         "docs/publication_record/review_boundary_summary.md": ("review_boundary_text", ["narrow positive mechanism support survives", "dormant no-go dossier at `F38`"]),
         "docs/publication_record/external_release_note_skeleton.md": ("external_release_note_text", ["archive-first partial falsification", "dormant non-runtime `F38` dossier"]),
         "results/release_worktree_hygiene_snapshot/summary.json": ("worktree_hygiene_summary_text", ['\"release_commit_state\":', '\"git_diff_check_state\":']),
@@ -319,9 +335,11 @@ def main() -> None:
                 "docs/publication_record/archival_repro_manifest.md",
                 "docs/publication_record/review_boundary_summary.md",
                 "docs/publication_record/external_release_note_skeleton.md",
+                "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
                 "results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json",
-                "results/P51_post_h62_paper_facing_partial_falsification_package/summary.json",
-                "results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json",
+                "results/P53_post_h63_paper_archive_claim_sync/summary.json",
+                "results/P54_post_h63_clean_descendant_hygiene_and_artifact_slimming/summary.json",
+                "results/P55_post_h63_clean_descendant_promotion_prep/summary.json",
                 "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
                 "results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json",
                 "results/H43_post_r44_useful_case_refreeze/summary.json",
@@ -333,8 +351,8 @@ def main() -> None:
     (OUT_DIR / "README.md").write_text(
         "# P10 Submission Archive Ready\n\n"
         "Machine-readable audit of whether the current submission/archive handoff surfaces stay aligned with the "
-        "H63 archive-first closeout posture while preserving H58 as the value-negative closeout and H43 as the "
-        "paper-grade endpoint.\n",
+        "H64 archive-first freeze posture while preserving H63 as the prior active packet, H58 as the "
+        "value-negative closeout, and H43 as the paper-grade endpoint.\n",
         encoding="utf-8",
     )
     print(OUT_DIR.as_posix())
