@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "field": "selected_candidate_route",
+      "value": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route"
+    },
+    {
+      "field": "narrow_target",
+      "value": "compiled_exact_hardmax_attention_coprocessor_on_lifted_useful_kernel_decode"
+    },
+    {
+      "field": "baseline_count",
+      "value": 3
+    },
+    {
+      "field": "eligibility_gate_count",
+      "value": 5
+    },
+    {
+      "field": "stop_rule_count",
+      "value": 7
+    }
+  ]
+}

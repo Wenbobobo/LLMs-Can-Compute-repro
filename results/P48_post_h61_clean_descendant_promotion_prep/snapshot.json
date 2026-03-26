@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "field": "source_branch",
+      "value": "wip/f36-post-h60-archive-first-consolidation"
+    },
+    {
+      "field": "current_planning_branch",
+      "value": "wip/f37-post-h61-hygiene-first-reauth-prep"
+    },
+    {
+      "field": "candidate_commit_count",
+      "value": 1
+    },
+    {
+      "field": "candidate_file_count",
+      "value": 52
+    },
+    {
+      "field": "artifact_oversize_count",
+      "value": 0
+    }
+  ]
+}

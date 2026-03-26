@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "active_stage_at_sidecar_time": "h61_post_h60_archive_first_position_packet",
+    "current_repo_hygiene_sidecar": "p48_post_h61_clean_descendant_promotion_prep",
+    "preserved_prior_repo_hygiene_sidecar": "p45_post_h60_clean_descendant_integration_readiness",
+    "source_branch": "wip/f36-post-h60-archive-first-consolidation",
+    "source_branch_upstream": "origin/wip/f36-post-h60-archive-first-consolidation",
+    "current_planning_branch": "wip/f37-post-h61-hygiene-first-reauth-prep",
+    "current_planning_branch_upstream": "",
+    "candidate_commit_count": 1,
+    "candidate_file_count": 52,
+    "artifact_oversize_count": 0,
+    "worktree_clean": false,
+    "selected_outcome": "clean_descendant_ready_for_later_explicit_promotion",
+    "next_required_lane": "later_explicit_promotion_packet_or_h62_scope_decision",
+    "pass_count": 4,
+    "blocked_count": 1
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f37-post-h61-hygiene-first-reauth-prep\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f37-post-h61-hygiene-first-reauth-prep\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

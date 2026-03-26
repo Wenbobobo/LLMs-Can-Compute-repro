@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "h62_preserves_h61",
+      "status": "pass",
+      "notes": "H61 remains the preserved prior active packet."
+    },
+    {
+      "item_id": "h62_reads_p47",
+      "status": "pass",
+      "notes": "The parked root checkout must remain quarantined."
+    },
+    {
+      "item_id": "h62_reads_p48",
+      "status": "pass",
+      "notes": "Clean-descendant promotion prep must be explicit before later integration planning."
+    },
+    {
+      "item_id": "h62_reads_p49",
+      "status": "pass",
+      "notes": "Advisory materials must be available in the clean line before later planning relies on them."
+    },
+    {
+      "item_id": "h62_reads_f37",
+      "status": "pass",
+      "notes": "Only the narrow F37 coprocessor route may survive into later scope planning."
+    },
+    {
+      "item_id": "h62_runtime_stays_closed",
+      "status": "pass",
+      "notes": "H62 does not open runtime; any later R63 gate remains non-runtime."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "supports": [
+      "F37 keeps exactly one scientific route alive and narrows it to a compiled exact hard-max coprocessor target.",
+      "F37 fixes honest baselines and hard stop rules before any later runtime-like profile gate.",
+      "F37 reframes the future question away from same-lane executor-value revival."
+    ],
+    "does_not_support": [
+      "same-lane executor-value microvariants",
+      "broad Wasm or arbitrary C reopening",
+      "runtime authorization from this bundle alone"
+    ],
+    "distilled_result": {
+      "active_stage_at_bundle_time": "h61_post_h60_archive_first_position_packet",
+      "current_reauthorization_bundle": "f37_post_h61_compiled_online_coprocessor_reauthorization_bundle",
+      "preserved_prior_reauthorization_bundle": "f36_post_h60_conditional_compiled_online_reopen_qualification_bundle",
+      "current_origin_advisory_sync_wave": "p49_post_h61_origin_advisory_sync",
+      "selected_candidate_route": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route",
+      "narrow_target": "compiled_exact_hardmax_attention_coprocessor_on_lifted_useful_kernel_decode",
+      "baseline_set": [
+        "compiled_linear_scan_exact_hardmax_baseline",
+        "current_exact_route_reference",
+        "external_simple_or_scalar_baseline"
+      ],
+      "eligibility_gate_count": 5,
+      "stop_rule_count": 7,
+      "runtime_authorization": "closed",
+      "selected_outcome": "one_compiled_online_coprocessor_route_specified_but_runtime_closed",
+      "next_required_lane": "h62_scope_decision_or_later_r63_eligibility_profile"
+    }
+  }
+}

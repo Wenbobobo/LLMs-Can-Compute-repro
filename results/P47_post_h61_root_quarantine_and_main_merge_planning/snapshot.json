@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "field": "root_parking_branch",
+      "value": "wip/root-main-parking-2026-03-24"
+    },
+    {
+      "field": "root_dirty_entry_count",
+      "value": 120
+    },
+    {
+      "field": "root_untracked_entry_count",
+      "value": 78
+    },
+    {
+      "field": "merge_base_with_f36",
+      "value": "56ff1066c96dbc00b1fc73e60c3503b2accec389"
+    },
+    {
+      "field": "main_is_clean_integration_base",
+      "value": false
+    }
+  ]
+}

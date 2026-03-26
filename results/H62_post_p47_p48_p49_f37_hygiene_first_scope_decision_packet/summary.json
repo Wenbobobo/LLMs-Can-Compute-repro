@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "active_stage": "h62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet",
+    "preserved_prior_active_packet": "h61_post_h60_archive_first_position_packet",
+    "current_root_quarantine_planning": "p47_post_h61_root_quarantine_and_main_merge_planning",
+    "current_clean_descendant_promotion_prep": "p48_post_h61_clean_descendant_promotion_prep",
+    "current_origin_advisory_sync": "p49_post_h61_origin_advisory_sync",
+    "current_reauthorization_bundle": "f37_post_h61_compiled_online_coprocessor_reauthorization_bundle",
+    "default_downstream_lane": "archive_or_hygiene_stop",
+    "conditional_downstream_lane": "r63_post_h62_coprocessor_eligibility_profile_gate",
+    "all_prerequisites_green": true,
+    "runtime_authorization": "closed",
+    "selected_outcome": "hygiene_first_scope_decision_keeps_archive_default_and_limits_any_reopen_to_r63_profile_gate",
+    "next_required_lane": "archive_or_hygiene_stop_unless_later_explicit_r63_profile_authorization",
+    "pass_count": 6,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f37-post-h61-hygiene-first-reauth-prep\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f37-post-h61-hygiene-first-reauth-prep\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

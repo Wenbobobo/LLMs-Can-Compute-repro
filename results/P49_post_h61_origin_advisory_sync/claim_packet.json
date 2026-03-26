@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "supports": [
+      "P49 brings text-only Origin and GPTPro advisory materials into the clean line.",
+      "P49 removes the need to consult the parked root checkout for these planning inputs.",
+      "P49 keeps advisory material explicitly outside the evidence stack."
+    ],
+    "does_not_support": [
+      "turning advisory discussions into experimental evidence",
+      "syncing larger raw assets in this packet",
+      "reopening runtime by dossier drift"
+    ],
+    "distilled_result": {
+      "active_stage_at_sync_time": "h61_post_h60_archive_first_position_packet",
+      "current_origin_advisory_sync_wave": "p49_post_h61_origin_advisory_sync",
+      "preserved_prior_advisory_wave": "p42_post_h59_gptpro_reinterview_packet",
+      "synced_text_file_count": 6,
+      "advisory_sync_state": "synced",
+      "evidence_status": "advisory_only",
+      "selected_outcome": "advisory_origin_materials_available_in_clean_line",
+      "next_required_lane": "compiled_online_reauthorization_bundle_or_h62_scope_decision"
+    }
+  }
+}

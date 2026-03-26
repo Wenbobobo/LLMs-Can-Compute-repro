@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "active_stage_at_sync_time": "h61_post_h60_archive_first_position_packet",
+    "current_origin_advisory_sync_wave": "p49_post_h61_origin_advisory_sync",
+    "preserved_prior_advisory_wave": "p42_post_h59_gptpro_reinterview_packet",
+    "synced_text_file_count": 6,
+    "advisory_sync_state": "synced",
+    "evidence_status": "advisory_only",
+    "selected_outcome": "advisory_origin_materials_available_in_clean_line",
+    "next_required_lane": "compiled_online_reauthorization_bundle_or_h62_scope_decision",
+    "pass_count": 8,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f37-post-h61-hygiene-first-reauth-prep\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f37-post-h61-hygiene-first-reauth-prep\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

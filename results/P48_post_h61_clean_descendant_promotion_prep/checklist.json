@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p48_reads_p45",
+      "status": "pass",
+      "notes": "P48 preserves the descendant-only merge posture from P45."
+    },
+    {
+      "item_id": "p48_reads_p47",
+      "status": "pass",
+      "notes": "P48 treats the parked root checkout as quarantine-only rather than as a promotion base."
+    },
+    {
+      "item_id": "p48_source_branch_exists",
+      "status": "pass",
+      "notes": "The published post-H60 clean descendant should remain available as the preserved source branch."
+    },
+    {
+      "item_id": "p48_source_branch_is_published",
+      "status": "pass",
+      "notes": "The source branch should track an upstream before later promotion planning continues."
+    },
+    {
+      "item_id": "p48_current_worktree_is_clean",
+      "status": "blocked",
+      "notes": "Promotion prep should be recorded from a clean descendant worktree state."
+    }
+  ]
+}

@@ -15,6 +15,13 @@ OUT_DIR = ROOT / "results" / "P48_post_h61_clean_descendant_promotion_prep"
 P45_SUMMARY_PATH = ROOT / "results" / "P45_post_h60_clean_descendant_integration_readiness" / "summary.json"
 P47_SUMMARY_PATH = ROOT / "results" / "P47_post_h61_root_quarantine_and_main_merge_planning" / "summary.json"
 SOURCE_BRANCH = "wip/f36-post-h60-archive-first-consolidation"
+IGNORED_CLEANLINESS_PREFIXES = (
+    "results/P47_post_h61_root_quarantine_and_main_merge_planning/",
+    "results/P48_post_h61_clean_descendant_promotion_prep/",
+    "results/P49_post_h61_origin_advisory_sync/",
+    "results/F37_post_h61_compiled_online_coprocessor_reauthorization_bundle/",
+    "results/H62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet/",
+)
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
@@ -64,8 +71,17 @@ def current_branch() -> str:
     return git_output(["rev-parse", "--abbrev-ref", "HEAD"]).strip()
 
 
+def tracked_status_rows() -> list[str]:
+    return [line.strip() for line in git_output(["status", "--porcelain=v1"]).splitlines() if line.strip()]
+
+
+def is_ignored_cleanliness_row(row: str) -> bool:
+    path = row[3:].replace("\\", "/") if len(row) >= 4 else ""
+    return any(path.startswith(prefix) for prefix in IGNORED_CLEANLINESS_PREFIXES)
+
+
 def worktree_clean() -> bool:
-    return not any(line.strip() for line in git_output(["status", "--porcelain=v1"]).splitlines())
+    return not any(not is_ignored_cleanliness_row(row) for row in tracked_status_rows())
 
 
 def changed_files(base: str, target: str) -> list[str]:
@@ -120,7 +136,7 @@ def main() -> None:
         {
             "item_id": "p48_current_worktree_is_clean",
             "status": "pass" if worktree_clean() else "blocked",
-            "notes": "Promotion prep should be recorded from a clean descendant worktree state.",
+            "notes": "Promotion prep should be recorded from a clean descendant worktree state, excluding current-wave exporter outputs.",
         },
     ]
     claim_packet = {

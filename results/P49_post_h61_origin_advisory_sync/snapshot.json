@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "path": "docs/Origin/Can LLMs Be Computers- - Percepta.md",
+      "status": "pass"
+    },
+    {
+      "path": "docs/Origin/Discuss1.md",
+      "status": "pass"
+    },
+    {
+      "path": "docs/Origin/Discuss2.md",
+      "status": "pass"
+    },
+    {
+      "path": "docs/Origin/Discuss3Pro.md",
+      "status": "pass"
+    },
+    {
+      "path": "docs/Origin/QA1.md",
+      "status": "pass"
+    },
+    {
+      "path": "docs/Origin/QA2.md",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p47_reads_h61",
+      "status": "pass",
+      "notes": "P47 begins only after H61 locks archive-first as the live posture."
+    },
+    {
+      "item_id": "p47_current_branch_is_planning_descendant",
+      "status": "pass",
+      "notes": "The wave should run from the dedicated post-H61 hygiene-first clean descendant."
+    },
+    {
+      "item_id": "p47_root_branch_is_quarantine_parking",
+      "status": "pass",
+      "notes": "The parked root checkout should stay on a quarantine branch."
+    },
+    {
+      "item_id": "p47_root_dirty_surface_is_explicit",
+      "status": "pass",
+      "notes": "The parked root checkout should be recorded as dirty/untracked rather than silently treated as clean."
+    },
+    {
+      "item_id": "p47_merge_main_stays_planning_only",
+      "status": "pass",
+      "notes": "This packet records merge-main constraints but does not execute a merge."
+    }
+  ]
+}
