@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
     },
     "torch": {
       "installed": false,
@@ -20,24 +20,24 @@
   },
   "rows": [
     {
-      "item_id": "top_level_surfaces_and_driver_are_current_h52_control",
+      "item_id": "top_level_surfaces_and_driver_are_current_h63_control",
       "status": "pass",
-      "notes": "Top-level surfaces and the canonical driver should all expose the current H52/H50/H51 control stack while preserving H43 as the paper-grade endpoint."
+      "notes": "Top-level surfaces and the canonical driver should all expose the current H63 archive-first closeout stack."
     },
     {
-      "item_id": "submission_packet_index_and_archival_manifest_track_current_h52_h43_bundle",
+      "item_id": "submission_packet_index_and_archival_manifest_track_current_h63_bundle",
       "status": "pass",
-      "notes": "Submission packet index and archival manifest should point at the same H52 current-control plus preserved H43 paper-grade bundle."
+      "notes": "Submission packet index and archival manifest should point at the same H63 current-control package."
     },
     {
-      "item_id": "review_boundary_and_external_release_note_stay_downstream_of_h52_control",
+      "item_id": "review_boundary_and_external_release_note_stay_downstream_of_h63_closeout",
       "status": "pass",
-      "notes": "Review and release-note helpers should stay downstream of the current H52 control state and preserved H43 paper bundle."
+      "notes": "Review and external release-note helpers should stay downstream of archive-first partial falsification."
     },
     {
       "item_id": "standing_release_audits_remain_green",
       "status": "pass",
-      "notes": "Archive readiness depends on the standing P1, release-preflight, P5, H2, and V1 audits remaining green."
+      "notes": "Archive readiness depends on current H63-side audits plus preserved H58/H43 endpoints."
     },
     {
       "item_id": "worktree_hygiene_snapshot_classifies_commit_state",

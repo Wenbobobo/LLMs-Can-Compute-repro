@@ -1,32 +1,35 @@
 # External Release Note Skeleton
 
 Status: downstream-only skeleton. This file is not itself approval for a new
-release wave, blog post, or broader public narrative.
+runtime lane, a blog post, or a broader public narrative.
 
 ## One-paragraph skeleton
 
-This repository reproduces a narrow execution-substrate claim rather than a
-broad “LLMs are computers” thesis. On the current validated scope, append-only
-execution traces, exact latest-write retrieval, and a bounded restricted-Wasm /
-tiny-`C` useful-case ladder on the narrow Origin-core line remain supported,
-with the preserved first `D0` compiled boundary kept as historical support
-underneath. Precision stays bounded, the systems gate stays mixed, and broader
-compiled or general-computation claims remain blocked.
+This repository now presents archive-first partial falsification as the
+strongest honest public shorthand. Narrow mechanistic execution support
+survives on the admitted surfaces, but the strongest justified
+executor-value lane is closed negative and the broad “LLMs are computers”
+headline does not land. The preserved paper-grade endpoint remains
+`H43_post_r44_useful_case_refreeze`, the preserved value-negative closeout
+remains `H58_post_r62_origin_value_boundary_closeout_packet`, and the only
+future family left on paper is the dormant non-runtime `F38` dossier rather
+than an authorized runtime gate.
 
 ## Allowed callouts
 
-- append-only trace substrate
-- exact latest-write retrieval
-- bounded restricted-Wasm / tiny-`C` useful-case ladder
-- preserved first tiny typed-bytecode `D0` boundary
-- bounded precision with explicit failure counts
-- mixed systems result with explicit limitations
+- archive-first partial falsification
+- narrow mechanistic reproduction survives
+- strongest justified executor-value lane is closed negative
+- preserved paper-grade endpoint at `H43`
+- preserved value-negative closeout at `H58`
+- dormant non-runtime future dossier at `F38`
 
 ## Blocked callouts
 
 - general “LLMs are computers”
-- arbitrary C reproduction
-- broader compiled demos
+- arbitrary `C` reproduction
+- broad Wasm or broad compiled claims
+- any wording that treats `R63` as runtime-authorized
 - current-scope end-to-end runtime superiority
 - claims that a blog/demo is equivalent to evidence
 
@@ -36,6 +39,7 @@ compiled or general-computation claims remain blocked.
 - `STATUS.md`
 - `docs/publication_record/submission_packet_index.md`
 - `docs/publication_record/claim_ladder.md`
+- `docs/publication_record/archival_repro_manifest.md`
 
 ## Use rule
 

@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
     },
     "torch": {
       "installed": false,
@@ -20,39 +20,34 @@
   },
   "rows": [
     {
-      "item_id": "top_level_release_surface_stays_narrow_and_active_stage_explicit",
+      "item_id": "top_level_release_surface_stays_narrow_and_h63_explicit",
       "status": "pass",
-      "notes": "README and STATUS should keep the H52/H50/H51 control stack explicit while preserving H43 as the paper-grade endpoint and keeping narrow non-goals."
+      "notes": "README, STATUS, and release summary should all expose the H63 archive-first closeout posture."
     },
     {
-      "item_id": "release_preflight_checklist_tracks_current_machine_guards",
+      "item_id": "release_candidate_submission_claim_and_archive_ledgers_align_on_h63_h58_h43_split",
       "status": "pass",
-      "notes": "The human release checklist should point at the current H52 control stack while preserving the H43 paper-grade bundle."
+      "notes": "Release, submission, claim, and archive ledgers should expose the same H63 plus preserved H58/H43 split."
     },
     {
-      "item_id": "release_summary_and_blog_rules_stay_downstream",
+      "item_id": "paper_bundle_ledgers_stay_downstream_of_archive_first_partial_falsification",
       "status": "pass",
-      "notes": "Release summary and blog rules must remain downstream of the current H52 control state and the preserved H43 paper bundle."
+      "notes": "Paper bundle ledgers should keep H43 explicit while H63 controls outward archive-first framing."
     },
     {
-      "item_id": "manuscript_and_bundle_ledgers_stay_synchronized",
+      "item_id": "blog_rules_keep_restrained_release_surface",
       "status": "pass",
-      "notes": "The manuscript, bundle-status, freeze-candidate, main-text, and appendix ledgers should agree on H43 as paper-grade while allowing H52 as the current control state."
-    },
-    {
-      "item_id": "release_candidate_submission_claim_and_archive_ledgers_track_current_h52_h43_stack",
-      "status": "pass",
-      "notes": "Release-candidate, submission, claim, and archival ledgers should expose the same H52 current-control / H43 paper-grade split without reviving earlier control states."
+      "notes": "Blocked-blog rules should remain explicit and downstream."
     },
     {
       "item_id": "release_worktree_hygiene_snapshot_classifies_commit_state",
       "status": "pass",
-      "notes": "The worktree hygiene snapshot should classify current release-commit readiness and rule out diff-check content issues."
+      "notes": "The worktree hygiene snapshot should classify current release-commit readiness."
     },
     {
-      "item_id": "standing_audits_remain_green",
+      "item_id": "standing_h63_audits_remain_green_or_honestly_dormant",
       "status": "pass",
-      "notes": "The current release-preflight surface depends on the H52 closeout, preserved H43 paper endpoint, and the standing P37/P28/P5/H2/V1 audits."
+      "notes": "Standing release-preflight state depends on H63/P50/P51/P52/F38 plus preserved H58/H43."
     }
   ]
 }

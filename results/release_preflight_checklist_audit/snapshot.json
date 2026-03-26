@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,77 +22,55 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
-        "`H50_post_r51_r52_scope_decision_packet`",
-        "`R57_origin_accelerated_trace_vm_comparator_gate`",
-        "`H43_post_r44_useful_case_refreeze`"
+        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
+        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`",
+        "`archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
-        "`H50_post_r51_r52_scope_decision_packet`.",
-        "`H51_post_h50_origin_mechanism_reentry_packet`.",
-        "`P37_post_h50_narrow_executor_closeout_sync`.",
-        "- Dirty root `main` remains quarantined and `merge_executed = false` remains"
+        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
+        "`F38_post_h62_r63_dormant_eligibility_profile_dossier`."
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
-        "baselines on that suite (`R57`). `H43` remains the paper-grade endpoint for",
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`, which preserves",
-        "and `P37_post_h50_narrow_executor_closeout_sync` as the current operational"
+        "archive-first closeout is now the default repo meaning.",
+        "R63 remains dormant."
       ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- [ ] `release_candidate_checklist.md`, `submission_candidate_criteria.md`,",
-        "`claim_ladder.md`, and `archival_repro_manifest.md` all expose the same",
-        "- [ ] `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`",
-        "- [ ] `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`",
-        "- [ ] `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`",
-        "- [ ] `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`",
-        "- [ ] `results/H50_post_r51_r52_scope_decision_packet/summary.json` reports",
-        "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` still reports"
+        "- [ ] `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`",
+        "- [ ] `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
-      "matched_lines": [
-        "the current `H52` active docs-only mechanism closeout packet plus preserved",
-        "- [ ] `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`",
-        "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the",
-        "- [ ] `results/P28_post_h43_publication_surface_sync/summary.json` reports the"
-      ]
+      "matched_lines": []
     },
     {
       "path": "docs/publication_record/submission_candidate_criteria.md",
       "matched_lines": [
-        "frozen scope, currently anchored on the active `H43` docs-only useful-case",
-        "- `results/H43_post_r44_useful_case_refreeze/summary.json`",
-        "- `results/P28_post_h43_publication_surface_sync/summary.json`"
+        "`P52_post_h62_clean_descendant_hygiene_and_merge_prep`, and",
+        "executor-value closeout and `H43_post_r44_useful_case_refreeze` as the"
       ]
     },
     {
       "path": "docs/publication_record/claim_ladder.md",
       "matched_lines": [
-        "| D1g Coequal dual-mode model lane | supported coequally without replacing exact evidence | `results/R45_origin_dual_mode_model_mainline_gate/summary.json`, `results/R45_origin_dual_mode_model_mainline_gate/family_rows.json` | model evidence stays explicitly downstream of exact `R43`; it is not a substitute for exact execution evidence |",
-        "| D2 Restricted Wasm / tiny-`C` useful-case ladder | validated narrowly on the fixed three-kernel useful-case surface | `results/R44_origin_restricted_wasm_useful_case_execution_gate/summary.json`, `results/R44_origin_restricted_wasm_useful_case_execution_gate/kernel_suite_report.json` | this is bounded useful-case support only, not arbitrary `C` or broad compiled-program coverage |",
-        "| H43 Post-R44 useful-case refreeze | validated as the preserved paper-grade useful-case refreeze packet | `results/H43_post_r44_useful_case_refreeze/summary.json`, `results/H43_post_r44_useful_case_refreeze/claim_packet.json` | records claim `D` as `supported_here_narrowly`, keeps exact `R43` decisive and `R45` coequal non-substitutive, and restores `no_active_downstream_runtime_lane` |"
+        "| H58 Value-negative closeout | validated as the preserved closeout of the strongest executor-value lane | `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`, `results/H58_post_r62_origin_value_boundary_closeout_packet/claim_packet.json` | preserves narrow mechanism support while closing bounded executor value negative |",
+        "| H63 archive-first closeout packet | validated as the current active docs-only packet | `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`, `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/claim_packet.json` | makes archive-first closeout the active repo route, preserves `H62` as the prior active packet, keeps `archive_or_hygiene_stop` as default, and keeps `R63` dormant and non-runtime only |"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/H43_post_r44_useful_case_refreeze/summary.json` records the",
-        "- `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`",
-        "superiority. The current active docs-only control packet is `H52`, above the",
-        "`P27/P37` preserve the current operational release-control posture with"
+        "- `results/P52_post_h62_clean_descendant_hygiene_and_merge_prep/summary.json`",
+        "- `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`"
       ]
     },
     {
@@ -100,59 +78,6 @@
       "matched_lines": [
         "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\",",
         "\"git_diff_check_state\": \"clean\","
-      ]
-    },
-    {
-      "path": "results/P37_post_h50_narrow_executor_closeout_sync/summary.json",
-      "matched_lines": [
-        "\"large_artifact_default_policy\": \"raw_step_trace_and_per_read_rows_out_of_git\",",
-        "\"tracked_large_artifact_count\": 0,"
-      ]
-    },
-    {
-      "path": "docs/publication_record/manuscript_bundle_draft.md",
-      "matched_lines": [
-        "## 1. Abstract",
-        "validate. Companion appendix material stays clearly downstream of that",
-        "## 10. Reproducibility Appendix"
-      ]
-    },
-    {
-      "path": "docs/publication_record/paper_bundle_status.md",
-      "matched_lines": [
-        "gate, and `R57` is the completed negative fast-path comparator gate. `F20` is",
-        "packet with `merge_executed = false`, `P37` is the aligned low-priority"
-      ]
-    },
-    {
-      "path": "docs/publication_record/freeze_candidate_criteria.md",
-      "matched_lines": [
-        "active `H43` docs-only useful-case refreeze packet, the preserved active",
-        "`H36` routing/refreeze packet, and the completed `R42/R43/R44/R45`",
-        "broader `H43` paper-grade endpoint. No arbitrary-C, general-LLM, or broader"
-      ]
-    },
-    {
-      "path": "docs/publication_record/main_text_order.md",
-      "matched_lines": [
-        "## Fixed order",
-        "Section: `Compiled Boundary`"
-      ]
-    },
-    {
-      "path": "docs/publication_record/appendix_companion_scope.md",
-      "matched_lines": [
-        "## Required companions",
-        "## Allowed optional companions",
-        "## Out of scope on the current freeze candidate"
-      ]
-    },
-    {
-      "path": "docs/publication_record/blog_release_rules.md",
-      "matched_lines": [
-        "## Blog stays blocked unless all of the following are true",
-        "2. `release_candidate_checklist.md` is fully green.",
-        "no arbitrary C, no broad \u201cLLMs are computers\u201d framing, no current-scope"
       ]
     }
   ]

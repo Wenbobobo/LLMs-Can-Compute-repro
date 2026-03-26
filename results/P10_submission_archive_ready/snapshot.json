@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,74 +22,60 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
-        "`H50_post_r51_r52_scope_decision_packet`",
-        "`R57_origin_accelerated_trace_vm_comparator_gate`",
-        "`H43_post_r44_useful_case_refreeze`"
+        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
+        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`",
+        "`archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
-        "`H50_post_r51_r52_scope_decision_packet`.",
-        "`H51_post_h50_origin_mechanism_reentry_packet`.",
-        "- Dirty root `main` remains quarantined and `merge_executed = false` remains"
+        "`H63_post_p50_p51_p52_f38_archive_first_closeout_packet`.",
+        "`F38_post_h62_r63_dormant_eligibility_profile_dossier`."
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
-        "- `H43_post_r44_useful_case_refreeze`",
-        "- `R57_origin_accelerated_trace_vm_comparator_gate`",
-        "- `no_active_downstream_runtime_lane`"
+        "- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`",
+        "current active docs-only packet"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
-        "- `H50_post_r51_r52_scope_decision_packet`",
-        "- `H51_post_h50_origin_mechanism_reentry_packet`",
-        "- `P37_post_h50_narrow_executor_closeout_sync`",
-        "- `no_active_downstream_runtime_lane`",
-        "- `no_active_downstream_runtime_lane` is restored as the current downstream",
-        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the current",
-        "- `H50_post_r51_r52_scope_decision_packet` is the preserved prior broader-route"
+        "- `P52_post_h62_clean_descendant_hygiene_and_merge_prep`",
+        "- `archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "bundle. The current repo control state is `H52` as the active docs-only",
-        "`P26/P27/P37` preserve the current audit-plus-explicit-merge operational"
+        "- `../milestones/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/`",
+        "- `results/H63_post_p50_p51_p52_f38_archive_first_closeout_packet/summary.json`",
+        "- `results/P51_post_h62_paper_facing_partial_falsification_package/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/H43_post_r44_useful_case_refreeze/summary.json` records the",
-        "- `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`",
-        "superiority. The current active docs-only control packet is `H52`, above the"
+        "- `results/P50_post_h62_archive_first_control_sync/summary.json`",
+        "- `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/review_boundary_summary.md",
       "matched_lines": [
-        "`R57_origin_accelerated_trace_vm_comparator_gate` as the completed current",
-        "`supported_here_narrowly`, and restores `no_active_downstream_runtime_lane`;",
-        "value and restores `no_active_downstream_runtime_lane`;"
+        "- narrow positive mechanism support survives;",
+        "- the only remaining future route is a dormant no-go dossier at `F38`."
       ]
     },
     {
       "path": "docs/publication_record/external_release_note_skeleton.md",
       "matched_lines": [
-        "This repository reproduces a narrow execution-substrate claim rather than a",
-        "- general \u201cLLMs are computers\u201d",
-        "- arbitrary C reproduction",
-        "- `docs/publication_record/submission_packet_index.md`"
+        "This repository now presents archive-first partial falsification as the",
+        "future family left on paper is the dormant non-runtime `F38` dossier rather",
+        "- archive-first partial falsification"
       ]
     },
     {
@@ -97,13 +83,6 @@
       "matched_lines": [
         "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\",",
         "\"git_diff_check_state\": \"clean\","
-      ]
-    },
-    {
-      "path": "results/P37_post_h50_narrow_executor_closeout_sync/summary.json",
-      "matched_lines": [
-        "\"large_artifact_default_policy\": \"raw_step_trace_and_per_read_rows_out_of_git\",",
-        "\"tracked_large_artifact_count\": 0,"
       ]
     }
   ]
