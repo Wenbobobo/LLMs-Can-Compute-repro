@@ -2,31 +2,21 @@
   "experiment": "r3_d0_exact_execution_claim_impact",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "/app/.venv/bin/python",
+      "version": "3.12.13 (main, Mar  6 2026, 16:37:31) [GCC 13.3.0]",
       "implementation": "CPython",
-      "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "platform": "Linux-6.8.0-x86_64-with-glibc2.39",
+      "virtual_env": "/app/.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
-    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+    "uv_version": "uv 0.10.8"
   },
   "summary": {
     "status": "bounded_exactness_survives_harder_d0_suite",

@@ -17,7 +17,6 @@ from .hardmax import (
     HardmaxResult,
     NumberLike,
     ValueLike,
-    _as_fraction,
     _coerce_key,
     _coerce_value,
     _normalize_number,
