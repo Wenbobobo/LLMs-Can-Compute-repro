@@ -24,17 +24,17 @@ cleanup priorities for the clean-descendant-only repo state.
   for the current closeout posture
 - older worktrees under `D:/zWenbo/AI/LLMCompute-worktrees/` are preserved
   historical branches; no new active work should start there during this phase
+- `wip/r33-next` at `D:/zWenbo/AI/LLMCompute-worktrees/r33-next` remains the
+  only preserved tip of the old `p16 -> r32 -> r33` ancestor chain
 
-## Cleanup Candidates
+## Cleanup Status
 
 - the local-only ancestor chain
   `wip/p16-h25-clean -> wip/r32-next -> wip/r33-next` is no longer part of the
   active route
-- if one preserved tip is still desired, keep only `wip/r33-next` as the sole
-  reminder of that chain
-- `wip/p16-h25-clean` and `wip/r32-next` are the first explicit delete-local
-  candidates after this registry has been reviewed and mirrored in a later
-  cleanup pass
+- local pruning has already removed `wip/p16-h25-clean` and `wip/r32-next`
+  plus their corresponding worktrees
+- `wip/r33-next` is the only retained historical tip from that chain
 
 ## Merge Rules
 
