@@ -10,10 +10,10 @@ def _load_module():
     module_path = (
         Path(__file__).resolve().parents[1]
         / "scripts"
-        / "export_p60_post_p59_published_clean_descendant_promotion_prep.py"
+        / "export_p63_post_p62_published_successor_promotion_prep.py"
     )
     spec = importlib.util.spec_from_file_location(
-        "export_p60_post_p59_published_clean_descendant_promotion_prep",
+        "export_p63_post_p62_published_successor_promotion_prep",
         module_path,
     )
     assert spec is not None
@@ -24,7 +24,7 @@ def _load_module():
     return module
 
 
-def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Path) -> None:
+def test_export_p63_writes_published_successor_prep_summary(tmp_path: Path) -> None:
     module = _load_module()
 
     def _write_json(name: str, payload: dict[str, object]) -> Path:
@@ -45,21 +45,9 @@ def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Pat
             }
         },
     )
-    temp_p56_summary = _write_json(
-        "p56_summary.json",
-        {"summary": {"selected_outcome": "clean_descendant_merge_candidate_staged_without_merge_execution"}},
-    )
-    temp_p57_summary = _write_json(
-        "p57_summary.json",
-        {"summary": {"selected_outcome": "paper_submission_package_surfaces_synced_to_h64_followthrough_stack"}},
-    )
-    temp_p58_summary = _write_json(
-        "p58_summary.json",
-        {"summary": {"selected_outcome": "archive_release_closeout_surfaces_synced_to_h64_followthrough_stack"}},
-    )
-    temp_p59_summary = _write_json(
-        "p59_summary.json",
-        {"summary": {"selected_outcome": "control_and_handoff_surfaces_synced_to_h64_followthrough_stack"}},
+    temp_p62_summary = _write_json(
+        "p62_summary.json",
+        {"summary": {"selected_outcome": "published_clean_descendant_merge_prep_control_synced_to_h64_stack"}},
     )
     temp_driver = _write_text(
         "current_stage_driver.md",
@@ -68,6 +56,7 @@ def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Pat
             "P64_post_p63_release_hygiene_rebaseline",
             "P65_post_p64_merge_prep_control_sync",
             "wip/p63-post-p62-tight-core-hygiene",
+            "`archive_or_hygiene_stop`",
         ],
     )
     temp_active_wave = _write_text(
@@ -107,15 +96,13 @@ def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Pat
             "wip/p56-main-scratch",
             "clean_descendant_only_never_dirty_root_main",
             "preserved prior published clean descendant",
+            "successor",
         ],
     )
 
     original_out_dir = module.OUT_DIR
     original_h64 = module.H64_SUMMARY_PATH
-    original_p56 = module.P56_SUMMARY_PATH
-    original_p57 = module.P57_SUMMARY_PATH
-    original_p58 = module.P58_SUMMARY_PATH
-    original_p59 = module.P59_SUMMARY_PATH
+    original_p62 = module.P62_SUMMARY_PATH
     original_driver = module.CURRENT_STAGE_DRIVER_PATH
     original_active_wave = module.ACTIVE_WAVE_PLAN_PATH
     original_publication_readme = module.PUBLICATION_README_PATH
@@ -123,13 +110,10 @@ def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Pat
     original_branch_registry = module.BRANCH_REGISTRY_PATH
     original_current_branch = module.current_branch
     original_tracked_upstream = module.tracked_upstream
-    temp_out_dir = tmp_path / "P60_post_p59_published_clean_descendant_promotion_prep"
+    temp_out_dir = tmp_path / "P63_post_p62_published_successor_promotion_prep"
     module.OUT_DIR = temp_out_dir
     module.H64_SUMMARY_PATH = temp_h64_summary
-    module.P56_SUMMARY_PATH = temp_p56_summary
-    module.P57_SUMMARY_PATH = temp_p57_summary
-    module.P58_SUMMARY_PATH = temp_p58_summary
-    module.P59_SUMMARY_PATH = temp_p59_summary
+    module.P62_SUMMARY_PATH = temp_p62_summary
     module.CURRENT_STAGE_DRIVER_PATH = temp_driver
     module.ACTIVE_WAVE_PLAN_PATH = temp_active_wave
     module.PUBLICATION_README_PATH = temp_publication_readme
@@ -138,7 +122,7 @@ def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Pat
     module.current_branch = lambda: "wip/p64-post-p63-successor-stack"
     module.tracked_upstream = (
         lambda branch: "origin/wip/p63-post-p62-tight-core-hygiene"
-        if branch == "wip/p64-post-p63-successor-stack"
+        if branch in {"wip/p64-post-p63-successor-stack", "wip/p63-post-p62-tight-core-hygiene"}
         else "origin/wip/p60-post-p59-published-clean-descendant-prep"
     )
     try:
@@ -146,10 +130,7 @@ def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Pat
     finally:
         module.OUT_DIR = original_out_dir
         module.H64_SUMMARY_PATH = original_h64
-        module.P56_SUMMARY_PATH = original_p56
-        module.P57_SUMMARY_PATH = original_p57
-        module.P58_SUMMARY_PATH = original_p58
-        module.P59_SUMMARY_PATH = original_p59
+        module.P62_SUMMARY_PATH = original_p62
         module.CURRENT_STAGE_DRIVER_PATH = original_driver
         module.ACTIVE_WAVE_PLAN_PATH = original_active_wave
         module.PUBLICATION_README_PATH = original_publication_readme
@@ -159,7 +140,8 @@ def test_export_p60_writes_published_clean_descendant_prep_summary(tmp_path: Pat
         module.tracked_upstream = original_tracked_upstream
 
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
-    assert payload["summary"]["selected_outcome"] == "published_clean_descendant_promotion_prep_locked_after_p59"
+    assert payload["summary"]["selected_outcome"] == "published_successor_promotion_prep_locked_after_p62"
     assert payload["summary"]["merge_execution_state"] is False
     assert payload["summary"]["current_published_clean_descendant_branch"] == "wip/p63-post-p62-tight-core-hygiene"
+    assert payload["summary"]["preserved_prior_published_clean_descendant_branch"] == "wip/p60-post-p59-published-clean-descendant-prep"
     assert payload["summary"]["blocked_count"] == 0

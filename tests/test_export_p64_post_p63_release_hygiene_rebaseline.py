@@ -10,10 +10,10 @@ def _load_module():
     module_path = (
         Path(__file__).resolve().parents[1]
         / "scripts"
-        / "export_p61_post_p60_release_hygiene_rebaseline.py"
+        / "export_p64_post_p63_release_hygiene_rebaseline.py"
     )
     spec = importlib.util.spec_from_file_location(
-        "export_p61_post_p60_release_hygiene_rebaseline",
+        "export_p64_post_p63_release_hygiene_rebaseline",
         module_path,
     )
     assert spec is not None
@@ -24,7 +24,7 @@ def _load_module():
     return module
 
 
-def test_export_p61_writes_preserved_prior_release_hygiene_summary(tmp_path: Path) -> None:
+def test_export_p64_writes_successor_release_hygiene_summary(tmp_path: Path) -> None:
     module = _load_module()
 
     def _write_json(name: str, payload: dict[str, object]) -> Path:
@@ -37,9 +37,9 @@ def test_export_p61_writes_preserved_prior_release_hygiene_summary(tmp_path: Pat
         path.write_text("\n".join(lines) + "\n", encoding="utf-8")
         return path
 
-    temp_p60_summary = _write_json(
-        "p60_summary.json",
-        {"summary": {"selected_outcome": "published_clean_descendant_promotion_prep_locked_after_p59"}},
+    temp_p63_summary = _write_json(
+        "p63_summary.json",
+        {"summary": {"selected_outcome": "published_successor_promotion_prep_locked_after_p62"}},
     )
     temp_worktree_hygiene_summary = _write_json(
         "release_worktree_hygiene_snapshot.json",
@@ -79,16 +79,16 @@ def test_export_p61_writes_preserved_prior_release_hygiene_summary(tmp_path: Pat
     )
 
     original_out_dir = module.OUT_DIR
-    original_p60 = module.P60_SUMMARY_PATH
+    original_p63 = module.P63_SUMMARY_PATH
     original_worktree_hygiene = module.WORKTREE_HYGIENE_SUMMARY_PATH
     original_preflight = module.PREFLIGHT_SUMMARY_PATH
     original_p10 = module.P10_SUMMARY_PATH
     original_current_stage_driver = module.CURRENT_STAGE_DRIVER_PATH
     original_branch_registry = module.BRANCH_REGISTRY_PATH
     original_current_branch = module.current_branch
-    temp_out_dir = tmp_path / "P61_post_p60_release_hygiene_rebaseline"
+    temp_out_dir = tmp_path / "P64_post_p63_release_hygiene_rebaseline"
     module.OUT_DIR = temp_out_dir
-    module.P60_SUMMARY_PATH = temp_p60_summary
+    module.P63_SUMMARY_PATH = temp_p63_summary
     module.WORKTREE_HYGIENE_SUMMARY_PATH = temp_worktree_hygiene_summary
     module.PREFLIGHT_SUMMARY_PATH = temp_preflight_summary
     module.P10_SUMMARY_PATH = temp_p10_summary
@@ -99,7 +99,7 @@ def test_export_p61_writes_preserved_prior_release_hygiene_summary(tmp_path: Pat
         module.main()
     finally:
         module.OUT_DIR = original_out_dir
-        module.P60_SUMMARY_PATH = original_p60
+        module.P63_SUMMARY_PATH = original_p63
         module.WORKTREE_HYGIENE_SUMMARY_PATH = original_worktree_hygiene
         module.PREFLIGHT_SUMMARY_PATH = original_preflight
         module.P10_SUMMARY_PATH = original_p10
@@ -108,7 +108,7 @@ def test_export_p61_writes_preserved_prior_release_hygiene_summary(tmp_path: Pat
         module.current_branch = original_current_branch
 
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
-    assert payload["summary"]["selected_outcome"] == "published_clean_descendant_release_hygiene_rebaselined"
+    assert payload["summary"]["selected_outcome"] == "published_successor_release_hygiene_rebaselined"
     assert payload["summary"]["current_published_clean_descendant_branch"] == "wip/p63-post-p62-tight-core-hygiene"
     assert payload["summary"]["current_execution_branch"] == "wip/p64-post-p63-successor-stack"
     assert payload["summary"]["worktree_hygiene_branch"] == "wip/p63-post-p62-tight-core-hygiene"

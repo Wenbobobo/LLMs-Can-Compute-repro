@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import os
 from pathlib import Path
 import sys
 
@@ -78,6 +79,19 @@ def test_build_summary_allows_release_commit_for_clean_tree() -> None:
     assert summary["release_commit_state"] == "clean_worktree_ready_if_other_gates_green"
     assert summary["working_tree_clean"] is True
     assert summary["git_diff_check_state"] == "clean"
+
+
+def test_resolved_git_root_prefers_env_override(tmp_path: Path) -> None:
+    module = _load_export_module()
+    original = os.environ.get("LLMCOMPUTE_HYGIENE_GIT_ROOT")
+    os.environ["LLMCOMPUTE_HYGIENE_GIT_ROOT"] = str(tmp_path)
+    try:
+        assert module.resolved_git_root() == tmp_path.resolve()
+    finally:
+        if original is None:
+            os.environ.pop("LLMCOMPUTE_HYGIENE_GIT_ROOT", None)
+        else:
+            os.environ["LLMCOMPUTE_HYGIENE_GIT_ROOT"] = original
 
 
 def test_live_repo_state_matches_changed_path_count_rule() -> None:
