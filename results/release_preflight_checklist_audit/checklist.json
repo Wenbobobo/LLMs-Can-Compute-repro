@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,17 +22,17 @@
     {
       "item_id": "top_level_release_surface_stays_narrow_and_h64_followthrough_explicit",
       "status": "pass",
-      "notes": "README, STATUS, and release summary should expose H64 plus the published clean-descendant stack."
+      "notes": "README, STATUS, and release summary should expose H64 plus the published successor stack."
     },
     {
       "item_id": "publication_and_plan_indexes_expose_current_h64_route",
       "status": "pass",
-      "notes": "Publication, control, and planning indexes should expose the current published clean-descendant chain."
+      "notes": "Publication, control, and planning indexes should expose the current published successor chain."
     },
     {
       "item_id": "release_candidate_submission_claim_and_archive_ledgers_align",
       "status": "pass",
-      "notes": "Release, submission, claim, and archive ledgers should expose the same current published clean-descendant stack."
+      "notes": "Release, submission, claim, and archive ledgers should expose the same current published successor stack."
     },
     {
       "item_id": "paper_bundle_ledgers_stay_downstream_of_archive_first_partial_falsification",
@@ -52,7 +52,7 @@
     {
       "item_id": "standing_h64_followthrough_audits_remain_green",
       "status": "pass",
-      "notes": "Standing release-preflight state depends on H64, the landed P56/P57/P58/P59 foundation, and P60 publication prep."
+      "notes": "Standing release-preflight state depends on H64, the landed P56/P57/P58/P59 foundation, and P63 successor promotion prep."
     }
   ]
 }

@@ -4,17 +4,23 @@
 
 - The current active docs-only packet is
   `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
-- The current published clean-descendant promotion-prep wave is
-  `P60_post_p59_published_clean_descendant_promotion_prep`.
+- The current published successor promotion-prep wave is
+  `P63_post_p62_published_successor_promotion_prep`.
 - The current release hygiene rebaseline wave is
-  `P61_post_p60_release_hygiene_rebaseline`.
+  `P64_post_p63_release_hygiene_rebaseline`.
 - The current merge-prep control sync wave is
-  `P62_post_p61_merge_prep_control_sync`.
+  `P65_post_p64_merge_prep_control_sync`.
 - The current published clean descendant branch is
-  `wip/p60-post-p59-published-clean-descendant-prep`.
+  `wip/p63-post-p62-tight-core-hygiene`.
 - The current docs router is `docs/README.md`.
 - The current branch/worktree registry is
   `docs/branch_worktree_registry.md`.
+- The preserved prior published clean-descendant stack is
+  `P60_post_p59_published_clean_descendant_promotion_prep`,
+  `P61_post_p60_release_hygiene_rebaseline`, and
+  `P62_post_p61_merge_prep_control_sync`.
+- The preserved prior published clean descendant branch is
+  `wip/p60-post-p59-published-clean-descendant-prep`.
 - The preserved local integration branch is `wip/p56-main-scratch`.
 - The landed `H64` follow-through foundation is
   `P56_post_h64_clean_merge_candidate_packet`,
@@ -37,9 +43,9 @@
 - No additional same-lane executor-value probe is admissible on this branch.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Dirty root `main` remains quarantine-only.
-- The current local hygiene execution successor is
-  `wip/p63-post-p62-tight-core-hygiene`.
+- The current local execution successor is
+  `wip/p64-post-p63-successor-stack`.
 - The default next action is archive / hygiene / merge-prep /
   publication-sync work plus paper-facing partial falsification on
-  `wip/p60-post-p59-published-clean-descendant-prep`, with successor local work
-  tracked in `docs/branch_worktree_registry.md`.
+  `wip/p63-post-p62-tight-core-hygiene`, with the preserved prior stack and
+  successor execution lane tracked in `docs/branch_worktree_registry.md`.

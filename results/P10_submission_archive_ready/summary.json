@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv"
     },
     "torch": {
       "installed": false,
@@ -28,7 +28,7 @@
     "docs/publication_record/review_boundary_summary.md",
     "docs/publication_record/external_release_note_skeleton.md",
     "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-    "results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json",
+    "results/P63_post_p62_published_successor_promotion_prep/summary.json",
     "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
     "results/P57_post_h64_paper_submission_package_sync/summary.json",
     "results/P58_post_h64_archive_release_closeout_sync/summary.json",
@@ -39,7 +39,7 @@
     "results/release_preflight_checklist_audit/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h64_published_clean_descendant_stack_with_preserved_h63_h58_h43_endpoints",
+    "current_paper_phase": "h64_published_successor_stack_with_preserved_p60_p62_h63_h58_h43_endpoints",
     "packet_state": "archive_ready",
     "release_commit_state": "clean_worktree_ready_if_other_gates_green",
     "git_diff_check_state": "clean",
@@ -47,6 +47,6 @@
     "pass_count": 5,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H64 remains the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through foundation, P60 is the published clean-descendant promotion-prep wave, P61/P62 remain the current release-hygiene and control-sync doc posture on wip/p60-post-p59-published-clean-descendant-prep, H63 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
+    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H64 remains the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through foundation, P63 is the published successor promotion-prep wave, P64/P65 remain the current release-hygiene and control-sync doc posture on wip/p63-post-p62-tight-core-hygiene, P60/P61/P62 remain the preserved prior published clean-descendant stack, H63 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, archive_or_hygiene_stop remains the default downstream lane, and no dirty-root-main merge or runtime reopen is implied"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p64_reads_p63",
+      "status": "pass",
+      "notes": "P64 starts only after P63 lands."
+    },
+    {
+      "item_id": "p64_current_branch_matches_rebased_successor_hygiene_branch",
+      "status": "pass",
+      "notes": "The hygiene snapshot should classify the published successor branch while execution may occur on a registered successor lane."
+    },
+    {
+      "item_id": "p64_worktree_hygiene_is_clean_ready",
+      "status": "pass",
+      "notes": "The current published successor branch should be clean enough for outward sync if other gates are green."
+    },
+    {
+      "item_id": "p64_preflight_and_archive_ready_are_green",
+      "status": "pass",
+      "notes": "Rebaselined successor hygiene expects green release-preflight and archive-ready summaries on the same branch family."
+    },
+    {
+      "item_id": "p64_current_stage_driver_mentions_successor_release_hygiene_rebaseline",
+      "status": "pass",
+      "notes": "The current stage driver should expose P64 and the rebaselined clean successor posture."
+    }
+  ]
+}

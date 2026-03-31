@@ -1,9 +1,9 @@
 {
   "summary": {
     "supports": [
-      "P62 synchronizes current control and next-entrypoint surfaces to the published clean-descendant stack.",
-      "P62 keeps H64 active while leaving runtime closed and merge execution absent.",
-      "P62 makes the next decision explicitly review/merge-prep or archive-first stop, not scientific reopen."
+      "P62 remains preserved as the prior merge-prep control sync wave.",
+      "Current control and next-entrypoint surfaces are synchronized to the P63/P64/P65 successor stack.",
+      "H64 remains active while runtime stays closed and merge execution remains absent."
     ],
     "does_not_support": [
       "runtime reopen",
@@ -12,11 +12,11 @@
     ],
     "distilled_result": {
       "active_stage": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
-      "current_published_clean_descendant_wave": "p60_post_p59_published_clean_descendant_promotion_prep",
-      "current_release_hygiene_rebaseline_wave": "p61_post_p60_release_hygiene_rebaseline",
-      "current_merge_prep_control_sync_wave": "p62_post_p61_merge_prep_control_sync",
+      "current_published_clean_descendant_wave": "p63_post_p62_published_successor_promotion_prep",
+      "current_release_hygiene_rebaseline_wave": "p64_post_p63_release_hygiene_rebaseline",
+      "current_merge_prep_control_sync_wave": "p65_post_p64_merge_prep_control_sync",
       "selected_outcome": "published_clean_descendant_merge_prep_control_synced_to_h64_stack",
-      "next_required_lane": "later_published_clean_descendant_review_or_explicit_archive_stop_decision"
+      "next_required_lane": "later_published_successor_review_or_explicit_archive_stop_decision"
     }
   }
 }

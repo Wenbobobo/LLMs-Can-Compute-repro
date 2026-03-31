@@ -13,25 +13,31 @@ For live routing and preserved-history navigation, start at `docs/README.md`.
 
 ## Current Stage
 
-As of `2026-03-31`, the current active packet is
+As of `2026-04-01`, the current active packet is
 `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`.
 
 Current anchors:
 
 - active docs-only packet:
   `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
-- current published clean-descendant promotion-prep wave:
-  `P60_post_p59_published_clean_descendant_promotion_prep`
+- current published successor promotion-prep wave:
+  `P63_post_p62_published_successor_promotion_prep`
 - current release hygiene rebaseline wave:
-  `P61_post_p60_release_hygiene_rebaseline`
+  `P64_post_p63_release_hygiene_rebaseline`
 - current merge-prep control sync wave:
-  `P62_post_p61_merge_prep_control_sync`
+  `P65_post_p64_merge_prep_control_sync`
 - current published clean descendant branch:
-  `wip/p60-post-p59-published-clean-descendant-prep`
+  `wip/p63-post-p62-tight-core-hygiene`
 - current docs router:
   `docs/README.md`
 - current branch/worktree registry:
   `docs/branch_worktree_registry.md`
+- preserved prior published clean-descendant stack:
+  `P60_post_p59_published_clean_descendant_promotion_prep`,
+  `P61_post_p60_release_hygiene_rebaseline`,
+  `P62_post_p61_merge_prep_control_sync`
+- preserved prior published clean descendant branch:
+  `wip/p60-post-p59-published-clean-descendant-prep`
 - preserved local integration branch:
   `wip/p56-main-scratch`
 - landed `H64` follow-through foundation:
@@ -57,18 +63,19 @@ reproduction gap explicit, `H60` selected planning-only / archive / stop,
 `H61` made archive-first the live posture, `H62` kept archive/hygiene stop as
 the default downstream state, `H63` made archive-first closeout the active
 route, and `H64` freezes archive-first closeout into the active docs-only
-packet. `P56/P57/P58/P59` remain the landed follow-through foundation, `P60`
-publishes the dedicated clean descendant, `P61` reanchors release hygiene on
-that published branch, and `P62` refreshes control and next-entrypoint surfaces
+packet. `P56/P57/P58/P59` remain the landed follow-through foundation, `P63`
+publishes the successor clean descendant, `P64` reanchors release hygiene on
+that successor branch, and `P65` refreshes control and next-entrypoint surfaces
 without reopening runtime or routing integration through dirty root `main`.
+`P60/P61/P62` remain preserved as the prior published clean-descendant stack.
 
 ## Execution Posture
 
 There are no open runtime tasks on this branch.
 
 The default next action is archive / hygiene / merge-prep / publication-sync
-work on `wip/p60-post-p59-published-clean-descendant-prep` under the current
-`H64 + P56/P57/P58/P59 + P60/P61/P62` posture, or explicit archive-first stop.
-Current local hygiene follow-through should run only from successor clean
-descendants recorded in `docs/branch_worktree_registry.md`; dirty root `main`
-remains quarantine-only.
+work on `wip/p63-post-p62-tight-core-hygiene` under the current
+`H64 + P56/P57/P58/P59 + P63/P64/P65` posture, or explicit archive-first stop.
+Current local follow-through should run only from successor clean descendants
+recorded in `docs/branch_worktree_registry.md`; dirty root `main` remains
+quarantine-only.

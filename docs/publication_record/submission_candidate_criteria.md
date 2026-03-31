@@ -1,81 +1,15 @@
 # Submission Candidate Criteria
 
-This file defines the minimum conditions for upgrading the current
-archive-first closeout checkpoint into a submission-candidate bundle on the
-same frozen paper scope. Active control is now anchored on
-`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`,
-`P56_post_h64_clean_merge_candidate_packet`,
-`P57_post_h64_paper_submission_package_sync`,
-`P58_post_h64_archive_release_closeout_sync`,
-`P59_post_h64_control_and_handoff_sync`, and
-`P60_post_p59_published_clean_descendant_promotion_prep`,
-`P61_post_p60_release_hygiene_rebaseline`,
-`P62_post_p61_merge_prep_control_sync`, and
-`F38_post_h62_r63_dormant_eligibility_profile_dossier`, while preserving
-`H58_post_r62_origin_value_boundary_closeout_packet` as the strongest
-executor-value closeout and `H43_post_r44_useful_case_refreeze` as the
-preserved paper-grade endpoint.
+Current bundle must include:
 
-## Must-pass criteria
+- `P63_post_p62_published_successor_promotion_prep`
+- `P64_post_p63_release_hygiene_rebaseline`
+- `P65_post_p64_merge_prep_control_sync`
+- `H58_post_r62_origin_value_boundary_closeout_packet`
+- `H43_post_r44_useful_case_refreeze`
 
-1. Freeze-candidate conditions still hold.
-   `freeze_candidate_criteria.md` remains the base gate; a submission bundle
-   cannot soften the existing frozen paper scope.
-2. Manuscript bundle and supporting ledgers are locked together.
-   `manuscript_bundle_draft.md`, `caption_candidate_notes.md`,
-   `figure_table_narrative_roles.md`, and `manuscript_section_map.md` must
-   agree on the current claim-bearing artifact set and section ownership.
-3. Appendix minimum package is explicit and complete.
-   Required companions under `appendix_companion_scope.md` and
-   `appendix_boundary_map.md` must be present, and optional companions must
-   stay clearly optional.
-4. Claim, threat, and negative-result ledgers stay synchronized.
-   `claim_ladder.md`, `claim_evidence_table.md`, `negative_results.md`, and
-   `threats_to_validity.md` must describe the same archive-first closeout
-   reading: narrow mechanism support survives, the strongest justified
-   executor-value lane is closed negative, the broad headline does not land,
-   and `R63` remains dormant and non-runtime only.
-5. Release-facing summaries remain downstream.
-   `release_summary_draft.md`, `README.md`, and `STATUS.md` may summarize the
-   locked bundle, but they may not outrun it, blur active `H64/P60/P61/P62`
-   control with preserved `H58/H43`, or imply a new runtime lane.
-6. Standing audits remain green.
-   `P1`, `P5` public-surface sync, `P5` callout alignment, the `H2`
-   bundle-lock audit, and `release_preflight_checklist_audit` must all report
-   zero blocked release-facing items on the current repo state.
-7. Repo hygiene stays publication-safe.
-   `P56`, `P59`, and `release_worktree_hygiene_snapshot` must keep
-   clean-descendant-only merge posture explicit, dirty root `main`
-   quarantined, merge execution absent, and large raw-row artifacts out of
-   git.
+Key machine-readable anchors:
 
-## Required evidence anchors
-
-- `results/P1_paper_readiness/summary.json`
-- `results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json`
-- `results/P56_post_h64_clean_merge_candidate_packet/summary.json`
-- `results/P57_post_h64_paper_submission_package_sync/summary.json`
-- `results/P58_post_h64_archive_release_closeout_sync/summary.json`
-- `results/P59_post_h64_control_and_handoff_sync/summary.json`
-- `results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json`
-- `results/P61_post_p60_release_hygiene_rebaseline/summary.json`
-- `results/P62_post_p61_merge_prep_control_sync/summary.json`
-- `results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json`
-- `results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json`
-- `results/H43_post_r44_useful_case_refreeze/summary.json`
-- `results/P5_public_surface_sync/summary.json`
-- `results/P5_callout_alignment/summary.json`
-- `results/H2_bundle_lock_audit/summary.json`
-- `results/release_preflight_checklist_audit/summary.json`
-- `docs/publication_record/current_stage_driver.md`
-- `docs/publication_record/main_text_order.md`
-- `docs/publication_record/appendix_companion_scope.md`
-- `docs/publication_record/conditional_reopen_protocol.md`
-
-## Reopen only if
-
-- a manuscript sentence no longer matches the frozen claim/evidence table;
-- a required appendix companion is missing for a main-text claim;
-- an audit reports a real bundle-lock or release-surface failure; or
-- a later explicit paper-facing control packet authorizes a new downstream
-  wording change without reopening runtime.
+- `results/P63_post_p62_published_successor_promotion_prep/summary.json`
+- `results/P64_post_p63_release_hygiene_rebaseline/summary.json`
+- `results/P65_post_p64_merge_prep_control_sync/summary.json`

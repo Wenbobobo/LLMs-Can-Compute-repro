@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,51 +22,51 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`P60_post_p59_published_clean_descendant_promotion_prep`",
-        "`P62_post_p61_merge_prep_control_sync`"
+        "`P63_post_p62_published_successor_promotion_prep`",
+        "`P65_post_p64_merge_prep_control_sync`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P61_post_p60_release_hygiene_rebaseline`.",
+        "`P64_post_p63_release_hygiene_rebaseline`.",
         "- The default downstream scientific lane is `archive_or_hygiene_stop`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P62_post_p61_merge_prep_control_sync`",
+        "- `P65_post_p64_merge_prep_control_sync`",
         "- `archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "- `../milestones/P60_post_p59_published_clean_descendant_promotion_prep/`",
-        "- `results/P62_post_p61_merge_prep_control_sync/summary.json`",
-        "- `results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json`"
+        "- `../milestones/P63_post_p62_published_successor_promotion_prep/`",
+        "- `results/P65_post_p64_merge_prep_control_sync/summary.json`",
+        "- `results/P63_post_p62_published_successor_promotion_prep/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P62_post_p61_merge_prep_control_sync/summary.json`",
-        "- `results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json`"
+        "- `results/P65_post_p64_merge_prep_control_sync/summary.json`",
+        "- `results/P63_post_p62_published_successor_promotion_prep/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/review_boundary_summary.md",
       "matched_lines": [
-        "The current operational follow-through stack is `P56/P57/P58/P59`.",
-        "- the only remaining future route is a dormant no-go dossier at `F38`."
+        "`P56/P57/P58/P59`",
+        "the only remaining future route is a dormant no-go dossier at `F38`"
       ]
     },
     {
       "path": "docs/publication_record/external_release_note_skeleton.md",
       "matched_lines": [
-        "`P56/P57/P58/P59` carrying clean merge-candidate, package-sync,",
-        "future family left on paper is the dormant non-runtime `F38` dossier rather"
+        "`P56/P57/P58/P59`",
+        "dormant non-runtime `F38` dossier"
       ]
     },
     {

@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p65_reads_h64_p63_p64",
+      "status": "pass",
+      "notes": "P65 starts only after H64 plus P63/P64 remain green."
+    },
+    {
+      "item_id": "p65_control_surfaces_expose_current_published_successor_stack",
+      "status": "pass",
+      "notes": "Control surfaces must expose the live published successor merge-prep stack."
+    },
+    {
+      "item_id": "p65_handoff_and_startup_prompt_are_current",
+      "status": "pass",
+      "notes": "The next entrypoint handoff, startup, and brief docs must start from the P65 successor control state."
+    }
+  ]
+}

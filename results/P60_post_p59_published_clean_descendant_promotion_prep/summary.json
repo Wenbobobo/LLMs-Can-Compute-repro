@@ -1,28 +1,30 @@
 {
   "summary": {
     "active_stage": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
-    "current_published_clean_descendant_wave": "p60_post_p59_published_clean_descendant_promotion_prep",
-    "current_published_clean_descendant_branch": "wip/p60-post-p59-published-clean-descendant-prep",
-    "current_published_clean_descendant_upstream": "origin/wip/p60-post-p59-published-clean-descendant-prep",
-    "current_execution_branch": "wip/p63-post-p62-tight-core-hygiene",
-    "current_execution_branch_upstream": "",
+    "current_published_clean_descendant_wave": "p63_post_p62_published_successor_promotion_prep",
+    "current_published_clean_descendant_branch": "wip/p63-post-p62-tight-core-hygiene",
+    "current_published_clean_descendant_upstream": "origin/wip/p63-post-p62-tight-core-hygiene",
+    "preserved_prior_published_clean_descendant_branch": "wip/p60-post-p59-published-clean-descendant-prep",
+    "preserved_prior_published_clean_descendant_upstream": "origin/wip/p60-post-p59-published-clean-descendant-prep",
+    "current_execution_branch": "wip/p64-post-p63-successor-stack",
+    "current_execution_branch_upstream": "origin/wip/p63-post-p62-tight-core-hygiene",
     "preserved_local_integration_branch": "wip/p56-main-scratch",
     "root_main_branch": "wip/root-main-parking-2026-03-24",
     "root_main_quarantined": true,
     "merge_posture": "clean_descendant_only_never_dirty_root_main",
     "merge_execution_state": false,
     "selected_outcome": "published_clean_descendant_promotion_prep_locked_after_p59",
-    "next_required_lane": "p61_release_hygiene_rebaseline_then_p62_merge_prep_control_sync",
+    "next_required_lane": "p64_release_hygiene_rebaseline_then_p65_merge_prep_control_sync",
     "pass_count": 5,
     "blocked_count": 0
   },
   "runtime_environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p64-post-p63-successor-stack\\.venv"
     },
     "torch": {
       "installed": false,

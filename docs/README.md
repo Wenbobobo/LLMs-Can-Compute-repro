@@ -7,17 +7,17 @@ and the dormant future dossier.
 
 - `../README.md`
   restrained project landing page for the current `H64 + P56/P57/P58/P59 +
-  P60/P61/P62 + F38` posture
+  P63/P64/P65 + F38` posture
 - `publication_record/current_stage_driver.md`
   canonical live control summary for the active docs-only packet, current
-  published clean descendant, and default downstream lane
+  published successor clean descendant, and default downstream lane
 - `branch_worktree_registry.md`
   current tight-core branch/worktree map, quarantine rule, and cleanup posture
 - `plans/README.md`
   current planning entrypoints, next handoff surfaces, and preserved plan
   history
 - `milestones/README.md`
-  current stack plus preserved milestone history
+  current successor stack plus preserved milestone history
 - `publication_record/README.md`
   paper-facing, archive-facing, and release-facing control surfaces
 

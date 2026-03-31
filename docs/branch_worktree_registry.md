@@ -7,8 +7,9 @@ cleanup priorities for the clean-descendant-only repo state.
 
 | Role | Branch | Path | State | Policy |
 | --- | --- | --- | --- | --- |
-| published clean descendant | `wip/p60-post-p59-published-clean-descendant-prep` | `D:/zWenbo/AI/wt/p60-post-p59-published-clean-descendant-prep` | clean published source | keep as the stable published clean descendant |
-| current hygiene execution successor | `wip/p63-post-p62-tight-core-hygiene` | `D:/zWenbo/AI/wt/p63-post-p62-tight-core-hygiene` | mutable local execution lane | keep as the only active successor branch for this hygiene-first follow-through |
+| published successor clean descendant | `wip/p63-post-p62-tight-core-hygiene` | `D:/zWenbo/AI/wt/p63-post-p62-tight-core-hygiene` | clean published source | keep as the stable published successor clean descendant |
+| current execution successor | `wip/p64-post-p63-successor-stack` | `D:/zWenbo/AI/wt/p64-post-p63-successor-stack` | mutable local execution lane | keep as the only active successor execution branch for this follow-through |
+| preserved prior published clean descendant | `wip/p60-post-p59-published-clean-descendant-prep` | `D:/zWenbo/AI/wt/p60-post-p59-published-clean-descendant-prep` | preserved prior published source | keep preserved for lineage and archive packaging; do not treat as live control |
 | preserved local integration base | `wip/p56-main-scratch` | `D:/zWenbo/AI/wt/p56-main-scratch` | local integration ancestry only | keep preserved; do not treat as the live published branch |
 | dirty-root quarantine | `wip/root-main-parking-2026-03-24` | `D:/zWenbo/AI/LLMCompute` | operationally dirty root checkout | quarantine only; never use as a clean integration base |
 
@@ -39,9 +40,10 @@ cleanup priorities for the clean-descendant-only repo state.
 ## Merge Rules
 
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
-- `wip/p60-post-p59-published-clean-descendant-prep` remains the published
-  clean source for current live control wording
-- `wip/p63-post-p62-tight-core-hygiene` is a successor work branch, not a new
-  published milestone by itself
+- `wip/p63-post-p62-tight-core-hygiene` is the live published clean source for
+  current control wording
+- `wip/p64-post-p63-successor-stack` is a registered successor execution lane
+- `wip/p60-post-p59-published-clean-descendant-prep` is preserved as the prior
+  published clean descendant for lineage and archive packaging
 - runtime remains closed
 - `F38/R63` remains dormant and non-runtime only

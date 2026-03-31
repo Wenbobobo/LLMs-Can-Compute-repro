@@ -3,27 +3,27 @@
     {
       "item_id": "p61_reads_p60",
       "status": "pass",
-      "notes": "P61 starts only after P60 lands."
+      "notes": "P61 preserved-prior export starts only after P60 remains landed."
     },
     {
-      "item_id": "p61_current_branch_matches_rebased_hygiene_branch",
+      "item_id": "p61_current_branch_matches_current_successor_lane",
       "status": "pass",
-      "notes": "The hygiene snapshot should classify either the published clean descendant or the registered successor execution branch."
+      "notes": "The hygiene snapshot should classify the current published successor branch while the export may run from a registered execution successor."
     },
     {
       "item_id": "p61_worktree_hygiene_is_clean_ready",
       "status": "pass",
-      "notes": "The current published clean descendant should be clean enough for outward sync if other gates are green."
+      "notes": "The current published successor branch should remain clean enough for outward sync if other gates are green."
     },
     {
       "item_id": "p61_preflight_and_archive_ready_are_green",
       "status": "pass",
-      "notes": "Rebaselined hygiene expects green release-preflight and archive-ready summaries on the same branch."
+      "notes": "Successor hygiene expects green release-preflight and archive-ready summaries on the same branch family."
     },
     {
-      "item_id": "p61_current_stage_driver_mentions_release_hygiene_rebaseline",
+      "item_id": "p61_current_stage_driver_mentions_successor_release_hygiene",
       "status": "pass",
-      "notes": "The current stage driver should expose P61 and the rebaselined clean release posture."
+      "notes": "The current stage driver should expose P64 and the rebaselined clean successor posture."
     }
   ]
 }

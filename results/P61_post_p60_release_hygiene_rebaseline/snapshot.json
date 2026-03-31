@@ -5,8 +5,16 @@
       "value": "wip/p63-post-p62-tight-core-hygiene"
     },
     {
-      "field": "worktree_hygiene_branch",
+      "field": "preserved_prior_published_clean_descendant_branch",
       "value": "wip/p60-post-p59-published-clean-descendant-prep"
+    },
+    {
+      "field": "current_execution_branch",
+      "value": "wip/p64-post-p63-successor-stack"
+    },
+    {
+      "field": "worktree_hygiene_branch",
+      "value": "wip/p63-post-p62-tight-core-hygiene"
     },
     {
       "field": "release_commit_state",
