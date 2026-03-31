@@ -16,6 +16,11 @@
       "notes": "The exact lifted useful target must be named explicitly."
     },
     {
+      "item_id": "f38_comparator_declared",
+      "status": "blocked",
+      "notes": "The honest comparator remains unresolved and therefore not eligibility-ready."
+    },
+    {
       "item_id": "f38_cost_share_declared",
       "status": "blocked",
       "notes": "The retrieval-head cost share remains unresolved and therefore not eligibility-ready."

@@ -8,7 +8,7 @@
     {
       "item_id": "p61_current_branch_matches_rebased_hygiene_branch",
       "status": "pass",
-      "notes": "The hygiene snapshot should now classify the current published clean descendant branch."
+      "notes": "The hygiene snapshot should classify either the published clean descendant or the registered successor execution branch."
     },
     {
       "item_id": "p61_worktree_hygiene_is_clean_ready",

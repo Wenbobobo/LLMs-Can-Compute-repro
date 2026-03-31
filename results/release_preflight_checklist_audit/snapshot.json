@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv"
     },
     "torch": {
       "installed": false,
@@ -31,6 +31,16 @@
       "matched_lines": [
         "`P61_post_p60_release_hygiene_rebaseline`.",
         "- The default downstream scientific lane is `archive_or_hygiene_stop`."
+      ]
+    },
+    {
+      "path": "docs/README.md",
+      "matched_lines": [
+        "and the dormant future dossier.",
+        "- `publication_record/current_stage_driver.md`",
+        "- `branch_worktree_registry.md`",
+        "## Dormant Future",
+        "- treat `publication_record/current_stage_driver.md` as the canonical live"
       ]
     },
     {

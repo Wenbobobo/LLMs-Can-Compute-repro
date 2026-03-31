@@ -6,9 +6,9 @@
       "notes": "P60 starts only after the landed H64 + P56/P57/P58/P59 stack."
     },
     {
-      "item_id": "p60_current_branch_is_expected_published_descendant",
+      "item_id": "p60_current_branch_is_expected_published_descendant_or_registered_successor",
       "status": "pass",
-      "notes": "P60 should run on the dedicated published clean-descendant branch."
+      "notes": "P60 should run either on the published clean-descendant branch or on a registered successor clean descendant."
     },
     {
       "item_id": "p60_scratch_branch_remains_available",

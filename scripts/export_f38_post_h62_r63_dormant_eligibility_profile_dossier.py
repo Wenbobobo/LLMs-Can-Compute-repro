@@ -47,6 +47,7 @@ def main() -> None:
     protocol_text = CONDITIONAL_REOPEN_PROTOCOL_PATH.read_text(encoding="utf-8")
 
     exact_target_declared = f37_summary["narrow_target"] in gap_text
+    comparator_declared = "honest comparator on the same lifted useful-kernel decode route: unresolved" not in gap_text
     cost_share_declared = "retrieval-head cost share: unresolved" not in gap_text
     query_insert_declared = "expected query:insert ratio: unresolved" not in gap_text
     tie_burden_declared = "tie frequency and tie-handling burden: unresolved" not in gap_text
@@ -71,6 +72,11 @@ def main() -> None:
             "item_id": "f38_exact_target_declared",
             "status": "pass" if exact_target_declared else "blocked",
             "notes": "The exact lifted useful target must be named explicitly.",
+        },
+        {
+            "item_id": "f38_comparator_declared",
+            "status": "pass" if comparator_declared else "blocked",
+            "notes": "The honest comparator remains unresolved and therefore not eligibility-ready.",
         },
         {
             "item_id": "f38_cost_share_declared",
@@ -116,6 +122,7 @@ def main() -> None:
             "narrow_target": f37_summary["narrow_target"],
             "runtime_authorization": "closed",
             "exact_target_declared": exact_target_declared,
+            "comparator_declared": comparator_declared,
             "cost_share_declared": cost_share_declared,
             "query_insert_declared": query_insert_declared,
             "tie_burden_declared": tie_burden_declared,
@@ -135,6 +142,7 @@ def main() -> None:
     snapshot = {
         "rows": [
             {"field": "exact_target_declared", "value": exact_target_declared},
+            {"field": "comparator_declared", "value": comparator_declared},
             {"field": "cost_share_declared", "value": cost_share_declared},
             {"field": "query_insert_declared", "value": query_insert_declared},
             {"field": "tie_burden_declared", "value": tie_burden_declared},

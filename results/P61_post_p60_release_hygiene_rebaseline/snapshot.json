@@ -2,7 +2,7 @@
   "rows": [
     {
       "field": "current_published_clean_descendant_branch",
-      "value": "wip/p60-post-p59-published-clean-descendant-prep"
+      "value": "wip/p63-post-p62-tight-core-hygiene"
     },
     {
       "field": "worktree_hygiene_branch",

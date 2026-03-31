@@ -81,6 +81,7 @@ def load_inputs() -> dict[str, Any]:
     text_files = {
         "readme_text": "README.md",
         "status_text": "STATUS.md",
+        "docs_readme_text": "docs/README.md",
         "publication_readme_text": "docs/publication_record/README.md",
         "current_stage_driver_text": "docs/publication_record/current_stage_driver.md",
         "plans_readme_text": "docs/plans/README.md",
@@ -163,6 +164,17 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             "publication_and_plan_indexes_expose_current_h64_route",
             all(
                 (
+                    contains_all(
+                        inputs["docs_readme_text"],
+                        [
+                            "publication_record/current_stage_driver.md",
+                            "branch_worktree_registry.md",
+                            "F38_post_h62_r63_dormant_eligibility_profile_dossier",
+                            "live",
+                            "historical",
+                            "dormant",
+                        ],
+                    ),
                     contains_all(
                         inputs["publication_readme_text"],
                         [
@@ -350,6 +362,7 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     lookup = {
         "README.md": ("readme_text", ["`P60_post_p59_published_clean_descendant_promotion_prep`", "`P62_post_p61_merge_prep_control_sync`"]),
         "STATUS.md": ("status_text", ["`P61_post_p60_release_hygiene_rebaseline`", "`archive_or_hygiene_stop`"]),
+        "docs/README.md": ("docs_readme_text", ["current_stage_driver.md", "branch_worktree_registry.md", "Dormant Future"]),
         "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P62_post_p61_merge_prep_control_sync`", "`wip/p60-post-p59-published-clean-descendant-prep`"]),
         "docs/plans/README.md": ("plans_readme_text", ["2026-03-31-post-p62-next-planmode-handoff.md", "P62_post_p61_merge_prep_control_sync"]),
         "docs/publication_record/release_preflight_checklist.md": ("release_preflight_text", ["`P60/P61/P62` published clean-descendant stack", "dirty root `main`"]),
@@ -392,6 +405,7 @@ def main() -> None:
             "source_artifacts": [
                 "README.md",
                 "STATUS.md",
+                "docs/README.md",
                 "docs/publication_record/README.md",
                 "docs/publication_record/current_stage_driver.md",
                 "docs/plans/README.md",

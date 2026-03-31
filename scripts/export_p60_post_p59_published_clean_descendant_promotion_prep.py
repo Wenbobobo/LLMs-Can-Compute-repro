@@ -21,6 +21,7 @@ CURRENT_STAGE_DRIVER_PATH = ROOT / "docs" / "publication_record" / "current_stag
 ACTIVE_WAVE_PLAN_PATH = ROOT / "tmp" / "active_wave_plan.md"
 PUBLICATION_README_PATH = ROOT / "docs" / "publication_record" / "README.md"
 PLANS_README_PATH = ROOT / "docs" / "plans" / "README.md"
+BRANCH_REGISTRY_PATH = ROOT / "docs" / "branch_worktree_registry.md"
 EXPECTED_BRANCH = "wip/p60-post-p59-published-clean-descendant-prep"
 SCRATCH_BRANCH = "wip/p56-main-scratch"
 ROOT_MAIN_WORKTREE = "D:/zWenbo/AI/LLMCompute"
@@ -129,6 +130,7 @@ def main() -> None:
 
     current_branch_name = current_branch()
     current_upstream = tracked_upstream(current_branch_name)
+    published_upstream = tracked_upstream(EXPECTED_BRANCH) if branch_exists(EXPECTED_BRANCH) else ""
     worktrees = parse_worktree_list(git_output(["worktree", "list", "--porcelain"]))
     root_main_entry = next((row for row in worktrees if row["worktree"] == ROOT_MAIN_WORKTREE), None)
     root_main_branch = root_main_entry["branch"] if root_main_entry else ""
@@ -138,6 +140,11 @@ def main() -> None:
     active_wave_text = read_text(ACTIVE_WAVE_PLAN_PATH)
     publication_readme_text = read_text(PUBLICATION_README_PATH)
     plans_readme_text = read_text(PLANS_README_PATH)
+    branch_registry_text = read_text(BRANCH_REGISTRY_PATH)
+    current_branch_registered = current_branch_name == EXPECTED_BRANCH or contains_all(
+        branch_registry_text,
+        [EXPECTED_BRANCH, current_branch_name, "successor"],
+    )
 
     checklist_rows = [
         {
@@ -146,9 +153,9 @@ def main() -> None:
             "notes": "P60 starts only after the landed H64 + P56/P57/P58/P59 stack.",
         },
         {
-            "item_id": "p60_current_branch_is_expected_published_descendant",
-            "status": "pass" if current_branch_name == EXPECTED_BRANCH else "blocked",
-            "notes": "P60 should run on the dedicated published clean-descendant branch.",
+            "item_id": "p60_current_branch_is_expected_published_descendant_or_registered_successor",
+            "status": "pass" if current_branch_registered else "blocked",
+            "notes": "P60 should run either on the published clean-descendant branch or on a registered successor clean descendant.",
         },
         {
             "item_id": "p60_scratch_branch_remains_available",
@@ -195,6 +202,10 @@ def main() -> None:
                             "P60_post_p59_published_clean_descendant_promotion_prep",
                         ],
                     ),
+                    contains_all(
+                        branch_registry_text,
+                        [EXPECTED_BRANCH, SCRATCH_BRANCH, "clean_descendant_only_never_dirty_root_main"],
+                    ),
                 )
             )
             else "blocked",
@@ -215,8 +226,10 @@ def main() -> None:
         "distilled_result": {
             "active_stage": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
             "current_published_clean_descendant_wave": "p60_post_p59_published_clean_descendant_promotion_prep",
-            "current_published_clean_descendant_branch": current_branch_name,
-            "current_published_clean_descendant_upstream": current_upstream,
+            "current_published_clean_descendant_branch": EXPECTED_BRANCH,
+            "current_published_clean_descendant_upstream": published_upstream,
+            "current_execution_branch": current_branch_name,
+            "current_execution_branch_upstream": current_upstream,
             "preserved_local_integration_branch": SCRATCH_BRANCH,
             "root_main_branch": root_main_branch,
             "root_main_quarantined": root_main_quarantined,
@@ -236,8 +249,10 @@ def main() -> None:
     }
     snapshot = {
         "rows": [
-            {"field": "current_published_clean_descendant_branch", "value": current_branch_name},
-            {"field": "current_published_clean_descendant_upstream", "value": current_upstream},
+            {"field": "current_published_clean_descendant_branch", "value": EXPECTED_BRANCH},
+            {"field": "current_published_clean_descendant_upstream", "value": published_upstream},
+            {"field": "current_execution_branch", "value": current_branch_name},
+            {"field": "current_execution_branch_upstream", "value": current_upstream},
             {"field": "preserved_local_integration_branch", "value": SCRATCH_BRANCH},
             {"field": "root_main_branch", "value": root_main_branch},
         ]

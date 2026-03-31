@@ -15,6 +15,8 @@
       "current_published_clean_descendant_wave": "p60_post_p59_published_clean_descendant_promotion_prep",
       "current_published_clean_descendant_branch": "wip/p60-post-p59-published-clean-descendant-prep",
       "current_published_clean_descendant_upstream": "origin/wip/p60-post-p59-published-clean-descendant-prep",
+      "current_execution_branch": "wip/p63-post-p62-tight-core-hygiene",
+      "current_execution_branch_upstream": "",
       "preserved_local_integration_branch": "wip/p56-main-scratch",
       "root_main_branch": "wip/root-main-parking-2026-03-24",
       "root_main_quarantined": true,

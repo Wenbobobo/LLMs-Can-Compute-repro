@@ -111,6 +111,16 @@ def test_export_p62_writes_merge_prep_control_sync_summary(tmp_path: Path) -> No
             "Do not reopen same-lane executor-value work",
         ],
     )
+    temp_brief_prompt = _write_text(
+        "brief_prompt.md",
+        [
+            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+            "P60",
+            "P61",
+            "P62",
+            "archive_or_hygiene_stop",
+        ],
+    )
 
     original_out_dir = module.OUT_DIR
     original_h64 = module.H64_SUMMARY_PATH
@@ -122,6 +132,7 @@ def test_export_p62_writes_merge_prep_control_sync_summary(tmp_path: Path) -> No
     original_active_wave = module.ACTIVE_WAVE_PATH
     original_handoff = module.HANDOFF_PATH
     original_startup_prompt = module.STARTUP_PROMPT_PATH
+    original_brief_prompt = module.BRIEF_PROMPT_PATH
     temp_out_dir = tmp_path / "P62_post_p61_merge_prep_control_sync"
     module.OUT_DIR = temp_out_dir
     module.H64_SUMMARY_PATH = temp_h64_summary
@@ -133,6 +144,7 @@ def test_export_p62_writes_merge_prep_control_sync_summary(tmp_path: Path) -> No
     module.ACTIVE_WAVE_PATH = temp_active_wave
     module.HANDOFF_PATH = temp_handoff
     module.STARTUP_PROMPT_PATH = temp_startup_prompt
+    module.BRIEF_PROMPT_PATH = temp_brief_prompt
     try:
         module.main()
     finally:
@@ -146,6 +158,7 @@ def test_export_p62_writes_merge_prep_control_sync_summary(tmp_path: Path) -> No
         module.ACTIVE_WAVE_PATH = original_active_wave
         module.HANDOFF_PATH = original_handoff
         module.STARTUP_PROMPT_PATH = original_startup_prompt
+        module.BRIEF_PROMPT_PATH = original_brief_prompt
 
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["selected_outcome"] == "published_clean_descendant_merge_prep_control_synced_to_h64_stack"

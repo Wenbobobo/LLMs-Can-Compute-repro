@@ -17,6 +17,7 @@
       "narrow_target": "compiled_exact_hardmax_attention_coprocessor_on_lifted_useful_kernel_decode",
       "runtime_authorization": "closed",
       "exact_target_declared": true,
+      "comparator_declared": false,
       "cost_share_declared": false,
       "query_insert_declared": false,
       "tie_burden_declared": false,

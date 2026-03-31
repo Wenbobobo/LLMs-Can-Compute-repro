@@ -9,6 +9,14 @@
       "value": "origin/wip/p60-post-p59-published-clean-descendant-prep"
     },
     {
+      "field": "current_execution_branch",
+      "value": "wip/p63-post-p62-tight-core-hygiene"
+    },
+    {
+      "field": "current_execution_branch_upstream",
+      "value": ""
+    },
+    {
       "field": "preserved_local_integration_branch",
       "value": "wip/p56-main-scratch"
     },

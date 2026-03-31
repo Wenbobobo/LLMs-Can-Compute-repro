@@ -17,6 +17,7 @@ WORKTREE_HYGIENE_SUMMARY_PATH = ROOT / "results" / "release_worktree_hygiene_sna
 PREFLIGHT_SUMMARY_PATH = ROOT / "results" / "release_preflight_checklist_audit" / "summary.json"
 P10_SUMMARY_PATH = ROOT / "results" / "P10_submission_archive_ready" / "summary.json"
 CURRENT_STAGE_DRIVER_PATH = ROOT / "docs" / "publication_record" / "current_stage_driver.md"
+BRANCH_REGISTRY_PATH = ROOT / "docs" / "branch_worktree_registry.md"
 EXPECTED_BRANCH = "wip/p60-post-p59-published-clean-descendant-prep"
 
 
@@ -75,6 +76,11 @@ def main() -> None:
 
     current_branch_name = current_branch()
     current_stage_driver_text = read_text(CURRENT_STAGE_DRIVER_PATH)
+    branch_registry_text = read_text(BRANCH_REGISTRY_PATH)
+    current_branch_registered = current_branch_name == EXPECTED_BRANCH or contains_all(
+        branch_registry_text,
+        [EXPECTED_BRANCH, current_branch_name, "successor"],
+    )
 
     checklist_rows = [
         {
@@ -85,10 +91,10 @@ def main() -> None:
         {
             "item_id": "p61_current_branch_matches_rebased_hygiene_branch",
             "status": "pass"
-            if current_branch_name == EXPECTED_BRANCH
-            and worktree_hygiene_summary["branch"] == EXPECTED_BRANCH
+            if current_branch_registered
+            and worktree_hygiene_summary["branch"] in {current_branch_name, EXPECTED_BRANCH}
             else "blocked",
-            "notes": "The hygiene snapshot should now classify the current published clean descendant branch.",
+            "notes": "The hygiene snapshot should classify either the published clean descendant or the registered successor execution branch.",
         },
         {
             "item_id": "p61_worktree_hygiene_is_clean_ready",
@@ -133,7 +139,8 @@ def main() -> None:
         ],
         "distilled_result": {
             "current_release_hygiene_rebaseline_wave": "p61_post_p60_release_hygiene_rebaseline",
-            "current_published_clean_descendant_branch": current_branch_name,
+            "current_published_clean_descendant_branch": EXPECTED_BRANCH,
+            "current_execution_branch": current_branch_name,
             "worktree_hygiene_branch": worktree_hygiene_summary["branch"],
             "release_commit_state": worktree_hygiene_summary["release_commit_state"],
             "preflight_state": preflight_summary["preflight_state"],

@@ -47,6 +47,7 @@ def test_export_f38_writes_dormant_dossier_summary(tmp_path: Path) -> None:
         "\n".join(
             [
                 "compiled_exact_hardmax_attention_coprocessor_on_lifted_useful_kernel_decode",
+                "honest comparator on the same lifted useful-kernel decode route: unresolved",
                 "retrieval-head cost share: unresolved",
                 "expected query:insert ratio: unresolved",
                 "tie frequency and tie-handling burden: unresolved",
@@ -87,4 +88,5 @@ def test_export_f38_writes_dormant_dossier_summary(tmp_path: Path) -> None:
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["selected_outcome"] == "r63_profile_remains_dormant_and_ineligible_without_cost_profile_fields"
     assert payload["summary"]["exact_target_declared"] is True
+    assert payload["summary"]["comparator_declared"] is False
     assert payload["summary"]["cost_share_declared"] is False

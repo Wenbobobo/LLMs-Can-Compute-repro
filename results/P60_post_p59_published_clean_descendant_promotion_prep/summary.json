@@ -4,6 +4,8 @@
     "current_published_clean_descendant_wave": "p60_post_p59_published_clean_descendant_promotion_prep",
     "current_published_clean_descendant_branch": "wip/p60-post-p59-published-clean-descendant-prep",
     "current_published_clean_descendant_upstream": "origin/wip/p60-post-p59-published-clean-descendant-prep",
+    "current_execution_branch": "wip/p63-post-p62-tight-core-hygiene",
+    "current_execution_branch_upstream": "",
     "preserved_local_integration_branch": "wip/p56-main-scratch",
     "root_main_branch": "wip/root-main-parking-2026-03-24",
     "root_main_quarantined": true,
@@ -16,11 +18,11 @@
   },
   "runtime_environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p63-post-p62-tight-core-hygiene\\.venv"
     },
     "torch": {
       "installed": false,

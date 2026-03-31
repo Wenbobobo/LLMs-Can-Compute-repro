@@ -20,6 +20,7 @@ MILESTONES_README_PATH = ROOT / "docs" / "milestones" / "README.md"
 ACTIVE_WAVE_PATH = ROOT / "tmp" / "active_wave_plan.md"
 HANDOFF_PATH = ROOT / "docs" / "plans" / "2026-03-31-post-p62-next-planmode-handoff.md"
 STARTUP_PROMPT_PATH = ROOT / "docs" / "plans" / "2026-03-31-post-p62-next-planmode-startup-prompt.md"
+BRIEF_PROMPT_PATH = ROOT / "docs" / "plans" / "2026-03-31-post-p62-next-planmode-brief-prompt.md"
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
@@ -68,6 +69,7 @@ def main() -> None:
     active_wave_text = read_text(ACTIVE_WAVE_PATH)
     handoff_text = read_text(HANDOFF_PATH)
     startup_prompt_text = read_text(STARTUP_PROMPT_PATH)
+    brief_prompt_text = read_text(BRIEF_PROMPT_PATH)
 
     checklist_rows = [
         {
@@ -148,10 +150,20 @@ def main() -> None:
                             "Do not reopen same-lane executor-value work",
                         ],
                     ),
+                    contains_all(
+                        brief_prompt_text,
+                        [
+                            "H64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+                            "P60",
+                            "P61",
+                            "P62",
+                            "archive_or_hygiene_stop",
+                        ],
+                    ),
                 )
             )
             else "blocked",
-            "notes": "The next entrypoint docs must start from the P62 published-descendant control state.",
+            "notes": "The next entrypoint handoff, startup, and brief docs must start from the P62 published-descendant control state.",
         },
     ]
     claim_packet = {
@@ -189,6 +201,7 @@ def main() -> None:
             {"field": "current_merge_prep_control_sync_wave", "value": "p62_post_p61_merge_prep_control_sync"},
             {"field": "handoff_path", "value": "docs/plans/2026-03-31-post-p62-next-planmode-handoff.md"},
             {"field": "startup_prompt_path", "value": "docs/plans/2026-03-31-post-p62-next-planmode-startup-prompt.md"},
+            {"field": "brief_prompt_path", "value": "docs/plans/2026-03-31-post-p62-next-planmode-brief-prompt.md"},
         ]
     }
 

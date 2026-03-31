@@ -5,6 +5,10 @@
       "value": true
     },
     {
+      "field": "comparator_declared",
+      "value": false
+    },
+    {
       "field": "cost_share_declared",
       "value": false
     },
