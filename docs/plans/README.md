@@ -20,6 +20,8 @@ driver and machine-readable `results/` summaries first.
   current ready-to-paste startup prompt for the next `plan mode` round
 - `2026-03-31-post-p62-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
+- `2026-04-01-post-p63-next-planmode-brief-prompt.md`
+  concise startup prompt after the completed `p63` tight-core hygiene closeout
 - `../../README.md`
   current restrained repo landing page
 - `../README.md`
@@ -114,6 +116,7 @@ Blocked by default:
 - `2026-03-31-post-p62-next-planmode-handoff.md`
 - `2026-03-31-post-p62-next-planmode-startup-prompt.md`
 - `2026-03-31-post-p62-next-planmode-brief-prompt.md`
+- `2026-04-01-post-p63-next-planmode-brief-prompt.md`
 - `2026-03-26-post-h63-next-planmode-handoff.md`
 - `2026-03-26-post-h60-next-planmode-handoff.md`
 - `2026-03-26-post-h59-far-future-horizon-log.md`
