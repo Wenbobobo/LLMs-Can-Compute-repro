@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p56-post-h64-clean-merge-candidate\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p56-post-h64-clean-merge-candidate\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p60-post-p59-published-clean-descendant-prep\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,37 +22,37 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`P56_post_h64_clean_merge_candidate_packet`",
-        "`P59_post_h64_control_and_handoff_sync`"
+        "`P60_post_p59_published_clean_descendant_promotion_prep`",
+        "`P62_post_p61_merge_prep_control_sync`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P57_post_h64_paper_submission_package_sync`.",
+        "`P61_post_p60_release_hygiene_rebaseline`.",
         "- The default downstream scientific lane is `archive_or_hygiene_stop`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P58_post_h64_archive_release_closeout_sync`",
+        "- `P62_post_p61_merge_prep_control_sync`",
         "- `archive_or_hygiene_stop`"
       ]
     },
     {
       "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "- `../milestones/P56_post_h64_clean_merge_candidate_packet/`",
-        "- `results/P56_post_h64_clean_merge_candidate_packet/summary.json`",
-        "- `results/P59_post_h64_control_and_handoff_sync/summary.json`"
+        "- `../milestones/P60_post_p59_published_clean_descendant_promotion_prep/`",
+        "- `results/P62_post_p61_merge_prep_control_sync/summary.json`",
+        "- `results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P56_post_h64_clean_merge_candidate_packet/summary.json`",
-        "- `results/P59_post_h64_control_and_handoff_sync/summary.json`"
+        "- `results/P62_post_p61_merge_prep_control_sync/summary.json`",
+        "- `results/P60_post_p59_published_clean_descendant_promotion_prep/summary.json`"
       ]
     },
     {
@@ -72,8 +72,8 @@
     {
       "path": "results/release_worktree_hygiene_snapshot/summary.json",
       "matched_lines": [
-        "\"release_commit_state\": \"dirty_worktree_release_commit_blocked\",",
-        "\"git_diff_check_state\": \"warnings_only\","
+        "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\",",
+        "\"git_diff_check_state\": \"clean\","
       ]
     }
   ]
