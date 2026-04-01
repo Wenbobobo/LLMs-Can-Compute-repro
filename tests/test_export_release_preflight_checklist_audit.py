@@ -302,3 +302,6 @@ def test_publication_record_readme_mentions_current_published_frozen_successor_s
     ).read_text(encoding="utf-8")
 
     assert "current published frozen successor stack" in text
+    assert "../milestones/P66_post_p65_successor_publication_review/" in text
+    assert "../milestones/P67_post_p66_published_successor_freeze/" in text
+    assert "../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/" in text
