@@ -291,3 +291,14 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     payload = json.loads((tmp_path / "release_preflight_checklist_audit" / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["preflight_state"] == "docs_and_audits_green"
     assert payload["summary"]["blocked_count"] == 0
+
+
+def test_publication_record_readme_mentions_current_published_frozen_successor_stack() -> None:
+    text = (
+        Path(__file__).resolve().parents[1]
+        / "docs"
+        / "publication_record"
+        / "README.md"
+    ).read_text(encoding="utf-8")
+
+    assert "current published frozen successor stack" in text

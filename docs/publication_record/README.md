@@ -50,6 +50,10 @@ facing control surfaces.
 
 ## Current Taxonomy
 
+- current published frozen successor stack:
+  `../milestones/P66_post_p65_successor_publication_review/`,
+  `../milestones/P67_post_p66_published_successor_freeze/`,
+  `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
 - live control:
   `current_stage_driver.md`, `release_preflight_checklist.md`,
   `release_candidate_checklist.md`, `submission_candidate_criteria.md`
