@@ -1,5 +1,9 @@
 # Submission Packet Index
 
+The first three `P71/P70/P69` entries below are hygiene-only control sidecars.
+They keep the archive/control surfaces synchronized and do not widen the
+paper-facing evidence bundle beyond `H65/P66/P67/P68/H58/H43`.
+
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
 - `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`

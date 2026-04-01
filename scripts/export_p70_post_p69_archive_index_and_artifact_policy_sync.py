@@ -20,6 +20,7 @@ PUBLICATION_README_PATH = ROOT / "docs" / "publication_record" / "README.md"
 SUBMISSION_PACKET_INDEX_PATH = ROOT / "docs" / "publication_record" / "submission_packet_index.md"
 ARCHIVAL_MANIFEST_PATH = ROOT / "docs" / "publication_record" / "archival_repro_manifest.md"
 ARTIFACT_POLICY_PATH = ROOT / "docs" / "milestones" / "P70_post_p69_archive_index_and_artifact_policy_sync" / "artifact_policy.md"
+CURRENT_HYGIENE_BRANCH = "wip/p69-post-h65-hygiene-only-cleanup"
 RAW_ROW_PATTERNS = [
     "results/**/probe_read_rows.json",
     "results/**/per_read_rows.json",
@@ -111,6 +112,11 @@ def main() -> None:
         {"item_id": "p70_reads_p69", "status": "pass", "notes": "P70 runs only after P69 lands the repo-graph hygiene inventory."},
         {"item_id": "p70_reads_standing_release_audits", "status": "pass", "notes": "P70 preserves the current green preflight and archive-ready posture."},
         {
+            "item_id": "p70_runs_on_current_hygiene_branch",
+            "status": "pass" if current_branch_name == CURRENT_HYGIENE_BRANCH else "blocked",
+            "notes": "P70 should run only from the current hygiene-only cleanup branch.",
+        },
+        {
             "item_id": "p70_plans_index_mentions_current_design_and_post_p71_handoff",
             "status": "pass"
             if contains_all(
@@ -192,6 +198,8 @@ def main() -> None:
                     "surface_report.json",
                     "Git LFS remains inactive by default",
                     "review-critical packet",
+                    "runtime reopening",
+                    "dirty-root integration",
                 ],
             )
             else "blocked",

@@ -1,5 +1,9 @@
 # Archival Repro Manifest
 
+The `P71/P70/P69` summaries below are hygiene-only control sidecars retained so
+the archive-facing control surfaces match the live cleanup state. They do not
+change the paper-facing evidence boundary selected by `H65`.
+
 - `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
 - `results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
 - `results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json`

@@ -33,8 +33,8 @@ Shortest safe entrypoint after the `H65` terminal-freeze packet and the
   `wip/p66-post-p65-published-successor-freeze`
 - preserved local integration base:
   `wip/p56-main-scratch`
-- `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze = 0/17`
-- `origin/main...wip/p66-post-p65-published-successor-freeze = 0/158`
+- `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze = 0/18`
+- `origin/main...wip/p66-post-p65-published-successor-freeze = 0/159`
 - the read-only `git merge-tree` probe between `wip/p56-main-scratch` and
   `wip/p66-post-p65-published-successor-freeze` records no content-conflict
   markers

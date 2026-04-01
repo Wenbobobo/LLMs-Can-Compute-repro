@@ -72,8 +72,8 @@ def test_export_p69_writes_repo_graph_hygiene_inventory_summary(tmp_path: Path, 
             "wip/p66-post-p65-published-successor-freeze",
             "wip/p56-main-scratch",
             "wip/root-main-parking-2026-03-24",
-            "0/17",
-            "0/158",
+            "0/18",
+            "0/159",
             "clean_descendant_only_never_dirty_root_main",
         ],
     )
@@ -137,7 +137,7 @@ def test_export_p69_writes_repo_graph_hygiene_inventory_summary(tmp_path: Path, 
             "clean": path != "D:/zWenbo/AI/LLMCompute",
         },
     )
-    monkeypatch.setattr(module, "divergence", lambda left, right: (0, 17) if left == "wip/p56-main-scratch" else (0, 158))
+    monkeypatch.setattr(module, "divergence", lambda left, right: (0, 18) if left == "wip/p56-main-scratch" else (0, 159))
     monkeypatch.setattr(module, "tracked_upstream", lambda branch: f"origin/{branch}")
     monkeypatch.setattr(module, "current_branch", lambda: "wip/p69-post-h65-hygiene-only-cleanup")
     monkeypatch.setattr(module, "environment_payload", lambda: {"runtime_detection": "test"})
@@ -152,7 +152,7 @@ def test_export_p69_writes_repo_graph_hygiene_inventory_summary(tmp_path: Path, 
 
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["selected_outcome"] == "repo_graph_hygiene_inventory_confirms_clean_descendant_keep_set_and_root_quarantine"
-    assert payload["summary"]["p56_to_p66_right_count"] == 17
-    assert payload["summary"]["origin_main_to_p66_right_count"] == 158
+    assert payload["summary"]["p56_to_p66_right_count"] == 18
+    assert payload["summary"]["origin_main_to_p66_right_count"] == 159
     assert payload["summary"]["clean_keep_set_count"] == 5
     assert payload["summary"]["blocked_count"] == 0

@@ -115,6 +115,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/release_preflight_checklist.md",
         [
+            "`P69/P70/P71` hygiene-only cleanup sidecars",
             "`P66/P67/P68` published frozen successor stack",
             "`H64/P56/P57/P58/P59/F38` foundation",
             "`H58` as the value-negative closeout",
@@ -125,6 +126,8 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/publication_record/release_candidate_checklist.md",
         [
             "`H65/P56/P57/P58/P59/P66/P67/P68/F38`",
+            "`P69/P70/P71` as hygiene-only cleanup sidecars",
+            "`P69/P70/P71` do not widen the evidence ladder",
             "preserved `H64/H58/H43`",
             "No outward wording implies a new runtime lane",
         ],
@@ -133,11 +136,15 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/publication_record/submission_candidate_criteria.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P71_post_p70_clean_descendant_merge_prep_readiness_sync`",
+            "`P70_post_p69_archive_index_and_artifact_policy_sync`",
+            "`P69_post_h65_repo_graph_hygiene_inventory`",
             "`P68_post_p67_release_hygiene_and_control_rebaseline`",
             "`P67_post_p66_published_successor_freeze`",
             "`P66_post_p65_successor_publication_review`",
             "`H58_post_r62_origin_value_boundary_closeout_packet`",
             "`H43_post_r44_useful_case_refreeze`",
+            "do not authorize a runtime reopen",
         ],
     )
     _write_rel_text(

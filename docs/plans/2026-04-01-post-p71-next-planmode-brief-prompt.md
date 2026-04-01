@@ -10,12 +10,12 @@ Current locked facts:
   `wip/p69-post-h65-hygiene-only-cleanup`.
 - Current published clean descendant:
   `wip/p66-post-p65-published-successor-freeze`.
-- `wip/p66-post-p65-published-successor-freeze` is `0/17` relative to
+- `wip/p66-post-p65-published-successor-freeze` is `0/18` relative to
   `wip/p56-main-scratch`, and a read-only `git merge-tree` probe shows no
   content-conflict markers there.
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
-- `wip/p66-post-p65-published-successor-freeze` is still `0/158` relative to
+- `wip/p66-post-p65-published-successor-freeze` is still `0/159` relative to
   `origin/main`, so dirty-root integration is still out of bounds.
 - Runtime remains closed.
 - `F38/R63` remain dormant and non-runtime only.

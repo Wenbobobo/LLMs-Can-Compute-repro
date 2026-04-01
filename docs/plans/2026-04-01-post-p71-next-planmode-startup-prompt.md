@@ -22,7 +22,7 @@ Current locked facts:
 - The current published clean-descendant branch is
   `wip/p66-post-p65-published-successor-freeze`.
 - `wip/p66-post-p65-published-successor-freeze` is a linear clean-descendant
-  successor above `wip/p56-main-scratch` (`0/17` across
+  successor above `wip/p56-main-scratch` (`0/18` across
   `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze`).
 - A read-only `git merge-tree` probe against the merge base of
   `wip/p56-main-scratch` and `wip/p66-post-p65-published-successor-freeze`
@@ -31,7 +31,7 @@ Current locked facts:
 - Dirty root `main` remains quarantine-only.
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - `wip/p66-post-p65-published-successor-freeze` remains far ahead of
-  `origin/main` (`0/158` across
+  `origin/main` (`0/159` across
   `origin/main...wip/p66-post-p65-published-successor-freeze`).
 - Runtime remains closed.
 - `F38` / `R63` remain dormant and non-runtime only.

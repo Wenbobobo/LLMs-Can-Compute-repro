@@ -27,6 +27,8 @@ CURRENT_HYGIENE_BRANCH = "wip/p69-post-h65-hygiene-only-cleanup"
 LOCAL_INTEGRATION_BRANCH = "wip/p56-main-scratch"
 PUBLISHED_BRANCH = "wip/p66-post-p65-published-successor-freeze"
 LOCAL_INTEGRATION_WORKTREE = "D:/zWenbo/AI/wt/p56-main-scratch"
+EXPECTED_P56_TO_P66_FACT = "0/18"
+EXPECTED_ORIGIN_MAIN_TO_P66_FACT = "0/159"
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
@@ -73,12 +75,23 @@ def worktree_status(path: str) -> dict[str, object]:
 
 def merge_tree_probe(left: str, right: str) -> dict[str, object]:
     merge_base = git_output(["merge-base", left, right])
-    output = git_output(["merge-tree", merge_base, left, right])
+    result = subprocess.run(
+        ["git", "merge-tree", "--write-tree", left, right],
+        cwd=str(ROOT),
+        check=False,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+    )
+    stdout = result.stdout.strip()
+    stderr = result.stderr.strip()
     return {
         "merge_base": merge_base,
-        "conflict_free": "<<<<<<<" not in output and "changed in both" not in output.lower(),
-        "has_conflict_markers": "<<<<<<<" in output,
-        "mentions_changed_in_both": "changed in both" in output.lower(),
+        "conflict_free": result.returncode == 0,
+        "probe_exit_code": result.returncode,
+        "stdout": stdout,
+        "stderr": stderr,
+        "write_tree_oid": stdout.splitlines()[0] if result.returncode == 0 and stdout else None,
     }
 
 
@@ -220,8 +233,8 @@ def main() -> None:
                             CURRENT_HYGIENE_BRANCH,
                             PUBLISHED_BRANCH,
                             LOCAL_INTEGRATION_BRANCH,
-                            "0/17",
-                            "0/158",
+                            EXPECTED_P56_TO_P66_FACT,
+                            EXPECTED_ORIGIN_MAIN_TO_P66_FACT,
                             "clean_descendant_only_never_dirty_root_main",
                         ],
                     ),
@@ -231,8 +244,8 @@ def main() -> None:
                             CURRENT_HYGIENE_BRANCH,
                             PUBLISHED_BRANCH,
                             LOCAL_INTEGRATION_BRANCH,
-                            "0/17",
-                            "0/158",
+                            EXPECTED_P56_TO_P66_FACT,
+                            EXPECTED_ORIGIN_MAIN_TO_P66_FACT,
                             "clean_descendant_only_never_dirty_root_main",
                         ],
                     ),
@@ -241,8 +254,8 @@ def main() -> None:
                         [
                             CURRENT_HYGIENE_BRANCH,
                             PUBLISHED_BRANCH,
-                            "0/17",
-                            "0/158",
+                            EXPECTED_P56_TO_P66_FACT,
+                            EXPECTED_ORIGIN_MAIN_TO_P66_FACT,
                             "dirty-root integration is still out of bounds",
                         ],
                     ),

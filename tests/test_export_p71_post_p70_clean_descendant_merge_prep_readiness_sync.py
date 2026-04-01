@@ -104,8 +104,8 @@ def test_export_p71_writes_clean_descendant_merge_prep_readiness_summary(tmp_pat
             "wip/p69-post-h65-hygiene-only-cleanup",
             "wip/p66-post-p65-published-successor-freeze",
             "wip/p56-main-scratch",
-            "0/17",
-            "0/158",
+            "0/18",
+            "0/159",
             "clean_descendant_only_never_dirty_root_main",
         ],
     )
@@ -115,8 +115,8 @@ def test_export_p71_writes_clean_descendant_merge_prep_readiness_summary(tmp_pat
             "wip/p69-post-h65-hygiene-only-cleanup",
             "wip/p66-post-p65-published-successor-freeze",
             "wip/p56-main-scratch",
-            "0/17",
-            "0/158",
+            "0/18",
+            "0/159",
             "clean_descendant_only_never_dirty_root_main",
         ],
     )
@@ -125,8 +125,8 @@ def test_export_p71_writes_clean_descendant_merge_prep_readiness_summary(tmp_pat
         [
             "wip/p69-post-h65-hygiene-only-cleanup",
             "wip/p66-post-p65-published-successor-freeze",
-            "0/17",
-            "0/158",
+            "0/18",
+            "0/159",
             "dirty-root integration is still out of bounds",
         ],
     )
@@ -178,8 +178,10 @@ def test_export_p71_writes_clean_descendant_merge_prep_readiness_summary(tmp_pat
         lambda left, right: {
             "merge_base": "eff98f8939726189af60f7d46e2fbd1b3f5409cb",
             "conflict_free": True,
-            "has_conflict_markers": False,
-            "mentions_changed_in_both": False,
+            "probe_exit_code": 0,
+            "stdout": "7cdd3287afca12ed3de67368516c4cd758b51c16",
+            "stderr": "",
+            "write_tree_oid": "7cdd3287afca12ed3de67368516c4cd758b51c16",
         },
     )
     monkeypatch.setattr(module, "current_branch", lambda: "wip/p69-post-h65-hygiene-only-cleanup")
@@ -204,3 +206,27 @@ def test_export_p71_writes_clean_descendant_merge_prep_readiness_summary(tmp_pat
     assert payload["summary"]["selected_outcome"] == "clean_descendant_merge_prep_readiness_mapped_without_merge_execution"
     assert payload["summary"]["merge_tree_conflict_free"] is True
     assert payload["summary"]["blocked_count"] == 0
+
+
+def test_merge_tree_probe_uses_exit_code_for_conflict_detection(monkeypatch) -> None:
+    module = _load_module()
+
+    class _Completed:
+        def __init__(self, *, returncode: int, stdout: str, stderr: str) -> None:
+            self.returncode = returncode
+            self.stdout = stdout
+            self.stderr = stderr
+
+    def _fake_run(args, cwd, check, capture_output, text, encoding):
+        if args[:3] == ["git", "merge-tree", "--write-tree"]:
+            return _Completed(returncode=1, stdout="Auto-merging foo.txt\nCONFLICT (content): Merge conflict in foo.txt\n", stderr="")
+        raise AssertionError(f"unexpected subprocess call: {args}")
+
+    monkeypatch.setattr(module, "git_output", lambda args, cwd=None: "eff98f8939726189af60f7d46e2fbd1b3f5409cb")
+    monkeypatch.setattr(module.subprocess, "run", _fake_run)
+
+    payload = module.merge_tree_probe("wip/p56-main-scratch", "wip/p66-post-p65-published-successor-freeze")
+    assert payload["merge_base"] == "eff98f8939726189af60f7d46e2fbd1b3f5409cb"
+    assert payload["conflict_free"] is False
+    assert payload["probe_exit_code"] == 1
+    assert payload["write_tree_oid"] is None

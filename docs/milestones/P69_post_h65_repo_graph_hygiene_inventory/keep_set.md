@@ -15,7 +15,7 @@
 - dirty root quarantine branch:
   `wip/root-main-parking-2026-03-24`
 - topology facts:
-  `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze = 0/17`
-  and `origin/main...wip/p66-post-p65-published-successor-freeze = 0/158`
+  `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze = 0/18`
+  and `origin/main...wip/p66-post-p65-published-successor-freeze = 0/159`
 - merge rule:
   `clean_descendant_only_never_dirty_root_main`

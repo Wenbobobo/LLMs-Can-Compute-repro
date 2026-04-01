@@ -51,9 +51,9 @@ terminal freeze.
   pre-publication lane, not a live execution successor
 - `wip/p63-post-p62-tight-core-hygiene` is preserved as the prior published
   clean descendant
-- `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze = 0/17`
+- `wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze = 0/18`
   remains the only admissible later clean-descendant merge-prep topology fact
-- `origin/main...wip/p66-post-p65-published-successor-freeze = 0/158` keeps
+- `origin/main...wip/p66-post-p65-published-successor-freeze = 0/159` keeps
   dirty-root integration out of bounds
 - runtime remains closed
 - `F38/R63` remains dormant and non-runtime only

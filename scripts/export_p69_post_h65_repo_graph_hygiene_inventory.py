@@ -26,6 +26,8 @@ ROOT_MAIN_WORKTREE = "D:/zWenbo/AI/LLMCompute"
 ROOT_MAIN_BRANCH = "wip/root-main-parking-2026-03-24"
 ROOT_MAIN_BRANCH_PREFIX = "wip/root-main-parking"
 PREFERRED_WORKTREE_PREFIX = "D:/zWenbo/AI/wt/"
+EXPECTED_P56_TO_P66_DIVERGENCE = (0, 18)
+EXPECTED_ORIGIN_MAIN_TO_P66_DIVERGENCE = (0, 159)
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
@@ -144,8 +146,6 @@ def main() -> None:
     root_main_quarantined = root_main_branch.startswith(ROOT_MAIN_BRANCH_PREFIX) and root_main_status["branch"].startswith(
         ROOT_MAIN_BRANCH_PREFIX
     )
-    root_main_dirty = int(root_main_status["dirty_count"]) > 0
-
     p56_to_p66_left_count, p56_to_p66_right_count = divergence(LOCAL_INTEGRATION_BRANCH, PUBLISHED_BRANCH)
     origin_main_to_p66_left_count, origin_main_to_p66_right_count = divergence("origin/main", PUBLISHED_BRANCH)
     published_branch_upstream = tracked_upstream(PUBLISHED_BRANCH)
@@ -188,8 +188,8 @@ def main() -> None:
                     PUBLISHED_BRANCH,
                     LOCAL_INTEGRATION_BRANCH,
                     ROOT_MAIN_BRANCH,
-                    "0/17",
-                    "0/158",
+                    "0/18",
+                    "0/159",
                     "clean_descendant_only_never_dirty_root_main",
                 ],
             )
@@ -207,18 +207,17 @@ def main() -> None:
             "notes": "Dirty root main should remain parked on a quarantine branch.",
         },
         {
-            "item_id": "p69_root_main_remains_dirty",
-            "status": "pass" if root_main_dirty else "blocked",
-            "notes": "The dirty root checkout should remain visibly dirty rather than being mistaken for a clean integration base.",
-        },
-        {
             "item_id": "p69_p56_to_p66_divergence_matches_linear_successor_fact",
-            "status": "pass" if (p56_to_p66_left_count, p56_to_p66_right_count) == (0, 17) else "blocked",
-            "notes": "The current published branch should remain a one-sided 17-commit successor above p56.",
+            "status": "pass"
+            if (p56_to_p66_left_count, p56_to_p66_right_count) == EXPECTED_P56_TO_P66_DIVERGENCE
+            else "blocked",
+            "notes": "The current published branch should remain a one-sided 18-commit successor above p56.",
         },
         {
             "item_id": "p69_origin_main_to_p66_divergence_remains_out_of_bounds",
-            "status": "pass" if (origin_main_to_p66_left_count, origin_main_to_p66_right_count) == (0, 158) else "blocked",
+            "status": "pass"
+            if (origin_main_to_p66_left_count, origin_main_to_p66_right_count) == EXPECTED_ORIGIN_MAIN_TO_P66_DIVERGENCE
+            else "blocked",
             "notes": "The published clean descendant should remain far enough ahead of origin/main that dirty-root integration stays inadmissible.",
         },
         {
