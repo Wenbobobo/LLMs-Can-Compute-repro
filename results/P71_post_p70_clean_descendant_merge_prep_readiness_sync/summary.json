@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "active_stage_at_readiness_time": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+    "current_merge_prep_readiness_sidecar": "p71_post_p70_clean_descendant_merge_prep_readiness_sync",
+    "preserved_prior_archive_index_sidecar": "p70_post_p69_archive_index_and_artifact_policy_sync",
+    "current_planning_branch": "wip/p69-post-h65-hygiene-only-cleanup",
+    "local_integration_branch": "wip/p56-main-scratch",
+    "published_branch": "wip/p66-post-p65-published-successor-freeze",
+    "p56_clean": true,
+    "merge_tree_merge_base": "eff98f8939726189af60f7d46e2fbd1b3f5409cb",
+    "merge_tree_conflict_free": true,
+    "selected_outcome": "clean_descendant_merge_prep_readiness_mapped_without_merge_execution",
+    "next_required_lane": "explicit_archive_stop_or_next_planmode",
+    "pass_count": 10,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

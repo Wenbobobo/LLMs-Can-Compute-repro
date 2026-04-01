@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv"
     },
     "torch": {
       "installed": false,

@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "field": "current_planning_branch",
+      "value": "wip/p69-post-h65-hygiene-only-cleanup"
+    },
+    {
+      "field": "tracked_oversize_artifacts",
+      "value": []
+    },
+    {
+      "field": "raw_row_ignore_rules_active",
+      "value": true
+    }
+  ]
+}
