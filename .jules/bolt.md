@@ -1,0 +1,3 @@
+## 2026-03-21 - Python `setdefault` Eager Evaluation in Hot Loops
+**Learning:** In Python, `dict.setdefault(key, default)` evaluates the `default` argument *eagerly* on every iteration, even if the key already exists. In hot loops, passing a complex expression (like instantiating a new list with list comprehensions and multiple objects) to `setdefault` creates significant, measurable performance regressions due to unnecessary allocations.
+**Action:** For complex default values in hot loops, always use an explicit membership check (`if key not in dict: dict[key] = ...`) to defer initialization overhead until it is actually needed.
