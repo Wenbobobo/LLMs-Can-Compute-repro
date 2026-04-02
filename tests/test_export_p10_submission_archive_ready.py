@@ -60,6 +60,7 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         "docs/publication_record/README.md",
         [
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+            "P72_post_p71_archive_polish_and_explicit_stop_handoff",
             "P66_post_p65_successor_publication_review",
             "P67_post_p66_published_successor_freeze",
             "P68_post_p67_release_hygiene_and_control_rebaseline",
@@ -69,45 +70,59 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         "docs/publication_record/current_stage_driver.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
             "`P66_post_p65_successor_publication_review`",
             "`P67_post_p66_published_successor_freeze`",
             "`P68_post_p67_release_hygiene_and_control_rebaseline`",
             "`explicit_archive_stop_or_hygiene_only`",
+            "explicit stop",
+            "no further action",
         ],
     )
     _write_rel_text(
         "docs/publication_record/submission_packet_index.md",
         [
+            "P72/P71/P70/P69 entries below are hygiene-only control sidecars",
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+            "P72_post_p71_archive_polish_and_explicit_stop_handoff",
+            "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
             "P68_post_p67_release_hygiene_and_control_rebaseline",
             "P67_post_p66_published_successor_freeze",
             "P66_post_p65_successor_publication_review",
             "results/P66_post_p65_successor_publication_review/summary.json",
+            "do not widen the paper-facing evidence bundle",
         ],
     )
     _write_rel_text(
         "docs/publication_record/archival_repro_manifest.md",
         [
+            "P72/P71/P70/P69 summaries below are hygiene-only control sidecars",
             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+            "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
             "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
             "results/P67_post_p66_published_successor_freeze/summary.json",
             "results/P66_post_p65_successor_publication_review/summary.json",
             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
+            "do not change the paper-facing evidence boundary selected by H65",
         ],
     )
     _write_rel_text(
         "docs/publication_record/review_boundary_summary.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P72`",
             "`P56/P57/P58/P59`",
             "narrow positive mechanism support survives",
             "the only remaining future route is a dormant no-go dossier at `F38`",
+            "explicit stop",
+            "no further action",
         ],
     )
     _write_rel_text(
         "docs/publication_record/external_release_note_skeleton.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P72`",
             "`P56/P57/P58/P59`",
             "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
             "`H43_post_r44_useful_case_refreeze`",
@@ -115,6 +130,8 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
             "dormant non-runtime `F38` dossier",
             "archive-first terminal freeze",
             "strongest justified executor-value lane is closed negative",
+            "explicit stop",
+            "no further action",
         ],
     )
     _write_rel_json(
@@ -214,3 +231,5 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
     payload = json.loads((tmp_path / "P10_submission_archive_ready" / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["packet_state"] == "archive_ready"
     assert payload["summary"]["blocked_count"] == 0
+    assert "P72/P71/P70/P69 remain hygiene-only archive/control sidecars" in payload["summary"]["recommended_next_action"]
+    assert "explicit stop or no further action is now the recommended downstream route" in payload["summary"]["recommended_next_action"]

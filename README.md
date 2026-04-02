@@ -13,13 +13,15 @@ For live routing and preserved-history navigation, start at `docs/README.md`.
 
 ## Current Stage
 
-As of `2026-04-01`, the current active packet is
+As of `2026-04-02`, the current active packet is
 `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
 
 Current anchors:
 
 - active docs-only packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+- current archive polish and explicit stop handoff wave:
+  `P72_post_p71_archive_polish_and_explicit_stop_handoff`
 - current repo graph hygiene inventory wave:
   `P69_post_h65_repo_graph_hygiene_inventory`
 - current archive index and artifact policy sync wave:
@@ -34,6 +36,8 @@ Current anchors:
   `P68_post_p67_release_hygiene_and_control_rebaseline`
 - current hygiene-only cleanup branch:
   `wip/p69-post-h65-hygiene-only-cleanup`
+- current archive polish and explicit stop handoff branch:
+  `wip/p72-post-p71-archive-polish-stop-handoff`
 - current published clean descendant branch:
   `wip/p66-post-p65-published-successor-freeze`
 - current docs router:
@@ -89,14 +93,17 @@ post-`H65` keep set and root quarantine facts, `P70` syncs archive-facing
 indexes and the standing artifact policy to that hygiene view, and `P71`
 records the only admissible later merge-prep readiness route from
 `wip/p56-main-scratch` to `wip/p66-post-p65-published-successor-freeze`
-without executing any merge.
+without executing any merge. `P72` then normalizes the archive-polish surfaces
+and freezes the handoff as explicit stop, no further action, or later
+clean-descendant merge-prep planning only if a new external integration need
+appears.
 
 ## Execution Posture
 
 There are no open runtime tasks on this branch.
 
-The default next action is explicit archive stop, archive polish, or no further
-scientific action on `wip/p69-post-h65-hygiene-only-cleanup` under the current
-`H65 + P69/P70/P71 + P56/P57/P58/P59 + P66/P67/P68 + F38` posture. Current
-local follow-through should run only from clean descendants recorded in
+The default next action is explicit stop, no further action, or limited
+archive polish on `wip/p72-post-p71-archive-polish-stop-handoff` under the
+current `H65 + P72 + P69/P70/P71 + P56/P57/P58/P59 + P66/P67/P68 + F38`
+posture. Current local follow-through should run only from clean descendants recorded in
 `docs/branch_worktree_registry.md`; dirty root `main` remains quarantine-only.

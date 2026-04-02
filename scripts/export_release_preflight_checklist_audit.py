@@ -16,14 +16,14 @@ CURRENT_PAPER_PHASE = "h65_published_frozen_successor_stack_with_preserved_p63_p
 PREFLIGHT_SCOPE = "outward_release_surface_and_followthrough_bundle"
 GREEN_ACTION = (
     "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while "
-    "P69/P70/P71 remain hygiene-only cleanup sidecars above the active H65 packet, "
+    "P72/P69/P70/P71 remain hygiene-only archive/control sidecars above the active H65 packet, "
     "H65 remains the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through "
     "foundation, P66/P67/P68 remain the current frozen successor review/freeze/rebaseline stack on "
     "wip/p66-post-p65-published-successor-freeze, P63/P64/P65 remain the preserved prior successor stack, "
     "H64 remains the preserved prior active packet, F38 remains the dormant non-runtime future dossier, H58 "
-    "remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, "
-    "explicit_archive_stop_or_hygiene_only remains the default downstream lane, and no dirty-root-main merge "
-    "or runtime reopen is implied"
+    "remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop "
+    "or no further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen "
+    "is implied"
 )
 
 
@@ -153,6 +153,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["release_summary_text"],
                         [
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P72`",
                             "`P56/P57/P58/P59`",
                             "`P66/P67/P68`",
                             "`wip/p66-post-p65-published-successor-freeze`",
@@ -183,6 +184,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["publication_readme_text"],
                         [
                             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+                            "P72_post_p71_archive_polish_and_explicit_stop_handoff",
                             "P66_post_p65_successor_publication_review",
                             "P67_post_p66_published_successor_freeze",
                             "P68_post_p67_release_hygiene_and_control_rebaseline",
@@ -193,6 +195,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["current_stage_driver_text"],
                         [
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
                             "`P66_post_p65_successor_publication_review`",
                             "`P67_post_p66_published_successor_freeze`",
                             "`P68_post_p67_release_hygiene_and_control_rebaseline`",
@@ -222,27 +225,32 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["release_preflight_text"],
                         [
+                            "`P72` hygiene-only archive-polish and explicit-stop handoff sidecar",
                             "`P69/P70/P71` hygiene-only cleanup sidecars",
                             "`P66/P67/P68` published frozen successor stack",
                             "`H64/P56/P57/P58/P59/F38` foundation",
                             "`H58` as the value-negative closeout",
                             "`H43` as the preserved paper-grade endpoint",
+                            "explicit stop or no further action",
                         ],
                     ),
                     contains_all(
                         inputs["release_candidate_text"],
                         [
                             "`H65/P56/P57/P58/P59/P66/P67/P68/F38`",
+                            "`P72` as the current archive-polish explicit-stop handoff sidecar",
                             "`P69/P70/P71` as hygiene-only cleanup sidecars",
                             "`P69/P70/P71` do not widen the evidence ladder",
                             "preserved `H64/H58/H43`",
                             "No outward wording implies a new runtime lane",
+                            "explicit stop or no further action",
                         ],
                     ),
                     contains_all(
                         inputs["submission_candidate_text"],
                         [
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
                             "`P71_post_p70_clean_descendant_merge_prep_readiness_sync`",
                             "`P70_post_p69_archive_index_and_artifact_policy_sync`",
                             "`P69_post_h65_repo_graph_hygiene_inventory`",
@@ -252,6 +260,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                             "`H58_post_r62_origin_value_boundary_closeout_packet`",
                             "`H43_post_r44_useful_case_refreeze`",
                             "do not authorize a runtime reopen",
+                            "explicit stop or no further action",
                         ],
                     ),
                     contains_all(
@@ -265,6 +274,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["archival_manifest_text"],
                         [
+                            "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
                             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
                             "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
                             "results/P67_post_p66_published_successor_freeze/summary.json",
@@ -283,6 +293,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["paper_bundle_status_text"],
                         [
+                            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
                             "`P66_post_p65_successor_publication_review`",
                             "`P67_post_p66_published_successor_freeze`",
                             "`P68_post_p67_release_hygiene_and_control_rebaseline`",
@@ -293,9 +304,12 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["review_boundary_text"],
                         [
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P72`",
                             "`P56/P57/P58/P59`",
                             "narrow positive mechanism support survives",
                             "the only remaining future route is a dormant no-go dossier at `F38`",
+                            "explicit stop",
+                            "no further action",
                         ],
                     ),
                     contains_all(
@@ -384,11 +398,11 @@ def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
         "STATUS.md": ("status_text", ["`P68_post_p67_release_hygiene_and_control_rebaseline`", "`explicit_archive_stop_or_hygiene_only`"]),
         "docs/README.md": ("docs_readme_text", ["current_stage_driver.md", "branch_worktree_registry.md", "Dormant Future"]),
         "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P68_post_p67_release_hygiene_and_control_rebaseline`", "`wip/p66-post-p65-published-successor-freeze`"]),
-        "docs/plans/README.md": ("plans_readme_text", ["2026-04-01-post-h65-next-planmode-handoff.md", "P68_post_p67_release_hygiene_and_control_rebaseline"]),
-        "docs/publication_record/release_preflight_checklist.md": ("release_preflight_text", ["`P66/P67/P68` published frozen successor stack", "dirty root `main`"]),
+        "docs/plans/README.md": ("plans_readme_text", ["2026-04-02-post-p72-next-planmode-handoff.md", "P68_post_p67_release_hygiene_and_control_rebaseline"]),
+        "docs/publication_record/release_preflight_checklist.md": ("release_preflight_text", ["`P72` hygiene-only archive-polish and explicit-stop handoff sidecar", "dirty root `main`"]),
         "docs/publication_record/release_candidate_checklist.md": ("release_candidate_text", ["`H65/P56/P57/P58/P59/P66/P67/P68/F38`", "preserved `H64/H58/H43`"]),
         "docs/publication_record/claim_ladder.md": ("claim_ladder_text", ["| P66 Successor publication review |", "| P68 Release hygiene and control rebaseline |"]),
-        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json", "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json"]),
+        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json", "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json"]),
         "results/release_worktree_hygiene_snapshot/summary.json": ("worktree_hygiene_summary_text", ['"release_commit_state":', '"git_diff_check_state":']),
     }
     return [{"path": path, "matched_lines": extract_matching_lines(inputs[key], needles=needles)} for path, (key, needles) in lookup.items()]

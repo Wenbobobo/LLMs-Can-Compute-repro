@@ -11,17 +11,20 @@ facing control surfaces.
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current tight-core branch/worktree registry and hygiene control note
-- `../plans/2026-04-01-post-h65-hygiene-only-cleanup-design.md`
-  current design for the post-`H65` hygiene-only cleanup phase
-- `../plans/2026-04-01-post-p71-next-planmode-handoff.md`
-  current shortest handoff from the hygiene-only cleanup stack above the landed
-  `H65 + P56/P57/P58/P59 + P66/P67/P68` state
-- `../plans/2026-04-01-post-p71-next-planmode-startup-prompt.md`
+- `../plans/2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
+  current design for the post-`P71` archive polish and explicit stop handoff
+  phase
+- `../plans/2026-04-02-post-p72-next-planmode-handoff.md`
+  current shortest handoff from the archive-polish explicit-stop wave above the
+  landed `H65 + P56/P57/P58/P59 + P66/P67/P68` state
+- `../plans/2026-04-02-post-p72-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `../plans/2026-04-01-post-p71-next-planmode-brief-prompt.md`
+- `../plans/2026-04-02-post-p72-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
+  current archive polish and explicit stop handoff wave
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
   current clean-descendant merge-prep readiness sync wave
 - `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
@@ -55,6 +58,8 @@ facing control surfaces.
 
 ## Current Taxonomy
 
+- current archive polish and explicit stop handoff wave:
+  `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
 - current hygiene-only cleanup stack:
   `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`,
   `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`,
@@ -68,6 +73,11 @@ facing control surfaces.
 - live control:
   `current_stage_driver.md`, `release_preflight_checklist.md`,
   `release_candidate_checklist.md`, `submission_candidate_criteria.md`
+- hygiene-only control sidecars:
+  `P72_post_p71_archive_polish_and_explicit_stop_handoff`,
+  `P71_post_p70_clean_descendant_merge_prep_readiness_sync`,
+  `P70_post_p69_archive_index_and_artifact_policy_sync`,
+  `P69_post_h65_repo_graph_hygiene_inventory`
 - preserved historical package:
   `submission_packet_index.md`, `experiment_manifest.md`,
   `release_summary_draft.md`, `paper_bundle_status.md`

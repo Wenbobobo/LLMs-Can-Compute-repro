@@ -8,6 +8,7 @@ terminal freeze.
 
 | Role | Branch | Path | State | Policy |
 | --- | --- | --- | --- | --- |
+| current archive-polish explicit-stop handoff branch | `wip/p72-post-p71-archive-polish-stop-handoff` | `D:/zWenbo/AI/wt/p72-post-p71-archive-polish-stop-handoff` | current docs/export/control handoff lane above the preserved hygiene cleanup stack | keep as the current archive polish and explicit stop handoff branch; do not treat it as a published branch |
 | current hygiene-only cleanup branch | `wip/p69-post-h65-hygiene-only-cleanup` | `D:/zWenbo/AI/wt/p69-post-h65-hygiene-only-cleanup` | current hygiene-only execution lane above the live published branch | keep as the current repo-hygiene and handoff-sync branch; do not treat it as a replacement published branch |
 | current published frozen clean descendant | `wip/p66-post-p65-published-successor-freeze` | `D:/zWenbo/AI/wt/p66-post-p65-published-successor-freeze` | clean published source and active freeze lane | keep as the stable post-`P65` published frozen successor |
 | preserved prior successor review lane | `wip/p64-post-p63-successor-stack` | `D:/zWenbo/AI/wt/p64-post-p63-successor-stack` | preserved reviewed pre-publication lane | keep for review provenance and lineage; do not treat as live control |
@@ -43,6 +44,8 @@ terminal freeze.
 ## Merge Rules
 
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
+- `wip/p72-post-p71-archive-polish-stop-handoff` is the current archive-polish
+  and explicit-stop handoff lane
 - `wip/p69-post-h65-hygiene-only-cleanup` is the current hygiene-only cleanup
   execution lane
 - `wip/p66-post-p65-published-successor-freeze` is the live published clean

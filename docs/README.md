@@ -6,7 +6,7 @@ and the dormant future dossier.
 ## Live Now
 
 - `../README.md`
-  restrained project landing page for the current `H65 + P69/P70/P71 +
+  restrained project landing page for the current `H65 + P72 + P69/P70/P71 +
   P56/P57/P58/P59 + P66/P67/P68 + F38` posture
 - `publication_record/current_stage_driver.md`
   canonical live control summary for the active terminal-freeze packet, current

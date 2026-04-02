@@ -2,6 +2,8 @@
 
 - active docs-only packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+- current archive polish and explicit stop handoff wave:
+  `P72`
 - current hygiene-only cleanup stack:
   `P69/P70/P71`
 - landed foundation:
@@ -15,6 +17,7 @@
 - preserved older published clean-descendant stack:
   `P60/P61/P62`
 - framing:
-  archive-first terminal freeze, hygiene-only cleanup, and explicit stop
+  archive-first terminal freeze, hygiene-only cleanup, explicit stop, and no
+  further action
 - dormant future note:
   R63 remains dormant, non-runtime

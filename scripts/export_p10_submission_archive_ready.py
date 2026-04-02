@@ -15,13 +15,13 @@ OUT_DIR = ROOT / "results" / "P10_submission_archive_ready"
 CURRENT_PAPER_PHASE = "h65_published_frozen_successor_stack_with_preserved_p63_p65_h64_h58_h43_endpoints"
 GREEN_ACTION = (
     "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H65 remains "
-    "the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through foundation, "
+    "the current active docs-only packet, P72/P71/P70/P69 remain hygiene-only archive/control sidecars, "
+    "P56/P57/P58/P59 remain the landed follow-through foundation, "
     "P66/P67/P68 remain the current frozen successor review/freeze/rebaseline stack on "
     "wip/p66-post-p65-published-successor-freeze, P63/P64/P65 remain the preserved prior successor stack, "
     "H64 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains "
-    "the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, "
-    "explicit_archive_stop_or_hygiene_only remains the default downstream lane, and no dirty-root-main merge or "
-    "runtime reopen is implied"
+    "the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no "
+    "further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
 )
 
 
@@ -155,6 +155,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["publication_readme_text"],
                         [
                             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+                            "P72_post_p71_archive_polish_and_explicit_stop_handoff",
                             "P66_post_p65_successor_publication_review",
                             "P67_post_p66_published_successor_freeze",
                             "P68_post_p67_release_hygiene_and_control_rebaseline",
@@ -164,6 +165,7 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["current_stage_driver_text"],
                         [
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
                             "`P66_post_p65_successor_publication_review`",
                             "`P67_post_p66_published_successor_freeze`",
                             "`P68_post_p67_release_hygiene_and_control_rebaseline`",
@@ -181,21 +183,28 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["submission_packet_index_text"],
                         [
+                            "P72/P71/P70/P69 entries below are hygiene-only control sidecars",
                             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+                            "P72_post_p71_archive_polish_and_explicit_stop_handoff",
+                            "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
                             "P68_post_p67_release_hygiene_and_control_rebaseline",
                             "P67_post_p66_published_successor_freeze",
                             "P66_post_p65_successor_publication_review",
                             "results/P66_post_p65_successor_publication_review/summary.json",
+                            "do not widen the paper-facing evidence bundle",
                         ],
                     ),
                     contains_all(
                         inputs["archival_manifest_text"],
                         [
+                            "P72/P71/P70/P69 summaries below are hygiene-only control sidecars",
                             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+                            "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
                             "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
                             "results/P67_post_p66_published_successor_freeze/summary.json",
                             "results/P66_post_p65_successor_publication_review/summary.json",
                             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
+                            "do not change the paper-facing evidence boundary selected by H65",
                         ],
                     ),
                 )
@@ -210,15 +219,19 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         inputs["review_boundary_text"],
                         [
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P72`",
                             "`P56/P57/P58/P59`",
                             "narrow positive mechanism support survives",
                             "the only remaining future route is a dormant no-go dossier at `F38`",
+                            "explicit stop",
+                            "no further action",
                         ],
                     ),
                     contains_all(
                         inputs["external_release_note_text"],
                         [
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P72`",
                             "`P56/P57/P58/P59`",
                             "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
                             "`H43_post_r44_useful_case_refreeze`",
@@ -231,6 +244,8 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         [
                             "archive-first terminal freeze",
                             "strongest justified executor-value lane is closed negative",
+                            "explicit stop",
+                            "no further action",
                         ],
                     ),
                 )

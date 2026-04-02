@@ -7,15 +7,25 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
+  current design for the post-`P71` archive polish and explicit-stop handoff
+  phase
+- `2026-04-02-post-p72-next-planmode-handoff.md`
+  current shortest handoff from the live `H65 + P72 + P69/P70/P71 +
+  P56/P57/P58/P59 + P66/P67/P68 + F38` state into the next planning round
+- `2026-04-02-post-p72-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `2026-04-02-post-p72-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `2026-04-01-post-h65-hygiene-only-cleanup-design.md`
-  current design for the post-`H65` hygiene-only cleanup phase
+  preserved design for the post-`H65` hygiene-only cleanup phase
 - `2026-04-01-post-p71-next-planmode-handoff.md`
-  current shortest handoff from the live `H65 + P69/P70/P71 + P56/P57/P58/P59
+  preserved shortest handoff from the live `H65 + P69/P70/P71 + P56/P57/P58/P59
   + P66/P67/P68 + F38` state into the next planning round
 - `2026-04-01-post-p71-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved ready-to-paste startup prompt for the prior `plan mode` round
 - `2026-04-01-post-p71-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved short startup prompt for the prior `plan mode` round
 - `2026-04-01-post-p65-successor-publication-freeze-design.md`
   preserved design for the post-`P65` review/freeze/rebaseline/terminal-freeze
   phase
@@ -77,6 +87,8 @@ driver and machine-readable `results/` summaries first.
   `P56 -> P57 -> P58 -> P59`
 - current hygiene-only cleanup stack:
   `P69 -> P70 -> P71`
+- current archive polish and explicit stop handoff sidecar:
+  `P72`
 - current published frozen successor stack:
   `P66 -> P67 -> P68 -> H65`
 - preserved prior successor stack:
@@ -111,6 +123,10 @@ driver and machine-readable `results/` summaries first.
 - `../README.md`
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
+- `2026-04-02-post-p72-next-planmode-handoff.md`
+- `2026-04-02-post-p72-next-planmode-startup-prompt.md`
+- `2026-04-02-post-p72-next-planmode-brief-prompt.md`
 - `2026-04-01-post-p65-successor-publication-freeze-design.md`
 - `2026-04-01-post-h65-next-planmode-handoff.md`
 - `2026-04-01-post-h65-next-planmode-startup-prompt.md`
@@ -126,6 +142,7 @@ driver and machine-readable `results/` summaries first.
 - `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
 - `2026-04-01-post-p63-next-planmode-brief-prompt.md`
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
+- `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
 - `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
 - `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`
@@ -142,6 +159,7 @@ driver and machine-readable `results/` summaries first.
 - `../milestones/P59_post_h64_control_and_handoff_sync/`
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
 - `../../results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
+- `../../results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json`
 - `../../results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
 - `../../results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json`
 - `../../results/P69_post_h65_repo_graph_hygiene_inventory/summary.json`

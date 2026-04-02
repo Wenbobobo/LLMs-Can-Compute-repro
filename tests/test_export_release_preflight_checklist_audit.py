@@ -73,6 +73,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/publication_record/README.md",
         [
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+            "P72_post_p71_archive_polish_and_explicit_stop_handoff",
             "P66_post_p65_successor_publication_review",
             "P67_post_p66_published_successor_freeze",
             "P68_post_p67_release_hygiene_and_control_rebaseline",
@@ -83,16 +84,23 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/publication_record/current_stage_driver.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
             "`P66_post_p65_successor_publication_review`",
             "`P67_post_p66_published_successor_freeze`",
             "`P68_post_p67_release_hygiene_and_control_rebaseline`",
             "`wip/p66-post-p65-published-successor-freeze`",
             "`explicit_archive_stop_or_hygiene_only`",
+            "explicit stop",
+            "no further action",
         ],
     )
     _write_rel_text(
         "docs/plans/README.md",
         [
+            "2026-04-02-post-p71-archive-polish-stop-handoff-design.md",
+            "2026-04-02-post-p72-next-planmode-handoff.md",
+            "2026-04-02-post-p72-next-planmode-startup-prompt.md",
+            "2026-04-02-post-p72-next-planmode-brief-prompt.md",
             "2026-04-01-post-p65-successor-publication-freeze-design.md",
             "2026-04-01-post-h65-next-planmode-handoff.md",
             "2026-04-01-post-h65-next-planmode-startup-prompt.md",
@@ -105,37 +113,46 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/publication_record/release_summary_draft.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P72`",
             "`P56/P57/P58/P59`",
+            "`P69/P70/P71`",
             "`P66/P67/P68`",
             "`wip/p66-post-p65-published-successor-freeze`",
             "archive-first terminal freeze",
             "R63 remains dormant, non-runtime",
+            "explicit stop",
+            "no further action",
         ],
     )
     _write_rel_text(
         "docs/publication_record/release_preflight_checklist.md",
         [
+            "`P72` hygiene-only archive-polish and explicit-stop handoff sidecar",
             "`P69/P70/P71` hygiene-only cleanup sidecars",
             "`P66/P67/P68` published frozen successor stack",
             "`H64/P56/P57/P58/P59/F38` foundation",
             "`H58` as the value-negative closeout",
             "`H43` as the preserved paper-grade endpoint",
+            "explicit stop or no further action",
         ],
     )
     _write_rel_text(
         "docs/publication_record/release_candidate_checklist.md",
         [
             "`H65/P56/P57/P58/P59/P66/P67/P68/F38`",
+            "`P72` as the current archive-polish explicit-stop handoff sidecar",
             "`P69/P70/P71` as hygiene-only cleanup sidecars",
             "`P69/P70/P71` do not widen the evidence ladder",
             "preserved `H64/H58/H43`",
             "No outward wording implies a new runtime lane",
+            "explicit stop or no further action",
         ],
     )
     _write_rel_text(
         "docs/publication_record/submission_candidate_criteria.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
             "`P71_post_p70_clean_descendant_merge_prep_readiness_sync`",
             "`P70_post_p69_archive_index_and_artifact_policy_sync`",
             "`P69_post_h65_repo_graph_hygiene_inventory`",
@@ -145,6 +162,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
             "`H58_post_r62_origin_value_boundary_closeout_packet`",
             "`H43_post_r44_useful_case_refreeze`",
             "do not authorize a runtime reopen",
+            "explicit stop or no further action",
         ],
     )
     _write_rel_text(
@@ -158,6 +176,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/archival_repro_manifest.md",
         [
+            "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
             "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
             "results/P67_post_p66_published_successor_freeze/summary.json",
@@ -168,6 +187,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/paper_bundle_status.md",
         [
+            "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
             "`P66_post_p65_successor_publication_review`",
             "`P67_post_p66_published_successor_freeze`",
             "`P68_post_p67_release_hygiene_and_control_rebaseline`",
@@ -178,9 +198,12 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/publication_record/review_boundary_summary.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+            "`P72`",
             "`P56/P57/P58/P59`",
             "narrow positive mechanism support survives",
             "the only remaining future route is a dormant no-go dossier at `F38`",
+            "explicit stop",
+            "no further action",
         ],
     )
     _write_rel_text(
@@ -298,6 +321,8 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     payload = json.loads((tmp_path / "release_preflight_checklist_audit" / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["preflight_state"] == "docs_and_audits_green"
     assert payload["summary"]["blocked_count"] == 0
+    assert "P72/P69/P70/P71 remain hygiene-only archive/control sidecars" in payload["summary"]["recommended_next_action"]
+    assert "explicit stop or no further action is now the recommended downstream route" in payload["summary"]["recommended_next_action"]
 
 
 def test_publication_record_readme_mentions_current_published_frozen_successor_stack() -> None:

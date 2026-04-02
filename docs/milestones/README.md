@@ -5,6 +5,8 @@ decision points.
 
 ## Current Live Stack
 
+- `P72_post_p71_archive_polish_and_explicit_stop_handoff/`
+  current archive polish and explicit stop handoff wave
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
 - `P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
@@ -51,7 +53,10 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
-- treat `P69/P70/P71` as the current hygiene-only cleanup stack above `H65`;
+- treat `P72` as the current archive polish and explicit stop handoff wave
+  above `H65`;
+- treat `P69/P70/P71` as the preserved hygiene-only cleanup stack underneath
+  `P72`;
 - treat `P63/P64/P65` and `P60/P61/P62` as preserved prior live control, not
   current; and
 - treat `F38` as dormant future only, not a live scientific route.
