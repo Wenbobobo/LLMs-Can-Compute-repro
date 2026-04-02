@@ -6,6 +6,10 @@ The current active stage is:
 
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 
+The current local hygiene and shrink wave is:
+
+- `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`
+
 The current archive polish and explicit stop handoff wave is:
 
 - `P72_post_p71_archive_polish_and_explicit_stop_handoff`
@@ -37,6 +41,10 @@ The current release hygiene and control rebaseline wave is:
 The current hygiene-only cleanup branch is:
 
 - `wip/p69-post-h65-hygiene-only-cleanup`
+
+The current local hygiene and shrink branch is:
+
+- `wip/p73-post-p72-hygiene-shrink-mergeprep`
 
 The current archive polish and explicit stop handoff branch is:
 
@@ -118,16 +126,24 @@ The default downstream lane is:
 - `P72` normalizes archive-facing and plan-facing surfaces around explicit
   stop, no further action, and later clean-descendant merge-prep planning only
   if a new external integration need appears.
+- `P73` classifies the legacy local worktree footprint for safe shrink, keeps
+  live path policy anchored on `D:/zWenbo/AI/wt/`, and still leaves merge work
+  dossier-only.
 - `wip/p63-post-p62-tight-core-hygiene` is preserved as the prior published
   clean descendant, not the live control branch.
 - `wip/p64-post-p63-successor-stack` is preserved as the reviewed
   pre-publication successor lane, not the live control branch.
 - `wip/p69-post-h65-hygiene-only-cleanup` is the current hygiene-only cleanup
   branch, not the live published clean descendant.
+- `wip/p73-post-p72-hygiene-shrink-mergeprep` is the current local hygiene and
+  shrink branch.
 - `wip/p72-post-p71-archive-polish-stop-handoff` is the current archive polish
   and explicit stop handoff branch.
 - `docs/README.md` and `docs/branch_worktree_registry.md` separate live routing
   from preserved history and quarantine posture.
+- live local work should prefer `D:/zWenbo/AI/wt/`, while
+  `D:/zWenbo/AI/LLMCompute-worktrees/` is historical local storage or
+  shrink-candidate space only.
 - merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - dirty root `main` remains quarantine-only.
 - `F38` records the only surviving future family as a dormant no-go dossier and

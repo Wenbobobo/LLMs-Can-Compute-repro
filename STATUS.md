@@ -4,6 +4,8 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current local hygiene and shrink wave is
+  `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`.
 - The current archive polish and explicit stop handoff wave is
   `P72_post_p71_archive_polish_and_explicit_stop_handoff`.
 - The current repo graph hygiene inventory wave is
@@ -20,6 +22,8 @@
   `P68_post_p67_release_hygiene_and_control_rebaseline`.
 - The current hygiene-only cleanup branch is
   `wip/p69-post-h65-hygiene-only-cleanup`.
+- The current local hygiene and shrink branch is
+  `wip/p73-post-p72-hygiene-shrink-mergeprep`.
 - The current archive polish and explicit stop handoff branch is
   `wip/p72-post-p71-archive-polish-stop-handoff`.
 - The current published clean descendant branch is
@@ -65,6 +69,6 @@
 - The current local hygiene-only cleanup branch is
   `wip/p69-post-h65-hygiene-only-cleanup`.
 - The default next action is explicit stop, no further action, or limited
-  archive polish on `wip/p72-post-p71-archive-polish-stop-handoff`, with
-  the preserved prior stack and review lineage tracked in
-  `docs/branch_worktree_registry.md`.
+  local hygiene/shrink follow-through on
+  `wip/p73-post-p72-hygiene-shrink-mergeprep`, with the preserved archive
+  handoff and review lineage tracked in `docs/branch_worktree_registry.md`.

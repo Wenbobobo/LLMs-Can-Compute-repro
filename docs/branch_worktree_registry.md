@@ -8,6 +8,7 @@ terminal freeze.
 
 | Role | Branch | Path | State | Policy |
 | --- | --- | --- | --- | --- |
+| current local hygiene and shrink branch | `wip/p73-post-p72-hygiene-shrink-mergeprep` | `D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep` | current local cleanup, shrink, and dossier-prep lane above the preserved P72 handoff branch | keep as the current local hygiene/shrink branch; do not treat it as a published branch |
 | current archive-polish explicit-stop handoff branch | `wip/p72-post-p71-archive-polish-stop-handoff` | `D:/zWenbo/AI/wt/p72-post-p71-archive-polish-stop-handoff` | current docs/export/control handoff lane above the preserved hygiene cleanup stack | keep as the current archive polish and explicit stop handoff branch; do not treat it as a published branch |
 | current hygiene-only cleanup branch | `wip/p69-post-h65-hygiene-only-cleanup` | `D:/zWenbo/AI/wt/p69-post-h65-hygiene-only-cleanup` | current hygiene-only execution lane above the live published branch | keep as the current repo-hygiene and handoff-sync branch; do not treat it as a replacement published branch |
 | current published frozen clean descendant | `wip/p66-post-p65-published-successor-freeze` | `D:/zWenbo/AI/wt/p66-post-p65-published-successor-freeze` | clean published source and active freeze lane | keep as the stable post-`P65` published frozen successor |
@@ -27,10 +28,11 @@ terminal freeze.
   `wip/f34-post-h59-archive-and-reopen-screen`,
   `wip/f32-post-h56-last-discriminator`) remains read-only historical support
   for the current closeout posture
-- older worktrees under `D:/zWenbo/AI/LLMCompute-worktrees/` are preserved
-  historical branches; no new active work should start there during this phase
+- older worktrees under `D:/zWenbo/AI/LLMCompute-worktrees/` are legacy local
+  storage only; no new active work should start there during this phase
 - `wip/r33-next` at `D:/zWenbo/AI/LLMCompute-worktrees/r33-next` remains the
   only preserved tip of the old `p16 -> r32 -> r33` ancestor chain
+- live work should prefer `D:/zWenbo/AI/wt/` as the current execution prefix
 
 ## Cleanup Status
 
@@ -44,6 +46,8 @@ terminal freeze.
 ## Merge Rules
 
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
+- `wip/p73-post-p72-hygiene-shrink-mergeprep` is the current local hygiene and
+  shrink lane
 - `wip/p72-post-p71-archive-polish-stop-handoff` is the current archive-polish
   and explicit-stop handoff lane
 - `wip/p69-post-h65-hygiene-only-cleanup` is the current hygiene-only cleanup

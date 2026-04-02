@@ -11,6 +11,8 @@ facing control surfaces.
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current tight-core branch/worktree registry and hygiene control note
+- `../plans/2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
+  current design for the post-`P72` hygiene/shrink and dossier-prep phase
 - `../plans/2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
   current design for the post-`P71` archive polish and explicit stop handoff
   phase
@@ -23,6 +25,8 @@ facing control surfaces.
   current short startup prompt for the next `plan mode` round
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `../milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
+  current local hygiene and shrink wave
 - `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
   current archive polish and explicit stop handoff wave
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
@@ -58,6 +62,8 @@ facing control surfaces.
 
 ## Current Taxonomy
 
+- current local hygiene and shrink wave:
+  `../milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
 - current archive polish and explicit stop handoff wave:
   `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
 - current hygiene-only cleanup stack:
@@ -74,6 +80,7 @@ facing control surfaces.
   `current_stage_driver.md`, `release_preflight_checklist.md`,
   `release_candidate_checklist.md`, `submission_candidate_criteria.md`
 - hygiene-only control sidecars:
+  `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`,
   `P72_post_p71_archive_polish_and_explicit_stop_handoff`,
   `P71_post_p70_clean_descendant_merge_prep_readiness_sync`,
   `P70_post_p69_archive_index_and_artifact_policy_sync`,

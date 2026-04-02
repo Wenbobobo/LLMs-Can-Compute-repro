@@ -5,6 +5,8 @@ decision points.
 
 ## Current Live Stack
 
+- `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
+  current local hygiene and shrink wave
 - `P72_post_p71_archive_polish_and_explicit_stop_handoff/`
   current archive polish and explicit stop handoff wave
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
@@ -53,6 +55,7 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
+- treat `P73` as the current local hygiene and shrink wave above `P72`;
 - treat `P72` as the current archive polish and explicit stop handoff wave
   above `H65`;
 - treat `P69/P70/P71` as the preserved hygiene-only cleanup stack underneath

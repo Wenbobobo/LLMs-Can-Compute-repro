@@ -18,6 +18,8 @@ As of `2026-04-02`, the current active packet is
 
 Current anchors:
 
+- current local hygiene and shrink wave:
+  `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`
 - active docs-only packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - current archive polish and explicit stop handoff wave:
@@ -36,6 +38,8 @@ Current anchors:
   `P68_post_p67_release_hygiene_and_control_rebaseline`
 - current hygiene-only cleanup branch:
   `wip/p69-post-h65-hygiene-only-cleanup`
+- current local hygiene and shrink branch:
+  `wip/p73-post-p72-hygiene-shrink-mergeprep`
 - current archive polish and explicit stop handoff branch:
   `wip/p72-post-p71-archive-polish-stop-handoff`
 - current published clean descendant branch:
@@ -96,14 +100,17 @@ records the only admissible later merge-prep readiness route from
 without executing any merge. `P72` then normalizes the archive-polish surfaces
 and freezes the handoff as explicit stop, no further action, or later
 clean-descendant merge-prep planning only if a new external integration need
-appears.
+appears. `P73` keeps that stop posture intact while re-anchoring live local
+execution on `D:/zWenbo/AI/wt/`, classifying legacy-path worktrees for safe
+shrink, and leaving any later merge work dossier-only.
 
 ## Execution Posture
 
 There are no open runtime tasks on this branch.
 
-The default next action is explicit stop, no further action, or limited
-archive polish on `wip/p72-post-p71-archive-polish-stop-handoff` under the
-current `H65 + P72 + P69/P70/P71 + P56/P57/P58/P59 + P66/P67/P68 + F38`
-posture. Current local follow-through should run only from clean descendants recorded in
-`docs/branch_worktree_registry.md`; dirty root `main` remains quarantine-only.
+The default next action is explicit stop, no further action, or limited local
+hygiene/shrink follow-through on `wip/p73-post-p72-hygiene-shrink-mergeprep`
+under the current `H65 + P73 + P72 + P69/P70/P71 + P56/P57/P58/P59 +
+P66/P67/P68 + F38` posture. Current local follow-through should run only from
+clean descendants recorded in `docs/branch_worktree_registry.md`; dirty root
+`main` remains quarantine-only.

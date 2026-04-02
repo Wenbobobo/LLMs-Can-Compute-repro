@@ -7,6 +7,8 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
+  current design for the post-`P72` hygiene/shrink and dossier-prep phase
 - `2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
   current design for the post-`P71` archive polish and explicit-stop handoff
   phase
@@ -87,6 +89,8 @@ driver and machine-readable `results/` summaries first.
   `P56 -> P57 -> P58 -> P59`
 - current hygiene-only cleanup stack:
   `P69 -> P70 -> P71`
+- current local hygiene and shrink sidecar:
+  `P73`
 - current archive polish and explicit stop handoff sidecar:
   `P72`
 - current published frozen successor stack:
@@ -123,6 +127,7 @@ driver and machine-readable `results/` summaries first.
 - `../README.md`
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
 - `2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
 - `2026-04-02-post-p72-next-planmode-handoff.md`
 - `2026-04-02-post-p72-next-planmode-startup-prompt.md`
@@ -142,6 +147,7 @@ driver and machine-readable `results/` summaries first.
 - `2026-03-31-post-p59-published-clean-descendant-merge-prep-design.md`
 - `2026-04-01-post-p63-next-planmode-brief-prompt.md`
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
+- `../milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
 - `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
 - `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
@@ -159,6 +165,7 @@ driver and machine-readable `results/` summaries first.
 - `../milestones/P59_post_h64_control_and_handoff_sync/`
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
 - `../../results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
+- `../../results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/summary.json`
 - `../../results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json`
 - `../../results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
 - `../../results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json`

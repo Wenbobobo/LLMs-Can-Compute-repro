@@ -6,8 +6,8 @@ and the dormant future dossier.
 ## Live Now
 
 - `../README.md`
-  restrained project landing page for the current `H65 + P72 + P69/P70/P71 +
-  P56/P57/P58/P59 + P66/P67/P68 + F38` posture
+  restrained project landing page for the current `H65 + P73 + P72 +
+  P69/P70/P71 + P56/P57/P58/P59 + P66/P67/P68 + F38` posture
 - `publication_record/current_stage_driver.md`
   canonical live control summary for the active terminal-freeze packet, current
   published frozen clean descendant, and default downstream lane
@@ -46,4 +46,6 @@ and the dormant future dossier.
   `publication_record/README.md` as routers, not evidence;
 - treat older files that say "current" as historical wording unless they are
   linked from the live surfaces above; and
-- do not treat advisory/origin materials as evidence.
+- do not treat advisory/origin materials as evidence; and
+- prefer `D:/zWenbo/AI/wt/` for live work rather than the historical
+  `D:/zWenbo/AI/LLMCompute-worktrees/` prefix.
