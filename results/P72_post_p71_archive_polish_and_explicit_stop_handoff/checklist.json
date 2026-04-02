@@ -12,7 +12,7 @@
     },
     {
       "item_id": "p72_runs_on_current_branch",
-      "status": "pass",
+      "status": "blocked",
       "notes": "P72 should run from the current archive-polish and explicit-stop handoff branch."
     },
     {
@@ -22,7 +22,7 @@
     },
     {
       "item_id": "p72_docs_routers_and_indexes_are_current",
-      "status": "pass",
+      "status": "blocked",
       "notes": "Docs routers and planning indexes should expose the P72 handoff stack and prompts."
     },
     {

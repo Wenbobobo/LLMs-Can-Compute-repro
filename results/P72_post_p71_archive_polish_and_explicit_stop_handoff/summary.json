@@ -7,20 +7,20 @@
       "p70_post_p69_archive_index_and_artifact_policy_sync",
       "p71_post_p70_clean_descendant_merge_prep_readiness_sync"
     ],
-    "current_planning_branch": "wip/p72-post-p71-archive-polish-stop-handoff",
+    "current_planning_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
     "published_branch": "wip/p66-post-p65-published-successor-freeze",
     "selected_outcome": "archive_polish_surfaces_normalized_and_explicit_stop_handoff_frozen_without_scope_widening",
     "next_required_lane": "explicit_stop_or_no_further_action",
-    "pass_count": 9,
-    "blocked_count": 0
+    "pass_count": 7,
+    "blocked_count": 2
   },
   "runtime_environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p72-post-p71-archive-polish-stop-handoff\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p72-post-p71-archive-polish-stop-handoff\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv"
     },
     "torch": {
       "installed": false,
