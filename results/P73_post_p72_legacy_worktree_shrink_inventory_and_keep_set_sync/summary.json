@@ -14,7 +14,7 @@
     "legacy_misplaced_live_count": 0,
     "selected_outcome": "legacy_worktree_inventory_and_keep_set_sync_completed_for_safe_local_shrink",
     "next_required_lane": "safe_local_legacy_shrink_or_nonexecuting_merge_prep_dossier",
-    "pass_count": 8,
+    "pass_count": 9,
     "blocked_count": 0
   },
   "runtime_environment": {

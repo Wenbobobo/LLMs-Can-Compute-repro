@@ -13,6 +13,13 @@ facing control surfaces.
   current tight-core branch/worktree registry and hygiene control note
 - `../plans/2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
   current design for the post-`P72` hygiene/shrink and dossier-prep phase
+- `../plans/2026-04-02-post-p73-next-planmode-handoff.md`
+  current shortest handoff from the post-shrink `P73` state into the next
+  planning round
+- `../plans/2026-04-02-post-p73-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `../plans/2026-04-02-post-p73-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `../plans/2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
   current design for the post-`P71` archive polish and explicit stop handoff
   phase

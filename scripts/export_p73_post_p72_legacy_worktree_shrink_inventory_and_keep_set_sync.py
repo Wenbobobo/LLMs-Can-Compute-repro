@@ -23,6 +23,9 @@ PUBLICATION_README_PATH = ROOT / "docs" / "publication_record" / "README.md"
 BRANCH_REGISTRY_PATH = ROOT / "docs" / "branch_worktree_registry.md"
 KEEP_SET_PATH = ROOT / "docs" / "milestones" / "P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync" / "keep_set.md"
 SHRINK_RUNBOOK_PATH = ROOT / "docs" / "milestones" / "P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync" / "shrink_runbook.md"
+POST_P73_HANDOFF_PATH = ROOT / "docs" / "plans" / "2026-04-02-post-p73-next-planmode-handoff.md"
+POST_P73_STARTUP_PATH = ROOT / "docs" / "plans" / "2026-04-02-post-p73-next-planmode-startup-prompt.md"
+POST_P73_BRIEF_PATH = ROOT / "docs" / "plans" / "2026-04-02-post-p73-next-planmode-brief-prompt.md"
 CURRENT_BRANCH = "wip/p73-post-p72-hygiene-shrink-mergeprep"
 CURRENT_BRANCH_PATH = "D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep"
 P72_BRANCH = "wip/p72-post-p71-archive-polish-stop-handoff"
@@ -172,6 +175,9 @@ def main() -> None:
     branch_registry_text = read_text(BRANCH_REGISTRY_PATH)
     keep_set_text = read_text(KEEP_SET_PATH)
     shrink_runbook_text = read_text(SHRINK_RUNBOOK_PATH)
+    handoff_text = read_text(POST_P73_HANDOFF_PATH)
+    startup_text = read_text(POST_P73_STARTUP_PATH)
+    brief_text = read_text(POST_P73_BRIEF_PATH)
 
     current_branch_name = current_branch()
     worktrees = listed_worktrees()
@@ -206,7 +212,7 @@ def main() -> None:
                 (
                     contains_all(docs_readme_text, ["H65 + P73 + P72 + P69/P70/P71", "branch_worktree_registry.md", "plans/README.md"]),
                     contains_all(milestones_readme_text, ["P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync", "P72_post_p71_archive_polish_and_explicit_stop_handoff"]),
-                    contains_all(plans_readme_text, ["2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md", "P73"]),
+                    contains_all(plans_readme_text, ["2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md", "2026-04-02-post-p73-next-planmode-handoff.md", "2026-04-02-post-p73-next-planmode-startup-prompt.md", "2026-04-02-post-p73-next-planmode-brief-prompt.md"]),
                     contains_all(publication_readme_text, ["P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync", "current local hygiene and shrink wave"]),
                 )
             )
@@ -242,6 +248,19 @@ def main() -> None:
             )
             else "blocked",
             "notes": "The keep-set and shrink runbook should make the safety boundary explicit before any local removal step.",
+        },
+        {
+            "item_id": "p73_post_p73_handoff_prompts_are_current",
+            "status": "pass"
+            if all(
+                (
+                    contains_all(handoff_text, [CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P66_BRANCH, P56_BRANCH, "legacy local worktree footprint has already been shrunk", "remaining legacy-path worktrees", "wip/h27-promotion", "wip/r33-next", "clean_descendant_only_never_dirty_root_main"]),
+                    contains_all(startup_text, [CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P66_BRANCH, P56_BRANCH, "legacy-path worktree count: `2`", "wip/h27-promotion", "wip/r33-next", "Runtime remains closed"]),
+                    contains_all(brief_text, [CURRENT_BRANCH, "legacy-path worktree count: `2`", "wip/h27-promotion", "wip/r33-next", "dirty-root integration remains out of bounds"]),
+                )
+            )
+            else "blocked",
+            "notes": "The next plan-mode handoff surfaces should reflect the post-shrink state rather than the earlier pre-shrink P72 state.",
         },
         {
             "item_id": "p73_legacy_inventory_classifies_every_legacy_worktree",

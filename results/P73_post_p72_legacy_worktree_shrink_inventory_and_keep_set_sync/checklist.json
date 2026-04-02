@@ -31,6 +31,11 @@
       "notes": "The keep-set and shrink runbook should make the safety boundary explicit before any local removal step."
     },
     {
+      "item_id": "p73_post_p73_handoff_prompts_are_current",
+      "status": "pass",
+      "notes": "The next plan-mode handoff surfaces should reflect the post-shrink state rather than the earlier pre-shrink P72 state."
+    },
+    {
       "item_id": "p73_legacy_inventory_classifies_every_legacy_worktree",
       "status": "pass",
       "notes": "Every legacy-path worktree should land in exactly one current category."

@@ -9,6 +9,13 @@ driver and machine-readable `results/` summaries first.
 
 - `2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
   current design for the post-`P72` hygiene/shrink and dossier-prep phase
+- `2026-04-02-post-p73-next-planmode-handoff.md`
+  current shortest handoff from the live `H65 + P73 + P72 + P69/P70/P71 +
+  P56/P57/P58/P59 + P66/P67/P68 + F38` state into the next planning round
+- `2026-04-02-post-p73-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `2026-04-02-post-p73-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
   current design for the post-`P71` archive polish and explicit-stop handoff
   phase
@@ -128,6 +135,9 @@ driver and machine-readable `results/` summaries first.
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
 - `2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
+- `2026-04-02-post-p73-next-planmode-handoff.md`
+- `2026-04-02-post-p73-next-planmode-startup-prompt.md`
+- `2026-04-02-post-p73-next-planmode-brief-prompt.md`
 - `2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
 - `2026-04-02-post-p72-next-planmode-handoff.md`
 - `2026-04-02-post-p72-next-planmode-startup-prompt.md`

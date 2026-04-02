@@ -88,7 +88,9 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
         "plans_readme.md",
         [
             "2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md",
-            "P73",
+            "2026-04-02-post-p73-next-planmode-handoff.md",
+            "2026-04-02-post-p73-next-planmode-startup-prompt.md",
+            "2026-04-02-post-p73-next-planmode-brief-prompt.md",
         ],
     )
     temp_publication_readme = _write_text(
@@ -134,6 +136,45 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
             "branch refs remain preserved",
         ],
     )
+    temp_handoff = _write_text(
+        "post_p73_handoff.md",
+        [
+            "wip/p73-post-p72-hygiene-shrink-mergeprep",
+            "wip/p72-post-p71-archive-polish-stop-handoff",
+            "wip/p69-post-h65-hygiene-only-cleanup",
+            "wip/p66-post-p65-published-successor-freeze",
+            "wip/p56-main-scratch",
+            "legacy local worktree footprint has already been shrunk",
+            "remaining legacy-path worktrees",
+            "wip/h27-promotion",
+            "wip/r33-next",
+            "clean_descendant_only_never_dirty_root_main",
+        ],
+    )
+    temp_startup = _write_text(
+        "post_p73_startup.md",
+        [
+            "wip/p73-post-p72-hygiene-shrink-mergeprep",
+            "wip/p72-post-p71-archive-polish-stop-handoff",
+            "wip/p69-post-h65-hygiene-only-cleanup",
+            "wip/p66-post-p65-published-successor-freeze",
+            "wip/p56-main-scratch",
+            "legacy-path worktree count: `2`",
+            "wip/h27-promotion",
+            "wip/r33-next",
+            "Runtime remains closed",
+        ],
+    )
+    temp_brief = _write_text(
+        "post_p73_brief.md",
+        [
+            "wip/p73-post-p72-hygiene-shrink-mergeprep",
+            "legacy-path worktree count: `2`",
+            "wip/h27-promotion",
+            "wip/r33-next",
+            "dirty-root integration remains out of bounds",
+        ],
+    )
 
     original_out_dir = module.OUT_DIR
     original_p72 = module.P72_SUMMARY_PATH
@@ -147,6 +188,9 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
     original_registry = module.BRANCH_REGISTRY_PATH
     original_keep_set = module.KEEP_SET_PATH
     original_runbook = module.SHRINK_RUNBOOK_PATH
+    original_handoff = module.POST_P73_HANDOFF_PATH
+    original_startup = module.POST_P73_STARTUP_PATH
+    original_brief = module.POST_P73_BRIEF_PATH
     temp_out_dir = tmp_path / "P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync"
     module.OUT_DIR = temp_out_dir
     module.P72_SUMMARY_PATH = temp_p72_summary
@@ -160,6 +204,9 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
     module.BRANCH_REGISTRY_PATH = temp_registry
     module.KEEP_SET_PATH = temp_keep_set
     module.SHRINK_RUNBOOK_PATH = temp_runbook
+    module.POST_P73_HANDOFF_PATH = temp_handoff
+    module.POST_P73_STARTUP_PATH = temp_startup
+    module.POST_P73_BRIEF_PATH = temp_brief
 
     monkeypatch.setattr(
         module,
@@ -228,6 +275,9 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
         module.BRANCH_REGISTRY_PATH = original_registry
         module.KEEP_SET_PATH = original_keep_set
         module.SHRINK_RUNBOOK_PATH = original_runbook
+        module.POST_P73_HANDOFF_PATH = original_handoff
+        module.POST_P73_STARTUP_PATH = original_startup
+        module.POST_P73_BRIEF_PATH = original_brief
 
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["selected_outcome"] == "legacy_worktree_inventory_and_keep_set_sync_completed_for_safe_local_shrink"
