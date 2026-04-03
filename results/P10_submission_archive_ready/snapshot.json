@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -24,20 +24,20 @@
       "matched_lines": [
         "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
         "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-        "`P66_post_p65_successor_publication_review`"
+        "`P74_post_p73_successor_publication_review`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P68_post_p67_release_hygiene_and_control_rebaseline`.",
+        "`P76_post_p75_release_hygiene_and_control_rebaseline`.",
         "`explicit_archive_stop_or_hygiene_only`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P68_post_p67_release_hygiene_and_control_rebaseline`",
+        "- `P76_post_p75_release_hygiene_and_control_rebaseline`",
         "- `explicit_archive_stop_or_hygiene_only`"
       ]
     },
@@ -46,14 +46,14 @@
       "matched_lines": [
         "- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`",
         "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
-        "- `results/P66_post_p65_successor_publication_review/summary.json`"
+        "- `results/P74_post_p73_successor_publication_review/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
         "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
-        "- `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
+        "- `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`"
       ]
     },
     {

@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -24,13 +24,13 @@
       "matched_lines": [
         "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
         "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-        "`P66_post_p65_successor_publication_review`"
+        "`P74_post_p73_successor_publication_review`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P68_post_p67_release_hygiene_and_control_rebaseline`.",
+        "`P76_post_p75_release_hygiene_and_control_rebaseline`.",
         "`explicit_archive_stop_or_hygiene_only`."
       ]
     },
@@ -47,19 +47,18 @@
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P68_post_p67_release_hygiene_and_control_rebaseline`",
-        "- `wip/p66-post-p65-published-successor-freeze`",
-        "- `P67` promotes `wip/p66-post-p65-published-successor-freeze` into the live",
-        "current control on `wip/p66-post-p65-published-successor-freeze` while",
-        "`wip/p56-main-scratch` to `wip/p66-post-p65-published-successor-freeze`"
+        "- `P76_post_p75_release_hygiene_and_control_rebaseline`",
+        "- `wip/p75-post-p74-published-successor-freeze`",
+        "- `P75` promotes `wip/p75-post-p74-published-successor-freeze` into the live",
+        "current control on `wip/p75-post-p74-published-successor-freeze` while"
       ]
     },
     {
       "path": "docs/plans/README.md",
       "matched_lines": [
-        "- `2026-04-02-post-p72-next-planmode-handoff.md`",
-        "- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`",
-        "- `../../results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
+        "- `2026-04-03-post-p76-next-planmode-handoff.md`",
+        "- `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`",
+        "- `../../results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`"
       ]
     },
     {
@@ -72,22 +71,22 @@
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
-        "- current package must expose `H65/P56/P57/P58/P59/P66/P67/P68/F38`",
+        "- current package must expose `H65/P56/P57/P58/P59/P74/P75/P76/F38`",
         "- preserved `H64/H58/H43` must remain explicit"
       ]
     },
     {
       "path": "docs/publication_record/claim_ladder.md",
       "matched_lines": [
-        "| P66 Successor publication review | validated as the current successor publication review wave | `results/P66_post_p65_successor_publication_review/summary.json`, `results/P66_post_p65_successor_publication_review/claim_packet.json` | reviews the exact `p63..p64` delta and confirms that promotion remains limited to docs/export/control/release surfaces |",
-        "| P68 Release hygiene and control rebaseline | validated as the current release hygiene and control rebaseline wave | `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`, `results/P68_post_p67_release_hygiene_and_control_rebaseline/claim_packet.json` | reanchors release hygiene, preflight, archive-ready posture, and current control on the frozen successor branch |"
+        "| P74 Successor publication review | validated as the current successor publication review wave | `results/P74_post_p73_successor_publication_review/summary.json`, `results/P74_post_p73_successor_publication_review/claim_packet.json` | reviews the exact `p66..p73` delta and confirms that promotion remains limited to docs/export/control/release surfaces |",
+        "| P76 Release hygiene and control rebaseline | validated as the current release hygiene and control rebaseline wave | `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`, `results/P76_post_p75_release_hygiene_and_control_rebaseline/claim_packet.json` | reanchors release hygiene, preflight, archive-ready posture, and current control on the promoted successor branch |"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
         "- `results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json`",
-        "- `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`"
+        "- `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`"
       ]
     },
     {

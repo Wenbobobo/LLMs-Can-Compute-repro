@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -36,9 +36,9 @@
     "docs/publication_record/external_release_note_skeleton.md",
     "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
     "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-    "results/P66_post_p65_successor_publication_review/summary.json",
-    "results/P67_post_p66_published_successor_freeze/summary.json",
-    "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
+    "results/P74_post_p73_successor_publication_review/summary.json",
+    "results/P75_post_p74_published_successor_freeze/summary.json",
+    "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
     "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
     "results/P57_post_h64_paper_submission_package_sync/summary.json",
     "results/P58_post_h64_archive_release_closeout_sync/summary.json",
@@ -49,7 +49,7 @@
     "results/release_worktree_hygiene_snapshot/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h65_published_frozen_successor_stack_with_preserved_p63_p65_h64_h58_h43_endpoints",
+    "current_paper_phase": "h65_p75_successor_stack_with_preserved_p66_p68_h64_h58_h43_endpoints",
     "preflight_scope": "outward_release_surface_and_followthrough_bundle",
     "preflight_state": "docs_and_audits_green",
     "release_commit_state": "clean_worktree_ready_if_other_gates_green",
@@ -58,6 +58,6 @@
     "pass_count": 7,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while P72/P69/P70/P71 remain hygiene-only archive/control sidecars above the active H65 packet, H65 remains the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through foundation, P66/P67/P68 remain the current frozen successor review/freeze/rebaseline stack on wip/p66-post-p65-published-successor-freeze, P63/P64/P65 remain the preserved prior successor stack, H64 remains the preserved prior active packet, F38 remains the dormant non-runtime future dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
+    "recommended_next_action": "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while P72/P69/P70/P71 remain hygiene-only archive/control sidecars above the active H65 packet, H65 remains the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through foundation, P74/P75/P76 remain the current successor review/freeze/rebaseline stack on wip/p75-post-p74-published-successor-freeze, P66/P67/P68 remain the preserved prior successor stack, P63/P64/P65 remain the preserved deeper successor stack, H64 remains the preserved prior active packet, F38 remains the dormant non-runtime future dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
   }
 }

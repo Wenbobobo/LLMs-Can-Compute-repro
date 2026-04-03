@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p76_reads_p75",
+      "status": "pass",
+      "notes": "P76 starts only after the landed P75 freeze wave."
+    },
+    {
+      "item_id": "p76_current_branch_is_p75",
+      "status": "pass",
+      "notes": "The rebaseline should run on the live p75 published branch."
+    },
+    {
+      "item_id": "p76_worktree_hygiene_is_clean_ready",
+      "status": "pass",
+      "notes": "The new published successor branch should be clean enough for outward sync if other gates are green."
+    },
+    {
+      "item_id": "p76_driver_and_registry_expose_rebased_p75_successor",
+      "status": "pass",
+      "notes": "The rebaseline should expose the new published branch while preserving the prior lineages explicitly."
+    }
+  ]
+}

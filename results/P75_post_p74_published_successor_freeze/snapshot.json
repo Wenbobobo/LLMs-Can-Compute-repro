@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "field": "current_published_clean_descendant_branch",
+      "value": "wip/p75-post-p74-published-successor-freeze"
+    },
+    {
+      "field": "preserved_prior_published_clean_descendant_branch",
+      "value": "wip/p66-post-p65-published-successor-freeze"
+    },
+    {
+      "field": "preserved_prior_successor_review_branch",
+      "value": "wip/p74-post-p73-successor-publication-review"
+    },
+    {
+      "field": "current_local_hygiene_branch",
+      "value": "wip/p73-post-p72-hygiene-shrink-mergeprep"
+    }
+  ]
+}

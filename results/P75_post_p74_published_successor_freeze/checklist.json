@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p75_reads_p74",
+      "status": "pass",
+      "notes": "P75 starts only after the exact P74 successor review lands."
+    },
+    {
+      "item_id": "p75_current_branch_is_new_published_clean_descendant",
+      "status": "pass",
+      "notes": "The publication freeze should run on the new p75 branch itself."
+    },
+    {
+      "item_id": "p75_live_control_surfaces_expose_h65_plus_p73_p74_p75_p76",
+      "status": "pass",
+      "notes": "Current live surfaces must expose the new successor promotion stack above H65 without reopening runtime."
+    },
+    {
+      "item_id": "p75_registry_preserves_p66_p73_and_p74",
+      "status": "pass",
+      "notes": "The freeze must preserve p66 as prior published lineage while keeping p73 and p74 explicit."
+    }
+  ]
+}

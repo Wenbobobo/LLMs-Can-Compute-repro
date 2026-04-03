@@ -2,11 +2,11 @@
   "experiment": "release_worktree_hygiene_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p72-post-p71-archive-polish-stop-handoff\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p72-post-p71-archive-polish-stop-handoff\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -24,8 +24,8 @@
   ],
   "summary": {
     "repo_hygiene_scope": "current_worktree_and_diff_check",
-    "git_root": "D:/zWenbo/AI/wt/p72-post-p71-archive-polish-stop-handoff",
-    "branch": "wip/p72-post-p71-archive-polish-stop-handoff",
+    "git_root": "D:/zWenbo/AI/wt/p75-post-p74-published-successor-freeze",
+    "branch": "wip/p75-post-p74-published-successor-freeze",
     "changed_path_count": 0,
     "modified_path_count": 0,
     "tracked_dirty_count": 0,

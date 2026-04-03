@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,7 +22,7 @@
     {
       "item_id": "top_level_surfaces_and_driver_are_current_h65_frozen_successor_control",
       "status": "pass",
-      "notes": "Top-level surfaces and the canonical driver should all expose the current frozen successor stack."
+      "notes": "Top-level surfaces and the canonical driver should all expose the current successor promotion stack."
     },
     {
       "item_id": "submission_packet_index_and_archival_manifest_track_current_bundle",
@@ -37,7 +37,7 @@
     {
       "item_id": "standing_release_audits_remain_green",
       "status": "pass",
-      "notes": "Archive readiness depends on H65, the frozen successor stack, and preserved H64/H58/H43 endpoints."
+      "notes": "Archive readiness depends on H65, the current successor promotion stack, and preserved H64/H58/H43 endpoints."
     },
     {
       "item_id": "worktree_hygiene_snapshot_classifies_commit_state",
