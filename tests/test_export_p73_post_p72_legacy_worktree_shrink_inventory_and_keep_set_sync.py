@@ -104,7 +104,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
         "branch_worktree_registry.md",
         [
             "wip/p73-post-p72-hygiene-shrink-mergeprep",
-            "D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep",
+            str(module.ROOT).replace("\\", "/"),
             "wip/p72-post-p71-archive-polish-stop-handoff",
             "D:/zWenbo/AI/wt/",
             "D:/zWenbo/AI/LLMCompute-worktrees/",
@@ -191,6 +191,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
     original_handoff = module.POST_P73_HANDOFF_PATH
     original_startup = module.POST_P73_STARTUP_PATH
     original_brief = module.POST_P73_BRIEF_PATH
+    original_current_branch_path = module.CURRENT_BRANCH_PATH
     temp_out_dir = tmp_path / "P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync"
     module.OUT_DIR = temp_out_dir
     module.P72_SUMMARY_PATH = temp_p72_summary
@@ -207,6 +208,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
     module.POST_P73_HANDOFF_PATH = temp_handoff
     module.POST_P73_STARTUP_PATH = temp_startup
     module.POST_P73_BRIEF_PATH = temp_brief
+    module.CURRENT_BRANCH_PATH = str(module.ROOT).replace("\\", "/")
 
     monkeypatch.setattr(
         module,
@@ -278,6 +280,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
         module.POST_P73_HANDOFF_PATH = original_handoff
         module.POST_P73_STARTUP_PATH = original_startup
         module.POST_P73_BRIEF_PATH = original_brief
+        module.CURRENT_BRANCH_PATH = original_current_branch_path
 
     payload = json.loads((temp_out_dir / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["selected_outcome"] == "legacy_worktree_inventory_and_keep_set_sync_completed_for_safe_local_shrink"
