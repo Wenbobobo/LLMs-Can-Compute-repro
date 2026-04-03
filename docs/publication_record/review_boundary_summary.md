@@ -6,6 +6,8 @@
   `P72`
 - current hygiene-only cleanup stack:
   `P69/P70/P71`
+- current successor promotion stack:
+  `P74/P75/P76`
 - landed foundation:
   `P56/P57/P58/P59`
 - current live reading:

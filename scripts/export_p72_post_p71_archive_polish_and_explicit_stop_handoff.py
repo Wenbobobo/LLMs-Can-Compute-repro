@@ -36,10 +36,9 @@ POST_P72_BRIEF_PATH = ROOT / "docs" / "plans" / "2026-04-02-post-p72-next-planmo
 STOP_HANDOFF_PATH = ROOT / "docs" / "milestones" / "P72_post_p71_archive_polish_and_explicit_stop_handoff" / "stop_handoff.md"
 CURRENT_BRANCH = "wip/p72-post-p71-archive-polish-stop-handoff"
 PRESERVED_HYGIENE_BRANCH = "wip/p69-post-h65-hygiene-only-cleanup"
-PUBLISHED_BRANCH = "wip/p66-post-p65-published-successor-freeze"
+CURRENT_REVIEW_BRANCH = "wip/p74-post-p73-successor-publication-review"
+PUBLISHED_BRANCH = "wip/p75-post-p74-published-successor-freeze"
 LOCAL_INTEGRATION_BRANCH = "wip/p56-main-scratch"
-EXPECTED_P56_TO_P66_FACT = "0/18"
-EXPECTED_ORIGIN_MAIN_TO_P66_FACT = "0/159"
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
@@ -144,8 +143,8 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(docs_readme_text, ["H65 + P72 + P69/P70/P71 + P56/P57/P58/P59 + P66/P67/P68 + F38", "plans/README.md", "milestones/README.md"]),
-                    contains_all(milestones_readme_text, ["P72_post_p71_archive_polish_and_explicit_stop_handoff", "P71_post_p70_clean_descendant_merge_prep_readiness_sync", "P70_post_p69_archive_index_and_artifact_policy_sync", "P69_post_h65_repo_graph_hygiene_inventory"]),
+                    contains_all(docs_readme_text, ["H65 + P73 + P74/P75/P76 + P72 + P69/P70/P71 + P56/P57/P58/P59 + F38", "plans/README.md", "milestones/README.md"]),
+                    contains_all(milestones_readme_text, ["P74_post_p73_successor_publication_review", "P75_post_p74_published_successor_freeze", "P76_post_p75_release_hygiene_and_control_rebaseline", "P72_post_p71_archive_polish_and_explicit_stop_handoff", "P71_post_p70_clean_descendant_merge_prep_readiness_sync", "P70_post_p69_archive_index_and_artifact_policy_sync", "P69_post_h65_repo_graph_hygiene_inventory"]),
                     contains_all(plans_readme_text, ["2026-04-02-post-p71-archive-polish-stop-handoff-design.md", "2026-04-02-post-p72-next-planmode-handoff.md", "2026-04-02-post-p72-next-planmode-startup-prompt.md", "2026-04-02-post-p72-next-planmode-brief-prompt.md"]),
                 )
             )
@@ -157,8 +156,8 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(publication_readme_text, ["P72_post_p71_archive_polish_and_explicit_stop_handoff", "current archive polish and explicit stop handoff wave", "P69_post_h65_repo_graph_hygiene_inventory", "P70_post_p69_archive_index_and_artifact_policy_sync", "P71_post_p70_clean_descendant_merge_prep_readiness_sync", "hygiene-only control sidecars"]),
-                    contains_all(branch_registry_text, [CURRENT_BRANCH, PRESERVED_HYGIENE_BRANCH, PUBLISHED_BRANCH, f"{LOCAL_INTEGRATION_BRANCH}...{PUBLISHED_BRANCH} = {EXPECTED_P56_TO_P66_FACT}", f"origin/main...{PUBLISHED_BRANCH} = {EXPECTED_ORIGIN_MAIN_TO_P66_FACT}", "clean_descendant_only_never_dirty_root_main"]),
+                    contains_all(publication_readme_text, ["P72_post_p71_archive_polish_and_explicit_stop_handoff", "current archive polish and explicit stop handoff wave", "P74_post_p73_successor_publication_review", "P75_post_p74_published_successor_freeze", "P76_post_p75_release_hygiene_and_control_rebaseline", "current published successor promotion stack", "hygiene-only control sidecars"]),
+                    contains_all(branch_registry_text, [CURRENT_BRANCH, PRESERVED_HYGIENE_BRANCH, CURRENT_REVIEW_BRANCH, PUBLISHED_BRANCH, LOCAL_INTEGRATION_BRANCH, "origin/main...wip/p75-post-p74-published-successor-freeze", "clean_descendant_only_never_dirty_root_main"]),
                 )
             )
             else "blocked",
@@ -169,9 +168,9 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(release_preflight_text, ["P72 hygiene-only archive-polish and explicit-stop handoff sidecar", "P69/P70/P71 hygiene-only cleanup sidecars", "P66/P67/P68 published frozen successor stack", "H58 as the value-negative closeout", "H43 as the preserved paper-grade endpoint", "explicit stop or no further action"]),
-                    contains_all(release_candidate_text, ["H65/P56/P57/P58/P59/P66/P67/P68/F38", "P72 as the current archive-polish explicit-stop handoff sidecar", "P69/P70/P71 as hygiene-only cleanup sidecars", "do not widen the evidence ladder", "explicit stop or no further action"]),
-                    contains_all(submission_candidate_text, ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72_post_p71_archive_polish_and_explicit_stop_handoff", "P71_post_p70_clean_descendant_merge_prep_readiness_sync", "P70_post_p69_archive_index_and_artifact_policy_sync", "P69_post_h65_repo_graph_hygiene_inventory", "H58_post_r62_origin_value_boundary_closeout_packet", "H43_post_r44_useful_case_refreeze", "explicit stop or no further action", "do not authorize a runtime reopen"]),
+                    contains_all(release_preflight_text, ["P72 hygiene-only archive-polish and explicit-stop handoff sidecar", "P69/P70/P71 hygiene-only cleanup sidecars", "P74/P75/P76 successor promotion stack", "H58 as the value-negative closeout", "H43 as the preserved paper-grade endpoint", "explicit stop or no further action"]),
+                    contains_all(release_candidate_text, ["H65/P56/P57/P58/P59/P74/P75/P76/F38", "P72 as the current archive-polish explicit-stop handoff sidecar", "P69/P70/P71 as hygiene-only cleanup sidecars", "do not widen the evidence ladder", "explicit stop or no further action"]),
+                    contains_all(submission_candidate_text, ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72_post_p71_archive_polish_and_explicit_stop_handoff", "P71_post_p70_clean_descendant_merge_prep_readiness_sync", "P70_post_p69_archive_index_and_artifact_policy_sync", "P69_post_h65_repo_graph_hygiene_inventory", "P76_post_p75_release_hygiene_and_control_rebaseline", "P75_post_p74_published_successor_freeze", "P74_post_p73_successor_publication_review", "H58_post_r62_origin_value_boundary_closeout_packet", "H43_post_r44_useful_case_refreeze", "explicit stop or no further action", "do not authorize a runtime reopen"]),
                 )
             )
             else "blocked",
@@ -182,10 +181,10 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(submission_packet_index_text, ["P72/P71/P70/P69 entries below are hygiene-only control sidecars", "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72_post_p71_archive_polish_and_explicit_stop_handoff", "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json", "do not widen the paper-facing evidence bundle"]),
-                    contains_all(archival_manifest_text, ["P72/P71/P70/P69 summaries below are hygiene-only control sidecars", "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json", "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json", "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json", "results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json", "results/P69_post_h65_repo_graph_hygiene_inventory/summary.json", "do not change the paper-facing evidence boundary selected by H65"]),
-                    contains_all(release_summary_text, ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72", "P69/P70/P71", "archive-first terminal freeze", "explicit stop", "no further action"]),
-                    contains_all(review_boundary_text, ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72", "P69/P70/P71", "narrow positive mechanism support survives", "dormant no-go dossier at F38", "explicit stop", "no further action"]),
+                    contains_all(submission_packet_index_text, ["P72/P71/P70/P69 entries below are hygiene-only control sidecars", "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72_post_p71_archive_polish_and_explicit_stop_handoff", "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json", "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json", "results/P75_post_p74_published_successor_freeze/summary.json", "results/P74_post_p73_successor_publication_review/summary.json", "do not widen the paper-facing evidence bundle"]),
+                    contains_all(archival_manifest_text, ["P72/P71/P70/P69 summaries below are hygiene-only control sidecars", "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json", "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json", "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json", "results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json", "results/P69_post_h65_repo_graph_hygiene_inventory/summary.json", "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json", "results/P75_post_p74_published_successor_freeze/summary.json", "results/P74_post_p73_successor_publication_review/summary.json", "do not change the paper-facing evidence boundary selected by H65"]),
+                    contains_all(release_summary_text, ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72", "P69/P70/P71", "P74/P75/P76", "archive-first terminal freeze", "explicit stop", "no further action"]),
+                    contains_all(review_boundary_text, ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "P72", "P69/P70/P71", "P74/P75/P76", "narrow positive mechanism support survives", "dormant no-go dossier at F38", "explicit stop", "no further action"]),
                 )
             )
             else "blocked",
@@ -196,7 +195,7 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(current_stage_driver_text, ["P72_post_p71_archive_polish_and_explicit_stop_handoff", CURRENT_BRANCH, PRESERVED_HYGIENE_BRANCH, PUBLISHED_BRANCH, "explicit stop", "no further action", "later clean-descendant merge-prep planning only if a new external integration need appears", "clean_descendant_only_never_dirty_root_main"]),
+                    contains_all(current_stage_driver_text, ["P72_post_p71_archive_polish_and_explicit_stop_handoff", CURRENT_BRANCH, PRESERVED_HYGIENE_BRANCH, CURRENT_REVIEW_BRANCH, PUBLISHED_BRANCH, "P74_post_p73_successor_publication_review", "P75_post_p74_published_successor_freeze", "P76_post_p75_release_hygiene_and_control_rebaseline", "explicit stop", "no further action", "later clean-descendant merge-prep planning only if a new external integration need appears", "clean_descendant_only_never_dirty_root_main"]),
                     contains_all(handoff_text, [CURRENT_BRANCH, "explicit stop", "no further action", "later clean-descendant merge-prep planning only if a new external integration need appears", LOCAL_INTEGRATION_BRANCH, "clean_descendant_only_never_dirty_root_main", "runtime remains closed"]),
                     contains_all(startup_text, [CURRENT_BRANCH, "explicit stop", "no further action", "later clean-descendant merge-prep planning only if a new external integration need appears", LOCAL_INTEGRATION_BRANCH, "clean_descendant_only_never_dirty_root_main", "runtime remains closed"]),
                     contains_all(brief_text, [CURRENT_BRANCH, "explicit stop", "no further action", "later clean-descendant merge-prep planning only if a new external integration need appears", "dirty-root integration remains out of bounds"]),

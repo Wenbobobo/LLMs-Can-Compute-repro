@@ -72,7 +72,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
     temp_docs_readme = _write_text(
         "docs_readme.md",
         [
-            "H65 + P73 + P72 + P69/P70/P71",
+            "H65 + P73 + P74/P75/P76 + P72 + P69/P70/P71",
             "branch_worktree_registry.md",
             "plans/README.md",
         ],
@@ -81,6 +81,9 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
         "milestones_readme.md",
         [
             "P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync",
+            "P74_post_p73_successor_publication_review",
+            "P75_post_p74_published_successor_freeze",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
         ],
     )
@@ -105,6 +108,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
         [
             "wip/p73-post-p72-hygiene-shrink-mergeprep",
             str(module.ROOT).replace("\\", "/"),
+            "wip/p74-post-p73-successor-publication-review",
             "wip/p72-post-p71-archive-polish-stop-handoff",
             "D:/zWenbo/AI/wt/",
             "D:/zWenbo/AI/LLMCompute-worktrees/",
@@ -116,9 +120,10 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
         "keep_set.md",
         [
             "wip/p73-post-p72-hygiene-shrink-mergeprep",
+            "wip/p74-post-p73-successor-publication-review",
             "wip/p72-post-p71-archive-polish-stop-handoff",
             "wip/p69-post-h65-hygiene-only-cleanup",
-            "wip/p66-post-p65-published-successor-freeze",
+            "wip/p75-post-p74-published-successor-freeze",
             "wip/p56-main-scratch",
             "wip/root-main-parking-2026-03-24",
             "wip/r33-next",
@@ -142,7 +147,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
             "wip/p73-post-p72-hygiene-shrink-mergeprep",
             "wip/p72-post-p71-archive-polish-stop-handoff",
             "wip/p69-post-h65-hygiene-only-cleanup",
-            "wip/p66-post-p65-published-successor-freeze",
+            "wip/p75-post-p74-published-successor-freeze",
             "wip/p56-main-scratch",
             "legacy local worktree footprint has already been shrunk",
             "remaining legacy-path worktrees",
@@ -157,7 +162,7 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
             "wip/p73-post-p72-hygiene-shrink-mergeprep",
             "wip/p72-post-p71-archive-polish-stop-handoff",
             "wip/p69-post-h65-hygiene-only-cleanup",
-            "wip/p66-post-p65-published-successor-freeze",
+            "wip/p75-post-p74-published-successor-freeze",
             "wip/p56-main-scratch",
             "legacy-path worktree count: `2`",
             "wip/h27-promotion",
@@ -290,3 +295,4 @@ def test_export_p73_writes_legacy_worktree_shrink_inventory_summary(tmp_path: Pa
     assert payload["summary"]["legacy_blocked_dirty_count"] == 1
     assert payload["summary"]["legacy_misplaced_live_count"] == 0
     assert payload["summary"]["blocked_count"] == 0
+

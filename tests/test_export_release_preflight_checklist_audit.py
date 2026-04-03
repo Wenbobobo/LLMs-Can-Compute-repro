@@ -41,10 +41,10 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "README.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P66_post_p65_successor_publication_review`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
-            "`wip/p66-post-p65-published-successor-freeze`",
+            "`P74_post_p73_successor_publication_review`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
+            "`wip/p75-post-p74-published-successor-freeze`",
             "`explicit_archive_stop_or_hygiene_only`",
         ],
     )
@@ -52,9 +52,9 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "STATUS.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P66_post_p65_successor_publication_review`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`P74_post_p73_successor_publication_review`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
             "`F38_post_h62_r63_dormant_eligibility_profile_dossier`",
         ],
     )
@@ -74,10 +74,10 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         [
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
-            "P66_post_p65_successor_publication_review",
-            "P67_post_p66_published_successor_freeze",
-            "P68_post_p67_release_hygiene_and_control_rebaseline",
-            "current published frozen successor stack",
+            "P74_post_p73_successor_publication_review",
+            "P75_post_p74_published_successor_freeze",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
+            "current published successor promotion stack",
         ],
     )
     _write_rel_text(
@@ -85,10 +85,10 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
-            "`P66_post_p65_successor_publication_review`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
-            "`wip/p66-post-p65-published-successor-freeze`",
+            "`P74_post_p73_successor_publication_review`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
+            "`wip/p75-post-p74-published-successor-freeze`",
             "`explicit_archive_stop_or_hygiene_only`",
             "explicit stop",
             "no further action",
@@ -98,15 +98,15 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/plans/README.md",
         [
             "2026-04-02-post-p71-archive-polish-stop-handoff-design.md",
-            "2026-04-02-post-p72-next-planmode-handoff.md",
+            "2026-04-03-post-p76-next-planmode-handoff.md",
             "2026-04-02-post-p72-next-planmode-startup-prompt.md",
             "2026-04-02-post-p72-next-planmode-brief-prompt.md",
             "2026-04-01-post-p65-successor-publication-freeze-design.md",
             "2026-04-01-post-h65-next-planmode-handoff.md",
             "2026-04-01-post-h65-next-planmode-startup-prompt.md",
-            "P66_post_p65_successor_publication_review",
-            "P67_post_p66_published_successor_freeze",
-            "P68_post_p67_release_hygiene_and_control_rebaseline",
+            "P74_post_p73_successor_publication_review",
+            "P75_post_p74_published_successor_freeze",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
         ],
     )
     _write_rel_text(
@@ -115,9 +115,8 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P72`",
             "`P56/P57/P58/P59`",
-            "`P69/P70/P71`",
             "`P66/P67/P68`",
-            "`wip/p66-post-p65-published-successor-freeze`",
+            "`wip/p75-post-p74-published-successor-freeze`",
             "archive-first terminal freeze",
             "R63 remains dormant, non-runtime",
             "explicit stop",
@@ -129,7 +128,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         [
             "`P72` hygiene-only archive-polish and explicit-stop handoff sidecar",
             "`P69/P70/P71` hygiene-only cleanup sidecars",
-            "`P66/P67/P68` published frozen successor stack",
+            "`P74/P75/P76` successor promotion stack",
             "`H64/P56/P57/P58/P59/F38` foundation",
             "`H58` as the value-negative closeout",
             "`H43` as the preserved paper-grade endpoint",
@@ -139,7 +138,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/release_candidate_checklist.md",
         [
-            "`H65/P56/P57/P58/P59/P66/P67/P68/F38`",
+            "`H65/P56/P57/P58/P59/P74/P75/P76/F38`",
             "`P72` as the current archive-polish explicit-stop handoff sidecar",
             "`P69/P70/P71` as hygiene-only cleanup sidecars",
             "`P69/P70/P71` do not widen the evidence ladder",
@@ -156,9 +155,9 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
             "`P71_post_p70_clean_descendant_merge_prep_readiness_sync`",
             "`P70_post_p69_archive_index_and_artifact_policy_sync`",
             "`P69_post_h65_repo_graph_hygiene_inventory`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P66_post_p65_successor_publication_review`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P74_post_p73_successor_publication_review`",
             "`H58_post_r62_origin_value_boundary_closeout_packet`",
             "`H43_post_r44_useful_case_refreeze`",
             "do not authorize a runtime reopen",
@@ -168,9 +167,9 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
     _write_rel_text(
         "docs/publication_record/claim_ladder.md",
         [
-            "| P66 Successor publication review |",
-            "| P67 Published successor freeze |",
-            "| P68 Release hygiene and control rebaseline |",
+            "| P74 Successor publication review |",
+            "| P75 Published successor freeze |",
+            "| P76 Release hygiene and control rebaseline |",
         ],
     )
     _write_rel_text(
@@ -178,9 +177,9 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         [
             "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
-            "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
-            "results/P67_post_p66_published_successor_freeze/summary.json",
-            "results/P66_post_p65_successor_publication_review/summary.json",
+            "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+            "results/P75_post_p74_published_successor_freeze/summary.json",
+            "results/P74_post_p73_successor_publication_review/summary.json",
             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
         ],
     )
@@ -188,9 +187,9 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         "docs/publication_record/paper_bundle_status.md",
         [
             "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
-            "`P66_post_p65_successor_publication_review`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`P74_post_p73_successor_publication_review`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
             "archive-first terminal-freeze and explicit-stop framing",
         ],
     )
@@ -200,6 +199,7 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P72`",
             "`P56/P57/P58/P59`",
+            "`P74/P75/P76`",
             "narrow positive mechanism support survives",
             "the only remaining future route is a dormant no-go dossier at `F38`",
             "explicit stop",
@@ -250,16 +250,16 @@ def test_export_release_preflight_checklist_audit_summary(tmp_path: Path) -> Non
         },
     )
     _write_rel_json(
-        "results/P66_post_p65_successor_publication_review/summary.json",
-        {"summary": {"selected_outcome": "successor_publication_review_supports_p67_freeze"}},
+        "results/P74_post_p73_successor_publication_review/summary.json",
+        {"summary": {"selected_outcome": "successor_publication_review_supports_p75_freeze"}},
     )
     _write_rel_json(
-        "results/P67_post_p66_published_successor_freeze/summary.json",
-        {"summary": {"selected_outcome": "published_successor_freeze_locked_after_p66_review"}},
+        "results/P75_post_p74_published_successor_freeze/summary.json",
+        {"summary": {"selected_outcome": "published_successor_freeze_locked_after_p74_review"}},
     )
     _write_rel_json(
-        "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
-        {"summary": {"selected_outcome": "published_frozen_successor_release_hygiene_and_control_rebaselined"}},
+        "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+        {"summary": {"selected_outcome": "published_successor_release_hygiene_and_control_rebaselined_after_p75"}},
     )
     _write_rel_json("results/P56_post_h64_clean_merge_candidate_packet/summary.json", {"summary": {"selected_outcome": "clean_descendant_merge_candidate_staged_without_merge_execution"}})
     _write_rel_json(
@@ -333,7 +333,8 @@ def test_publication_record_readme_mentions_current_published_frozen_successor_s
         / "README.md"
     ).read_text(encoding="utf-8")
 
-    assert "current published frozen successor stack" in text
-    assert "../milestones/P66_post_p65_successor_publication_review/" in text
-    assert "../milestones/P67_post_p66_published_successor_freeze/" in text
-    assert "../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/" in text
+    assert "current published successor promotion stack" in text
+    assert "../milestones/P74_post_p73_successor_publication_review/" in text
+    assert "../milestones/P75_post_p74_published_successor_freeze/" in text
+    assert "../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/" in text
+

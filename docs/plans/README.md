@@ -7,15 +7,22 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
-- `2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
-  current design for the post-`P72` hygiene/shrink and dossier-prep phase
-- `2026-04-02-post-p73-next-planmode-handoff.md`
-  current shortest handoff from the live `H65 + P73 + P72 + P69/P70/P71 +
-  P56/P57/P58/P59 + P66/P67/P68 + F38` state into the next planning round
-- `2026-04-02-post-p73-next-planmode-startup-prompt.md`
+- `2026-04-03-post-p76-next-planmode-handoff.md`
+  current shortest handoff from the live `H65 + P73 + P74/P75/P76 + P72 +
+  P69/P70/P71 + P56/P57/P58/P59 + F38` state into the next planning round
+- `2026-04-03-post-p76-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `2026-04-02-post-p73-next-planmode-brief-prompt.md`
+- `2026-04-03-post-p76-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
+- `2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
+  preserved design for the post-`P72` hygiene/shrink and dossier-prep phase
+- `2026-04-02-post-p73-next-planmode-handoff.md`
+  preserved shortest handoff from the live `H65 + P73 + P72 + P69/P70/P71 +
+  P56/P57/P58/P59 + P66/P67/P68 + F38` state into the prior planning round
+- `2026-04-02-post-p73-next-planmode-startup-prompt.md`
+  preserved ready-to-paste startup prompt for the prior `plan mode` round
+- `2026-04-02-post-p73-next-planmode-brief-prompt.md`
+  preserved short startup prompt for the prior `plan mode` round
 - `2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
   current design for the post-`P71` archive polish and explicit-stop handoff
   phase
@@ -63,12 +70,18 @@ driver and machine-readable `results/` summaries first.
   current tight-core branch/worktree registry and merge posture control note
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
-- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
+- `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
   current release hygiene and control rebaseline wave
-- `../milestones/P67_post_p66_published_successor_freeze/`
+- `../milestones/P75_post_p74_published_successor_freeze/`
   current published successor freeze wave
-- `../milestones/P66_post_p65_successor_publication_review/`
+- `../milestones/P74_post_p73_successor_publication_review/`
   current successor publication review wave
+- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
+  preserved prior release hygiene and control rebaseline wave
+- `../milestones/P67_post_p66_published_successor_freeze/`
+  preserved prior published successor freeze wave
+- `../milestones/P66_post_p65_successor_publication_review/`
+  preserved prior successor publication review wave
 - `../milestones/P65_post_p64_merge_prep_control_sync/`
   preserved prior merge-prep control sync wave
 - `../milestones/P64_post_p63_release_hygiene_rebaseline/`
@@ -98,17 +111,25 @@ driver and machine-readable `results/` summaries first.
   `P69 -> P70 -> P71`
 - current local hygiene and shrink sidecar:
   `P73`
+- current successor promotion stack:
+  `P74 -> P75 -> P76`
 - current archive polish and explicit stop handoff sidecar:
   `P72`
-- current published frozen successor stack:
-  `P66 -> P67 -> P68 -> H65`
-- preserved prior successor stack:
+- current active docs-only packet:
+  `H65`
+- preserved prior published successor stack:
+  `P66 -> P67 -> P68`
+- preserved deeper successor stack:
   `P63 -> P64 -> P65`
 - preserved older published clean-descendant stack:
   `P60 -> P61 -> P62`
+- current successor review branch:
+  `wip/p74-post-p73-successor-publication-review`
 - current published freeze branch:
+  `wip/p75-post-p74-published-successor-freeze`
+- preserved prior published freeze branch:
   `wip/p66-post-p65-published-successor-freeze`
-- preserved prior review branch:
+- preserved deeper prior review branch:
   `wip/p64-post-p63-successor-stack`
 - current dormant future dossier:
   `F38`
@@ -134,6 +155,9 @@ driver and machine-readable `results/` summaries first.
 - `../README.md`
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-04-03-post-p76-next-planmode-handoff.md`
+- `2026-04-03-post-p76-next-planmode-startup-prompt.md`
+- `2026-04-03-post-p76-next-planmode-brief-prompt.md`
 - `2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
 - `2026-04-02-post-p73-next-planmode-handoff.md`
 - `2026-04-02-post-p73-next-planmode-startup-prompt.md`
@@ -158,6 +182,9 @@ driver and machine-readable `results/` summaries first.
 - `2026-04-01-post-p63-next-planmode-brief-prompt.md`
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
 - `../milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
+- `../milestones/P74_post_p73_successor_publication_review/`
+- `../milestones/P75_post_p74_published_successor_freeze/`
+- `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
 - `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
 - `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
@@ -176,6 +203,9 @@ driver and machine-readable `results/` summaries first.
 - `../milestones/F38_post_h62_r63_dormant_eligibility_profile_dossier/`
 - `../../results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
 - `../../results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/summary.json`
+- `../../results/P74_post_p73_successor_publication_review/summary.json`
+- `../../results/P75_post_p74_published_successor_freeze/summary.json`
+- `../../results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`
 - `../../results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json`
 - `../../results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
 - `../../results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json`

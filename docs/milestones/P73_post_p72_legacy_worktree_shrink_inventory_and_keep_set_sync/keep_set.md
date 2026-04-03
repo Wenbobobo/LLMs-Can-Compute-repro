@@ -4,13 +4,16 @@ Preferred active and preserved branches for the current phase:
 
 - current local hygiene and shrink branch:
   `wip/p73-post-p72-hygiene-shrink-mergeprep`
+- current successor publication review branch:
+  `wip/p74-post-p73-successor-publication-review`
 - preserved archive-polish explicit-stop handoff branch:
   `wip/p72-post-p71-archive-polish-stop-handoff`
 - preserved hygiene-only cleanup branch:
   `wip/p69-post-h65-hygiene-only-cleanup`
 - live published clean descendant:
-  `wip/p66-post-p65-published-successor-freeze`
+  `wip/p75-post-p74-published-successor-freeze`
 - preserved prior review lineage:
+  `wip/p66-post-p65-published-successor-freeze`,
   `wip/p64-post-p63-successor-stack`,
   `wip/p63-post-p62-tight-core-hygiene`,
   `wip/p60-post-p59-published-clean-descendant-prep`

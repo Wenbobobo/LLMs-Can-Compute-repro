@@ -6,11 +6,13 @@ execution.
 Only admissible later route if a new external integration need appears:
 
 - start from `wip/p56-main-scratch`
-- target `wip/p66-post-p65-published-successor-freeze`
+- target `wip/p75-post-p74-published-successor-freeze`
 - keep `wip/p72-post-p71-archive-polish-stop-handoff` as a preserved archive
   handoff branch, not the published branch
 - keep `wip/p73-post-p72-hygiene-shrink-mergeprep` as local hygiene/dossier
   control only
+- keep `wip/p74-post-p73-successor-publication-review` as review provenance
+  only
 - never route any integration work through dirty root `main`
 
 Guardrails:

@@ -4,7 +4,7 @@ P72/P71/P70/P69 entries below are hygiene-only control sidecars.
 
 The first four `P72/P71/P70/P69` entries below are hygiene-only control sidecars.
 They keep the archive/control surfaces synchronized and do not widen the
-paper-facing evidence bundle beyond `H65/P66/P67/P68/H58/H43`.
+paper-facing evidence bundle beyond `H65/P74/P75/P76/H58/H43`.
 
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
 - `P72_post_p71_archive_polish_and_explicit_stop_handoff`
@@ -12,6 +12,9 @@ paper-facing evidence bundle beyond `H65/P66/P67/P68/H58/H43`.
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
 - `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
 - `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`
+- `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
+- `../milestones/P75_post_p74_published_successor_freeze/`
+- `../milestones/P74_post_p73_successor_publication_review/`
 - `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
 - `../milestones/P67_post_p66_published_successor_freeze/`
 - `../milestones/P66_post_p65_successor_publication_review/`
@@ -30,6 +33,9 @@ Current machine-readable anchors:
 - `results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
 - `results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json`
 - `results/P69_post_h65_repo_graph_hygiene_inventory/summary.json`
+- `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`
+- `results/P75_post_p74_published_successor_freeze/summary.json`
+- `results/P74_post_p73_successor_publication_review/summary.json`
 - `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`
 - `results/P67_post_p66_published_successor_freeze/summary.json`
 - `results/P66_post_p65_successor_publication_review/summary.json`

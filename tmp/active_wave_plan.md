@@ -13,17 +13,19 @@ Current scientific/control stack:
 - current merge-prep readiness sync wave:
   `P71_post_p70_clean_descendant_merge_prep_readiness_sync`;
 - current successor publication review wave:
-  `P66_post_p65_successor_publication_review`;
+  `P74_post_p73_successor_publication_review`;
 - current published successor freeze wave:
-  `P67_post_p66_published_successor_freeze`;
+  `P75_post_p74_published_successor_freeze`;
 - current release hygiene and control rebaseline wave:
-  `P68_post_p67_release_hygiene_and_control_rebaseline`;
+  `P76_post_p75_release_hygiene_and_control_rebaseline`;
 - current hygiene-only cleanup branch:
   `wip/p69-post-h65-hygiene-only-cleanup`;
 - current published clean descendant branch:
-  `wip/p66-post-p65-published-successor-freeze`;
+  `wip/p75-post-p74-published-successor-freeze`;
+- current successor publication review branch:
+  `wip/p74-post-p73-successor-publication-review`;
 - preserved prior successor review branch:
-  `wip/p64-post-p63-successor-stack`;
+  `wip/p74-post-p73-successor-publication-review`;
 - current docs router:
   `docs/README.md`;
 - current branch/worktree registry:
@@ -54,15 +56,12 @@ Current scientific/control stack:
 
 Immediate active wave:
 
-`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet` is the current
-docs-only packet on the frozen published successor clean descendant, with
-`P71_post_p70_clean_descendant_merge_prep_readiness_sync`,
-`P70_post_p69_archive_index_and_artifact_policy_sync`,
-`P69_post_h65_repo_graph_hygiene_inventory`,
-`P68_post_p67_release_hygiene_and_control_rebaseline`,
-`P67_post_p66_published_successor_freeze`, and
-`P66_post_p65_successor_publication_review` already landed above the preserved
-`H64 + P56/P57/P58/P59` foundation.
+`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet` remains the
+current docs-only packet, while `P74_post_p73_successor_publication_review`,
+`P75_post_p74_published_successor_freeze`, and
+`P76_post_p75_release_hygiene_and_control_rebaseline` now form the current
+successor promotion stack above the preserved `P72/P69/P70/P71` sidecars and
+the landed `H64 + P56/P57/P58/P59` foundation.
 
 Immediate local follow-through:
 
@@ -75,10 +74,16 @@ explicit stop-ready closeout posture.
 - the current hygiene-only cleanup branch is
   `wip/p69-post-h65-hygiene-only-cleanup`;
 - the current published clean descendant branch is
-  `wip/p66-post-p65-published-successor-freeze`;
+  `wip/p75-post-p74-published-successor-freeze`;
+- the current successor publication review branch is
+  `wip/p74-post-p73-successor-publication-review`;
 - the preserved prior published clean descendant branch is
-  `wip/p63-post-p62-tight-core-hygiene`;
+  `wip/p66-post-p65-published-successor-freeze`;
 - the preserved prior successor review branch is
+  `wip/p74-post-p73-successor-publication-review`;
+- the deeper preserved prior published clean descendant branch is
+  `wip/p63-post-p62-tight-core-hygiene`;
+- the deeper preserved prior successor review branch is
   `wip/p64-post-p63-successor-stack`;
 - the preserved older published clean descendant branch is
   `wip/p60-post-p59-published-clean-descendant-prep`;

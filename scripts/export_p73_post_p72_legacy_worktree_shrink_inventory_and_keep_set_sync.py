@@ -30,7 +30,8 @@ CURRENT_BRANCH = "wip/p73-post-p72-hygiene-shrink-mergeprep"
 CURRENT_BRANCH_PATH = "D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep"
 P72_BRANCH = "wip/p72-post-p71-archive-polish-stop-handoff"
 P69_BRANCH = "wip/p69-post-h65-hygiene-only-cleanup"
-P66_BRANCH = "wip/p66-post-p65-published-successor-freeze"
+CURRENT_REVIEW_BRANCH = "wip/p74-post-p73-successor-publication-review"
+PUBLISHED_BRANCH = "wip/p75-post-p74-published-successor-freeze"
 P56_BRANCH = "wip/p56-main-scratch"
 ROOT_MAIN_BRANCH = "wip/root-main-parking-2026-03-24"
 LEGACY_PREFIX = "D:/zWenbo/AI/LLMCompute-worktrees/"
@@ -130,7 +131,7 @@ def classify_legacy_rows(worktrees: list[dict[str, str]]) -> dict[str, list[dict
         "blocked_dirty": [],
         "misplaced_live_branch": [],
     }
-    live_branches = {CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P66_BRANCH, P56_BRANCH, ROOT_MAIN_BRANCH}
+    live_branches = {CURRENT_BRANCH, CURRENT_REVIEW_BRANCH, P72_BRANCH, P69_BRANCH, PUBLISHED_BRANCH, P56_BRANCH, ROOT_MAIN_BRANCH}
     for row in worktrees:
         path = row["worktree"]
         if not path.startswith(LEGACY_PREFIX):
@@ -210,8 +211,8 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(docs_readme_text, ["H65 + P73 + P72 + P69/P70/P71", "branch_worktree_registry.md", "plans/README.md"]),
-                    contains_all(milestones_readme_text, ["P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync", "P72_post_p71_archive_polish_and_explicit_stop_handoff"]),
+                    contains_all(docs_readme_text, ["H65 + P73 + P74/P75/P76 + P72 + P69/P70/P71", "branch_worktree_registry.md", "plans/README.md"]),
+                    contains_all(milestones_readme_text, ["P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync", "P74_post_p73_successor_publication_review", "P75_post_p74_published_successor_freeze", "P76_post_p75_release_hygiene_and_control_rebaseline", "P72_post_p71_archive_polish_and_explicit_stop_handoff"]),
                     contains_all(plans_readme_text, ["2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md", "2026-04-02-post-p73-next-planmode-handoff.md", "2026-04-02-post-p73-next-planmode-startup-prompt.md", "2026-04-02-post-p73-next-planmode-brief-prompt.md"]),
                     contains_all(publication_readme_text, ["P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync", "current local hygiene and shrink wave"]),
                 )
@@ -227,6 +228,7 @@ def main() -> None:
                 [
                     CURRENT_BRANCH,
                     CURRENT_BRANCH_PATH,
+                    CURRENT_REVIEW_BRANCH,
                     P72_BRANCH,
                     "D:/zWenbo/AI/wt/",
                     "D:/zWenbo/AI/LLMCompute-worktrees/",
@@ -242,7 +244,7 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(keep_set_text, [CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P66_BRANCH, P56_BRANCH, ROOT_MAIN_BRANCH, "wip/r33-next", "D:/zWenbo/AI/wt/"]),
+                    contains_all(keep_set_text, [CURRENT_BRANCH, CURRENT_REVIEW_BRANCH, P72_BRANCH, P69_BRANCH, PUBLISHED_BRANCH, P56_BRANCH, ROOT_MAIN_BRANCH, "wip/r33-next", "D:/zWenbo/AI/wt/"]),
                     contains_all(shrink_runbook_text, [LEGACY_PREFIX, "git worktree remove", "never touch", ROOT_MAIN_WORKTREE, "do not remove dirty worktrees", "branch refs remain preserved"]),
                 )
             )
@@ -254,8 +256,8 @@ def main() -> None:
             "status": "pass"
             if all(
                 (
-                    contains_all(handoff_text, [CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P66_BRANCH, P56_BRANCH, "legacy local worktree footprint has already been shrunk", "remaining legacy-path worktrees", "wip/h27-promotion", "wip/r33-next", "clean_descendant_only_never_dirty_root_main"]),
-                    contains_all(startup_text, [CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P66_BRANCH, P56_BRANCH, "legacy-path worktree count: `2`", "wip/h27-promotion", "wip/r33-next", "Runtime remains closed"]),
+                    contains_all(handoff_text, [CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P56_BRANCH, "legacy local worktree footprint has already been shrunk", "remaining legacy-path worktrees", "wip/h27-promotion", "wip/r33-next", "clean_descendant_only_never_dirty_root_main"]),
+                    contains_all(startup_text, [CURRENT_BRANCH, P72_BRANCH, P69_BRANCH, P56_BRANCH, "legacy-path worktree count: `2`", "wip/h27-promotion", "wip/r33-next", "Runtime remains closed"]),
                     contains_all(brief_text, [CURRENT_BRANCH, "legacy-path worktree count: `2`", "wip/h27-promotion", "wip/r33-next", "dirty-root integration remains out of bounds"]),
                 )
             )

@@ -11,15 +11,22 @@ facing control surfaces.
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current tight-core branch/worktree registry and hygiene control note
+- `../plans/2026-04-03-post-p76-next-planmode-handoff.md`
+  current shortest handoff from the post-`P76` successor-promotion state into
+  the next planning round
+- `../plans/2026-04-03-post-p76-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `../plans/2026-04-03-post-p76-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `../plans/2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md`
-  current design for the post-`P72` hygiene/shrink and dossier-prep phase
+  preserved design for the post-`P72` hygiene/shrink and dossier-prep phase
 - `../plans/2026-04-02-post-p73-next-planmode-handoff.md`
-  current shortest handoff from the post-shrink `P73` state into the next
+  preserved shortest handoff from the post-shrink `P73` state into the next
   planning round
 - `../plans/2026-04-02-post-p73-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved ready-to-paste startup prompt for the prior `plan mode` round
 - `../plans/2026-04-02-post-p73-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved short startup prompt for the prior `plan mode` round
 - `../plans/2026-04-02-post-p71-archive-polish-stop-handoff-design.md`
   current design for the post-`P71` archive polish and explicit stop handoff
   phase
@@ -42,12 +49,18 @@ facing control surfaces.
   current archive index and artifact policy sync wave
 - `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`
   current repo graph hygiene inventory wave
-- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
+- `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
   current release hygiene and control rebaseline wave
-- `../milestones/P67_post_p66_published_successor_freeze/`
+- `../milestones/P75_post_p74_published_successor_freeze/`
   current published successor freeze wave
-- `../milestones/P66_post_p65_successor_publication_review/`
+- `../milestones/P74_post_p73_successor_publication_review/`
   current successor publication review wave
+- `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`
+  preserved prior release hygiene and control rebaseline wave
+- `../milestones/P67_post_p66_published_successor_freeze/`
+  preserved prior published successor freeze wave
+- `../milestones/P66_post_p65_successor_publication_review/`
+  preserved prior successor publication review wave
 - `../milestones/P65_post_p64_merge_prep_control_sync/`
   preserved prior merge-prep control sync wave
 - `../milestones/P64_post_p63_release_hygiene_rebaseline/`
@@ -77,7 +90,11 @@ facing control surfaces.
   `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`,
   `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`,
   `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
-- current published frozen successor stack:
+- current published successor promotion stack:
+  `../milestones/P74_post_p73_successor_publication_review/`,
+  `../milestones/P75_post_p74_published_successor_freeze/`,
+  `../milestones/P76_post_p75_release_hygiene_and_control_rebaseline/`
+- preserved prior published successor stack:
   `../milestones/P66_post_p65_successor_publication_review/`,
   `../milestones/P67_post_p66_published_successor_freeze/`,
   `../milestones/P68_post_p67_release_hygiene_and_control_rebaseline/`

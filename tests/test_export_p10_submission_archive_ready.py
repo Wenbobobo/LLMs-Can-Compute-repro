@@ -41,9 +41,9 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         "README.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P66_post_p65_successor_publication_review`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`P74_post_p73_successor_publication_review`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
             "`explicit_archive_stop_or_hygiene_only`",
         ],
     )
@@ -51,9 +51,9 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         "STATUS.md",
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P66_post_p65_successor_publication_review`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`P74_post_p73_successor_publication_review`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
         ],
     )
     _write_rel_text(
@@ -61,9 +61,9 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         [
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
-            "P66_post_p65_successor_publication_review",
-            "P67_post_p66_published_successor_freeze",
-            "P68_post_p67_release_hygiene_and_control_rebaseline",
+            "P74_post_p73_successor_publication_review",
+            "P75_post_p74_published_successor_freeze",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
         ],
     )
     _write_rel_text(
@@ -71,9 +71,9 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         [
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
             "`P72_post_p71_archive_polish_and_explicit_stop_handoff`",
-            "`P66_post_p65_successor_publication_review`",
-            "`P67_post_p66_published_successor_freeze`",
-            "`P68_post_p67_release_hygiene_and_control_rebaseline`",
+            "`P74_post_p73_successor_publication_review`",
+            "`P75_post_p74_published_successor_freeze`",
+            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
             "`explicit_archive_stop_or_hygiene_only`",
             "explicit stop",
             "no further action",
@@ -86,10 +86,10 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
             "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
-            "P68_post_p67_release_hygiene_and_control_rebaseline",
-            "P67_post_p66_published_successor_freeze",
-            "P66_post_p65_successor_publication_review",
-            "results/P66_post_p65_successor_publication_review/summary.json",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
+            "P75_post_p74_published_successor_freeze",
+            "P74_post_p73_successor_publication_review",
+            "results/P74_post_p73_successor_publication_review/summary.json",
             "do not widen the paper-facing evidence bundle",
         ],
     )
@@ -99,9 +99,9 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
             "P72/P71/P70/P69 summaries below are hygiene-only control sidecars",
             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
             "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
-            "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
-            "results/P67_post_p66_published_successor_freeze/summary.json",
-            "results/P66_post_p65_successor_publication_review/summary.json",
+            "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+            "results/P75_post_p74_published_successor_freeze/summary.json",
+            "results/P74_post_p73_successor_publication_review/summary.json",
             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
             "do not change the paper-facing evidence boundary selected by H65",
         ],
@@ -158,16 +158,16 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         },
     )
     _write_rel_json(
-        "results/P66_post_p65_successor_publication_review/summary.json",
-        {"summary": {"selected_outcome": "successor_publication_review_supports_p67_freeze"}},
+        "results/P74_post_p73_successor_publication_review/summary.json",
+        {"summary": {"selected_outcome": "successor_publication_review_supports_p75_freeze"}},
     )
     _write_rel_json(
-        "results/P67_post_p66_published_successor_freeze/summary.json",
-        {"summary": {"selected_outcome": "published_successor_freeze_locked_after_p66_review"}},
+        "results/P75_post_p74_published_successor_freeze/summary.json",
+        {"summary": {"selected_outcome": "published_successor_freeze_locked_after_p74_review"}},
     )
     _write_rel_json(
-        "results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json",
-        {"summary": {"selected_outcome": "published_frozen_successor_release_hygiene_and_control_rebaselined"}},
+        "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+        {"summary": {"selected_outcome": "published_successor_release_hygiene_and_control_rebaselined_after_p75"}},
     )
     _write_rel_json(
         "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
@@ -233,3 +233,4 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
     assert payload["summary"]["blocked_count"] == 0
     assert "P72/P71/P70/P69 remain hygiene-only archive/control sidecars" in payload["summary"]["recommended_next_action"]
     assert "explicit stop or no further action is now the recommended downstream route" in payload["summary"]["recommended_next_action"]
+

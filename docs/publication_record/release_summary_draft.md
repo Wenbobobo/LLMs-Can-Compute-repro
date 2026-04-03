@@ -8,11 +8,13 @@
   `P69/P70/P71`
 - landed foundation:
   `P56/P57/P58/P59`
-- current frozen successor stack:
-  `P66/P67/P68`
+- current successor promotion stack:
+  `P74/P75/P76`
 - current published clean descendant branch:
-  `wip/p66-post-p65-published-successor-freeze`
-- preserved prior successor stack:
+  `wip/p75-post-p74-published-successor-freeze`
+- preserved prior published successor stack:
+  `P66/P67/P68`
+- preserved deeper successor stack:
   `P63/P64/P65`
 - preserved older published clean-descendant stack:
   `P60/P61/P62`

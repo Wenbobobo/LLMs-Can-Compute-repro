@@ -28,15 +28,15 @@ The current merge-prep readiness sync wave is:
 
 The current successor publication review wave is:
 
-- `P66_post_p65_successor_publication_review`
+- `P74_post_p73_successor_publication_review`
 
 The current published successor freeze wave is:
 
-- `P67_post_p66_published_successor_freeze`
+- `P75_post_p74_published_successor_freeze`
 
 The current release hygiene and control rebaseline wave is:
 
-- `P68_post_p67_release_hygiene_and_control_rebaseline`
+- `P76_post_p75_release_hygiene_and_control_rebaseline`
 
 The current hygiene-only cleanup branch is:
 
@@ -46,13 +46,17 @@ The current local hygiene and shrink branch is:
 
 - `wip/p73-post-p72-hygiene-shrink-mergeprep`
 
+The current successor publication review branch is:
+
+- `wip/p74-post-p73-successor-publication-review`
+
 The current archive polish and explicit stop handoff branch is:
 
 - `wip/p72-post-p71-archive-polish-stop-handoff`
 
 The current published clean descendant branch is:
 
-- `wip/p66-post-p65-published-successor-freeze`
+- `wip/p75-post-p74-published-successor-freeze`
 
 The current docs router is:
 
@@ -62,17 +66,31 @@ The current branch/worktree registry is:
 
 - `docs/branch_worktree_registry.md`
 
-The preserved prior successor stack is:
+The preserved prior published successor stack is:
+
+- `P66_post_p65_successor_publication_review`
+- `P67_post_p66_published_successor_freeze`
+- `P68_post_p67_release_hygiene_and_control_rebaseline`
+
+The preserved prior published clean-descendant branch is:
+
+- `wip/p66-post-p65-published-successor-freeze`
+
+The preserved prior successor review branch is:
+
+- `wip/p74-post-p73-successor-publication-review`
+
+The preserved deeper successor stack is:
 
 - `P63_post_p62_published_successor_promotion_prep`
 - `P64_post_p63_release_hygiene_rebaseline`
 - `P65_post_p64_merge_prep_control_sync`
 
-The preserved prior published clean-descendant branch is:
+The preserved deeper prior published clean-descendant branch is:
 
 - `wip/p63-post-p62-tight-core-hygiene`
 
-The preserved prior successor review branch is:
+The preserved deeper prior successor review branch is:
 
 - `wip/p64-post-p63-successor-stack`
 
@@ -109,19 +127,12 @@ The default downstream lane is:
 
 - `P56/P57/P58/P59` remain the landed follow-through foundation under the
   preserved `H64` packet.
-- `P66` reviews the exact `p63..p64` successor delta and keeps the publication
-  decision scoped to docs/export/control/release surfaces.
-- `P67` promotes `wip/p66-post-p65-published-successor-freeze` into the live
-  published clean descendant above the preserved `P63/P64/P65` stack.
-- `P68` reanchors release hygiene, preflight, archive-ready posture, and
-  current control on `wip/p66-post-p65-published-successor-freeze` while
-  expecting `clean_worktree_ready_if_other_gates_green`.
 - `P69` inventories the post-`H65` keep set, records root-main quarantine,
-  and freezes the `p56..p66` plus `origin/main..p66` topology facts.
+  and freezes the prior published clean-descendant topology facts.
 - `P70` syncs archive/publication/planning indexes and the standing artifact
   policy to the `H65 + P69` hygiene-only cleanup state.
 - `P71` records the only admissible later merge-prep readiness route from
-  `wip/p56-main-scratch` to `wip/p66-post-p65-published-successor-freeze`
+  `wip/p56-main-scratch` to the prior published clean descendant
   without executing any merge.
 - `P72` normalizes archive-facing and plan-facing surfaces around explicit
   stop, no further action, and later clean-descendant merge-prep planning only
@@ -129,14 +140,25 @@ The default downstream lane is:
 - `P73` classifies the legacy local worktree footprint for safe shrink, keeps
   live path policy anchored on `D:/zWenbo/AI/wt/`, and still leaves merge work
   dossier-only.
+- `P74` reviews the exact `p66..p73` successor delta and keeps the publication
+  decision scoped to docs/export/control/release surfaces.
+- `P75` promotes `wip/p75-post-p74-published-successor-freeze` into the live
+  published clean descendant above the preserved `P66/P67/P68` stack.
+- `P76` reanchors release hygiene, preflight, archive-ready posture, and
+  current control on `wip/p75-post-p74-published-successor-freeze` while
+  expecting `clean_worktree_ready_if_other_gates_green`.
 - `wip/p63-post-p62-tight-core-hygiene` is preserved as the prior published
   clean descendant, not the live control branch.
 - `wip/p64-post-p63-successor-stack` is preserved as the reviewed
   pre-publication successor lane, not the live control branch.
+- `wip/p66-post-p65-published-successor-freeze` is preserved as the prior
+  published clean descendant, not the live control branch.
 - `wip/p69-post-h65-hygiene-only-cleanup` is the current hygiene-only cleanup
   branch, not the live published clean descendant.
 - `wip/p73-post-p72-hygiene-shrink-mergeprep` is the current local hygiene and
   shrink branch.
+- `wip/p74-post-p73-successor-publication-review` is the current successor
+  review branch, not the live published clean descendant.
 - `wip/p72-post-p71-archive-polish-stop-handoff` is the current archive polish
   and explicit stop handoff branch.
 - `docs/README.md` and `docs/branch_worktree_registry.md` separate live routing

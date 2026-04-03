@@ -13,6 +13,9 @@ do not change the paper-facing evidence boundary selected by H65
 - `results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json`
 - `results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json`
 - `results/P69_post_h65_repo_graph_hygiene_inventory/summary.json`
+- `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json`
+- `results/P75_post_p74_published_successor_freeze/summary.json`
+- `results/P74_post_p73_successor_publication_review/summary.json`
 - `results/P68_post_p67_release_hygiene_and_control_rebaseline/summary.json`
 - `results/P67_post_p66_published_successor_freeze/summary.json`
 - `results/P66_post_p65_successor_publication_review/summary.json`

@@ -82,7 +82,7 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
     temp_docs_readme = _write_text(
         "docs_readme.md",
         [
-            "H65 + P72 + P69/P70/P71 + P56/P57/P58/P59 + P66/P67/P68 + F38",
+            "H65 + P73 + P74/P75/P76 + P72 + P69/P70/P71 + P56/P57/P58/P59 + F38",
             "plans/README.md",
             "milestones/README.md",
         ],
@@ -90,6 +90,9 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
     temp_milestones = _write_text(
         "milestones_readme.md",
         [
+            "P74_post_p73_successor_publication_review",
+            "P75_post_p74_published_successor_freeze",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
             "P71_post_p70_clean_descendant_merge_prep_readiness_sync",
             "P70_post_p69_archive_index_and_artifact_policy_sync",
@@ -110,6 +113,10 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
         [
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
             "current archive polish and explicit stop handoff wave",
+            "P74_post_p73_successor_publication_review",
+            "P75_post_p74_published_successor_freeze",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
+            "current published successor promotion stack",
             "P69_post_h65_repo_graph_hygiene_inventory",
             "P70_post_p69_archive_index_and_artifact_policy_sync",
             "P71_post_p70_clean_descendant_merge_prep_readiness_sync",
@@ -122,7 +129,11 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
             "wip/p72-post-p71-archive-polish-stop-handoff",
             "wip/p69-post-h65-hygiene-only-cleanup",
-            "wip/p66-post-p65-published-successor-freeze",
+            "wip/p74-post-p73-successor-publication-review",
+            "wip/p75-post-p74-published-successor-freeze",
+            "P74_post_p73_successor_publication_review",
+            "P75_post_p74_published_successor_freeze",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
             "explicit stop",
             "no further action",
             "later clean-descendant merge-prep planning only if a new external integration need appears",
@@ -134,9 +145,11 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
         [
             "wip/p72-post-p71-archive-polish-stop-handoff",
             "wip/p69-post-h65-hygiene-only-cleanup",
-            "wip/p66-post-p65-published-successor-freeze",
-            "wip/p56-main-scratch...wip/p66-post-p65-published-successor-freeze = 0/18",
-            "origin/main...wip/p66-post-p65-published-successor-freeze = 0/159",
+            "wip/p74-post-p73-successor-publication-review",
+            "wip/p75-post-p74-published-successor-freeze",
+            "wip/p56-main-scratch",
+            "wip/p56-main-scratch...wip/p75-post-p74-published-successor-freeze = 0/18",
+            "origin/main...wip/p75-post-p74-published-successor-freeze = 0/159",
             "clean_descendant_only_never_dirty_root_main",
         ],
     )
@@ -145,7 +158,7 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
         [
             "P72 hygiene-only archive-polish and explicit-stop handoff sidecar",
             "P69/P70/P71 hygiene-only cleanup sidecars",
-            "P66/P67/P68 published frozen successor stack",
+            "P74/P75/P76 successor promotion stack",
             "H58 as the value-negative closeout",
             "H43 as the preserved paper-grade endpoint",
             "explicit stop or no further action",
@@ -154,7 +167,7 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
     temp_release_candidate = _write_text(
         "release_candidate_checklist.md",
         [
-            "H65/P56/P57/P58/P59/P66/P67/P68/F38",
+            "H65/P56/P57/P58/P59/P74/P75/P76/F38",
             "P72 as the current archive-polish explicit-stop handoff sidecar",
             "P69/P70/P71 as hygiene-only cleanup sidecars",
             "do not widen the evidence ladder",
@@ -169,6 +182,9 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
             "P71_post_p70_clean_descendant_merge_prep_readiness_sync",
             "P70_post_p69_archive_index_and_artifact_policy_sync",
             "P69_post_h65_repo_graph_hygiene_inventory",
+            "P76_post_p75_release_hygiene_and_control_rebaseline",
+            "P75_post_p74_published_successor_freeze",
+            "P74_post_p73_successor_publication_review",
             "H58_post_r62_origin_value_boundary_closeout_packet",
             "H43_post_r44_useful_case_refreeze",
             "explicit stop or no further action",
@@ -182,6 +198,9 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
             "P72_post_p71_archive_polish_and_explicit_stop_handoff",
             "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
+            "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+            "results/P75_post_p74_published_successor_freeze/summary.json",
+            "results/P74_post_p73_successor_publication_review/summary.json",
             "do not widen the paper-facing evidence bundle",
         ],
     )
@@ -194,6 +213,9 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
             "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json",
             "results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json",
             "results/P69_post_h65_repo_graph_hygiene_inventory/summary.json",
+            "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+            "results/P75_post_p74_published_successor_freeze/summary.json",
+            "results/P74_post_p73_successor_publication_review/summary.json",
             "do not change the paper-facing evidence boundary selected by H65",
         ],
     )
@@ -203,6 +225,7 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
             "P72",
             "P69/P70/P71",
+            "P74/P75/P76",
             "archive-first terminal freeze",
             "explicit stop",
             "no further action",
@@ -214,6 +237,7 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
             "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
             "P72",
             "P69/P70/P71",
+            "P74/P75/P76",
             "narrow positive mechanism support survives",
             "dormant no-go dossier at F38",
             "explicit stop",
@@ -251,6 +275,7 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
             "explicit stop",
             "no further action",
             "later clean-descendant merge-prep planning only if a new external integration need appears",
+            "wip/p56-main-scratch",
             "dirty-root integration remains out of bounds",
         ],
     )
@@ -348,3 +373,4 @@ def test_export_p72_writes_archive_polish_and_explicit_stop_handoff_summary(tmp_
     assert payload["summary"]["selected_outcome"] == "archive_polish_surfaces_normalized_and_explicit_stop_handoff_frozen_without_scope_widening"
     assert payload["summary"]["blocked_count"] == 0
     assert payload["summary"]["pass_count"] > 0
+
