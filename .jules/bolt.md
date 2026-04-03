@@ -1,0 +1,3 @@
+## 2024-04-03 - Avoid `setdefault` with complex default values in hot loops
+**Learning:** In Python, `dict.setdefault(key, default_value)` evaluates `default_value` eagerly, even if the `key` is already present in the dictionary. When the `default_value` involves object allocation (like list comprehensions or instantiating objects like `Fraction`), this can become a significant performance bottleneck inside tight loops.
+**Action:** Replace `dict.setdefault(key, complex_default)` within loops with explicit membership checks (`if key not in dict: dict[key] = complex_default`) to prevent expensive eager evaluation.
