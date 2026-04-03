@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "p74_reads_p73",
+      "status": "pass",
+      "notes": "P74 starts only after the landed P73 local hygiene/shrink inventory wave."
+    },
+    {
+      "item_id": "p74_review_range_is_exact_successor_delta",
+      "status": "pass",
+      "notes": "The review must cover the exact one-sided eleven-commit delta from p66 to p73."
+    },
+    {
+      "item_id": "p74_reviewed_paths_stay_inside_release_surfaces",
+      "status": "pass",
+      "notes": "The reviewed delta must stay inside docs/export/control/release surfaces."
+    },
+    {
+      "item_id": "p74_review_has_eleven_commits",
+      "status": "pass",
+      "notes": "The reviewed successor delta should expose exactly eleven commits before publication freeze."
+    },
+    {
+      "item_id": "p74_current_surfaces_still_describe_p66_as_live_and_p73_as_local_successor",
+      "status": "pass",
+      "notes": "The review happens before the live published branch is promoted away from p66 and while p73 remains the live local hygiene lane."
+    },
+    {
+      "item_id": "p74_runs_on_current_review_branch",
+      "status": "pass",
+      "notes": "The review artifacts should be recorded from the dedicated p74 review branch."
+    }
+  ]
+}

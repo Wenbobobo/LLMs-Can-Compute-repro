@@ -1,0 +1,530 @@
+{
+  "rows": [
+    {
+      "field": "review_commit_lines",
+      "value": [
+        "b45902e Add post-P73 plan handoff prompts",
+        "196e196 Refresh P73 shrink and standing result packets",
+        "5047c05 Add P73 legacy worktree shrink inventory",
+        "bc03069 Refresh P72 archive polish handoff audit results",
+        "e3df2dd Normalize P72 boundary summary wording",
+        "83c62d8 Align P72 release and archive machine wording",
+        "bd58d44 Tighten P72 archive handoff surface wording",
+        "36316d6 Add P72 archive polish explicit stop handoff sidecar",
+        "55c7bb7 Refresh post-H65 hygiene-only audit results",
+        "e7f25a8 Harden post-H65 hygiene-only audits",
+        "64eb2aa Add post-H65 hygiene-only cleanup stack"
+      ]
+    },
+    {
+      "field": "reviewed_paths",
+      "value": [
+        "README.md",
+        "STATUS.md",
+        "docs/README.md",
+        "docs/branch_worktree_registry.md",
+        "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/README.md",
+        "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/artifact_index.md",
+        "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/keep_set.md",
+        "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/status.md",
+        "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/todo.md",
+        "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/README.md",
+        "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/artifact_index.md",
+        "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/artifact_policy.md",
+        "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/status.md",
+        "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/todo.md",
+        "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/README.md",
+        "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/artifact_index.md",
+        "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/merge_prep_readiness.md",
+        "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/status.md",
+        "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/todo.md",
+        "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/README.md",
+        "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/artifact_index.md",
+        "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/status.md",
+        "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/stop_handoff.md",
+        "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/todo.md",
+        "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/README.md",
+        "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/artifact_index.md",
+        "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/keep_set.md",
+        "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/local_shrink_execution_log.md",
+        "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/merge_prep_dossier.md",
+        "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/shrink_runbook.md",
+        "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/status.md",
+        "docs/milestones/README.md",
+        "docs/plans/2026-04-01-post-h65-hygiene-only-cleanup-design.md",
+        "docs/plans/2026-04-01-post-p71-next-planmode-brief-prompt.md",
+        "docs/plans/2026-04-01-post-p71-next-planmode-handoff.md",
+        "docs/plans/2026-04-01-post-p71-next-planmode-startup-prompt.md",
+        "docs/plans/2026-04-02-post-p71-archive-polish-stop-handoff-design.md",
+        "docs/plans/2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md",
+        "docs/plans/2026-04-02-post-p72-next-planmode-brief-prompt.md",
+        "docs/plans/2026-04-02-post-p72-next-planmode-handoff.md",
+        "docs/plans/2026-04-02-post-p72-next-planmode-startup-prompt.md",
+        "docs/plans/2026-04-02-post-p73-next-planmode-brief-prompt.md",
+        "docs/plans/2026-04-02-post-p73-next-planmode-handoff.md",
+        "docs/plans/2026-04-02-post-p73-next-planmode-startup-prompt.md",
+        "docs/plans/README.md",
+        "docs/publication_record/README.md",
+        "docs/publication_record/archival_repro_manifest.md",
+        "docs/publication_record/current_stage_driver.md",
+        "docs/publication_record/external_release_note_skeleton.md",
+        "docs/publication_record/paper_bundle_status.md",
+        "docs/publication_record/release_candidate_checklist.md",
+        "docs/publication_record/release_preflight_checklist.md",
+        "docs/publication_record/release_summary_draft.md",
+        "docs/publication_record/review_boundary_summary.md",
+        "docs/publication_record/submission_candidate_criteria.md",
+        "docs/publication_record/submission_packet_index.md",
+        "results/P10_submission_archive_ready/checklist.json",
+        "results/P10_submission_archive_ready/snapshot.json",
+        "results/P10_submission_archive_ready/summary.json",
+        "results/P69_post_h65_repo_graph_hygiene_inventory/checklist.json",
+        "results/P69_post_h65_repo_graph_hygiene_inventory/claim_packet.json",
+        "results/P69_post_h65_repo_graph_hygiene_inventory/snapshot.json",
+        "results/P69_post_h65_repo_graph_hygiene_inventory/summary.json",
+        "results/P70_post_p69_archive_index_and_artifact_policy_sync/checklist.json",
+        "results/P70_post_p69_archive_index_and_artifact_policy_sync/claim_packet.json",
+        "results/P70_post_p69_archive_index_and_artifact_policy_sync/snapshot.json",
+        "results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json",
+        "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/checklist.json",
+        "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/claim_packet.json",
+        "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/snapshot.json",
+        "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json",
+        "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/checklist.json",
+        "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/claim_packet.json",
+        "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/snapshot.json",
+        "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
+        "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/checklist.json",
+        "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/claim_packet.json",
+        "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/snapshot.json",
+        "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/summary.json",
+        "results/release_preflight_checklist_audit/checklist.json",
+        "results/release_preflight_checklist_audit/snapshot.json",
+        "results/release_preflight_checklist_audit/summary.json",
+        "results/release_worktree_hygiene_snapshot/checklist.json",
+        "results/release_worktree_hygiene_snapshot/status_snapshot.json",
+        "results/release_worktree_hygiene_snapshot/summary.json",
+        "scripts/export_p10_submission_archive_ready.py",
+        "scripts/export_p69_post_h65_repo_graph_hygiene_inventory.py",
+        "scripts/export_p70_post_p69_archive_index_and_artifact_policy_sync.py",
+        "scripts/export_p71_post_p70_clean_descendant_merge_prep_readiness_sync.py",
+        "scripts/export_p72_post_p71_archive_polish_and_explicit_stop_handoff.py",
+        "scripts/export_p73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync.py",
+        "scripts/export_release_preflight_checklist_audit.py",
+        "tests/test_export_p10_submission_archive_ready.py",
+        "tests/test_export_p69_post_h65_repo_graph_hygiene_inventory.py",
+        "tests/test_export_p70_post_p69_archive_index_and_artifact_policy_sync.py",
+        "tests/test_export_p71_post_p70_clean_descendant_merge_prep_readiness_sync.py",
+        "tests/test_export_p72_post_p71_archive_polish_and_explicit_stop_handoff.py",
+        "tests/test_export_p73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync.py",
+        "tests/test_export_release_preflight_checklist_audit.py",
+        "tmp/active_wave_plan.md"
+      ]
+    },
+    {
+      "field": "classified_paths",
+      "value": [
+        {
+          "path": "README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "STATUS.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/branch_worktree_registry.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/artifact_index.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/keep_set.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/status.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P69_post_h65_repo_graph_hygiene_inventory/todo.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/artifact_index.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/artifact_policy.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/status.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P70_post_p69_archive_index_and_artifact_policy_sync/todo.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/artifact_index.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/merge_prep_readiness.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/status.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/todo.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/artifact_index.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/status.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/stop_handoff.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/todo.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/artifact_index.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/keep_set.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/local_shrink_execution_log.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/merge_prep_dossier.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/shrink_runbook.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/status.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/milestones/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-01-post-h65-hygiene-only-cleanup-design.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-01-post-p71-next-planmode-brief-prompt.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-01-post-p71-next-planmode-handoff.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-01-post-p71-next-planmode-startup-prompt.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p71-archive-polish-stop-handoff-design.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p72-hygiene-shrink-mergeprep-design.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p72-next-planmode-brief-prompt.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p72-next-planmode-handoff.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p72-next-planmode-startup-prompt.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p73-next-planmode-brief-prompt.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p73-next-planmode-handoff.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/2026-04-02-post-p73-next-planmode-startup-prompt.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/plans/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/README.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/archival_repro_manifest.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/current_stage_driver.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/external_release_note_skeleton.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/paper_bundle_status.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/release_candidate_checklist.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/release_preflight_checklist.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/release_summary_draft.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/review_boundary_summary.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/submission_candidate_criteria.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "docs/publication_record/submission_packet_index.md",
+          "classification": "allowed_control_surface"
+        },
+        {
+          "path": "results/P10_submission_archive_ready/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P10_submission_archive_ready/snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P10_submission_archive_ready/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P69_post_h65_repo_graph_hygiene_inventory/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P69_post_h65_repo_graph_hygiene_inventory/claim_packet.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P69_post_h65_repo_graph_hygiene_inventory/snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P69_post_h65_repo_graph_hygiene_inventory/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P70_post_p69_archive_index_and_artifact_policy_sync/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P70_post_p69_archive_index_and_artifact_policy_sync/claim_packet.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P70_post_p69_archive_index_and_artifact_policy_sync/snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P70_post_p69_archive_index_and_artifact_policy_sync/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/claim_packet.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P71_post_p70_clean_descendant_merge_prep_readiness_sync/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/claim_packet.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/claim_packet.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/release_preflight_checklist_audit/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/release_preflight_checklist_audit/snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/release_preflight_checklist_audit/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/release_worktree_hygiene_snapshot/checklist.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/release_worktree_hygiene_snapshot/status_snapshot.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "results/release_worktree_hygiene_snapshot/summary.json",
+          "classification": "allowed_results_surface"
+        },
+        {
+          "path": "scripts/export_p10_submission_archive_ready.py",
+          "classification": "allowed_export_surface"
+        },
+        {
+          "path": "scripts/export_p69_post_h65_repo_graph_hygiene_inventory.py",
+          "classification": "allowed_export_surface"
+        },
+        {
+          "path": "scripts/export_p70_post_p69_archive_index_and_artifact_policy_sync.py",
+          "classification": "allowed_export_surface"
+        },
+        {
+          "path": "scripts/export_p71_post_p70_clean_descendant_merge_prep_readiness_sync.py",
+          "classification": "allowed_export_surface"
+        },
+        {
+          "path": "scripts/export_p72_post_p71_archive_polish_and_explicit_stop_handoff.py",
+          "classification": "allowed_export_surface"
+        },
+        {
+          "path": "scripts/export_p73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync.py",
+          "classification": "allowed_export_surface"
+        },
+        {
+          "path": "scripts/export_release_preflight_checklist_audit.py",
+          "classification": "allowed_export_surface"
+        },
+        {
+          "path": "tests/test_export_p10_submission_archive_ready.py",
+          "classification": "allowed_test_surface"
+        },
+        {
+          "path": "tests/test_export_p69_post_h65_repo_graph_hygiene_inventory.py",
+          "classification": "allowed_test_surface"
+        },
+        {
+          "path": "tests/test_export_p70_post_p69_archive_index_and_artifact_policy_sync.py",
+          "classification": "allowed_test_surface"
+        },
+        {
+          "path": "tests/test_export_p71_post_p70_clean_descendant_merge_prep_readiness_sync.py",
+          "classification": "allowed_test_surface"
+        },
+        {
+          "path": "tests/test_export_p72_post_p71_archive_polish_and_explicit_stop_handoff.py",
+          "classification": "allowed_test_surface"
+        },
+        {
+          "path": "tests/test_export_p73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync.py",
+          "classification": "allowed_test_surface"
+        },
+        {
+          "path": "tests/test_export_release_preflight_checklist_audit.py",
+          "classification": "allowed_test_surface"
+        },
+        {
+          "path": "tmp/active_wave_plan.md",
+          "classification": "allowed_control_surface"
+        }
+      ]
+    }
+  ]
+}

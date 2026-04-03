@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "review_base_branch": "wip/p66-post-p65-published-successor-freeze",
+    "review_tip_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
+    "current_execution_branch": "wip/p74-post-p73-successor-publication-review",
+    "review_left_count": 0,
+    "review_right_count": 11,
+    "reviewed_commit_count": 11,
+    "reviewed_path_count": 100,
+    "blocked_reviewed_path_count": 0,
+    "all_reviewed_paths_allowed": true,
+    "selected_outcome": "successor_publication_review_supports_p75_freeze",
+    "next_required_lane": "p75_published_successor_freeze",
+    "pass_count": 6,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p74-post-p73-successor-publication-review\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p74-post-p73-successor-publication-review\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "supports": [
+      "P74 reviews the exact p66..p73 successor delta before any new publication freeze.",
+      "P74 keeps the review narrow to docs/export/control/release surfaces.",
+      "P74 authorizes a p75 freeze only if the review remains one-sided, exact, and non-runtime."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "dirty-root integration",
+      "non-release-surface successor changes"
+    ],
+    "distilled_result": {
+      "review_base_branch": "wip/p66-post-p65-published-successor-freeze",
+      "review_tip_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
+      "current_execution_branch": "wip/p74-post-p73-successor-publication-review",
+      "review_left_count": 0,
+      "review_right_count": 11,
+      "reviewed_commit_count": 11,
+      "reviewed_path_count": 100,
+      "blocked_reviewed_path_count": 0,
+      "all_reviewed_paths_allowed": true,
+      "selected_outcome": "successor_publication_review_supports_p75_freeze",
+      "next_required_lane": "p75_published_successor_freeze"
+    }
+  }
+}
