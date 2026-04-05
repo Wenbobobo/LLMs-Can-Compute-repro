@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "current_handoff_sync_wave": "p80_post_p79_next_planmode_handoff_sync",
+    "selected_outcome": "next_planmode_handoff_synced_to_explicit_stop_after_p79",
+    "next_required_lane": "explicit_stop_or_no_further_action",
+    "pass_count": 3,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

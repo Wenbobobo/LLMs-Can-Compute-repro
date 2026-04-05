@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "supports": [
+      "P80 synchronizes the next plan-mode prompts to the explicit-stop, no-further-action default.",
+      "P80 keeps any future discussion constrained to a strictly non-runtime gate.",
+      "P80 leaves dirty-root integration and same-lane executor-value reopen out of bounds."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "dirty-root integration",
+      "executor-value continuation"
+    ],
+    "distilled_result": {
+      "current_handoff_sync_wave": "p80_post_p79_next_planmode_handoff_sync",
+      "selected_outcome": "next_planmode_handoff_synced_to_explicit_stop_after_p79",
+      "next_required_lane": "explicit_stop_or_no_further_action"
+    }
+  }
+}

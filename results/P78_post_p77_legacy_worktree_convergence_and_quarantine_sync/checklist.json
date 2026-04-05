@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p78_reads_p77",
+      "status": "pass",
+      "notes": "P78 starts only after the landed P77 normalization sidecar."
+    },
+    {
+      "item_id": "p78_keep_mounted_set_is_balanced",
+      "status": "pass",
+      "notes": "Only the balanced active keep set should remain mounted alongside quarantines."
+    },
+    {
+      "item_id": "p78_only_dirty_survivors_are_quarantines",
+      "status": "pass",
+      "notes": "After convergence, only root quarantine and h27 should remain dirty and mounted."
+    },
+    {
+      "item_id": "p78_registry_records_balanced_keep_set_and_blocked_quarantines",
+      "status": "pass",
+      "notes": "The registry should make the balanced mounted keep set and blocked quarantines explicit."
+    }
+  ]
+}

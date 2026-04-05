@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p79_reads_p78",
+      "status": "pass",
+      "notes": "P79 starts only after the landed P78 convergence sidecar."
+    },
+    {
+      "item_id": "p79_claim_boundary_packages_partial_falsification",
+      "status": "pass",
+      "notes": "The claim-boundary doc should package the narrow support and broader partial falsification clearly."
+    },
+    {
+      "item_id": "p79_reopen_screen_locks_non_runtime_gate",
+      "status": "pass",
+      "notes": "The reopen screen should keep any future route non-runtime and materially different in cost structure."
+    },
+    {
+      "item_id": "p79_publication_router_exposes_boundary_docs",
+      "status": "pass",
+      "notes": "Publication router should expose the claim-boundary and reopen-screen docs as live control surfaces."
+    }
+  ]
+}

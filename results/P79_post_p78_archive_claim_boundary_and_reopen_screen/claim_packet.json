@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "supports": [
+      "P79 packages the strongest honest archive-facing statement: narrow mechanism support with broader executor-value failure.",
+      "P79 preserves only a strictly non-runtime, cost-structure-different future gate.",
+      "P79 turns prior GPTPro/origin advisory analysis into explicit local control docs without treating it as evidence."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "same-lane executor-value continuation",
+      "broad Wasm/C claims"
+    ],
+    "distilled_result": {
+      "current_claim_boundary_wave": "p79_post_p78_archive_claim_boundary_and_reopen_screen",
+      "selected_outcome": "archive_claim_boundary_and_reopen_screen_locked_after_convergence",
+      "next_required_lane": "p80_next_planmode_handoff_sync"
+    }
+  }
+}
