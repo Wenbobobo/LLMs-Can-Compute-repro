@@ -74,7 +74,6 @@ The current local execution-side control stack is:
 The current mounted keep branches are:
 
 - `wip/p85-post-p84-main-rebaseline`
-- `wip/p83-post-p82-promotion-branch-and-pr-handoff`
 - `wip/p75-post-p74-published-successor-freeze`
 - `wip/p74-post-p73-successor-publication-review`
 - `wip/p73-post-p72-hygiene-shrink-mergeprep`
@@ -124,9 +123,9 @@ The default downstream lane is:
   packet `H66_post_p90_archive_replace_terminal_stop_packet` unless a later
   file-specific salvage case appears.
 - `P89` consolidates the live router surfaces around the clean `p85` branch,
-  makes docs consolidation the current control wave, and narrows the next
-  route to archive-then-replace closeout or explicit stop unless a later
-  file-specific salvage case appears.
+  preserves docs consolidation as the immediate predecessor wave below `P90`,
+  and narrows the next route to archive-then-replace closeout or explicit
+  stop unless a later file-specific salvage case appears.
 - `P88` screens the first-tier selective-salvage candidates and lands a
   no-import decision for the four highest-value remaining publication docs,
   because the dirty-root versions are stale or not materially better than the
@@ -170,7 +169,8 @@ The default downstream lane is:
 - `wip/p85-post-p84-main-rebaseline` remains the current clean rebaseline
   branch above merged `main`.
 - `wip/p83-post-p82-promotion-branch-and-pr-handoff` remains preserved
-  merged-source branch lineage after the landed PR #12 merge.
+  merged-source branch lineage after the landed PR #12 merge and should remain
+  unmounted unless a provenance-only inspection is needed.
 - `wip/p64-post-p63-successor-stack` remains the preserved deeper review
   lineage, not a live control branch.
 - `wip/p73-post-p72-hygiene-shrink-mergeprep` remains the current local hygiene

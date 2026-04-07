@@ -9,9 +9,9 @@ and the dormant future dossier.
   restrained project landing page for the current `H66 + P91 + P90 + P89 + P88 + P87 + P86 + P85 + P84 + P83 + P77/P78/P79/P80 +
   P73 + P72 + P69/P70/P71 + P56/P57/P58/P59 + F38` posture
 - `publication_record/current_stage_driver.md`
-  canonical live control summary for the active archive-first freeze packet,
-  current published clean descendant, balanced mounted keep set, and default
-  downstream lane
+  canonical live control summary for the active terminal-stop packet,
+  current handoff-sync wave, current published clean descendant, balanced
+  mounted keep set, and default downstream lane
 - `branch_worktree_registry.md`
   current branch/worktree map, quarantine rule, balanced mounted keep set, and
   cleanup posture
@@ -19,7 +19,7 @@ and the dormant future dossier.
   current planning entrypoints, next handoff surfaces, and preserved plan
   history
 - `milestones/README.md`
-  current archive-first convergence stack plus preserved milestone history
+  current terminal-stop stack plus preserved milestone history
 - `publication_record/README.md`
   paper-facing, archive-facing, release-facing, and claim-boundary control
   surfaces

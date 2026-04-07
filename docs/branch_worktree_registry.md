@@ -2,16 +2,15 @@
 
 This file records the balanced mounted keep set, quarantine posture, preserved
 lineage refs, and cleanup priorities for the clean-descendant-only repo state
-after the `P89` docs-consolidation and live-router sync above the `P88`
-no-import decision, `P86` dirty-root inventory, `P85` merged-main rebaseline,
-and `P84` keep-set closeout.
+under the `H66/P91` terminal-stop posture above the preserved `P90/P89/P88`
+closeout stack, `P86` dirty-root inventory, `P85` merged-main rebaseline, and
+`P84` keep-set closeout.
 
 ## Balanced Mounted Keep Set
 
 | Role | Branch | Path | State | Policy |
 | --- | --- | --- | --- | --- |
 | current clean rebaseline branch | `wip/p85-post-p84-main-rebaseline` | `D:/zWenbo/AI/wt/p85-post-p84-main-rebaseline` | current clean post-merge rebaseline branch on top of merged `main` | keep mounted as the active clean control branch |
-| preserved merged-source lineage | `wip/p83-post-p82-promotion-branch-and-pr-handoff` | `D:/zWenbo/AI/wt/p83-post-p82-promotion-branch-and-pr-handoff` | short-term preserved merged-source branch after PR #12 landed | keep mounted temporarily during post-merge validation; do not treat as the current control branch |
 | current published clean descendant | `wip/p75-post-p74-published-successor-freeze` | `D:/zWenbo/AI/wt/p75-post-p74-published-successor-freeze` | live clean publication/control branch | keep mounted and tracked; use as the active clean descendant |
 | current successor publication review branch | `wip/p74-post-p73-successor-publication-review` | `D:/zWenbo/AI/wt/p74-post-p73-successor-publication-review` | current review/provenance lane preserved beside the published branch | keep mounted; do not treat as the published branch |
 | current local hygiene and shrink branch | `wip/p73-post-p72-hygiene-shrink-mergeprep` | `D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep` | current local cleanup, shrink, and dossier-prep lane | keep mounted; local follow-through only |
@@ -28,6 +27,7 @@ and `P84` keep-set closeout.
 | preserved prior published clean descendant | `wip/p66-post-p65-published-successor-freeze` | `D:/zWenbo/AI/wt/p66-post-p65-published-successor-freeze` | preserve branch ref and provenance; unmounted is acceptable after convergence |
 | preserved locked-fact rebaseline lineage | `wip/p81-post-p80-clean-descendant-promotion-prep` | `D:/zWenbo/AI/wt/p81-post-p80-clean-descendant-promotion-prep` | preserve branch ref and immediate promotion-prep provenance; remain unmounted after `P84` |
 | preserved clean-main probe lineage | `wip/p82-post-p81-clean-main-promotion-probe` | `D:/zWenbo/AI/wt/p82-post-p81-clean-main-promotion-probe` | preserve branch ref and clean-main probe provenance; remain unmounted after `P84` |
+| preserved merged-source lineage | `wip/p83-post-p82-promotion-branch-and-pr-handoff` | `D:/zWenbo/AI/wt/p83-post-p82-promotion-branch-and-pr-handoff` | preserved merged-source branch after PR #12 landed and before `P85` rebaseline | preserve branch ref and provenance; unmounted is preferred once `H66/P91` is green |
 | preserved deeper prior successor review branch | `wip/p64-post-p63-successor-stack` | `D:/zWenbo/AI/wt/p64-post-p63-successor-stack` | preserve branch ref as deeper review lineage; unmounted is acceptable after convergence |
 | preserved deeper prior published clean descendant | `wip/p63-post-p62-tight-core-hygiene` | `D:/zWenbo/AI/wt/p63-post-p62-tight-core-hygiene` | preserve branch ref as deeper publication lineage; unmounted is acceptable after convergence |
 | preserved older published clean descendant | `wip/p60-post-p59-published-clean-descendant-prep` | `D:/zWenbo/AI/wt/p60-post-p59-published-clean-descendant-prep` | preserve branch ref only; historical lineage |
@@ -35,12 +35,12 @@ and `P84` keep-set closeout.
 
 ## Cleanup Status
 
-- the active mounted keep set for the current phase is `p85`, `p83`, `p75`,
-  `p74`, `p73`, `p72`, `p69`, and `p56`
+- the active mounted keep set for the current phase is `p85`, `p75`, `p74`,
+  `p73`, `p72`, `p69`, and `p56`
 - the temporary `p81` and `p82` worktrees were intentionally removed in `P84`
   and now survive only as preserved unmounted lineage
-- `p83` remains mounted only as short-term preserved merged-source lineage and
-  is eligible for later unmount once the `P85` post-merge route is settled
+- `p83` is now preserved unmounted merged-source lineage and should not be
+  re-mounted unless a provenance-only inspection is needed
 - `P88` screens the first-tier dirty-root shortlist with no import now, so
   only a later file-specific salvage case is admissible
 - only the dirty root checkout and `wip/h27-promotion` should remain dirty and
@@ -66,10 +66,10 @@ and `P84` keep-set closeout.
   archive-replace map; keep it quarantine-only and use it only as a
   file-specific salvage-only source
 - `wip/p85-post-p84-main-rebaseline` is the current clean rebaseline branch
-  for post-merge docs consolidation, live router sync, and later
-  archive-then-replace closeout
+  for the live `H66/P91` terminal-stop docs surface and any later
+  archive-polish or hygiene-only follow-through
 - `wip/p83-post-p82-promotion-branch-and-pr-handoff` is preserved merged-source
-  lineage only after the merged-main rebaseline
+  lineage only after the merged-main rebaseline and should remain unmounted
 - `wip/p75-post-p74-published-successor-freeze` is the live published clean
   source for current control wording
 - `wip/p81-post-p80-clean-descendant-promotion-prep` and
@@ -89,5 +89,8 @@ and `P84` keep-set closeout.
   integration out of bounds while preserving clean post-merge follow-through
 - runtime remains closed
 - `F38/R63` remains dormant and non-runtime only
-- `P89_post_p88_docs_consolidation_and_live_router_sync` is the current
-  control wave above the preserved `P88` no-import decision
+- `H66_post_p90_archive_replace_terminal_stop_packet` is the current active
+  docs-only packet and `P91_post_h66_next_planmode_handoff_sync` is the
+  current planning handoff wave
+- `P90_post_p89_archive_replace_screen_and_replacement_decision` remains the
+  preserved immediate closeout screen below `H66`
