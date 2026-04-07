@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "item_id": "p70_reads_p69",
+      "status": "pass",
+      "notes": "P70 runs only after P69 lands the repo-graph hygiene inventory."
+    },
+    {
+      "item_id": "p70_reads_standing_release_audits",
+      "status": "pass",
+      "notes": "P70 preserves the current green preflight and archive-ready posture."
+    },
+    {
+      "item_id": "p70_runs_on_current_hygiene_branch",
+      "status": "pass",
+      "notes": "P70 should run only from the current hygiene-only cleanup branch."
+    },
+    {
+      "item_id": "p70_plans_index_mentions_current_design_and_post_p71_handoff",
+      "status": "pass",
+      "notes": "The planning index should expose the current hygiene-only cleanup design and next handoff surfaces."
+    },
+    {
+      "item_id": "p70_publication_readme_mentions_hygiene_cleanup_stack",
+      "status": "pass",
+      "notes": "The publication router should surface the current hygiene-only cleanup stack explicitly."
+    },
+    {
+      "item_id": "p70_submission_packet_index_mentions_current_cleanup_stack",
+      "status": "pass",
+      "notes": "The submission packet index should expose the current archive-facing cleanup helpers alongside H65."
+    },
+    {
+      "item_id": "p70_archival_manifest_mentions_current_cleanup_results",
+      "status": "pass",
+      "notes": "The archival manifest should record the current cleanup sidecars without changing the paper-facing endpoint facts."
+    },
+    {
+      "item_id": "p70_artifact_policy_doc_is_current",
+      "status": "pass",
+      "notes": "The artifact policy doc should keep the standing local-only / explicit-LFS-only rule explicit."
+    },
+    {
+      "item_id": "p70_raw_row_ignore_rules_stay_active",
+      "status": "pass",
+      "notes": "The raw-row ignore rules should remain active in .gitignore."
+    },
+    {
+      "item_id": "p70_no_tracked_oversize_artifacts",
+      "status": "pass",
+      "notes": "The current clean descendant should not track artifacts at or above roughly 10 MiB."
+    }
+  ]
+}

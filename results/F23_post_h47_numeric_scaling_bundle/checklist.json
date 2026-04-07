@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f23_docs_define_planning_only_numeric_scaling_bundle",
+      "status": "pass",
+      "notes": "F23 should stay planning-only, preserve H47/H43, and fix R49 as the only next runtime candidate."
+    },
+    {
+      "item_id": "f23_tables_fix_precision_addressability_length_and_stop_rules",
+      "status": "pass",
+      "notes": "F23 must save the four planning tables plus positive and negative downstream placeholders."
+    },
+    {
+      "item_id": "shared_control_surfaces_record_f23_without_changing_h47",
+      "status": "pass",
+      "notes": "Shared control surfaces should keep H47 current while exposing F23 as the current post-H47 planning bundle."
+    }
+  ]
+}

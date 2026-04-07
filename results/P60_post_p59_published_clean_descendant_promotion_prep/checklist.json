@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p60_reads_h64_p56_p57_p58_p59",
+      "status": "pass",
+      "notes": "P60 remains anchored on the landed H64 + P56/P57/P58/P59 stack."
+    },
+    {
+      "item_id": "p60_current_branch_is_current_successor_or_registered_execution_lane",
+      "status": "pass",
+      "notes": "P60 preserved-prior export should run either on the current published successor branch or on its registered execution successor."
+    },
+    {
+      "item_id": "p60_scratch_branch_remains_available",
+      "status": "pass",
+      "notes": "The scratch integration branch should remain available as the absorbed local base."
+    },
+    {
+      "item_id": "p60_root_main_remains_quarantined",
+      "status": "pass",
+      "notes": "Dirty root main must remain parked on its quarantine branch."
+    },
+    {
+      "item_id": "p60_control_surfaces_expose_successor_stack_and_preserve_prior_branch",
+      "status": "pass",
+      "notes": "Current control surfaces must expose P63/P64/P65 as the live successor stack while preserving the old P60 branch explicitly."
+    }
+  ]
+}

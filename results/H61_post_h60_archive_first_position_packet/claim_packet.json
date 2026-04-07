@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "supports": [
+      "H61 makes archive-first consolidation the default live posture of the repo.",
+      "H61 preserves H60 as the prior active packet instead of treating it as superseded noise.",
+      "H61 keeps one conditional future route on paper only while preserving planning-only / stop as the downstream lane."
+    ],
+    "does_not_support": [
+      "runtime authorization",
+      "same-lane executor-value reopening",
+      "merge through dirty root main"
+    ],
+    "distilled_result": {
+      "active_stage": "h61_post_h60_archive_first_position_packet",
+      "preserved_prior_active_packet": "h60_post_f34_next_lane_decision_packet",
+      "preserved_prior_reproduction_gap_packet": "h59_post_h58_reproduction_gap_decision_packet",
+      "preserved_prior_value_negative_closeout": "h58_post_r62_origin_value_boundary_closeout_packet",
+      "preserved_prior_closeout_certification": "f32_post_h58_closeout_certification_bundle",
+      "current_reopen_qualification_bundle": "f36_post_h60_conditional_compiled_online_reopen_qualification_bundle",
+      "current_repo_hygiene_sidecar": "p45_post_h60_clean_descendant_integration_readiness",
+      "current_far_future_horizon_log": "f35_post_h59_far_future_model_and_weights_horizon_log",
+      "preserved_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_reopen_family_on_paper": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route",
+      "selected_outcome": "archive_first_consolidation_becomes_default_posture",
+      "current_downstream_scientific_lane": "planning_only_or_project_stop",
+      "later_authorization_gate": "no_runtime_lane_open_until_later_explicit_authorization",
+      "project_default_fallback": "archive_first_then_stop_or_later_explicit_authorization"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "source": "results/P25_post_h36_clean_promotion_prep/summary.json",
+      "fields": {
+        "source_of_truth_branch": "wip/h35-r40-p24-exec",
+        "clean_prep_branch": "wip/p25-f15-h37-exec",
+        "promotion_mode": "prepare_only",
+        "merge_authorized": false
+      }
+    },
+    {
+      "source": "results/H36_post_r40_bounded_scalar_family_refreeze/summary.json",
+      "fields": {
+        "active_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+        "decision_state": "bounded_scalar_family_refrozen_narrowly",
+        "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+        "next_required_lane": "no_active_downstream_runtime_lane"
+      }
+    },
+    {
+      "source": "results/R40_origin_bounded_scalar_locals_and_flags_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_bounded_scalar_locals_and_flags_supported_narrowly",
+        "admitted_program_name": "bytecode_bounded_scalar_flag_loop_6_a320",
+        "boundary_program_name": "bytecode_bounded_scalar_flag_loop_long_12_a336",
+        "next_priority_lane": "h36_post_r40_bounded_scalar_family_refreeze"
+      }
+    }
+  ]
+}

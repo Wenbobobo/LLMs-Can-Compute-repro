@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p82_reads_p81",
+      "status": "pass",
+      "notes": "P82 starts only after the landed P81 sidecar."
+    },
+    {
+      "item_id": "p82_probe_worktree_is_clean_main_derived",
+      "status": "pass",
+      "notes": "The probe worktree should be a clean origin/main-derived branch."
+    },
+    {
+      "item_id": "p82_source_branch_is_ahead_only_from_main",
+      "status": "pass",
+      "notes": "The source execution branch should stay ahead-only relative to origin/main."
+    },
+    {
+      "item_id": "p82_fast_forward_promotion_path_is_open",
+      "status": "pass",
+      "notes": "The clean-main probe should be able to absorb the source branch via fast-forward without conflicts."
+    },
+    {
+      "item_id": "p82_probe_records_current_heads",
+      "status": "pass",
+      "notes": "The probe should capture the clean main head, the source branch head, and the published branch head."
+    }
+  ]
+}

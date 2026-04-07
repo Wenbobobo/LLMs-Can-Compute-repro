@@ -1,0 +1,4 @@
+- `H59` remains the active docs-only packet
+- no same-lane runtime probe is reopened by momentum
+- future candidate families are explicit and ranked
+- stop conditions remain valid if none of the candidate families is credible

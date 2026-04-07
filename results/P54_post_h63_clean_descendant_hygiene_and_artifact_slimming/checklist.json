@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "item_id": "p54_reads_h63",
+      "status": "pass",
+      "notes": "P54 runs only after H63 lands the archive-first closeout packet."
+    },
+    {
+      "item_id": "p54_reads_p52",
+      "status": "pass",
+      "notes": "P54 extends P52 rather than replacing the descendant-only hygiene posture."
+    },
+    {
+      "item_id": "p54_source_branch_exists",
+      "status": "pass",
+      "notes": "The preserved source branch should remain available for later comparison."
+    },
+    {
+      "item_id": "p54_current_branch_uses_repo_local_alias_prefix",
+      "status": "pass",
+      "notes": "The current wave should run from D:/zWenbo/AI/wt/... rather than the parked root checkout."
+    },
+    {
+      "item_id": "p54_root_main_is_quarantined",
+      "status": "pass",
+      "notes": "Dirty root main should remain parked on a quarantine branch."
+    },
+    {
+      "item_id": "p54_raw_row_ignore_rules_active",
+      "status": "pass",
+      "notes": "Raw-row ignore rules should remain active in .gitignore."
+    },
+    {
+      "item_id": "p54_no_tracked_oversize_artifacts",
+      "status": "pass",
+      "notes": "The clean descendant should not track artifacts at or above roughly 10 MiB."
+    },
+    {
+      "item_id": "p54_merge_rules_doc_is_current",
+      "status": "pass",
+      "notes": "The merge-prep rules doc should reflect the current clean-descendant posture."
+    },
+    {
+      "item_id": "p54_artifact_policy_doc_is_current",
+      "status": "pass",
+      "notes": "The artifact policy doc should mention oversize surface-report handling explicitly."
+    },
+    {
+      "item_id": "p54_current_stage_driver_mentions_p54",
+      "status": "pass",
+      "notes": "The current stage driver should expose P54 as the current hygiene sidecar."
+    }
+  ]
+}

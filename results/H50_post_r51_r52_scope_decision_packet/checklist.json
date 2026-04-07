@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h50_docs_record_negative_closeout_explicitly",
+      "status": "pass",
+      "notes": "H50 must be an explicit negative closeout packet rather than an implied consequence of R52 alone."
+    },
+    {
+      "item_id": "r51_positive_and_r52_negative_support_h50",
+      "status": "pass",
+      "notes": "H50 should close the lane only because R51 stayed narrow-positive while R52 stayed exact but failed the bounded-value test."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h50_current",
+      "status": "pass",
+      "notes": "The shared control surfaces should make H50 current so unattended work starts from the real closeout state."
+    },
+    {
+      "item_id": "f27_remains_saved_but_blocked_after_negative_h50",
+      "status": "pass",
+      "notes": "Future executor-entry planning remains stored but inactive after the negative H50 closeout."
+    }
+  ]
+}

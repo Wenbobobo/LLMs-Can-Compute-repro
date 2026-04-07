@@ -1,0 +1,609 @@
+{
+  "rows": [
+    {
+      "case_id": "bounded_scalar_admitted",
+      "family_role": "admitted",
+      "fragment": "explicit_flag_slot_loop",
+      "comparison_mode": "medium_exact_trace",
+      "program_name": "bytecode_bounded_scalar_flag_loop_6_a320",
+      "instruction_count": 21,
+      "program_steps": 102,
+      "opcode_surface": [
+        "add_i32",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "store_static",
+        "sub_i32"
+      ],
+      "flag_cell_count": 1,
+      "frame_cell_count": 3,
+      "heap_cell_count": 0,
+      "family_scope_passed": true,
+      "family_scope_error": null,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "touched_frame_addresses": [
+        320,
+        321,
+        322
+      ],
+      "touched_heap_addresses": [],
+      "boundary_snapshot_count": 0,
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 6,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 320,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 322,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "load_static",
+          "arg": 320,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 6,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "store_static",
+          "arg": 321,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 321,
+          "in_types": [],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "jz_zero",
+          "arg": 12,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "load_static",
+          "arg": 322,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 322,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "load_static",
+          "arg": 320,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 14,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "store_static",
+          "arg": 322,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "load_static",
+          "arg": 320,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 18,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 19,
+          "opcode": "store_static",
+          "arg": 320,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 20,
+          "opcode": "jmp",
+          "arg": 4,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "source_final_state": {
+        "pc": 11,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            320,
+            0
+          ],
+          [
+            321,
+            1
+          ],
+          [
+            322,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 102
+      }
+    },
+    {
+      "case_id": "bounded_scalar_boundary",
+      "family_role": "boundary_stress",
+      "fragment": "same_family_longer_multi_local_loop",
+      "comparison_mode": "long_exact_final_state",
+      "program_name": "bytecode_bounded_scalar_flag_loop_long_12_a336",
+      "instruction_count": 29,
+      "program_steps": 244,
+      "opcode_surface": [
+        "add_i32",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "store_static",
+        "sub_i32"
+      ],
+      "flag_cell_count": 1,
+      "frame_cell_count": 4,
+      "heap_cell_count": 0,
+      "family_scope_passed": true,
+      "family_scope_error": null,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "memory_surface_match": true,
+      "touched_frame_addresses": [
+        336,
+        337,
+        338,
+        339
+      ],
+      "touched_heap_addresses": [],
+      "boundary_snapshot_count": 0,
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 12,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 336,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 338,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "store_static",
+          "arg": 339,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "load_static",
+          "arg": 336,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 8,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "store_static",
+          "arg": 337,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "load_static",
+          "arg": 337,
+          "in_types": [],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "jz_zero",
+          "arg": 16,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 338,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "load_static",
+          "arg": 339,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 14,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "load_static",
+          "arg": 338,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "load_static",
+          "arg": 336,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 18,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 19,
+          "opcode": "store_static",
+          "arg": 338,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 20,
+          "opcode": "load_static",
+          "arg": 339,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 21,
+          "opcode": "load_static",
+          "arg": 336,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 22,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 23,
+          "opcode": "store_static",
+          "arg": 339,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 24,
+          "opcode": "load_static",
+          "arg": 336,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 25,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 26,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 27,
+          "opcode": "store_static",
+          "arg": 336,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 28,
+          "opcode": "jmp",
+          "arg": 6,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "source_final_state": {
+        "pc": 15,
+        "stack": [
+          156
+        ],
+        "memory": [
+          [
+            336,
+            0
+          ],
+          [
+            337,
+            1
+          ],
+          [
+            338,
+            78
+          ],
+          [
+            339,
+            78
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 244
+      }
+    }
+  ]
+}

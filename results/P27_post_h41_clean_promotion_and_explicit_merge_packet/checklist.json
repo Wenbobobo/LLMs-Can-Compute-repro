@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p27_docs_fix_operational_explicit_merge_posture_without_merging_main",
+      "status": "pass",
+      "notes": "P27 should stay operational-only, preserve the clean source branch, and keep merge execution false."
+    },
+    {
+      "item_id": "p27_manifest_delta_and_artifact_policy_keep_main_untouched_and_merge_explicit",
+      "status": "pass",
+      "notes": "The merge manifest must encode explicit merge posture, review conditions, and large-artifact isolation without touching main."
+    },
+    {
+      "item_id": "driver_wave_and_control_surfaces_treat_p27_as_completed_operational_merge_packet",
+      "status": "pass",
+      "notes": "The entry surfaces should present P27 as a completed operational merge packet while leaving H41 as the active scientific control packet."
+    }
+  ]
+}

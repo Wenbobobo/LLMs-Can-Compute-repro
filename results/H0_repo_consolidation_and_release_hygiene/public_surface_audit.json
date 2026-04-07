@@ -47,7 +47,7 @@
     {
       "check_id": "m7_no_widening_recorded",
       "status": "pass",
-      "notes": "The current compiled endpoint remains D0."
+      "notes": "M7 still blocks widening; the preserved first compiled step remains D0 inside the broader current H43 paper endpoint."
     },
     {
       "check_id": "p4_blog_hold_recorded",

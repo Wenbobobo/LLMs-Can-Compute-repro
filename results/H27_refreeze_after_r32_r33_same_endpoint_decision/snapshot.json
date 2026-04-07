@@ -1,0 +1,44 @@
+{
+  "experiment": "h27_refreeze_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "source": "results/H26_refreeze_after_r32_boundary_sharp_zoom/summary.json",
+      "fields": {
+        "boundary_verdict": "family_local_sharp_zoom_still_not_localized",
+        "next_priority_lane": "r33_d0_non_retrieval_overhead_localization_audit"
+      }
+    },
+    {
+      "source": "results/R33_d0_non_retrieval_overhead_localization_audit/summary.json",
+      "fields": {
+        "lane_verdict": "suite_stable_noncompetitive_after_localization",
+        "audit_scope": "stratified_first_pass"
+      }
+    },
+    {
+      "source": "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json",
+      "fields": {
+        "systems_reauthorization_verdict": "audit_non_retrieval_overhead_first",
+        "recommended_next_lane": "r33_d0_non_retrieval_overhead_localization_audit"
+      }
+    }
+  ]
+}

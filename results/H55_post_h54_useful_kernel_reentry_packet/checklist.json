@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h55_preserves_h54_as_prior_compiled_boundary_closeout",
+      "status": "pass",
+      "notes": "H55 reopens only one later packet above H54 rather than treating H54 as overturned."
+    },
+    {
+      "item_id": "h55_authorizes_only_r60_as_next_runtime_candidate",
+      "status": "pass",
+      "notes": "The only admissible positive route is authorize_useful_kernel_carryover_through_r60_first."
+    },
+    {
+      "item_id": "h55_keeps_h43_ceiling_and_f27_r53_r54_blocked",
+      "status": "pass",
+      "notes": "The reentry packet does not widen above the preserved H43 bounded useful-case ceiling."
+    }
+  ]
+}

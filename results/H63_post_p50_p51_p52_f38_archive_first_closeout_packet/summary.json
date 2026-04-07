@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "active_stage": "h63_post_p50_p51_p52_f38_archive_first_closeout_packet",
+    "preserved_prior_active_packet": "h62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet",
+    "current_control_sync_wave": "p50_post_h62_archive_first_control_sync",
+    "current_paper_facing_package_wave": "p51_post_h62_paper_facing_partial_falsification_package",
+    "current_repo_hygiene_sidecar": "p52_post_h62_clean_descendant_hygiene_and_merge_prep",
+    "current_dormant_future_dossier": "f38_post_h62_r63_dormant_eligibility_profile_dossier",
+    "default_downstream_lane": "archive_or_hygiene_stop",
+    "conditional_downstream_lane": "r63_post_h62_coprocessor_eligibility_profile_gate",
+    "all_prerequisites_green": true,
+    "runtime_authorization": "closed",
+    "selected_outcome": "archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant",
+    "next_required_lane": "archive_or_hygiene_stop_with_only_dormant_r63_reassessment_on_paper",
+    "pass_count": 6,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f38-post-h62-archive-first-closeout\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

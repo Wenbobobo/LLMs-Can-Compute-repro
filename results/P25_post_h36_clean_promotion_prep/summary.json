@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "current_paper_phase": "p25_post_h36_clean_promotion_prep_complete",
+    "active_stage": "p25_post_h36_clean_promotion_prep",
+    "source_of_truth_branch": "wip/h35-r40-p24-exec",
+    "source_of_truth_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "source_of_truth_sync_packet": "p24_post_h36_bounded_scalar_runtime_sync",
+    "clean_prep_branch": "wip/p25-f15-h37-exec",
+    "clean_prep_worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p25-f15-h37-exec",
+    "target_branch": "main",
+    "promotion_mode": "prepare_only",
+    "merge_authorized": false,
+    "scientific_lane_change_authorized": false,
+    "included_packet_window": "h27_through_h36_p24_plus_saved_r41_design",
+    "supported_here_count": 0,
+    "unsupported_here_count": 0,
+    "disconfirmed_here_count": 0,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f16-h38-p26-exec\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f16-h38-p26-exec\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

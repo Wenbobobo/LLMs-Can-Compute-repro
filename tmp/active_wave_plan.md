@@ -2,55 +2,76 @@
 
 ## Current Wave
 
-`R24_d0_boundary_localization_zoom_followup` + `R25_d0_same_endpoint_systems_recovery_hypotheses`
+Current scientific/control stack:
 
-## Immediate Objectives
+- active docs-only packet:
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`;
+- current convergence stack:
+  `P77_post_p76_keep_set_and_provenance_normalization`,
+  `P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`,
+  `P79_post_p78_archive_claim_boundary_and_reopen_screen`,
+  `P80_post_p79_next_planmode_handoff_sync`;
+- current local execution/control sidecars:
+  `P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync`,
+  `P72_post_p71_archive_polish_and_explicit_stop_handoff`,
+  `P71_post_p70_clean_descendant_merge_prep_readiness_sync`,
+  `P70_post_p69_archive_index_and_artifact_policy_sync`,
+  `P69_post_h65_repo_graph_hygiene_inventory`;
+- current published clean descendant branch:
+  `wip/p75-post-p74-published-successor-freeze`;
+- current successor publication review branch:
+  `wip/p74-post-p73-successor-publication-review`;
+- current local hygiene branch:
+  `wip/p73-post-p72-hygiene-shrink-mergeprep`;
+- current archive handoff branch:
+  `wip/p72-post-p71-archive-polish-stop-handoff`;
+- current hygiene-only cleanup branch:
+  `wip/p69-post-h65-hygiene-only-cleanup`;
+- preserved local integration branch:
+  `wip/p56-main-scratch`;
+- preserved immediate publication lineage:
+  `P74_post_p73_successor_publication_review`,
+  `P75_post_p74_published_successor_freeze`,
+  `P76_post_p75_release_hygiene_and_control_rebaseline`;
+- current dormant future dossier:
+  `F38_post_h62_r63_dormant_eligibility_profile_dossier`;
+- default downstream lane:
+  `explicit_stop_or_no_further_action_archive_first`;
+- only conditional later gate:
+  `r63_post_h62_coprocessor_eligibility_profile_gate`.
 
-1. Treat `H21_refreeze_after_r22_r23` as the current frozen scientific input.
-2. Keep `P12_manuscript_and_manifest_maintenance` preserved as the completed
-   post-`H21` ledger/manuscript closeout packet rather than reopening it.
-3. Pre-lay `R24_d0_boundary_localization_zoom_followup` as the boundary-first
-   planning package for a later explicit reopen decision.
-4. Park `R25_d0_same_endpoint_systems_recovery_hypotheses` as same-endpoint
-   systems notes without treating it as an active repair lane.
-5. Leave `P13` downstream-only until any later outward-sync pass is actually
-   needed.
+Immediate active wave:
 
-## Suggested Worktree Map
+`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet` remains the
+current docs-only packet, while `P77/P78/P79/P80` now form the active
+archive-facing convergence and handoff stack above the preserved
+`P74/P75/P76` publication lineage and the standing `P72/P69/P70/P71` sidecars.
 
-Use these if the next planning-only batch needs isolated write sets:
+Immediate local follow-through:
 
-- `wip/p12-ledger` -> sibling worktree `../LLMCompute-wt-p12`
-- `wip/r24-boundary-plan` -> sibling worktree `../LLMCompute-wt-r24`
-- `wip/r25-systems-notes` -> sibling worktree `../LLMCompute-wt-r25`
-- `wip/p13-hygiene` -> sibling worktree `../LLMCompute-wt-p13`
+Keep the balanced mounted keep set stable, preserve only the dirty root and
+`wip/h27-promotion` as quarantines, and package claim-boundary / handoff docs
+without reopening runtime or widening scientific scope.
 
-Suggested ownership:
+## Execution Closeout Status
 
-- main agent: `main`
-- worker A: `wt-r24`
-- worker B: `wt-r25`
-- background worker: `wt-p12` if any post-closeout paper sync still appears
-- later downstream worker: `wt-p13`
-
-## Acceptance For This Wave
-
-- `H21` is the frozen handoff anchor for the current wave;
-- `P12` is already closed out and preserved as the completed post-`H21`
-  manuscript / manifest maintenance batch;
-- `R24` exists as a planning-only boundary-first reopen package with explicit
-  axes and stop rules;
-- `R25` exists as a parked same-endpoint systems hypotheses package with
-  explicit thresholds and disconfirmers;
-- `P13` is recorded as downstream-only rather than immediate next priority;
-- no widened runtime scope, frontend widening, or softened mixed-systems prose
-  is introduced in this wave.
-
-## If Blocked
-
-- first continue `R24` and `R25` planning-only writeups rather than opening a
-  new runtime lane early;
-- then return to `P12` only if one later outward/publication doc exposes a real
-  post-`H21` ledger mismatch;
-- only after that, tighten the current split map and `P13` hygiene notes;
-- do not start widened runtime, repair, or frontend experiments.
+- the current published clean descendant branch is
+  `wip/p75-post-p74-published-successor-freeze`;
+- the current successor publication review branch is
+  `wip/p74-post-p73-successor-publication-review`;
+- the current local hygiene branch is
+  `wip/p73-post-p72-hygiene-shrink-mergeprep`;
+- the current archive handoff branch is
+  `wip/p72-post-p71-archive-polish-stop-handoff`;
+- the current hygiene-only cleanup branch is
+  `wip/p69-post-h65-hygiene-only-cleanup`;
+- the preserved local integration branch is `wip/p56-main-scratch`;
+- the preserved deeper review lineage branch is
+  `wip/p64-post-p63-successor-stack`;
+- the preserved prior published branch is
+  `wip/p66-post-p65-published-successor-freeze`;
+- the mounted keep set should remain balanced;
+- dirty root `main` remains quarantine-only;
+- `wip/h27-promotion` remains a blocked dirty quarantine; and
+- there is no remaining open execution-side runtime wave under the current
+  `H65` packet.

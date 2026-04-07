@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "policy": "tracked_large_artifact_count",
+      "value": 0
+    },
+    {
+      "policy": "raw_row_ignore_rules_present",
+      "value": true
+    },
+    {
+      "policy": "merge_executed",
+      "value": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "field": "current_branch",
+      "value": "wip/p81-post-p80-clean-descendant-promotion-prep"
+    },
+    {
+      "field": "published_branch_head",
+      "value": "53962ca"
+    },
+    {
+      "field": "preflight_state",
+      "value": "docs_and_audits_green"
+    },
+    {
+      "field": "archive_ready_state",
+      "value": "archive_ready"
+    }
+  ]
+}

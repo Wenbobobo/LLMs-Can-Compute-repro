@@ -1,0 +1,87 @@
+{
+  "experiment": "h26_refreeze_after_r32_boundary_sharp_zoom",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/README.md",
+    "docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/status.md",
+    "docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/todo.md",
+    "docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/acceptance.md",
+    "docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/artifact_index.md",
+    "results/H23_refreeze_after_r26_r27_r28/summary.json",
+    "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
+    "results/R30_d0_boundary_reauthorization_packet/summary.json",
+    "results/R32_d0_family_local_boundary_sharp_zoom/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h26_refreeze_after_r32_boundary_sharp_zoom_complete",
+    "active_stage": "h26_refreeze_after_r32_boundary_sharp_zoom",
+    "prior_frozen_stage": "h23_refreeze_after_r26_r27_r28",
+    "prior_operational_stage": "h25_refreeze_after_r30_r31_decision_packet",
+    "source_runtime_lane": "r32_d0_family_local_boundary_sharp_zoom",
+    "decision_state": "post_r32_refreeze_complete",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "boundary_verdict": "family_local_sharp_zoom_still_not_localized",
+    "systems_verdict": "systems_still_mixed",
+    "downstream_routing_decision": "preserve_deferred_r33_as_next_lane",
+    "next_priority_lane": "r33_d0_non_retrieval_overhead_localization_audit",
+    "blocked_future_lanes": [
+      "r29_d0_same_endpoint_systems_recovery_execution_gate",
+      "f3_post_h23_scope_lift_decision_bundle"
+    ],
+    "unsatisfied_frontier_activation_conditions": [
+      "true_executor_boundary_localization",
+      "current_scope_systems_story_materially_positive",
+      "scope_lift_thesis_explicitly_reauthorized"
+    ],
+    "supported_here_count": 4,
+    "unsupported_here_count": 5,
+    "disconfirmed_here_count": 1,
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "Advance to deferred R33 as the next same-endpoint audit lane while keeping R29 and F3 blocked.",
+    "supported_here": [
+      "R32 executes 60/60 planned candidates under the authorized family-local sharp zoom.",
+      "H26 keeps the fixed tiny typed-bytecode D0 endpoint and does not reopen the historical full grid.",
+      "R32 exhausts its first-pass family-local ladder without producing a first failing row.",
+      "Deferred R33 remains the next justified same-endpoint audit lane after H26."
+    ],
+    "unsupported_here": [
+      "H26 does not widen beyond the fixed tiny typed-bytecode D0 endpoint.",
+      "H26 does not authorize direct R29 execution or broader scope lift.",
+      "H26 does not reopen the historical full grid or add a fifth execution axis.",
+      "The true executor boundary is still not localized strongly enough for a broader boundary claim.",
+      "The same-endpoint systems story remains mixed because H26 adds no new systems evidence."
+    ],
+    "disconfirmed_here": [
+      "The narrower expectation that the R30-authorized first-pass family-local sharp zoom would localize a first failure inside its saved ladder."
+    ],
+    "distilled_result": {
+      "h25_next_priority_lane": "r32_d0_family_local_boundary_sharp_zoom",
+      "h25_deferred_audit_lane": "r33_d0_non_retrieval_overhead_localization_audit",
+      "r32_lane_verdict": "grid_extended_still_not_localized",
+      "h26_boundary_verdict": "family_local_sharp_zoom_still_not_localized",
+      "h23_systems_verdict": "systems_still_mixed",
+      "downstream_routing_decision": "preserve_deferred_r33_as_next_lane",
+      "next_priority_lane": "r33_d0_non_retrieval_overhead_localization_audit"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+- preserve `H58` as a prior closeout and `H43` as the paper-grade endpoint
+- state clearly that the current branch does not reproduce the broad headline
+- require a materially different cost structure for any later reopen
+- keep early stop valid if no credible reopen candidate survives

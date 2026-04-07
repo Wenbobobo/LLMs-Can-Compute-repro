@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import pytest
 
+from bytecode import BytecodeInterpreter, lower_program, r58_restricted_compiled_boundary_cases
 from exec_trace import (
     TraceInterpreter,
+    call_chain_program,
     countdown_program,
     dynamic_memory_program,
     equality_branch_program,
@@ -23,6 +25,7 @@ from model import (
 
 def test_free_running_exact_linear_matches_reference_programs() -> None:
     programs = (
+        call_chain_program(),
         countdown_program(7),
         equality_branch_program(4, 4),
         equality_branch_program(4, 5),
@@ -42,6 +45,7 @@ def test_free_running_exact_linear_matches_reference_programs() -> None:
 
 def test_free_running_exact_accelerated_matches_reference_programs() -> None:
     programs = (
+        call_chain_program(),
         countdown_program(12),
         equality_branch_program(2, 2),
         equality_branch_program(1, 3),
@@ -81,6 +85,7 @@ def test_free_running_partitioned_memory_matches_reference_programs() -> None:
 
 def test_free_running_pointer_like_exact_matches_reference_programs() -> None:
     programs = (
+        call_chain_program(),
         countdown_program(12),
         equality_branch_program(2, 2),
         latest_write_program(),
@@ -103,6 +108,7 @@ def test_free_running_pointer_like_exact_matches_reference_programs() -> None:
 
 def test_free_running_staged_exact_matches_reference_programs() -> None:
     programs = (
+        call_chain_program(),
         countdown_program(12),
         equality_branch_program(1, 3),
         latest_write_program(),
@@ -131,8 +137,33 @@ def test_free_running_rejects_partitioned_stack_strategy() -> None:
         )
 
 
+def test_free_running_exact_matches_restricted_compiled_boundary_lowered_cases() -> None:
+    source_interpreter = BytecodeInterpreter()
+    lowered_interpreter = TraceInterpreter()
+    executor = FreeRunningTraceExecutor(
+        stack_strategy="accelerated",
+        memory_strategy="accelerated",
+        validate_exact_reads=False,
+    )
+
+    for case in r58_restricted_compiled_boundary_cases():
+        source_result = source_interpreter.run(case.program, max_steps=case.max_steps)
+        lowered_program = lower_program(case.program)
+        lowered_reference = lowered_interpreter.run(lowered_program, max_steps=case.max_steps)
+        execution = executor.run(lowered_program, max_steps=max(source_result.final_state.steps + 8, case.max_steps))
+        outcome = compare_execution_to_reference(lowered_program, execution, reference=None)
+
+        assert source_result.events == lowered_reference.events
+        assert source_result.final_state == lowered_reference.final_state
+        assert execution.events == lowered_reference.events
+        assert execution.final_state == lowered_reference.final_state
+        assert outcome.exact_trace_match is True
+        assert outcome.exact_final_state_match is True
+        assert outcome.first_mismatch_step is None
+
+
 def test_compare_execution_to_reference_reports_exact_match() -> None:
-    program = countdown_program(10)
+    program = call_chain_program()
     execution = run_free_running_exact(program, decode_mode="accelerated")
 
     outcome = compare_execution_to_reference(program, execution)
@@ -140,6 +171,18 @@ def test_compare_execution_to_reference_reports_exact_match() -> None:
     assert outcome.exact_trace_match is True
     assert outcome.exact_final_state_match is True
     assert outcome.first_mismatch_step is None
+
+
+def test_free_running_exact_records_call_space_reads() -> None:
+    execution = FreeRunningTraceExecutor(
+        stack_strategy="pointer_like_exact",
+        memory_strategy="pointer_like_exact",
+    ).run(call_chain_program())
+
+    call_reads = [observation for observation in execution.read_observations if observation.space == "call"]
+
+    assert len(call_reads) == 2
+    assert [observation.chosen_value for observation in call_reads] == [7, 3]
 
 
 def test_free_running_evaluation_reports_long_countdown_bucket() -> None:

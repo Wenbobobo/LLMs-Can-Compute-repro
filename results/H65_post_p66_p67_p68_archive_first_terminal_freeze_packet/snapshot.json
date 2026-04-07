@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "field": "default_downstream_lane",
+      "value": "explicit_archive_stop_or_hygiene_only"
+    },
+    {
+      "field": "conditional_downstream_lane",
+      "value": "r63_post_h62_coprocessor_eligibility_profile_gate"
+    },
+    {
+      "field": "all_prerequisites_green",
+      "value": true
+    }
+  ]
+}

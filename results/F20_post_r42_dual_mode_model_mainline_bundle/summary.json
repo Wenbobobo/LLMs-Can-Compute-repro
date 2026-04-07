@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "current_paper_phase": "f20_post_r42_dual_mode_model_mainline_bundle_complete",
+    "active_stage": "f20_post_r42_dual_mode_model_mainline_bundle",
+    "preserved_prior_docs_only_decision_packet": "h40_post_h38_semantic_boundary_activation_packet",
+    "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "current_completed_retrieval_contract_gate": "r42_origin_append_only_memory_retrieval_contract_gate",
+    "current_long_arc_planning_bundle": "f18_post_h38_origin_core_long_arc_bundle",
+    "current_semantic_boundary_roadmap": "f19_post_f18_restricted_wasm_useful_case_roadmap",
+    "model_mainline_posture": "coequal_mainline_exact_non_substitutive",
+    "implementation_posture": "dual_mode_trainable_2d_and_compiled_weight",
+    "admitted_model_implementation_count": 2,
+    "decisive_exact_next_gate": "r43_origin_bounded_memory_small_vm_execution_gate",
+    "authorized_future_model_gate": "r45_origin_dual_mode_model_mainline_gate",
+    "later_route_selection_packet": "h42_post_r43_route_selection_packet",
+    "deferred_useful_case_gate": "r44_origin_restricted_wasm_useful_case_execution_gate",
+    "next_required_lane": "h41_post_r42_aggressive_long_arc_decision_packet",
+    "supported_here_count": 4,
+    "unsupported_here_count": 2,
+    "disconfirmed_here_count": 1,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h41-r43-mainline\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h41-r43-mainline\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

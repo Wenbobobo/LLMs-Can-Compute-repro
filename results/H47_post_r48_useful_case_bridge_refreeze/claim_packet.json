@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "supported_here": [
+      "H47 lands the required explicit post-R48 docs-only refreeze packet.",
+      "H47 preserves H43 as the current paper-grade endpoint while preserving H46 as the prior decision packet.",
+      "H47 freezes R48 as narrow comparator-only support and restores no_active_downstream_runtime_lane."
+    ],
+    "unsupported_here": [
+      "H47 does not widen the claim ceiling beyond bounded useful cases.",
+      "H47 does not authorize broader Wasm/C, broader hybrid model work, or merge-to-main.",
+      "H47 does not let model-side positives replace exact R46/R47 evidence."
+    ],
+    "disconfirmed_here": [
+      "The idea that a positive R48 comparator result should automatically authorize broader runtime or hybrid growth by momentum."
+    ],
+    "distilled_result": {
+      "active_stage": "h47_post_r48_useful_case_bridge_refreeze",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_decision_packet": "h46_post_r47_frontend_bridge_decision_packet",
+      "preserved_route_reauthorization_packet": "h44_post_h43_route_reauthorization_packet",
+      "current_exact_first_planning_bundle": "f21_post_h43_exact_useful_case_expansion_bundle",
+      "current_comparator_planning_bundle": "f22_post_r46_useful_case_model_bridge_bundle",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "selected_outcome": "freeze_r48_as_narrow_comparator_support_only",
+      "current_completed_post_h44_exact_runtime_gate": "r46_origin_useful_case_surface_generalization_gate",
+      "current_completed_exact_frontend_bridge_gate": "r47_origin_restricted_frontend_translation_gate",
+      "current_completed_comparator_only_useful_case_model_gate": "r48_origin_dual_mode_useful_case_model_gate",
+      "claim_d_state": "supported_here_narrowly",
+      "claim_ceiling": "bounded_useful_cases_only",
+      "current_low_priority_wave": "p31_post_h43_blog_guardrails_refresh",
+      "authorized_next_runtime_candidate": "none",
+      "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+      "explicit_merge_packet": "p27_post_h41_clean_promotion_and_explicit_merge_packet",
+      "merge_executed": false,
+      "later_explicit_packet_required_before_scope_widening": true,
+      "next_required_lane": "no_active_downstream_runtime_lane"
+    }
+  }
+}

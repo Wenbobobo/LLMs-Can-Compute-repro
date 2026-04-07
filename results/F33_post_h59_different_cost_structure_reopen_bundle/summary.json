@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "active_stage_at_planning_time": "h59_post_h58_reproduction_gap_decision_packet",
+    "planning_bundle": "f33_post_h59_different_cost_structure_reopen_bundle",
+    "current_low_priority_wave": "p42_post_h59_gptpro_reinterview_packet",
+    "preserved_prior_closeout_certification": "f32_post_h58_closeout_certification_bundle",
+    "preserved_prior_publication_sync": "p41_post_h58_publication_and_archive_sync",
+    "admissible_reopen_requirement": "materially_different_cost_structure",
+    "candidate_order": [
+      "amortized_or_indexed_trace_retrieval_route",
+      "low_level_compiled_or_external_coprocessor_route",
+      "transformed_or_trained_executor_route_only_if_cost_model_changes_materially"
+    ],
+    "project_stop_rule": "stop_if_no_candidate_improves_cost_structure_on_useful_case",
+    "next_required_lane": "planning_only_candidate_screen_or_project_stop",
+    "pass_count": 4,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

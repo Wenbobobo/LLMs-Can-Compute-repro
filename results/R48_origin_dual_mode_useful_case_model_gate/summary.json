@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "current_active_docs_only_stage": "h46_post_r47_frontend_bridge_decision_packet",
+    "active_runtime_lane": "r48_origin_dual_mode_useful_case_model_gate",
+    "activation_packet": "h46_post_r47_frontend_bridge_decision_packet",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "current_exact_first_planning_bundle": "f21_post_h43_exact_useful_case_expansion_bundle",
+    "current_comparator_planning_bundle": "f22_post_r46_useful_case_model_bridge_bundle",
+    "preserved_prior_post_h44_exact_gate": "r46_origin_useful_case_surface_generalization_gate",
+    "current_completed_exact_frontend_bridge_gate": "r47_origin_restricted_frontend_translation_gate",
+    "gate": {
+      "lane_verdict": "useful_case_model_lane_supported_without_replacing_exact",
+      "route_posture": "comparator_only_useful_case_model_bridge",
+      "mode_count": 2,
+      "exact_mode_count": 2,
+      "contract_variant_count": 8,
+      "contract_kernel_count": 3,
+      "variant_mode_row_count": 16,
+      "exact_variant_mode_row_count": 16,
+      "heldout_kernel_id": "histogram16_u8",
+      "heldout_variant_count": 3,
+      "trainable_heldout_family_exact": true,
+      "claim_ceiling": "bounded_useful_cases_only",
+      "exact_r47_dependency_satisfied": true,
+      "later_explicit_packet_required": true,
+      "next_required_packet": "h47_post_r48_useful_case_bridge_refreeze"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r48-origin-dual-mode-useful-case-model\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r48-origin-dual-mode-useful-case-model\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

@@ -2,29 +2,19 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
@@ -32,40 +22,67 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
-        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
-        "| `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |",
-        "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |"
+        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
+        "`P77_post_p76_keep_set_and_provenance_normalization`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
-        "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-        "gate as `healthy_but_slow`.",
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-        "- `H14_core_first_reopen_and_scope_lock` is now the completed prior reopened"
+        "`P80_post_p79_next_planmode_handoff_sync`.",
+        "`explicit_stop_or_no_further_action_archive_first`."
       ]
     },
     {
-      "path": "docs/publication_record/release_summary_draft.md",
+      "path": "docs/README.md",
       "matched_lines": [
-        "stage, and `E1c` remains conditional only and contradiction-only on current"
+        "and the dormant future dossier.",
+        "- `publication_record/current_stage_driver.md`",
+        "- `branch_worktree_registry.md`",
+        "## Dormant Future",
+        "- treat `publication_record/current_stage_driver.md` as the canonical live"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `P80_post_p79_next_planmode_handoff_sync`",
+        "- `wip/p75-post-p74-published-successor-freeze`",
+        "produced the live `wip/p75-post-p74-published-successor-freeze` branch."
+      ]
+    },
+    {
+      "path": "docs/plans/README.md",
+      "matched_lines": [
+        "- `2026-04-05-post-p80-next-planmode-handoff.md`",
+        "- `../milestones/P80_post_p79_next_planmode_handoff_sync/`"
       ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready",
-        "- [ ] `results/H19_refreeze_and_next_scope_decision/summary.json` remains",
-        "- [ ] `results/H17_refreeze_and_conditional_frontier_recheck/summary.json`",
-        "- [ ] `results/H15_refreeze_and_decision_sync/summary.json` reports zero",
-        "- [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.",
-        "- [ ] `results/release_worktree_hygiene_snapshot/summary.json` classifies the",
-        "- [ ] `results/V1_full_suite_validation_runtime_timing_followup/summary.json`",
-        "- [ ] Use `results/release_worktree_hygiene_snapshot/summary.json` to decide"
+        "- keep dirty root `main` outside any integration path"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_candidate_checklist.md",
+      "matched_lines": [
+        "- current package must expose `H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`",
+        "- preserved `H64/H58/H43`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/claim_ladder.md",
+      "matched_lines": [
+        "| P79 Archive claim boundary and reopen screen | validated as the current archive-facing claim-boundary wave | `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json`, `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/claim_packet.json` | packages the strongest honest claim boundary: narrow mechanism support survives while the executor-value lane is closed |",
+        "| P74/P75/P76 Immediate publication lineage | preserved immediate publication lineage | `results/P74_post_p73_successor_publication_review/summary.json`, `results/P75_post_p74_published_successor_freeze/summary.json`, `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json` | produced the live `p75` publication branch and remains the nearest preserved publication stack |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/archival_repro_manifest.md",
+      "matched_lines": [
+        "- `results/P80_post_p79_next_planmode_handoff_sync/summary.json`",
+        "- `results/P77_post_p76_keep_set_and_provenance_normalization/summary.json`"
       ]
     },
     {
@@ -73,53 +90,6 @@
       "matched_lines": [
         "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\",",
         "\"git_diff_check_state\": \"clean\","
-      ]
-    },
-    {
-      "path": "docs/publication_record/manuscript_bundle_draft.md",
-      "matched_lines": [
-        "## 1. Abstract",
-        "but not for a broader source-language claim. The no-widening decision is part",
-        "validate. Companion appendix material stays clearly downstream of that",
-        "## 10. Reproducibility Appendix"
-      ]
-    },
-    {
-      "path": "docs/publication_record/paper_bundle_status.md",
-      "matched_lines": [
-        "locked submission-candidate bundle now serves as the current frozen bundle",
-        "The current submission/release controls also live in"
-      ]
-    },
-    {
-      "path": "docs/publication_record/freeze_candidate_criteria.md",
-      "matched_lines": [
-        "1. Claim boundaries stay fixed.",
-        "4. Appendix companions stay scoped and auditable.",
-        "5. Release-facing derivatives remain downstream."
-      ]
-    },
-    {
-      "path": "docs/publication_record/main_text_order.md",
-      "matched_lines": [
-        "## Fixed order",
-        "Section: `Compiled Boundary`"
-      ]
-    },
-    {
-      "path": "docs/publication_record/appendix_companion_scope.md",
-      "matched_lines": [
-        "## Required companions",
-        "## Allowed optional companions",
-        "## Out of scope on the current freeze candidate"
-      ]
-    },
-    {
-      "path": "docs/publication_record/blog_release_rules.md",
-      "matched_lines": [
-        "## Blog stays blocked unless all of the following are true",
-        "2. `release_candidate_checklist.md` is fully green.",
-        "no arbitrary C, no broad \u201cLLMs are computers\u201d framing, no current-scope"
       ]
     }
   ]

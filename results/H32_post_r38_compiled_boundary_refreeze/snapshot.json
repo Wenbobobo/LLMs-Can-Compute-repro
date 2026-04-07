@@ -1,0 +1,31 @@
+{
+  "rows": [
+    {
+      "source": "results/H30_post_r36_r37_scope_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h30_post_r36_r37_scope_decision_packet",
+        "decision_state": "origin_core_tiny_compiled_boundary_refrozen",
+        "compiled_boundary_state": "tiny_compiled_boundary_supported_narrowly"
+      }
+    },
+    {
+      "source": "results/H31_post_h30_later_explicit_boundary_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h31_post_h30_later_explicit_boundary_decision_packet",
+        "authorization_outcome": "execute_one_more_tiny_extension",
+        "admitted_extension_case": "bytecode_subroutine_braid_6_a80",
+        "boundary_probe_case": "bytecode_subroutine_braid_long_12_a160"
+      }
+    },
+    {
+      "source": "results/R38_origin_compiler_control_surface_extension_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_compiler_control_surface_extension_supported_narrowly",
+        "admitted_case_count": 1,
+        "boundary_stress_case_count": 1,
+        "admitted_free_running_exact_count": 1,
+        "boundary_free_running_exact_count": 1
+      }
+    }
+  ]
+}

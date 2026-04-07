@@ -1,0 +1,4 @@
+- sync release/archive/submission surfaces to `H59/F33/P42`
+- preserve `H58/F32/P41` as visible historical anchors
+- certify the current raw-row ignore policy and large-artifact posture
+- keep merge posture explicit as `false`

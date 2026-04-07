@@ -1,5 +1,15 @@
 # Manuscript Bundle
 
+Status note: this file is the current paper-shaped prose baseline and is now
+aligned to the landed
+`H35 -> R40 -> H36 -> H37 -> H38 -> H40 -> R42 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43`
+control chain. Preserved same-endpoint materials below `H28` remain relevant
+as historical negative or mixed context, but the current manuscript endpoint
+is the narrow Origin-core / semantic-boundary line rather than any
+post-`H21` placeholder horizon. If prose and a landed packet ever differ,
+trust `current_stage_driver.md`, `claim_ladder.md`,
+`claim_evidence_table.md`, and `release_summary_draft.md`.
+
 ## 1. Abstract
 
 We revisit a field-note claim that large language model mechanisms can behave
@@ -7,22 +17,25 @@ like computation, but we freeze the paper around a narrower reproduction target:
 append-only execution traces, exact latest-write retrieval, and a small exact
 executor under explicit boundaries. On the current evidence bundle, the
 mechanism story remains positive at this narrower level: append-only trace
-semantics and exact retrieval survive, and a tiny typed-bytecode `D0` slice
-achieves exact trace or exact final-state agreement on the frozen starter
-suite. The precision story is positive but bounded rather than open-ended.
+semantics and exact retrieval survive, and the active compiled line now
+supports one tiny lowered bytecode subset plus one richer same-substrate
+control/call family, with one declared dependency audit closing the line
+complete-for-now. The precision story is positive but bounded rather than
+open-ended.
 Float32 single-head fails on 12 of 25 tracked real-trace streams, with 7
 failing already at `1x`, while at least one decomposition configuration
 remains exact on all 25 tracked streams in the validated suite. The systems
 story is mixed. Cached retrieval retains a strong asymptotic advantage on the
 geometry benchmark, but the current lowered `exec_trace` path remains about
-`1.82x` slower than the best current reference/oracle path on the positive
-`D0` suites, and the later same-endpoint `R23` recheck still leaves
+`1.82x` slower than the best current reference/oracle path on the preserved
+positive same-endpoint compiled suites, and the later same-endpoint `R23`
+recheck still leaves
 `pointer_like_exact` about `4.16x` slower than the best current reference path
 despite preserving exactness on `25/25` rows. We therefore keep the compiled
-endpoint at tiny typed bytecode and treat broader claims about arbitrary C,
-general LLM computation, or current end-to-end competitiveness as unsupported.
-Stopping at `D0` is therefore part of the current scientific conclusion, not
-an implementation gap waiting to be filled.
+endpoint narrow and same-substrate, and we treat broader claims about
+arbitrary `C`, general LLM computation, or current end-to-end competitiveness
+as unsupported. Stopping at this narrow compiled line is therefore part of the
+current scientific conclusion, not an implementation gap waiting to be filled.
 
 ## 2. Introduction and Claim Ladder
 
@@ -44,8 +57,9 @@ current validated scope. Second, it closes two important boundaries instead of
 silently skipping them: staged-neural execution remains caveated by legality
 structure, and real-trace precision remains positive only within an explicitly
 narrow current-suite boundary. Third, it shows that the first compiled endpoint
-remains at tiny typed bytecode `D0`: the current slice is exact and
-auditable, but the systems gate is mixed and therefore does not justify
+has become a narrow same-substrate line: one tiny lowered bytecode subset is
+exact and auditable, one richer control/call family also survives, and the
+`H33/R39/H34` chain then freezes that line complete-for-now instead of
 widening to a broader frontend.
 
 The introduction closes by pointing readers to two paired main-text artifacts.
@@ -162,16 +176,18 @@ faster than brute-force history search at every tested history size and yields
 speedups from about `42.8x` to `249.2x` as history grows. That asymptotic
 signal, however, is not the same thing as present end-to-end competitiveness on
 the compiled scope that the paper actually validates. When measured on the
-current positive `D0` suites, the lowered `exec_trace` path still has a median
-cost of roughly `6458 ns/step`, compared with about `6028 ns/step` for the
-bytecode path and `3540 ns/step` for the best current reference/oracle path.
-The later same-endpoint `R23` follow-up upgrades `pointer_like_exact` into the
-current first-class runtime candidate and keeps exactness on `25/25` full-suite
-rows, but it still remains about `4.16x` slower than the best current
-reference path. The correct conclusion is therefore mixed and operational: the
-specialized retrieval mechanism is real, the same-endpoint runtime candidate
-improved materially, but on the present validated scope it still does not
-justify broader frontend widening or a general system-superiority claim.
+preserved positive same-endpoint compiled suites, the lowered `exec_trace`
+path still has a median cost of roughly `6458 ns/step`, compared with about
+`6028 ns/step` for the bytecode path and `3540 ns/step` for the best current
+reference/oracle path.
+The later same-endpoint `R23` follow-up had upgraded `pointer_like_exact` into
+that old route's first-class runtime candidate and kept exactness on `25/25`
+full-suite rows, but it still remained about `4.16x` slower than the best
+current reference path. The correct conclusion is therefore mixed and
+operational: the specialized retrieval mechanism is real, the same-endpoint
+runtime candidate improved materially, but on the present validated scope it
+still does not justify broader frontend widening or a general
+system-superiority claim.
 
 In the current layout, this result remains a quantified main-text paragraph
 rather than a standalone table. The main text needs the mixed gate decision and
@@ -183,71 +199,90 @@ nearly overturned the gate.
 
 ## 8. Compiled Boundary
 
-The compiled result is presented as an endpoint, not as a teaser. The current
-paper validates a tiny typed-bytecode `D0` slice with deterministic
-verification, exact-trace and exact-final-state agreement on the frozen starter
-suite, one stress/reference follow-up tied to a standalone Python spec oracle,
-and appendix-level memory-surface diagnostics that help audit the boundary
-without widening it. This is sufficient for a first compiled boundary claim,
-but not for a broader source-language claim. The no-widening decision is part
-of the scientific conclusion. Because the systems gate remains mixed and
-because the current evidence bundle already closes the narrow compiled claim,
-the project stops at tiny typed bytecode rather than widening toward Wasm-like
-or arbitrary-C language coverage.
+The compiled result is presented as a narrow same-substrate endpoint with one
+explicit extension and one explicit stop. `R37` first shows that one admitted
+tiny bytecode subset survives verifier/spec checks, lowered interpreter parity,
+and accelerated free-running exact execution on the current append-only /
+exact-retrieval / small-VM substrate. `H30` then freezes that result as narrow
+compiled-boundary evidence only. `H31` authorizes exactly one further same-
+substrate extension, `R38` validates one richer control/call family plus one
+longer same-family boundary probe without widening the opcode surface, and
+`H32` freezes that richer family as complete narrow support rather than as a
+bridge to a broader compiler claim.
 
-The later same-endpoint packet sharpens that endpoint rather than replacing it.
-`R19` supports runtime generalization inside the admitted-plus-heldout same-
-endpoint envelope, `R20` supports the mechanism story through matched negative
-controls, `R21` and `R22` jointly show that the bounded executor scans still do
-not localize a true failure boundary, and `H21` refreezes those consequences as
-one explicit claim partition. The compiled-boundary section therefore needs to
-carry both kinds of result at once: a real positive endpoint on the fixed `D0`
-scope, and an equally important statement that the current packet still stops
-before true boundary localization or same-endpoint systems closure.
+The downstream `H33 -> R39 -> H34` chain matters because it shows how the line
+now stops. `H33` selects exactly one same-substrate next question instead of
+automatic further runtime momentum. `R39` answers that question on one declared
+helper-body permutation with target renumbering: exact source, lowered, and
+free-running execution survive on both the admitted row and the named same-
+family boundary probe; final state is preserved on both rows; and the trace
+changes on both rows, so the perturbation is not a no-op. `H34` then
+interprets that result as `freeze_compiled_boundary_as_complete_for_now`. The
+meaning of the current paper endpoint is therefore explicit: the compiled line
+is coherent and honest at the present tiny-plus-one-richer-family boundary, but
+there is no active downstream runtime lane and no automatic reopen.
 
-The main text supports this endpoint with two artifacts: a frontend boundary
-diagram that makes the frozen `D0` slice explicit, and an exact-trace/final-state
+Preserved same-endpoint packets such as `R19/R20/R21/R22/R23/H21` remain useful
+historical context because they sharpen what still does not follow from the
+compiled evidence: no true executor boundary was localized on that older route,
+the same-endpoint systems story remained mixed-to-negative, and wider frontend
+or arbitrary-`C` rhetoric never became justified. In the current manuscript,
+those rows support blocked-claim discipline rather than acting as placeholders
+for the next compiled packet.
+
+The main text supports the current endpoint with two artifacts: a frontend
+boundary diagram that makes the preserved first compiled slice explicit and
+anchors the current no-widening boundary, and an exact-trace / final-state
 success table that records what the current starter suite does and does not
 validate. Companion appendix material stays clearly downstream of that
-endpoint: memory-surface diagnostics and stress/reference rows help audit the
-boundary, but they do not widen it. For the post-`H21` packet, the appendix
-should also reserve one compact runtime-generalization placeholder for `R19`,
-one mechanism-ablation placeholder for `R20`, one paired boundary-map
-placeholder for `R21/R22`, one compact mixed systems gate placeholder for
-`R23`, and one frozen claim-partition note for `H21`.
-In the fixed main-text order, the frontend boundary diagram appears before the
-exact-trace/final-state success table.
+endpoint: memory-surface diagnostics, stress/reference rows, the richer
+same-substrate `R38` control-family evidence, and the declared `R39`
+perturbation audit all help audit the current boundary, but they do not widen
+it. In the fixed main-text order, the frontend boundary diagram appears before
+the exact-trace/final-state success table.
 
 ## 9. Negative Results and Threats
 
 The negative-results section reads as part of the argument rather than as
 cleanup. Several tempting broader claims now have explicit contrary evidence or
 explicitly missing support: the project does not validate general LLM
-computation, arbitrary C reproduction, broader compiled demos, fair-regime
-staged-pointer exactness, broad long-horizon precision robustness, or current-
-scope end-to-end runtime superiority. These are not all the same kind of
-limitation, and the section keeps them distinct. Some are failures of learned
-execution under fair decode regimes; some are bounded precision results; some
-are systems-level no-go findings; and some are deliberate scope cuts made to
-avoid inflating `D0` into a broader language claim. Keeping these rows
-explicit is scientifically useful because it prevents the paper from
+computation, arbitrary `C` reproduction, broader compiled demos, fair-regime
+staged-pointer exactness, broad long-horizon precision robustness, or
+current-scope end-to-end runtime superiority. These are not all the same kind
+of limitation, and the section keeps them distinct. Some are failures of
+learned execution under fair decode regimes; some are bounded precision
+results; some are systems-level no-go findings; and some are deliberate scope
+cuts made to avoid inflating the narrow compiled line into a broader language
+claim. Keeping these
+rows explicit is scientifically useful because it prevents the paper from
 borrowing rhetorical force from the motivating field note while quietly
-dropping the parts that did not survive the evidence freeze. The threats
-section then makes the matching external-validity point: the current bundle is
-a narrow, auditable endpoint, not a disguised claim about general
-language-model computation. The post-`H21` follow-up adds two more rows that
-should remain first-class in that section. `R22` is not a hidden positive
-systems result; it is a harder no-break-observed boundary scan that still
-fails to localize the true executor boundary. `R23` is not a softened near-win;
-it is a mixed same-endpoint systems recheck that preserves exactness but still
-fails the bounded competitiveness goal. `H21` matters because it freezes those
-two rows into the paper-facing claim partition instead of leaving them as
-operational footnotes.
+dropping the parts that did not survive the evidence freeze.
+
+The current `H34` closeout sharpens that discipline. `R39` weakens one specific
+"compiler did all the work" objection by showing that one declared helper-body
+permutation with target renumbering preserves exact execution and final state
+on the audited rows, but it does not prove arbitrary control-surface freedom,
+broader compiler-family support, or a reopen-worthy new positive lane. `H34`
+therefore matters as much as `R39`: it records that no unique sharper
+same-substrate contradiction survived the current audit and leaves no active
+downstream runtime lane. That means negative or unsupported rows stay blocked
+by design, not by temporary prose omission.
+
+Historical same-endpoint rows remain first-class threats language where they
+still sharpen blocked claims. `R22` is not a hidden positive systems result; it
+is a harder no-break-observed boundary scan that still fails to localize the
+true executor boundary. `R23` is not a softened near-win; it is a mixed same-
+endpoint systems recheck that preserves exactness but still fails the bounded
+competitiveness goal. `H21` and the later `H27` closeout matter because they
+freeze those rows into the preserved claim partition instead of leaving them as
+operational footnotes. The external-validity point then follows directly: the
+current bundle is a narrow, auditable endpoint, not a disguised claim about
+general language-model computation.
 
 A compact threats-to-validity table makes those boundary rows explicit,
 keeping failures of learned execution, finite-precision limits, systems no-go
-results, and deliberate scope cuts visible as distinct reasons rather than as a
-single undifferentiated limitation paragraph.
+results, same-substrate stop conditions, and deliberate scope cuts visible as
+distinct reasons rather than as a single undifferentiated limitation paragraph.
 
 ## 10. Reproducibility Appendix
 
@@ -260,16 +295,26 @@ therefore has three jobs. First, it points readers to the canonical paper-ready
 bundle under `results/P1_paper_readiness/`, which contains rendered figures,
 table sources, and machine-readable bundle summaries. Second, it records how to
 regenerate the public-safe result bundles that matter for the compiled
-boundary, paper assembly, and release gate. Third, it keeps companion
-diagnostics such as memory-surface views, per-stream precision catalogs, and
-full staged failure digests visible and inspectable without letting them mutate
-into broader claims. Release-hygiene and packaging ledgers belong here for the
-same reason: they make the research engineering process reproducible and
-inspectable, but they remain downstream of the scientific argument itself. The
-appendix layout stays anchored in three companion bundles: the `P1` paper-ready
-artifact set, the compiled-boundary companion diagnostics, and the release/
-readiness ledgers that keep the package regenerable. For the post-`H21`
-closeout, the appendix should explicitly reserve space for the `R19` runtime
-generalization rows, the `R20` matched-control ablation rows, the paired
-`R21/R22` boundary-map summaries, the `R23` compact systems-gate rows, and the
-`H21` supported/unsupported/disconfirmed claim note.
+boundary, paper assembly, and release gate, with the current control chain
+ending explicitly at
+`H35 -> R40 -> H36 -> H37 -> H38 -> H40 -> R42 -> H41 -> P27 -> R43 -> R45 -> H42 -> R44 -> H43`,
+while preserving
+`R37 -> H30 -> H31 -> R38 -> H32 -> H33 -> R39 -> H34` as the earlier
+compiled-boundary subline beneath it.
+Third, it keeps companion diagnostics such as memory-surface views, per-stream
+precision catalogs, full staged failure digests, and the richer same-substrate
+compiled audit materials visible and inspectable without letting them mutate
+into broader claims.
+
+Release-hygiene and packaging ledgers belong here for the same reason: they
+make the research engineering process reproducible and inspectable, but they
+remain downstream of the scientific argument itself. The appendix layout stays
+anchored in four companion bundles: the `P1` paper-ready artifact set, the
+current paper/control companion diagnostics (the preserved
+`R37/R38/R39/H34` compiled-boundary materials plus the landed
+`R42/R43/R44/R45/H43` semantic-boundary control stack), the release/readiness
+ledgers that keep the package regenerable, and one preserved
+historical-context bundle for older same-endpoint rows that still inform
+blocked claims. Those historical rows are included as archived context only.
+They are no longer reserved as the current paper-assembly horizon, and they do
+not imply an active downstream runtime lane after `H43`.

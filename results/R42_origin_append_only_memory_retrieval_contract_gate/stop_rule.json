@@ -1,0 +1,7 @@
+{
+  "planned_task_count": 6,
+  "executed_task_count": 6,
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "reason": "all tasks stayed exact on value and row identity"
+}

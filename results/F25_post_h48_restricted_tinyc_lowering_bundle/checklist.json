@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f25_docs_define_restricted_tinyc_planning_bundle",
+      "status": "pass",
+      "notes": "F25 should land as a planning-only bundle that fixes R50 and H49 without widening scope."
+    },
+    {
+      "item_id": "f25_scope_stays_inside_h48_r49_r47_boundaries",
+      "status": "pass",
+      "notes": "F25 should remain inside the H48-selected route and reuse the preserved R47 useful-case contract first."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_f25_current_and_fix_r50_h49",
+      "status": "pass",
+      "notes": "Shared control surfaces should keep H48 current while making F25 the current planning bundle and R50/H49 the only forward chain."
+    }
+  ]
+}

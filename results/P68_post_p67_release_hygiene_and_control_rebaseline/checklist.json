@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p68_reads_p67",
+      "status": "pass",
+      "notes": "P68 starts only after the landed P67 freeze wave."
+    },
+    {
+      "item_id": "p68_current_branch_is_p66",
+      "status": "pass",
+      "notes": "The rebaseline should run on the live p66 published branch."
+    },
+    {
+      "item_id": "p68_worktree_hygiene_is_clean_ready",
+      "status": "pass",
+      "notes": "The new published successor branch should be clean enough for outward sync if other gates are green."
+    },
+    {
+      "item_id": "p68_driver_and_registry_expose_rebased_frozen_successor",
+      "status": "pass",
+      "notes": "The rebaseline should expose the new published branch while preserving the prior lineages explicitly."
+    }
+  ]
+}

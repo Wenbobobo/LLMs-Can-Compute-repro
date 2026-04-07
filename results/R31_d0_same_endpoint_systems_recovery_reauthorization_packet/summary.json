@@ -1,0 +1,61 @@
+{
+  "experiment": "r31_d0_same_endpoint_systems_recovery_reauthorization_packet",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/README.md",
+    "docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/status.md",
+    "docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/todo.md",
+    "docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/acceptance.md",
+    "docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/artifact_index.md",
+    "results/H23_refreeze_after_r26_r27_r28/summary.json",
+    "results/R23_d0_same_endpoint_systems_overturn_gate/summary.json",
+    "results/R28_d0_trace_retrieval_contract_audit/summary.json",
+    "docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/hypothesis_matrix.md",
+    "docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/thresholds_and_disconfirmers.md"
+  ],
+  "summary": {
+    "current_frozen_stage": "h23_refreeze_after_r26_r27_r28",
+    "systems_reauthorization_verdict": "audit_non_retrieval_overhead_first",
+    "dominant_bottleneck_hypothesis": "non_retrieval_overhead_dominates",
+    "required_comparators": [
+      "spec_reference",
+      "lowered_exec_trace",
+      "pointer_like_exact"
+    ],
+    "recovery_probe_scope": "current_positive_d0_suite_non_retrieval_component_localization",
+    "recommended_next_lane": "r33_d0_non_retrieval_overhead_localization_audit",
+    "blocked_future_lane": "r29_d0_same_endpoint_systems_recovery_execution_gate",
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "Keep R29 blocked and route the next justified systems work through a narrower non-retrieval overhead audit on the current positive D0 suite."
+  }
+}

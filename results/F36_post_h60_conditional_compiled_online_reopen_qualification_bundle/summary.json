@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "active_stage_at_bundle_time": "h60_post_f34_next_lane_decision_packet",
+    "current_reopen_qualification_bundle": "f36_post_h60_conditional_compiled_online_reopen_qualification_bundle",
+    "preserved_prior_reopen_screen": "f34_post_h59_compiled_online_retrieval_reopen_screen",
+    "admissible_reopen_family": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route",
+    "useful_case_target_contract": "exact_useful_kernel_or_stricter_narrow_target_with_transparent_linear_and_external_baselines",
+    "required_cost_structure_delta": "material_change_relative_to_closed_r62_h58_executor_value_lane",
+    "mandatory_baseline_set": [
+      "transparent_linear_internal_baseline",
+      "external_simple_or_scalar_baseline",
+      "current_exact_route_reference"
+    ],
+    "preruntime_question_count": 5,
+    "immediate_stop_rule_count": 5,
+    "later_authorization_gate": "no_runtime_lane_open_until_later_explicit_authorization",
+    "selected_outcome": "compiled_online_route_qualified_on_paper_only_with_strict_preruntime_gates",
+    "current_downstream_scientific_lane": "planning_only_or_project_stop",
+    "next_required_lane": "later_explicit_authorization_packet_or_archive_stop",
+    "pass_count": 7,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f36-post-h60-archive-first-consolidation\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f36-post-h60-archive-first-consolidation\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

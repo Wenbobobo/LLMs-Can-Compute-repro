@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "supported_here": [
+      "H44 lands the required later explicit post-H43 docs-only route packet.",
+      "H44 preserves H43 as the preserved prior useful-case refreeze packet and current paper-grade endpoint.",
+      "H44 authorizes exactly R46 as the next exact runtime candidate while keeping R47/R48 deferred."
+    ],
+    "unsupported_here": [
+      "H44 does not widen the claim ceiling beyond bounded useful cases.",
+      "H44 does not authorize broader Wasm/C, hybrid work, or merge-to-main.",
+      "H44 does not let model work outrun exact evidence."
+    ],
+    "disconfirmed_here": [
+      "The idea that the repo should stay in no-active-downstream-runtime posture once an explicit post-H43 reauthorization packet has landed."
+    ],
+    "distilled_result": {
+      "active_stage": "h44_post_h43_route_reauthorization_packet",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_decision_packet": "h43_post_r44_useful_case_refreeze",
+      "current_planning_bundle": "f21_post_h43_exact_useful_case_expansion_bundle",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "selected_outcome": "authorize_r46_origin_useful_case_surface_generalization_gate",
+      "non_selected_outcome": "hold_at_h43_and_continue_planning_only",
+      "current_completed_exact_runtime_gate": "r43_origin_bounded_memory_small_vm_execution_gate",
+      "current_completed_useful_case_gate": "r44_origin_restricted_wasm_useful_case_execution_gate",
+      "current_completed_coequal_model_gate": "r45_origin_dual_mode_model_mainline_gate",
+      "authorized_next_runtime_candidate": "r46_origin_useful_case_surface_generalization_gate",
+      "deferred_future_runtime_candidate": "r47_origin_restricted_frontend_translation_gate",
+      "deferred_future_model_candidate": "r48_origin_dual_mode_useful_case_model_gate",
+      "explicit_merge_packet": "p27_post_h41_clean_promotion_and_explicit_merge_packet",
+      "merge_executed": false,
+      "later_explicit_packet_required_before_scope_widening": true,
+      "next_required_lane": "r46_origin_useful_case_surface_generalization_gate"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+- `results/P42_post_h59_gptpro_reinterview_packet/summary.json`
+- `results/P42_post_h59_gptpro_reinterview_packet/checklist.json`
+- `results/P42_post_h59_gptpro_reinterview_packet/claim_packet.json`
+- `results/P42_post_h59_gptpro_reinterview_packet/snapshot.json`
+- `docs/plans/2026-03-25-post-h59-gptpro-reinterview-dossier.md`

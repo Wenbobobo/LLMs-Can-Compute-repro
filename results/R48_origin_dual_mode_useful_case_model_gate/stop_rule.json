@@ -1,0 +1,7 @@
+{
+  "mode_count": 2,
+  "variant_mode_row_count": 16,
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "reason": "both admitted model modes stayed exact against the preserved R47 useful-case contract"
+}

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "supports": [
+      "P83 materializes a clean promotion branch from the P82 probe without touching dirty root main.",
+      "P83 keeps the promotion branch exactly aligned with the current P81 source head.",
+      "P83 leaves PR opening optional while making the branch and handoff package ready."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "direct root-main merge"
+    ],
+    "distilled_result": {
+      "current_promotion_wave": "p83_post_p82_promotion_branch_and_pr_handoff",
+      "promotion_branch": "wip/p83-post-p82-promotion-branch-and-pr-handoff",
+      "promotion_head": "c9603c1",
+      "source_branch": "wip/p81-post-p80-clean-descendant-promotion-prep",
+      "source_head": "c9603c1",
+      "origin_main_to_promotion_left_right": "0/181",
+      "promotion_to_source_left_right": "0/0",
+      "selected_outcome": "promotion_branch_materialized_and_pr_handoff_prepared_after_p82",
+      "next_required_lane": "p84_keep_set_contraction_and_closeout"
+    }
+  }
+}

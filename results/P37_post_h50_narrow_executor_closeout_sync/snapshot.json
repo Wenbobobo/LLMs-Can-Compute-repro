@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "path": "docs/milestones/P37_post_h50_narrow_executor_closeout_sync/worktree_strategy.md",
+      "matched_lines": [
+        "- `D:/zWenbo/AI/LLMCompute-worktrees/f28-h51-post-h50-origin-mechanism-reentry`",
+        "- `D:/zWenbo/AI/LLMCompute-worktrees/r57-origin-accelerated-trace-vm-comparator`"
+      ]
+    },
+    {
+      "path": "docs/milestones/P37_post_h50_narrow_executor_closeout_sync/artifact_policy.md",
+      "matched_lines": [
+        "- raw step rows, trace rows, `probe_read_rows.json`, `per_read_rows.json`,",
+        "- Git LFS remains inactive by default for the closed wave; and"
+      ]
+    },
+    {
+      "path": "docs/milestones/P37_post_h50_narrow_executor_closeout_sync/commit_cadence.md",
+      "matched_lines": [
+        "- commit `F28` planning surfaces separately from all packet or runtime work;",
+        "- commit `R57` comparator outputs separately from `H52` decision surfaces; and"
+      ]
+    },
+    {
+      "path": ".gitignore",
+      "matched_lines": [
+        "results/**/probe_read_rows.json",
+        "results/**/per_read_rows.json",
+        "results/**/trace_rows.json",
+        "results/**/step_rows.json"
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "`P37_post_h50_narrow_executor_closeout_sync`",
+        "Raw row dumps and artifacts above roughly `10 MiB` stay out of git by default"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "`P37_post_h50_narrow_executor_closeout_sync`.",
+        "- Dirty root `main` remains quarantined and `merge_executed = false` remains"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The current low-priority operational/docs wave is:",
+        "- `P37_post_h50_narrow_executor_closeout_sync`",
+        "- `P37_post_h50_narrow_executor_closeout_sync` is the current low-priority"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`P37_post_h50_narrow_executor_closeout_sync` remains the current low-priority",
+        "- no merge back to `main` occurs during this wave."
+      ]
+    },
+    {
+      "path": "docs/publication_record/experiment_manifest.md",
+      "matched_lines": [
+        "| 2026-03-25 | post-`H50` `F28/H51/P37` mechanism reentry wave | docs/control plus exporter sync: save one dedicated post-`H50` mechanism reentry master plan, complete the `F28` planning bundle, complete docs-only `H51`, activate `P37` as the current low-priority operational/docs packet, add saved `R55/R56/R57/H52` milestone docs, add `F28/H51/P37` exporters plus focused tests/results, and refresh shared root/current-stage/index/handoff surfaces so `H51` becomes the current active docs-only packet while `H50` becomes preserved prior and `R55` becomes the only next runtime candidate | new `docs/plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`, new `docs/milestones/F28_post_h50_origin_mechanism_reentry_bundle/*`, new `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/*`, refreshed `docs/milestones/P37_post_h50_narrow_executor_closeout_sync/*`, new `docs/milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/*`, new `docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/*`, new `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/*`, new `docs/milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/*`, new `scripts/export_f28_post_h50_origin_mechanism_reentry_bundle.py`, new `scripts/export_h51_post_h50_origin_mechanism_reentry_packet.py`, new `scripts/export_p37_post_h50_narrow_executor_closeout_sync.py`, new `tests/test_export_f28_post_h50_origin_mechanism_reentry_bundle.py`, new `tests/test_export_h51_post_h50_origin_mechanism_reentry_packet.py`, new `tests/test_export_p37_post_h50_narrow_executor_closeout_sync.py`, refreshed `README.md`, refreshed `STATUS.md`, refreshed `docs/publication_record/README.md`, refreshed `docs/publication_record/current_stage_driver.md`, refreshed `docs/publication_record/experiment_manifest.md`, refreshed `docs/plans/README.md`, refreshed `docs/milestones/README.md`, refreshed `docs/claims_matrix.md`, refreshed `tmp/active_wave_plan.md`, new `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`, new `results/F28_post_h50_origin_mechanism_reentry_bundle/checklist.json`, new `results/F28_post_h50_origin_mechanism_reentry_bundle/claim_packet.json`, new `results/F28_post_h50_origin_mechanism_reentry_bundle/snapshot.json`, new `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`, new `results/H51_post_h50_origin_mechanism_reentry_packet/checklist.json`, new `results/H51_post_h50_origin_mechanism_reentry_packet/claim_packet.json`, new `results/H51_post_h50_origin_mechanism_reentry_packet/snapshot.json`, new `results/P37_post_h50_narrow_executor_closeout_sync/summary.json`, new `results/P37_post_h50_narrow_executor_closeout_sync/checklist.json`, new `results/P37_post_h50_narrow_executor_closeout_sync/claim_packet.json`, new `results/P37_post_h50_narrow_executor_closeout_sync/snapshot.json` | CPython from `D:/zWenbo/AI/LLMCompute-worktrees/f28-h51-post-h50-origin-mechanism-reentry/.venv`, `uv 0.9.14`, clean worktree `D:/zWenbo/AI/LLMCompute-worktrees/f28-h51-post-h50-origin-mechanism-reentry` on `wip/f28-h51-post-h50-origin-mechanism-reentry`; focused pytest on `F28/H51/P37` exporters plus `git diff --check` should pass | no scientific widening; `H50` remains the preserved prior broader-route closeout, `F28` becomes the current planning bundle, `H51` becomes the current active docs-only packet, `P37` becomes the current low-priority operational/docs wave, `R55` becomes the only next runtime candidate, `R56/R57/H52` become the fixed later mechanism sequence, dirty root `main` remains quarantined, and `F27/R53/R54` remain blocked |"
+      ]
+    }
+  ]
+}

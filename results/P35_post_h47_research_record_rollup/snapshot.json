@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md",
+      "matched_lines": [
+        "### Wave 1: `P35_post_h47_research_record_rollup`",
+        "### Wave 2: `F23_post_h47_numeric_scaling_bundle`"
+      ]
+    },
+    {
+      "path": "docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md",
+      "matched_lines": [
+        "`P35_post_h47_research_record_rollup` is the first low-priority operational",
+        "`H47_post_r48_useful_case_bridge_refreeze`"
+      ]
+    },
+    {
+      "path": "docs/milestones/P35_post_h47_research_record_rollup/README.md",
+      "matched_lines": [
+        "Completed low-priority operational/docs rollup packet after the post-`H47`",
+        "`H47_post_r48_useful_case_bridge_refreeze` as the current docs-only packet,"
+      ]
+    },
+    {
+      "path": "docs/milestones/P35_post_h47_research_record_rollup/artifact_inventory.md",
+      "matched_lines": [
+        "- raw artifacts above `10 MiB` do not enter git by default;",
+        "`results/R20_d0_runtime_mechanism_ablation_matrix/probe_read_rows.json`"
+      ]
+    },
+    {
+      "path": "docs/milestones/P35_post_h47_research_record_rollup/root_dirty_quarantine.md",
+      "matched_lines": [
+        "Dirty root `main` is out of scope for the active scientific line.",
+        "- do not reset, revert, or \u201cclean up\u201d dirty root `main` by momentum;"
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": []
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `P31_post_h43_blog_guardrails_refresh`,"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": []
+    }
+  ]
+}

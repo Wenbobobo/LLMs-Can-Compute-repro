@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "p66_reads_p65",
+      "status": "pass",
+      "notes": "P66 starts only after the landed P65 successor control-sync wave."
+    },
+    {
+      "item_id": "p66_review_range_is_exact_successor_delta",
+      "status": "pass",
+      "notes": "The review must cover the exact one-sided three-commit delta from p63 to p64."
+    },
+    {
+      "item_id": "p66_reviewed_paths_stay_inside_release_surfaces",
+      "status": "pass",
+      "notes": "The reviewed delta must stay inside docs/export/control/release surfaces."
+    },
+    {
+      "item_id": "p66_review_has_three_commits",
+      "status": "pass",
+      "notes": "The reviewed successor delta should expose exactly three commits before publication freeze."
+    },
+    {
+      "item_id": "p66_current_surfaces_still_describe_p63_as_live_and_p64_as_execution_successor",
+      "status": "pass",
+      "notes": "The review happens before the live published branch is promoted from p63 to p66."
+    },
+    {
+      "item_id": "p66_runs_on_target_freeze_branch",
+      "status": "pass",
+      "notes": "The review artifacts should be recorded from the future freeze branch."
+    }
+  ]
+}

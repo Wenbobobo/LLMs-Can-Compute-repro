@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "item_id": "p55_reads_h63",
+      "status": "pass",
+      "notes": "P55 starts from the landed H63 closeout packet."
+    },
+    {
+      "item_id": "p55_reads_p53",
+      "status": "pass",
+      "notes": "P55 depends on the landed P53 claim-sync wave."
+    },
+    {
+      "item_id": "p55_reads_p54",
+      "status": "pass",
+      "notes": "P55 depends on the landed P54 hygiene wave."
+    },
+    {
+      "item_id": "p55_current_stage_driver_mentions_h64_stack",
+      "status": "pass",
+      "notes": "The current stage driver should expose the H64 stack directly."
+    },
+    {
+      "item_id": "p55_active_wave_plan_mentions_h64_stack",
+      "status": "pass",
+      "notes": "The active-wave plan should expose the H64 stack directly."
+    },
+    {
+      "item_id": "p55_publication_readme_mentions_h64_stack",
+      "status": "pass",
+      "notes": "The publication README should expose the H64 stack directly."
+    },
+    {
+      "item_id": "p55_handoff_doc_is_current",
+      "status": "pass",
+      "notes": "The next handoff should start from H64 and the current clean descendant branch."
+    },
+    {
+      "item_id": "p55_startup_prompt_is_current",
+      "status": "pass",
+      "notes": "The next startup prompt should expose the H64 stack directly."
+    }
+  ]
+}

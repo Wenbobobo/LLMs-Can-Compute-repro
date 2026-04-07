@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "source": "results/H29_refreeze_after_r34_r35_origin_core_gate/summary.json",
+      "fields": {
+        "active_stage": "h29_refreeze_after_r34_r35_origin_core_gate",
+        "origin_core_chain_state": "positive_on_current_bundle",
+        "next_required_lane": "r36_origin_long_horizon_precision_scaling_gate"
+      }
+    },
+    {
+      "source": "results/R36_origin_long_horizon_precision_scaling_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_precision_scaling_boundary_sharpened",
+        "inflated_single_head_failure_count": 5,
+        "decomposition_recovery_case_count": 3
+      }
+    },
+    {
+      "source": "results/R37_origin_compiler_boundary_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_tiny_compiled_boundary_supported_narrowly",
+        "admitted_source_case_count": 5,
+        "free_running_exact_count": 5,
+        "narrow_scope_kept": true
+      }
+    }
+  ]
+}

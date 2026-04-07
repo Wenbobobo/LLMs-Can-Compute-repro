@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "item_id": "p81_reads_p80",
+      "status": "pass",
+      "notes": "P81 starts only after the landed P80 handoff-sync sidecar."
+    },
+    {
+      "item_id": "p81_runs_on_current_execution_branch",
+      "status": "pass",
+      "notes": "The locked-fact rebaseline should run on the dedicated p81 execution branch."
+    },
+    {
+      "item_id": "p81_prompts_record_current_p75_head_and_green_audits",
+      "status": "pass",
+      "notes": "The post-P80 prompts should record the current published p75 head and the green standing audits."
+    },
+    {
+      "item_id": "p81_top_level_and_router_surfaces_expose_current_phase",
+      "status": "pass",
+      "notes": "Top-level docs and routers should expose P81 as the current locked-fact and promotion-prep phase."
+    },
+    {
+      "item_id": "p81_driver_and_registry_expose_execution_and_merge_rules",
+      "status": "pass",
+      "notes": "The current-stage driver and branch registry should expose the p81 execution branch and keep dirty-root integration out of bounds."
+    },
+    {
+      "item_id": "p81_design_and_indices_include_current_wave",
+      "status": "pass",
+      "notes": "The design and the plan/milestone routers should expose the P81 phase as current."
+    },
+    {
+      "item_id": "p81_standing_release_and_archive_audits_remain_green",
+      "status": "pass",
+      "notes": "The standing release-preflight and archive-ready audits should remain green during the rebaseline."
+    }
+  ]
+}

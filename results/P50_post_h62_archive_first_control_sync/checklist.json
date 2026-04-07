@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "p50_reads_h62",
+      "status": "pass",
+      "notes": "P50 starts from the landed H62 archive-default scope decision."
+    },
+    {
+      "item_id": "p50_surface_01",
+      "status": "pass",
+      "notes": "README.md contains the required archive-first closeout control wording."
+    },
+    {
+      "item_id": "p50_surface_02",
+      "status": "pass",
+      "notes": "STATUS.md contains the required archive-first closeout control wording."
+    },
+    {
+      "item_id": "p50_surface_03",
+      "status": "pass",
+      "notes": "docs/publication_record/README.md contains the required archive-first closeout control wording."
+    },
+    {
+      "item_id": "p50_surface_04",
+      "status": "pass",
+      "notes": "docs/publication_record/current_stage_driver.md contains the required archive-first closeout control wording."
+    },
+    {
+      "item_id": "p50_surface_05",
+      "status": "pass",
+      "notes": "tmp/active_wave_plan.md contains the required archive-first closeout control wording."
+    }
+  ]
+}

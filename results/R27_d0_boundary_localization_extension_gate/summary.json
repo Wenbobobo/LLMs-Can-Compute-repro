@@ -1,0 +1,100 @@
+{
+  "experiment": "r27_d0_boundary_localization_extension_gate",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/R26_d0_boundary_localization_execution_gate/summary.json",
+    "results/R26_d0_boundary_localization_execution_gate/branch_manifest.json",
+    "results/R26_d0_boundary_localization_execution_gate/first_fail_digest.json",
+    "results/R26_d0_boundary_localization_execution_gate/localized_boundary.json",
+    "results/R26_d0_boundary_localization_execution_gate/branch_summary.json",
+    "docs/plans/2026-03-21-post-h21-dual-track-boundary-reopen-design.md",
+    "tmp/active_wave_plan.md",
+    "src/model/free_running_executor.py",
+    "src/bytecode/datasets.py"
+  ],
+  "summary": {
+    "status": "r27_boundary_localization_extension_complete",
+    "current_frozen_stage": "h21_refreeze_after_r22_r23",
+    "source_runtime_stage": "r26_d0_boundary_localization_execution_gate",
+    "gate": {
+      "execution_mode": "extension_mode",
+      "lane_verdict": "extension_grid_still_not_localized",
+      "reason": "Every executed R27 candidate stayed exact inside the predeclared second-wave extension ceiling.",
+      "r26_trigger_verdict": "grid_extended_still_not_localized",
+      "planned_branch_count": 6,
+      "planned_candidate_count": 12,
+      "executed_candidate_count": 12,
+      "resource_skipped_candidate_count": 0,
+      "pruned_candidate_count": 0,
+      "exact_candidate_count": 12,
+      "failure_candidate_count": 0,
+      "failure_branch_count": 0,
+      "first_fail_candidate_id": null,
+      "first_fail_program_name": null,
+      "first_fail_reproduced": null,
+      "first_fail_supporting_exact_neighbor_count": null,
+      "next_priority_lane": "h23_refreeze_after_r26_r27_r28"
+    },
+    "planned_lane_classes": [
+      "second_wave_extension"
+    ],
+    "planned_families": [
+      "checkpoint_replay_long",
+      "helper_checkpoint_braid_long",
+      "subroutine_braid_long"
+    ],
+    "planned_unique_address_targets": [
+      24,
+      40
+    ],
+    "planned_horizon_multipliers": [
+      3.5
+    ],
+    "planned_checkpoint_depths": [
+      "plus_two"
+    ],
+    "planned_hot_address_skews": [
+      "baseline",
+      "flattened"
+    ],
+    "recommended_next_action": "Refreeze the bounded packet in H23 and keep any wider follow-up blocked pending that refreeze.",
+    "supported_here": [
+      "R27 only activates when the landed R26 verdict explicitly triggers confirmation or second-wave extension work.",
+      "R27 keeps the boundary question on the fixed tiny typed-bytecode D0 endpoint.",
+      "R27 preserves its manifest, row exports, and bounded verdict even when it stays skipped."
+    ],
+    "unsupported_here": [
+      "R27 does not authorize plus_three checkpoint depth, a new family, or a wider same-endpoint suite.",
+      "R27 does not reopen systems repair or any broader scope-lift wording.",
+      "R27 ends at H23 rather than opening another momentum-driven runtime lane."
+    ],
+    "execution_mode": "extension_mode"
+  }
+}

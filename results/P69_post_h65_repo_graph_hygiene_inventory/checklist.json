@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "item_id": "p69_reads_h65",
+      "status": "pass",
+      "notes": "P69 runs only after H65 lands the terminal archive-first freeze packet."
+    },
+    {
+      "item_id": "p69_reads_preserved_prior_hygiene_sidecar",
+      "status": "pass",
+      "notes": "P69 extends the preserved P54 hygiene posture rather than reopening science."
+    },
+    {
+      "item_id": "p69_runs_on_repo_local_hygiene_branch",
+      "status": "pass",
+      "notes": "P69 should run from the repo-local hygiene worktree rather than dirty root main."
+    },
+    {
+      "item_id": "p69_branch_registry_mentions_current_keep_set",
+      "status": "pass",
+      "notes": "The branch/worktree registry should expose the current hygiene branch, live published branch, and root quarantine."
+    },
+    {
+      "item_id": "p69_keep_set_doc_is_current",
+      "status": "pass",
+      "notes": "The keep-set doc should record the current topology and quarantine facts explicitly."
+    },
+    {
+      "item_id": "p69_clean_keep_set_worktrees_remain_clean",
+      "status": "pass",
+      "notes": "The preserved clean descendants and active published branch should all remain clean."
+    },
+    {
+      "item_id": "p69_root_main_remains_quarantined",
+      "status": "pass",
+      "notes": "Dirty root main should remain parked on a quarantine branch."
+    },
+    {
+      "item_id": "p69_p56_to_p66_divergence_matches_linear_successor_fact",
+      "status": "pass",
+      "notes": "The current published branch should remain a one-sided 18-commit successor above p56."
+    },
+    {
+      "item_id": "p69_origin_main_to_p66_divergence_remains_out_of_bounds",
+      "status": "pass",
+      "notes": "The published clean descendant should remain far enough ahead of origin/main that dirty-root integration stays inadmissible."
+    },
+    {
+      "item_id": "p69_p66_published_branch_is_tracked",
+      "status": "pass",
+      "notes": "The live published branch should remain pushed and tracked at origin."
+    }
+  ]
+}

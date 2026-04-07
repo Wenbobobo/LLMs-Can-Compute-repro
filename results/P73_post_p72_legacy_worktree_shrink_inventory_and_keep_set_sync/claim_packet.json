@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "supports": [
+      "P73 inventories the legacy local worktree footprint and classifies shrink candidates without touching dirty root main.",
+      "P73 re-anchors live path policy on D:/zWenbo/AI/wt while preserving only narrow historical exceptions under the legacy prefix.",
+      "P73 prepares later safe local shrink and merge-prep dossier work without reopening runtime or widening the evidence boundary."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopening",
+      "same-lane executor-value reopening",
+      "merge execution"
+    ],
+    "distilled_result": {
+      "active_stage_at_inventory_time": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+      "current_local_hygiene_wave": "p73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync",
+      "preserved_archive_handoff_wave": "p72_post_p71_archive_polish_and_explicit_stop_handoff",
+      "current_planning_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
+      "total_worktree_count": 17,
+      "preferred_path_worktree_count": 14,
+      "legacy_path_worktree_count": 2,
+      "legacy_keep_count": 1,
+      "legacy_prune_with_upstream_count": 0,
+      "legacy_prune_without_upstream_count": 0,
+      "legacy_blocked_dirty_count": 1,
+      "legacy_misplaced_live_count": 0,
+      "selected_outcome": "legacy_worktree_inventory_and_keep_set_sync_completed_for_safe_local_shrink",
+      "next_required_lane": "safe_local_legacy_shrink_or_nonexecuting_merge_prep_dossier"
+    }
+  }
+}

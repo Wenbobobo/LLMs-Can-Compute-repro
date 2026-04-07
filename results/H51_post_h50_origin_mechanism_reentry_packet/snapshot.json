@@ -1,0 +1,61 @@
+{
+  "rows": [
+    {
+      "path": "docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/README.md",
+      "matched_lines": [
+        "- selected outcome:",
+        "`authorize_origin_mechanism_reentry_through_r55_first`;",
+        "paper-grade endpoint, authorize exactly `R55` as the next runtime candidate,"
+      ]
+    },
+    {
+      "path": "docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/decision_matrix.md",
+      "matched_lines": [
+        "| `authorize_origin_mechanism_reentry_through_r55_first` | preserve negative `H50` on the broader route but explicitly test the narrower mechanism chain | set `R55` as the only next runtime candidate and keep `R56/R57/H52` sequenced conditionally |"
+      ]
+    },
+    {
+      "path": "docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/status.md",
+      "matched_lines": [
+        "- selects `authorize_origin_mechanism_reentry_through_r55_first`;",
+        "- fixes `R55` as the only next runtime candidate."
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "`H51_post_h50_origin_mechanism_reentry_packet`.",
+        "`H51_post_h50_origin_mechanism_reentry_packet`",
+        "`R55_origin_2d_hardmax_retrieval_equivalence_gate` is the only next runtime"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "`H51_post_h50_origin_mechanism_reentry_packet`.",
+        "`H50_post_r51_r52_scope_decision_packet`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The current active stage is:",
+        "- `H51_post_h50_origin_mechanism_reentry_packet`",
+        "- `H51_post_h50_origin_mechanism_reentry_packet` is the current active"
+      ]
+    },
+    {
+      "path": "docs/claims_matrix.md",
+      "matched_lines": [
+        "| H51 | The post-`H50` Origin-core line can preserve the broader-route negative closeout while explicitly authorizing a narrower mechanism-first reentry through `R55` only | `H51_post_h50_origin_mechanism_reentry_packet` over `H50`, `F28`, `H43`, and the saved `R55/R56/R57/H52` lane | validated as a docs-only packet; preserves `H50` as the prior closeout, preserves `H43` as the paper-grade endpoint, selects `authorize_origin_mechanism_reentry_through_r55_first`, leaves terminal-stop and `F27` reactivation non-selected, fixes `R55` as the only next runtime candidate, and keeps `F27/R53/R54` blocked |"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`H51_post_h50_origin_mechanism_reentry_packet` is now the current active",
+        "- `R55` is the only next runtime candidate."
+      ]
+    }
+  ]
+}

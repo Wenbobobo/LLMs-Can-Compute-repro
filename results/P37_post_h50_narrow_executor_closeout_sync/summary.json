@@ -1,0 +1,45 @@
+{
+  "summary": {
+    "current_active_stage": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
+    "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+    "preserved_prior_mechanism_reentry_packet": "h51_post_h50_origin_mechanism_reentry_packet",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "refresh_packet": "p37_post_h50_narrow_executor_closeout_sync",
+    "selected_outcome": "mechanism_reentry_hygiene_preserved_through_h52_closeout",
+    "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+    "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
+    "preserved_comparator_gate": "r57_origin_accelerated_trace_vm_comparator_gate",
+    "current_merge_posture": "explicit_merge_wave",
+    "merge_executed": false,
+    "root_dirty_main_quarantined": true,
+    "large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git",
+    "tracked_large_artifact_count": 0,
+    "tracked_large_artifact_paths": [],
+    "next_required_lane": "no_active_downstream_runtime_lane",
+    "supported_here_count": 4,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

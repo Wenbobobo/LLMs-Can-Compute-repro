@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "supported_here": [
+      "F21 saves an exact-first post-H43 reentry route without widening claims.",
+      "F21 preserves H43 as the preserved prior useful-case refreeze packet and current paper-grade endpoint.",
+      "F21 fixes R46 as the first admissible next runtime candidate and keeps R47/R48 conditional."
+    ],
+    "unsupported_here": [
+      "F21 does not itself authorize execution.",
+      "F21 does not treat model work as a substitute for later exact gates.",
+      "F21 does not authorize broader Wasm/C, hybrid work, or merge-to-main."
+    ],
+    "disconfirmed_here": [
+      "The idea that the repo should drift directly from H43 into broader frontend or model work without a later explicit packet."
+    ],
+    "distilled_result": {
+      "active_stage": "f21_post_h43_exact_useful_case_expansion_bundle",
+      "preserved_prior_docs_only_decision_packet": "h43_post_r44_useful_case_refreeze",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "selected_outcome": "exact_first_post_h43_reentry_bundle_saved",
+      "first_admissible_next_runtime_candidate": "r46_origin_useful_case_surface_generalization_gate",
+      "deferred_future_runtime_candidate": "r47_origin_restricted_frontend_translation_gate",
+      "deferred_future_model_candidate": "r48_origin_dual_mode_useful_case_model_gate",
+      "current_low_priority_wave": "p31_post_h43_blog_guardrails_refresh",
+      "merge_executed": false,
+      "next_required_lane": "h44_post_h43_route_reauthorization_packet"
+    }
+  }
+}

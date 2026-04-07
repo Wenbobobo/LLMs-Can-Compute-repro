@@ -14,6 +14,19 @@ from exec_trace import (
 from exec_trace.dsl import Opcode as TraceOpcode
 
 from .ir import BytecodeInstruction, BytecodeOpcode, BytecodeProgram
+from .restricted_frontend import (
+    RestrictedFrontendProgram,
+    count_nonzero_i32_buffer_frontend_program,
+    histogram16_u8_frontend_program,
+    sum_i32_buffer_frontend_program,
+)
+from .restricted_tinyc import (
+    RestrictedTinyCProgram,
+    compile_restricted_tinyc_program,
+    count_nonzero_i32_buffer_tinyc_program,
+    histogram16_u8_tinyc_program,
+    sum_i32_buffer_tinyc_program,
+)
 from .types import BytecodeMemoryCell, BytecodeMemoryRegion, BytecodeType
 
 
@@ -63,6 +76,86 @@ class RetrievalPressureCase:
     max_steps: int
     program: BytecodeProgram
     diagnostic_surface: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class BoundedMemoryVMCase:
+    family_id: str
+    description: str
+    family_role: str
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    gated_on_previous_exact: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class RestrictedWasmKernelCase:
+    kernel_id: str
+    description: str
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+
+
+@dataclass(frozen=True, slots=True)
+class UsefulCaseSurfaceGeneralizationCase:
+    kernel_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+
+
+@dataclass(frozen=True, slots=True)
+class RestrictedFrontendTranslationCase:
+    kernel_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    frontend_program: RestrictedFrontendProgram
+    canonical_program: BytecodeProgram
+
+
+@dataclass(frozen=True, slots=True)
+class UsefulCaseNumericScalingCase:
+    bucket_id: str
+    kernel_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    precision_reference_sampled: bool = False
+
+
+@dataclass(frozen=True, slots=True)
+class RestrictedTinyCLoweringCase:
+    kernel_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    tinyc_program: RestrictedTinyCProgram
+    canonical_program: BytecodeProgram
+
+
+@dataclass(frozen=True, slots=True)
+class MemoryControlSurfaceSufficiencyCase:
+    family_id: str
+    variant_id: str
+    description: str
+    axis_tags: tuple[str, ...]
+    comparison_mode: str
+    max_steps: int
+    program: BytecodeProgram
+    tinyc_program: RestrictedTinyCProgram | None = None
 
 
 def _frame_cell(
@@ -160,6 +253,268 @@ def _convert_trace_program(
                 raise ValueError(f"Unsupported trace opcode for bytecode conversion: {instruction.opcode}")
 
     return BytecodeProgram(instructions=tuple(instructions), name=name)
+
+
+AssemblyRow = str | tuple[BytecodeOpcode, int | str | None] | tuple[
+    BytecodeOpcode,
+    int | str | None,
+    tuple[BytecodeType, ...],
+    tuple[BytecodeType, ...],
+]
+
+
+def _assemble_program(
+    *,
+    name: str,
+    rows: list[AssemblyRow],
+    memory_layout: tuple[BytecodeMemoryCell, ...],
+) -> BytecodeProgram:
+    labels: dict[str, int] = {}
+    emitted_rows: list[tuple[BytecodeOpcode, int | str | None] | tuple[
+        BytecodeOpcode,
+        int | str | None,
+        tuple[BytecodeType, ...],
+        tuple[BytecodeType, ...],
+    ]] = []
+
+    for row in rows:
+        if isinstance(row, str):
+            if not row.endswith(":"):
+                raise ValueError(f"Assembly label must end with ':'; got {row!r}.")
+            labels[row[:-1]] = len(emitted_rows)
+            continue
+        emitted_rows.append(row)
+
+    instructions: list[BytecodeInstruction] = []
+    for row in emitted_rows:
+        if len(row) == 2:
+            opcode, arg = row
+            in_types: tuple[BytecodeType, ...] = ()
+            out_types: tuple[BytecodeType, ...] = ()
+        else:
+            opcode, arg, in_types, out_types = row
+        if isinstance(arg, str):
+            if arg not in labels:
+                raise ValueError(f"Unknown assembly label {arg!r} in {name}.")
+            arg = labels[arg]
+        instructions.append(
+            BytecodeInstruction(
+                opcode,
+                arg,
+                in_types=in_types,
+                out_types=out_types,
+            )
+        )
+    return BytecodeProgram(
+        instructions=tuple(instructions),
+        name=name,
+        memory_layout=memory_layout,
+    )
+
+
+def _frame_i32_range(base_address: int, count: int, label_prefix: str) -> tuple[BytecodeMemoryCell, ...]:
+    return tuple(
+        _frame_cell(base_address + offset, BytecodeType.I32, f"{label_prefix}_{offset}")
+        for offset in range(count)
+    )
+
+
+def _repeat_pattern(pattern: tuple[int, ...], length: int) -> tuple[int, ...]:
+    if length <= 0:
+        raise ValueError("length must be positive.")
+    return tuple(pattern[index % len(pattern)] for index in range(length))
+
+
+def _scaled_sum_values(length: int) -> tuple[int, ...]:
+    return _repeat_pattern((4, -1, 9, -5, 3, -2, 8, -4), length)
+
+
+def _dense_nonzero_count_values(length: int) -> tuple[int, ...]:
+    return _repeat_pattern((1, 2, 3, 4, 5), length)
+
+
+def _low_bin_histogram_values(length: int) -> tuple[int, ...]:
+    return _repeat_pattern((0, 1, 2, 3), length)
+
+
+def sum_i32_buffer_program(
+    *,
+    input_values: tuple[int, ...] = (7, 0, -3, 5),
+    input_base_address: int = 400,
+    output_address: int = 404,
+    name: str | None = None,
+) -> BytecodeProgram:
+    rows: list[AssemblyRow] = []
+    for offset, value in enumerate(input_values):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, value),
+                (BytecodeOpcode.STORE_STATIC, input_base_address + offset),
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.CONST_I32, 0),
+            (BytecodeOpcode.STORE_STATIC, output_address),
+            (BytecodeOpcode.LOAD_STATIC, output_address),
+        )
+    )
+    for offset in range(len(input_values)):
+        rows.extend(
+            (
+                (BytecodeOpcode.LOAD_STATIC, input_base_address + offset),
+                (BytecodeOpcode.ADD_I32, None),
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.STORE_STATIC, output_address),
+            (BytecodeOpcode.LOAD_STATIC, output_address),
+            (BytecodeOpcode.HALT, None),
+        )
+    )
+    memory_layout = _frame_i32_range(input_base_address, len(input_values), "sum_input") + (
+        _frame_cell(output_address, BytecodeType.I32, "sum_output"),
+    )
+    return _assemble_program(
+        name=name or "bytecode_sum_i32_buffer_fixed4",
+        rows=rows,
+        memory_layout=memory_layout,
+    )
+
+
+def count_nonzero_i32_buffer_program(
+    *,
+    input_values: tuple[int, ...] = (5, 0, -2, 0, 3),
+    input_base_address: int = 416,
+    output_address: int = 432,
+    name: str | None = None,
+) -> BytecodeProgram:
+    rows: list[AssemblyRow] = []
+    for offset, value in enumerate(input_values):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, value),
+                (BytecodeOpcode.STORE_STATIC, input_base_address + offset),
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.CONST_I32, 0),
+            (BytecodeOpcode.STORE_STATIC, output_address),
+        )
+    )
+    for offset in range(len(input_values)):
+        increment_label = f"count_nonzero_inc_{offset}"
+        continue_label = f"count_nonzero_next_{offset}"
+        rows.extend(
+            (
+                (BytecodeOpcode.LOAD_STATIC, input_base_address + offset),
+                (BytecodeOpcode.CONST_I32, 0),
+                (BytecodeOpcode.EQ_I32, None),
+                (BytecodeOpcode.JZ_ZERO, increment_label),
+                (BytecodeOpcode.JMP, continue_label),
+                f"{increment_label}:",
+                (BytecodeOpcode.LOAD_STATIC, output_address),
+                (BytecodeOpcode.CONST_I32, 1),
+                (BytecodeOpcode.ADD_I32, None),
+                (BytecodeOpcode.STORE_STATIC, output_address),
+                f"{continue_label}:",
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.LOAD_STATIC, output_address),
+            (BytecodeOpcode.HALT, None),
+        )
+    )
+    memory_layout = _frame_i32_range(input_base_address, len(input_values), "count_input") + (
+        _frame_cell(output_address, BytecodeType.I32, "count_nonzero_output"),
+    )
+    return _assemble_program(
+        name=name or "bytecode_count_nonzero_i32_buffer_fixed5",
+        rows=rows,
+        memory_layout=memory_layout,
+    )
+
+
+def _append_histogram_dispatch(
+    rows: list[AssemblyRow],
+    *,
+    input_address: int,
+    bin_base_address: int,
+    next_label: str,
+    label_prefix: str,
+) -> None:
+    rows.append((BytecodeOpcode.LOAD_STATIC, input_address))
+    for bucket in range(16):
+        next_check_label = f"{label_prefix}_next_check_{bucket}"
+        rows.extend(
+            (
+                (BytecodeOpcode.DUP, None),
+                (BytecodeOpcode.CONST_I32, bucket),
+                (BytecodeOpcode.EQ_I32, None),
+                (BytecodeOpcode.JZ_ZERO, next_check_label),
+                (BytecodeOpcode.POP, None),
+                (BytecodeOpcode.LOAD_STATIC, bin_base_address + bucket),
+                (BytecodeOpcode.CONST_I32, 1),
+                (BytecodeOpcode.ADD_I32, None),
+                (BytecodeOpcode.STORE_STATIC, bin_base_address + bucket),
+                (BytecodeOpcode.JMP, next_label),
+                f"{next_check_label}:",
+            )
+        )
+    rows.extend(
+        (
+            (BytecodeOpcode.POP, None),
+            (BytecodeOpcode.HALT, None),
+        )
+    )
+
+
+def histogram16_u8_program(
+    *,
+    input_values: tuple[int, ...] = (3, 1, 3, 15),
+    input_base_address: int = 448,
+    bin_base_address: int = 464,
+    name: str | None = None,
+) -> BytecodeProgram:
+    rows: list[AssemblyRow] = []
+    for offset, value in enumerate(input_values):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, value),
+                (BytecodeOpcode.STORE_STATIC, input_base_address + offset),
+            )
+        )
+    for bucket in range(16):
+        rows.extend(
+            (
+                (BytecodeOpcode.CONST_I32, 0),
+                (BytecodeOpcode.STORE_STATIC, bin_base_address + bucket),
+            )
+        )
+    for offset in range(len(input_values)):
+        next_label = f"histogram_next_{offset}"
+        _append_histogram_dispatch(
+            rows,
+            input_address=input_base_address + offset,
+            bin_base_address=bin_base_address,
+            next_label=next_label,
+            label_prefix=f"histogram_input_{offset}",
+        )
+        rows.append(f"{next_label}:")
+    rows.append((BytecodeOpcode.HALT, None))
+    memory_layout = _frame_i32_range(input_base_address, len(input_values), "histogram_input") + _frame_i32_range(
+        bin_base_address,
+        16,
+        "histogram_bin",
+    )
+    return _assemble_program(
+        name=name or "bytecode_histogram16_u8_fixed4",
+        rows=rows,
+        memory_layout=memory_layout,
+    )
 
 
 def arithmetic_smoke_program() -> BytecodeProgram:
@@ -582,12 +937,223 @@ def subroutine_braid_program(start: int, *, base_address: int = 0) -> BytecodePr
     )
 
 
+def _permute_subroutine_braid_helper_surface(program: BytecodeProgram, *, name: str) -> BytecodeProgram:
+    instructions = list(program.instructions)
+    instructions[18] = BytecodeInstruction(
+        instructions[18].opcode,
+        35,
+        in_types=instructions[18].in_types,
+        out_types=instructions[18].out_types,
+    )
+    instructions[22] = BytecodeInstruction(
+        instructions[22].opcode,
+        30,
+        in_types=instructions[22].in_types,
+        out_types=instructions[22].out_types,
+    )
+    helper_a = instructions[30:35]
+    helper_b = instructions[35:40]
+    instructions[30:35] = helper_b
+    instructions[35:40] = helper_a
+    return BytecodeProgram(
+        instructions=tuple(instructions),
+        name=name,
+        memory_layout=program.memory_layout,
+    )
+
+
+def subroutine_braid_permuted_helpers_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    base_program = subroutine_braid_program(start, base_address=base_address)
+    return _permute_subroutine_braid_helper_surface(
+        base_program,
+        name=f"bytecode_subroutine_braid_permuted_helpers_{start}_a{base_address}",
+    )
+
+
 def subroutine_braid_long_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
     base_program = subroutine_braid_program(start, base_address=base_address)
     return BytecodeProgram(
         instructions=base_program.instructions,
         name=f"bytecode_subroutine_braid_long_{start}_a{base_address}",
         memory_layout=base_program.memory_layout,
+    )
+
+
+def subroutine_braid_long_permuted_helpers_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    base_program = subroutine_braid_long_program(start, base_address=base_address)
+    return _permute_subroutine_braid_helper_surface(
+        base_program,
+        name=f"bytecode_subroutine_braid_long_permuted_helpers_{start}_a{base_address}",
+    )
+
+
+def bounded_scalar_flag_loop_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    if start < 0:
+        raise ValueError("bounded_scalar_flag_loop_program expects a non-negative start.")
+    counter_address = base_address
+    flag_address = base_address + 1
+    local_address = base_address + 2
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, start),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.EQ_I32),
+            BytecodeInstruction(
+                BytecodeOpcode.STORE_STATIC,
+                flag_address,
+                in_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(
+                BytecodeOpcode.LOAD_STATIC,
+                flag_address,
+                out_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 12),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.SUB_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.JMP, 4),
+        ),
+        name=f"bytecode_bounded_scalar_flag_loop_{start}_a{base_address}",
+        memory_layout=(
+            _frame_cell(counter_address, BytecodeType.I32, "counter"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+            _frame_cell(local_address, BytecodeType.I32, "local_sum"),
+        ),
+    )
+
+
+def bounded_scalar_flag_loop_long_program(start: int, *, base_address: int = 0) -> BytecodeProgram:
+    if start < 0:
+        raise ValueError("bounded_scalar_flag_loop_long_program expects a non-negative start.")
+    counter_address = base_address
+    flag_address = base_address + 1
+    left_address = base_address + 2
+    right_address = base_address + 3
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, start),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 0),
+            BytecodeInstruction(BytecodeOpcode.EQ_I32),
+            BytecodeInstruction(
+                BytecodeOpcode.STORE_STATIC,
+                flag_address,
+                in_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(
+                BytecodeOpcode.LOAD_STATIC,
+                flag_address,
+                out_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 16),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, left_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, right_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.SUB_I32),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.JMP, 6),
+        ),
+        name=f"bytecode_bounded_scalar_flag_loop_long_{start}_a{base_address}",
+        memory_layout=(
+            _frame_cell(counter_address, BytecodeType.I32, "counter"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+            _frame_cell(left_address, BytecodeType.I32, "left_local"),
+            _frame_cell(right_address, BytecodeType.I32, "right_local"),
+        ),
+    )
+
+
+def invalid_bounded_scalar_flag_branch_program(*, base_address: int = 0) -> BytecodeProgram:
+    local_address = base_address
+    flag_address = base_address + 1
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, local_address),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 5),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+        ),
+        name=f"invalid_bounded_scalar_flag_branch_a{base_address}",
+        memory_layout=(
+            _frame_cell(local_address, BytecodeType.I32, "local_slot"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+        ),
+    )
+
+
+def invalid_bounded_scalar_flag_layout_program(*, base_address: int = 0) -> BytecodeProgram:
+    local_address = base_address
+    flag_address = base_address + 1
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 1),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, local_address),
+            BytecodeInstruction(
+                BytecodeOpcode.LOAD_STATIC,
+                local_address,
+                out_types=(BytecodeType.FLAG,),
+            ),
+            BytecodeInstruction(BytecodeOpcode.JZ_ZERO, 5),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+        ),
+        name=f"invalid_bounded_scalar_flag_layout_a{base_address}",
+        memory_layout=(
+            _frame_cell(local_address, BytecodeType.I32, "local_slot"),
+            _frame_cell(flag_address, BytecodeType.FLAG, "done_flag"),
+        ),
+    )
+
+
+def invalid_bounded_scalar_heap_escape_program(*, base_address: int = 0) -> BytecodeProgram:
+    counter_address = base_address
+    spilled_address = base_address + 1
+    return BytecodeProgram(
+        instructions=(
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 2),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.CONST_I32, 5),
+            BytecodeInstruction(BytecodeOpcode.STORE_STATIC, spilled_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, counter_address),
+            BytecodeInstruction(BytecodeOpcode.LOAD_STATIC, spilled_address),
+            BytecodeInstruction(BytecodeOpcode.ADD_I32),
+            BytecodeInstruction(BytecodeOpcode.HALT),
+        ),
+        name=f"invalid_bounded_scalar_heap_escape_a{base_address}",
+        memory_layout=(
+            _frame_cell(counter_address, BytecodeType.I32, "counter"),
+            _heap_cell(spilled_address, BytecodeType.I32, "spilled_local"),
+        ),
     )
 
 
@@ -882,6 +1448,750 @@ def harness_cases() -> tuple[BytecodeCase, ...]:
             iterated_helper_accumulator_program(20, counter_address=128, accumulator_address=129),
         ),
         BytecodeCase("control_flow", "long_exact_final_state", 768, subroutine_braid_long_program(12, base_address=160)),
+    )
+
+
+def bounded_scalar_family_cases() -> tuple[BytecodeCase, ...]:
+    return (
+        BytecodeCase(
+            "bounded_scalar_family",
+            "medium_exact_trace",
+            256,
+            bounded_scalar_flag_loop_program(6, base_address=320),
+        ),
+        BytecodeCase(
+            "bounded_scalar_family",
+            "long_exact_final_state",
+            768,
+            bounded_scalar_flag_loop_long_program(12, base_address=336),
+        ),
+    )
+
+
+def r43_bounded_memory_vm_cases() -> tuple[BoundedMemoryVMCase, ...]:
+    return (
+        BoundedMemoryVMCase(
+            family_id="bounded_static_sum_loop",
+            description="Bounded static accumulator loop over one fixed-address memory slot.",
+            family_role="core",
+            comparison_mode="long_exact_final_state",
+            max_steps=512,
+            program=accumulator_loop_program(12),
+        ),
+        BoundedMemoryVMCase(
+            family_id="bounded_branch_accumulator",
+            description="Bounded branch-and-accumulate loop over a fixed static address pair.",
+            family_role="core",
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            program=alternating_memory_loop_bytecode_program(6, base_address=16),
+        ),
+        BoundedMemoryVMCase(
+            family_id="bounded_memory_reuse_loop",
+            description="Bounded memory reuse loop with fixed address checkpoints and replay reads.",
+            family_role="core",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=selector_checkpoint_bank_bytecode_program(6, base_address=32),
+        ),
+        BoundedMemoryVMCase(
+            family_id="stack_depth_revisit_loop",
+            description="Bounded stack-depth revisit loop with repeated stack/memory braid reads.",
+            family_role="core",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=stack_memory_braid_program(8, base_address=64),
+        ),
+        BoundedMemoryVMCase(
+            family_id="single_call_return_accumulator",
+            description="Single-layer call/return accumulator executed only after the first four families stay exact.",
+            family_role="gated_optional",
+            comparison_mode="long_exact_final_state",
+            max_steps=1024,
+            program=iterated_helper_accumulator_program(20, counter_address=128, accumulator_address=129),
+            gated_on_previous_exact=True,
+        ),
+    )
+
+
+def r44_restricted_wasm_useful_case_cases() -> tuple[RestrictedWasmKernelCase, ...]:
+    return (
+        RestrictedWasmKernelCase(
+            kernel_id="sum_i32_buffer",
+            description="Read-heavy fixed-buffer sum over one bounded static address range.",
+            comparison_mode="medium_exact_trace",
+            max_steps=256,
+            program=sum_i32_buffer_program(),
+        ),
+        RestrictedWasmKernelCase(
+            kernel_id="count_nonzero_i32_buffer",
+            description="Fixed-buffer nonzero count with data-dependent branching and unchanged memory surface.",
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            program=count_nonzero_i32_buffer_program(),
+        ),
+        RestrictedWasmKernelCase(
+            kernel_id="histogram16_u8",
+            description="Fixed 16-bin histogram with repeated latest-write-by-address pressure on bounded bin cells.",
+            comparison_mode="long_exact_final_state",
+            max_steps=2048,
+            program=histogram16_u8_program(),
+        ),
+    )
+
+
+def r46_useful_case_surface_generalization_cases() -> tuple[UsefulCaseSurfaceGeneralizationCase, ...]:
+    return (
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len6_shifted_base",
+            description="Longer fixed-buffer sum with shifted base address and mixed-sign values.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=384,
+            program=sum_i32_buffer_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="bytecode_sum_i32_buffer_len6_a520",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len8_dense_mixed_sign",
+            description="Wider fixed-buffer sum with denser mixed-sign values on a new static range.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            program=sum_i32_buffer_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="bytecode_sum_i32_buffer_len8_a560",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_sparse_len8_shifted_base",
+            description="Sparse nonzero count with low branch-taken density and shifted base range.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            program=count_nonzero_i32_buffer_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="bytecode_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_dense_len7_shifted_base",
+            description="Dense nonzero count with near-max branch-taken density on a new static range.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            program=count_nonzero_i32_buffer_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="bytecode_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_mixed_len9_shifted_base",
+            description="Longer mixed-density nonzero count with alternating zero runs and later nonzero bursts.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1024,
+            program=count_nonzero_i32_buffer_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="bytecode_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_bimodal_len6_shifted_base",
+            description="Bimodal histogram with repeated pressure on bins 0 and 15 only.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=3072,
+            program=histogram16_u8_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="bytecode_histogram16_u8_bimodal_len6_a720",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_low_bin_skew_len8",
+            description="Low-bin skew histogram with repeated hits concentrated on bins 1 and 2.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            program=histogram16_u8_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="bytecode_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+        ),
+        UsefulCaseSurfaceGeneralizationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_wide_len10_shifted_base",
+            description="Longer histogram with wider bin coverage and repeated late-bin revisits.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=6144,
+            program=histogram16_u8_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="bytecode_histogram16_u8_wide_len10_a800",
+            ),
+        ),
+    )
+
+
+def r47_restricted_frontend_translation_cases() -> tuple[RestrictedFrontendTranslationCase, ...]:
+    return (
+        RestrictedFrontendTranslationCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len6_shifted_base",
+            description="Restricted frontend lowers a longer fixed-buffer sum onto the preserved sum kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=384,
+            frontend_program=sum_i32_buffer_frontend_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="frontend_sum_i32_buffer_len6_a520",
+            ),
+            canonical_program=sum_i32_buffer_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="bytecode_sum_i32_buffer_len6_a520",
+            ),
+        ),
+        RestrictedFrontendTranslationCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len8_dense_mixed_sign",
+            description="Restricted frontend lowers a wider mixed-sign sum onto the preserved sum kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            frontend_program=sum_i32_buffer_frontend_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="frontend_sum_i32_buffer_len8_a560",
+            ),
+            canonical_program=sum_i32_buffer_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="bytecode_sum_i32_buffer_len8_a560",
+            ),
+        ),
+        RestrictedFrontendTranslationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_sparse_len8_shifted_base",
+            description="Restricted frontend lowers a sparse nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            frontend_program=count_nonzero_i32_buffer_frontend_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="frontend_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="bytecode_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+        ),
+        RestrictedFrontendTranslationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_dense_len7_shifted_base",
+            description="Restricted frontend lowers a dense nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "value_distribution_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            frontend_program=count_nonzero_i32_buffer_frontend_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="frontend_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="bytecode_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+        ),
+        RestrictedFrontendTranslationCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_mixed_len9_shifted_base",
+            description="Restricted frontend lowers a mixed-density nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1024,
+            frontend_program=count_nonzero_i32_buffer_frontend_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="frontend_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="bytecode_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+        ),
+        RestrictedFrontendTranslationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_bimodal_len6_shifted_base",
+            description="Restricted frontend lowers a bimodal histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=3072,
+            frontend_program=histogram16_u8_frontend_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="frontend_histogram16_u8_bimodal_len6_a720",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="bytecode_histogram16_u8_bimodal_len6_a720",
+            ),
+        ),
+        RestrictedFrontendTranslationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_low_bin_skew_len8",
+            description="Restricted frontend lowers a low-bin skew histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            frontend_program=histogram16_u8_frontend_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="frontend_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="bytecode_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+        ),
+        RestrictedFrontendTranslationCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_wide_len10_shifted_base",
+            description="Restricted frontend lowers a wider histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "histogram_skew_shift"),
+            comparison_mode="long_exact_final_state",
+            max_steps=6144,
+            frontend_program=histogram16_u8_frontend_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="frontend_histogram16_u8_wide_len10_a800",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="bytecode_histogram16_u8_wide_len10_a800",
+            ),
+        ),
+    )
+
+
+def r50_restricted_tinyc_lowering_cases() -> tuple[RestrictedTinyCLoweringCase, ...]:
+    return (
+        RestrictedTinyCLoweringCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len6_shifted_base",
+            description="Restricted tiny-C lowers a longer fixed-buffer sum onto the preserved sum kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=384,
+            tinyc_program=sum_i32_buffer_tinyc_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="tinyc_sum_i32_buffer_len6_a520",
+            ),
+            canonical_program=sum_i32_buffer_program(
+                input_values=(4, -1, 9, 0, 3, -2),
+                input_base_address=520,
+                output_address=532,
+                name="bytecode_sum_i32_buffer_len6_a520",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len8_dense_mixed_sign",
+            description="Restricted tiny-C lowers a wider mixed-sign sum onto the preserved sum kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=512,
+            tinyc_program=sum_i32_buffer_tinyc_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="tinyc_sum_i32_buffer_len8_a560",
+            ),
+            canonical_program=sum_i32_buffer_program(
+                input_values=(12, -5, 7, -4, 3, 0, 9, -1),
+                input_base_address=560,
+                output_address=576,
+                name="bytecode_sum_i32_buffer_len8_a560",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_sparse_len8_shifted_base",
+            description="Restricted tiny-C lowers a sparse nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            tinyc_program=count_nonzero_i32_buffer_tinyc_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="tinyc_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(0, 7, 0, -5, 0, 0, 2, 0),
+                input_base_address=600,
+                output_address=616,
+                name="bytecode_count_nonzero_i32_buffer_sparse_len8_a600",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_dense_len7_shifted_base",
+            description="Restricted tiny-C lowers a dense nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "value_distribution_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=768,
+            tinyc_program=count_nonzero_i32_buffer_tinyc_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="tinyc_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(1, 2, 3, -1, 4, 5, 6),
+                input_base_address=640,
+                output_address=656,
+                name="bytecode_count_nonzero_i32_buffer_dense_len7_a640",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_mixed_len9_shifted_base",
+            description="Restricted tiny-C lowers a mixed-density nonzero count onto the preserved count kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "branch_density_shift", "zero_density_shift", "tinyc_lowering_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1024,
+            tinyc_program=count_nonzero_i32_buffer_tinyc_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="tinyc_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+            canonical_program=count_nonzero_i32_buffer_program(
+                input_values=(0, 0, 5, 0, 6, 7, 0, -2, 3),
+                input_base_address=680,
+                output_address=700,
+                name="bytecode_count_nonzero_i32_buffer_mixed_len9_a680",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_bimodal_len6_shifted_base",
+            description="Restricted tiny-C lowers a bimodal histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift", "tinyc_lowering_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=3072,
+            tinyc_program=histogram16_u8_tinyc_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="tinyc_histogram16_u8_bimodal_len6_a720",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(0, 15, 0, 15, 15, 0),
+                input_base_address=720,
+                bin_base_address=736,
+                name="bytecode_histogram16_u8_bimodal_len6_a720",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_low_bin_skew_len8",
+            description="Restricted tiny-C lowers a low-bin skew histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "histogram_skew_shift", "tinyc_lowering_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            tinyc_program=histogram16_u8_tinyc_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="tinyc_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(1, 1, 1, 2, 2, 2, 2, 2),
+                input_base_address=760,
+                bin_base_address=776,
+                name="bytecode_histogram16_u8_low_bin_skew_len8_a760",
+            ),
+        ),
+        RestrictedTinyCLoweringCase(
+            kernel_id="histogram16_u8",
+            variant_id="histogram_wide_len10_shifted_base",
+            description="Restricted tiny-C lowers a wider histogram onto the preserved 16-bin histogram kernel exactly.",
+            axis_tags=("buffer_length_shift", "base_address_shift", "value_distribution_shift", "histogram_skew_shift", "tinyc_lowering_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=6144,
+            tinyc_program=histogram16_u8_tinyc_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="tinyc_histogram16_u8_wide_len10_a800",
+            ),
+            canonical_program=histogram16_u8_program(
+                input_values=(0, 3, 15, 7, 3, 0, 12, 15, 7, 7),
+                input_base_address=800,
+                bin_base_address=816,
+                name="bytecode_histogram16_u8_wide_len10_a800",
+            ),
+        ),
+    )
+
+
+def r51_origin_memory_control_surface_sufficiency_cases() -> tuple[MemoryControlSurfaceSufficiencyCase, ...]:
+    widened_histogram_program = histogram16_u8_tinyc_program(
+        input_values=(15, 3, 7, 3, 15, 2, 3, 2, 0, 7, 9, 2),
+        input_base_address=832,
+        bin_base_address=864,
+        name="tinyc_histogram16_u8_len12_a832",
+    )
+    return (
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="latest_write_overwrite_after_gap",
+            variant_id="checkpoint_replay_long_start8_shift96",
+            description="Checkpointed three-bank replay forces delayed last-write recovery after repeated overwrites and selector gaps.",
+            axis_tags=("latest_write", "overwrite_after_gap", "checkpoint_replay", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            program=checkpoint_replay_long_program(8, base_address=96),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="stack_relative_read_under_deeper_control",
+            variant_id="stack_memory_braid_start7_shift208",
+            description="Branchy stack-memory braid exercises stack-relative reads under deeper control and alternating indirect updates.",
+            axis_tags=("stack_relative", "deeper_control", "branchy_surface", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4096,
+            program=stack_memory_braid_program(7, base_address=208),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="loop_carried_state",
+            variant_id="alternating_memory_loop_start9_shift144",
+            description="Alternating memory loop keeps loop-carried state alive across repeated flag-controlled updates and delayed reads.",
+            axis_tags=("loop_carried_state", "flag_control", "latest_write", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=3072,
+            program=alternating_memory_loop_bytecode_program(9, base_address=144),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="nested_call_return",
+            variant_id="call_chain_smoke_nested_two_level",
+            description="Two-level nested call/return chain tests return-target reconstruction without hidden call-stack side state.",
+            axis_tags=("nested_call_return", "return_target_identity", "control_surface", "memory_control_surface"),
+            comparison_mode="medium_exact_trace",
+            max_steps=256,
+            program=call_chain_smoke_program(),
+        ),
+        MemoryControlSurfaceSufficiencyCase(
+            family_id="bounded_static_memory_lowered_row",
+            variant_id="tinyc_histogram_len12_shift832",
+            description="Restricted tiny-C histogram row increases bounded static-memory pressure without widening to arbitrary C.",
+            axis_tags=("restricted_tinyc", "static_memory", "lowered_row", "memory_control_surface"),
+            comparison_mode="long_exact_final_state",
+            max_steps=8192,
+            program=compile_restricted_tinyc_program(widened_histogram_program),
+            tinyc_program=widened_histogram_program,
+        ),
+    )
+
+
+def r49_useful_case_numeric_scaling_cases() -> tuple[UsefulCaseNumericScalingCase, ...]:
+    return (
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_a_2x",
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len16_shift256",
+            description="2x sum bucket with longer fixed buffer and +256 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=600,
+            program=sum_i32_buffer_program(
+                input_values=_scaled_sum_values(16),
+                input_base_address=816,
+                output_address=848,
+                name="bytecode_sum_i32_buffer_len16_a816",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_a_2x",
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_len18_dense_shift256",
+            description="2x count bucket with dense nonzero branch pressure and +256 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "branch_density_shift", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=600,
+            program=count_nonzero_i32_buffer_program(
+                input_values=_dense_nonzero_count_values(18),
+                input_base_address=936,
+                output_address=972,
+                name="bytecode_count_nonzero_i32_buffer_len18_a936",
+            ),
+            precision_reference_sampled=True,
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_a_2x",
+            kernel_id="histogram16_u8",
+            variant_id="histogram_len16_lowbin_shift256",
+            description="2x histogram bucket with low-bin skew and +256 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "histogram_low_bin_skew", "numeric_precision_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=600,
+            program=histogram16_u8_program(
+                input_values=_low_bin_histogram_values(16),
+                input_base_address=1056,
+                bin_base_address=1088,
+                name="bytecode_histogram16_u8_len16_a1056",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_b_4x",
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len32_shift1024",
+            description="4x sum bucket with longer fixed buffer and +1024 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1600,
+            program=sum_i32_buffer_program(
+                input_values=_scaled_sum_values(32),
+                input_base_address=1584,
+                output_address=1648,
+                name="bytecode_sum_i32_buffer_len32_a1584",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_b_4x",
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_len36_dense_shift1024",
+            description="4x count bucket with dense nonzero branch pressure and +1024 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "branch_density_shift", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=1600,
+            program=count_nonzero_i32_buffer_program(
+                input_values=_dense_nonzero_count_values(36),
+                input_base_address=1704,
+                output_address=1776,
+                name="bytecode_count_nonzero_i32_buffer_len36_a1704",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_b_4x",
+            kernel_id="histogram16_u8",
+            variant_id="histogram_len32_lowbin_shift1024",
+            description="4x histogram bucket with low-bin skew and +1024 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "histogram_low_bin_skew", "numeric_precision_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=1600,
+            program=histogram16_u8_program(
+                input_values=_low_bin_histogram_values(32),
+                input_base_address=1824,
+                bin_base_address=1888,
+                name="bytecode_histogram16_u8_len32_a1824",
+            ),
+            precision_reference_sampled=True,
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_c_8x",
+            kernel_id="sum_i32_buffer",
+            variant_id="sum_len64_shift4096",
+            description="8x sum bucket with longer fixed buffer and +4096 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=4000,
+            program=sum_i32_buffer_program(
+                input_values=_scaled_sum_values(64),
+                input_base_address=4656,
+                output_address=4784,
+                name="bytecode_sum_i32_buffer_len64_a4656",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_c_8x",
+            kernel_id="count_nonzero_i32_buffer",
+            variant_id="count_len72_dense_shift4096",
+            description="8x count bucket with dense nonzero branch pressure and +4096 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "branch_density_shift", "numeric_precision_gate"),
+            comparison_mode="medium_exact_trace",
+            max_steps=4000,
+            program=count_nonzero_i32_buffer_program(
+                input_values=_dense_nonzero_count_values(72),
+                input_base_address=4776,
+                output_address=4920,
+                name="bytecode_count_nonzero_i32_buffer_len72_a4776",
+            ),
+        ),
+        UsefulCaseNumericScalingCase(
+            bucket_id="bucket_c_8x",
+            kernel_id="histogram16_u8",
+            variant_id="histogram_len64_lowbin_shift4096",
+            description="8x histogram bucket with low-bin skew and +4096 preserved-base shift.",
+            axis_tags=("buffer_length_scale", "base_address_scale", "histogram_low_bin_skew", "numeric_precision_gate"),
+            comparison_mode="long_exact_final_state",
+            max_steps=4000,
+            program=histogram16_u8_program(
+                input_values=_low_bin_histogram_values(64),
+                input_base_address=4896,
+                bin_base_address=5024,
+                name="bytecode_histogram16_u8_len64_a4896",
+            ),
+            precision_reference_sampled=True,
+        ),
+    )
+
+
+def bounded_scalar_family_negative_programs() -> tuple[BytecodeProgram, ...]:
+    return (
+        invalid_bounded_scalar_flag_branch_program(base_address=352),
+        invalid_bounded_scalar_flag_layout_program(base_address=360),
+        invalid_bounded_scalar_heap_escape_program(base_address=368),
     )
 
 

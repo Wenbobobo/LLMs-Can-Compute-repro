@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "supports": [
+      "P78 converges mounted worktrees to a balanced active set centered on p75 and its immediate hygiene lineage.",
+      "P78 archives clean historical mounts without deleting their branch refs.",
+      "P78 preserves only the dirty root checkout and h27 as quarantined survivors."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "history deletion",
+      "runtime reopen"
+    ],
+    "distilled_result": {
+      "current_worktree_convergence_wave": "p78_post_p77_legacy_worktree_convergence_and_quarantine_sync",
+      "mounted_keep_branch_count": 6,
+      "dirty_quarantine_count": 2,
+      "removed_clean_historical_count": 11,
+      "selected_outcome": "balanced_worktree_convergence_completed_with_quarantines_preserved",
+      "next_required_lane": "p79_archive_claim_boundary_and_reopen_screen"
+    }
+  }
+}

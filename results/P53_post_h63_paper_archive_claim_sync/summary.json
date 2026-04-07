@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "active_stage_at_sync_time": "h63_post_p50_p51_p52_f38_archive_first_closeout_packet",
+    "current_paper_archive_claim_sync_wave": "p53_post_h63_paper_archive_claim_sync",
+    "preserved_prior_paper_archive_sync_wave": "p51_post_h62_paper_facing_partial_falsification_package",
+    "selected_outcome": "paper_archive_review_surfaces_locked_to_h64_archive_first_freeze",
+    "audited_file_count": 9,
+    "locked_file_count": 9,
+    "future_route_posture": "dormant_non_runtime_only",
+    "pass_count": 13,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\h64-post-h63-archive-first-freeze\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

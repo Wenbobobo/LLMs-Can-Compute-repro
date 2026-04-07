@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h38_docs_select_keep_h36_freeze_after_f16_and_preserve_h37",
+      "status": "pass",
+      "notes": "H38 should remain docs-only, preserve H36/H37, and keep the freeze because F16 found no execution-ready candidate."
+    },
+    {
+      "item_id": "f16_candidate_isolation_records_zero_execution_ready_candidates",
+      "status": "pass",
+      "notes": "F16 must collapse the saved R41 catalog into explicit statuses and end with zero execution-ready candidates."
+    },
+    {
+      "item_id": "driver_wave_and_exit_bundle_keep_r41_deferred_under_h38",
+      "status": "pass",
+      "notes": "The entry surfaces should treat H38 as current, keep R41 deferred, and preserve F17 only as planning-only route storage."
+    }
+  ]
+}

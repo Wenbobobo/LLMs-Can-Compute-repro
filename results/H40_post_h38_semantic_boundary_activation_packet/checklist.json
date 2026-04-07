@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h40_docs_authorize_r42_and_preserve_h38_h36",
+      "status": "pass",
+      "notes": "H40 should remain docs-only, preserve H38/H36, and authorize exactly R42."
+    },
+    {
+      "item_id": "f18_f19_and_h38_fix_the_semantic_boundary_decision_basis",
+      "status": "pass",
+      "notes": "The decision basis should stay narrow: F18 prefers F9, F19 fixes R42 first, and H38 still preserves H36."
+    },
+    {
+      "item_id": "driver_and_wave_plan_promote_h40_and_record_r42",
+      "status": "pass",
+      "notes": "The control surfaces should treat H40 as current and R42 as the completed first semantic-boundary gate."
+    }
+  ]
+}

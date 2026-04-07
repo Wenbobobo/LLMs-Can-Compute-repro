@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h43_docs_refreeze_r44_and_return_to_no_active_downstream_runtime_lane",
+      "status": "pass",
+      "notes": "H43 should interpret R44 explicitly and refreeze the stack without inventing a broader runtime successor."
+    },
+    {
+      "item_id": "r44_exact_r43_exact_r45_coequal_and_p27_merge_posture_justify_the_freeze",
+      "status": "pass",
+      "notes": "The post-R44 freeze is only justified if exact useful-case evidence is real, exact R43 remains decisive, model evidence remains non-substitutive, and merge posture stays operational."
+    },
+    {
+      "item_id": "claim_ladder_and_shared_control_surfaces_promote_h43_to_current_and_r44_to_completed",
+      "status": "pass",
+      "notes": "The repo should clearly move from H42-authorizes-R44 to H43-refreezes-R44 as completed narrow useful-case evidence."
+    },
+    {
+      "item_id": "top_level_readme_status_and_claim_matrix_reflect_h43_current_and_no_further_runtime_lane",
+      "status": "pass",
+      "notes": "The public control surfaces should agree that H43 is current and that R44 is completed rather than merely next."
+    }
+  ]
+}

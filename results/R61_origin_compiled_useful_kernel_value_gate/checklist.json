@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "r61_requires_positive_exact_r60_basis",
+      "status": "pass",
+      "notes": "R61 runs only after a positive exact R60 carryover gate."
+    },
+    {
+      "item_id": "r61_declared_comparators_keep_exactness_where_applicable",
+      "status": "pass",
+      "notes": "Source, lowered, internal linear, internal accelerated, and external final-value comparators must stay exact on the admitted rows."
+    },
+    {
+      "item_id": "r61_accounts_for_compiler_and_lowering_overhead",
+      "status": "pass",
+      "notes": "R61 reports compile, frontend-lowering, trace-lowering, and end-to-end timing rather than headline runtime only."
+    },
+    {
+      "item_id": "r61_route_retains_bounded_value_after_overhead",
+      "status": "blocked",
+      "notes": "Accelerated internal execution must remain exact and beat simpler transparent baselines after overhead accounting to count as bounded value."
+    }
+  ]
+}

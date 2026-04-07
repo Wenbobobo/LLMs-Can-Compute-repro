@@ -1,0 +1,4 @@
+- package a single long-form inquiry rather than many short prompts
+- make the dossier self-contained for a non-browsing GPTPro session
+- include key code excerpts from the exact retrieval/execution path
+- keep the dossier advisory rather than claim-bearing

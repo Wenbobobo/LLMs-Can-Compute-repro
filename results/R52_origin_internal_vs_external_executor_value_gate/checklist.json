@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "r52_requires_positive_r51_basis",
+      "status": "pass",
+      "notes": "R52 only runs after a positive R51 lane verdict."
+    },
+    {
+      "item_id": "accelerated_and_linear_internal_routes_keep_exactness",
+      "status": "pass",
+      "notes": "R52 should compare value, not hide an exactness break inside the internal route."
+    },
+    {
+      "item_id": "r52_establishes_bounded_value_over_simpler_baselines",
+      "status": "blocked",
+      "notes": "Accelerated internal execution must retain bounded value over internal linear and plain external baselines."
+    }
+  ]
+}

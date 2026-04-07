@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "item_id": "p72_reads_p71",
+      "status": "pass",
+      "notes": "P72 runs only after P71 lands the clean-descendant readiness sidecar."
+    },
+    {
+      "item_id": "p72_reads_standing_release_audits",
+      "status": "pass",
+      "notes": "P72 preserves the standing green preflight and archive-ready posture."
+    },
+    {
+      "item_id": "p72_runs_on_current_branch",
+      "status": "blocked",
+      "notes": "P72 should run from the current archive-polish and explicit-stop handoff branch."
+    },
+    {
+      "item_id": "p72_root_readme_and_status_mention_current_sidecar",
+      "status": "pass",
+      "notes": "README and STATUS should expose P72 as the current archive-polish explicit-stop handoff wave."
+    },
+    {
+      "item_id": "p72_docs_routers_and_indexes_are_current",
+      "status": "blocked",
+      "notes": "Docs routers and planning indexes should expose the P72 handoff stack and prompts."
+    },
+    {
+      "item_id": "p72_publication_and_branch_registry_are_current",
+      "status": "pass",
+      "notes": "Publication router and branch registry should expose P72 while preserving clean-descendant-only posture."
+    },
+    {
+      "item_id": "p72_release_and_submission_surfaces_are_current",
+      "status": "pass",
+      "notes": "Release-facing and submission-facing docs should treat P72 as a hygiene-only handoff sidecar."
+    },
+    {
+      "item_id": "p72_archive_ledgers_and_summaries_are_current",
+      "status": "pass",
+      "notes": "Archive ledgers and boundary summaries should expose P72 without widening the evidence bundle."
+    },
+    {
+      "item_id": "p72_handoff_prompts_and_stop_doc_are_current",
+      "status": "pass",
+      "notes": "The live driver and next plan-mode surfaces should freeze explicit-stop handoff facts without reopening scope."
+    }
+  ]
+}

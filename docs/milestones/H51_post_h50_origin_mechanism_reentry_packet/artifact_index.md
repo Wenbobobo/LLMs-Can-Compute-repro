@@ -1,0 +1,21 @@
+# H51 Artifact Index
+
+- `docs/plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md`
+- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/README.md`
+- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/status.md`
+- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/todo.md`
+- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/acceptance.md`
+- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/artifact_index.md`
+- `docs/milestones/H51_post_h50_origin_mechanism_reentry_packet/decision_matrix.md`
+- `docs/milestones/F28_post_h50_origin_mechanism_reentry_bundle/README.md`
+- `docs/milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/README.md`
+- `docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/README.md`
+- `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/README.md`
+- `docs/milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/README.md`
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/README.md`
+- `results/H50_post_r51_r52_scope_decision_packet/summary.json`
+- `results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json`
+- `results/H51_post_h50_origin_mechanism_reentry_packet/checklist.json`
+- `results/H51_post_h50_origin_mechanism_reentry_packet/claim_packet.json`
+- `results/H51_post_h50_origin_mechanism_reentry_packet/snapshot.json`
+- `results/H51_post_h50_origin_mechanism_reentry_packet/summary.json`

@@ -1,0 +1,65 @@
+{
+  "rows": [
+    {
+      "path": "docs/milestones/H54_post_r58_r59_compiled_boundary_decision_packet/README.md",
+      "matched_lines": [
+        "- selected outcome:",
+        "`freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`;"
+      ]
+    },
+    {
+      "path": "docs/milestones/H54_post_r58_r59_compiled_boundary_decision_packet/status.md",
+      "matched_lines": [
+        "`H54` preserves `H52` as the preserved prior mechanism closeout, preserves",
+        "restores `no_active_downstream_runtime_lane`, and keeps `F27`, `R53`, and"
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "`H54_post_r58_r59_compiled_boundary_decision_packet`.",
+        "`H54_post_r58_r59_compiled_boundary_decision_packet`",
+        "therefore returns to no active downstream runtime lane without authorizing"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "`H54_post_r58_r59_compiled_boundary_decision_packet`.",
+        "`no_active_downstream_runtime_lane`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The current active stage is:",
+        "- `H54_post_r58_r59_compiled_boundary_decision_packet`",
+        "- `H54_post_r58_r59_compiled_boundary_decision_packet` is the current"
+      ]
+    },
+    {
+      "path": "docs/claims_matrix.md",
+      "matched_lines": [
+        "| R59 | The lowered compiled trace-VM execution route can remain exact on the exact `R58` suite while still supporting only narrow compiled-boundary evidence | `R59_origin_compiled_trace_vm_execution_gate` over linear and accelerated internal lowered execution on the exact `R58` rows | validated narrowly on `5/5` exact lowered rows across `5/5` categories with exact source/lowered parity plus exact linear and accelerated internal lowered execution; supports only a narrow compiled-boundary reading and feeds `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value` rather than a broader systems claim |",
+        "| H54 | The post-`R58/R59` compiled-boundary lane can freeze as narrow restricted compiled-boundary support without fast-path value while preserving the prior mechanism closeout and the paper-grade endpoint | `H54_post_r58_r59_compiled_boundary_decision_packet` over `H52`, `H53`, `R58`, `R59`, and `H43` | validated as a docs-only packet; preserves `H52` as the prior mechanism closeout, preserves `H53` as the prior compiled-boundary reentry packet, preserves `H43` as the paper-grade endpoint, selects `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`, restores `no_active_downstream_runtime_lane`, and keeps `F27/R53/R54` blocked |"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`H54_post_r58_r59_compiled_boundary_decision_packet`;",
+        "`no_active_downstream_runtime_lane`;",
+        "`H54_post_r58_r59_compiled_boundary_decision_packet` is now the current active",
+        "8. Keep the downstream scientific lane at `no_active_downstream_runtime_lane`.",
+        "`H54_post_r58_r59_compiled_boundary_decision_packet`",
+        "- `no_active_downstream_runtime_lane` is the current downstream lane state."
+      ]
+    },
+    {
+      "path": "results/R59_origin_compiled_trace_vm_execution_gate/summary.json",
+      "matched_lines": [
+        "{\"summary\": {\"current_active_docs_only_stage\": \"h53_post_h52_compiled_boundary_reentry_packet\", \"current_post_h52_planning_bundle\": \"f29_post_h52_restricted_compiled_boundary_bundle\", \"active_runtime_lane\": \"r59_origin_compiled_trace_vm_execution_gate\", \"preserved_lowering_gate\": \"r58_origin_restricted_stack_bytecode_lowering_contract_gate\", \"current_paper_grade_endpoint\": \"h43_post_r44_useful_case_refreeze\", \"gate\": {\"lane_verdict\": \"compiled_trace_vm_execution_supported_exactly\", \"planned_case_count\": 5, \"executed_case_count\": 5, \"exact_case_count\": 5, \"failed_case_count\": 0, \"exact_category_count\": 5, \"selected_h54_outcome\": \"freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value\", \"first_failure_route\": null, \"next_required_packet\": \"h54_post_r58_r59_compiled_boundary_decision_packet\"}}, \"runtime_environment\": {\"python\": {\"executable\": \"D:\\\\wt\\\\f29\\\\.venv\\\\Scripts\\\\python.exe\", \"version\": \"3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]\", \"implementation\": \"CPython\", \"platform\": \"Windows-10-10.0.19044-SP0\", \"virtual_env\": \"D:\\\\wt\\\\f29\\\\.venv\"}, \"torch\": {\"installed\": false, \"version\": null, \"cuda_version\": null, \"cuda_available\": false, \"device_count\": 0, \"devices\": []}, \"uv_version\": \"uv 0.9.14 (05814f9cd 2025-12-01)\"}}"
+      ]
+    }
+  ]
+}

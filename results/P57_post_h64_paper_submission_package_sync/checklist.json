@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p57_reads_h64_and_p56",
+      "status": "pass",
+      "notes": "P57 starts only after H64 and P56 land cleanly."
+    },
+    {
+      "item_id": "p57_root_and_publication_surfaces_expose_current_followthrough_stack",
+      "status": "pass",
+      "notes": "Top-level and publication surfaces should expose the current H64 follow-through stack."
+    },
+    {
+      "item_id": "p57_submission_and_paper_ledgers_stay_downstream_of_h64_h58_h43_f38_split",
+      "status": "pass",
+      "notes": "Submission and paper-facing ledgers must stay downstream of archive-first partial falsification."
+    }
+  ]
+}

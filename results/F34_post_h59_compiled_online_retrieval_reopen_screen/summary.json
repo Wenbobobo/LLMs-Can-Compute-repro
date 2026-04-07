@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "active_stage_at_screen_time": "h59_post_h58_reproduction_gap_decision_packet",
+    "planning_bundle": "f34_post_h59_compiled_online_retrieval_reopen_screen",
+    "preserved_prior_planning_bundle": "f33_post_h59_different_cost_structure_reopen_bundle",
+    "current_low_priority_wave": "p42_post_h59_gptpro_reinterview_packet",
+    "admissible_reopen_family": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route",
+    "same_lane_status": "same_lane_executor_value_microvariants_not_admissible",
+    "later_authorization_gate": "no_runtime_lane_open_until_later_explicit_authorization",
+    "selected_outcome": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route_screened_without_runtime_authorization",
+    "non_admissible_near_term_routes": [
+      "same_lane_executor_value_microvariants_not_admissible",
+      "high_cost_model_route_far_future_only",
+      "programs_into_weights_route_far_future_only"
+    ],
+    "required_baseline_contract": "exact_useful_case_or_stronger_narrow_target_with_transparent_linear_and_external_baselines",
+    "project_default_fallback": "planning_only_or_project_stop",
+    "next_required_lane": "docs_only_decision_or_stop_archive",
+    "pass_count": 6,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f34-post-h59-archive-and-reopen-screen\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f34-post-h59-archive-and-reopen-screen\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

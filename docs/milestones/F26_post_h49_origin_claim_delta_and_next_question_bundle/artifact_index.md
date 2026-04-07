@@ -1,0 +1,21 @@
+# F26 Artifact Index
+
+- `docs/plans/2026-03-24-post-h49-origin-core-next-wave-design.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/README.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/status.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/todo.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/acceptance.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/artifact_index.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/claim_delta_matrix.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/next_question.md`
+- `docs/milestones/F26_post_h49_origin_claim_delta_and_next_question_bundle/route_constraints.md`
+- `docs/milestones/R51_origin_memory_control_surface_sufficiency_gate/README.md`
+- `docs/milestones/R52_origin_internal_vs_external_executor_value_gate/README.md`
+- `docs/milestones/H50_post_r51_r52_scope_decision_packet/README.md`
+- `docs/milestones/F27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle/README.md`
+- `results/H49_post_r50_tinyc_lowering_decision_packet/summary.json`
+- `results/R50_origin_restricted_tinyc_lowering_gate/summary.json`
+- `results/F26_post_h49_origin_claim_delta_and_next_question_bundle/summary.json`
+- `results/F26_post_h49_origin_claim_delta_and_next_question_bundle/checklist.json`
+- `results/F26_post_h49_origin_claim_delta_and_next_question_bundle/claim_packet.json`
+- `results/F26_post_h49_origin_claim_delta_and_next_question_bundle/snapshot.json`

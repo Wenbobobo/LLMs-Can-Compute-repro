@@ -1,0 +1,7 @@
+{
+  "planned_family_count": 5,
+  "executed_family_count": 5,
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "reason": "all executed families stayed exact on source/spec, source/lowered, trace, and final state"
+}

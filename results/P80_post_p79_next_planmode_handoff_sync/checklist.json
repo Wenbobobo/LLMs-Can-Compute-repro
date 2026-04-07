@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p80_reads_p79",
+      "status": "pass",
+      "notes": "P80 starts only after the landed P79 sidecar."
+    },
+    {
+      "item_id": "p80_handoff_surfaces_select_explicit_stop",
+      "status": "pass",
+      "notes": "All next-planmode prompts should default to explicit stop/no further action."
+    },
+    {
+      "item_id": "p80_plans_router_points_to_post_p80_prompts",
+      "status": "pass",
+      "notes": "Plans router should point to the post-P80 handoff surfaces as the current entrypoints."
+    }
+  ]
+}

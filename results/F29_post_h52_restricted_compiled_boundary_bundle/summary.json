@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "active_stage": "f29_post_h52_restricted_compiled_boundary_bundle",
+    "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
+    "preserved_prior_docs_only_closeout": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "current_routing_refreeze_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "selected_outcome": "post_h52_restricted_compiled_boundary_bundle_saved",
+    "only_followup_packet": "h53_post_h52_compiled_boundary_reentry_packet",
+    "only_next_runtime_candidate": "r58_origin_restricted_stack_bytecode_lowering_contract_gate",
+    "only_conditional_later_sequence": [
+      "r59_origin_compiled_trace_vm_execution_gate",
+      "h54_post_r58_r59_compiled_boundary_decision_packet"
+    ],
+    "current_low_priority_wave": "p38_post_h52_compiled_boundary_hygiene_sync",
+    "blocked_future_bundle": "f27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle",
+    "blocked_future_gates": [
+      "r53_origin_transformed_executor_entry_gate",
+      "r54_origin_trainable_executor_comparator_gate"
+    ],
+    "next_required_lane": "r58_origin_restricted_stack_bytecode_lowering_contract_gate",
+    "supported_here_count": 3,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\wt\\f29\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\wt\\f29\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

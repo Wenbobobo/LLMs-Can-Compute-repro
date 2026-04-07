@@ -2,67 +2,57 @@
   "experiment": "release_preflight_checklist_audit_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
   "rows": [
     {
-      "item_id": "top_level_release_surface_stays_narrow_and_active_stage_explicit",
+      "item_id": "top_level_release_surface_stays_narrow_and_h65_terminal_freeze_explicit",
       "status": "pass",
-      "notes": "README and STATUS should keep the narrow scope explicit while naming current H19, preserved H17/H15/H14/H13/V1 state, and bounded runtime classification."
+      "notes": "README, STATUS, and release summary should expose H65 plus the current archive-facing control stack."
     },
     {
-      "item_id": "release_preflight_checklist_tracks_current_machine_guards",
+      "item_id": "publication_and_plan_indexes_expose_current_h65_route",
       "status": "pass",
-      "notes": "The human release checklist should point at the current standing machine guards, including the V1 timing follow-up."
+      "notes": "Publication, control, and planning indexes should expose the current archive-facing control route."
     },
     {
-      "item_id": "release_summary_and_blog_rules_stay_downstream",
+      "item_id": "release_candidate_submission_claim_and_archive_ledgers_align",
       "status": "pass",
-      "notes": "Release summary and blog rules must remain downstream of the frozen manuscript bundle and current release gates."
+      "notes": "Release, submission, claim, and archive ledgers should expose the same current archive-facing stack and preserved publication lineage."
     },
     {
-      "item_id": "manuscript_bundle_stays_section_ordered",
+      "item_id": "paper_bundle_ledgers_stay_downstream_of_archive_first_partial_falsification",
       "status": "pass",
-      "notes": "The manuscript bundle should remain a section-shaped frozen draft rather than drifting back into planning notes."
+      "notes": "Paper bundle and outward helper notes must stay downstream of archive-first terminal freeze."
     },
     {
-      "item_id": "paper_facing_ledgers_stay_synchronized",
+      "item_id": "blog_rules_keep_restrained_release_surface",
       "status": "pass",
-      "notes": "The frozen manuscript, bundle-status, figure-order, and appendix-scope ledgers should continue to agree."
+      "notes": "Blocked-blog rules should remain explicit and downstream."
     },
     {
       "item_id": "release_worktree_hygiene_snapshot_classifies_commit_state",
       "status": "pass",
-      "notes": "The worktree hygiene snapshot should classify current release-commit readiness and rule out diff-check content issues."
+      "notes": "The worktree hygiene snapshot should classify current release-commit readiness."
     },
     {
-      "item_id": "standing_audits_remain_green",
+      "item_id": "standing_h65_followthrough_audits_remain_green",
       "status": "pass",
-      "notes": "The current release-preflight surface still depends on the frozen P1/P5/H2 chain and the bounded V1 timing classification."
+      "notes": "Standing release-preflight state depends on H65, the landed P56/P57/P58/P59 foundation, and the current archive-facing control stack."
     }
   ]
 }

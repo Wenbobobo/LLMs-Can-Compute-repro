@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h47_docs_refreeze_r48_without_scope_widening",
+      "status": "pass",
+      "notes": "H47 should interpret R48 explicitly, freeze the comparator result narrowly, and restore no active downstream runtime lane."
+    },
+    {
+      "item_id": "upstream_h46_r48_and_exact_r46_r47_support_the_h47_refreeze",
+      "status": "pass",
+      "notes": "H47 is only justified if exact R46/R47 survived and positive R48 remained comparator-only rather than substitutive."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h47_current_and_restore_no_active_lane",
+      "status": "pass",
+      "notes": "Shared control surfaces should make H47 current, preserve H46 as prior, keep R48 completed, and return the scientific lane to no_active_downstream_runtime_lane."
+    }
+  ]
+}

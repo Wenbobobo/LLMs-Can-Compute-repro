@@ -109,4 +109,21 @@
   bounded per-file timing follow-up that classifies the current full-suite
   validation-runtime gate
 - `setup_unattended_worktrees.ps1` — create the default unattended worktree
-  layout after the tree is clean enough to branch
+  layout after the tree is clean enough to branch, now rooted by default at
+  `../wt`
+- `sync_repo_local_worktree_aliases.ps1` — create or refresh the repo-local
+  `../wt` junction aliases for registered worktrees, including direct short
+  aliases like `f29` and `f31`; legacy `D:/wt/*` mirroring is now opt-in via
+  `-MirrorLegacyShortcuts`
+- `export_p43_post_h59_repo_graph_hygiene_and_merge_map.py` — export the
+  repo-local worktree graph, root-main quarantine, and descendant-only merge
+  posture after `H59`
+- `export_p44_post_h59_publication_surface_and_claim_lock.py` — export the
+  outward wording lock for the post-`H59` archive state and `H60` decision
+- `export_f34_post_h59_compiled_online_retrieval_reopen_screen.py` — export
+  the current planning-only reopen screen for the only conditional compiled-
+  online route family
+- `export_h60_post_f34_next_lane_decision_packet.py` — export the current
+  active docs-only decision that keeps the repo planning-only / archive / stop
+- `export_f35_post_h59_far_future_model_and_weights_horizon_log.py` — export
+  the far-future storage log for model-route and programs-into-weights ideas

@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "item_id": "p49_reads_h61",
+      "status": "pass",
+      "notes": "P49 syncs advisory text after H61 lands the archive-first posture."
+    },
+    {
+      "item_id": "p49_preserves_p42_advisory_status",
+      "status": "pass",
+      "notes": "The preserved GPTPro dossier remains advisory-only rather than claim-bearing."
+    },
+    {
+      "item_id": "p49_advisory_file_01",
+      "status": "pass",
+      "notes": "docs/Origin/Can LLMs Be Computers- - Percepta.md should be available in the clean descendant line."
+    },
+    {
+      "item_id": "p49_advisory_file_02",
+      "status": "pass",
+      "notes": "docs/Origin/Discuss1.md should be available in the clean descendant line."
+    },
+    {
+      "item_id": "p49_advisory_file_03",
+      "status": "pass",
+      "notes": "docs/Origin/Discuss2.md should be available in the clean descendant line."
+    },
+    {
+      "item_id": "p49_advisory_file_04",
+      "status": "pass",
+      "notes": "docs/Origin/Discuss3Pro.md should be available in the clean descendant line."
+    },
+    {
+      "item_id": "p49_advisory_file_05",
+      "status": "pass",
+      "notes": "docs/Origin/QA1.md should be available in the clean descendant line."
+    },
+    {
+      "item_id": "p49_advisory_file_06",
+      "status": "pass",
+      "notes": "docs/Origin/QA2.md should be available in the clean descendant line."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""Export the P10 submission/archive packet readiness audit."""
+"""Export the P10 submission/archive readiness audit."""
 
 from __future__ import annotations
 
@@ -12,31 +12,41 @@ from utils import detect_runtime_environment
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "results" / "P10_submission_archive_ready"
 
+CURRENT_PAPER_PHASE = "h65_p80_archive_facing_stack_with_preserved_p74_p76_h64_h58_h43_endpoints"
+GREEN_ACTION = (
+    "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H65 remains "
+    "the current active docs-only packet, P77/P78/P79/P80 remain the current archive-facing control stack, "
+    "P72/P71/P70/P69 remain hygiene-only archive/control sidecars beneath that archive-facing stack, "
+    "P56/P57/P58/P59 remain the landed follow-through foundation, "
+    "P74/P75/P76 remain the preserved immediate publication lineage on "
+    "wip/p75-post-p74-published-successor-freeze, P66/P67/P68 remain the preserved prior successor stack, "
+    "P63/P64/P65 remain the preserved deeper successor stack, "
+    "H64 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains "
+    "the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no "
+    "further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
+)
+
 
 def read_text(path: str | Path) -> str:
     return Path(path).read_text(encoding="utf-8")
 
 
 def read_json(path: str | Path) -> dict[str, Any]:
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    return json.loads(read_text(path))
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
-def normalize_text_space(text: str) -> str:
-    return " ".join(text.split())
+def normalize(text: str) -> str:
+    return " ".join(text.split()).lower()
 
 
 def contains_all(text: str, needles: list[str]) -> bool:
-    lowered = normalize_text_space(text).lower()
-    return all(normalize_text_space(needle).lower() in lowered for needle in needles)
-
-
-def contains_none(text: str, needles: list[str]) -> bool:
-    lowered = normalize_text_space(text).lower()
-    return all(normalize_text_space(needle).lower() not in lowered for needle in needles)
+    lowered = normalize(text)
+    return all(normalize(needle) in lowered for needle in needles)
 
 
 def extract_matching_lines(text: str, *, needles: list[str], max_lines: int = 8) -> list[str]:
@@ -48,70 +58,24 @@ def extract_matching_lines(text: str, *, needles: list[str], max_lines: int = 8)
         if not line:
             continue
         lowered = line.lower()
-        if any(needle in lowered for needle in lowered_needles):
-            if line not in seen:
-                hits.append(line)
-                seen.add(line)
+        if any(needle in lowered for needle in lowered_needles) and line not in seen:
+            hits.append(line)
+            seen.add(line)
         if len(hits) >= max_lines:
             break
     return hits
 
 
-def load_inputs() -> dict[str, Any]:
-    return {
-        "readme_text": read_text(ROOT / "README.md"),
-        "status_text": read_text(ROOT / "STATUS.md"),
-        "publication_readme_text": read_text(ROOT / "docs" / "publication_record" / "README.md"),
-        "current_stage_driver_text": read_text(ROOT / "docs" / "publication_record" / "current_stage_driver.md"),
-        "planning_state_taxonomy_text": read_text(ROOT / "docs" / "publication_record" / "planning_state_taxonomy.md"),
-        "submission_packet_index_text": read_text(
-            ROOT / "docs" / "publication_record" / "submission_packet_index.md"
-        ),
-        "archival_repro_manifest_text": read_text(
-            ROOT / "docs" / "publication_record" / "archival_repro_manifest.md"
-        ),
-        "review_boundary_summary_text": read_text(
-            ROOT / "docs" / "publication_record" / "review_boundary_summary.md"
-        ),
-        "external_release_note_skeleton_text": read_text(
-            ROOT / "docs" / "publication_record" / "external_release_note_skeleton.md"
-        ),
-        "p1_summary": read_json(ROOT / "results" / "P1_paper_readiness" / "summary.json"),
-        "v1_timing_summary": read_json(
-            ROOT / "results" / "V1_full_suite_validation_runtime_timing_followup" / "summary.json"
-        ),
-        "worktree_hygiene_summary_text": read_text(
-            ROOT / "results" / "release_worktree_hygiene_snapshot" / "summary.json"
-        ),
-        "worktree_hygiene_summary": read_json(
-            ROOT / "results" / "release_worktree_hygiene_snapshot" / "summary.json"
-        ),
-        "release_preflight_summary": read_json(
-            ROOT / "results" / "release_preflight_checklist_audit" / "summary.json"
-        ),
-        "p5_summary": read_json(ROOT / "results" / "P5_public_surface_sync" / "summary.json"),
-        "p5_callout_summary": read_json(ROOT / "results" / "P5_callout_alignment" / "summary.json"),
-        "h2_summary": read_json(ROOT / "results" / "H2_bundle_lock_audit" / "summary.json"),
-    }
-
-
-def ready_count_from_p1_summary(p1_summary: dict[str, Any]) -> int:
+def ready_count(p1_summary: dict[str, Any]) -> int:
     for row in p1_summary["figure_table_status_summary"]["by_status"]:
         if row["status"] == "ready":
             return int(row["count"])
     return 0
 
 
-def blocked_count_from_summary(summary_doc: dict[str, Any]) -> int:
-    return int(summary_doc["summary"]["blocked_count"])
-
-
-def runtime_classification_from_summary(summary_doc: dict[str, Any]) -> str:
-    return str(summary_doc["summary"]["runtime_classification"])
-
-
-def timed_out_count_from_summary(summary_doc: dict[str, Any]) -> int:
-    return int(summary_doc["summary"]["timed_out_file_count"])
+def blocked_count(summary_doc: dict[str, Any]) -> int:
+    summary = summary_doc["summary"]
+    return int(summary["blocked_count"] if "blocked_count" in summary else summary["blocked_rows"])
 
 
 def preflight_state_from_summary(summary_doc: dict[str, Any]) -> str:
@@ -126,403 +90,246 @@ def diff_check_state_from_summary(summary_doc: dict[str, Any]) -> str:
     return str(summary_doc["summary"]["git_diff_check_state"])
 
 
-def build_checklist_rows(
-    *,
-    readme_text: str,
-    status_text: str,
-    publication_readme_text: str,
-    current_stage_driver_text: str,
-    planning_state_taxonomy_text: str,
-    submission_packet_index_text: str,
-    archival_repro_manifest_text: str,
-    review_boundary_summary_text: str,
-    external_release_note_skeleton_text: str,
-    p1_summary: dict[str, Any],
-    v1_timing_summary: dict[str, Any],
-    release_preflight_summary: dict[str, Any],
-    worktree_hygiene_summary_text: str,
-    worktree_hygiene_summary: dict[str, Any],
-    p5_summary: dict[str, Any],
-    p5_callout_summary: dict[str, Any],
-    h2_summary: dict[str, Any],
-) -> list[dict[str, object]]:
-    return [
-        {
-            "item_id": "active_driver_names_current_packet",
-            "status": "pass"
-            if contains_all(
-                current_stage_driver_text,
-                [
-                    "`h19_refreeze_and_next_scope_decision`",
-                    "`h18/r19/r20/r21` as the completed same-endpoint mainline reopen",
-                    "`h17_refreeze_and_conditional_frontier_recheck` as the prior",
-                    "`h16_post_h15_same_scope_reopen_and_scope_lock`",
-                    "`h15_refreeze_and_decision_sync`",
-                    "`h14_core_first_reopen_and_scope_lock`",
-                    "`h13_post_h12_rollover_and_next_stage_staging` remains preserved",
-                    "`v1_full_suite_validation_runtime_audit` remains a standing operational reference",
-                    "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint follow-up packet",
-                    "`e1c_compiled_boundary_patch`",
-                    "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline underneath",
-                    "`h6/r3/r4/(inactive r5)/h7` remains the deeper historical baseline",
-                    "`p13_public_surface_sync_and_repo_hygiene`",
-                ],
-            )
-            else "blocked",
-            "notes": "The current-stage driver should expose current H19, preserved H17/H15/H14/H13/V1 state, the preserved older baselines, and the conditional compiled lane.",
-        },
-        {
-            "item_id": "planning_taxonomy_assigns_single_active_driver",
-            "status": "pass"
-            if contains_all(
-                planning_state_taxonomy_text,
-                [
-                    "`active_driver`",
-                    "`standing_gate`",
-                    "`historical_complete`",
-                    "`dormant_protocol`",
-                    "`docs/publication_record/current_stage_driver.md`",
-                    "`docs/publication_record/release_candidate_checklist.md`",
-                    "`docs/publication_record/paper_package_plan.md`",
-                    "`docs/publication_record/conditional_reopen_protocol.md`",
-                ],
-            )
-            else "blocked",
-            "notes": "The planning taxonomy should make active-driver and gate ownership explicit.",
-        },
-        {
-            "item_id": "submission_packet_names_canonical_bundle",
-            "status": "pass"
-            if contains_all(
-                submission_packet_index_text,
-                [
-                    "`manuscript_bundle_draft.md`",
-                    "`main_text_order.md`",
-                    "`appendix_companion_scope.md`",
-                    "`claim_ladder.md`",
-                    "`claim_evidence_table.md`",
-                    "`current_stage_driver.md`",
-                    "`results/p1_paper_readiness/summary.json`",
-                    "`results/h19_refreeze_and_next_scope_decision/summary.json`",
-                    "`results/h15_refreeze_and_decision_sync/summary.json`",
-                    "`results/v1_full_suite_validation_runtime_timing_followup/summary.json`",
-                    "`results/release_worktree_hygiene_snapshot/summary.json`",
-                    "`results/release_preflight_checklist_audit/summary.json`",
-                    "`results/p10_submission_archive_ready/summary.json`",
-                ],
-            )
-            else "blocked",
-            "notes": "The packet index should identify the canonical manuscript, appendix, control docs, and audit anchors.",
-        },
-        {
-            "item_id": "archival_manifest_names_regeneration_and_restrictions",
-            "status": "pass"
-            if contains_all(
-                archival_repro_manifest_text,
-                [
-                    "python `3.12`",
-                    "`uv`",
-                    "uv run python scripts/export_h19_refreeze_and_next_scope_decision.py",
-                    "uv run python scripts/export_release_worktree_hygiene_snapshot.py",
-                    "uv run python scripts/export_release_preflight_checklist_audit.py",
-                    "uv run python scripts/export_p10_submission_archive_ready.py",
-                    "results/release_worktree_hygiene_snapshot/summary.json",
-                    "`docs/Origin/`",
-                    "`docs/origin/`",
-                ],
-            )
-            else "blocked",
-            "notes": "The archival manifest should document regeneration commands and explicit restricted-source exclusions.",
-        },
-        {
-            "item_id": "release_worktree_snapshot_is_recorded_without_forcing_clean_tree",
-            "status": "pass"
-            if release_commit_state_from_summary(worktree_hygiene_summary)
-            in {
-                "dirty_worktree_release_commit_blocked",
-                "clean_worktree_ready_if_other_gates_green",
-            }
-            and diff_check_state_from_summary(worktree_hygiene_summary) != "content_issues_present"
-            and contains_all(
-                worktree_hygiene_summary_text,
-                [
-                    "\"release_commit_state\":",
-                    "\"git_diff_check_state\":",
-                ],
-            )
-            else "blocked",
-            "notes": "The packet should carry the machine-readable worktree snapshot as an operational commit gate without treating a dirty unattended tree as a science failure.",
-        },
-        {
-            "item_id": "review_boundary_summary_preserves_scope",
-            "status": "pass"
-            if contains_all(
-                review_boundary_summary_text,
-                [
-                    "supported here",
-                    "unsupported here",
-                    "disconfirmed here",
-                    "append-only execution trace",
-                    "structured 2d hard-max mechanism",
-                    "tiny typed-bytecode `d0`",
-                    "no general “llms are computers” claim",
-                    "`e1a_precision_patch`",
-                    "`e1b_systems_patch`",
-                    "`e1c_compiled_boundary_patch`",
-                ],
-            )
-            else "blocked",
-            "notes": "The review-boundary summary should preserve supported claims, blocked claims, and explicit reopen routing.",
-        },
-        {
-            "item_id": "external_release_note_stays_downstream",
-            "status": "pass"
-            if contains_all(
-                external_release_note_skeleton_text,
-                [
-                    "downstream-only skeleton",
-                    "narrow execution-substrate claim",
-                    "tiny typed-bytecode `d0`",
-                    "results/p10_submission_archive_ready/summary.json",
-                    "blog remains blocked",
-                ],
-            )
-            else "blocked",
-            "notes": "The release-note skeleton should remain restrained and explicitly downstream-only.",
-        },
-        {
-            "item_id": "top_level_docs_align_with_current_driver",
-            "status": "pass"
-            if (
-                contains_all(
-                    readme_text,
-                    [
-                        "`h10-h12` | completed bounded `d0` retrieval-pressure packet",
-                        "| `h13-v1` | completed governance/runtime handoff preserved as a control baseline",
-                        "| `h14-h15` | completed bounded core-first reopen/refreeze packet",
-                        "| `h16-h17` | completed bounded same-scope reopen/refreeze packet",
-                        "| `h18-h19` | completed bounded same-endpoint mainline reopen/refreeze packet",
-                        "the current active post-`p9` stage is `h19_refreeze_and_next_scope_decision`",
-                        "`e1c` stays conditional only",
-                    ],
-                )
-                or contains_all(
-                    readme_text,
-                    [
-                        "`h10-h12` | completed bounded `d0` retrieval-pressure packet",
-                        "| `h20-h21` | completed post-`h19` reentry/refreeze packet",
-                        "the current active post-`p9` stage is `h21_refreeze_after_r22_r23`",
-                        "`e1c` stays conditional only",
-                    ],
-                )
-            )
-            and (
-                contains_all(
-                    status_text,
-                    [
-                        "`h19_refreeze_and_next_scope_decision`",
-                        "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                        "`h14_core_first_reopen_and_scope_lock`",
-                        "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                        "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                        "`e1c` remains conditional only",
-                        "`healthy_but_slow`",
-                        "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline",
-                    ],
-                )
-                or contains_all(
-                    status_text,
-                    [
-                        "`h21_refreeze_after_r22_r23`",
-                        "`h17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                        "`h15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                        "`v1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                        "`h10/h11/r8/r9/r10/h12` remains the latest completed same-endpoint",
-                        "`e1c` remains conditional only",
-                        "`healthy_but_slow`",
-                        "`h8/r6/r7/h9` remains the completed direct same-endpoint baseline",
-                    ],
-                )
-            )
-            and (
-                contains_all(
-                    publication_readme_text,
-                    [
-                        "`current_stage_driver.md`",
-                        "`planning_state_taxonomy.md`",
-                        "`submission_packet_index.md`",
-                        "`archival_repro_manifest.md`",
-                        "current `h19` frozen same-endpoint state",
-                        "`results/h19_refreeze_and_next_scope_decision/summary.json`",
-                        "`h18` / `r19` / `r20` / `r21` / `h19` now define the completed same-endpoint",
-                        "`h17` is the preserved prior same-scope refreeze",
-                        "`h15` is the completed predecessor refreeze stage",
-                        "`h14` / `r11` / `r12` remain the completed prior reopen packet",
-                        "`h13` / `v1` remain the completed governance/runtime handoff",
-                    ],
-                )
-                or contains_all(
-                    publication_readme_text,
-                    [
-                        "`current_stage_driver.md`",
-                        "`planning_state_taxonomy.md`",
-                        "`submission_packet_index.md`",
-                        "`archival_repro_manifest.md`",
-                        "canonical `active_driver` for the current `h21` frozen same-endpoint state",
-                        "`h19` preserved as the immediate pre-refreeze control",
-                        "`h17` preserved as the prior same-scope refreeze",
-                        "`h10/h11/r8/r9/r10/h12` preserved as the latest earlier same-endpoint",
-                        "`h13/v1` preserved as the governance/runtime handoff",
-                        "`h18` / `r19` / `r20` / `r21` / `h19` now define the preserved",
-                        "`h20` / `r22` / `r23` / `h21` define the current follow-up packet",
-                    ],
-                )
-            )
-            else "blocked",
-            "notes": "README, STATUS, and the publication index should all reflect the same current H19 driver and preserved packet docs.",
-        },
-        {
-            "item_id": "packet_docs_keep_restricted_sources_out_of_public_bundle",
-            "status": "pass"
-            if contains_none(
-                submission_packet_index_text + "\n" + review_boundary_summary_text + "\n" + external_release_note_skeleton_text,
-                ["docs/origin/", "docs/Origin/"],
-            )
-            else "blocked",
-            "notes": "Public packet docs other than the archive manifest should not depend on restricted-source paths.",
-        },
-        {
-            "item_id": "standing_audits_remain_green",
-            "status": "pass"
-            if ready_count_from_p1_summary(p1_summary) == 10
-            and not p1_summary["blocked_or_partial_items"]
-            and runtime_classification_from_summary(v1_timing_summary) == "healthy_but_slow"
-            and timed_out_count_from_summary(v1_timing_summary) == 0
-            and preflight_state_from_summary(release_preflight_summary) == "docs_and_audits_green"
-            and blocked_count_from_summary(p5_summary) == 0
-            and blocked_count_from_summary(p5_callout_summary) == 0
-            and blocked_count_from_summary(h2_summary) == 0
-            else "blocked",
-            "notes": "The existing standing audits must stay green before the packet is called archive-ready.",
-        },
-    ]
-
-
-def build_packet_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
-    lookup = {
-        "README.md": (
-            "readme_text",
-            [
-                "`H10-H12` | completed bounded `D0` retrieval-pressure packet",
-                "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline",
-                "| `H14-H15` | completed bounded core-first reopen/refreeze packet",
-                "| `H16-H17` | completed bounded same-scope reopen/refreeze packet",
-                "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet",
-                "The current active post-`P9` stage is `H19_refreeze_and_next_scope_decision`",
-            ],
-        ),
-        "STATUS.md": (
-            "status_text",
-            [
-                "`H19_refreeze_and_next_scope_decision`",
-                "`H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-                "`H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-                "`H14_core_first_reopen_and_scope_lock`",
-                "`V1_full_suite_validation_runtime_audit` remains the standing bounded operational reference",
-                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-                "`healthy_but_slow`",
-                "`E1c` remains conditional only",
-            ],
-        ),
-        "docs/publication_record/current_stage_driver.md": (
-            "current_stage_driver_text",
-            [
-                "`H19_refreeze_and_next_scope_decision`",
-                "`H18/R19/R20/R21` as the completed same-endpoint mainline reopen",
-                "`H17_refreeze_and_conditional_frontier_recheck` as the prior",
-                "`H16_post_h15_same_scope_reopen_and_scope_lock`",
-                "`H15_refreeze_and_decision_sync`",
-                "`H14_core_first_reopen_and_scope_lock`",
-                "`H13_post_h12_rollover_and_next_stage_staging` remains preserved",
-                "`V1_full_suite_validation_runtime_audit` remains a standing operational reference",
-                "`H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint follow-up packet",
-                "`H8/R6/R7/H9` remains the completed direct same-endpoint baseline underneath",
-            ],
-        ),
-        "docs/publication_record/submission_packet_index.md": (
-            "submission_packet_index_text",
-            [
-                "`manuscript_bundle_draft.md`",
-                "`appendix_companion_scope.md`",
-                "`current_stage_driver.md`",
-                "`results/H19_refreeze_and_next_scope_decision/summary.json`",
-                "`results/H15_refreeze_and_decision_sync/summary.json`",
-                "`results/V1_full_suite_validation_runtime_timing_followup/summary.json`",
-                "`results/release_worktree_hygiene_snapshot/summary.json`",
-                "`results/release_preflight_checklist_audit/summary.json`",
-                "`results/P10_submission_archive_ready/summary.json`",
-            ],
-        ),
-        "docs/publication_record/archival_repro_manifest.md": (
-            "archival_repro_manifest_text",
-            [
-                "Python `3.12`",
-                "`uv`",
-                "uv run python scripts/export_h19_refreeze_and_next_scope_decision.py",
-                "uv run python scripts/export_release_worktree_hygiene_snapshot.py",
-                "uv run python scripts/export_release_preflight_checklist_audit.py",
-                "uv run python scripts/export_p10_submission_archive_ready.py",
-                "results/release_worktree_hygiene_snapshot/summary.json",
-                "`docs/Origin/`",
-            ],
-        ),
-        "results/release_worktree_hygiene_snapshot/summary.json": (
-            "worktree_hygiene_summary_text",
-            [
-                "\"release_commit_state\":",
-                "\"git_diff_check_state\":",
-            ],
-        ),
-        "docs/publication_record/review_boundary_summary.md": (
-            "review_boundary_summary_text",
-            [
-                "Supported here",
-                "Unsupported here",
-                "Disconfirmed here",
-                "append-only execution trace",
-                "tiny typed-bytecode `D0`",
-                "no arbitrary C reproduction claim",
-                "`E1a_precision_patch`",
-            ],
-        ),
-        "docs/publication_record/external_release_note_skeleton.md": (
-            "external_release_note_skeleton_text",
-            [
-                "downstream-only skeleton",
-                "narrow execution-substrate claim",
-                "tiny typed-bytecode `D0`",
-                "blog remains blocked",
-            ],
-        ),
+def load_inputs() -> dict[str, Any]:
+    text_files = {
+        "readme_text": "README.md",
+        "status_text": "STATUS.md",
+        "publication_readme_text": "docs/publication_record/README.md",
+        "current_stage_driver_text": "docs/publication_record/current_stage_driver.md",
+        "submission_packet_index_text": "docs/publication_record/submission_packet_index.md",
+        "archival_manifest_text": "docs/publication_record/archival_repro_manifest.md",
+        "review_boundary_text": "docs/publication_record/review_boundary_summary.md",
+        "external_release_note_text": "docs/publication_record/external_release_note_skeleton.md",
+        "worktree_hygiene_summary_text": "results/release_worktree_hygiene_snapshot/summary.json",
     }
-    rows: list[dict[str, object]] = []
-    for path, (input_key, needles) in lookup.items():
-        rows.append(
-            {
-                "path": path,
-                "matched_lines": extract_matching_lines(inputs[input_key], needles=needles),
-            }
-        )
-    return rows
+    json_files = {
+        "p1_summary": "results/P1_paper_readiness/summary.json",
+        "h65_summary": "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+        "h64_summary": "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
+        "p74_summary": "results/P74_post_p73_successor_publication_review/summary.json",
+        "p75_summary": "results/P75_post_p74_published_successor_freeze/summary.json",
+        "p76_summary": "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+        "p77_summary": "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
+        "p78_summary": "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
+        "p79_summary": "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
+        "p80_summary": "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
+        "p56_summary": "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
+        "p57_summary": "results/P57_post_h64_paper_submission_package_sync/summary.json",
+        "p58_summary": "results/P58_post_h64_archive_release_closeout_sync/summary.json",
+        "p59_summary": "results/P59_post_h64_control_and_handoff_sync/summary.json",
+        "f38_summary": "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
+        "h58_summary": "results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json",
+        "h43_summary": "results/H43_post_r44_useful_case_refreeze/summary.json",
+        "v1_timing_summary": "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
+        "worktree_hygiene_summary": "results/release_worktree_hygiene_snapshot/summary.json",
+        "preflight_summary": "results/release_preflight_checklist_audit/summary.json",
+        "p5_summary": "results/P5_public_surface_sync/summary.json",
+        "p5_callout_summary": "results/P5_callout_alignment/summary.json",
+        "h2_summary": "results/H2_bundle_lock_audit/summary.json",
+    }
+    data = {key: read_text(ROOT / rel) for key, rel in text_files.items()}
+    data.update({key: read_json(ROOT / rel) for key, rel in json_files.items()})
+    return data
 
 
-def build_summary(
-    checklist_rows: list[dict[str, object]], worktree_hygiene_summary: dict[str, Any]
-) -> dict[str, object]:
+def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
+    checks = [
+        (
+            "top_level_surfaces_and_driver_are_current_h65_frozen_successor_control",
+            all(
+                (
+                    contains_all(
+                        inputs["readme_text"],
+                        [
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P77_post_p76_keep_set_and_provenance_normalization`",
+                            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
+                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
+                            "`P80_post_p79_next_planmode_handoff_sync`",
+                            "`explicit_stop_or_no_further_action_archive_first`",
+                        ],
+                    ),
+                    contains_all(
+                        inputs["status_text"],
+                        [
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P77_post_p76_keep_set_and_provenance_normalization`",
+                            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
+                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
+                            "`P80_post_p79_next_planmode_handoff_sync`",
+                        ],
+                    ),
+                    contains_all(
+                        inputs["publication_readme_text"],
+                        [
+                            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+                            "P77_post_p76_keep_set_and_provenance_normalization",
+                            "P78_post_p77_legacy_worktree_convergence_and_quarantine_sync",
+                            "P79_post_p78_archive_claim_boundary_and_reopen_screen",
+                            "P80_post_p79_next_planmode_handoff_sync",
+                        ],
+                    ),
+                    contains_all(
+                        inputs["current_stage_driver_text"],
+                        [
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P77_post_p76_keep_set_and_provenance_normalization`",
+                            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
+                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
+                            "`P80_post_p79_next_planmode_handoff_sync`",
+                            "`explicit_stop_or_no_further_action_archive_first`",
+                        ],
+                    ),
+                )
+            ),
+            "Top-level surfaces and the canonical driver should all expose the current archive-facing control stack.",
+        ),
+        (
+            "submission_packet_index_and_archival_manifest_track_current_bundle",
+            all(
+                (
+                    contains_all(
+                        inputs["submission_packet_index_text"],
+                        [
+                            "P72/P71/P70/P69 entries below are hygiene-only control sidecars",
+                            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+                            "P80_post_p79_next_planmode_handoff_sync",
+                            "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
+                            "P79_post_p78_archive_claim_boundary_and_reopen_screen",
+                            "P78_post_p77_legacy_worktree_convergence_and_quarantine_sync",
+                            "P77_post_p76_keep_set_and_provenance_normalization",
+                            "do not widen the paper-facing evidence bundle",
+                        ],
+                    ),
+                    contains_all(
+                        inputs["archival_manifest_text"],
+                        [
+                            "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
+                            "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
+                            "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
+                            "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
+                            "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+                            "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+                            "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
+                            "preserved immediate publication lineage",
+                        ],
+                    ),
+                )
+            ),
+            "Submission packet index and archival manifest should point at the same archive-facing control package.",
+        ),
+        (
+            "review_boundary_and_external_release_note_stay_downstream_of_h65_terminal_freeze",
+            all(
+                (
+                    contains_all(
+                        inputs["review_boundary_text"],
+                        [
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P79/P80`",
+                            "`P56/P57/P58/P59`",
+                            "narrow positive mechanism support survives",
+                            "the only remaining future route is a dormant no-go dossier at `F38`",
+                            "explicit stop",
+                            "no further action",
+                        ],
+                    ),
+                    contains_all(
+                        inputs["external_release_note_text"],
+                        [
+                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
+                            "`P79/P80`",
+                            "`P56/P57/P58/P59`",
+                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
+                            "`H43_post_r44_useful_case_refreeze`",
+                            "`H58_post_r62_origin_value_boundary_closeout_packet`",
+                            "dormant non-runtime `F38` dossier",
+                        ],
+                    ),
+                    contains_all(
+                        inputs["external_release_note_text"],
+                        [
+                            "archive-first terminal freeze",
+                            "strongest justified executor-value lane is closed negative",
+                            "explicit stop",
+                            "no further action",
+                        ],
+                    ),
+                )
+            ),
+            "Review and external release-note helpers should stay downstream of archive-first terminal freeze.",
+        ),
+        (
+            "standing_release_audits_remain_green",
+            ready_count(inputs["p1_summary"]) == 10
+            and preflight_state_from_summary(inputs["preflight_summary"]) == "docs_and_audits_green"
+            and inputs["h65_summary"]["summary"]["selected_outcome"]
+            == "archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop"
+            and inputs["h64_summary"]["summary"]["selected_outcome"]
+            == "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant"
+            and inputs["p74_summary"]["summary"]["selected_outcome"]
+            == "successor_publication_review_supports_p75_freeze"
+            and inputs["p75_summary"]["summary"]["selected_outcome"]
+            == "published_successor_freeze_locked_after_p74_review"
+            and inputs["p76_summary"]["summary"]["selected_outcome"]
+            == "published_successor_release_hygiene_and_control_rebaselined_after_p75"
+            and inputs["p77_summary"]["summary"]["selected_outcome"]
+            == "keep_set_and_provenance_normalized_after_p76"
+            and inputs["p78_summary"]["summary"]["selected_outcome"]
+            == "balanced_worktree_convergence_completed_with_quarantines_preserved"
+            and inputs["p79_summary"]["summary"]["selected_outcome"]
+            == "archive_claim_boundary_and_reopen_screen_locked_after_convergence"
+            and inputs["p80_summary"]["summary"]["selected_outcome"]
+            == "next_planmode_handoff_synced_to_explicit_stop_after_p79"
+            and inputs["p56_summary"]["summary"]["selected_outcome"]
+            == "clean_descendant_merge_candidate_staged_without_merge_execution"
+            and inputs["p57_summary"]["summary"]["selected_outcome"]
+            == "paper_submission_package_surfaces_synced_to_h64_followthrough_stack"
+            and inputs["p58_summary"]["summary"]["selected_outcome"]
+            == "archive_release_closeout_surfaces_synced_to_h64_followthrough_stack"
+            and inputs["p59_summary"]["summary"]["selected_outcome"]
+            == "control_and_handoff_surfaces_synced_to_h64_followthrough_stack"
+            and inputs["f38_summary"]["summary"]["runtime_authorization"] == "closed"
+            and inputs["h58_summary"]["summary"]["selected_outcome"]
+            == "stop_as_mechanism_supported_but_no_bounded_executor_value"
+            and inputs["h43_summary"]["summary"]["claim_d_state"] == "supported_here_narrowly"
+            and blocked_count(inputs["p5_summary"]) == 0
+            and blocked_count(inputs["p5_callout_summary"]) == 0
+            and blocked_count(inputs["h2_summary"]) == 0
+            and inputs["v1_timing_summary"]["summary"]["runtime_classification"] == "healthy_but_slow"
+            and int(inputs["v1_timing_summary"]["summary"]["timed_out_file_count"]) == 0,
+            "Archive readiness depends on H65, the current archive-facing control stack, and preserved H64/H58/H43 endpoints.",
+        ),
+        (
+            "worktree_hygiene_snapshot_classifies_commit_state",
+            release_commit_state_from_summary(inputs["worktree_hygiene_summary"])
+            in {"dirty_worktree_release_commit_blocked", "clean_worktree_ready_if_other_gates_green"}
+            and diff_check_state_from_summary(inputs["worktree_hygiene_summary"]) != "content_issues_present"
+            and contains_all(inputs["worktree_hygiene_summary_text"], ['"release_commit_state":', '"git_diff_check_state":']),
+            "Archive readiness should inherit the current release-worktree hygiene classification.",
+        ),
+    ]
+    return [{"item_id": item_id, "status": "pass" if ok else "blocked", "notes": notes} for item_id, ok, notes in checks]
+
+
+def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
+    lookup = {
+        "README.md": ("readme_text", ["`P77_post_p76_keep_set_and_provenance_normalization`", "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`"]),
+        "STATUS.md": ("status_text", ["`P80_post_p79_next_planmode_handoff_sync`", "`explicit_stop_or_no_further_action_archive_first`"]),
+        "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P80_post_p79_next_planmode_handoff_sync`", "`explicit_stop_or_no_further_action_archive_first`"]),
+        "docs/publication_record/submission_packet_index.md": ("submission_packet_index_text", ["H65_post_p66_p67_p68_archive_first_terminal_freeze_packet", "results/P80_post_p79_next_planmode_handoff_sync/summary.json"]),
+        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json", "results/P80_post_p79_next_planmode_handoff_sync/summary.json"]),
+        "docs/publication_record/review_boundary_summary.md": ("review_boundary_text", ["`P56/P57/P58/P59`", "dormant no-go dossier at `F38`"]),
+        "docs/publication_record/external_release_note_skeleton.md": ("external_release_note_text", ["`P56/P57/P58/P59`", "dormant non-runtime `F38` dossier"]),
+        "results/release_worktree_hygiene_snapshot/summary.json": ("worktree_hygiene_summary_text", ['"release_commit_state":', '"git_diff_check_state":']),
+    }
+    return [{"path": path, "matched_lines": extract_matching_lines(inputs[key], needles=needles)} for path, (key, needles) in lookup.items()]
+
+
+def build_summary(checklist_rows: list[dict[str, object]], worktree_hygiene_summary: dict[str, Any]) -> dict[str, object]:
     blocked_items = [row["item_id"] for row in checklist_rows if row["status"] != "pass"]
     return {
-        "current_paper_phase": "h19_refreeze_and_next_scope_decision_complete",
+        "current_paper_phase": CURRENT_PAPER_PHASE,
         "packet_state": "archive_ready" if not blocked_items else "blocked",
         "release_commit_state": release_commit_state_from_summary(worktree_hygiene_summary),
         "git_diff_check_state": diff_check_state_from_summary(worktree_hygiene_summary),
@@ -530,38 +337,17 @@ def build_summary(
         "pass_count": sum(row["status"] == "pass" for row in checklist_rows),
         "blocked_count": sum(row["status"] != "pass" for row in checklist_rows),
         "blocked_items": blocked_items,
-        "recommended_next_action": (
-            "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H19 remains the current frozen same-endpoint state, preserve H18/R19/R20/R21 as the completed same-endpoint mainline reopen packet, preserve H17 as the prior same-scope refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, preserve H13/V1 as handoff state, and keep H8/R6/R7/H9 plus H10/H11/R8/R9/R10/H12 as preserved baselines"
-            if not blocked_items
-            else "resolve the blocked packet-readiness items before treating the bundle as archive-ready"
-        ),
+        "recommended_next_action": GREEN_ACTION if not blocked_items else "resolve the blocked archive-ready items before using the submission/archive handoff",
     }
 
 
 def main() -> None:
     environment = detect_runtime_environment()
     inputs = load_inputs()
-    rows = build_checklist_rows(**inputs)
-    snapshot = build_packet_snapshot(inputs)
-    summary = build_summary(rows, inputs["worktree_hygiene_summary"])
-
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    write_json(
-        OUT_DIR / "checklist.json",
-        {
-            "experiment": "p10_submission_archive_ready_checklist",
-            "environment": environment.as_dict(),
-            "rows": rows,
-        },
-    )
-    write_json(
-        OUT_DIR / "packet_snapshot.json",
-        {
-            "experiment": "p10_submission_archive_ready_snapshot",
-            "environment": environment.as_dict(),
-            "rows": snapshot,
-        },
-    )
+    checklist_rows = build_checklist_rows(**inputs)
+    summary = build_summary(checklist_rows, inputs["worktree_hygiene_summary"])
+    write_json(OUT_DIR / "checklist.json", {"experiment": "p10_submission_archive_ready_checklist", "environment": environment.as_dict(), "rows": checklist_rows})
+    write_json(OUT_DIR / "snapshot.json", {"experiment": "p10_submission_archive_ready_snapshot", "environment": environment.as_dict(), "rows": build_snapshot(inputs)})
     write_json(
         OUT_DIR / "summary.json",
         {
@@ -572,42 +358,43 @@ def main() -> None:
                 "STATUS.md",
                 "docs/publication_record/README.md",
                 "docs/publication_record/current_stage_driver.md",
-                "docs/publication_record/planning_state_taxonomy.md",
                 "docs/publication_record/submission_packet_index.md",
                 "docs/publication_record/archival_repro_manifest.md",
                 "docs/publication_record/review_boundary_summary.md",
                 "docs/publication_record/external_release_note_skeleton.md",
-                "results/P1_paper_readiness/summary.json",
-                "results/V1_full_suite_validation_runtime_timing_followup/summary.json",
-                "results/release_worktree_hygiene_snapshot/summary.json",
+                "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
+                "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
+                "results/P74_post_p73_successor_publication_review/summary.json",
+                "results/P75_post_p74_published_successor_freeze/summary.json",
+                "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
+                "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
+                "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
+                "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
+                "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
+                "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
+                "results/P57_post_h64_paper_submission_package_sync/summary.json",
+                "results/P58_post_h64_archive_release_closeout_sync/summary.json",
+                "results/P59_post_h64_control_and_handoff_sync/summary.json",
+                "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
+                "results/H58_post_r62_origin_value_boundary_closeout_packet/summary.json",
+                "results/H43_post_r44_useful_case_refreeze/summary.json",
                 "results/release_preflight_checklist_audit/summary.json",
-                "results/P5_public_surface_sync/summary.json",
-                "results/P5_callout_alignment/summary.json",
-                "results/H2_bundle_lock_audit/summary.json",
             ],
             "summary": summary,
         },
     )
     (OUT_DIR / "README.md").write_text(
-        "\n".join(
-            [
-                "# P10 Submission Archive Ready",
-                "",
-                "Machine-readable audit of whether the current locked checkpoint can be",
-                "handed off as a venue-agnostic submission/archive packet without widening",
-                "scientific scope.",
-                "",
-                "Artifacts:",
-                "- `summary.json`",
-                "- `checklist.json`",
-                "- `packet_snapshot.json`",
-            ]
-        )
-        + "\n",
+        "# P10 Submission Archive Ready\n\n"
+        "Machine-readable audit of whether the current submission/archive handoff surfaces stay aligned with the "
+        "H65 published frozen successor posture while preserving H64 as the prior active packet, P63/P64/P65 as "
+        "the prior successor stack, H58 as the value-negative closeout, and H43 as the paper-grade "
+        "endpoint.\n",
         encoding="utf-8",
     )
-    print(OUT_DIR.as_posix())
 
 
 if __name__ == "__main__":
     main()
+
+
+

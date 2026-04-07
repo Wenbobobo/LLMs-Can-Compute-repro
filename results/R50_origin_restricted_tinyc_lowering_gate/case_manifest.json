@@ -1,0 +1,136 @@
+{
+  "rows": [
+    {
+      "case_order": 1,
+      "kernel_id": "sum_i32_buffer",
+      "variant_id": "sum_len6_shifted_base",
+      "description": "Restricted tiny-C lowers a longer fixed-buffer sum onto the preserved sum kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "value_distribution_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 384,
+      "tinyc_program_name": "tinyc_sum_i32_buffer_len6_a520",
+      "canonical_program_name": "bytecode_sum_i32_buffer_len6_a520"
+    },
+    {
+      "case_order": 2,
+      "kernel_id": "sum_i32_buffer",
+      "variant_id": "sum_len8_dense_mixed_sign",
+      "description": "Restricted tiny-C lowers a wider mixed-sign sum onto the preserved sum kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "value_distribution_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 512,
+      "tinyc_program_name": "tinyc_sum_i32_buffer_len8_a560",
+      "canonical_program_name": "bytecode_sum_i32_buffer_len8_a560"
+    },
+    {
+      "case_order": 3,
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_sparse_len8_shifted_base",
+      "description": "Restricted tiny-C lowers a sparse nonzero count onto the preserved count kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "branch_density_shift",
+        "zero_density_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 768,
+      "tinyc_program_name": "tinyc_count_nonzero_i32_buffer_sparse_len8_a600",
+      "canonical_program_name": "bytecode_count_nonzero_i32_buffer_sparse_len8_a600"
+    },
+    {
+      "case_order": 4,
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_dense_len7_shifted_base",
+      "description": "Restricted tiny-C lowers a dense nonzero count onto the preserved count kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "branch_density_shift",
+        "value_distribution_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 768,
+      "tinyc_program_name": "tinyc_count_nonzero_i32_buffer_dense_len7_a640",
+      "canonical_program_name": "bytecode_count_nonzero_i32_buffer_dense_len7_a640"
+    },
+    {
+      "case_order": 5,
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_mixed_len9_shifted_base",
+      "description": "Restricted tiny-C lowers a mixed-density nonzero count onto the preserved count kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "branch_density_shift",
+        "zero_density_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 1024,
+      "tinyc_program_name": "tinyc_count_nonzero_i32_buffer_mixed_len9_a680",
+      "canonical_program_name": "bytecode_count_nonzero_i32_buffer_mixed_len9_a680"
+    },
+    {
+      "case_order": 6,
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_bimodal_len6_shifted_base",
+      "description": "Restricted tiny-C lowers a bimodal histogram onto the preserved 16-bin histogram kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "histogram_skew_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 3072,
+      "tinyc_program_name": "tinyc_histogram16_u8_bimodal_len6_a720",
+      "canonical_program_name": "bytecode_histogram16_u8_bimodal_len6_a720"
+    },
+    {
+      "case_order": 7,
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_low_bin_skew_len8",
+      "description": "Restricted tiny-C lowers a low-bin skew histogram onto the preserved 16-bin histogram kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "histogram_skew_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "tinyc_program_name": "tinyc_histogram16_u8_low_bin_skew_len8_a760",
+      "canonical_program_name": "bytecode_histogram16_u8_low_bin_skew_len8_a760"
+    },
+    {
+      "case_order": 8,
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_wide_len10_shifted_base",
+      "description": "Restricted tiny-C lowers a wider histogram onto the preserved 16-bin histogram kernel exactly.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "value_distribution_shift",
+        "histogram_skew_shift",
+        "tinyc_lowering_gate"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 6144,
+      "tinyc_program_name": "tinyc_histogram16_u8_wide_len10_a800",
+      "canonical_program_name": "bytecode_histogram16_u8_wide_len10_a800"
+    }
+  ]
+}

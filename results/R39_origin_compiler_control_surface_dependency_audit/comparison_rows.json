@@ -1,0 +1,48 @@
+{
+  "rows": [
+    {
+      "family_role": "admitted",
+      "perturbation_name": "helper_body_permutation_with_target_renumbering",
+      "baseline_program_name": "bytecode_subroutine_braid_6_a80",
+      "perturbed_program_name": "bytecode_subroutine_braid_permuted_helpers_6_a80",
+      "same_final_state_as_baseline": true,
+      "same_trace_as_baseline": false,
+      "first_trace_divergence_step": 14,
+      "same_instruction_count_as_baseline": true,
+      "same_program_steps_as_baseline": true,
+      "same_call_event_count_as_baseline": true,
+      "same_ret_event_count_as_baseline": true,
+      "same_conditional_branch_count_as_baseline": true,
+      "same_read_count_as_baseline": true,
+      "same_call_read_count_as_baseline": true,
+      "same_memory_read_count_as_baseline": true,
+      "same_stack_read_count_as_baseline": true,
+      "baseline_read_count": 114,
+      "perturbed_read_count": 114,
+      "baseline_call_read_count": 6,
+      "perturbed_call_read_count": 6
+    },
+    {
+      "family_role": "boundary_stress",
+      "perturbation_name": "helper_body_permutation_with_target_renumbering",
+      "baseline_program_name": "bytecode_subroutine_braid_long_12_a160",
+      "perturbed_program_name": "bytecode_subroutine_braid_long_permuted_helpers_12_a160",
+      "same_final_state_as_baseline": true,
+      "same_trace_as_baseline": false,
+      "first_trace_divergence_step": 14,
+      "same_instruction_count_as_baseline": true,
+      "same_program_steps_as_baseline": true,
+      "same_call_event_count_as_baseline": true,
+      "same_ret_event_count_as_baseline": true,
+      "same_conditional_branch_count_as_baseline": true,
+      "same_read_count_as_baseline": true,
+      "same_call_read_count_as_baseline": true,
+      "same_memory_read_count_as_baseline": true,
+      "same_stack_read_count_as_baseline": true,
+      "baseline_read_count": 216,
+      "perturbed_read_count": 216,
+      "baseline_call_read_count": 12,
+      "perturbed_call_read_count": 12
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "active_stage_at_merge_candidate_time": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+    "current_clean_merge_candidate_packet": "p56_post_h64_clean_merge_candidate_packet",
+    "current_clean_source_branch": "wip/h64-post-h63-archive-first-freeze",
+    "current_candidate_branch": "wip/p56-post-h64-clean-merge-candidate",
+    "current_clean_main_scratch_branch": "wip/p56-main-scratch",
+    "target_branch": "main",
+    "merge_posture": "clean_descendant_only_never_dirty_root_main",
+    "merge_recommended": false,
+    "merge_execution_state": false,
+    "source_branch_synced_to_origin": true,
+    "root_main_branch": "wip/root-main-parking-2026-03-24",
+    "root_main_quarantined": true,
+    "ahead_of_main_commit_count": 138,
+    "behind_main_commit_count": 0,
+    "main_delta_file_count": 1966,
+    "candidate_delta_file_count": 53,
+    "candidate_delta_path_classes": [
+      "README.md",
+      "STATUS.md",
+      "docs",
+      "scripts",
+      "tests",
+      "tmp"
+    ],
+    "tracked_oversize_count": 0,
+    "selected_outcome": "clean_descendant_merge_candidate_staged_without_merge_execution",
+    "next_required_lane": "p57_p58_parallel_sidecars_then_p59_control_sync",
+    "pass_count": 4,
+    "blocked_count": 0,
+    "tracked_oversize_artifacts": [],
+    "main_delta_path_classes": [
+      ".gitignore",
+      "README.md",
+      "STATUS.md",
+      "docs",
+      "results",
+      "scripts",
+      "src",
+      "tests",
+      "tmp"
+    ]
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p56-post-h64-clean-merge-candidate\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p56-post-h64-clean-merge-candidate\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

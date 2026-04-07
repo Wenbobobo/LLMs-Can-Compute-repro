@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "field": "exact_target_declared",
+      "value": true
+    },
+    {
+      "field": "comparator_declared",
+      "value": false
+    },
+    {
+      "field": "cost_share_declared",
+      "value": false
+    },
+    {
+      "field": "query_insert_declared",
+      "value": false
+    },
+    {
+      "field": "tie_burden_declared",
+      "value": false
+    },
+    {
+      "field": "materially_different_cost_model_shown",
+      "value": false
+    }
+  ]
+}

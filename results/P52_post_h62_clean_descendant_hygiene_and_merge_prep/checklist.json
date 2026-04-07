@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "item_id": "p52_reads_h62",
+      "status": "pass",
+      "notes": "P52 runs only after H62 makes archive/hygiene stop the default downstream lane."
+    },
+    {
+      "item_id": "p52_reads_p47",
+      "status": "pass",
+      "notes": "P52 preserves the dirty-root quarantine posture from P47."
+    },
+    {
+      "item_id": "p52_reads_p48",
+      "status": "pass",
+      "notes": "P52 extends clean-descendant-only promotion prep rather than replacing it."
+    },
+    {
+      "item_id": "p52_source_branch_exists",
+      "status": "pass",
+      "notes": "The preserved source branch must stay available for later clean-descendant promotion prep."
+    },
+    {
+      "item_id": "p52_current_branch_uses_repo_local_alias_prefix",
+      "status": "pass",
+      "notes": "The current wave should run from D:/zWenbo/AI/wt/... rather than the parked root checkout."
+    },
+    {
+      "item_id": "p52_root_main_is_quarantined",
+      "status": "pass",
+      "notes": "Dirty root main should remain parked on a quarantine branch."
+    },
+    {
+      "item_id": "p52_raw_row_ignore_rules_active",
+      "status": "pass",
+      "notes": "Raw-row ignore rules should remain active in .gitignore."
+    },
+    {
+      "item_id": "p52_no_tracked_oversize_artifacts",
+      "status": "pass",
+      "notes": "The clean descendant should not track artifacts at or above roughly 10 MiB."
+    },
+    {
+      "item_id": "p52_merge_rules_doc_is_current",
+      "status": "pass",
+      "notes": "The merge-prep rules doc should reflect f37 -> f38 clean-descendant posture."
+    },
+    {
+      "item_id": "p52_current_stage_driver_mentions_p52",
+      "status": "pass",
+      "notes": "The current stage driver should expose P52 as the current hygiene sidecar."
+    }
+  ]
+}

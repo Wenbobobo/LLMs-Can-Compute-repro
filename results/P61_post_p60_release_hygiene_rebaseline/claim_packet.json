@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "supports": [
+      "P61 remains preserved as the prior release-hygiene rebaseline wave.",
+      "Current live release hygiene is reanchored on the P63 successor branch under P64 wording.",
+      "Release hygiene, preflight, and archive-ready status remain tied to the same current successor branch."
+    ],
+    "does_not_support": [
+      "merge execution",
+      "dirty-root integration",
+      "runtime reopen"
+    ],
+    "distilled_result": {
+      "preserved_prior_release_hygiene_rebaseline_wave": "p61_post_p60_release_hygiene_rebaseline",
+      "current_release_hygiene_rebaseline_wave": "p64_post_p63_release_hygiene_rebaseline",
+      "current_published_clean_descendant_branch": "wip/p63-post-p62-tight-core-hygiene",
+      "preserved_prior_published_clean_descendant_branch": "wip/p60-post-p59-published-clean-descendant-prep",
+      "current_execution_branch": "wip/p64-post-p63-successor-stack",
+      "worktree_hygiene_branch": "wip/p63-post-p62-tight-core-hygiene",
+      "release_commit_state": "clean_worktree_ready_if_other_gates_green",
+      "preflight_state": "docs_and_audits_green",
+      "archive_ready_state": "archive_ready",
+      "selected_outcome": "published_clean_descendant_release_hygiene_rebaselined",
+      "next_required_lane": "p65_merge_prep_control_sync"
+    }
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "rows": [
+    {
+      "field": "listed_worktrees",
+      "value": [
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute",
+          "branch": "wip/root-main-parking-2026-03-24"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f10-p22-planning",
+          "branch": "wip/f10-p22-planning"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f12-f14-p23-planning",
+          "branch": "wip/f12-f14-p23-planning"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f16-h38-p26-exec",
+          "branch": "wip/f16-h38-p26-exec"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f18-f19-planning",
+          "branch": "wip/f18-f19-planning"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f21-h44-post-h43-route",
+          "branch": "wip/f21-h44-post-h43-route"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f28-h51-post-h50-origin-mechanism-reentry",
+          "branch": "wip/f28-h51-post-h50-origin-mechanism-reentry"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f29-post-h52-compiled-boundary-reentry",
+          "branch": "wip/f29-post-h52-compiled-boundary-reentry"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f30-post-h54-useful-kernel-bridge",
+          "branch": "wip/f30-post-h54-useful-kernel-bridge"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f31-post-h54-useful-kernel-exec",
+          "branch": "wip/f31-post-h54-useful-kernel-exec"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f7-f8-p21-planning",
+          "branch": "wip/f7-f8-p21-planning"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h27-promotion",
+          "branch": "wip/h27-promotion"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h30-clean",
+          "branch": "wip/p17-h30-clean"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h31-later-explicit",
+          "branch": "wip/h31-later-explicit"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h35-r40-p24-exec",
+          "branch": "wip/h35-r40-p24-exec"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h40-r42-exec",
+          "branch": "wip/h40-r42-exec"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h41-r43-mainline",
+          "branch": "wip/h41-r43-mainline"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h42-route-selection",
+          "branch": "wip/h42-route-selection"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h43-r44-refreeze",
+          "branch": "wip/h43-r44-refreeze"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h45-post-r46-surface-decision",
+          "branch": "wip/h45-post-r46-surface-decision"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h46-post-r47-decision",
+          "branch": "wip/h46-post-r47-decision"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h46-r47-origin-frontend",
+          "branch": "wip/r47-origin-frontend"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h50-next-wave",
+          "branch": "wip/f26-h50-post-h49-next-wave"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p20-h34-resync",
+          "branch": "wip/p20-h34-resync"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p25-f15-h37-exec",
+          "branch": "wip/p25-f15-h37-exec"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p27-promotion-merge",
+          "branch": "wip/p27-promotion-merge"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p28-h43-publication-sync",
+          "branch": "wip/p28-h43-publication-sync"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p29-h43-release-audit-refresh",
+          "branch": "wip/p29-h43-release-audit-refresh"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p30-h43-manuscript-refresh",
+          "branch": "wip/p30-h43-manuscript-refresh"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p31-h43-blog-guardrails-refresh",
+          "branch": "wip/p31-h43-blog-guardrails-refresh"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p32-h43-historical-wording-refresh",
+          "branch": "wip/p32-h43-historical-wording-refresh"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p33-h43-dormant-playbook-wording-refresh",
+          "branch": "wip/p33-h43-dormant-playbook-wording-refresh"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p34-h43-wording-guardrail-lint",
+          "branch": "wip/p34-h43-wording-guardrail-lint"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p35-f23-post-h47-mainline-extension",
+          "branch": "wip/p35-f23-post-h47-mainline-extension"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/p37-post-h50-closeout-sync",
+          "branch": "wip/p37-post-h50-closeout-sync"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/paper",
+          "branch": "wip/p3-paper-freeze"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/precision",
+          "branch": "wip/r1-precision-closure"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r33-next",
+          "branch": "wip/r33-next"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r43-bounded-memory-mainline",
+          "branch": "wip/r43-bounded-memory-mainline"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r44-useful-case-gate",
+          "branch": "wip/r44-useful-case-gate"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r45-dualmode-model",
+          "branch": "wip/r45-dualmode-model"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r46-useful-case-surface-generalization",
+          "branch": "wip/r46-useful-case-surface-generalization"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r48-origin-dual-mode-useful-case-model",
+          "branch": "wip/r48-origin-dual-mode-useful-case-model"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r51-post-h49-memory-control-sufficiency",
+          "branch": "wip/r51-post-h49-memory-control-sufficiency"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r55-origin-2d-hardmax-retrieval-equivalence",
+          "branch": "wip/r55-origin-2d-hardmax-retrieval-equivalence"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r56-origin-append-only-trace-vm-semantics",
+          "branch": "wip/r56-origin-append-only-trace-vm-semantics"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r57-origin-accelerated-trace-vm-comparator",
+          "branch": "wip/r57-origin-accelerated-trace-vm-comparator"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/systems",
+          "branch": "wip/r2-systems-gate"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/f32-post-h56-last-discriminator",
+          "branch": "wip/f32-post-h56-last-discriminator"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/f34-post-h59-archive-and-reopen-screen",
+          "branch": "wip/f34-post-h59-archive-and-reopen-screen"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/f36-post-h60-archive-first-consolidation",
+          "branch": "wip/f36-post-h60-archive-first-consolidation"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/f37-post-h61-hygiene-first-reauth-prep",
+          "branch": "wip/f37-post-h61-hygiene-first-reauth-prep"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/f38-post-h62-archive-first-closeout",
+          "branch": "wip/f38-post-h62-archive-first-closeout"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/h64-post-h63-archive-first-freeze",
+          "branch": "wip/h64-post-h63-archive-first-freeze"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/p56-main-scratch",
+          "branch": "wip/p56-main-scratch"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/p60-post-p59-published-clean-descendant-prep",
+          "branch": "wip/p60-post-p59-published-clean-descendant-prep"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/p63-post-p62-tight-core-hygiene",
+          "branch": "wip/p63-post-p62-tight-core-hygiene"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/p64-post-p63-successor-stack",
+          "branch": "wip/p64-post-p63-successor-stack"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/p66-post-p65-published-successor-freeze",
+          "branch": "wip/p66-post-p65-published-successor-freeze"
+        },
+        {
+          "worktree": "D:/zWenbo/AI/wt/p69-post-h65-hygiene-only-cleanup",
+          "branch": "wip/p69-post-h65-hygiene-only-cleanup"
+        }
+      ]
+    },
+    {
+      "field": "clean_keep_status",
+      "value": {
+        "D:/zWenbo/AI/wt/p56-main-scratch": {
+          "branch": "wip/p56-main-scratch",
+          "dirty_count": 0,
+          "clean": true
+        },
+        "D:/zWenbo/AI/wt/p63-post-p62-tight-core-hygiene": {
+          "branch": "wip/p63-post-p62-tight-core-hygiene",
+          "dirty_count": 0,
+          "clean": true
+        },
+        "D:/zWenbo/AI/wt/p64-post-p63-successor-stack": {
+          "branch": "wip/p64-post-p63-successor-stack",
+          "dirty_count": 0,
+          "clean": true
+        },
+        "D:/zWenbo/AI/wt/h64-post-h63-archive-first-freeze": {
+          "branch": "wip/h64-post-h63-archive-first-freeze",
+          "dirty_count": 0,
+          "clean": true
+        },
+        "D:/zWenbo/AI/wt/p66-post-p65-published-successor-freeze": {
+          "branch": "wip/p66-post-p65-published-successor-freeze",
+          "dirty_count": 0,
+          "clean": true
+        }
+      }
+    },
+    {
+      "field": "root_main_status",
+      "value": {
+        "branch": "wip/root-main-parking-2026-03-24",
+        "dirty_count": 325,
+        "clean": false
+      }
+    }
+  ]
+}

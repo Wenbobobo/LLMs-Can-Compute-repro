@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "source": "results/H38_post_f16_runtime_relevance_reopen_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h38_post_f16_runtime_relevance_reopen_decision_packet",
+        "selected_outcome": "keep_h36_freeze",
+        "authorized_next_runtime_candidate": "none"
+      }
+    },
+    {
+      "source": "docs/milestones/F18_post_h38_origin_core_long_arc_bundle/claim_ladder.md",
+      "fields": {
+        "preferred_forward_family": "f9_restricted_wasm_semantic_boundary",
+        "same_substrate_reopen_route": "r41_only_by_later_explicit_packet",
+        "merge_policy": "keep_main_unmerged_until_later_hygiene_packet"
+      }
+    },
+    {
+      "source": "docs/milestones/F19_post_f18_restricted_wasm_useful_case_roadmap/future_gate_matrix.md",
+      "fields": {
+        "first_semantic_boundary_gate": "r42_origin_append_only_memory_retrieval_contract_gate",
+        "downstream_gate": "r43_origin_bounded_memory_small_vm_execution_gate",
+        "useful_case_gate": "r44_origin_restricted_wasm_useful_case_execution_gate",
+        "preserved_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze"
+      }
+    }
+  ]
+}

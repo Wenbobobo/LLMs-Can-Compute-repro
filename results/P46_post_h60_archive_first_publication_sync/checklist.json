@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "item_id": "p46_reads_h61",
+      "status": "pass",
+      "notes": "P46 locks outward wording only after H61 makes archive-first the live posture."
+    },
+    {
+      "item_id": "p46_reads_f36",
+      "status": "pass",
+      "notes": "Future-route wording should match the F36 qualification-only bundle."
+    },
+    {
+      "item_id": "p46_surface_01",
+      "status": "pass",
+      "notes": "README.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_02",
+      "status": "pass",
+      "notes": "STATUS.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_03",
+      "status": "pass",
+      "notes": "docs/publication_record/README.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_04",
+      "status": "pass",
+      "notes": "docs/publication_record/current_stage_driver.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_05",
+      "status": "pass",
+      "notes": "docs/publication_record/claim_evidence_table.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_06",
+      "status": "pass",
+      "notes": "docs/publication_record/review_boundary_summary.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_07",
+      "status": "pass",
+      "notes": "docs/publication_record/release_summary_draft.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_08",
+      "status": "pass",
+      "notes": "docs/publication_record/conditional_reopen_protocol.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_09",
+      "status": "pass",
+      "notes": "docs/publication_record/paper_bundle_status.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_10",
+      "status": "pass",
+      "notes": "docs/publication_record/archival_repro_manifest.md contains the required archive-first lock phrases."
+    },
+    {
+      "item_id": "p46_surface_11",
+      "status": "pass",
+      "notes": "docs/publication_record/submission_packet_index.md contains the required archive-first lock phrases."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "current_active_stage": "h58_post_r62_origin_value_boundary_closeout_packet",
+    "current_low_priority_wave": "p40_post_h56_successor_worktree_and_artifact_hygiene_sync",
+    "selected_outcome": "successor_worktree_hygiene_rules_active_and_clean",
+    "preferred_worktree_prefix": "D:/zWenbo/AI/wt/",
+    "root_dirty_main_quarantined": true,
+    "tracked_large_artifact_count": 0,
+    "next_required_lane": "no_active_downstream_runtime_lane",
+    "pass_count": 4,
+    "blocked_count": 0,
+    "tracked_large_artifact_paths": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

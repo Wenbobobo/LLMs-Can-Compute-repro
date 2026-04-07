@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h28_docs_reanchor_to_origin_core_abc_claims",
+      "status": "pass",
+      "notes": "H28 should export one explicit Origin-core reanchor packet."
+    },
+    {
+      "item_id": "h27_negative_closeout_is_preserved_not_reopened",
+      "status": "pass",
+      "notes": "H28 should treat H27 as the negative closeout of the old wave."
+    },
+    {
+      "item_id": "origin_claim_docs_keep_headline_narrative_blocked",
+      "status": "pass",
+      "notes": "H28 should inherit the existing origin-facing skepticism and blocked headline narrative."
+    }
+  ]
+}

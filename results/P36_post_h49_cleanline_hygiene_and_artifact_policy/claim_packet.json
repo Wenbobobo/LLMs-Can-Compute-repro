@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "supported_here": [
+      "P36 codifies the post-H49 clean worktree as the only scientific execution surface for this wave.",
+      "P36 promotes one new low-priority hygiene packet while preserving H49 as the active docs-only stage.",
+      "P36 keeps raw probe-style artifacts out of git by default and keeps merge posture explicit."
+    ],
+    "unsupported_here": [
+      "P36 does not authorize a runtime lane.",
+      "P36 does not merge the repo back to main.",
+      "P36 does not widen useful-case or model claims."
+    ],
+    "disconfirmed_here": [
+      "The idea that dirty root main should keep serving as the live scientific execution surface for the post-H49 wave."
+    ],
+    "distilled_result": {
+      "current_active_stage": "h49_post_r50_tinyc_lowering_decision_packet",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "refresh_packet": "p36_post_h49_cleanline_hygiene_and_artifact_policy",
+      "selected_outcome": "cleanline_hygiene_saved_without_scientific_widening",
+      "current_low_priority_wave": "p36_post_h49_cleanline_hygiene_and_artifact_policy",
+      "preserved_prior_low_priority_wave": "p35_post_h47_research_record_rollup",
+      "current_post_h49_planning_bundle": "f26_post_h49_origin_claim_delta_and_next_question_bundle",
+      "current_merge_posture": "explicit_merge_wave",
+      "merge_executed": false,
+      "root_dirty_main_quarantined": true,
+      "large_artifact_default_policy": "raw_probe_rows_out_of_git",
+      "next_required_lane": "r51_origin_memory_control_surface_sufficiency_gate"
+    }
+  }
+}

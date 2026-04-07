@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h36_docs_freeze_r40_narrowly_and_leave_no_active_runtime_lane",
+      "status": "pass",
+      "notes": "H36 should refreeze the bounded-scalar result narrowly and return the stack to no active downstream runtime lane."
+    },
+    {
+      "item_id": "h35_and_r40_support_current_refreeze",
+      "status": "pass",
+      "notes": "H36 is only justified if H35 named R40 explicitly and R40 stayed exact on both positive rows while rejecting the declared negatives."
+    },
+    {
+      "item_id": "driver_wave_and_p24_sync_to_h36_active_state",
+      "status": "pass",
+      "notes": "P24 and the top-level handoff surfaces should move the repo onto the landed H36 state."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "supports": [
+      "P77 normalizes the active keep set around p75, p74, p73, p72, p69, and p56.",
+      "P77 publishes remote provenance for p73 and p74 before further local convergence.",
+      "P77 corrects control-surface role labeling without reopening runtime or dirty-root integration."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "dirty-root integration",
+      "same-lane executor-value reopen"
+    ],
+    "distilled_result": {
+      "current_keep_set_normalization_wave": "p77_post_p76_keep_set_and_provenance_normalization",
+      "current_published_branch": "wip/p75-post-p74-published-successor-freeze",
+      "current_review_branch": "wip/p74-post-p73-successor-publication-review",
+      "current_local_hygiene_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
+      "current_handoff_branch": "wip/p72-post-p71-archive-polish-stop-handoff",
+      "current_hygiene_branch": "wip/p69-post-h65-hygiene-only-cleanup",
+      "local_integration_branch": "wip/p56-main-scratch",
+      "tracked_keep_branch_count": 6,
+      "selected_outcome": "keep_set_and_provenance_normalized_after_p76",
+      "next_required_lane": "p78_balanced_worktree_convergence_with_quarantines_preserved"
+    }
+  }
+}

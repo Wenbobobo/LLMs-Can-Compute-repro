@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "current_paper_phase": "r38_origin_compiler_control_surface_extension_gate_complete",
+    "active_runtime_lane": "r38_origin_compiler_control_surface_extension_gate",
+    "gate": {
+      "lane_verdict": "origin_compiler_control_surface_extension_supported_narrowly",
+      "narrow_scope_kept": true,
+      "r37_opcode_surface_matches": true,
+      "admitted_case_count": 1,
+      "boundary_stress_case_count": 1,
+      "verifier_pass_count": 2,
+      "spec_contract_pass_count": 2,
+      "admitted_source_reference_exact_count": 1,
+      "admitted_lowering_exact_count": 1,
+      "admitted_free_running_exact_count": 1,
+      "boundary_source_reference_exact_count": 1,
+      "boundary_lowering_exact_count": 1,
+      "boundary_free_running_exact_count": 1,
+      "opcode_surface": [
+        "add_i32",
+        "call",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "ret",
+        "store_static",
+        "sub_i32"
+      ],
+      "admitted_program_name": "bytecode_subroutine_braid_6_a80",
+      "boundary_program_name": "bytecode_subroutine_braid_long_12_a160",
+      "next_priority_lane": "h32_post_r38_compiled_boundary_refreeze"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

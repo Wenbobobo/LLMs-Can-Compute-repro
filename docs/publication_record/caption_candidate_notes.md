@@ -9,12 +9,13 @@ boundary clause so further editing does not widen the claim set.
 ### Claim ladder + evidence matrix
 
 Supported and unsupported claim rows after tightening the motivating field note
-into a paper-grade reproduction boundary. The validated scope ends at
-append-only traces, exact retrieval, a narrow precision boundary, and a tiny
-typed-bytecode `D0` endpoint; unsupported rows include arbitrary C, general LLM
+into a paper-grade reproduction boundary. The current paper-grade endpoint
+covers append-only traces, exact retrieval, a narrow precision boundary, the
+bounded-memory / useful-case climb, and the preserved first tiny typed-bytecode
+`D0` compiled step; unsupported rows include arbitrary C, general LLM
 computation, and any broader current-scope systems-superiority claim. In the
-main text, this figure stays paired with a separate supported-versus-unsupported
-claims table so the excluded rows remain auditable.
+main text, this figure stays paired with a separate supported-versus-
+unsupported claims table so the excluded rows remain auditable.
 
 ### Staged decode regime comparison
 
@@ -46,10 +47,11 @@ branch could exist in principle.
 
 ### Frontend boundary diagram
 
-The current compiled endpoint is a tiny typed-bytecode `D0` slice with exact
-agreement on the frozen starter suite under the current no-widening decision.
-The diagram marks an explicit stop at the present paper boundary; it does not
-imply Wasm-like, arbitrary-C, or broader runtime coverage.
+The preserved first compiled step is a tiny typed-bytecode `D0` slice with
+exact agreement on the frozen starter suite under the current no-widening
+decision. The diagram marks a preserved first compiled boundary inside the
+broader present `H43` paper endpoint; it does not imply Wasm-like, arbitrary-C,
+or broader runtime coverage.
 
 ## Table captions
 

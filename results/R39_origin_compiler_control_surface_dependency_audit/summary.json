@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "current_paper_phase": "r39_origin_compiler_control_surface_dependency_audit_complete",
+    "active_runtime_lane": "r39_origin_compiler_control_surface_dependency_audit",
+    "current_active_routing_stage": "h32_post_r38_compiled_boundary_refreeze",
+    "current_control_packet": "h33_post_h32_conditional_next_question_packet",
+    "gate": {
+      "lane_verdict": "control_surface_dependence_not_detected_on_declared_permutation",
+      "declared_perturbation": "helper_body_permutation_with_target_renumbering",
+      "same_opcode_surface_kept": true,
+      "baseline_case_count": 2,
+      "perturbation_case_count": 2,
+      "perturbation_source_reference_exact_count": 2,
+      "perturbation_lowering_exact_count": 2,
+      "perturbation_free_running_exact_count": 2,
+      "perturbation_final_state_preserved_count": 2,
+      "perturbation_trace_changed_count": 2,
+      "perturbation_workload_preserved_count": 2,
+      "admitted_perturbation_program_name": "bytecode_subroutine_braid_permuted_helpers_6_a80",
+      "boundary_perturbation_program_name": "bytecode_subroutine_braid_long_permuted_helpers_12_a160",
+      "next_priority_lane": "later_explicit_post_r39_decision_packet_required"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

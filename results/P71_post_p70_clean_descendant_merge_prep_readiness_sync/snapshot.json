@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "field": "p56_status",
+      "value": {
+        "branch": "wip/p56-main-scratch",
+        "dirty_count": 0,
+        "clean": true
+      }
+    },
+    {
+      "field": "merge_probe",
+      "value": {
+        "merge_base": "eff98f8939726189af60f7d46e2fbd1b3f5409cb",
+        "conflict_free": true,
+        "probe_exit_code": 0,
+        "stdout": "7cdd3287afca12ed3de67368516c4cd758b51c16",
+        "stderr": "",
+        "write_tree_oid": "7cdd3287afca12ed3de67368516c4cd758b51c16"
+      }
+    }
+  ]
+}

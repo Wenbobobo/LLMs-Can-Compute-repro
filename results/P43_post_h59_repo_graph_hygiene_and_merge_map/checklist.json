@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p43_reads_git_worktree_graph",
+      "status": "pass",
+      "notes": "P43 should read the registered git worktree graph successfully."
+    },
+    {
+      "item_id": "p43_current_worktree_uses_repo_local_alias_prefix",
+      "status": "pass",
+      "notes": "The current wave should live on D:/zWenbo/AI/wt/... rather than on the root checkout."
+    },
+    {
+      "item_id": "p43_root_main_is_quarantined",
+      "status": "pass",
+      "notes": "Dirty root main should remain parked on a quarantine branch."
+    },
+    {
+      "item_id": "p43_current_worktree_is_registered",
+      "status": "pass",
+      "notes": "The active f34 worktree should be a registered descendant worktree, not an ad hoc clone."
+    },
+    {
+      "item_id": "p43_merge_posture_is_descendant_only",
+      "status": "pass",
+      "notes": "Merge posture stays clean-descendant-only and never targets dirty root main directly."
+    }
+  ]
+}

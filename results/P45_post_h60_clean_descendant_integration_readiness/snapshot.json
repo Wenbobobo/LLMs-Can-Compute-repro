@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "policy": "current_worktree",
+      "value": "D:/zWenbo/AI/wt/f36-post-h60-archive-first-consolidation"
+    },
+    {
+      "policy": "current_branch",
+      "value": "wip/f36-post-h60-archive-first-consolidation"
+    },
+    {
+      "policy": "preferred_predecessor_branch",
+      "value": "wip/f34-post-h59-archive-and-reopen-screen"
+    },
+    {
+      "policy": "predecessor_divergence_base_only",
+      "value": 0
+    },
+    {
+      "policy": "predecessor_divergence_target_only",
+      "value": 3
+    },
+    {
+      "policy": "root_main_branch",
+      "value": "wip/root-main-parking-2026-03-24"
+    }
+  ]
+}

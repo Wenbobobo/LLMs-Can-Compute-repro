@@ -1,0 +1,23 @@
+# F23 Artifact Index
+
+- `docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`
+- `docs/plans/2026-03-24-post-h47-f23-numeric-scaling-bundle-design.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/README.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/status.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/todo.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/acceptance.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/artifact_index.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/precision_regime_matrix.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/addressability_strategy_table.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/length_bucket_plan.md`
+- `docs/milestones/F23_post_h47_numeric_scaling_bundle/kill_criteria.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/README.md`
+- `docs/milestones/P36_post_h48_falsification_closeout_bundle/README.md`
+- `results/H47_post_r48_useful_case_bridge_refreeze/summary.json`
+- `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
+- `results/R47_origin_restricted_frontend_translation_gate/summary.json`
+- `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`
+- `results/F23_post_h47_numeric_scaling_bundle/summary.json`
+- `results/F23_post_h47_numeric_scaling_bundle/checklist.json`
+- `results/F23_post_h47_numeric_scaling_bundle/claim_packet.json`
+- `results/F23_post_h47_numeric_scaling_bundle/snapshot.json`

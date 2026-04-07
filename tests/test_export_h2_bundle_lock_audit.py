@@ -20,11 +20,11 @@ def test_extract_matching_lines_returns_unique_hits_in_order() -> None:
     module = _load_export_module()
 
     lines = module.extract_matching_lines(
-        "alpha\nbeta paper_package_plan.md\ngamma paper_package_plan.md\n",
-        needles=["paper_package_plan.md"],
+        "alpha\nbeta paper_bundle_status.md\ngamma paper_bundle_status.md\n",
+        needles=["paper_bundle_status.md"],
     )
 
-    assert lines == ["beta paper_package_plan.md", "gamma paper_package_plan.md"]
+    assert lines == ["beta paper_bundle_status.md", "gamma paper_bundle_status.md"]
 
 
 def test_contains_all_tolerates_wrapped_markdown_lines() -> None:
@@ -55,9 +55,9 @@ def test_build_summary_reports_zero_blocked_items() -> None:
     rows = module.build_checklist_rows(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h19_refreeze_and_next_scope_decision_complete"
+    assert summary["current_paper_phase"] == "h52_current_control_with_h43_paper_endpoint"
     assert summary["bundle_lock_scope"] == "publication_record_bundle_and_supporting_ledgers"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the H2 bundle-lock audit green while H19 stays aligned as the current frozen same-endpoint state, preserve H18/R19/R20/R21 as the completed same-endpoint mainline reopen packet, preserve H17 as the prior same-scope refreeze decision, preserve H14/R11/R12/H15 as the completed prior reopen/refreeze packet, preserve H13/V1 as handoff state, and keep H8/R6/R7/H9 plus H10/H11/R8/R9/R10/H12 as preserved baselines"
+        "keep the H2 bundle-lock audit green while H52 stays explicit as the current docs-only mechanism closeout packet, preserve H50 as the broader-route value closeout, preserve H51 as the prior mechanism-reentry packet, preserve H43 as the paper-grade endpoint, preserve H42/H41 as the prior docs-only packets, preserve H36 as the routing/refreeze packet, keep R42/R43/R44/R45 as the completed semantic-boundary gate stack, keep R55/R56 as exact mechanism evidence, keep R57 as negative fast-path comparator evidence, preserve P27/P28/P37 as operational release-control context, and keep no_active_downstream_runtime_lane as the current follow-on state"
     )

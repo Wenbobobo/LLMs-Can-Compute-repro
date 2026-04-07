@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-25-post-h54-useful-kernel-stopgo-design.md",
+      "matched_lines": [
+        "`F30_post_h54_useful_kernel_bridge_bundle` ->",
+        "`R60_origin_compiled_useful_kernel_carryover_gate` ->"
+      ]
+    },
+    {
+      "path": "docs/milestones/F30_post_h54_useful_kernel_bridge_bundle/README.md",
+      "matched_lines": [
+        "Saved successor planning bundle above the closed `H54` compiled-boundary wave.",
+        "Current status: `saved_successor_design_only`."
+      ]
+    },
+    {
+      "path": "docs/milestones/F30_post_h54_useful_kernel_bridge_bundle/origin_rationale.md",
+      "matched_lines": [
+        "structured retrieval and a narrow exact executor;",
+        "- the smallest meaningful falsifier after a toy compiled-boundary success is"
+      ]
+    },
+    {
+      "path": "docs/milestones/F30_post_h54_useful_kernel_bridge_bundle/stopgo_criteria.md",
+      "matched_lines": [
+        "- `R60` lands exact useful-kernel carryover on the admitted rows without",
+        "- negative `R60` means \"toy compiled-boundary exactness only\";"
+      ]
+    },
+    {
+      "path": "docs/milestones/F30_post_h54_useful_kernel_bridge_bundle/route_constraints.md",
+      "matched_lines": [
+        "- useful-kernel carryover only;",
+        "- no transformed or trainable entry;"
+      ]
+    },
+    {
+      "path": "docs/plans/README.md",
+      "matched_lines": [
+        "- `2026-03-25-post-h54-useful-kernel-stopgo-design.md`",
+        "saved successor design for the next explicit post-`H54` stop/go packet"
+      ]
+    },
+    {
+      "path": "docs/milestones/README.md",
+      "matched_lines": [
+        "- `F30_post_h54_useful_kernel_bridge_bundle/`",
+        "saved successor planning-only bundle for the next explicit stop/go wave"
+      ]
+    }
+  ]
+}

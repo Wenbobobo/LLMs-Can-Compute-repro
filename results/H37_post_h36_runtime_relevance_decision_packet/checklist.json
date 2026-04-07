@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h37_docs_select_keep_h36_freeze_and_leave_no_active_runtime_lane",
+      "status": "pass",
+      "notes": "H37 should remain docs-only, preserve H36 as the routing top, and select keep_h36_freeze rather than reopen by momentum."
+    },
+    {
+      "item_id": "f15_f14_p25_and_saved_r41_design_support_keep_freeze_decision_basis",
+      "status": "pass",
+      "notes": "The keep-freeze choice is only justified if F15 preserves the same narrow goal stack, F14 limits the threat set to two families, P25 stays operational-only, and the saved R41 design still requires later explicit authorization."
+    },
+    {
+      "item_id": "h36_r40_driver_and_wave_keep_r41_deferred_without_broader_scope_lift",
+      "status": "pass",
+      "notes": "H37 should remain reproducible as the preserved prior post-H36 decision packet and keep R41 deferred without reopening blocked same-endpoint, scope-lift, or frontier lanes."
+    }
+  ]
+}

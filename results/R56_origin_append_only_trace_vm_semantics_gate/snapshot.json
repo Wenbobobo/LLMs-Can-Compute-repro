@@ -1,0 +1,60 @@
+{
+  "rows": [
+    {
+      "source": "results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json",
+      "fields": {
+        "lane_verdict": "retrieval_equivalence_supported_exactly",
+        "exact_task_count": 5,
+        "next_required_packet": "r56_origin_append_only_trace_vm_semantics_gate"
+      }
+    },
+    {
+      "source": "results/H51_post_h50_origin_mechanism_reentry_packet/summary.json",
+      "fields": {
+        "active_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+        "selected_outcome": "authorize_origin_mechanism_reentry_through_r55_first",
+        "only_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate"
+      }
+    },
+    {
+      "path": "docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/semantics_contract.md",
+      "matched_lines": [
+        "- the reference path is a transparent append-only trace-VM interpreter on the",
+        "- both paths must produce the same step transitions and the same final state"
+      ]
+    },
+    {
+      "path": "docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/trace_requirements.md",
+      "matched_lines": [
+        "- export instruction-by-instruction traces for both reference and candidate",
+        "- record state, stack, and memory deltas on every step;",
+        "- localize the first mismatch to one instruction transition; and"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `R56_origin_append_only_trace_vm_semantics_gate`",
+        "- `R57_origin_accelerated_trace_vm_comparator_gate`",
+        "- `R56_origin_append_only_trace_vm_semantics_gate` is the completed current",
+        "- `R57_origin_accelerated_trace_vm_comparator_gate` is the only next runtime",
+        "- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`",
+        "- `docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/`",
+        "- `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/`"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`R56_origin_append_only_trace_vm_semantics_gate`;",
+        "`R57_origin_accelerated_trace_vm_comparator_gate`;",
+        "`R56_origin_append_only_trace_vm_semantics_gate` is now completed with",
+        "`R56_origin_append_only_trace_vm_semantics_gate` ->",
+        "`R57_origin_accelerated_trace_vm_comparator_gate` ->",
+        "- `docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/`",
+        "- `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/`",
+        "- `results/R56_origin_append_only_trace_vm_semantics_gate/summary.json`"
+      ]
+    }
+  ]
+}

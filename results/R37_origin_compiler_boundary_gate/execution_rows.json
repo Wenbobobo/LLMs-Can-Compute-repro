@@ -1,0 +1,152 @@
+{
+  "rows": [
+    {
+      "case_id": "arithmetic_smoke",
+      "fragment": "straight_line_arithmetic",
+      "program_name": "bytecode_arithmetic_smoke",
+      "max_steps": 32,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 2,
+      "free_running_stack_read_count": 2,
+      "free_running_memory_read_count": 0,
+      "free_running_call_read_count": 0,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 3,
+        "stack": [
+          12
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 4
+      }
+    },
+    {
+      "case_id": "eq_branch_true",
+      "fragment": "single_branch_true_path",
+      "program_name": "bytecode_eq_branch_true",
+      "max_steps": 32,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 3,
+      "free_running_stack_read_count": 3,
+      "free_running_memory_read_count": 0,
+      "free_running_call_read_count": 0,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 5,
+        "stack": [
+          1
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 6
+      }
+    },
+    {
+      "case_id": "eq_branch_false",
+      "fragment": "single_branch_false_path",
+      "program_name": "bytecode_eq_branch_false",
+      "max_steps": 32,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 3,
+      "free_running_stack_read_count": 3,
+      "free_running_memory_read_count": 0,
+      "free_running_call_read_count": 0,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 7,
+        "stack": [
+          0
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 6
+      }
+    },
+    {
+      "case_id": "accumulator_loop_static",
+      "fragment": "bounded_loop_with_static_locals",
+      "program_name": "bytecode_accumulator_6",
+      "max_steps": 92,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 85,
+      "free_running_stack_read_count": 59,
+      "free_running_memory_read_count": 26,
+      "free_running_call_read_count": 0,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 9,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 88
+      }
+    },
+    {
+      "case_id": "loop_with_subroutine_update",
+      "fragment": "bounded_loop_with_one_helper_call",
+      "program_name": "bytecode_loop_with_subroutine_update_6_a64_b65",
+      "max_steps": 104,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 91,
+      "free_running_stack_read_count": 59,
+      "free_running_memory_read_count": 26,
+      "free_running_call_read_count": 6,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 9,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 100
+      }
+    }
+  ]
+}

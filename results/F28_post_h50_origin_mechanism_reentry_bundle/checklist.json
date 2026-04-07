@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f28_docs_define_post_h50_mechanism_reentry_bundle",
+      "status": "pass",
+      "notes": "F28 should save one planning-only mechanism reentry bundle and fix only the narrow H51->R55->R56->R57->H52 lane."
+    },
+    {
+      "item_id": "upstream_h50_and_h43_support_f28_reframing_without_overturning_h50",
+      "status": "pass",
+      "notes": "F28 must preserve H50 as a negative broader-route closeout while keeping H43 as the paper-grade endpoint."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_f28_current_planning_bundle",
+      "status": "pass",
+      "notes": "Shared current-wave surfaces should expose F28 as the planning bundle under active H51 and next-lane R55."
+    }
+  ]
+}

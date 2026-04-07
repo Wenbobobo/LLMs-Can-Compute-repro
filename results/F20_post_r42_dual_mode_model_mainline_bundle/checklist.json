@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f20_docs_fix_coequal_mainline_without_replacing_exact_evidence",
+      "status": "pass",
+      "notes": "F20 should fix the coequal-mainline posture without turning model positives into exact evidence."
+    },
+    {
+      "item_id": "f20_bundle_defines_dual_mode_contract_and_downstream_order",
+      "status": "pass",
+      "notes": "F20 must define both the model contract and the route ordering that keeps exact evidence primary."
+    },
+    {
+      "item_id": "driver_and_wave_plan_record_f20_inside_the_post_r42_override_stack",
+      "status": "pass",
+      "notes": "The control surfaces should expose F20 as the new model-mainline bundle inside the post-R42 override stack."
+    }
+  ]
+}

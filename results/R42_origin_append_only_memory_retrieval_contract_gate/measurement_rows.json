@@ -1,0 +1,88 @@
+{
+  "rows": [
+    {
+      "family_id": "latest_write_same_address_short",
+      "task_id": "latest_write_same_address_short",
+      "exact_value_count": 3,
+      "exact_row_identity_count": 3,
+      "observation_count": 3,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 0,
+      "max_linear_multiplicity": 1,
+      "max_accelerated_multiplicity": 1,
+      "max_step": 5,
+      "max_address": 3
+    },
+    {
+      "family_id": "latest_write_same_address_long",
+      "task_id": "latest_write_same_address_long",
+      "exact_value_count": 8,
+      "exact_row_identity_count": 8,
+      "observation_count": 8,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 0,
+      "max_linear_multiplicity": 1,
+      "max_accelerated_multiplicity": 1,
+      "max_step": 47,
+      "max_address": 11
+    },
+    {
+      "family_id": "stack_slot_depth_short",
+      "task_id": "stack_slot_depth_short",
+      "exact_value_count": 10,
+      "exact_row_identity_count": 10,
+      "observation_count": 10,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 0,
+      "max_linear_multiplicity": 1,
+      "max_accelerated_multiplicity": 1,
+      "max_step": 10,
+      "max_address": 5
+    },
+    {
+      "family_id": "stack_slot_depth_long",
+      "task_id": "stack_slot_depth_long",
+      "exact_value_count": 34,
+      "exact_row_identity_count": 34,
+      "observation_count": 34,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 0,
+      "max_linear_multiplicity": 1,
+      "max_accelerated_multiplicity": 1,
+      "max_step": 34,
+      "max_address": 17
+    },
+    {
+      "family_id": "address_reuse_duplicate_and_tie_cases",
+      "task_id": "address_reuse_duplicate_and_tie_cases",
+      "exact_value_count": 5,
+      "exact_row_identity_count": 5,
+      "observation_count": 5,
+      "tie_observation_count": 1,
+      "duplicate_maximizer_observation_count": 1,
+      "default_hit_observation_count": 2,
+      "max_linear_multiplicity": 2,
+      "max_accelerated_multiplicity": 2,
+      "max_step": 8,
+      "max_address": 9
+    },
+    {
+      "family_id": "precision_range_sweep",
+      "task_id": "precision_range_sweep",
+      "exact_value_count": 5,
+      "exact_row_identity_count": 5,
+      "observation_count": 5,
+      "tie_observation_count": 0,
+      "duplicate_maximizer_observation_count": 0,
+      "default_hit_observation_count": 1,
+      "max_linear_multiplicity": 1,
+      "max_accelerated_multiplicity": 1,
+      "max_step": 4096,
+      "max_address": 16384
+    }
+  ]
+}

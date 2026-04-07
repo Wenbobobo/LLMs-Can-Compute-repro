@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "active_stage_at_sidecar_time": "h59_post_h58_reproduction_gap_decision_packet",
+    "current_repo_hygiene_sidecar": "p43_post_h59_repo_graph_hygiene_and_merge_map",
+    "preferred_worktree_prefix": "D:/zWenbo/AI/wt/",
+    "current_worktree": "D:/zWenbo/AI/wt/f34-post-h59-archive-and-reopen-screen",
+    "current_branch": "wip/f34-post-h59-archive-and-reopen-screen",
+    "registered_worktree_count": 52,
+    "repo_local_alias_count": 2,
+    "root_main_worktree": "D:/zWenbo/AI/LLMCompute",
+    "root_main_branch": "wip/root-main-parking-2026-03-24",
+    "root_main_quarantined": true,
+    "merge_posture": "clean_descendant_only_never_dirty_root_main",
+    "next_required_lane": "docs_only_decision_or_archive",
+    "pass_count": 5,
+    "blocked_count": 0,
+    "repo_local_aliases": [
+      "D:/zWenbo/AI/wt/f32-post-h56-last-discriminator",
+      "D:/zWenbo/AI/wt/f34-post-h59-archive-and-reopen-screen"
+    ]
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f34-post-h59-archive-and-reopen-screen\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f34-post-h59-archive-and-reopen-screen\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "mode_count": 2,
+  "family_mode_row_count": 10,
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "reason": "both admitted model modes stayed exact against the R43 contract surface"
+}

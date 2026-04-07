@@ -1,0 +1,72 @@
+{
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-25-post-h52-restricted-compiled-boundary-reentry-master-plan.md",
+      "matched_lines": [
+        "# 2026-03-25 Post-H52 Restricted Compiled-Boundary Reentry Master Plan",
+        "compiled-boundary question: can one fixed typed stack-bytecode surface be",
+        "- `F29` saves the restricted compiled-boundary claim delta and fixes the only",
+        "- `H53` preserves `H52` while authorizing one compiled-boundary reentry",
+        "through `R58` only;",
+        "- `R58` isolates exact lowering from one fixed typed stack-bytecode suite into",
+        "- `R59` isolates exact compiled trace-VM execution on the exact `R58` rows",
+        "- `H54` closes the lane explicitly without raising the broader claim ceiling."
+      ]
+    },
+    {
+      "path": "docs/milestones/F29_post_h52_restricted_compiled_boundary_bundle/compiled_boundary_claim_delta_matrix.md",
+      "matched_lines": [
+        "| `A` | One fixed typed stack-bytecode surface may be saved as a declared compiled boundary without reopening broad frontend claims. | `F29` |",
+        "| `B` | Exact lowering must first be shown from that bytecode surface into the existing append-only trace substrate. | `R58` |",
+        "| `C` | Exact free-running execution must then be shown on the admitted lowered rows only. | `R59` |",
+        "| `D` | Any later discussion of broader Wasm-like frontend value or compiled-system value must be deferred behind an explicit later packet. | later explicit packet only |",
+        "The selected posture is to isolate this first in `R58`, then read exact",
+        "execution in `R59`, then close explicitly in `H54`."
+      ]
+    },
+    {
+      "path": "docs/milestones/F29_post_h52_restricted_compiled_boundary_bundle/compiled_boundary_question.md",
+      "matched_lines": [
+        "The selected question is:",
+        "- `H53_post_h52_compiled_boundary_reentry_packet`",
+        "- `R58_origin_restricted_stack_bytecode_lowering_contract_gate`"
+      ]
+    },
+    {
+      "path": "docs/milestones/F29_post_h52_restricted_compiled_boundary_bundle/route_constraints.md",
+      "matched_lines": [
+        "- `H53` is the only follow-up packet fixed here.",
+        "- `R58` is the only next runtime candidate fixed here."
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "`R58_origin_restricted_stack_bytecode_lowering_contract_gate`"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "`F29_post_h52_restricted_compiled_boundary_bundle`.",
+        "`R58_origin_restricted_stack_bytecode_lowering_contract_gate`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The current planning bundle is:",
+        "- `F29_post_h52_restricted_compiled_boundary_bundle`",
+        "- `F29_post_h52_restricted_compiled_boundary_bundle` is the current preserved"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`no_active_downstream_runtime_lane`;",
+        "8. Keep the downstream scientific lane at `no_active_downstream_runtime_lane`.",
+        "- `no_active_downstream_runtime_lane` is the current downstream lane state."
+      ]
+    }
+  ]
+}

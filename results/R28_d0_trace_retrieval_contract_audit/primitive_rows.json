@@ -1,0 +1,68 @@
+{
+  "experiment": "r28_primitive_rows",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "primitive_id": "latest_write_address",
+      "verdict": "supported",
+      "direct_probe_available": true,
+      "r20_probe_row_count": 16,
+      "pointer_like_median_retrieval_correct_rate": 1.0,
+      "pointer_like_median_address_match_rate": 1.0,
+      "shuffled_median_retrieval_correct_rate": 0.3333333333333333,
+      "address_oblivious_median_address_match_rate": 0.3333333333333333,
+      "note": "Memory latest-write retrieval stays exact under pointer-like lookup and degrades under address-oblivious controls."
+    },
+    {
+      "primitive_id": "stack_depth",
+      "verdict": "supported",
+      "direct_probe_available": true,
+      "r20_probe_row_count": 16,
+      "pointer_like_median_retrieval_correct_rate": 1.0,
+      "pointer_like_median_address_match_rate": 1.0,
+      "shuffled_median_retrieval_correct_rate": 0.507413078071976,
+      "address_oblivious_median_address_match_rate": 0.80625,
+      "note": "Stack(depth) retrieval stays exact under pointer-like lookup and remains materially sensitive to shuffled controls."
+    },
+    {
+      "primitive_id": "control_predecessor_return_site",
+      "verdict": "supported_but_not_directly_isolated",
+      "direct_probe_available": false,
+      "r20_control_family_case_count": 10,
+      "r20_control_family_exact_count": 10,
+      "r20_control_negative_failure_count": 20,
+      "r23_control_suite_case_count": 8,
+      "r23_control_suite_exact_count": 8,
+      "pointer_like_median_correct_step_gap": 1.0,
+      "shuffled_median_step_gap_delta": 1.0,
+      "note": "Control/return-site behavior is supported end-to-end on control-heavy families and suites, but the current audit lacks a dedicated primitive-only isolation probe."
+    }
+  ]
+}

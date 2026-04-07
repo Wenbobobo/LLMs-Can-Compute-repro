@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "supports": [
+      "P46 locks outward wording to archive-first consolidation plus executor-value partial falsification framing.",
+      "P46 keeps the one future route qualification-only and later-explicit only.",
+      "P46 removes stale multi-patch reopen wording from the live control surface."
+    ],
+    "does_not_support": [
+      "broad headline reproduction claims",
+      "same-lane executor-value reopening",
+      "runtime authorization by publication wording alone"
+    ],
+    "distilled_result": {
+      "active_stage_at_lock_time": "h61_post_h60_archive_first_position_packet",
+      "current_publication_sync_wave": "p46_post_h60_archive_first_publication_sync",
+      "current_reopen_qualification_bundle": "f36_post_h60_conditional_compiled_online_reopen_qualification_bundle",
+      "selected_outcome": "publication_surfaces_locked_to_archive_first_partial_falsification_state",
+      "current_downstream_scientific_lane": "planning_only_or_project_stop",
+      "audited_file_count": 11,
+      "locked_file_count": 11,
+      "claim_lock_assertions": [
+        "narrow mechanistic reproduction plus executor-value partial falsification",
+        "archive-first consolidation is the default live posture",
+        "same-lane executor-value reopen remains closed",
+        "only compiled-online exact retrieval or attention-coprocessor route survives on paper",
+        "no runtime lane opens from publication wording"
+      ]
+    }
+  }
+}

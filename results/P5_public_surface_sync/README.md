@@ -1,8 +1,8 @@
 # P5 Public Surface Sync
 
 Machine-readable audit of whether the current public surface stays aligned with the
-locked checkpoint, the active consolidation packet, and the approved downstream
-release summary.
+current H52 control stack while preserving the H43 paper endpoint, the
+current outward release summary, and the closed-wave public surfaces.
 
 Artifacts:
 - `summary.json`

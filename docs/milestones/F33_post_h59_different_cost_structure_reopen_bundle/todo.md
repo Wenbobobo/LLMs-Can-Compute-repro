@@ -1,0 +1,4 @@
+- store only planning-only future families, not runtime authorization
+- require materially different cost structure before any reopen
+- keep project-stop admissible if no candidate survives scrutiny
+- preserve `F27/R53/R54` as blocked default storage

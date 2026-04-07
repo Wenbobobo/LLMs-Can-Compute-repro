@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "active_stage_at_inventory_time": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+    "current_local_hygiene_wave": "p73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync",
+    "preserved_archive_handoff_wave": "p72_post_p71_archive_polish_and_explicit_stop_handoff",
+    "current_planning_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
+    "total_worktree_count": 17,
+    "preferred_path_worktree_count": 14,
+    "legacy_path_worktree_count": 2,
+    "legacy_keep_count": 1,
+    "legacy_prune_with_upstream_count": 0,
+    "legacy_prune_without_upstream_count": 0,
+    "legacy_blocked_dirty_count": 1,
+    "legacy_misplaced_live_count": 0,
+    "selected_outcome": "legacy_worktree_inventory_and_keep_set_sync_completed_for_safe_local_shrink",
+    "next_required_lane": "safe_local_legacy_shrink_or_nonexecuting_merge_prep_dossier",
+    "pass_count": 9,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p73-post-p72-hygiene-shrink-mergeprep\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

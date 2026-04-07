@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "current_active_docs_only_stage": "h47_post_r48_useful_case_bridge_refreeze",
+    "active_runtime_lane": "r49_origin_useful_case_numeric_scaling_gate",
+    "activation_packet": "h47_post_r48_useful_case_bridge_refreeze",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "current_exact_first_planning_bundle": "f23_post_h47_numeric_scaling_bundle",
+    "preserved_prior_post_h44_exact_gate": "r46_origin_useful_case_surface_generalization_gate",
+    "preserved_prior_frontend_bridge_gate": "r47_origin_restricted_frontend_translation_gate",
+    "preserved_comparator_only_gate": "r48_origin_dual_mode_useful_case_model_gate",
+    "gate": {
+      "lane_verdict": "numeric_scaling_survives_through_bucket_c",
+      "route_posture": "exact_first_useful_case_numeric_scaling",
+      "planned_case_count": 9,
+      "exact_case_count": 9,
+      "failed_case_count": 0,
+      "bucket_count": 3,
+      "kernel_count": 3,
+      "precision_row_count": 30,
+      "sampled_float64_reference_case_count": 3,
+      "single_head_failure_case_count": 7,
+      "decomposition_recovery_case_count": 7,
+      "bucket_a_admitted_float32_recovery_exact_regimes": [
+        "float32_radix2",
+        "float32_block_recentered"
+      ],
+      "bucket_b_admitted_float32_recovery_exact_regimes": [
+        "float32_radix2",
+        "float32_block_recentered"
+      ],
+      "bucket_c_admitted_float32_recovery_exact_regimes": [
+        "float32_radix2",
+        "float32_block_recentered"
+      ],
+      "practical_falsifier_triggered": false,
+      "claim_ceiling": "bounded_useful_cases_only",
+      "next_required_packet": "h48_post_r49_numeric_scaling_decision_packet"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p35-f23-post-h47-mainline-extension\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p35-f23-post-h47-mainline-extension\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

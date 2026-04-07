@@ -1,0 +1,77 @@
+{
+  "experiment": "r30_d0_boundary_reauthorization_packet",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/R30_d0_boundary_reauthorization_packet/README.md",
+    "docs/milestones/R30_d0_boundary_reauthorization_packet/status.md",
+    "docs/milestones/R30_d0_boundary_reauthorization_packet/todo.md",
+    "docs/milestones/R30_d0_boundary_reauthorization_packet/acceptance.md",
+    "docs/milestones/R30_d0_boundary_reauthorization_packet/artifact_index.md",
+    "results/H23_refreeze_after_r26_r27_r28/summary.json",
+    "results/H21_refreeze_after_r22_r23/summary.json",
+    "results/R22_d0_true_boundary_localization_gate/summary.json",
+    "results/R26_d0_boundary_localization_execution_gate/summary.json",
+    "results/R27_d0_boundary_localization_extension_gate/summary.json",
+    "docs/milestones/R24_d0_boundary_localization_zoom_followup/boundary_zoom_matrix.md"
+  ],
+  "summary": {
+    "current_frozen_stage": "h23_refreeze_after_r26_r27_r28",
+    "boundary_reauthorization_verdict": "execute_one_more_family_local_zoom",
+    "candidate_core": [
+      "checkpoint_replay_long/u32/h3.0/plus_two/flattened",
+      "helper_checkpoint_braid_long/u20/h3.0/plus_two/flattened",
+      "subroutine_braid_long/u20/h3.0/plus_two/flattened",
+      "helper_checkpoint_braid/u8/h2.0/plus_one/flattened",
+      "subroutine_braid/u6/h2.0/plus_one/flattened"
+    ],
+    "approved_axes": [
+      "unique_address_target",
+      "horizon_multiplier",
+      "checkpoint_depth",
+      "hot_address_skew"
+    ],
+    "stop_rules": [
+      "stop a branch after two reproduced exactness failures",
+      "stop the whole lane if every candidate-core branch either fails cleanly or exhausts the predeclared zoom matrix without a failure",
+      "require one first_fail plus at least one neighboring exact row before any claim of boundary localization"
+    ],
+    "recommended_next_lane": "r32_d0_family_local_boundary_sharp_zoom",
+    "kill_reason_if_closed": null,
+    "blocked_future_lanes": [
+      "r29_d0_same_endpoint_systems_recovery_execution_gate",
+      "f3_post_h23_scope_lift_decision_bundle"
+    ],
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "Authorize one future family-local sharp zoom through R32 while keeping the endpoint fixed, the candidate core explicit, and the historical full-grid expansion closed."
+  }
+}

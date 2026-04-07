@@ -1,0 +1,5 @@
+{
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "stop_policy": "stop at first excluded tiny-C feature, canonical identity break, or exact free-running break"
+}

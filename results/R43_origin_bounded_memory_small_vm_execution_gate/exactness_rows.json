@@ -1,0 +1,3295 @@
+{
+  "rows": [
+    {
+      "family_id": "bounded_static_sum_loop",
+      "task_id": "bounded_static_sum_loop",
+      "family_role": "core",
+      "executed": true,
+      "gated_on_previous_exact": false,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "scope_passed": true,
+      "scope_error_class": null,
+      "source_spec_trace_match": true,
+      "source_spec_final_state_match": true,
+      "source_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "first_mismatch_step": null,
+      "failure_reason": null,
+      "source_final_state": {
+        "pc": 9,
+        "stack": [
+          78
+        ],
+        "memory": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            78
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 166
+      },
+      "lowered_final_state": {
+        "pc": 9,
+        "stack": [
+          78
+        ],
+        "memory": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            78
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 166
+      },
+      "free_running_final_state": {
+        "pc": 9,
+        "stack": [
+          78
+        ],
+        "memory": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            78
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 166
+      },
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 12,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 0,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 1,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "load_static",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 6,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "jz_zero",
+          "arg": 10,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "load_static",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "load_static",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 12,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "store_static",
+          "arg": 1,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 14,
+          "opcode": "load_static",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 16,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "store_static",
+          "arg": 0,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 18,
+          "opcode": "jmp",
+          "arg": 4,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 12
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 0
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 1
+        },
+        {
+          "pc": 4,
+          "opcode": "load",
+          "arg": 0
+        },
+        {
+          "pc": 5,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 6,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 7,
+          "opcode": "jz",
+          "arg": 10
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 1
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 10,
+          "opcode": "load",
+          "arg": 1
+        },
+        {
+          "pc": 11,
+          "opcode": "load",
+          "arg": 0
+        },
+        {
+          "pc": 12,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 13,
+          "opcode": "store",
+          "arg": 1
+        },
+        {
+          "pc": 14,
+          "opcode": "load",
+          "arg": 0
+        },
+        {
+          "pc": 15,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 16,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 17,
+          "opcode": "store",
+          "arg": 0
+        },
+        {
+          "pc": 18,
+          "opcode": "jmp",
+          "arg": 4
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "family_id": "bounded_branch_accumulator",
+      "task_id": "bounded_branch_accumulator",
+      "family_role": "core",
+      "executed": true,
+      "gated_on_previous_exact": false,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "scope_passed": true,
+      "scope_error_class": null,
+      "source_spec_trace_match": true,
+      "source_spec_final_state_match": true,
+      "source_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "first_mismatch_step": null,
+      "failure_reason": null,
+      "source_final_state": {
+        "pc": 36,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            16,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            19,
+            9
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 121
+      },
+      "lowered_final_state": {
+        "pc": 36,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            16,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            19,
+            9
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 121
+      },
+      "free_running_final_state": {
+        "pc": 36,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            16,
+            0
+          ],
+          [
+            17,
+            0
+          ],
+          [
+            18,
+            12
+          ],
+          [
+            19,
+            9
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 121
+      },
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 6,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 16,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 17,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "store_static",
+          "arg": 18,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "store_static",
+          "arg": 19,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 16,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "dup",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "jz_zero",
+          "arg": 32,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 11,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 17,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "jz_zero",
+          "arg": 21,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 14,
+          "opcode": "load_static",
+          "arg": 19,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "load_static",
+          "arg": 16,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 16,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "store_static",
+          "arg": 19,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 18,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 19,
+          "opcode": "store_static",
+          "arg": 17,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 20,
+          "opcode": "jmp",
+          "arg": 27,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 21,
+          "opcode": "load_static",
+          "arg": 18,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 22,
+          "opcode": "load_static",
+          "arg": 16,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 23,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 24,
+          "opcode": "store_static",
+          "arg": 18,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 25,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 26,
+          "opcode": "store_static",
+          "arg": 17,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 27,
+          "opcode": "load_static",
+          "arg": 16,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 28,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 29,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 30,
+          "opcode": "store_static",
+          "arg": 16,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 31,
+          "opcode": "jmp",
+          "arg": 8,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 32,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 33,
+          "opcode": "load_static",
+          "arg": 18,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 34,
+          "opcode": "load_static",
+          "arg": 19,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 35,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 36,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 6
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 16
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 17
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 5,
+          "opcode": "store",
+          "arg": 18
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 7,
+          "opcode": "store",
+          "arg": 19
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 16
+        },
+        {
+          "pc": 9,
+          "opcode": "dup",
+          "arg": null
+        },
+        {
+          "pc": 10,
+          "opcode": "jz",
+          "arg": 32
+        },
+        {
+          "pc": 11,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 17
+        },
+        {
+          "pc": 13,
+          "opcode": "jz",
+          "arg": 21
+        },
+        {
+          "pc": 14,
+          "opcode": "load",
+          "arg": 19
+        },
+        {
+          "pc": 15,
+          "opcode": "load",
+          "arg": 16
+        },
+        {
+          "pc": 16,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 17,
+          "opcode": "store",
+          "arg": 19
+        },
+        {
+          "pc": 18,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 19,
+          "opcode": "store",
+          "arg": 17
+        },
+        {
+          "pc": 20,
+          "opcode": "jmp",
+          "arg": 27
+        },
+        {
+          "pc": 21,
+          "opcode": "load",
+          "arg": 18
+        },
+        {
+          "pc": 22,
+          "opcode": "load",
+          "arg": 16
+        },
+        {
+          "pc": 23,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 24,
+          "opcode": "store",
+          "arg": 18
+        },
+        {
+          "pc": 25,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 26,
+          "opcode": "store",
+          "arg": 17
+        },
+        {
+          "pc": 27,
+          "opcode": "load",
+          "arg": 16
+        },
+        {
+          "pc": 28,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 29,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 30,
+          "opcode": "store",
+          "arg": 16
+        },
+        {
+          "pc": 31,
+          "opcode": "jmp",
+          "arg": 8
+        },
+        {
+          "pc": 32,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 33,
+          "opcode": "load",
+          "arg": 18
+        },
+        {
+          "pc": 34,
+          "opcode": "load",
+          "arg": 19
+        },
+        {
+          "pc": 35,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 36,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "family_id": "bounded_memory_reuse_loop",
+      "task_id": "bounded_memory_reuse_loop",
+      "family_role": "core",
+      "executed": true,
+      "gated_on_previous_exact": false,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "scope_passed": true,
+      "scope_error_class": null,
+      "source_spec_trace_match": true,
+      "source_spec_final_state_match": true,
+      "source_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "first_mismatch_step": null,
+      "failure_reason": null,
+      "source_final_state": {
+        "pc": 69,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            32,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            34,
+            40
+          ],
+          [
+            35,
+            38
+          ],
+          [
+            36,
+            39
+          ],
+          [
+            37,
+            40
+          ],
+          [
+            38,
+            9
+          ],
+          [
+            39,
+            7
+          ],
+          [
+            40,
+            5
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 214
+      },
+      "lowered_final_state": {
+        "pc": 69,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            32,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            34,
+            40
+          ],
+          [
+            35,
+            38
+          ],
+          [
+            36,
+            39
+          ],
+          [
+            37,
+            40
+          ],
+          [
+            38,
+            9
+          ],
+          [
+            39,
+            7
+          ],
+          [
+            40,
+            5
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 214
+      },
+      "free_running_final_state": {
+        "pc": 69,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            32,
+            0
+          ],
+          [
+            33,
+            0
+          ],
+          [
+            34,
+            40
+          ],
+          [
+            35,
+            38
+          ],
+          [
+            36,
+            39
+          ],
+          [
+            37,
+            40
+          ],
+          [
+            38,
+            9
+          ],
+          [
+            39,
+            7
+          ],
+          [
+            40,
+            5
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 214
+      },
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 6,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 32,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 33,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_addr",
+          "arg": 38,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "store_static",
+          "arg": 35,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_addr",
+          "arg": 39,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "store_static",
+          "arg": 36,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "const_addr",
+          "arg": 40,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "store_static",
+          "arg": 37,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "const_addr",
+          "arg": 38,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "store_static",
+          "arg": 34,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "store_static",
+          "arg": 38,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 14,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "store_static",
+          "arg": 39,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "store_static",
+          "arg": 40,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 18,
+          "opcode": "load_static",
+          "arg": 32,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 19,
+          "opcode": "dup",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 20,
+          "opcode": "jz_zero",
+          "arg": 63,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 21,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 22,
+          "opcode": "load_static",
+          "arg": 33,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 23,
+          "opcode": "dup",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 24,
+          "opcode": "jz_zero",
+          "arg": 31,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 25,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 26,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 27,
+          "opcode": "jz_zero",
+          "arg": 35,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 28,
+          "opcode": "load_static",
+          "arg": 36,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 29,
+          "opcode": "store_static",
+          "arg": 34,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 30,
+          "opcode": "jmp",
+          "arg": 37,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 31,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 32,
+          "opcode": "load_static",
+          "arg": 35,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 33,
+          "opcode": "store_static",
+          "arg": 34,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 34,
+          "opcode": "jmp",
+          "arg": 37,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 35,
+          "opcode": "load_static",
+          "arg": 37,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 36,
+          "opcode": "store_static",
+          "arg": 34,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 37,
+          "opcode": "load_static",
+          "arg": 34,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 38,
+          "opcode": "load_indirect",
+          "arg": null,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 39,
+          "opcode": "load_static",
+          "arg": 32,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 40,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 41,
+          "opcode": "load_static",
+          "arg": 34,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 42,
+          "opcode": "store_indirect",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 43,
+          "opcode": "load_static",
+          "arg": 33,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 44,
+          "opcode": "dup",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 45,
+          "opcode": "jz_zero",
+          "arg": 52,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 46,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 47,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 48,
+          "opcode": "jz_zero",
+          "arg": 56,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 49,
+          "opcode": "const_i32",
+          "arg": 2,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 50,
+          "opcode": "store_static",
+          "arg": 33,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 51,
+          "opcode": "jmp",
+          "arg": 58,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 52,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 53,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 54,
+          "opcode": "store_static",
+          "arg": 33,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 55,
+          "opcode": "jmp",
+          "arg": 58,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 56,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 57,
+          "opcode": "store_static",
+          "arg": 33,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 58,
+          "opcode": "load_static",
+          "arg": 32,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 59,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 60,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 61,
+          "opcode": "store_static",
+          "arg": 32,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 62,
+          "opcode": "jmp",
+          "arg": 18,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 63,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 64,
+          "opcode": "load_static",
+          "arg": 38,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 65,
+          "opcode": "load_static",
+          "arg": 39,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 66,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 67,
+          "opcode": "load_static",
+          "arg": 40,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 68,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 69,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 6
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 32
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 33
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 38
+        },
+        {
+          "pc": 5,
+          "opcode": "store",
+          "arg": 35
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 39
+        },
+        {
+          "pc": 7,
+          "opcode": "store",
+          "arg": 36
+        },
+        {
+          "pc": 8,
+          "opcode": "push_const",
+          "arg": 40
+        },
+        {
+          "pc": 9,
+          "opcode": "store",
+          "arg": 37
+        },
+        {
+          "pc": 10,
+          "opcode": "push_const",
+          "arg": 38
+        },
+        {
+          "pc": 11,
+          "opcode": "store",
+          "arg": 34
+        },
+        {
+          "pc": 12,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 13,
+          "opcode": "store",
+          "arg": 38
+        },
+        {
+          "pc": 14,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 15,
+          "opcode": "store",
+          "arg": 39
+        },
+        {
+          "pc": 16,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 17,
+          "opcode": "store",
+          "arg": 40
+        },
+        {
+          "pc": 18,
+          "opcode": "load",
+          "arg": 32
+        },
+        {
+          "pc": 19,
+          "opcode": "dup",
+          "arg": null
+        },
+        {
+          "pc": 20,
+          "opcode": "jz",
+          "arg": 63
+        },
+        {
+          "pc": 21,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 22,
+          "opcode": "load",
+          "arg": 33
+        },
+        {
+          "pc": 23,
+          "opcode": "dup",
+          "arg": null
+        },
+        {
+          "pc": 24,
+          "opcode": "jz",
+          "arg": 31
+        },
+        {
+          "pc": 25,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 26,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 27,
+          "opcode": "jz",
+          "arg": 35
+        },
+        {
+          "pc": 28,
+          "opcode": "load",
+          "arg": 36
+        },
+        {
+          "pc": 29,
+          "opcode": "store",
+          "arg": 34
+        },
+        {
+          "pc": 30,
+          "opcode": "jmp",
+          "arg": 37
+        },
+        {
+          "pc": 31,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 32,
+          "opcode": "load",
+          "arg": 35
+        },
+        {
+          "pc": 33,
+          "opcode": "store",
+          "arg": 34
+        },
+        {
+          "pc": 34,
+          "opcode": "jmp",
+          "arg": 37
+        },
+        {
+          "pc": 35,
+          "opcode": "load",
+          "arg": 37
+        },
+        {
+          "pc": 36,
+          "opcode": "store",
+          "arg": 34
+        },
+        {
+          "pc": 37,
+          "opcode": "load",
+          "arg": 34
+        },
+        {
+          "pc": 38,
+          "opcode": "load_at",
+          "arg": null
+        },
+        {
+          "pc": 39,
+          "opcode": "load",
+          "arg": 32
+        },
+        {
+          "pc": 40,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 41,
+          "opcode": "load",
+          "arg": 34
+        },
+        {
+          "pc": 42,
+          "opcode": "store_at",
+          "arg": null
+        },
+        {
+          "pc": 43,
+          "opcode": "load",
+          "arg": 33
+        },
+        {
+          "pc": 44,
+          "opcode": "dup",
+          "arg": null
+        },
+        {
+          "pc": 45,
+          "opcode": "jz",
+          "arg": 52
+        },
+        {
+          "pc": 46,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 47,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 48,
+          "opcode": "jz",
+          "arg": 56
+        },
+        {
+          "pc": 49,
+          "opcode": "push_const",
+          "arg": 2
+        },
+        {
+          "pc": 50,
+          "opcode": "store",
+          "arg": 33
+        },
+        {
+          "pc": 51,
+          "opcode": "jmp",
+          "arg": 58
+        },
+        {
+          "pc": 52,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 53,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 54,
+          "opcode": "store",
+          "arg": 33
+        },
+        {
+          "pc": 55,
+          "opcode": "jmp",
+          "arg": 58
+        },
+        {
+          "pc": 56,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 57,
+          "opcode": "store",
+          "arg": 33
+        },
+        {
+          "pc": 58,
+          "opcode": "load",
+          "arg": 32
+        },
+        {
+          "pc": 59,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 60,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 61,
+          "opcode": "store",
+          "arg": 32
+        },
+        {
+          "pc": 62,
+          "opcode": "jmp",
+          "arg": 18
+        },
+        {
+          "pc": 63,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 64,
+          "opcode": "load",
+          "arg": 38
+        },
+        {
+          "pc": 65,
+          "opcode": "load",
+          "arg": 39
+        },
+        {
+          "pc": 66,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 67,
+          "opcode": "load",
+          "arg": 40
+        },
+        {
+          "pc": 68,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 69,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "family_id": "stack_depth_revisit_loop",
+      "task_id": "stack_depth_revisit_loop",
+      "family_role": "core",
+      "executed": true,
+      "gated_on_previous_exact": false,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "scope_passed": true,
+      "scope_error_class": null,
+      "source_spec_trace_match": true,
+      "source_spec_final_state_match": true,
+      "source_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "first_mismatch_step": null,
+      "failure_reason": null,
+      "source_final_state": {
+        "pc": 44,
+        "stack": [
+          36
+        ],
+        "memory": [
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            0
+          ],
+          [
+            66,
+            68
+          ],
+          [
+            67,
+            69
+          ],
+          [
+            68,
+            20
+          ],
+          [
+            69,
+            16
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 176
+      },
+      "lowered_final_state": {
+        "pc": 44,
+        "stack": [
+          36
+        ],
+        "memory": [
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            0
+          ],
+          [
+            66,
+            68
+          ],
+          [
+            67,
+            69
+          ],
+          [
+            68,
+            20
+          ],
+          [
+            69,
+            16
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 176
+      },
+      "free_running_final_state": {
+        "pc": 44,
+        "stack": [
+          36
+        ],
+        "memory": [
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            0
+          ],
+          [
+            66,
+            68
+          ],
+          [
+            67,
+            69
+          ],
+          [
+            68,
+            20
+          ],
+          [
+            69,
+            16
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 176
+      },
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 8,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 64,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 65,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_addr",
+          "arg": 68,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "store_static",
+          "arg": 66,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_addr",
+          "arg": 69,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "store_static",
+          "arg": 67,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "store_static",
+          "arg": 68,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "store_static",
+          "arg": 69,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 64,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "dup",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 14,
+          "opcode": "jz_zero",
+          "arg": 40,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 15,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "load_static",
+          "arg": 65,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "jz_zero",
+          "arg": 27,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 18,
+          "opcode": "load_static",
+          "arg": 67,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 19,
+          "opcode": "load_indirect",
+          "arg": null,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 20,
+          "opcode": "load_static",
+          "arg": 64,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 21,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 22,
+          "opcode": "load_static",
+          "arg": 67,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 23,
+          "opcode": "store_indirect",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 24,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 25,
+          "opcode": "store_static",
+          "arg": 65,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 26,
+          "opcode": "jmp",
+          "arg": 35,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 27,
+          "opcode": "load_static",
+          "arg": 66,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 28,
+          "opcode": "load_indirect",
+          "arg": null,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 29,
+          "opcode": "load_static",
+          "arg": 64,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 30,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 31,
+          "opcode": "load_static",
+          "arg": 66,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 32,
+          "opcode": "store_indirect",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 33,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 34,
+          "opcode": "store_static",
+          "arg": 65,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 35,
+          "opcode": "load_static",
+          "arg": 64,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 36,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 37,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 38,
+          "opcode": "store_static",
+          "arg": 64,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 39,
+          "opcode": "jmp",
+          "arg": 12,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 40,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 41,
+          "opcode": "load_static",
+          "arg": 68,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 42,
+          "opcode": "load_static",
+          "arg": 69,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 43,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 44,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 8
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 64
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 65
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 68
+        },
+        {
+          "pc": 5,
+          "opcode": "store",
+          "arg": 66
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 69
+        },
+        {
+          "pc": 7,
+          "opcode": "store",
+          "arg": 67
+        },
+        {
+          "pc": 8,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 9,
+          "opcode": "store",
+          "arg": 68
+        },
+        {
+          "pc": 10,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 11,
+          "opcode": "store",
+          "arg": 69
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 64
+        },
+        {
+          "pc": 13,
+          "opcode": "dup",
+          "arg": null
+        },
+        {
+          "pc": 14,
+          "opcode": "jz",
+          "arg": 40
+        },
+        {
+          "pc": 15,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 16,
+          "opcode": "load",
+          "arg": 65
+        },
+        {
+          "pc": 17,
+          "opcode": "jz",
+          "arg": 27
+        },
+        {
+          "pc": 18,
+          "opcode": "load",
+          "arg": 67
+        },
+        {
+          "pc": 19,
+          "opcode": "load_at",
+          "arg": null
+        },
+        {
+          "pc": 20,
+          "opcode": "load",
+          "arg": 64
+        },
+        {
+          "pc": 21,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 22,
+          "opcode": "load",
+          "arg": 67
+        },
+        {
+          "pc": 23,
+          "opcode": "store_at",
+          "arg": null
+        },
+        {
+          "pc": 24,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 25,
+          "opcode": "store",
+          "arg": 65
+        },
+        {
+          "pc": 26,
+          "opcode": "jmp",
+          "arg": 35
+        },
+        {
+          "pc": 27,
+          "opcode": "load",
+          "arg": 66
+        },
+        {
+          "pc": 28,
+          "opcode": "load_at",
+          "arg": null
+        },
+        {
+          "pc": 29,
+          "opcode": "load",
+          "arg": 64
+        },
+        {
+          "pc": 30,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 31,
+          "opcode": "load",
+          "arg": 66
+        },
+        {
+          "pc": 32,
+          "opcode": "store_at",
+          "arg": null
+        },
+        {
+          "pc": 33,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 34,
+          "opcode": "store",
+          "arg": 65
+        },
+        {
+          "pc": 35,
+          "opcode": "load",
+          "arg": 64
+        },
+        {
+          "pc": 36,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 37,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 38,
+          "opcode": "store",
+          "arg": 64
+        },
+        {
+          "pc": 39,
+          "opcode": "jmp",
+          "arg": 12
+        },
+        {
+          "pc": 40,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 41,
+          "opcode": "load",
+          "arg": 68
+        },
+        {
+          "pc": 42,
+          "opcode": "load",
+          "arg": 69
+        },
+        {
+          "pc": 43,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 44,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "family_id": "single_call_return_accumulator",
+      "task_id": "single_call_return_accumulator",
+      "family_role": "gated_optional",
+      "executed": true,
+      "gated_on_previous_exact": true,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "scope_passed": true,
+      "scope_error_class": null,
+      "source_spec_trace_match": true,
+      "source_spec_final_state_match": true,
+      "source_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "first_mismatch_step": null,
+      "failure_reason": null,
+      "source_final_state": {
+        "pc": 9,
+        "stack": [
+          210
+        ],
+        "memory": [
+          [
+            128,
+            0
+          ],
+          [
+            129,
+            210
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 310
+      },
+      "lowered_final_state": {
+        "pc": 9,
+        "stack": [
+          210
+        ],
+        "memory": [
+          [
+            128,
+            0
+          ],
+          [
+            129,
+            210
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 310
+      },
+      "free_running_final_state": {
+        "pc": 9,
+        "stack": [
+          210
+        ],
+        "memory": [
+          [
+            128,
+            0
+          ],
+          [
+            129,
+            210
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 310
+      },
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 20,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 128,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 129,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "load_static",
+          "arg": 128,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 6,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "jz_zero",
+          "arg": 10,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 129,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "call",
+          "arg": 12,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 11,
+          "opcode": "jmp",
+          "arg": 4,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 129,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "load_static",
+          "arg": 128,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 14,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "store_static",
+          "arg": 129,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "load_static",
+          "arg": 128,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 18,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 19,
+          "opcode": "store_static",
+          "arg": 128,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 20,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 20
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 128
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 129
+        },
+        {
+          "pc": 4,
+          "opcode": "load",
+          "arg": 128
+        },
+        {
+          "pc": 5,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 6,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 7,
+          "opcode": "jz",
+          "arg": 10
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 129
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 10,
+          "opcode": "call",
+          "arg": 12
+        },
+        {
+          "pc": 11,
+          "opcode": "jmp",
+          "arg": 4
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 129
+        },
+        {
+          "pc": 13,
+          "opcode": "load",
+          "arg": 128
+        },
+        {
+          "pc": 14,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 15,
+          "opcode": "store",
+          "arg": 129
+        },
+        {
+          "pc": 16,
+          "opcode": "load",
+          "arg": 128
+        },
+        {
+          "pc": 17,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 18,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 19,
+          "opcode": "store",
+          "arg": 128
+        },
+        {
+          "pc": 20,
+          "opcode": "ret",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    }
+  ]
+}

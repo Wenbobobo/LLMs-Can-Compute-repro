@@ -1,0 +1,33 @@
+{
+  "experiment": "p29_post_h43_release_audit_refresh",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "current_paper_phase": "h43_post_r44_useful_case_refreeze_active",
+    "refresh_packet": "p29_post_h43_release_audit_refresh",
+    "refresh_scope": "release_public_audits_and_ledgers",
+    "selected_outcome": "release_audit_surfaces_refreshed_to_h43",
+    "refreshed_audit_count": 5,
+    "next_required_lane": "no_active_downstream_runtime_lane",
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": []
+  }
+}

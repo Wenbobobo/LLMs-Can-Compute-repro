@@ -1,0 +1,64 @@
+{
+  "rows": [
+    {
+      "suite": "straight_line",
+      "program_name": "latest_write",
+      "holdout": false
+    },
+    {
+      "suite": "straight_line",
+      "program_name": "memory_accumulator",
+      "holdout": false
+    },
+    {
+      "suite": "loops",
+      "program_name": "countdown_12",
+      "holdout": true
+    },
+    {
+      "suite": "loops",
+      "program_name": "loop_indirect_memory_6_a4_b5",
+      "holdout": true
+    },
+    {
+      "suite": "indirect_memory",
+      "program_name": "dynamic_memory",
+      "holdout": false
+    },
+    {
+      "suite": "indirect_memory",
+      "program_name": "stack_memory_ping_pong_a0",
+      "holdout": false
+    },
+    {
+      "suite": "control_flow",
+      "program_name": "eq_2_3",
+      "holdout": false
+    },
+    {
+      "suite": "control_flow",
+      "program_name": "alternating_memory_loop_5_a0",
+      "holdout": true
+    },
+    {
+      "suite": "call_return",
+      "program_name": "call_chain",
+      "holdout": false
+    },
+    {
+      "suite": "mixed_surface",
+      "program_name": "flagged_indirect_accumulator_4_a32",
+      "holdout": true
+    },
+    {
+      "suite": "mixed_surface",
+      "program_name": "selector_checkpoint_bank_4_a40",
+      "holdout": true
+    },
+    {
+      "suite": "stack_depth",
+      "program_name": "stack_fanout_sum_8_v2",
+      "holdout": true
+    }
+  ]
+}

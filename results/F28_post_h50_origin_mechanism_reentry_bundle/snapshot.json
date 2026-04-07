@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-25-post-h50-origin-mechanism-reentry-master-plan.md",
+      "matched_lines": [
+        "Instead, it saves one new explicit mechanism-first lane anchored to a narrower",
+        "- `R55` isolates whether the claimed `2D` hard-max retrieval path is exactly",
+        "- `R56` isolates whether append-only trace plus exact retrieval support one",
+        "- `R57` evaluates whether the accelerated trace-VM path retains bounded value",
+        "relative to transparent reference execution on the exact `R56` rows; and",
+        "- `H52` closes the lane explicitly without widening the claim ceiling.",
+        "`R55` and `R56`;",
+        "- a separate commit cadence for `F28/H51/P37`, `R55`, `R56`, `R57`, and"
+      ]
+    },
+    {
+      "path": "docs/milestones/F28_post_h50_origin_mechanism_reentry_bundle/mechanism_claim_delta_matrix.md",
+      "matched_lines": [
+        "| `A` | deterministic execution can be represented as an append-only execution trace with transparent replay semantics | `R34`, `R35`, `R42`, `R43`, `R44`, `R47`, `R50`, `R51`, and preserved `H29/H36/H43/H50` support this narrowly | whether that trace carrier is sufficient as the explicit state surface for a bounded free-running trace VM rather than only as a family of fixed demonstrations | route the next exact semantics question to `R56`, but only after retrieval equivalence is isolated in `R55` |",
+        "| `B` | latest relevant state can be recovered exactly from append-only history by structured `2D` hard-max retrieval | `R34` and `R42` support exact latest-write retrieval narrowly | whether the claimed fast path is reference-exact on the required tie, overwrite-after-gap, duplicate-max, and coordinate-offset cases | isolate this first in `R55` rather than hiding it inside a larger end-to-end demo |",
+        "| `C` | append-only trace plus exact retrieval can support one bounded free-running internal executor exactly | `R35`, `R43`, `R44`, `R46`, `R47`, `R49`, `R50`, and `R51` support bounded exact execution surfaces narrowly | whether one explicit trace VM can stay step-exact without external execution at tested runtime | test this in `R56` after `R55` is exact |",
+        "| `D` | an accelerated retrieval/runtime path adds bounded scientific or system value over transparent reference execution | negative `H50` shows that broader post-`H49` internal-route value was not established | whether the narrower trace-VM fast path still retains bounded value once retrieval equivalence and trace semantics are isolated | defer value judgment to `R57`, then close explicitly in `H52` |"
+      ]
+    },
+    {
+      "path": "docs/milestones/F28_post_h50_origin_mechanism_reentry_bundle/reentry_question.md",
+      "matched_lines": [
+        "The selected question is:",
+        "1. `H51_post_h50_origin_mechanism_reentry_packet`",
+        "2. `R55_origin_2d_hardmax_retrieval_equivalence_gate`"
+      ]
+    },
+    {
+      "path": "docs/milestones/F28_post_h50_origin_mechanism_reentry_bundle/route_constraints.md",
+      "matched_lines": [
+        "- `H51` is the only follow-up packet fixed here.",
+        "- `R55` is the only next runtime candidate fixed here."
+      ]
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "`R55_origin_2d_hardmax_retrieval_equivalence_gate` is the only next runtime"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "`F28_post_h50_origin_mechanism_reentry_bundle`.",
+        "`R55_origin_2d_hardmax_retrieval_equivalence_gate`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The current planning bundle is:",
+        "- `F28_post_h50_origin_mechanism_reentry_bundle`",
+        "- `F28_post_h50_origin_mechanism_reentry_bundle` is the current planning-only"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "- `R55` is the only next runtime candidate."
+      ]
+    }
+  ]
+}

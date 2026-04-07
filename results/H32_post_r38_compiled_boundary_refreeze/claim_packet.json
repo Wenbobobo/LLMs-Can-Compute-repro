@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "supported_here": [
+      "H32 freezes `H30`, `H31`, and `R38` into the current Origin-core routing packet.",
+      "One richer compiled control/call family stays exact on the current append-only / exact-retrieval / small-VM substrate.",
+      "The longer same-family boundary probe is recorded explicitly without widening the supported claim set.",
+      "Further compiler-boundary or scope lift work still requires a new plan."
+    ],
+    "unsupported_here": [
+      "H32 does not authorize arbitrary `C` or broad compiler support.",
+      "H32 does not authorize same-endpoint systems recovery or a general LLM-computer claim.",
+      "H32 does not turn one richer family into a broad demo or frontier result."
+    ],
+    "disconfirmed_here": [
+      "The expectation that one more exact compiled family should automatically dissolve current scope blockers."
+    ],
+    "distilled_result": {
+      "active_stage": "h32_post_r38_compiled_boundary_refreeze",
+      "decision_state": "origin_core_one_richer_compiled_control_family_refrozen",
+      "origin_core_chain_state": "positive_with_one_richer_compiled_control_family",
+      "compiled_boundary_state": "one_richer_compiled_control_family_supported_narrowly",
+      "authorization_packet": "h31_post_h30_later_explicit_boundary_decision_packet",
+      "frozen_upstream_gates": [
+        "h30_post_r36_r37_scope_decision_packet",
+        "r38_origin_compiler_control_surface_extension_gate"
+      ],
+      "next_required_lane": "new_plan_required_before_any_further_compiled_boundary_or_scope_lift",
+      "blocked_lanes_preserved": [
+        "r29_d0_same_endpoint_systems_recovery_execution_gate",
+        "f3_post_h23_scope_lift_decision_bundle"
+      ],
+      "future_frontier_review_state": "planning_only_f2_preserved"
+    }
+  }
+}

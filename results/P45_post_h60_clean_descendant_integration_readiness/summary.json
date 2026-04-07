@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "active_stage_at_sidecar_time": "h60_post_f34_next_lane_decision_packet",
+    "current_repo_hygiene_sidecar": "p45_post_h60_clean_descendant_integration_readiness",
+    "preserved_prior_repo_hygiene_sidecar": "p43_post_h59_repo_graph_hygiene_and_merge_map",
+    "current_worktree": "D:/zWenbo/AI/wt/f36-post-h60-archive-first-consolidation",
+    "current_branch": "wip/f36-post-h60-archive-first-consolidation",
+    "preferred_predecessor_branch": "wip/f34-post-h59-archive-and-reopen-screen",
+    "predecessor_branch_exists": true,
+    "predecessor_divergence_base_only": 0,
+    "predecessor_divergence_target_only": 3,
+    "registered_worktree_count": 53,
+    "root_main_worktree": "D:/zWenbo/AI/LLMCompute",
+    "root_main_branch": "wip/root-main-parking-2026-03-24",
+    "merge_posture": "clean_descendant_only_never_dirty_root_main",
+    "selected_outcome": "clean_descendant_successor_line_prepared_for_later_non_root_integration",
+    "next_required_lane": "archive_first_active_packet_or_later_clean_descendant_promotion",
+    "pass_count": 6,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f36-post-h60-archive-first-consolidation\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f36-post-h60-archive-first-consolidation\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

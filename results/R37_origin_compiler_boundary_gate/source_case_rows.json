@@ -1,0 +1,753 @@
+{
+  "rows": [
+    {
+      "case_id": "arithmetic_smoke",
+      "fragment": "straight_line_arithmetic",
+      "program_name": "bytecode_arithmetic_smoke",
+      "instruction_count": 4,
+      "program_steps": 4,
+      "contains_branch": false,
+      "contains_loop": false,
+      "contains_call": false,
+      "opcode_surface": [
+        "add_i32",
+        "const_i32",
+        "halt"
+      ],
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 7,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "const_i32",
+          "arg": 5,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 2,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 3,
+        "stack": [
+          12
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 4
+      }
+    },
+    {
+      "case_id": "eq_branch_true",
+      "fragment": "single_branch_true_path",
+      "program_name": "bytecode_eq_branch_true",
+      "instruction_count": 8,
+      "program_steps": 6,
+      "contains_branch": true,
+      "contains_loop": false,
+      "contains_call": false,
+      "opcode_surface": [
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jz_zero"
+      ],
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 7,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "const_i32",
+          "arg": 7,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 2,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "jz_zero",
+          "arg": 6,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 5,
+        "stack": [
+          1
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 6
+      }
+    },
+    {
+      "case_id": "eq_branch_false",
+      "fragment": "single_branch_false_path",
+      "program_name": "bytecode_eq_branch_false",
+      "instruction_count": 8,
+      "program_steps": 6,
+      "contains_branch": true,
+      "contains_loop": false,
+      "contains_call": false,
+      "opcode_surface": [
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jz_zero"
+      ],
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 7,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "const_i32",
+          "arg": 9,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 2,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "jz_zero",
+          "arg": 6,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 7,
+        "stack": [
+          0
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 6
+      }
+    },
+    {
+      "case_id": "accumulator_loop_static",
+      "fragment": "bounded_loop_with_static_locals",
+      "program_name": "bytecode_accumulator_6",
+      "instruction_count": 19,
+      "program_steps": 88,
+      "contains_branch": true,
+      "contains_loop": true,
+      "contains_call": false,
+      "opcode_surface": [
+        "add_i32",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "store_static",
+        "sub_i32"
+      ],
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 6,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 0,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 1,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "load_static",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 6,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "jz_zero",
+          "arg": 10,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "load_static",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "load_static",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 12,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "store_static",
+          "arg": 1,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 14,
+          "opcode": "load_static",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 16,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "store_static",
+          "arg": 0,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 18,
+          "opcode": "jmp",
+          "arg": 4,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 9,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 88
+      }
+    },
+    {
+      "case_id": "loop_with_subroutine_update",
+      "fragment": "bounded_loop_with_one_helper_call",
+      "program_name": "bytecode_loop_with_subroutine_update_6_a64_b65",
+      "instruction_count": 21,
+      "program_steps": 100,
+      "contains_branch": true,
+      "contains_loop": true,
+      "contains_call": true,
+      "opcode_surface": [
+        "add_i32",
+        "call",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "ret",
+        "store_static",
+        "sub_i32"
+      ],
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 6,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 64,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 65,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "load_static",
+          "arg": 64,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 6,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "jz_zero",
+          "arg": 10,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 65,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "call",
+          "arg": 12,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 11,
+          "opcode": "jmp",
+          "arg": 4,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 65,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "load_static",
+          "arg": 64,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 14,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "store_static",
+          "arg": 65,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "load_static",
+          "arg": 64,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 18,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 19,
+          "opcode": "store_static",
+          "arg": 64,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 20,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 9,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 100
+      }
+    }
+  ]
+}

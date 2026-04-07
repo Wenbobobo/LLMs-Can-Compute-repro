@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "current_active_docs_only_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+    "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
+    "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+    "preserved_exact_retrieval_gate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+    "preserved_exact_trace_vm_gate": "r56_origin_append_only_trace_vm_semantics_gate",
+    "active_runtime_lane": "r57_origin_accelerated_trace_vm_comparator_gate",
+    "gate": {
+      "lane_verdict": "accelerated_trace_vm_lacks_bounded_value",
+      "planned_task_count": 5,
+      "executed_task_count": 5,
+      "accelerated_exact_task_count": 5,
+      "linear_exact_task_count": 5,
+      "external_exact_task_count": 5,
+      "accelerated_faster_than_linear_count": 0,
+      "accelerated_faster_than_external_count": 0,
+      "mean_accelerated_seconds": 0.019876452500830054,
+      "mean_linear_seconds": 0.009256627500872128,
+      "mean_external_seconds": 0.00037574249909084757,
+      "overall_internal_retrieval_share_of_transitions": 0.9027777777777778,
+      "trace_length_bucket_count": 3,
+      "first_failure_route": null,
+      "first_failure_task_id": null,
+      "selected_h52_outcome": "freeze_origin_mechanism_supported_without_fastpath_value",
+      "next_required_packet": "h52_post_r55_r56_r57_origin_mechanism_decision_packet"
+    },
+    "pass_count": 6,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

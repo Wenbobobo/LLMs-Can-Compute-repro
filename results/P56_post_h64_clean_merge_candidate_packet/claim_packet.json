@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "supports": [
+      "P56 stages an explicit clean merge candidate above the stable H64 freeze stack.",
+      "P56 keeps dirty root main quarantined and keeps merge execution false.",
+      "P56 makes the current main delta, conflict inventory, and runbook explicit without authorizing a merge."
+    ],
+    "does_not_support": [
+      "merge execution",
+      "runtime reopen",
+      "dirty-root integration",
+      "broad Wasm or arbitrary C scope lift"
+    ],
+    "distilled_result": {
+      "active_stage_at_merge_candidate_time": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+      "current_clean_merge_candidate_packet": "p56_post_h64_clean_merge_candidate_packet",
+      "current_clean_source_branch": "wip/h64-post-h63-archive-first-freeze",
+      "current_candidate_branch": "wip/p56-post-h64-clean-merge-candidate",
+      "current_clean_main_scratch_branch": "wip/p56-main-scratch",
+      "target_branch": "main",
+      "merge_posture": "clean_descendant_only_never_dirty_root_main",
+      "merge_recommended": false,
+      "merge_execution_state": false,
+      "source_branch_synced_to_origin": true,
+      "root_main_branch": "wip/root-main-parking-2026-03-24",
+      "root_main_quarantined": true,
+      "ahead_of_main_commit_count": 138,
+      "behind_main_commit_count": 0,
+      "main_delta_file_count": 1966,
+      "candidate_delta_file_count": 53,
+      "candidate_delta_path_classes": [
+        "README.md",
+        "STATUS.md",
+        "docs",
+        "scripts",
+        "tests",
+        "tmp"
+      ],
+      "tracked_oversize_count": 0,
+      "selected_outcome": "clean_descendant_merge_candidate_staged_without_merge_execution",
+      "next_required_lane": "p57_p58_parallel_sidecars_then_p59_control_sync"
+    }
+  }
+}

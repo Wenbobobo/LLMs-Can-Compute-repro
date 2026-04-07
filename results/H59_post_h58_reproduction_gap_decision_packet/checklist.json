@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h59_reads_h58_and_f32",
+      "status": "pass",
+      "notes": "H59 depends on both the landed H58 closeout and the F32 certification."
+    },
+    {
+      "item_id": "h59_preserves_h43_as_paper_grade_endpoint",
+      "status": "pass",
+      "notes": "The useful-case exact endpoint remains H43 rather than being erased by later negative lanes."
+    },
+    {
+      "item_id": "h59_states_reproduction_gap_explicitly",
+      "status": "pass",
+      "notes": "The current branch is honest about the remaining gap to the broad public headline."
+    },
+    {
+      "item_id": "h59_requires_different_cost_structure_for_reopen",
+      "status": "pass",
+      "notes": "Later work must change the cost model materially or stop."
+    }
+  ]
+}

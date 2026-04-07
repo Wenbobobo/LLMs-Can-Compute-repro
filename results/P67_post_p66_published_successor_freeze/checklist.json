@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p67_reads_p66",
+      "status": "pass",
+      "notes": "P67 starts only after the exact P66 successor review lands."
+    },
+    {
+      "item_id": "p67_current_branch_is_new_published_clean_descendant",
+      "status": "pass",
+      "notes": "The publication freeze should run on the new p66 branch itself."
+    },
+    {
+      "item_id": "p67_live_control_surfaces_expose_h65_plus_p66_p67_p68",
+      "status": "pass",
+      "notes": "Current live surfaces must move to the H65/P66/P67/P68 frozen successor stack."
+    },
+    {
+      "item_id": "p67_registry_preserves_p63_and_p64",
+      "status": "pass",
+      "notes": "The new publication freeze must preserve the prior published branch and the prior review lane explicitly."
+    }
+  ]
+}

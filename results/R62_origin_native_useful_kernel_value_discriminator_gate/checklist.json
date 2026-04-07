@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "r62_requires_h57_authorization",
+      "status": "pass",
+      "notes": "R62 runs only after the landed H57 authorization outcome."
+    },
+    {
+      "item_id": "r62_keeps_exactness_on_all_declared_rows",
+      "status": "pass",
+      "notes": "Native linear, native accelerated, and external scalar final values must stay exact on every declared row."
+    },
+    {
+      "item_id": "r62_exports_native_build_time_separately_from_measured_runtime",
+      "status": "pass",
+      "notes": "Native program-construction cost is reported but not folded into executor timings."
+    },
+    {
+      "item_id": "r62_longest_rows_test_bounded_value_directly",
+      "status": "blocked",
+      "notes": "A positive result requires accelerated to beat linear on the longest row of each kernel and approach the external scalar comparator on at least one kernel."
+    }
+  ]
+}

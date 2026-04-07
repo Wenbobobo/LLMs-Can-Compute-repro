@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "current_active_docs_only_stage": "h48_post_r49_numeric_scaling_decision_packet",
+    "current_post_h48_planning_bundle": "f25_post_h48_restricted_tinyc_lowering_bundle",
+    "active_runtime_lane": "r50_origin_restricted_tinyc_lowering_gate",
+    "activation_bundle": "f25_post_h48_restricted_tinyc_lowering_bundle",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "preserved_prior_frontend_bridge_gate": "r47_origin_restricted_frontend_translation_gate",
+    "current_completed_numeric_scaling_gate": "r49_origin_useful_case_numeric_scaling_gate",
+    "gate": {
+      "lane_verdict": "restricted_tinyc_lowering_supported_narrowly",
+      "restricted_tinyc_surface": "single_function_static_i32_only",
+      "planned_variant_count": 8,
+      "executed_variant_count": 8,
+      "exact_variant_count": 8,
+      "failed_variant_count": 0,
+      "planned_kernel_count": 3,
+      "exact_kernel_count": 3,
+      "exact_kernel_ids": [
+        "count_nonzero_i32_buffer",
+        "histogram16_u8",
+        "sum_i32_buffer"
+      ],
+      "translation_identity_exact_count": 8,
+      "claim_ceiling": "bounded_useful_cases_only",
+      "stop_rule_triggered": false,
+      "later_explicit_followup_packet_required": true,
+      "next_required_packet": "h49_post_r50_tinyc_lowering_decision_packet"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p35-f23-post-h47-mainline-extension\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p35-f23-post-h47-mainline-extension\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "supports": [
+      "P70 syncs archive/publication/planning indexes to the current H65 hygiene-only cleanup view.",
+      "P70 keeps the standing large-artifact rule explicit without enabling default LFS.",
+      "P70 preserves green release-preflight and archive-ready audits while staying non-runtime."
+    ],
+    "does_not_support": [
+      "runtime reopening",
+      "default LFS expansion",
+      "dirty-root integration"
+    ],
+    "distilled_result": {
+      "active_stage_at_archive_sync_time": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+      "current_archive_index_sidecar": "p70_post_p69_archive_index_and_artifact_policy_sync",
+      "preserved_prior_repo_hygiene_sidecar": "p69_post_h65_repo_graph_hygiene_inventory",
+      "current_planning_branch": "wip/p69-post-h65-hygiene-only-cleanup",
+      "preflight_state": "docs_and_audits_green",
+      "packet_state": "archive_ready",
+      "tracked_oversize_count": 0,
+      "raw_row_ignore_rules_active": true,
+      "selected_outcome": "archive_indexes_and_artifact_policy_synced_to_h65_hygiene_cleanup_stack",
+      "next_required_lane": "p71_clean_descendant_merge_prep_readiness_sync"
+    }
+  }
+}

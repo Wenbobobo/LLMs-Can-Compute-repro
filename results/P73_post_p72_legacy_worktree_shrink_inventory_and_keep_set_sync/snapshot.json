@@ -1,0 +1,48 @@
+{
+  "rows": [
+    {
+      "field": "current_branch",
+      "value": "wip/p73-post-p72-hygiene-shrink-mergeprep"
+    },
+    {
+      "field": "preferred_prefix",
+      "value": "D:/zWenbo/AI/wt/"
+    },
+    {
+      "field": "legacy_prefix",
+      "value": "D:/zWenbo/AI/LLMCompute-worktrees/"
+    },
+    {
+      "field": "legacy_keep_examples",
+      "value": [
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/r33-next",
+          "branch": "wip/r33-next",
+          "upstream": "",
+          "dirty_count": 0,
+          "clean": true
+        }
+      ]
+    },
+    {
+      "field": "legacy_prune_with_upstream_examples",
+      "value": []
+    },
+    {
+      "field": "legacy_prune_without_upstream_examples",
+      "value": []
+    },
+    {
+      "field": "legacy_blocked_dirty_examples",
+      "value": [
+        {
+          "worktree": "D:/zWenbo/AI/LLMCompute-worktrees/h27-promotion",
+          "branch": "wip/h27-promotion",
+          "upstream": "",
+          "dirty_count": 123,
+          "clean": false
+        }
+      ]
+    }
+  ]
+}

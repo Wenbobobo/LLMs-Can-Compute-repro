@@ -1,0 +1,54 @@
+{
+  "experiment": "r33_comparator_summary",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "comparator_id": "spec_reference",
+      "case_count": 12,
+      "exact_case_count": 12,
+      "median_seconds": 0.0008630999363958836,
+      "median_ratio_vs_spec_reference": 1.0,
+      "median_ratio_vs_lowered_exec_trace": 0.723270854688339
+    },
+    {
+      "comparator_id": "lowered_exec_trace",
+      "case_count": 12,
+      "exact_case_count": 12,
+      "median_seconds": 0.0015285999979823828,
+      "median_ratio_vs_spec_reference": 1.5927894552970974,
+      "median_ratio_vs_lowered_exec_trace": 1.0
+    },
+    {
+      "comparator_id": "pointer_like_exact",
+      "case_count": 12,
+      "exact_case_count": 12,
+      "median_seconds": 0.0034444000339135528,
+      "median_ratio_vs_spec_reference": 4.113699535222819,
+      "median_ratio_vs_lowered_exec_trace": 2.4731367652546608,
+      "median_non_retrieval_share": 0.9840630538119579,
+      "dominant_component_counts": [
+        {
+          "component": "state_update_bookkeeping_seconds",
+          "count": 12
+        }
+      ]
+    }
+  ]
+}

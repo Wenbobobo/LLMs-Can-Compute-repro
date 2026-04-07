@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h34_docs_select_freeze_outcome_and_keep_h32_active",
+      "status": "pass",
+      "notes": "H34 should remain docs-only, keep H32 active, and select freeze-complete-for-now rather than a new runtime lane."
+    },
+    {
+      "item_id": "upstream_h33_and_r39_support_freeze_not_automatic_reopen",
+      "status": "pass",
+      "notes": "The selected freeze outcome is only justified if H33 named one question, R39 answered it narrowly, and the post-R39 plan keeps reopen conditions explicit."
+    },
+    {
+      "item_id": "driver_active_wave_and_f2_preserve_h32_routing_h34_control_and_no_active_downstream_runtime",
+      "status": "pass",
+      "notes": "After H34 lands, entrypoints should show H32 active, H34 as current docs-only control, and no active downstream runtime lane."
+    }
+  ]
+}

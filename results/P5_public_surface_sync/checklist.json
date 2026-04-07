@@ -2,29 +2,19 @@
   "experiment": "p5_public_surface_sync_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
@@ -37,42 +27,42 @@
     {
       "item_id": "readme_tracks_current_active_stage",
       "status": "pass",
-      "notes": "README should keep H19 as the current frozen state while preserving H17/H15/H14/H13 history and the older same-endpoint baselines."
+      "notes": "README should keep H52 active, preserve H43 as the paper-grade endpoint, and record the closed R55/R56/R57 mechanism lane."
     },
     {
       "item_id": "status_tracks_current_active_stage",
       "status": "pass",
-      "notes": "STATUS should record H19 as current, preserve H17/H15/H14/H13/V1 state, and keep the older same-endpoint baselines explicit."
+      "notes": "STATUS should record the current H52/H50/H51/H43/P37/R55/R56/R57 stack and explicit merge posture."
     },
     {
-      "item_id": "publication_record_readme_tracks_driver_and_packet_docs",
+      "item_id": "publication_record_readme_tracks_h52_current_control_state",
       "status": "pass",
-      "notes": "Publication record README should name the active driver, packet docs, and taxonomy-labeled controls."
+      "notes": "Publication record README should expose H52 as current control, H43 as the paper-grade endpoint, and P37 as the current low-priority sidecar."
     },
     {
-      "item_id": "release_summary_stays_downstream",
+      "item_id": "release_summary_stays_downstream_of_h52_h43_split",
       "status": "pass",
-      "notes": "The release summary should stay narrow while naming H19 as current, H17 as preserved prior refreeze, and frontier work as still conditional."
+      "notes": "The release summary should remain downstream of the current H52 control state while preserving H43 as the paper-grade endpoint."
     },
     {
       "item_id": "manuscript_tracks_section_draft_state",
       "status": "pass",
-      "notes": "The manuscript now reads as a section-ordered draft instead of carrying a phase-status preamble."
+      "notes": "The manuscript remains a section-ordered draft rather than a stage-status note."
     },
     {
       "item_id": "current_stage_driver_is_canonical",
       "status": "pass",
-      "notes": "The current-stage driver should expose current H19 plus preserved H17/H15/H14/H13/V1 state and the completed earlier baselines in one place."
+      "notes": "The current-stage driver should remain the canonical H52/H50/H51/H43/P37/R55/R56/R57 control surface."
     },
     {
       "item_id": "layout_log_records_post_p7_decisions",
       "status": "pass",
-      "notes": "The layout decision log should record release-summary reuse plus the new governance choices."
+      "notes": "The layout decision log should record release-summary reuse and governance choices."
     },
     {
       "item_id": "p8_p9_checkpoint_remains_explicit",
       "status": "pass",
-      "notes": "The completed P8/P9 digests should remain explicit as the baseline for the next plan-mode stage."
+      "notes": "The completed P8/P9 digests should remain explicit as the bundle-lock baseline."
     }
   ]
 }

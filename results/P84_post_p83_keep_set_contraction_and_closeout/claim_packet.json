@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "supports": [
+      "P84 contracts the active mounted keep set to the promotion-ready p83 branch plus the preserved operational branches p75, p74, p73, p72, p69, and p56.",
+      "P84 preserves p81 and p82 as unmounted immediate promotion-prep lineage rather than live execution mounts.",
+      "P84 leaves promotion/PR finalization from p83 or no further action as the only remaining clean-descendant routes."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "same-lane executor-value reopen",
+      "broad Wasm or arbitrary C scope expansion"
+    ],
+    "distilled_result": {
+      "current_closeout_wave": "p84_post_p83_keep_set_contraction_and_closeout",
+      "promotion_branch": "wip/p83-post-p82-promotion-branch-and-pr-handoff",
+      "promotion_branch_head": "ba23f00",
+      "published_branch": "wip/p75-post-p74-published-successor-freeze",
+      "published_branch_head": "53962ca",
+      "mounted_keep_paths": [
+        "D:/zWenbo/AI/LLMCompute",
+        "D:/zWenbo/AI/LLMCompute-worktrees/h27-promotion",
+        "D:/zWenbo/AI/wt/p56-main-scratch",
+        "D:/zWenbo/AI/wt/p69-post-h65-hygiene-only-cleanup",
+        "D:/zWenbo/AI/wt/p72-post-p71-archive-polish-stop-handoff",
+        "D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep",
+        "D:/zWenbo/AI/wt/p74-post-p73-successor-publication-review",
+        "D:/zWenbo/AI/wt/p75-post-p74-published-successor-freeze",
+        "D:/zWenbo/AI/wt/p83-post-p82-promotion-branch-and-pr-handoff"
+      ],
+      "removed_temporary_paths": [
+        "D:/zWenbo/AI/wt/p81-post-p80-clean-descendant-promotion-prep",
+        "D:/zWenbo/AI/wt/p82-post-p81-clean-main-promotion-probe"
+      ],
+      "selected_outcome": "keep_set_contracted_and_closeout_synced_after_p83",
+      "next_recommended_route": "promotion_pr_finalization_or_no_further_action"
+    }
+  }
+}

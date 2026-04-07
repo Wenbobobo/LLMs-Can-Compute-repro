@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "field": "current_published_clean_descendant_branch",
+      "value": "wip/p66-post-p65-published-successor-freeze"
+    },
+    {
+      "field": "release_commit_state",
+      "value": "clean_worktree_ready_if_other_gates_green"
+    },
+    {
+      "field": "worktree_hygiene_branch",
+      "value": "wip/p66-post-p65-published-successor-freeze"
+    }
+  ]
+}

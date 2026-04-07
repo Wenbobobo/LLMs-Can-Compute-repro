@@ -1,0 +1,17 @@
+{
+  "rows": [
+    {
+      "source": "h57",
+      "selected_outcome": "authorize_one_last_native_useful_kernel_value_discriminator_gate"
+    },
+    {
+      "source": "r62",
+      "lane_verdict": "native_useful_kernel_route_lacks_bounded_value",
+      "selected_h58_outcome": "stop_as_mechanism_supported_but_no_bounded_executor_value"
+    },
+    {
+      "source": "h58",
+      "selected_outcome": "stop_as_mechanism_supported_but_no_bounded_executor_value"
+    }
+  ]
+}

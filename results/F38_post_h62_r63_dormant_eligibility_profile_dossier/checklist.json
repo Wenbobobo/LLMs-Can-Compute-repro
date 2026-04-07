@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "item_id": "f38_reads_h62",
+      "status": "pass",
+      "notes": "F38 inherits H62's archive-default downstream state."
+    },
+    {
+      "item_id": "f38_reads_f37",
+      "status": "pass",
+      "notes": "F38 inherits the single surviving F37 future family and runtime-closed posture."
+    },
+    {
+      "item_id": "f38_exact_target_declared",
+      "status": "pass",
+      "notes": "The exact lifted useful target must be named explicitly."
+    },
+    {
+      "item_id": "f38_comparator_declared",
+      "status": "blocked",
+      "notes": "The honest comparator remains unresolved and therefore not eligibility-ready."
+    },
+    {
+      "item_id": "f38_cost_share_declared",
+      "status": "blocked",
+      "notes": "The retrieval-head cost share remains unresolved and therefore not eligibility-ready."
+    },
+    {
+      "item_id": "f38_query_insert_declared",
+      "status": "blocked",
+      "notes": "The query:insert ratio remains unresolved and therefore not eligibility-ready."
+    },
+    {
+      "item_id": "f38_tie_burden_declared",
+      "status": "blocked",
+      "notes": "Tie frequency and tie-handling burden remain unresolved and therefore not eligibility-ready."
+    },
+    {
+      "item_id": "f38_material_cost_delta_shown",
+      "status": "blocked",
+      "notes": "A material cost-model delta versus R62/H58 is still unresolved."
+    },
+    {
+      "item_id": "f38_dormant_wording_locked",
+      "status": "pass",
+      "notes": "The dossier and reopen protocol must both keep R63 dormant and non-runtime only."
+    }
+  ]
+}

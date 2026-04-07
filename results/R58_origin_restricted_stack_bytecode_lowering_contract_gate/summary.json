@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "current_active_docs_only_stage": "h53_post_h52_compiled_boundary_reentry_packet",
+    "current_post_h52_planning_bundle": "f29_post_h52_restricted_compiled_boundary_bundle",
+    "active_runtime_lane": "r58_origin_restricted_stack_bytecode_lowering_contract_gate",
+    "activation_bundle": "f29_post_h52_restricted_compiled_boundary_bundle",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "preserved_prior_docs_only_closeout": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
+    "gate": {
+      "lane_verdict": "restricted_stack_bytecode_lowering_supported_narrowly",
+      "restricted_surface": "typed_stack_bytecode_subset_only",
+      "planned_case_count": 5,
+      "executed_case_count": 5,
+      "exact_case_count": 5,
+      "failed_case_count": 0,
+      "planned_category_count": 5,
+      "exact_category_count": 5,
+      "exact_category_ids": [
+        "arithmetic",
+        "branch_revisit",
+        "call_return",
+        "counted_loop",
+        "latest_write_memory"
+      ],
+      "claim_ceiling": "bounded_useful_cases_only",
+      "stop_rule_triggered": false,
+      "next_required_packet": "r59_origin_compiled_trace_vm_execution_gate"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\wt\\f29\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\wt\\f29\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

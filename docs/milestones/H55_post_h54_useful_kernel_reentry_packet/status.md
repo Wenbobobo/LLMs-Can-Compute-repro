@@ -1,0 +1,4 @@
+- status: `completed_prior_packet`
+- selected_outcome: `authorize_useful_kernel_carryover_through_r60_first`
+- only_next_runtime_candidate: `R60_origin_compiled_useful_kernel_carryover_gate`
+- preserves: `H54`, `H52`, `H43`

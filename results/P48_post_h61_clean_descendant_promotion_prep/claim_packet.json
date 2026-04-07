@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "supports": [
+      "P48 makes the clean descendant promotion range explicit as f36..f37.",
+      "P48 separates promotion prep from merge execution.",
+      "P48 records oversized-artifact posture before any later explicit promotion packet."
+    ],
+    "does_not_support": [
+      "executing a promotion or merge in this packet",
+      "routing promotion through the parked root checkout",
+      "treating branch publication as scientific evidence"
+    ],
+    "distilled_result": {
+      "active_stage_at_sidecar_time": "h61_post_h60_archive_first_position_packet",
+      "current_repo_hygiene_sidecar": "p48_post_h61_clean_descendant_promotion_prep",
+      "preserved_prior_repo_hygiene_sidecar": "p45_post_h60_clean_descendant_integration_readiness",
+      "source_branch": "wip/f36-post-h60-archive-first-consolidation",
+      "source_branch_upstream": "origin/wip/f36-post-h60-archive-first-consolidation",
+      "current_planning_branch": "wip/f37-post-h61-hygiene-first-reauth-prep",
+      "current_planning_branch_upstream": "origin/wip/f37-post-h61-hygiene-first-reauth-prep",
+      "candidate_commit_count": 3,
+      "candidate_file_count": 73,
+      "artifact_oversize_count": 0,
+      "worktree_clean": true,
+      "selected_outcome": "clean_descendant_ready_for_later_explicit_promotion",
+      "next_required_lane": "later_explicit_promotion_packet_or_h62_scope_decision"
+    }
+  }
+}

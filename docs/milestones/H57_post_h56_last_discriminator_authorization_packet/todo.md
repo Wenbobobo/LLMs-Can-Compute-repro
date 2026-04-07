@@ -1,0 +1,4 @@
+- preserve `H56` as the prior closeout
+- open exactly one last native useful-kernel discriminator
+- precommit the stop rule before runtime
+- forbid broader route widening by momentum

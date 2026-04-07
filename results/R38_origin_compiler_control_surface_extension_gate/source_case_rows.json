@@ -1,0 +1,846 @@
+{
+  "rows": [
+    {
+      "case_id": "subroutine_braid_admitted",
+      "fragment": "single_richer_control_call_family",
+      "program_name": "bytecode_subroutine_braid_6_a80",
+      "admission_role": "admitted",
+      "instruction_count": 40,
+      "program_steps": 133,
+      "contains_branch": true,
+      "contains_loop": true,
+      "contains_call": true,
+      "opcode_surface": [
+        "add_i32",
+        "call",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "ret",
+        "store_static",
+        "sub_i32"
+      ],
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 6,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 80,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 81,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "store_static",
+          "arg": 82,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "store_static",
+          "arg": 83,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 80,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 10,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "jz_zero",
+          "arg": 16,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 82,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "load_static",
+          "arg": 83,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 14,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "load_static",
+          "arg": 81,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "jz_zero",
+          "arg": 22,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 18,
+          "opcode": "call",
+          "arg": 30,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 19,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 20,
+          "opcode": "store_static",
+          "arg": 81,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 21,
+          "opcode": "jmp",
+          "arg": 25,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 22,
+          "opcode": "call",
+          "arg": 35,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 23,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 24,
+          "opcode": "store_static",
+          "arg": 81,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 25,
+          "opcode": "load_static",
+          "arg": 80,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 26,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 27,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 28,
+          "opcode": "store_static",
+          "arg": 80,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 29,
+          "opcode": "jmp",
+          "arg": 8,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 30,
+          "opcode": "load_static",
+          "arg": 83,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 31,
+          "opcode": "load_static",
+          "arg": 80,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 32,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 33,
+          "opcode": "store_static",
+          "arg": 83,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 34,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 35,
+          "opcode": "load_static",
+          "arg": 82,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 36,
+          "opcode": "load_static",
+          "arg": 80,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 37,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 38,
+          "opcode": "store_static",
+          "arg": 82,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 39,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 15,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            80,
+            0
+          ],
+          [
+            81,
+            0
+          ],
+          [
+            82,
+            12
+          ],
+          [
+            83,
+            9
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 133
+      }
+    },
+    {
+      "case_id": "subroutine_braid_long_boundary",
+      "fragment": "same_family_long_boundary_probe",
+      "program_name": "bytecode_subroutine_braid_long_12_a160",
+      "admission_role": "boundary_stress",
+      "instruction_count": 40,
+      "program_steps": 250,
+      "contains_branch": true,
+      "contains_loop": true,
+      "contains_call": true,
+      "opcode_surface": [
+        "add_i32",
+        "call",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "ret",
+        "store_static",
+        "sub_i32"
+      ],
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 12,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 160,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 161,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "store_static",
+          "arg": 162,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "store_static",
+          "arg": 163,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "load_static",
+          "arg": 160,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 10,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "jz_zero",
+          "arg": 16,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 12,
+          "opcode": "load_static",
+          "arg": 162,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 13,
+          "opcode": "load_static",
+          "arg": 163,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 14,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 15,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 16,
+          "opcode": "load_static",
+          "arg": 161,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 17,
+          "opcode": "jz_zero",
+          "arg": 22,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 18,
+          "opcode": "call",
+          "arg": 30,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 19,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 20,
+          "opcode": "store_static",
+          "arg": 161,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 21,
+          "opcode": "jmp",
+          "arg": 25,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 22,
+          "opcode": "call",
+          "arg": 35,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 23,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 24,
+          "opcode": "store_static",
+          "arg": 161,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 25,
+          "opcode": "load_static",
+          "arg": 160,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 26,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 27,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 28,
+          "opcode": "store_static",
+          "arg": 160,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 29,
+          "opcode": "jmp",
+          "arg": 8,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 30,
+          "opcode": "load_static",
+          "arg": 163,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 31,
+          "opcode": "load_static",
+          "arg": 160,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 32,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 33,
+          "opcode": "store_static",
+          "arg": 163,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 34,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 35,
+          "opcode": "load_static",
+          "arg": 162,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 36,
+          "opcode": "load_static",
+          "arg": 160,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 37,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 38,
+          "opcode": "store_static",
+          "arg": 162,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 39,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "spec_reference_trace_match": true,
+      "spec_reference_final_state_match": true,
+      "spec_reference_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 15,
+        "stack": [
+          78
+        ],
+        "memory": [
+          [
+            160,
+            0
+          ],
+          [
+            161,
+            0
+          ],
+          [
+            162,
+            42
+          ],
+          [
+            163,
+            36
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 250
+      }
+    }
+  ]
+}

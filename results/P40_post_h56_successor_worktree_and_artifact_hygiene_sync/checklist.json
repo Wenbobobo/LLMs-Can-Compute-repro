@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p40_uses_preferred_successor_worktree_prefix",
+      "status": "pass",
+      "notes": "The active wave should run from D:/zWenbo/AI/wt/... rather than on the dirty root checkout."
+    },
+    {
+      "item_id": "p40_keeps_uv_as_default_execution_path",
+      "status": "pass",
+      "notes": "Focused exporters and tests on this wave execute through uv."
+    },
+    {
+      "item_id": "p40_keeps_large_raw_artifacts_out_of_git_by_default",
+      "status": "pass",
+      "notes": "Tracked artifacts above roughly 10 MiB remain disallowed on the clean successor line."
+    },
+    {
+      "item_id": "p40_preserves_no_merge_posture_for_dirty_root_main",
+      "status": "pass",
+      "notes": "No merge back to the dirty root main checkout is part of this wave."
+    }
+  ]
+}

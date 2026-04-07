@@ -1,0 +1,30 @@
+{
+  "rows": [
+    {
+      "source": "results/H33_post_h32_conditional_next_question_packet/summary.json",
+      "fields": {
+        "active_stage": "h33_post_h32_conditional_next_question_packet",
+        "selected_outcome": "authorize_one_origin_core_substrate_question",
+        "authorized_next_runtime_candidate": "r39_origin_compiler_control_surface_dependency_audit"
+      }
+    },
+    {
+      "source": "results/R39_origin_compiler_control_surface_dependency_audit/summary.json",
+      "fields": {
+        "lane_verdict": "control_surface_dependence_not_detected_on_declared_permutation",
+        "declared_perturbation": "helper_body_permutation_with_target_renumbering",
+        "perturbation_final_state_preserved_count": 2,
+        "perturbation_trace_changed_count": 2,
+        "next_priority_lane": "later_explicit_post_r39_decision_packet_required"
+      }
+    },
+    {
+      "source": "results/H32_post_r38_compiled_boundary_refreeze/summary.json",
+      "fields": {
+        "active_stage": "h32_post_r38_compiled_boundary_refreeze",
+        "decision_state": "origin_core_one_richer_compiled_control_family_refrozen",
+        "next_required_lane": "new_plan_required_before_any_further_compiled_boundary_or_scope_lift"
+      }
+    }
+  ]
+}

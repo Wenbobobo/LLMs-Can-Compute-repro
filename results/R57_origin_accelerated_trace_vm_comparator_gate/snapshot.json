@@ -1,0 +1,81 @@
+{
+  "rows": [
+    {
+      "source": "results/R56_origin_append_only_trace_vm_semantics_gate/summary.json",
+      "fields": {
+        "lane_verdict": "trace_vm_semantics_supported_exactly",
+        "exact_task_count": 5,
+        "transition_count": 288,
+        "next_required_packet": "r57_origin_accelerated_trace_vm_comparator_gate"
+      }
+    },
+    {
+      "source": "results/H51_post_h50_origin_mechanism_reentry_packet/summary.json",
+      "fields": {
+        "selected_outcome": "authorize_origin_mechanism_reentry_through_r55_first",
+        "only_conditional_later_sequence": [
+          "r56_origin_append_only_trace_vm_semantics_gate",
+          "r57_origin_accelerated_trace_vm_comparator_gate",
+          "h52_post_r55_r56_r57_origin_mechanism_decision_packet"
+        ]
+      }
+    },
+    {
+      "path": "docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/comparator_matrix.md",
+      "matched_lines": [
+        "- accelerated internal trace-VM execution on the landed fast retrieval path;",
+        "- linear-reference internal trace-VM execution on the same semantics contract;",
+        "- transparent external interpreter execution where the comparison is still"
+      ]
+    },
+    {
+      "path": "docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/value_rule.md",
+      "matched_lines": [
+        "same exact row set;",
+        "scientific closeout should be \"mechanism supported without fast-path value\";",
+        "should be \"partial mechanism only\" rather than a value win."
+      ]
+    },
+    {
+      "path": "docs/milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/README.md",
+      "matched_lines": [
+        "Selected outcome: `freeze_origin_mechanism_supported_without_fastpath_value`.",
+        "- `freeze_origin_mechanism_supported_with_fastpath_value`;",
+        "- `freeze_origin_mechanism_supported_without_fastpath_value`; and",
+        "- `stop_as_partial_mechanism_only`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "- `R57_origin_accelerated_trace_vm_comparator_gate`",
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the current",
+        "- `R57_origin_accelerated_trace_vm_comparator_gate` is the completed current",
+        "- `results/H52_post_r55_r56_r57_origin_mechanism_decision_packet/summary.json`",
+        "- `results/R57_origin_accelerated_trace_vm_comparator_gate/summary.json`",
+        "- `docs/milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`",
+        "- `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/`"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`;",
+        "`R57_origin_accelerated_trace_vm_comparator_gate`;",
+        "`R57_origin_accelerated_trace_vm_comparator_gate` is completed with",
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet` is now the current",
+        "`R57_origin_accelerated_trace_vm_comparator_gate` ->",
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "- `docs/milestones/H52_post_r55_r56_r57_origin_mechanism_decision_packet/`",
+        "- `docs/milestones/R57_origin_accelerated_trace_vm_comparator_gate/`"
+      ]
+    },
+    {
+      "derived": {
+        "lane_verdict": "accelerated_trace_vm_lacks_bounded_value",
+        "selected_h52_outcome": "freeze_origin_mechanism_supported_without_fastpath_value"
+      }
+    }
+  ]
+}

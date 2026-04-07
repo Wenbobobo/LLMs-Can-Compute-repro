@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "supports": [
+      "P53 locks paper/archive/review/submission wording to the H64 freeze reading.",
+      "P53 preserves narrow mechanism support while keeping the broad headline negative explicit.",
+      "P53 preserves H58/H43 as the scientific interpretation anchors while keeping F38 dormant."
+    ],
+    "does_not_support": [
+      "runtime authorization",
+      "same-lane executor-value replay",
+      "advisory material as evidence"
+    ],
+    "distilled_result": {
+      "active_stage_at_sync_time": "h63_post_p50_p51_p52_f38_archive_first_closeout_packet",
+      "current_paper_archive_claim_sync_wave": "p53_post_h63_paper_archive_claim_sync",
+      "preserved_prior_paper_archive_sync_wave": "p51_post_h62_paper_facing_partial_falsification_package",
+      "selected_outcome": "paper_archive_review_surfaces_locked_to_h64_archive_first_freeze",
+      "audited_file_count": 9,
+      "locked_file_count": 9,
+      "future_route_posture": "dormant_non_runtime_only"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "summary": {
+    "active_stage": "f28_post_h50_origin_mechanism_reentry_bundle",
+    "current_active_docs_only_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+    "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "current_routing_refreeze_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "selected_outcome": "post_h50_mechanism_reentry_bundle_saved",
+    "only_followup_packet": "h51_post_h50_origin_mechanism_reentry_packet",
+    "only_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+    "only_conditional_later_sequence": [
+      "r56_origin_append_only_trace_vm_semantics_gate",
+      "r57_origin_accelerated_trace_vm_comparator_gate",
+      "h52_post_r55_r56_r57_origin_mechanism_decision_packet"
+    ],
+    "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+    "blocked_future_bundle": "f27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle",
+    "blocked_future_gates": [
+      "r53_origin_transformed_executor_entry_gate",
+      "r54_origin_trainable_executor_comparator_gate"
+    ],
+    "next_required_lane": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+    "supported_here_count": 3,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f28-h51-post-h50-origin-mechanism-reentry\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f28-h51-post-h50-origin-mechanism-reentry\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

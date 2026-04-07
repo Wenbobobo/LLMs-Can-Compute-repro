@@ -1,0 +1,43 @@
+{
+  "experiment": "p33_post_h43_dormant_playbook_wording_refresh",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p33-h43-dormant-playbook-wording-refresh\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p33-h43-dormant-playbook-wording-refresh\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "p33_packet_docs_define_auxiliary_dormant_playbook_refresh",
+      "status": "pass",
+      "notes": "P33 should remain a narrow auxiliary dormant-playbook/helper wording packet and must not displace P31 or activate any dormant execution lane."
+    },
+    {
+      "item_id": "dormant_playbook_and_helper_surfaces_demote_preserved_r2_d0_from_current_endpoint_language",
+      "status": "pass",
+      "notes": "Dormant playbooks and helper rows should treat R2/D0 as preserved same-endpoint support inside the broader current H43 paper endpoint, not as the whole current endpoint."
+    },
+    {
+      "item_id": "indexes_and_handoff_preserve_p31_current_and_record_p33_auxiliary_completion",
+      "status": "pass",
+      "notes": "Status, index, and handoff surfaces should keep P31 current while recording P33 as a completed auxiliary dormant-playbook wording packet."
+    },
+    {
+      "item_id": "upstream_h43_p31_and_p32_packets_remain_preserved",
+      "status": "pass",
+      "notes": "P33 should stay strictly downstream of the landed H43, P31, and P32 packets while preserving their selected outcomes."
+    }
+  ]
+}

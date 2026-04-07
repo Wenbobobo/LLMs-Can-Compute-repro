@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p41_syncs_publication_archive_surfaces_to_h59",
+      "status": "pass",
+      "notes": "Outward release/archive/submission surfaces should now point to H59/F33/P42."
+    },
+    {
+      "item_id": "p41_keeps_raw_row_ignore_rules_active",
+      "status": "pass",
+      "notes": "The repo should keep the raw-row ignore rules active in .gitignore."
+    },
+    {
+      "item_id": "p41_keeps_large_artifacts_out_of_git",
+      "status": "pass",
+      "notes": "Tracked artifacts above roughly 10 MiB remain disallowed on the clean worktree line."
+    },
+    {
+      "item_id": "p41_preserves_explicit_no_merge_posture",
+      "status": "pass",
+      "notes": "Publication/archive sync does not imply merge or promotion back to dirty root main."
+    }
+  ]
+}

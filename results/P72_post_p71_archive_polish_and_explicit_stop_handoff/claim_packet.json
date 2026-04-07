@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "supports": [
+      "P72 normalizes archive-facing, release-facing, and planning-facing surfaces around an explicit stop or no further action recommendation.",
+      "P72 preserves P69/P70/P71 as hygiene-only archive/control sidecars rather than evidence-bearing packets.",
+      "P72 freezes a stop handoff that keeps later clean-descendant merge-prep planning conditional and non-executing."
+    ],
+    "does_not_support": [
+      "runtime reopening",
+      "scope widening",
+      "dirty-root integration",
+      "merge execution"
+    ],
+    "distilled_result": {
+      "active_stage_at_archive_polish_time": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+      "current_archive_polish_sidecar": "p72_post_p71_archive_polish_and_explicit_stop_handoff",
+      "preserved_prior_cleanup_sidecars": [
+        "p69_post_h65_repo_graph_hygiene_inventory",
+        "p70_post_p69_archive_index_and_artifact_policy_sync",
+        "p71_post_p70_clean_descendant_merge_prep_readiness_sync"
+      ],
+      "current_planning_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
+      "published_branch": "wip/p66-post-p65-published-successor-freeze",
+      "selected_outcome": "archive_polish_surfaces_normalized_and_explicit_stop_handoff_frozen_without_scope_widening",
+      "next_required_lane": "explicit_stop_or_no_further_action"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f26_docs_define_post_h49_claim_delta_bundle",
+      "status": "pass",
+      "notes": "F26 should save a planning-only post-H49 claim-delta bundle that fixes exactly R51, R52, and H50."
+    },
+    {
+      "item_id": "upstream_h49_and_r50_support_substrate_first_requestioning",
+      "status": "pass",
+      "notes": "F26 should start from H49's narrow freeze, not from an assumed post-R50 widening authorization."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_f26_current_planning_bundle",
+      "status": "pass",
+      "notes": "Shared control surfaces should make F26 current while preserving H49 as the active docs-only packet."
+    }
+  ]
+}

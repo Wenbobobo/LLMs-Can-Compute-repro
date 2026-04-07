@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "policy": "current_worktree",
+      "value": "D:/zWenbo/AI/wt/f34-post-h59-archive-and-reopen-screen"
+    },
+    {
+      "policy": "current_branch",
+      "value": "wip/f34-post-h59-archive-and-reopen-screen"
+    },
+    {
+      "policy": "registered_worktree_count",
+      "value": 52
+    },
+    {
+      "policy": "repo_local_alias_count",
+      "value": 2
+    },
+    {
+      "policy": "root_main_branch",
+      "value": "wip/root-main-parking-2026-03-24"
+    }
+  ]
+}

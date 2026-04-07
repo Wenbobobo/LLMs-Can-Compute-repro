@@ -10,14 +10,17 @@ $ErrorActionPreference = "Stop"
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot "..")
 Set-Location $repoRoot
 
+$gitCommonDir = Resolve-Path (git rev-parse --git-common-dir)
+$projectRoot = Split-Path $gitCommonDir -Parent
+$projectParent = Split-Path $projectRoot -Parent
+
 $status = git status --porcelain
 if (-not $AllowDirty -and $status) {
     throw "Refusing to create unattended worktrees from a dirty tree. Commit or stash first, or rerun with -AllowDirty."
 }
 
 if (-not $WorktreeRoot) {
-    $parent = Split-Path $repoRoot -Parent
-    $WorktreeRoot = Join-Path $parent "LLMCompute-worktrees"
+    $WorktreeRoot = Join-Path $projectParent "wt"
 }
 
 New-Item -ItemType Directory -Force -Path $WorktreeRoot | Out-Null

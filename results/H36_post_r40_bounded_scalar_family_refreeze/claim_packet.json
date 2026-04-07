@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "supported_here": [
+      "H36 freezes the R40 bounded-scalar result as narrow same-substrate evidence.",
+      "Explicit bounded frame locals and typed flag slots are now supported narrowly on the current substrate and opcode surface.",
+      "No active downstream runtime lane exists after H36 lands."
+    ],
+    "unsupported_here": [
+      "H36 does not authorize restricted-Wasm, aggregate values, hybrid/planner bridges, or arbitrary-language claims.",
+      "H36 does not activate R41 automatically."
+    ],
+    "disconfirmed_here": [
+      "The expectation that explicit typed flag slots necessarily require a new opcode surface or a new substrate."
+    ],
+    "distilled_result": {
+      "active_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_control_packet": "h35_post_p23_bounded_scalar_family_runtime_decision_packet",
+      "decision_state": "bounded_scalar_family_refrozen_narrowly",
+      "bounded_scalar_family_state": "explicit_bounded_scalar_locals_and_flags_supported_narrowly",
+      "authorized_next_runtime_candidate": "none",
+      "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+      "reopen_precondition": "new_explicit_post_r40_packet_required",
+      "next_required_lane": "no_active_downstream_runtime_lane"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f21_docs_define_exact_first_post_h43_reentry_bundle",
+      "status": "pass",
+      "notes": "F21 should save the post-H43 exact-first route without turning planning into execution."
+    },
+    {
+      "item_id": "f21_route_matrices_fix_surface_frontend_and_model_bridge_boundaries",
+      "status": "pass",
+      "notes": "F21 must fix the near-term route order and the exact/model boundary in machine-readable tables."
+    },
+    {
+      "item_id": "shared_control_surfaces_record_f21_under_h45_current_state",
+      "status": "pass",
+      "notes": "Shared control surfaces should expose F21 under current H45 control while keeping H43 explicit as the preserved paper-grade endpoint."
+    }
+  ]
+}

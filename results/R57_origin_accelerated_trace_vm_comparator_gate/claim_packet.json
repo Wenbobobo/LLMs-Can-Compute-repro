@@ -1,0 +1,44 @@
+{
+  "summary": {
+    "supported_here": [
+      "The accelerated and linear internal trace-VM routes both remain exact on the fixed R56 row set.",
+      "R57 exports latency, retrieval-share, and trace-length sensitivity on the bounded five-row comparator suite.",
+      "Exact mechanism support alone does not imply fast-path value on the fixed R56 rows."
+    ],
+    "unsupported_here": [
+      "R57 does not show bounded fast-path value for the accelerated route.",
+      "R57 does not reopen transformed-model entry, trainable entry, arbitrary C, or broad Wasm claims.",
+      "R57 does not overturn H50 on the broader post-H49 bounded-value question."
+    ],
+    "disconfirmed_here": [
+      "The idea that exact mechanism support automatically implies system or fast-path value."
+    ],
+    "distilled_result": {
+      "current_active_docs_only_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+      "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
+      "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+      "preserved_exact_retrieval_gate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+      "preserved_exact_trace_vm_gate": "r56_origin_append_only_trace_vm_semantics_gate",
+      "active_runtime_lane": "r57_origin_accelerated_trace_vm_comparator_gate",
+      "lane_verdict": "accelerated_trace_vm_lacks_bounded_value",
+      "planned_task_count": 5,
+      "executed_task_count": 5,
+      "accelerated_exact_task_count": 5,
+      "linear_exact_task_count": 5,
+      "external_exact_task_count": 5,
+      "accelerated_faster_than_linear_count": 0,
+      "accelerated_faster_than_external_count": 0,
+      "mean_accelerated_seconds": 0.019876452500830054,
+      "mean_linear_seconds": 0.009256627500872128,
+      "mean_external_seconds": 0.00037574249909084757,
+      "overall_internal_retrieval_share_of_transitions": 0.9027777777777778,
+      "trace_length_bucket_count": 3,
+      "first_failure_route": null,
+      "first_failure_task_id": null,
+      "selected_h52_outcome": "freeze_origin_mechanism_supported_without_fastpath_value",
+      "next_required_packet": "h52_post_r55_r56_r57_origin_mechanism_decision_packet"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+- status: `current_active_packet`
+- selected_outcome: `freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`
+- active: `true`
+- downstream_lane: `no_active_downstream_runtime_lane`
+- blocked_future_storage: `F27`, `R53`, `R54`

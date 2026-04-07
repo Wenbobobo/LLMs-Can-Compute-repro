@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "current_paper_phase": "h34_post_r39_later_explicit_scope_decision_packet_complete",
+    "active_stage": "h34_post_r39_later_explicit_scope_decision_packet",
+    "current_active_routing_stage": "h32_post_r38_compiled_boundary_refreeze",
+    "decision_state": "compiled_boundary_complete_for_now_docs_only",
+    "selected_outcome": "freeze_compiled_boundary_as_complete_for_now",
+    "non_selected_outcome": "authorize_one_more_origin_core_substrate_question",
+    "authorized_next_runtime_candidate": "none",
+    "reopen_precondition": "new_contradiction_or_sharper_same_substrate_gap_required",
+    "blocked_future_lanes": [
+      "r29_d0_same_endpoint_systems_recovery_execution_gate",
+      "f3_post_h23_scope_lift_decision_bundle"
+    ],
+    "future_frontier_review_state": "planning_only_f2_preserved",
+    "supported_here_count": 4,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

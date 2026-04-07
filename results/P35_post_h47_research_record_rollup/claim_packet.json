@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "supported_here": [
+      "P35 records the post-H47 research state without changing scientific stage.",
+      "P35 promotes one new low-priority operational/docs wave while preserving H47 and H43.",
+      "P35 codifies artifact slimming, root-dirty quarantine, push state, and explicit no-merge posture."
+    ],
+    "unsupported_here": [
+      "P35 does not authorize a runtime lane.",
+      "P35 does not widen useful-case claims beyond H47/H43.",
+      "P35 does not merge the repo back to main."
+    ],
+    "disconfirmed_here": [
+      "The idea that the repo should keep using dirty root main as the live scientific workspace."
+    ],
+    "distilled_result": {
+      "active_stage": "h47_post_r48_useful_case_bridge_refreeze",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_low_priority_wave": "p35_post_h47_research_record_rollup",
+      "preserved_prior_low_priority_wave": "p31_post_h43_blog_guardrails_refresh",
+      "current_exact_first_planning_bundle": "f21_post_h43_exact_useful_case_expansion_bundle",
+      "current_comparator_planning_bundle": "f22_post_r46_useful_case_model_bridge_bundle",
+      "current_merge_posture": "explicit_merge_wave",
+      "merge_executed": false,
+      "root_dirty_main_quarantined": true,
+      "large_artifact_default_policy": "raw_artifacts_over_10_mib_out_of_git",
+      "next_required_lane": "f23_post_h47_numeric_scaling_bundle"
+    }
+  }
+}

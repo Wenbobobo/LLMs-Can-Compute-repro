@@ -1,0 +1,76 @@
+{
+  "experiment": "p32_post_h43_historical_wording_refresh",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p32-h43-historical-wording-refresh\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p32-h43-historical-wording-refresh\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md",
+      "matched_lines": [
+        "### Recommended: `P32_post_h43_historical_wording_refresh`",
+        "- `historical_wording_regeneration_surfaces_refreshed_to_h43`"
+      ]
+    },
+    {
+      "path": "results/H0_repo_consolidation_and_release_hygiene/public_surface_audit.json",
+      "matched_lines": [
+        "\"notes\": \"M7 still blocks widening; the preserved first compiled step remains D0 inside the broader current H43 paper endpoint.\""
+      ]
+    },
+    {
+      "path": "results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json",
+      "matched_lines": [
+        "\"reason\": \"The preserved first compiled boundary is a tiny typed bytecode inside the broader current H43 paper endpoint and should not be inflated into arbitrary-C coverage.\","
+      ]
+    },
+    {
+      "path": "results/P3_paper_freeze_and_evidence_mapping/artifact_map.json",
+      "matched_lines": [
+        "\"description\": \"Frontend decision bundle: the preserved first compiled boundary is the tiny typed bytecode inside the broader current H43 paper endpoint, frontend widening is not authorized, and any revisit now requires a fresh scope + systems case.\""
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "priority blocked-blog/helper guardrail refresh wave `P31`, completed",
+        "auxiliary historical/regeneration wording refresh packet `P32`, preserved",
+        "blog/helper guardrail refresh wave, `P32` remains the completed auxiliary"
+      ]
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "matched_lines": [
+        "- `docs/milestones/P32_post_h43_historical_wording_refresh/` \u2014 the completed",
+        "- `results/P32_post_h43_historical_wording_refresh/summary.json` \u2014"
+      ]
+    },
+    {
+      "path": "docs/publication_record/experiment_manifest.md",
+      "matched_lines": [
+        "| 2026-03-24 | post-`H43` `P32` historical-wording refresh wave | docs/control plus exporter sync: save one post-`H43` auxiliary historical/regeneration wording refresh design, add `P32` milestone docs, refresh the remaining preserved `H0/P3` machine-readable wording that still describes `D0` as the whole current paper endpoint, refresh minimal status/publication/plan/milestone/active-wave handoff surfaces so they record `P32` without displacing `P31`, add `P32` exporter plus focused test/results, and record the wave in the experiment manifest | new `docs/plans/2026-03-24-post-h43-p32-historical-wording-refresh-design.md`, new `docs/milestones/P32_post_h43_historical_wording_refresh/`, new `scripts/export_p32_post_h43_historical_wording_refresh.py`, new `tests/test_export_p32_post_h43_historical_wording_refresh.py`, refreshed `scripts/export_h0_release_hygiene.py`, refreshed `scripts/export_p3_paper_freeze.py`, refreshed `tests/test_export_h0_release_hygiene.py`, refreshed `tests/test_export_p3_paper_freeze.py`, refreshed `STATUS.md`, refreshed `docs/publication_record/README.md`, refreshed `docs/publication_record/experiment_manifest.md`, refreshed `docs/plans/README.md`, refreshed `docs/milestones/README.md`, refreshed `tmp/active_wave_plan.md`, refreshed `results/H0_repo_consolidation_and_release_hygiene/public_surface_audit.json`, refreshed `results/P3_paper_freeze_and_evidence_mapping/unsupported_claims.json`, refreshed `results/P3_paper_freeze_and_evidence_mapping/artifact_map.json`, new `results/P32_post_h43_historical_wording_refresh/summary.json`, new `results/P32_post_h43_historical_wording_refresh/checklist.json`, new `results/P32_post_h43_historical_wording_refresh/snapshot.json` | CPython 3.13.9 from `D:/zWenbo/AI/LLMCompute-worktrees/p32-h43-historical-wording-refresh/.venv`, `uv 0.9.14`, clean worktree `D:/zWenbo/AI/LLMCompute-worktrees/p32-h43-historical-wording-refresh` on `wip/p32-h43-historical-wording-refresh`; focused pytest on `H0/P3/P32` exporters plus `git diff --check` should pass | no scientific widening; `P32` keeps `H43` as the active scientific stage, keeps `P31` as the current low-priority wave, refreshes preserved `H0/P3` machine-readable wording so `D0` is treated as historical first compiled support inside the broader current `H43` endpoint, keeps `R41` deferred, keeps `merge_executed = false`, and preserves `next_required_lane = no_active_downstream_runtime_lane` |"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`P31_post_h43_blog_guardrails_refresh` is the current low-priority",
+        "`P32_post_h43_historical_wording_refresh` is the completed auxiliary"
+      ]
+    }
+  ]
+}

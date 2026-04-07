@@ -1,0 +1,91 @@
+{
+  "experiment": "p29_post_h43_release_audit_refresh_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h45-post-r46-surface-decision\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "docs/milestones/P29_post_h43_release_audit_refresh/README.md",
+      "matched_lines": [
+        "Current low-priority operational release/public audit refresh packet downstream",
+        "described `H40` or `H32/H34` as current. It is an operational/docs lane, not a"
+      ]
+    },
+    {
+      "path": "docs/milestones/P29_post_h43_release_audit_refresh/status.md",
+      "matched_lines": [
+        "- current operational wave is `P29_post_h43_release_audit_refresh`;",
+        "- `merge_executed = false` remains unchanged; and"
+      ]
+    },
+    {
+      "path": "docs/plans/2026-03-24-post-h43-p29-release-audit-refresh-design.md",
+      "matched_lines": [
+        "### Recommended: `P29_post_h43_release_audit_refresh`",
+        "- `release_audit_surfaces_refreshed_to_h43`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "matched_lines": [
+        "- `docs/milestones/P31_post_h43_blog_guardrails_refresh/` \u2014 the current",
+        "- `docs/milestones/P30_post_h43_manuscript_surface_refresh/` \u2014 the completed",
+        "- `docs/milestones/P29_post_h43_release_audit_refresh/` \u2014 the completed earlier",
+        "- `results/P29_post_h43_release_audit_refresh/summary.json` \u2014"
+      ]
+    },
+    {
+      "path": "docs/plans/README.md",
+      "matched_lines": [
+        "- `../milestones/P31_post_h43_blog_guardrails_refresh/` \u2014 current",
+        "- `../milestones/P30_post_h43_manuscript_surface_refresh/` \u2014 completed prior",
+        "- `../milestones/P29_post_h43_release_audit_refresh/` \u2014 completed prior",
+        "- `../milestones/P31_post_h43_blog_guardrails_refresh/` \u2014 current low-priority",
+        "- `../milestones/P29_post_h43_release_audit_refresh/` \u2014 completed earlier prior"
+      ]
+    },
+    {
+      "path": "docs/milestones/README.md",
+      "matched_lines": [
+        "- `P31_post_h43_blog_guardrails_refresh/` \u2014 current low-priority",
+        "- `P30_post_h43_manuscript_surface_refresh/` \u2014 completed prior low-priority",
+        "- `P29_post_h43_release_audit_refresh/` \u2014 completed earlier prior low-priority",
+        "- `P28_post_h43_publication_surface_sync/` \u2014 completed prior low-priority",
+        "- `P31_post_h43_blog_guardrails_refresh/` \u2014 current low-priority operational",
+        "- `P30_post_h43_manuscript_surface_refresh/` \u2014 completed prior operational",
+        "- `P29_post_h43_release_audit_refresh/` \u2014 completed earlier prior operational",
+        "- `P28_post_h43_publication_surface_sync/` \u2014 completed operational"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`P31_post_h43_blog_guardrails_refresh` is the current low-priority",
+        "- `wip/p31-h43-blog-guardrails-refresh` is the clean post-`H43`",
+        "- `P29` is the completed earlier prior release/public audit refresh wave."
+      ]
+    },
+    {
+      "path": "results/release_worktree_hygiene_snapshot/summary.json",
+      "matched_lines": [
+        "\"branch\": \"wip/p29-h43-release-audit-refresh\",",
+        "\"release_commit_state\": \"clean_worktree_ready_if_other_gates_green\","
+      ]
+    }
+  ]
+}

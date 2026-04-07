@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h35_docs_authorize_exactly_one_bounded_scalar_runtime_gate",
+      "status": "pass",
+      "notes": "H35 should authorize exactly one bounded-scalar runtime gate and keep later threat stress deferred."
+    },
+    {
+      "item_id": "f13_f14_and_post_p23_design_support_the_selected_runtime_scope",
+      "status": "pass",
+      "notes": "H35 should follow the F13 family definition directly and leave the F14 threat bundle deferred."
+    },
+    {
+      "item_id": "h34_and_r39_are_preserved_as_upstream_context_not_broader_authorization",
+      "status": "pass",
+      "notes": "H35 should sit above preserved H34/R39 context rather than pretending that H34 already authorized R40 automatically."
+    }
+  ]
+}

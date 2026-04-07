@@ -1,0 +1,62 @@
+{
+  "experiment": "r31_systems_reauthorization_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "source": "results/H23_refreeze_after_r26_r27_r28/summary.json",
+      "fields": {
+        "systems_verdict": "systems_still_mixed",
+        "mechanism_contract_verdict": "mechanism_contract_supported_with_partial_control_isolation"
+      }
+    },
+    {
+      "source": "results/R23_d0_same_endpoint_systems_overturn_gate/summary.json",
+      "fields": {
+        "systems_verdict": "systems_still_mixed",
+        "best_reference_ratio_median": 4.164328445173109
+      }
+    },
+    {
+      "source": "results/R28_d0_trace_retrieval_contract_audit/summary.json",
+      "fields": {
+        "retrieval_bottleneck_verdict": "pointer_like_exact_non_retrieval_dominant",
+        "mechanism_contract_verdict": "mechanism_contract_supported_with_partial_control_isolation"
+      }
+    },
+    {
+      "source": "docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/hypothesis_matrix.md",
+      "planned_role": "dominant_bottleneck_hypotheses"
+    },
+    {
+      "source": "docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/thresholds_and_disconfirmers.md",
+      "planned_role": "kill_criteria_and_thresholds"
+    }
+  ]
+}

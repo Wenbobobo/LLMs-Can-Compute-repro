@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "item_id": "p73_reads_p72",
+      "status": "pass",
+      "notes": "P73 runs only after P72 lands the archive-polish explicit-stop handoff sidecar."
+    },
+    {
+      "item_id": "p73_runs_on_current_preferred_path_branch",
+      "status": "pass",
+      "notes": "P73 should run from the preferred D:/zWenbo/AI/wt path, not from the legacy worktree prefix or dirty root main."
+    },
+    {
+      "item_id": "p73_live_docs_expose_current_local_shrink_wave",
+      "status": "pass",
+      "notes": "README, STATUS, and current stage driver should expose P73 as the current local hygiene/shrink lane above the preserved P72 handoff branch."
+    },
+    {
+      "item_id": "p73_docs_routers_point_to_inventory_and_runbook",
+      "status": "pass",
+      "notes": "The docs routers should expose the current shrink wave, design doc, and milestone entrypoints."
+    },
+    {
+      "item_id": "p73_branch_registry_rebases_live_path_policy",
+      "status": "pass",
+      "notes": "The branch/worktree registry should make the preferred path explicit and restrict the legacy prefix to preserved history or shrink candidates."
+    },
+    {
+      "item_id": "p73_keep_set_and_runbook_are_current",
+      "status": "pass",
+      "notes": "The keep-set and shrink runbook should make the safety boundary explicit before any local removal step."
+    },
+    {
+      "item_id": "p73_post_p73_handoff_prompts_are_current",
+      "status": "pass",
+      "notes": "The next plan-mode handoff surfaces should reflect the post-shrink state rather than the earlier pre-shrink P72 state."
+    },
+    {
+      "item_id": "p73_legacy_inventory_classifies_every_legacy_worktree",
+      "status": "pass",
+      "notes": "Every legacy-path worktree should land in exactly one current category."
+    },
+    {
+      "item_id": "p73_no_live_keep_branch_remains_misplaced_under_legacy_prefix",
+      "status": "pass",
+      "notes": "The current live keep-set should not accidentally remain under the legacy worktree prefix."
+    }
+  ]
+}

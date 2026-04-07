@@ -1,0 +1,105 @@
+{
+  "experiment": "r32_d0_family_local_boundary_sharp_zoom",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/H23_refreeze_after_r26_r27_r28/summary.json",
+    "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
+    "results/R30_d0_boundary_reauthorization_packet/summary.json",
+    "docs/milestones/R32_d0_family_local_boundary_sharp_zoom/execution_manifest.md",
+    "docs/plans/2026-03-22-post-unattended-r32-mainline-design.md",
+    "tmp/active_wave_plan.md",
+    "src/model/free_running_executor.py",
+    "src/bytecode/datasets.py"
+  ],
+  "summary": {
+    "status": "r32_family_local_boundary_sharp_zoom_complete",
+    "current_frozen_stage": "h23_refreeze_after_r26_r27_r28",
+    "current_active_packet": "h25_refreeze_after_r30_r31_decision_packet",
+    "authorization_source_stage": "r30_d0_boundary_reauthorization_packet",
+    "gate": {
+      "lane_verdict": "grid_extended_still_not_localized",
+      "reason": "Every executed R32 branch stayed exact inside the authorized family-local sharp zoom.",
+      "planned_branch_count": 30,
+      "planned_candidate_count": 60,
+      "executed_candidate_count": 60,
+      "resource_skipped_candidate_count": 0,
+      "pruned_candidate_count": 0,
+      "exact_candidate_count": 60,
+      "failure_candidate_count": 0,
+      "failure_branch_count": 0,
+      "first_fail_candidate_id": null,
+      "first_fail_program_name": null,
+      "first_fail_reproduced": null,
+      "first_fail_supporting_exact_neighbor_count": null,
+      "next_priority_lane": "h26_refreeze_after_r32_boundary_sharp_zoom"
+    },
+    "planned_lane_classes": [
+      "candidate_core",
+      "checkpoint_depth_extension",
+      "horizon_extension",
+      "unique_address_extension"
+    ],
+    "planned_families": [
+      "checkpoint_replay_long",
+      "helper_checkpoint_braid",
+      "helper_checkpoint_braid_long",
+      "subroutine_braid",
+      "subroutine_braid_long"
+    ],
+    "planned_unique_address_targets": [
+      6,
+      8,
+      10,
+      12,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40
+    ],
+    "planned_horizon_multipliers": [
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0
+    ],
+    "planned_checkpoint_depths": [
+      "plus_one",
+      "plus_two",
+      "plus_three"
+    ],
+    "planned_hot_address_skews": [
+      "flattened"
+    ],
+    "recommended_next_action": "Freeze the R32 outcome into H26 before deciding whether any deferred same-endpoint follow-up remains justified.",
+    "supported_here": [
+      "R32 stays on the fixed tiny typed-bytecode D0 endpoint.",
+      "R32 reuses the R30-authorized candidate core and only the four approved axes.",
+      "R32 exports first-fail, neighboring exact rows, and a machine-readable lane verdict."
+    ],
+    "unsupported_here": [
+      "R32 does not reopen the historical full grid.",
+      "R32 does not widen to a new endpoint or authorize R29 or F3.",
+      "R32 does not treat a mixed signal as broader scope-lift evidence."
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "item_id": "p77_reads_p76",
+      "status": "pass",
+      "notes": "P77 starts only after the landed P76 sidecar."
+    },
+    {
+      "item_id": "p77_runs_on_current_p75_branch",
+      "status": "pass",
+      "notes": "The keep-set normalization sidecar should run on the live p75 branch."
+    },
+    {
+      "item_id": "p77_top_level_surfaces_expose_convergence_stack",
+      "status": "pass",
+      "notes": "README and STATUS should expose the convergence sidecar stack on top of the p75 route."
+    },
+    {
+      "item_id": "p77_driver_roles_are_normalized",
+      "status": "pass",
+      "notes": "Current-stage driver should keep p74 as current review and p64 as preserved deeper review lineage."
+    },
+    {
+      "item_id": "p77_branch_registry_keeps_balanced_active_set",
+      "status": "pass",
+      "notes": "The registry should expose the balanced active keep set and preserved lineage explicitly."
+    },
+    {
+      "item_id": "p77_keep_branches_have_remote_provenance",
+      "status": "pass",
+      "notes": "The active keep branches should now have explicit upstream provenance before any convergence work."
+    },
+    {
+      "item_id": "p77_plans_router_points_to_new_convergence_entrypoints",
+      "status": "pass",
+      "notes": "Plans router should expose the new convergence design and post-P80 handoff prompts."
+    }
+  ]
+}

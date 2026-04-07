@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "family_order": 1,
+      "family_id": "bounded_static_sum_loop",
+      "task_id": "bounded_static_sum_loop",
+      "family_role": "core",
+      "gated_on_previous_exact": false,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 512,
+      "program_name": "bytecode_accumulator_12",
+      "description": "Bounded static accumulator loop over one fixed-address memory slot."
+    },
+    {
+      "family_order": 2,
+      "family_id": "bounded_branch_accumulator",
+      "task_id": "bounded_branch_accumulator",
+      "family_role": "core",
+      "gated_on_previous_exact": false,
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 512,
+      "program_name": "bytecode_alternating_memory_loop_6_a16",
+      "description": "Bounded branch-and-accumulate loop over a fixed static address pair."
+    },
+    {
+      "family_order": 3,
+      "family_id": "bounded_memory_reuse_loop",
+      "task_id": "bounded_memory_reuse_loop",
+      "family_role": "core",
+      "gated_on_previous_exact": false,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "program_name": "bytecode_selector_checkpoint_bank_6_a32",
+      "description": "Bounded memory reuse loop with fixed address checkpoints and replay reads."
+    },
+    {
+      "family_order": 4,
+      "family_id": "stack_depth_revisit_loop",
+      "task_id": "stack_depth_revisit_loop",
+      "family_role": "core",
+      "gated_on_previous_exact": false,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "program_name": "bytecode_stack_memory_braid_8_a64",
+      "description": "Bounded stack-depth revisit loop with repeated stack/memory braid reads."
+    },
+    {
+      "family_order": 5,
+      "family_id": "single_call_return_accumulator",
+      "task_id": "single_call_return_accumulator",
+      "family_role": "gated_optional",
+      "gated_on_previous_exact": true,
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1024,
+      "program_name": "bytecode_iterated_helper_accumulator_20_a128_b129",
+      "description": "Single-layer call/return accumulator executed only after the first four families stay exact."
+    }
+  ]
+}

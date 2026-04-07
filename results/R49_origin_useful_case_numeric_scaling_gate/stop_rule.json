@@ -1,0 +1,9 @@
+{
+  "planned_case_count": 9,
+  "exact_case_count": 9,
+  "precision_row_count": 30,
+  "stop_rule_triggered": false,
+  "first_exactness_failure": null,
+  "kill_triggers": [],
+  "reason": "all buckets stayed exact and at least one admitted float32 recovery regime stayed exact on bucket_a and bucket_b"
+}

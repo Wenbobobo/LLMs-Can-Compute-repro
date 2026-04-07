@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "active_stage": "h50_post_r51_r52_scope_decision_packet",
+    "preserved_prior_docs_only_decision_packet": "h49_post_r50_tinyc_lowering_decision_packet",
+    "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "current_post_h49_planning_bundle": "f26_post_h49_origin_claim_delta_and_next_question_bundle",
+    "current_completed_post_h49_runtime_gate": "r51_origin_memory_control_surface_sufficiency_gate",
+    "current_completed_post_h49_comparator_gate": "r52_origin_internal_vs_external_executor_value_gate",
+    "selected_outcome": "stop_as_exact_without_system_value",
+    "future_bundle_state": "f27_saved_but_blocked_after_negative_h50",
+    "current_low_priority_wave": "p36_post_h49_cleanline_hygiene_and_artifact_policy",
+    "next_required_lane": "no_active_downstream_runtime_lane",
+    "supported_here_count": 3,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r51-post-h49-memory-control-sufficiency\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r51-post-h49-memory-control-sufficiency\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

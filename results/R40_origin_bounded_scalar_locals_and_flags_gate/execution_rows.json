@@ -1,0 +1,86 @@
+{
+  "rows": [
+    {
+      "case_id": "bounded_scalar_admitted",
+      "family_role": "admitted",
+      "program_name": "bytecode_bounded_scalar_flag_loop_6_a320",
+      "max_steps": 256,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 99,
+      "free_running_stack_read_count": 66,
+      "free_running_memory_read_count": 33,
+      "free_running_call_read_count": 0,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 11,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            320,
+            0
+          ],
+          [
+            321,
+            1
+          ],
+          [
+            322,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 102
+      }
+    },
+    {
+      "case_id": "bounded_scalar_boundary",
+      "family_role": "boundary_stress",
+      "program_name": "bytecode_bounded_scalar_flag_loop_long_12_a336",
+      "max_steps": 768,
+      "free_running_trace_match": true,
+      "free_running_final_state_match": true,
+      "free_running_first_mismatch_step": null,
+      "free_running_failure_reason": null,
+      "free_running_read_count": 253,
+      "free_running_stack_read_count": 165,
+      "free_running_memory_read_count": 88,
+      "free_running_call_read_count": 0,
+      "free_running_stack_strategy": "accelerated",
+      "free_running_memory_strategy": "accelerated",
+      "free_running_final_state": {
+        "pc": 15,
+        "stack": [
+          156
+        ],
+        "memory": [
+          [
+            336,
+            0
+          ],
+          [
+            337,
+            1
+          ],
+          [
+            338,
+            78
+          ],
+          [
+            339,
+            78
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 244
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# H45 Artifact Index
+
+- `docs/milestones/H45_post_r46_surface_decision_packet/README.md`
+- `docs/milestones/H45_post_r46_surface_decision_packet/status.md`
+- `docs/milestones/H45_post_r46_surface_decision_packet/todo.md`
+- `docs/milestones/H45_post_r46_surface_decision_packet/acceptance.md`
+- `docs/milestones/H45_post_r46_surface_decision_packet/artifact_index.md`
+- `docs/plans/2026-03-24-post-r46-h45-surface-decision-design.md`
+- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/README.md`
+- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/status.md`
+- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/todo.md`
+- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/acceptance.md`
+- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/artifact_index.md`
+- `docs/milestones/R47_origin_restricted_frontend_translation_gate/README.md`
+- `docs/milestones/R47_origin_restricted_frontend_translation_gate/status.md`
+- `docs/milestones/R47_origin_restricted_frontend_translation_gate/todo.md`
+- `docs/milestones/R47_origin_restricted_frontend_translation_gate/acceptance.md`
+- `docs/milestones/R47_origin_restricted_frontend_translation_gate/artifact_index.md`
+- `docs/milestones/H44_post_h43_route_reauthorization_packet/README.md`
+- `docs/milestones/R46_origin_useful_case_surface_generalization_gate/README.md`
+- `results/R46_origin_useful_case_surface_generalization_gate/summary.json`
+- `scripts/export_h45_post_r46_surface_decision_packet.py`
+- `tests/test_export_h45_post_r46_surface_decision_packet.py`
+- `results/H45_post_r46_surface_decision_packet/summary.json`

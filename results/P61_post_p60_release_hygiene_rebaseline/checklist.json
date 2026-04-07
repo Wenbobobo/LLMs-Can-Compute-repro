@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p61_reads_p60",
+      "status": "pass",
+      "notes": "P61 preserved-prior export starts only after P60 remains landed."
+    },
+    {
+      "item_id": "p61_current_branch_matches_current_successor_lane",
+      "status": "pass",
+      "notes": "The hygiene snapshot should classify the current published successor branch while the export may run from a registered execution successor."
+    },
+    {
+      "item_id": "p61_worktree_hygiene_is_clean_ready",
+      "status": "pass",
+      "notes": "The current published successor branch should remain clean enough for outward sync if other gates are green."
+    },
+    {
+      "item_id": "p61_preflight_and_archive_ready_are_green",
+      "status": "pass",
+      "notes": "Successor hygiene expects green release-preflight and archive-ready summaries on the same branch family."
+    },
+    {
+      "item_id": "p61_current_stage_driver_mentions_successor_release_hygiene",
+      "status": "pass",
+      "notes": "The current stage driver should expose P64 and the rebaselined clean successor posture."
+    }
+  ]
+}

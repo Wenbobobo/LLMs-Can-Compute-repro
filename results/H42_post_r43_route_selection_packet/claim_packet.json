@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "supported_here": [
+      "H42 lands the later explicit post-R43 route-selection packet as a completed docs-only control artifact.",
+      "H42 preserves H41 as the prior docs-only packet, H36 as the routing/refreeze packet underneath the stack, and F20 as the exact-versus-model evidence boundary.",
+      "H42 authorizes exactly R44 as the next exact restricted useful-case gate.",
+      "H42 keeps R41 deferred, keeps merge explicit through P27, and does not let model evidence replace exact R43."
+    ],
+    "unsupported_here": [
+      "H42 does not authorize arbitrary C, unrestricted Wasm, or general LLM-computer rhetoric.",
+      "H42 does not reactivate same-substrate R41 by momentum.",
+      "H42 does not treat merge execution as part of the scientific claim surface."
+    ],
+    "disconfirmed_here": [
+      "The idea that the post-R43 stack should remain planning-only despite exact R43 plus coequal R45 on the fixed bounded family."
+    ],
+    "distilled_result": {
+      "active_stage": "h42_post_r43_route_selection_packet",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_decision_packet": "h41_post_r42_aggressive_long_arc_decision_packet",
+      "current_completed_exact_runtime_gate": "r43_origin_bounded_memory_small_vm_execution_gate",
+      "current_completed_coequal_model_gate": "r45_origin_dual_mode_model_mainline_gate",
+      "current_model_mainline_bundle": "f20_post_r42_dual_mode_model_mainline_bundle",
+      "selected_outcome": "authorize_r44_origin_restricted_wasm_useful_case_execution_gate",
+      "non_selected_outcomes": [
+        "hold_at_r43_and_continue_bounded_consolidation",
+        "keep_h41_r43_r45_state_and_continue_planning_only"
+      ],
+      "authorized_next_runtime_candidate": "r44_origin_restricted_wasm_useful_case_execution_gate",
+      "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+      "explicit_merge_packet": "p27_post_h41_clean_promotion_and_explicit_merge_packet",
+      "decision_basis": "r43_exact_positive_plus_r45_coequal_support_plus_f19_useful_case_ladder",
+      "merge_executed": false,
+      "next_required_lane": "r44_origin_restricted_wasm_useful_case_execution_gate"
+    }
+  }
+}

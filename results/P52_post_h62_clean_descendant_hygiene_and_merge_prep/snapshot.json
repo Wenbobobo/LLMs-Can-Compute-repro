@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "field": "source_branch",
+      "value": "wip/f37-post-h61-hygiene-first-reauth-prep"
+    },
+    {
+      "field": "current_planning_branch",
+      "value": "wip/f38-post-h62-archive-first-closeout"
+    },
+    {
+      "field": "current_planning_branch_upstream",
+      "value": ""
+    },
+    {
+      "field": "root_main_branch",
+      "value": "wip/root-main-parking-2026-03-24"
+    },
+    {
+      "field": "tracked_oversize_count",
+      "value": 0
+    }
+  ]
+}

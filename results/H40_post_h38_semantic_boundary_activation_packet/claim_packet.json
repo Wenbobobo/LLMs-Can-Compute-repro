@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "supported_here": [
+      "H40 lands the later explicit post-H38 semantic-boundary activation packet.",
+      "H40 preserves H38 as the prior docs-only decision packet and H36 as the preserved routing/refreeze packet underneath the stack.",
+      "H40 authorizes exactly R42 as the first semantic-boundary runtime gate.",
+      "R41, R43, and R44 remain deferred behind later explicit decisions."
+    ],
+    "unsupported_here": [
+      "H40 does not authorize R41 by momentum.",
+      "H40 does not activate R43, R44, F11, R29, or F3."
+    ],
+    "disconfirmed_here": [
+      "The idea that F18/F19 planning alone should activate the semantic-boundary route without a later explicit packet."
+    ],
+    "distilled_result": {
+      "active_stage": "h40_post_h38_semantic_boundary_activation_packet",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_decision_packet": "h38_post_f16_runtime_relevance_reopen_decision_packet",
+      "current_long_arc_planning_bundle": "f18_post_h38_origin_core_long_arc_bundle",
+      "current_semantic_boundary_roadmap": "f19_post_f18_restricted_wasm_useful_case_roadmap",
+      "selected_outcome": "authorize_r42_origin_append_only_memory_retrieval_contract_gate",
+      "non_selected_outcome": "keep_h36_freeze_and_continue_planning_only",
+      "authorized_next_runtime_candidate": "r42_origin_append_only_memory_retrieval_contract_gate",
+      "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+      "deferred_future_semantic_boundary_candidates": [
+        "r43_origin_bounded_memory_small_vm_execution_gate",
+        "r44_origin_restricted_wasm_useful_case_execution_gate"
+      ],
+      "decision_basis": "f18_prefers_f9_and_f19_fixes_r42_as_first_gate",
+      "next_required_lane": "r42_origin_append_only_memory_retrieval_contract_gate"
+    }
+  }
+}

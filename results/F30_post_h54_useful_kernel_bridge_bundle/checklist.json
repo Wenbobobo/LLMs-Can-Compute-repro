@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f30_docs_define_saved_post_h54_stopgo_bundle",
+      "status": "pass",
+      "notes": "F30 should exist only as saved successor planning storage fixing the H55->R60->R61->H56 order."
+    },
+    {
+      "item_id": "origin_rationale_and_stopgo_criteria_keep_scope_narrow",
+      "status": "pass",
+      "notes": "F30 should preserve the conservative origin reading and define explicit stop/go interpretation before execution starts."
+    },
+    {
+      "item_id": "indices_record_f30_as_saved_successor_not_current_stage",
+      "status": "pass",
+      "notes": "Shared planning indexes should record F30 as saved successor storage without replacing H54 as the active packet."
+    }
+  ]
+}

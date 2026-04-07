@@ -1,0 +1,12 @@
+{
+  "experiment": "r52_origin_internal_vs_external_executor_value_gate",
+  "supports": [
+    "internal accelerated execution stays exact on the declared R51 rows",
+    "the internal route does not retain bounded value over simpler baselines"
+  ],
+  "does_not_support": [
+    "broad systems-marketing claims",
+    "value superiority by headline without comparator evidence"
+  ],
+  "next_required_packet": "h50_post_r51_r52_scope_decision_packet"
+}

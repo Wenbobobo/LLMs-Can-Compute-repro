@@ -1,0 +1,24 @@
+# F25 Artifact Index
+
+- `docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`
+- `docs/plans/2026-03-24-post-r49-h48-numeric-scaling-decision-design.md`
+- `docs/plans/2026-03-24-post-h48-f25-restricted-tinyc-lowering-design.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/README.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/status.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/todo.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/acceptance.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/artifact_index.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/admitted_surface_matrix.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/excluded_feature_matrix.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/execution_matrix.md`
+- `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/kill_criteria.md`
+- `docs/milestones/R50_origin_restricted_tinyc_lowering_gate/README.md`
+- `docs/milestones/H49_post_r50_tinyc_lowering_decision_packet/README.md`
+- `docs/milestones/P36_post_h48_falsification_closeout_bundle/README.md`
+- `results/H48_post_r49_numeric_scaling_decision_packet/summary.json`
+- `results/R49_origin_useful_case_numeric_scaling_gate/summary.json`
+- `results/R47_origin_restricted_frontend_translation_gate/summary.json`
+- `results/F25_post_h48_restricted_tinyc_lowering_bundle/summary.json`
+- `results/F25_post_h48_restricted_tinyc_lowering_bundle/checklist.json`
+- `results/F25_post_h48_restricted_tinyc_lowering_bundle/claim_packet.json`
+- `results/F25_post_h48_restricted_tinyc_lowering_bundle/snapshot.json`

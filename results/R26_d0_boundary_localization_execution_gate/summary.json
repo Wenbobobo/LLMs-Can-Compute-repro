@@ -1,0 +1,103 @@
+{
+  "experiment": "r26_d0_boundary_localization_execution_gate",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/H21_refreeze_after_r22_r23/summary.json",
+    "docs/milestones/R24_d0_boundary_localization_zoom_followup/boundary_zoom_matrix.md",
+    "docs/plans/2026-03-21-post-h21-dual-track-boundary-reopen-design.md",
+    "tmp/active_wave_plan.md",
+    "src/model/free_running_executor.py",
+    "src/bytecode/datasets.py"
+  ],
+  "summary": {
+    "status": "r26_boundary_localization_execution_complete",
+    "current_frozen_stage": "h21_refreeze_after_r22_r23",
+    "source_runtime_stage": "r22_d0_true_boundary_localization_gate",
+    "gate": {
+      "lane_verdict": "grid_extended_still_not_localized",
+      "reason": "Every executed R26 candidate stayed exact inside the first bounded post-H21 execution wave.",
+      "planned_branch_count": 11,
+      "planned_candidate_count": 22,
+      "executed_candidate_count": 22,
+      "resource_skipped_candidate_count": 0,
+      "pruned_candidate_count": 0,
+      "exact_candidate_count": 22,
+      "failure_candidate_count": 0,
+      "failure_branch_count": 0,
+      "first_fail_candidate_id": null,
+      "first_fail_program_name": null,
+      "first_fail_reproduced": null,
+      "first_fail_supporting_exact_neighbor_count": null,
+      "next_priority_lane": "r27_d0_boundary_localization_extension_gate"
+    },
+    "planned_lane_classes": [
+      "candidate_core",
+      "first_wave_extension"
+    ],
+    "planned_families": [
+      "checkpoint_replay_long",
+      "helper_checkpoint_braid",
+      "helper_checkpoint_braid_long",
+      "subroutine_braid",
+      "subroutine_braid_long"
+    ],
+    "planned_unique_address_targets": [
+      6,
+      8,
+      20,
+      24,
+      32,
+      40
+    ],
+    "planned_horizon_multipliers": [
+      2.0,
+      3.0,
+      3.5
+    ],
+    "planned_checkpoint_depths": [
+      "plus_one",
+      "plus_two"
+    ],
+    "planned_hot_address_skews": [
+      "flattened"
+    ],
+    "executed_family_count": 5,
+    "recommended_next_action": "Advance directly to H23 if the boundary is localized; otherwise run conditional R27 before refreezing.",
+    "supported_here": [
+      "R26 stays on the fixed tiny typed-bytecode D0 endpoint and executes one explicit post-H21 manifest.",
+      "R26 preserves positive rows, failure rows, branch summaries, and first-fail diagnostics in one machine-readable export.",
+      "R26 keeps the boundary question separate from the mixed same-endpoint systems story."
+    ],
+    "unsupported_here": [
+      "R26 does not authorize a wider endpoint, a broader softmax-replacement thesis, or a broader 'LLMs are computers' claim.",
+      "R26 does not reopen systems repair or frontend widening."
+    ]
+  }
+}

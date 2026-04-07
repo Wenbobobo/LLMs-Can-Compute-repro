@@ -1,0 +1,7 @@
+stage_id,strategy_id,row_count,exact_case_count,median_ns_per_step,median_retrieval_share,median_ns_per_read,dominant_component,dominant_component_case_count
+r20_mechanism_audit,linear_exact,16,16,21383918.383584615,,,,0
+r20_mechanism_audit,accelerated,16,16,12794609.745558903,,,,0
+r20_mechanism_audit,pointer_like_exact,16,16,23921.141339510876,0.0326173747931773,822.0939546021009,non_retrieval,16
+r23_systems_recheck,linear_exact,25,25,164904.1660130024,0.8988811873779899,173182.49156232923,retrieval_total,21
+r23_systems_recheck,accelerated,25,25,337888.46160929935,0.9441736433877438,360196.30001478444,retrieval_total,25
+r23_systems_recheck,pointer_like_exact,25,25,14741.818251257593,0.023242820153297997,422.81654232100357,non_retrieval,25

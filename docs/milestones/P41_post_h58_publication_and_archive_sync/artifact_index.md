@@ -1,0 +1,4 @@
+- `results/P41_post_h58_publication_and_archive_sync/summary.json`
+- `results/P41_post_h58_publication_and_archive_sync/checklist.json`
+- `results/P41_post_h58_publication_and_archive_sync/claim_packet.json`
+- `results/P41_post_h58_publication_and_archive_sync/snapshot.json`

@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "kernel_order": 1,
+      "kernel_id": "sum_i32_buffer",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 256,
+      "program_name": "bytecode_sum_i32_buffer_fixed4",
+      "description": "Read-heavy fixed-buffer sum over one bounded static address range."
+    },
+    {
+      "kernel_order": 2,
+      "kernel_id": "count_nonzero_i32_buffer",
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 512,
+      "program_name": "bytecode_count_nonzero_i32_buffer_fixed5",
+      "description": "Fixed-buffer nonzero count with data-dependent branching and unchanged memory surface."
+    },
+    {
+      "kernel_order": 3,
+      "kernel_id": "histogram16_u8",
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 2048,
+      "program_name": "bytecode_histogram16_u8_fixed4",
+      "description": "Fixed 16-bin histogram with repeated latest-write-by-address pressure on bounded bin cells."
+    }
+  ]
+}

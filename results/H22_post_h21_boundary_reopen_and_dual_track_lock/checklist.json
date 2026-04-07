@@ -1,0 +1,58 @@
+{
+  "experiment": "h22_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "h22_docs_lock_one_dual_track_reopen_contract",
+      "status": "pass",
+      "notes": "H22 should define the reopen packet before any new runtime execution is treated as active."
+    },
+    {
+      "item_id": "h22_keeps_h21_as_the_frozen_input",
+      "status": "pass",
+      "notes": "H22 is a reopen-control stage on top of H21, not a replacement of the frozen H21 state."
+    },
+    {
+      "item_id": "r26_and_r28_are_actionable_before_runtime_starts",
+      "status": "pass",
+      "notes": "H22 should only activate lanes that already have explicit acceptance and handoff targets."
+    },
+    {
+      "item_id": "r27_is_conditional_and_future_lanes_remain_blocked",
+      "status": "pass",
+      "notes": "Only R26 and R28 should be active by default under H22."
+    },
+    {
+      "item_id": "h22_stays_downstream_of_r24_and_r25_planning_packets",
+      "status": "pass",
+      "notes": "H22 should treat R24/R25 as bounded inputs rather than reopening scope from scratch."
+    }
+  ]
+}

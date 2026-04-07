@@ -1,0 +1,427 @@
+{
+  "rows": [
+    {
+      "case_id": "arithmetic_smoke",
+      "fragment": "straight_line_arithmetic",
+      "program_name": "bytecode_arithmetic_smoke",
+      "lowered_instruction_count": 4,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 7
+        },
+        {
+          "pc": 1,
+          "opcode": "push_const",
+          "arg": 5
+        },
+        {
+          "pc": 2,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 3,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 3,
+        "stack": [
+          12
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 4
+      }
+    },
+    {
+      "case_id": "eq_branch_true",
+      "fragment": "single_branch_true_path",
+      "program_name": "bytecode_eq_branch_true",
+      "lowered_instruction_count": 8,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 7
+        },
+        {
+          "pc": 1,
+          "opcode": "push_const",
+          "arg": 7
+        },
+        {
+          "pc": 2,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 3,
+          "opcode": "jz",
+          "arg": 6
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 7,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 5,
+        "stack": [
+          1
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 6
+      }
+    },
+    {
+      "case_id": "eq_branch_false",
+      "fragment": "single_branch_false_path",
+      "program_name": "bytecode_eq_branch_false",
+      "lowered_instruction_count": 8,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 7
+        },
+        {
+          "pc": 1,
+          "opcode": "push_const",
+          "arg": 9
+        },
+        {
+          "pc": 2,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 3,
+          "opcode": "jz",
+          "arg": 6
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 7,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 7,
+        "stack": [
+          0
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 6
+      }
+    },
+    {
+      "case_id": "accumulator_loop_static",
+      "fragment": "bounded_loop_with_static_locals",
+      "program_name": "bytecode_accumulator_6",
+      "lowered_instruction_count": 19,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 6
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 0
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 1
+        },
+        {
+          "pc": 4,
+          "opcode": "load",
+          "arg": 0
+        },
+        {
+          "pc": 5,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 6,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 7,
+          "opcode": "jz",
+          "arg": 10
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 1
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 10,
+          "opcode": "load",
+          "arg": 1
+        },
+        {
+          "pc": 11,
+          "opcode": "load",
+          "arg": 0
+        },
+        {
+          "pc": 12,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 13,
+          "opcode": "store",
+          "arg": 1
+        },
+        {
+          "pc": 14,
+          "opcode": "load",
+          "arg": 0
+        },
+        {
+          "pc": 15,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 16,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 17,
+          "opcode": "store",
+          "arg": 0
+        },
+        {
+          "pc": 18,
+          "opcode": "jmp",
+          "arg": 4
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 9,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 88
+      }
+    },
+    {
+      "case_id": "loop_with_subroutine_update",
+      "fragment": "bounded_loop_with_one_helper_call",
+      "program_name": "bytecode_loop_with_subroutine_update_6_a64_b65",
+      "lowered_instruction_count": 21,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 6
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 64
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 65
+        },
+        {
+          "pc": 4,
+          "opcode": "load",
+          "arg": 64
+        },
+        {
+          "pc": 5,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 6,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 7,
+          "opcode": "jz",
+          "arg": 10
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 65
+        },
+        {
+          "pc": 9,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 10,
+          "opcode": "call",
+          "arg": 12
+        },
+        {
+          "pc": 11,
+          "opcode": "jmp",
+          "arg": 4
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 65
+        },
+        {
+          "pc": 13,
+          "opcode": "load",
+          "arg": 64
+        },
+        {
+          "pc": 14,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 15,
+          "opcode": "store",
+          "arg": 65
+        },
+        {
+          "pc": 16,
+          "opcode": "load",
+          "arg": 64
+        },
+        {
+          "pc": 17,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 18,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 19,
+          "opcode": "store",
+          "arg": 64
+        },
+        {
+          "pc": 20,
+          "opcode": "ret",
+          "arg": null
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 9,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            64,
+            0
+          ],
+          [
+            65,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 100
+      }
+    }
+  ]
+}

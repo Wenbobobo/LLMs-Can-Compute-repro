@@ -1,0 +1,36 @@
+{
+  "rows": [
+    {
+      "field": "probe_status",
+      "value": {
+        "branch": "wip/p82-post-p81-clean-main-promotion-probe",
+        "dirty_count": 0,
+        "clean": true
+      }
+    },
+    {
+      "field": "source_vs_origin",
+      "value": {
+        "left_only": 0,
+        "right_only": 180
+      }
+    },
+    {
+      "field": "probe_to_source",
+      "value": {
+        "left_only": 0,
+        "right_only": 180
+      }
+    },
+    {
+      "field": "merge_probe",
+      "value": {
+        "conflict_free": true,
+        "probe_exit_code": 0,
+        "write_tree_oid": "bc042eeb2d536f25cb9c15b9dd1775edb65abd64",
+        "stdout": "bc042eeb2d536f25cb9c15b9dd1775edb65abd64",
+        "stderr": ""
+      }
+    }
+  ]
+}

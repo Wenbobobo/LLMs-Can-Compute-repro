@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p38_docs_define_post_h52_hygiene_sync_packet",
+      "status": "pass",
+      "notes": "P38 should codify hygiene and no-merge policy for the closed compiled-boundary wave without changing scientific stage."
+    },
+    {
+      "item_id": "p38_records_worktree_artifact_and_commit_policy",
+      "status": "pass",
+      "notes": "P38 should make the worktree policy, large-artifact policy, and commit cadence explicit for this wave."
+    },
+    {
+      "item_id": "p38_repo_state_matches_large_artifact_policy",
+      "status": "pass",
+      "notes": "The clean worktree should keep tracked artifacts under the roughly 10 MiB default limit."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_p38_current_low_priority_wave",
+      "status": "pass",
+      "notes": "Shared control docs should expose P38 as the current low-priority wave and keep no-merge posture explicit."
+    }
+  ]
+}

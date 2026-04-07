@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "current_closeout_wave": "p84_post_p83_keep_set_contraction_and_closeout",
+    "promotion_branch": "wip/p83-post-p82-promotion-branch-and-pr-handoff",
+    "promotion_branch_head": "ba23f00",
+    "published_branch": "wip/p75-post-p74-published-successor-freeze",
+    "published_branch_head": "53962ca",
+    "mounted_keep_paths": [
+      "D:/zWenbo/AI/LLMCompute",
+      "D:/zWenbo/AI/LLMCompute-worktrees/h27-promotion",
+      "D:/zWenbo/AI/wt/p56-main-scratch",
+      "D:/zWenbo/AI/wt/p69-post-h65-hygiene-only-cleanup",
+      "D:/zWenbo/AI/wt/p72-post-p71-archive-polish-stop-handoff",
+      "D:/zWenbo/AI/wt/p73-post-p72-hygiene-shrink-mergeprep",
+      "D:/zWenbo/AI/wt/p74-post-p73-successor-publication-review",
+      "D:/zWenbo/AI/wt/p75-post-p74-published-successor-freeze",
+      "D:/zWenbo/AI/wt/p83-post-p82-promotion-branch-and-pr-handoff"
+    ],
+    "removed_temporary_paths": [
+      "D:/zWenbo/AI/wt/p81-post-p80-clean-descendant-promotion-prep",
+      "D:/zWenbo/AI/wt/p82-post-p81-clean-main-promotion-probe"
+    ],
+    "selected_outcome": "keep_set_contracted_and_closeout_synced_after_p83",
+    "next_recommended_route": "promotion_pr_finalization_or_no_further_action",
+    "mounted_worktree_count": 9,
+    "pass_count": 5,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p83-post-p82-promotion-branch-and-pr-handoff\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p83-post-p82-promotion-branch-and-pr-handoff\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

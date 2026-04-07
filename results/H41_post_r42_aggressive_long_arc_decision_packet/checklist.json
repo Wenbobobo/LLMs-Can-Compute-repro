@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h41_docs_authorize_r43_and_r45_while_preserving_h40_h36_r42",
+      "status": "pass",
+      "notes": "H41 should preserve H40/H36/R42 and authorize exact R43 plus coequal model R45 without activating R41/R44."
+    },
+    {
+      "item_id": "f20_boundary_is_visible_inside_h41_decision_basis",
+      "status": "pass",
+      "notes": "H41 should only admit a coequal model lane because F20 already fixed the evidence boundary and downstream order."
+    },
+    {
+      "item_id": "driver_wave_and_plan_index_promote_h41_as_current_active_stage",
+      "status": "pass",
+      "notes": "The entry surfaces should treat H41 as current, with F20 visible and P27/R43/R45/H42 properly indexed."
+    }
+  ]
+}

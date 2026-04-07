@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "supported_here": [
+      "F25 lands the only admissible post-H48 planning-only restricted tiny-C lowering bundle.",
+      "F25 preserves H48 as the current active docs-only packet and H43 as the paper-grade endpoint.",
+      "F25 fixes exactly R50 as the next runtime candidate and H49 as the only follow-up packet."
+    ],
+    "unsupported_here": [
+      "F25 does not itself execute a runtime lane.",
+      "F25 does not authorize arbitrary C, broader Wasm, heap, float, IO, or multi-function program claims.",
+      "F25 does not fuse further numeric widening into the first tiny-C lowering pass."
+    ],
+    "disconfirmed_here": [
+      "The idea that positive R49 evidence should immediately widen into a broader compiled-language claim without an intermediate restricted tiny-C planning bundle."
+    ],
+    "distilled_result": {
+      "active_stage": "f25_post_h48_restricted_tinyc_lowering_bundle",
+      "current_active_docs_only_stage": "h48_post_r49_numeric_scaling_decision_packet",
+      "preserved_prior_docs_only_stage": "h47_post_r48_useful_case_bridge_refreeze",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_completed_numeric_scaling_gate": "r49_origin_useful_case_numeric_scaling_gate",
+      "preserved_frontend_bridge_gate": "r47_origin_restricted_frontend_translation_gate",
+      "current_low_priority_wave": "p35_post_h47_research_record_rollup",
+      "selected_outcome": "restricted_tinyc_lowering_bundle_saved",
+      "only_next_runtime_candidate": "r50_origin_restricted_tinyc_lowering_gate",
+      "only_followup_packet": "h49_post_r50_tinyc_lowering_decision_packet",
+      "non_selected_closeout_bundle": "p36_post_h48_falsification_closeout_bundle",
+      "next_required_lane": "r50_origin_restricted_tinyc_lowering_gate"
+    }
+  }
+}

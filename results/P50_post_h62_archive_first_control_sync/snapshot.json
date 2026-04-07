@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "path": "README.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "STATUS.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "status": "pass",
+      "missing_patterns": []
+    }
+  ]
+}

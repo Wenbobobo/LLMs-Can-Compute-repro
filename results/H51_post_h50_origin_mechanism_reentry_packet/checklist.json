@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h51_docs_record_explicit_mechanism_reentry_decision",
+      "status": "pass",
+      "notes": "H51 should record one narrow docs-only decision: preserve H50, select reentry through R55, and keep executor-entry work blocked."
+    },
+    {
+      "item_id": "upstream_h50_negative_closeout_is_preserved_not_overturned",
+      "status": "pass",
+      "notes": "H51 must preserve H50 as binding on the broader route while preserving H43 as the paper-grade endpoint."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h51_current_active_packet",
+      "status": "pass",
+      "notes": "Shared current-wave docs should expose H51 as the active packet, H50 as preserved prior, and R55 as the only next lane."
+    }
+  ]
+}

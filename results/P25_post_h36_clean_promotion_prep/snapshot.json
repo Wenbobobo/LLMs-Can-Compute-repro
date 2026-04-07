@@ -1,0 +1,30 @@
+{
+  "rows": [
+    {
+      "source": "results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json",
+      "fields": {
+        "active_stage": "h27_refreeze_after_r32_r33_same_endpoint_decision",
+        "systems_verdict": "systems_more_sharply_negative",
+        "next_priority_lane": "later_explicit_packet_required_before_new_runtime"
+      }
+    },
+    {
+      "source": "results/H36_post_r40_bounded_scalar_family_refreeze/summary.json",
+      "fields": {
+        "active_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+        "decision_state": "bounded_scalar_family_refrozen_narrowly",
+        "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+        "next_required_lane": "no_active_downstream_runtime_lane"
+      }
+    },
+    {
+      "source": "docs/milestones/P25_post_h36_clean_promotion_prep/promotion_manifest.md",
+      "fields": {
+        "source_of_truth_branch": "wip/h35-r40-p24-exec",
+        "clean_prep_branch": "wip/p25-f15-h37-exec",
+        "target_branch": "main",
+        "promotion_mode": "prepare_only"
+      }
+    }
+  ]
+}

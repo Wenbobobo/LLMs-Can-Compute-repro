@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p63_reads_h64_and_p62",
+      "status": "pass",
+      "notes": "P63 starts only after H64 and the prior P62 control-sync stack remain landed."
+    },
+    {
+      "item_id": "p63_current_branch_is_current_published_successor_or_registered_execution_lane",
+      "status": "pass",
+      "notes": "P63 should run either on the published successor branch or on a registered execution successor branch."
+    },
+    {
+      "item_id": "p63_scratch_branch_remains_available",
+      "status": "pass",
+      "notes": "The scratch integration branch should remain available as the absorbed local base."
+    },
+    {
+      "item_id": "p63_root_main_remains_quarantined",
+      "status": "pass",
+      "notes": "Dirty root main must remain parked on its quarantine branch."
+    },
+    {
+      "item_id": "p63_control_surfaces_expose_successor_stack",
+      "status": "pass",
+      "notes": "Current control surfaces must expose P63/P64/P65 as the live successor stack."
+    }
+  ]
+}

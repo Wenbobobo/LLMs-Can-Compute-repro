@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "source": "h59",
+      "selected_outcome": "freeze_reproduction_gap_and_require_different_cost_structure_for_reopen"
+    },
+    {
+      "source": "p42",
+      "selected_outcome": "self_contained_gptpro_dossier_ready"
+    },
+    {
+      "source": "f33",
+      "candidate_order": [
+        "amortized_or_indexed_trace_retrieval_route",
+        "low_level_compiled_or_external_coprocessor_route",
+        "transformed_or_trained_executor_route_only_if_cost_model_changes_materially"
+      ]
+    }
+  ]
+}

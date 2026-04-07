@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p58_reads_h64_p56_p57",
+      "status": "pass",
+      "notes": "P58 starts only after H64, P56, and P57 stay green."
+    },
+    {
+      "item_id": "p58_archive_and_release_ledgers_expose_current_followthrough_stack",
+      "status": "pass",
+      "notes": "Archive and release ledgers should expose the same H64 follow-through stack."
+    },
+    {
+      "item_id": "p58_release_note_and_review_boundary_stay_restrained",
+      "status": "pass",
+      "notes": "Archive/release helper wording must remain downstream of archive-first partial falsification."
+    }
+  ]
+}

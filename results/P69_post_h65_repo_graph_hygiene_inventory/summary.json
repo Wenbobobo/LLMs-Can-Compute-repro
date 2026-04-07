@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "active_stage_at_hygiene_time": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+    "current_repo_hygiene_sidecar": "p69_post_h65_repo_graph_hygiene_inventory",
+    "preserved_prior_repo_hygiene_sidecar": "p54_post_h63_clean_descendant_hygiene_and_artifact_slimming",
+    "current_planning_branch": "wip/p69-post-h65-hygiene-only-cleanup",
+    "current_published_branch": "wip/p66-post-p65-published-successor-freeze",
+    "current_published_branch_upstream": "origin/wip/p66-post-p65-published-successor-freeze",
+    "root_main_branch": "wip/root-main-parking-2026-03-24",
+    "root_main_dirty_count": 325,
+    "clean_keep_set_count": 5,
+    "p56_to_p66_left_count": 0,
+    "p56_to_p66_right_count": 18,
+    "origin_main_to_p66_left_count": 0,
+    "origin_main_to_p66_right_count": 159,
+    "selected_outcome": "repo_graph_hygiene_inventory_confirms_clean_descendant_keep_set_and_root_quarantine",
+    "next_required_lane": "p70_archive_index_and_artifact_policy_sync",
+    "pass_count": 10,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

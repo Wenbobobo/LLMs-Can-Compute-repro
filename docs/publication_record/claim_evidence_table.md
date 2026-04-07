@@ -2,6 +2,8 @@
 
 ## Current evidence
 
+Lock note: narrow positive mechanism result survives; broad headline reproduction did not land.
+
 - `C2e` — `results/M4_factorized_event_decoder/summary.json`
   Direct factorized event-value decoder: nontrivial teacher-forced accuracy,
   weak free-running rollout.
@@ -154,13 +156,44 @@
   still slower than both the best current reference path and the lowered path,
   so the systems verdict remains mixed.
 - `D0` — `results/H21_refreeze_after_r22_r23/summary.json`
-  Post-`R22/R23` refreeze: the current machine-readable state keeps scope
-  locked, records `systems_still_mixed`, leaves three frontier-activation
-  conditions unsatisfied, and routes the next priority to `P12`.
+  Post-`R22/R23` refreeze: the preserved pre-reopen control keeps scope
+  locked, records `systems_still_mixed`, leaves frontier activation
+  conditions unsatisfied, and preserves the same-endpoint control packet.
+- `D0` — `results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json`
+  Bounded reopen-control packet: the post-`H21` follow-up is locked to one
+  dual-track `D0` wave before any new execution runs.
+- `D0` — `results/R26_d0_boundary_localization_execution_gate/summary.json`
+  First-wave boundary scan: the declared `22`-candidate post-`H21` grid stays
+  exact throughout and still does not localize a true executor boundary.
+- `D0` — `results/R28_d0_trace_retrieval_contract_audit/summary.json`
+  Mechanism-contract audit: append-only trace, latest-write, stack, and
+  control-retrieval support remain positive on the current endpoint, but the
+  control isolation story is still only partial and the bottleneck remains
+  non-retrieval dominated.
+- `D0` — `results/R27_d0_boundary_localization_extension_gate/summary.json`
+  Conditional extension: the declared second-wave boundary packet stays exact
+  on `12/12` rows and still does not localize a true executor boundary.
+- `D0` — `results/H23_refreeze_after_r26_r27_r28/summary.json`
+  Current refreeze: the current machine-readable state keeps scope locked,
+  records `bounded_grid_still_not_localized`, carries
+  `mechanism_contract_supported_with_partial_control_isolation`, preserves
+  `systems_still_mixed`, and routes the next downstream docs lane to `P14`.
+- `D0` — `results/R30_d0_boundary_reauthorization_packet/summary.json`
+  Boundary reauthorization packet: the post-`H23` decision step authorizes one
+  future family-local sharp zoom through `R32` rather than reopening the
+  historical full-grid boundary search.
+- `D0` — `results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json`
+  Systems reauthorization packet: the post-`H23` systems decision step keeps
+  `R29` blocked and routes any later same-endpoint systems story through the
+  narrower `R33` non-retrieval audit first.
+- `D0` — `results/H25_refreeze_after_r30_r31_decision_packet/summary.json`
+  Active operational decision packet: `H25` preserves `H23` as the current
+  frozen scientific state while recording `R32` as the primary next lane,
+  `R33` as the deferred systems-audit lane, and `R29/F3` as still blocked.
 - `D0` — `results/M7_frontend_candidate_decision/decision_summary.json`
-  Frontend decision bundle: the current endpoint stays on tiny typed bytecode,
-  frontend widening is not authorized, and any revisit now requires a fresh
-  scope + systems case.
+  Frontend decision bundle: the preserved first compiled step stays on tiny
+  typed bytecode, frontend widening is not authorized, and any revisit now
+  requires a fresh scope + systems case.
 - `R2` — `results/E1b_systems_patch/summary.json`
   Patch-level systems bundle: the mixed gate is restated with same-scope
   component attribution, `25` component rows, `5` suite bridges, `4` history
@@ -180,28 +213,165 @@
 
 ## Current bounded mainline state
 
-- `H4` completed the bounded reproduction return packet, and `E1a/E1b/H5`
-  remain the immediate evidence baseline for current precision/systems wording.
-- `H21` is the current refrozen stage after the bounded
-  `H20/R22/R23/H21` follow-up on top of the preserved `H18/R19/R20/R21/H19`
-  packet.
-- `H20` separated dirty-tree hygiene from the next science wave without
-  widening the endpoint or changing the frozen evidence state by prose alone.
-- `R22` completed the harder same-endpoint boundary follow-up and strengthened
-  the no-break-observed story without localizing a true executor boundary.
-- `R23` completed the harder same-endpoint systems recheck, preserved exactness
-  on the full positive `D0` suite, and still left the systems verdict mixed.
-- `H19` remains the preserved pre-`R22/R23` same-endpoint refreeze for the
-  completed `H18/R19/R20/R21` packet.
-- `H17` remains the preserved prior same-scope refreeze for the completed
-  `H16/R15/R16/R17/R18` packet.
-- `H15` remains the preserved prior refreeze for the completed
-  `H14/R11/R12` reopen packet.
-- `H8/R6/R7/H9` remains the completed direct same-endpoint baseline for the
-  current packet.
-- `H6/R3/R4/(inactive R5)/H7` remains the deeper completed
-  exactness/mechanism baseline underneath it.
-- `E1c` remains inactive unless the active packet exposes a concrete frozen-`D0`
-  contradiction that wording alone cannot repair.
-- `H3` / `P10` / `P11` / `F1` remain the documentation/archive baseline while
+- `H64` is now the current active docs-only packet; it preserves `H63` as the
+  prior active packet, preserves `P53/P54/P55/F38` as the current closeout
+  sidecars/dossier, selects
+  `archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant`,
+  keeps the default downstream lane at `archive_or_hygiene_stop`, and leaves
+  runtime closed.
+- `P55` is the current promotion-prep wave; it keeps promotion-prep explicit,
+  keeps merge execution false, and locks the next handoff to the active
+  `H64` stack.
+- `P54` is the current repo-hygiene sidecar; it records
+  `clean_descendant_only_never_dirty_root_main`, keeps dirty root `main`
+  quarantined, keeps raw-row ignore rules active, keeps oversize tracked
+  artifacts at zero, and does not execute a merge.
+- `P53` is the current paper/archive claim-sync wave; it keeps the narrow
+  positive mechanism result explicit, keeps the broad headline negative
+  explicit, preserves `H58/H43`, makes archive-first partial falsification the
+  outward shorthand, and keeps `F38` dormant.
+- `F38` is the current dormant future dossier; it names the exact lifted
+  useful target, keeps retrieval-head cost share, query:insert ratio, tie
+  burden, and material cost-structure delta unresolved, and therefore keeps
+  `R63` ineligible and non-runtime only.
+- `H63` is the preserved prior active packet; it records
+  `archive_first_closeout_becomes_current_active_route_and_r63_stays_dormant`.
+- `H62` is the preserved earlier active packet; it records
+  `hygiene_first_scope_decision_keeps_archive_default_and_limits_any_reopen_to_r63_profile_gate`.
+- `H61` is the preserved prior active-before-that docs-only packet; it
+  preserves `H60` and `H59` as earlier decision packets, preserves `H58` as
+  the prior value-negative closeout, preserves `F32` as the closeout
+  certification bundle, preserves `H43` as the paper-grade endpoint, and
+  selects `archive_first_consolidation_becomes_default_posture`.
+- `F36` is the preserved prior qualification-only bundle; it preserves the one
+  admissible future family
+  `compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route`,
+  fixes strict baseline and stop-rule discipline, and keeps runtime closed.
+- `P46` is the preserved prior publication/docs wave; it keeps the narrow
+  positive mechanism result explicit, keeps the broad headline negative
+  explicit, makes narrow mechanistic reproduction plus executor-value partial
+  falsification the outward shorthand, and keeps the compiled-online route
+  qualification-only.
+- `P45` is the preserved prior repo-hygiene sidecar; it records the clean
+  successor line, keeps dirty root `main` quarantined, and records
+  `clean_descendant_only_never_dirty_root_main`.
+- `F35` is the current far-future storage bundle; it records
+  `high_cost_model_route_far_future_only` and
+  `programs_into_weights_route_far_future_only`.
+- `H60` is the preserved prior active packet; it records
+  `remain_planning_only_and_prepare_stop_or_archive`.
+- `F34` is the preserved prior reopen screen; it names only the one compiled-
+  online family and keeps same-lane executor-value microvariants inadmissible.
+- `P44` is the preserved prior publication/docs wave; it keeps the narrow
+  positive mechanism result explicit, keeps the broad headline negative
+  explicit, and keeps the compiled-online route conditional only at that stage.
+- `P43` is the preserved prior repo-hygiene sidecar; it records the preferred
+  repo-local worktree graph and the original descendant-only merge posture.
+- `P42` is the preserved prior advisory/docs wave; it records the
+  self-contained GPTPro dossier and keeps it advisory rather than
+  claim-bearing.
+- `P41` is the preserved prior publication/archive sync sidecar; it records
+  that archive/release surfaces are aligned to `H59`, confirms zero tracked
+  artifacts at or above roughly `10 MiB`, and confirms that raw-row ignore
+  rules remain active.
+- `F32` is the preserved prior closeout certification bundle; it certifies
+  that `H58` is a real stop boundary and not a staging point.
+- `H58` is the preserved prior docs-only closeout packet for the final
+  post-`H56` discriminator wave; it preserves `H56` as the prior compiled
+  useful-kernel closeout, preserves `H57` as the prior authorization packet,
+  preserves `H43` as the paper-grade endpoint, selects
+  `stop_as_mechanism_supported_but_no_bounded_executor_value`, keeps
+  `F27/R53/R54` blocked, and restores `no_active_downstream_runtime_lane`.
+- `F31` is the completed preserved planning bundle that fixed
+  `H57 -> R62 -> H58` as the only admissible post-`H56` sequence and kept
+  `P40` as the operational sidecar for that closed wave.
+- `H57` is the preserved prior docs-only authorization packet for the last
+  native useful-kernel discriminator lane; it preserved `H56`, preserved
+  `H43`, and authorized exactly `R62 -> H58` without reopening transformed or
+  trainable entry.
+- `R62` is the completed native useful-kernel value discriminator gate; it
+  keeps all declared native comparators exact on `4/4` rows across `2/2`
+  kernels but records `native_useful_kernel_route_lacks_bounded_value`
+  because accelerated wins are `0/2` on the longest kernel rows and
+  external-scalar same-order behavior is `0/2`.
+- `P40` is the preserved prior low-priority operational/docs wave for the
+  closed final-discriminator packet; it recorded the clean successor worktree,
+  kept `merge_executed = false` explicit, and confirmed zero tracked artifacts
+  at or above roughly `10 MiB`.
+- `H56` is the preserved prior docs-only interpretation packet for the closed
+  compiled useful-kernel bridge lane after landed `R60/R61`; it preserves
+  `H54` as the prior compiled-boundary closeout, preserves `H55` as the prior
+  useful-kernel reentry packet, preserves `H43` as the paper-grade endpoint,
+  selects
+  `freeze_minimal_useful_kernel_bridge_supported_without_bounded_value`,
+  keeps `F27/R53/R54` blocked, and restores
+  `no_active_downstream_runtime_lane`.
+- `F30` is the completed preserved planning bundle that fixed
+  `H55 -> R60 -> R61 -> H56` as the only admissible useful-kernel bridge
+  sequence above preserved `H54/H52/H43/H36`.
+- `H55` is the preserved prior docs-only interpretation packet for the
+  minimal useful-kernel carryover lane; it preserved `H54`, preserved `H52`,
+  preserved `H43`, and authorized exactly `R60 -> R61 -> H56`.
+- `R60` is the completed preserved prior compiled useful-kernel carryover
+  gate; it keeps `5/5` declared variants exact across `2/2` preserved kernels
+  with zero compiler-leakage breaks.
+- `R61` is the completed preserved prior useful-kernel comparator gate; it
+  keeps all comparators exact on the declared `R60` rows but records
+  `compiled_useful_kernel_route_lacks_bounded_value` because accelerated wins
+  are `0/5`.
+- `H54` is the preserved prior docs-only interpretation packet for the closed
+  compiled-boundary lane after landed `R58/R59`; it preserves `H52` as the
+  prior mechanism closeout, preserves `H53` as the prior compiled-boundary
+  reentry packet, preserves `H43` as the paper-grade endpoint, selects
+  `freeze_restricted_compiled_boundary_supported_narrowly_without_fastpath_value`,
+  and restores `no_active_downstream_runtime_lane`.
+- `H53` is the preserved prior docs-only interpretation packet for the
+  narrowed compiled-boundary reentry lane; it preserved negative `H52`,
+  preserved `H43`, and authorized exactly `R58 -> R59 -> H54`.
+- `H52` is the preserved prior docs-only interpretation packet for the closed
+  mechanism reentry lane after landed `R55/R56/R57`; it preserves `H50` as
+  the broader-route bounded-value closeout, preserves `H51` as the prior
+  mechanism-reentry packet, preserves `H43` as the paper-grade endpoint,
+  selects `freeze_origin_mechanism_supported_without_fastpath_value`, and
+  restores `no_active_downstream_runtime_lane`.
+- `H50` is the preserved prior docs-only interpretation packet for the bounded
+  mainline after completed `R51/R52`; it preserves `H49` as the prior
+  decision packet, preserves `H48` as the earlier decision packet, preserves
+  `H43` as the paper-grade endpoint, selects
+  `stop_as_exact_without_system_value`, keeps `F27` blocked and
+  non-selected, and restores `no_active_downstream_runtime_lane`.
+- `H43` is the preserved prior useful-case refreeze packet and current
+  paper-grade endpoint; it records claim `D` as `supported_here_narrowly` and
+  restores `no_active_downstream_runtime_lane`.
+- `H42` and `H41` are the preserved prior docs-only decision packets that
+  respectively authorized exact `R44` and authorized exact `R43` plus coequal
+  `R45`.
+- `H36` is the preserved active routing/refreeze packet; it freezes the
+  bounded-scalar family narrowly and remains the routing packet underneath the
+  later semantic-boundary and useful-case stacks.
+- `R42`, `R43`, `R44`, and `R45` remain the preserved semantic-boundary and
+  useful-case evidence stack underneath `H43`; exact evidence remains
+  decisive and model evidence remains explicitly non-substitutive.
+- `R46`, `R47`, `R48`, `R49`, `R50`, `R51`, and `R52` remain the preserved
+  post-`H43` useful-case extension stack; those packets stay historically
+  informative but do not override the later `H50/H52/H54/H56/H58` stop chain.
+- `F28`, `F29`, `F20`, `F18`, `F19`, `F17`, `F16`, and `F15` remain
+  preserved planning/control bundles; none changes the scientific lane by
+  itself.
+- `P27` remains the preserved explicit merge packet with
+  `merge_executed = false`; `P26` remains the preserved prior operational
+  promotion/artifact audit lane.
+- `H40`, `H38`, `H37`, `H35`, `H34`, `H33`, `H32`, `H31`, `H30`, `H29`, and
+  `H28` remain preserved routing/control history underneath the current stack.
+- `R41` remains deferred until a later explicit contradiction packet.
+- `H27` remains the preserved negative closeout of the old same-endpoint
+  recovery route.
+- `H25`, `H23`, `H21`, `H19`, `H17`, and `H15` remain preserved historical
+  same-endpoint control packets, not the current mainline state.
+- `H8/R6/R7/H9` remain the completed direct same-endpoint baseline, and
+  `H6/R3/R4/(inactive R5)/H7` remain the deeper exactness/mechanism baseline
+  underneath that historical route.
+- `E1c` remains inactive unless the active Origin-core packet exposes a
+  concrete frozen-`D0` contradiction that wording alone cannot repair.
+- `H3/P10/P11/F1` remain the documentation/archive baseline while
   `H4/E1a/E1b/H5` remain the completed bounded return baseline.

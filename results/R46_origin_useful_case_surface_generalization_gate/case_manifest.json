@@ -1,0 +1,120 @@
+{
+  "rows": [
+    {
+      "case_order": 1,
+      "kernel_id": "sum_i32_buffer",
+      "variant_id": "sum_len6_shifted_base",
+      "description": "Longer fixed-buffer sum with shifted base address and mixed-sign values.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "value_distribution_shift"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 384,
+      "program_name": "bytecode_sum_i32_buffer_len6_a520"
+    },
+    {
+      "case_order": 2,
+      "kernel_id": "sum_i32_buffer",
+      "variant_id": "sum_len8_dense_mixed_sign",
+      "description": "Wider fixed-buffer sum with denser mixed-sign values on a new static range.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "value_distribution_shift"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 512,
+      "program_name": "bytecode_sum_i32_buffer_len8_a560"
+    },
+    {
+      "case_order": 3,
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_sparse_len8_shifted_base",
+      "description": "Sparse nonzero count with low branch-taken density and shifted base range.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "branch_density_shift",
+        "zero_density_shift"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 768,
+      "program_name": "bytecode_count_nonzero_i32_buffer_sparse_len8_a600"
+    },
+    {
+      "case_order": 4,
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_dense_len7_shifted_base",
+      "description": "Dense nonzero count with near-max branch-taken density on a new static range.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "branch_density_shift",
+        "value_distribution_shift"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 768,
+      "program_name": "bytecode_count_nonzero_i32_buffer_dense_len7_a640"
+    },
+    {
+      "case_order": 5,
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_mixed_len9_shifted_base",
+      "description": "Longer mixed-density nonzero count with alternating zero runs and later nonzero bursts.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "branch_density_shift",
+        "zero_density_shift"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 1024,
+      "program_name": "bytecode_count_nonzero_i32_buffer_mixed_len9_a680"
+    },
+    {
+      "case_order": 6,
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_bimodal_len6_shifted_base",
+      "description": "Bimodal histogram with repeated pressure on bins 0 and 15 only.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "histogram_skew_shift"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 3072,
+      "program_name": "bytecode_histogram16_u8_bimodal_len6_a720"
+    },
+    {
+      "case_order": 7,
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_low_bin_skew_len8",
+      "description": "Low-bin skew histogram with repeated hits concentrated on bins 1 and 2.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "histogram_skew_shift"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4096,
+      "program_name": "bytecode_histogram16_u8_low_bin_skew_len8_a760"
+    },
+    {
+      "case_order": 8,
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_wide_len10_shifted_base",
+      "description": "Longer histogram with wider bin coverage and repeated late-bin revisits.",
+      "axis_tags": [
+        "buffer_length_shift",
+        "base_address_shift",
+        "value_distribution_shift",
+        "histogram_skew_shift"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 6144,
+      "program_name": "bytecode_histogram16_u8_wide_len10_a800"
+    }
+  ]
+}

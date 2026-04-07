@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "active_stage": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
+    "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+    "preserved_prior_mechanism_reentry_packet": "h51_post_h50_origin_mechanism_reentry_packet",
+    "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "current_planning_bundle": "f28_post_h50_origin_mechanism_reentry_bundle",
+    "selected_outcome": "freeze_origin_mechanism_supported_without_fastpath_value",
+    "non_selected_alternatives": [
+      "freeze_origin_mechanism_supported_with_fastpath_value",
+      "stop_as_partial_mechanism_only"
+    ],
+    "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+    "preserved_exact_retrieval_gate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+    "preserved_exact_trace_vm_gate": "r56_origin_append_only_trace_vm_semantics_gate",
+    "preserved_comparator_gate": "r57_origin_accelerated_trace_vm_comparator_gate",
+    "blocked_future_bundle": "f27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle",
+    "blocked_future_gates": [
+      "r53_origin_transformed_executor_entry_gate",
+      "r54_origin_trainable_executor_comparator_gate"
+    ],
+    "next_required_lane": "no_active_downstream_runtime_lane",
+    "supported_here_count": 3,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

@@ -27,6 +27,10 @@ dist/
 # Local results and scratch space
 results/local/
 results/tmp/
+results/**/probe_read_rows.json
+results/**/per_read_rows.json
+results/**/trace_rows.json
+results/**/step_rows.json
 results/R20_d0_runtime_mechanism_ablation_matrix/probe_read_rows.json
 tmp/
 *.log

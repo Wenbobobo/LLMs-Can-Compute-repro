@@ -1,0 +1,1029 @@
+{
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\wt\\f29\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\wt\\f29\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "exactness_rows": [
+    {
+      "case_id": "straight_line_arithmetic",
+      "category": "arithmetic",
+      "description": "Straight-line arithmetic smoke row on the typed stack-bytecode surface.",
+      "notes": "Keeps the smallest compiled boundary row visible before control or memory widening.",
+      "program_name": "bytecode_arithmetic_smoke",
+      "executed": true,
+      "compiled_scope_passed": true,
+      "compiled_scope_error_class": null,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "normalized_spec_trace_match": true,
+      "normalized_spec_final_state_match": true,
+      "normalized_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 3,
+        "stack": [
+          12
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 4
+      },
+      "lowered_final_state": {
+        "pc": 3,
+        "stack": [
+          12
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 4
+      },
+      "bytecode_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 7,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "const_i32",
+          "arg": 5,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 2,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 7
+        },
+        {
+          "pc": 1,
+          "opcode": "push_const",
+          "arg": 5
+        },
+        {
+          "pc": 2,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 3,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "case_id": "counted_loop_countdown",
+      "category": "counted_loop",
+      "description": "Counted loop row with repeated stack updates and taken branches.",
+      "notes": "Exercises bounded loop control without widening the opcode surface.",
+      "program_name": "bytecode_countdown_6",
+      "executed": true,
+      "compiled_scope_passed": true,
+      "compiled_scope_error_class": null,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "normalized_spec_trace_match": true,
+      "normalized_spec_final_state_match": true,
+      "normalized_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 5,
+        "stack": [
+          0
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 48
+      },
+      "lowered_final_state": {
+        "pc": 5,
+        "stack": [
+          0
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 48
+      },
+      "bytecode_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 6,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "dup",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 4,
+          "opcode": "jz_zero",
+          "arg": 7,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 7,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 8,
+          "opcode": "sub_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 9,
+          "opcode": "jmp",
+          "arg": 1,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 6
+        },
+        {
+          "pc": 1,
+          "opcode": "dup",
+          "arg": null
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 4,
+          "opcode": "jz",
+          "arg": 7
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 6,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 7,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 8,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 9,
+          "opcode": "jmp",
+          "arg": 1
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "case_id": "latest_write_overwrite_after_gap",
+      "category": "latest_write_memory",
+      "description": "Indirect overwrite-after-gap row on the admitted bytecode lowering surface.",
+      "notes": "Carries latest-write recovery into the compiled-boundary suite without reopening broad Wasm or arbitrary C.",
+      "program_name": "bytecode_dynamic_latest_write",
+      "executed": true,
+      "compiled_scope_passed": true,
+      "compiled_scope_error_class": null,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "normalized_spec_trace_match": true,
+      "normalized_spec_final_state_match": true,
+      "normalized_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 8,
+        "stack": [
+          17
+        ],
+        "memory": [
+          [
+            4,
+            17
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 9
+      },
+      "lowered_final_state": {
+        "pc": 8,
+        "stack": [
+          17
+        ],
+        "memory": [
+          [
+            4,
+            17
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 9
+      },
+      "bytecode_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 13,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "const_addr",
+          "arg": 4,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 2,
+          "opcode": "store_indirect",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 3,
+          "opcode": "const_i32",
+          "arg": 17,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 4,
+          "opcode": "const_addr",
+          "arg": 4,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "store_indirect",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "addr"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_addr",
+          "arg": 4,
+          "in_types": [],
+          "out_types": [
+            "addr"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "load_indirect",
+          "arg": null,
+          "in_types": [
+            "addr"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 8,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 13
+        },
+        {
+          "pc": 1,
+          "opcode": "push_const",
+          "arg": 4
+        },
+        {
+          "pc": 2,
+          "opcode": "store_at",
+          "arg": null
+        },
+        {
+          "pc": 3,
+          "opcode": "push_const",
+          "arg": 17
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 4
+        },
+        {
+          "pc": 5,
+          "opcode": "store_at",
+          "arg": null
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 4
+        },
+        {
+          "pc": 7,
+          "opcode": "load_at",
+          "arg": null
+        },
+        {
+          "pc": 8,
+          "opcode": "halt",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "case_id": "shallow_call_return_roundtrip",
+      "category": "call_return",
+      "description": "Single bounded call/return row with one declared frame-local slot.",
+      "notes": "Keeps call-frame retrieval explicit on the compiled-boundary suite.",
+      "program_name": "bytecode_call_frame_roundtrip_a192",
+      "executed": true,
+      "compiled_scope_passed": true,
+      "compiled_scope_error_class": null,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "normalized_spec_trace_match": true,
+      "normalized_spec_final_state_match": true,
+      "normalized_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 3,
+        "stack": [
+          10
+        ],
+        "memory": [
+          [
+            192,
+            10
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 10
+      },
+      "lowered_final_state": {
+        "pc": 3,
+        "stack": [
+          10
+        ],
+        "memory": [
+          [
+            192,
+            10
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 10
+      },
+      "bytecode_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 9,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 192,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "call",
+          "arg": 4,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 3,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "load_static",
+          "arg": 192,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 6,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "dup",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "store_static",
+          "arg": 192,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 9,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 9
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 192
+        },
+        {
+          "pc": 2,
+          "opcode": "call",
+          "arg": 4
+        },
+        {
+          "pc": 3,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 4,
+          "opcode": "load",
+          "arg": 192
+        },
+        {
+          "pc": 5,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 6,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 7,
+          "opcode": "dup",
+          "arg": null
+        },
+        {
+          "pc": 8,
+          "opcode": "store",
+          "arg": 192
+        },
+        {
+          "pc": 9,
+          "opcode": "ret",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    },
+    {
+      "case_id": "branch_fallthrough_revisit",
+      "category": "branch_revisit",
+      "description": "Branch-fallthrough revisit row that preserves alternate-path control without executing a broader call family.",
+      "notes": "Separates branch control from the shallower call/return roundtrip row.",
+      "program_name": "bytecode_branch_then_call_false",
+      "executed": true,
+      "compiled_scope_passed": true,
+      "compiled_scope_error_class": null,
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "surface_literal_passed": true,
+      "surface_literal_error_class": null,
+      "normalized_spec_trace_match": true,
+      "normalized_spec_final_state_match": true,
+      "normalized_spec_first_mismatch_step": null,
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "source_final_state": {
+        "pc": 8,
+        "stack": [
+          12
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 10
+      },
+      "lowered_final_state": {
+        "pc": 8,
+        "stack": [
+          12
+        ],
+        "memory": [],
+        "call_stack": [],
+        "halted": true,
+        "steps": 10
+      },
+      "bytecode_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 4,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "const_i32",
+          "arg": 5,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 2,
+          "opcode": "eq_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "jz_zero",
+          "arg": 6,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "const_i32",
+          "arg": 0,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 6,
+          "opcode": "const_i32",
+          "arg": 10,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "call",
+          "arg": 10,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 8,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 9,
+          "opcode": "pop",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 10,
+          "opcode": "const_i32",
+          "arg": 2,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 11,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 12,
+          "opcode": "ret",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ],
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 4
+        },
+        {
+          "pc": 1,
+          "opcode": "push_const",
+          "arg": 5
+        },
+        {
+          "pc": 2,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 3,
+          "opcode": "jz",
+          "arg": 6
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 10
+        },
+        {
+          "pc": 7,
+          "opcode": "call",
+          "arg": 10
+        },
+        {
+          "pc": 8,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 9,
+          "opcode": "pop",
+          "arg": null
+        },
+        {
+          "pc": 10,
+          "opcode": "push_const",
+          "arg": 2
+        },
+        {
+          "pc": 11,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 12,
+          "opcode": "ret",
+          "arg": null
+        }
+      ],
+      "stop_class": null,
+      "verdict": "exact"
+    }
+  ],
+  "cost_rows": [
+    {
+      "case_id": "straight_line_arithmetic",
+      "category": "arithmetic",
+      "source_instruction_count": 4,
+      "lowered_instruction_count": 4,
+      "source_step_count": 4,
+      "declared_memory_cell_count": 0,
+      "opcode_surface": [
+        "add_i32",
+        "const_i32",
+        "halt"
+      ]
+    },
+    {
+      "case_id": "counted_loop_countdown",
+      "category": "counted_loop",
+      "source_instruction_count": 10,
+      "lowered_instruction_count": 10,
+      "source_step_count": 48,
+      "declared_memory_cell_count": 0,
+      "opcode_surface": [
+        "const_i32",
+        "dup",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "pop",
+        "sub_i32"
+      ]
+    },
+    {
+      "case_id": "latest_write_overwrite_after_gap",
+      "category": "latest_write_memory",
+      "source_instruction_count": 9,
+      "lowered_instruction_count": 9,
+      "source_step_count": 9,
+      "declared_memory_cell_count": 0,
+      "opcode_surface": [
+        "const_addr",
+        "const_i32",
+        "halt",
+        "load_indirect",
+        "store_indirect"
+      ]
+    },
+    {
+      "case_id": "shallow_call_return_roundtrip",
+      "category": "call_return",
+      "source_instruction_count": 10,
+      "lowered_instruction_count": 10,
+      "source_step_count": 10,
+      "declared_memory_cell_count": 1,
+      "opcode_surface": [
+        "add_i32",
+        "call",
+        "const_i32",
+        "dup",
+        "halt",
+        "load_static",
+        "ret",
+        "store_static"
+      ]
+    },
+    {
+      "case_id": "branch_fallthrough_revisit",
+      "category": "branch_revisit",
+      "source_instruction_count": 13,
+      "lowered_instruction_count": 13,
+      "source_step_count": 10,
+      "declared_memory_cell_count": 0,
+      "opcode_surface": [
+        "add_i32",
+        "call",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jz_zero",
+        "pop",
+        "ret"
+      ]
+    }
+  ],
+  "category_rollup_rows": [
+    {
+      "category": "arithmetic",
+      "planned_case_count": 1,
+      "exact_case_count": 1
+    },
+    {
+      "category": "branch_revisit",
+      "planned_case_count": 1,
+      "exact_case_count": 1
+    },
+    {
+      "category": "call_return",
+      "planned_case_count": 1,
+      "exact_case_count": 1
+    },
+    {
+      "category": "counted_loop",
+      "planned_case_count": 1,
+      "exact_case_count": 1
+    },
+    {
+      "category": "latest_write_memory",
+      "planned_case_count": 1,
+      "exact_case_count": 1
+    }
+  ]
+}

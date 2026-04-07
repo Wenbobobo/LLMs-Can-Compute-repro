@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p84_reads_green_p83_summary",
+      "status": "pass",
+      "notes": "P84 starts only after the landed green P83 promotion handoff."
+    },
+    {
+      "item_id": "p84_runs_on_p83_promotion_branch",
+      "status": "pass",
+      "notes": "The keep-set closeout should be authored from the clean p83 promotion-ready branch."
+    },
+    {
+      "item_id": "p84_contracts_to_required_keep_set",
+      "status": "pass",
+      "notes": "Only the required mounted keep set plus quarantined dirty survivors should remain mounted."
+    },
+    {
+      "item_id": "p84_removes_temporary_p81_p82_worktrees",
+      "status": "pass",
+      "notes": "The temporary p81 and p82 worktrees should be removed while preserving branch lineage."
+    },
+    {
+      "item_id": "p84_router_docs_and_handoffs_are_synced",
+      "status": "pass",
+      "notes": "README/router/registry/handoff docs should all point at the P84/P83 closeout state."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p26_docs_fix_audit_only_posture_and_current_clean_branch",
+      "status": "pass",
+      "notes": "P26 should stay operational-only, fix the clean audit branch, and keep promotion at audit_only."
+    },
+    {
+      "item_id": "p26_manifest_delta_and_artifact_policy_keep_main_untouched",
+      "status": "pass",
+      "notes": "The P26 audit must encode packetized promotion guidance and keep artifact classification separate from scientific widening."
+    },
+    {
+      "item_id": "driver_wave_and_prior_support_treat_p26_as_completed_audit_not_merge_authorization",
+      "status": "pass",
+      "notes": "The entry surfaces should present P26 as a completed operational audit above H38, not as merge authorization."
+    }
+  ]
+}

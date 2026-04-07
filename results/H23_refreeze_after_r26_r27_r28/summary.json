@@ -1,0 +1,99 @@
+{
+  "experiment": "h23_refreeze_after_r26_r27_r28",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/H23_refreeze_after_r26_r27_r28/README.md",
+    "docs/milestones/H23_refreeze_after_r26_r27_r28/status.md",
+    "docs/milestones/H23_refreeze_after_r26_r27_r28/todo.md",
+    "docs/milestones/H23_refreeze_after_r26_r27_r28/acceptance.md",
+    "docs/milestones/H23_refreeze_after_r26_r27_r28/artifact_index.md",
+    "docs/milestones/H23_refreeze_after_r26_r27_r28/result_digest.md",
+    "results/H21_refreeze_after_r22_r23/summary.json",
+    "results/H22_post_h21_boundary_reopen_and_dual_track_lock/summary.json",
+    "results/R26_d0_boundary_localization_execution_gate/summary.json",
+    "results/R27_d0_boundary_localization_extension_gate/summary.json",
+    "results/R28_d0_trace_retrieval_contract_audit/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h23_refreeze_after_r26_r27_r28_complete",
+    "active_stage": "h23_refreeze_after_r26_r27_r28",
+    "prior_frozen_stage": "h21_refreeze_after_r22_r23",
+    "reopen_stage": "h22_post_h21_boundary_reopen_and_dual_track_lock",
+    "decision_state": "post_r26_r27_r28_refreeze_complete",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "boundary_verdict": "bounded_grid_still_not_localized",
+    "mechanism_contract_verdict": "mechanism_contract_supported_with_partial_control_isolation",
+    "systems_verdict": "systems_still_mixed",
+    "future_frontier_review_state": "planning_only_conditionally_reviewable",
+    "blocked_future_lanes": [
+      "r29_d0_same_endpoint_systems_recovery_execution_gate",
+      "f3_post_h23_scope_lift_decision_bundle"
+    ],
+    "unsatisfied_frontier_activation_conditions": [
+      "true_executor_boundary_localization",
+      "current_scope_systems_story_materially_positive",
+      "scope_lift_thesis_explicitly_reauthorized"
+    ],
+    "next_priority_lane": "p14_public_surface_sync_after_h23",
+    "supported_here_count": 4,
+    "unsupported_here_count": 4,
+    "disconfirmed_here_count": 1,
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "Advance to P14 to sync README, STATUS, and publication ledgers downstream of the landed H23 packet without widening any scientific claims.",
+    "supported_here": [
+      "H22 reopens the post-H21 mainline only as one bounded dual-track packet on the fixed D0 endpoint.",
+      "R26 executes 22/22 planned candidates under the declared first-wave boundary manifest.",
+      "R28 ends at `mechanism_contract_supported_with_partial_control_isolation` and preserves one explicit claim-layer/primitive audit.",
+      "The reopened boundary packet remains bounded even when it does not localize a clean failure."
+    ],
+    "unsupported_here": [
+      "H23 does not widen beyond the fixed tiny typed-bytecode D0 endpoint.",
+      "H23 does not authorize broader compiled-language claims or a wider 'LLMs are computers' headline.",
+      "The true executor boundary is still not localized strongly enough for a broader scope lift.",
+      "The same-endpoint systems story remains mixed and cannot be upgraded from the mechanism audit alone."
+    ],
+    "disconfirmed_here": [
+      "R28 disconfirms the narrower expectation that retrieval_total still dominates pointer-like exact on the current D0 evidence stack."
+    ],
+    "distilled_result": {
+      "h22_active_runtime_lane": "r26_d0_boundary_localization_execution_gate",
+      "h22_active_support_lane": "r28_d0_trace_retrieval_contract_audit",
+      "r26_lane_verdict": "grid_extended_still_not_localized",
+      "r27_execution_mode": "extension_mode",
+      "r27_lane_verdict": "extension_grid_still_not_localized",
+      "h23_boundary_verdict": "bounded_grid_still_not_localized",
+      "r28_mechanism_contract_verdict": "mechanism_contract_supported_with_partial_control_isolation",
+      "h21_systems_verdict": "systems_still_mixed"
+    }
+  }
+}

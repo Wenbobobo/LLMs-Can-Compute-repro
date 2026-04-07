@@ -1,0 +1,16 @@
+# Artifact Index
+
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/README.md`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/status.md`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/todo.md`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/acceptance.md`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/artifact_index.md`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/execution_manifest.md`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/lowering_contract.md`
+- `docs/milestones/R58_origin_restricted_stack_bytecode_lowering_contract_gate/stop_conditions.md`
+- `scripts/export_r58_origin_restricted_stack_bytecode_lowering_contract_gate.py`
+- `tests/test_export_r58_origin_restricted_stack_bytecode_lowering_contract_gate.py`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/case_manifest.json`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/lowering_report.json`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/stop_rule.json`
+- `results/R58_origin_restricted_stack_bytecode_lowering_contract_gate/summary.json`

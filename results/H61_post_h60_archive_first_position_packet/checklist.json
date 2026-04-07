@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "h61_preserves_h60",
+      "status": "pass",
+      "notes": "H60 stays the preserved prior active packet."
+    },
+    {
+      "item_id": "h61_reads_p45_clean_descendant_posture",
+      "status": "pass",
+      "notes": "Archive-first stays on a clean descendant line rather than routing through dirty root main."
+    },
+    {
+      "item_id": "h61_reads_f36_qualification_only_bundle",
+      "status": "pass",
+      "notes": "The one future route remains paper-only and runtime-closed."
+    },
+    {
+      "item_id": "h61_reads_f35_far_future_storage",
+      "status": "pass",
+      "notes": "Far-future model and weights routes remain stored but inactive."
+    },
+    {
+      "item_id": "h61_keeps_runtime_lane_closed",
+      "status": "pass",
+      "notes": "Archive-first does not open runtime execution."
+    }
+  ]
+}

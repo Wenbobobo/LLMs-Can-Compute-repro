@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "policy": "large_artifact_threshold_mib",
+      "value": 10.0
+    },
+    {
+      "policy": "tracked_large_artifact_count",
+      "value": 0
+    },
+    {
+      "policy": "merge_posture",
+      "value": "no_merge_back_to_dirty_root_main"
+    }
+  ]
+}

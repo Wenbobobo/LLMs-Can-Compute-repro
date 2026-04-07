@@ -1,0 +1,22 @@
+# P35 Artifact Index
+
+- `docs/plans/2026-03-24-post-h47-p35-f23-mainline-extension-master-plan.md`
+- `docs/plans/2026-03-24-post-h47-p35-research-record-rollup-design.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/README.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/status.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/todo.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/acceptance.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/artifact_index.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/artifact_inventory.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/root_dirty_quarantine.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/push_state.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/merge_posture.md`
+- `docs/milestones/P35_post_h47_research_record_rollup/negative_result_rollup.md`
+- `docs/milestones/H47_post_r48_useful_case_bridge_refreeze/README.md`
+- `docs/milestones/P31_post_h43_blog_guardrails_refresh/README.md`
+- `results/H47_post_r48_useful_case_bridge_refreeze/summary.json`
+- `results/P31_post_h43_blog_guardrails_refresh/summary.json`
+- `results/P35_post_h47_research_record_rollup/summary.json`
+- `results/P35_post_h47_research_record_rollup/checklist.json`
+- `results/P35_post_h47_research_record_rollup/claim_packet.json`
+- `results/P35_post_h47_research_record_rollup/snapshot.json`

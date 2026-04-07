@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "source": "results/H30_post_r36_r37_scope_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h30_post_r36_r37_scope_decision_packet",
+        "decision_state": "origin_core_tiny_compiled_boundary_refrozen",
+        "compiled_boundary_state": "tiny_compiled_boundary_supported_narrowly",
+        "next_required_lane": "later_explicit_packet_required_before_any_compiler_boundary_extension"
+      }
+    },
+    {
+      "source": "results/R37_origin_compiler_boundary_gate/summary.json",
+      "fields": {
+        "lane_verdict": "origin_tiny_compiled_boundary_supported_narrowly",
+        "admitted_source_case_count": 5,
+        "free_running_exact_count": 5,
+        "opcode_surface": [
+          "add_i32",
+          "call",
+          "const_i32",
+          "eq_i32",
+          "halt",
+          "jmp",
+          "jz_zero",
+          "load_static",
+          "ret",
+          "store_static",
+          "sub_i32"
+        ]
+      }
+    }
+  ]
+}

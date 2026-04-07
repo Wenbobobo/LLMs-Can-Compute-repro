@@ -1,0 +1,140 @@
+{
+  "experiment": "r28_d0_trace_retrieval_contract_audit",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "results/R19_d0_pointer_like_surface_generalization_gate/summary.json",
+    "results/R19_d0_pointer_like_surface_generalization_gate/runtime_rows.json",
+    "results/R20_d0_runtime_mechanism_ablation_matrix/summary.json",
+    "results/R20_d0_runtime_mechanism_ablation_matrix/runtime_matrix_rows.json",
+    "results/R20_d0_runtime_mechanism_ablation_matrix/row_mechanism_summary.json",
+    "results/R23_d0_same_endpoint_systems_overturn_gate/summary.json",
+    "results/R23_d0_same_endpoint_systems_overturn_gate/runtime_profile_rows.json"
+  ],
+  "summary": {
+    "status": "r28_trace_retrieval_contract_audit_complete",
+    "current_frozen_stage": "h21_refreeze_after_r22_r23",
+    "source_runtime_stages": [
+      "r19_d0_pointer_like_surface_generalization_gate",
+      "r20_d0_runtime_mechanism_ablation_matrix",
+      "r23_d0_same_endpoint_systems_overturn_gate"
+    ],
+    "gate": {
+      "mechanism_contract_verdict": "mechanism_contract_supported_with_partial_control_isolation",
+      "reason": "Latest-write and stack retrieval stay exact under pointer-like lookup, the negative controls fail claim-relevantly, and pointer-like exact still runs exactly on the current D0 suites. Control predecessor / return-site support is present, but not yet isolated by a dedicated primitive-only probe.",
+      "claim_layer_a_status": "supported",
+      "claim_layer_b_status": "supported_with_partial_control_isolation",
+      "claim_layer_c_status": "supported_for_exactness_not_systems_threshold",
+      "latest_write_status": "supported",
+      "stack_status": "supported",
+      "control_predecessor_status": "supported_but_not_directly_isolated",
+      "pointer_like_r20_median_retrieval_share": 0.0326173747931773,
+      "pointer_like_r23_median_retrieval_share": 0.023242820153297997,
+      "retrieval_bottleneck_verdict": "pointer_like_exact_non_retrieval_dominant",
+      "r23_systems_verdict": "systems_still_mixed",
+      "next_priority_lane": "h23_refreeze_after_r26_r27_r28"
+    },
+    "claim_layers": [
+      {
+        "layer_id": "A",
+        "claim_id": "append_only_trace_substrate",
+        "status": "supported",
+        "primary_evidence": "R19 pointer-like exact holds on 24/24 admitted+heldout rows.",
+        "current_limit": "The substrate evidence remains bounded to the fixed D0 endpoint and does not widen the thesis."
+      },
+      {
+        "layer_id": "B",
+        "claim_id": "low_dimensional_retrieval_contract",
+        "status": "supported_with_partial_control_isolation",
+        "primary_evidence": "R20 negative controls fail claim-relevantly while latest-write and stack probes stay exact under pointer-like retrieval.",
+        "current_limit": "Control predecessor / return-site retrieval is supported end-to-end but not yet isolated by a dedicated primitive-only probe."
+      },
+      {
+        "layer_id": "C",
+        "claim_id": "exact_executor_sufficiency_on_current_endpoint",
+        "status": "supported_for_exactness_not_systems_threshold",
+        "primary_evidence": "R23 pointer-like exact stays exact on 25/25 current positive D0 rows.",
+        "current_limit": "R23 still ends at `systems_still_mixed` with median ratio 4.164 vs best current reference."
+      }
+    ],
+    "primitive_rows": [
+      {
+        "primitive_id": "latest_write_address",
+        "verdict": "supported",
+        "direct_probe_available": true,
+        "r20_probe_row_count": 16,
+        "pointer_like_median_retrieval_correct_rate": 1.0,
+        "pointer_like_median_address_match_rate": 1.0,
+        "shuffled_median_retrieval_correct_rate": 0.3333333333333333,
+        "address_oblivious_median_address_match_rate": 0.3333333333333333,
+        "note": "Memory latest-write retrieval stays exact under pointer-like lookup and degrades under address-oblivious controls."
+      },
+      {
+        "primitive_id": "stack_depth",
+        "verdict": "supported",
+        "direct_probe_available": true,
+        "r20_probe_row_count": 16,
+        "pointer_like_median_retrieval_correct_rate": 1.0,
+        "pointer_like_median_address_match_rate": 1.0,
+        "shuffled_median_retrieval_correct_rate": 0.507413078071976,
+        "address_oblivious_median_address_match_rate": 0.80625,
+        "note": "Stack(depth) retrieval stays exact under pointer-like lookup and remains materially sensitive to shuffled controls."
+      },
+      {
+        "primitive_id": "control_predecessor_return_site",
+        "verdict": "supported_but_not_directly_isolated",
+        "direct_probe_available": false,
+        "r20_control_family_case_count": 10,
+        "r20_control_family_exact_count": 10,
+        "r20_control_negative_failure_count": 20,
+        "r23_control_suite_case_count": 8,
+        "r23_control_suite_exact_count": 8,
+        "pointer_like_median_correct_step_gap": 1.0,
+        "shuffled_median_step_gap_delta": 1.0,
+        "note": "Control/return-site behavior is supported end-to-end on control-heavy families and suites, but the current audit lacks a dedicated primitive-only isolation probe."
+      }
+    ],
+    "cost_row_count": 6,
+    "stress_limit_count": 3,
+    "recommended_next_action": "Refreeze the bounded R26/R27/R28 packet in H23 before any outward sync or broader planning update.",
+    "supported_here": [
+      "R19 keeps pointer-like exact on 24/24 bounded D0 rows across admitted and heldout variants.",
+      "R20 ends at `mechanism_supported` and records claim-relevant failure in 2 negative-control families.",
+      "R23 keeps pointer-like exact on 25/25 current positive D0 rows."
+    ],
+    "unsupported_here": [
+      "R28 does not overturn the mixed same-endpoint systems result by itself.",
+      "R28 does not widen beyond the fixed tiny typed-bytecode D0 endpoint.",
+      "R28 does not convert the bounded mechanism audit into a broader 'LLMs are computers' headline."
+    ],
+    "disconfirmed_here": [
+      "R28 disconfirms the narrower expectation that retrieval_total still dominates pointer-like exact after the current mechanism and systems packets."
+    ]
+  }
+}

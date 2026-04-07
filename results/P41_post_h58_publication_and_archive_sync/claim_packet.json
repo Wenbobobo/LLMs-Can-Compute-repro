@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "supports": [
+      "P41 syncs archive-facing and release-facing surfaces to the honest H59 gap state.",
+      "P41 keeps the raw-row ignore policy and large-artifact posture explicit.",
+      "P41 preserves explicit no-merge posture for dirty root main."
+    ],
+    "does_not_support": [
+      "Git LFS expansion for this wave",
+      "tracking large raw row dumps in git",
+      "treating publication sync as scientific reopening"
+    ],
+    "distilled_result": {
+      "active_stage_at_sync_time": "h59_post_h58_reproduction_gap_decision_packet",
+      "preserved_sidecar": "p41_post_h58_publication_and_archive_sync",
+      "selected_outcome": "publication_archive_surfaces_synced_to_h59_gap_state",
+      "tracked_large_artifact_count": 0,
+      "raw_row_ignore_rules_present": true,
+      "current_release_focus": "honest_narrow_mechanism_reproduction_gap_closeout",
+      "merge_executed": false
+    }
+  }
+}

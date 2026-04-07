@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p56_prerequisites_green",
+      "status": "pass",
+      "notes": "P56 starts only after landed H64/P54/P55 summaries stay green."
+    },
+    {
+      "item_id": "p56_docs_define_operational_merge_candidate_only",
+      "status": "pass",
+      "notes": "P56 docs must keep candidate prep explicit and merge execution false."
+    },
+    {
+      "item_id": "p56_manifest_delta_conflict_and_runbook_are_explicit",
+      "status": "pass",
+      "notes": "P56 must make delta, conflict, and runbook surfaces explicit."
+    },
+    {
+      "item_id": "p56_source_and_root_posture_are_clean_descendant_only",
+      "status": "pass",
+      "notes": "Source sync, branch availability, root quarantine, and oversize-artifact posture must all hold."
+    }
+  ]
+}

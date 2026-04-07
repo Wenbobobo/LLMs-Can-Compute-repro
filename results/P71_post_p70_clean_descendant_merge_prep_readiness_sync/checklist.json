@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "item_id": "p71_reads_p70",
+      "status": "pass",
+      "notes": "P71 runs only after P70 lands the archive-index and artifact-policy sync."
+    },
+    {
+      "item_id": "p71_runs_on_current_hygiene_branch",
+      "status": "pass",
+      "notes": "P71 should run from the current hygiene-only cleanup branch."
+    },
+    {
+      "item_id": "p71_local_integration_branch_remains_clean",
+      "status": "pass",
+      "notes": "The preserved local integration base should remain clean."
+    },
+    {
+      "item_id": "p71_merge_tree_probe_remains_conflict_free",
+      "status": "pass",
+      "notes": "The read-only merge-tree probe should remain conflict-free and non-executing."
+    },
+    {
+      "item_id": "p71_current_stage_driver_mentions_cleanup_stack",
+      "status": "pass",
+      "notes": "The current stage driver should expose the current hygiene-only cleanup stack and merge-prep base."
+    },
+    {
+      "item_id": "p71_root_readme_and_status_mention_cleanup_stack",
+      "status": "pass",
+      "notes": "README and STATUS should expose the current hygiene-only cleanup stack explicitly."
+    },
+    {
+      "item_id": "p71_docs_routers_mention_cleanup_stack",
+      "status": "pass",
+      "notes": "The docs and milestones routers should expose the current hygiene-only cleanup stack."
+    },
+    {
+      "item_id": "p71_plans_index_points_to_post_p71_handoff",
+      "status": "pass",
+      "notes": "The plans index should route the next planning round through the post-P71 handoff files."
+    },
+    {
+      "item_id": "p71_post_p71_handoff_surfaces_are_current",
+      "status": "pass",
+      "notes": "The next plan-mode handoff and prompts should preserve the current merge-prep readiness facts."
+    },
+    {
+      "item_id": "p71_merge_prep_readiness_doc_is_current",
+      "status": "pass",
+      "notes": "The merge-prep readiness doc should keep the route non-executing and dirty-root-free."
+    }
+  ]
+}

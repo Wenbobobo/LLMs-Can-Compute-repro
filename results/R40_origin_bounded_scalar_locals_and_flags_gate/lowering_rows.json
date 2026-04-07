@@ -1,0 +1,326 @@
+{
+  "rows": [
+    {
+      "case_id": "bounded_scalar_admitted",
+      "family_role": "admitted",
+      "program_name": "bytecode_bounded_scalar_flag_loop_6_a320",
+      "lowered_instruction_count": 21,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 6
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 320
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 322
+        },
+        {
+          "pc": 4,
+          "opcode": "load",
+          "arg": 320
+        },
+        {
+          "pc": 5,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 6,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 7,
+          "opcode": "store",
+          "arg": 321
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 321
+        },
+        {
+          "pc": 9,
+          "opcode": "jz",
+          "arg": 12
+        },
+        {
+          "pc": 10,
+          "opcode": "load",
+          "arg": 322
+        },
+        {
+          "pc": 11,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 322
+        },
+        {
+          "pc": 13,
+          "opcode": "load",
+          "arg": 320
+        },
+        {
+          "pc": 14,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 15,
+          "opcode": "store",
+          "arg": 322
+        },
+        {
+          "pc": 16,
+          "opcode": "load",
+          "arg": 320
+        },
+        {
+          "pc": 17,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 18,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 19,
+          "opcode": "store",
+          "arg": 320
+        },
+        {
+          "pc": 20,
+          "opcode": "jmp",
+          "arg": 4
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 11,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            320,
+            0
+          ],
+          [
+            321,
+            1
+          ],
+          [
+            322,
+            21
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 102
+      }
+    },
+    {
+      "case_id": "bounded_scalar_boundary",
+      "family_role": "boundary_stress",
+      "program_name": "bytecode_bounded_scalar_flag_loop_long_12_a336",
+      "lowered_instruction_count": 29,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 12
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 336
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 338
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 5,
+          "opcode": "store",
+          "arg": 339
+        },
+        {
+          "pc": 6,
+          "opcode": "load",
+          "arg": 336
+        },
+        {
+          "pc": 7,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 8,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 9,
+          "opcode": "store",
+          "arg": 337
+        },
+        {
+          "pc": 10,
+          "opcode": "load",
+          "arg": 337
+        },
+        {
+          "pc": 11,
+          "opcode": "jz",
+          "arg": 16
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 338
+        },
+        {
+          "pc": 13,
+          "opcode": "load",
+          "arg": 339
+        },
+        {
+          "pc": 14,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 15,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 16,
+          "opcode": "load",
+          "arg": 338
+        },
+        {
+          "pc": 17,
+          "opcode": "load",
+          "arg": 336
+        },
+        {
+          "pc": 18,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 19,
+          "opcode": "store",
+          "arg": 338
+        },
+        {
+          "pc": 20,
+          "opcode": "load",
+          "arg": 339
+        },
+        {
+          "pc": 21,
+          "opcode": "load",
+          "arg": 336
+        },
+        {
+          "pc": 22,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 23,
+          "opcode": "store",
+          "arg": 339
+        },
+        {
+          "pc": 24,
+          "opcode": "load",
+          "arg": 336
+        },
+        {
+          "pc": 25,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 26,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 27,
+          "opcode": "store",
+          "arg": 336
+        },
+        {
+          "pc": 28,
+          "opcode": "jmp",
+          "arg": 6
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 15,
+        "stack": [
+          156
+        ],
+        "memory": [
+          [
+            336,
+            0
+          ],
+          [
+            337,
+            1
+          ],
+          [
+            338,
+            78
+          ],
+          [
+            339,
+            78
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 244
+      }
+    }
+  ]
+}

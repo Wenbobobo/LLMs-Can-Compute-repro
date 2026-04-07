@@ -1,0 +1,13 @@
+{
+  "rows": [
+    {
+      "decision": "authorize_useful_kernel_carryover_through_r60_first",
+      "reason": "H54 closed the toy compiled-boundary lane positively enough to justify one minimal useful-kernel falsification pass."
+    },
+    {
+      "decision": "keep_h54_terminal_and_stop_before_useful_kernel_reentry",
+      "selected": false,
+      "reason": "Not selected because the minimal useful-kernel question remains scientifically material."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "supports": [
+      "H65 makes archive-first terminal freeze the active repo route above the preserved H64 packet.",
+      "H65 keeps explicit archive stop or hygiene-only follow-through as the default downstream state.",
+      "H65 keeps R63 dormant and non-runtime only rather than converting it into authorization."
+    ],
+    "does_not_support": [
+      "runtime reopening",
+      "same-lane executor-value reopening",
+      "integration through dirty root main"
+    ],
+    "distilled_result": {
+      "active_stage": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+      "preserved_prior_active_packet": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+      "current_publication_review_wave": "p66_post_p65_successor_publication_review",
+      "current_publication_freeze_wave": "p67_post_p66_published_successor_freeze",
+      "current_release_hygiene_and_control_rebaseline_wave": "p68_post_p67_release_hygiene_and_control_rebaseline",
+      "current_published_clean_descendant_branch": "wip/p66-post-p65-published-successor-freeze",
+      "preserved_prior_successor_stack": "p63_p64_p65",
+      "current_dormant_future_dossier": "f38_post_h62_r63_dormant_eligibility_profile_dossier",
+      "default_downstream_lane": "explicit_archive_stop_or_hygiene_only",
+      "conditional_downstream_lane": "r63_post_h62_coprocessor_eligibility_profile_gate",
+      "all_prerequisites_green": true,
+      "runtime_authorization": "closed",
+      "selected_outcome": "archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop",
+      "next_required_lane": "explicit_archive_stop_or_hygiene_only"
+    }
+  }
+}

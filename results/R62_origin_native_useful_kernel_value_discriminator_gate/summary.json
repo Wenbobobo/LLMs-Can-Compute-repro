@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "current_active_docs_only_stage": "h57_post_h56_last_discriminator_authorization_packet",
+    "preserved_prior_docs_only_closeout": "h56_post_r60_r61_useful_kernel_decision_packet",
+    "current_planning_bundle": "f31_post_h56_final_discriminating_value_boundary_bundle",
+    "current_low_priority_wave": "p40_post_h56_successor_worktree_and_artifact_hygiene_sync",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "active_runtime_lane": "r62_origin_native_useful_kernel_value_discriminator_gate",
+    "gate": {
+      "lane_verdict": "native_useful_kernel_route_lacks_bounded_value",
+      "planned_case_count": 4,
+      "executed_case_count": 4,
+      "exact_case_count": 4,
+      "exact_kernel_count": 2,
+      "longest_row_accelerated_faster_than_linear_count": 0,
+      "longest_row_within_external_order_count": 0,
+      "geomean_linear_over_accelerated_speedup": 0.4059897369584522,
+      "selected_h58_outcome": "stop_as_mechanism_supported_but_no_bounded_executor_value",
+      "next_required_packet": "h58_post_r62_origin_value_boundary_closeout_packet"
+    },
+    "pass_count": 3,
+    "blocked_count": 1
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

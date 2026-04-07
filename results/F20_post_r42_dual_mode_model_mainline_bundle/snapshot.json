@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "source": "results/H40_post_h38_semantic_boundary_activation_packet/summary.json",
+      "fields": {
+        "active_stage": "h40_post_h38_semantic_boundary_activation_packet",
+        "selected_outcome": "authorize_r42_origin_append_only_memory_retrieval_contract_gate",
+        "authorized_next_runtime_candidate": "r42_origin_append_only_memory_retrieval_contract_gate"
+      }
+    },
+    {
+      "source": "results/R42_origin_append_only_memory_retrieval_contract_gate/summary.json",
+      "fields": {
+        "active_runtime_lane": "r42_origin_append_only_memory_retrieval_contract_gate",
+        "lane_verdict": "keep_semantic_boundary_route",
+        "conditional_next_runtime_candidate": "r43_origin_bounded_memory_small_vm_execution_gate"
+      }
+    },
+    {
+      "source": "docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/downstream_route_order.md",
+      "fields": {
+        "promotion_wave": "p27_post_h41_clean_promotion_and_explicit_merge_packet",
+        "exact_gate": "r43_origin_bounded_memory_small_vm_execution_gate",
+        "model_gate": "r45_origin_dual_mode_model_mainline_gate",
+        "followup_packet": "h42_post_r43_route_selection_packet"
+      }
+    }
+  ]
+}

@@ -55,9 +55,10 @@ def test_build_summary_reports_current_polish_phase() -> None:
     rows = module.build_sync_checklist(**inputs)
     summary = module.build_summary(rows)
 
-    assert summary["current_paper_phase"] == "h19_refreeze_and_next_scope_decision_complete"
+    assert summary["current_paper_phase"] == "h52_current_control_with_h43_paper_endpoint"
+    assert summary["internal_driver_phase"] == "h52_post_r55_r56_r57_origin_mechanism_decision_packet_active"
     assert summary["release_summary_role"] == "approved_downstream_short_update_source"
     assert summary["blocked_count"] == 0
     assert summary["recommended_next_action"] == (
-        "keep the current H19 frozen same-endpoint state aligned across public-surface docs while preserving H18/R19/R20/R21 as the completed same-endpoint mainline reopen packet, H17 as the preserved prior same-scope refreeze, H15 as the prior refreeze decision, H14/R11/R12 as the completed prior reopen packet, H13/V1 as preserved handoff state, and H8/R6/R7/H9 plus H10/H11/R8/R9/R10/H12 as preserved baselines"
+        "keep the outward-facing surface aligned while recording H52 as the current docs-only mechanism closeout packet, H50 as the preserved broader-route value closeout, H51 as the preserved prior mechanism-reentry packet, H43 as the paper-grade endpoint, R55/R56 as exact mechanism evidence, R57 as negative fast-path comparator evidence, P37 as the current low-priority operational/docs wave, P28 as the completed publication/control sync packet, P27 as the completed explicit merge packet with merge_executed = false, H42/H41 as preserved prior docs-only packets, H36 as the preserved routing/refreeze packet, and no_active_downstream_runtime_lane as the current follow-on state"
     )

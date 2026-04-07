@@ -77,11 +77,48 @@
 - `R22` sharpens that caveat further: the harder `102`-candidate follow-up also
   stays exact, so the true executor boundary is still not localized on current
   evidence.
+- `R26` and `R27` extend that caveat into the post-`H21` reopen packet: the
+  bounded `22`-candidate first wave and the bounded `12`-candidate extension
+  also stay exact, so the true executor boundary remains unresolved even after
+  the later reopen wave.
 - `R23` is a first-class mixed systems result, not a near-win: pointer-like
   exact stays exact on `25/25` full-suite rows and is far faster than imported
   accelerated, but it remains about `4.16x` slower than the best current
   reference path and still slower than the lowered path on the bounded systems
   criterion.
-- `H21` therefore keeps frontier review planning-only: the same-endpoint
-  systems story is still not materially positive enough for broader systems,
-  frontend, or demo claims.
+- `R28` strengthens the mechanism story without overturning that mixed result:
+  the contract is supported with partial control isolation, but the bottleneck
+  remains non-retrieval dominated and the audit does not convert mechanism
+  support into a systems win.
+- `H23` therefore keeps frontier review planning-only, and `H25` preserves
+  that restraint while ordering the next bounded same-endpoint work through
+  `R32` first and deferred `R33` second: the systems story is still not
+  materially positive enough for broader systems, frontend, or demo claims,
+  and the executor boundary is still not localized.
+- `H27` later closes that old same-endpoint recovery line more sharply
+  negative: `R32` still does not localize a true boundary, `R33` still does
+  not turn the systems story positive, and the old `R29/F3` route remains
+  blocked rather than implicitly revived.
+- `R36` sharpens the current precision caveat on the active Origin-core bundle:
+  selected inflated-horizon float32 `single_head` rows fail by
+  `tie_collapse`, bounded decomposition schemes recover those exported rows,
+  and that recovery still does not authorize compiled/demo scope lift by
+  momentum.
+- `R37` remains a narrow existence proof, not a broad compiler result: one tiny
+  admitted bytecode subset lowers and executes exactly on the active
+  Origin-core substrate, but that does not reopen arbitrary `C`, broader
+  language support, or same-endpoint systems claims.
+- `R62` extends that value-negative boundary onto native useful-kernel rows:
+  even after removing compiler/lowering time from the measured executor
+  comparator and running native `sum/count` trace programs directly, the
+  accelerated route stays exact on `4/4` rows but remains slower than native
+  linear on the longest row of both kernels and stays far outside the external
+  scalar comparator's order of magnitude, so `H58` closes the mainline as
+  mechanism-supported but value-negative.
+- `R39` is narrow same-substrate follow-up evidence, not a broader compiler
+  opening: one declared helper-body permutation with target renumbering
+  survives on the admitted row and named same-family boundary probe, but that
+  does not justify arbitrary control-surface freedom or broader compiler
+  support.
+- `H34` therefore keeps the compiled-boundary line complete-for-now rather
+  than reopening a new same-substrate runtime lane by momentum.

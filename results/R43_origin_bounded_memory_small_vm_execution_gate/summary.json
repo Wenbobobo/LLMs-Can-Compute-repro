@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "current_paper_phase": "r43_origin_bounded_memory_small_vm_execution_gate_complete",
+    "active_runtime_lane": "r43_origin_bounded_memory_small_vm_execution_gate",
+    "activation_packet": "h41_post_r42_aggressive_long_arc_decision_packet",
+    "preserved_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "current_completed_retrieval_contract_gate": "r42_origin_append_only_memory_retrieval_contract_gate",
+    "current_model_mainline_bundle": "f20_post_r42_dual_mode_model_mainline_bundle",
+    "explicit_merge_packet": "p27_post_h41_clean_promotion_and_explicit_merge_packet",
+    "gate": {
+      "lane_verdict": "keep_semantic_boundary_route",
+      "planned_family_count": 5,
+      "executed_family_count": 5,
+      "exact_family_count": 5,
+      "exact_core_family_count": 4,
+      "optional_call_family_executed": true,
+      "optional_call_family_exact": true,
+      "stop_rule_triggered": false,
+      "later_explicit_packet_required": true,
+      "conditional_next_runtime_candidate": "r45_origin_dual_mode_model_mainline_gate",
+      "later_explicit_followup_packet": "h42_post_r43_route_selection_packet"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r43-bounded-memory-mainline\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r43-bounded-memory-mainline\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

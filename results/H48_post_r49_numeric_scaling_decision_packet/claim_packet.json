@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "supported_here": [
+      "H48 lands the required explicit post-R49 docs-only interpretation packet.",
+      "H48 preserves H43 as the paper-grade endpoint while preserving H47 as the prior docs-only packet.",
+      "H48 authorizes exactly F25 as the next planning-only bundle after positive R49 evidence."
+    ],
+    "unsupported_here": [
+      "H48 does not widen the claim ceiling beyond bounded useful cases.",
+      "H48 does not itself authorize a broader runtime lane, arbitrary C, or hybrid scope growth.",
+      "H48 does not erase P36; it leaves the falsification-closeout route explicit but non-selected."
+    ],
+    "disconfirmed_here": [
+      "The idea that R49 should force either immediate tiny-C execution or a broad systems claim without an intermediate planning bundle."
+    ],
+    "distilled_result": {
+      "active_stage": "h48_post_r49_numeric_scaling_decision_packet",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_decision_packet": "h47_post_r48_useful_case_bridge_refreeze",
+      "current_exact_first_planning_bundle": "f23_post_h47_numeric_scaling_bundle",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "selected_outcome": "authorize_f25_restricted_tinyc_lowering_bundle",
+      "current_completed_numeric_scaling_gate": "r49_origin_useful_case_numeric_scaling_gate",
+      "authorized_next_planning_bundle": "f25_post_h48_restricted_tinyc_lowering_bundle",
+      "non_selected_closeout_bundle": "p36_post_h48_falsification_closeout_bundle",
+      "current_low_priority_wave": "p35_post_h47_research_record_rollup",
+      "merge_executed": false,
+      "later_explicit_packet_required_before_scope_widening": true,
+      "next_required_lane": "f25_post_h48_restricted_tinyc_lowering_bundle"
+    }
+  }
+}

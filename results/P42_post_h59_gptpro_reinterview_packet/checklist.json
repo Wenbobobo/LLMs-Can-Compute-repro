@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p42_dossier_is_self_contained",
+      "status": "pass",
+      "notes": "The dossier must work for a GPTPro session that cannot browse the repository."
+    },
+    {
+      "item_id": "p42_dossier_includes_key_code_files",
+      "status": "pass",
+      "notes": "The dossier includes a small, high-signal set of exact retrieval/execution code excerpts."
+    },
+    {
+      "item_id": "p42_dossier_uses_one_integrated_inquiry",
+      "status": "pass",
+      "notes": "The ask should be one integrated judgment rather than many short disconnected questions."
+    },
+    {
+      "item_id": "p42_dossier_remains_advisory_only",
+      "status": "pass",
+      "notes": "The dossier informs future planning but does not reopen science by itself."
+    }
+  ]
+}

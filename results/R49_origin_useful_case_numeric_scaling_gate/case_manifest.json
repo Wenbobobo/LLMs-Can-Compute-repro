@@ -1,0 +1,154 @@
+{
+  "rows": [
+    {
+      "case_order": 1,
+      "bucket_id": "bucket_a_2x",
+      "kernel_id": "sum_i32_buffer",
+      "variant_id": "sum_len16_shift256",
+      "description": "2x sum bucket with longer fixed buffer and +256 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 600,
+      "program_name": "bytecode_sum_i32_buffer_len16_a816",
+      "precision_reference_sampled": false
+    },
+    {
+      "case_order": 2,
+      "bucket_id": "bucket_a_2x",
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_len18_dense_shift256",
+      "description": "2x count bucket with dense nonzero branch pressure and +256 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "branch_density_shift",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 600,
+      "program_name": "bytecode_count_nonzero_i32_buffer_len18_a936",
+      "precision_reference_sampled": true
+    },
+    {
+      "case_order": 3,
+      "bucket_id": "bucket_a_2x",
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_len16_lowbin_shift256",
+      "description": "2x histogram bucket with low-bin skew and +256 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "histogram_low_bin_skew",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 600,
+      "program_name": "bytecode_histogram16_u8_len16_a1056",
+      "precision_reference_sampled": false
+    },
+    {
+      "case_order": 4,
+      "bucket_id": "bucket_b_4x",
+      "kernel_id": "sum_i32_buffer",
+      "variant_id": "sum_len32_shift1024",
+      "description": "4x sum bucket with longer fixed buffer and +1024 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 1600,
+      "program_name": "bytecode_sum_i32_buffer_len32_a1584",
+      "precision_reference_sampled": false
+    },
+    {
+      "case_order": 5,
+      "bucket_id": "bucket_b_4x",
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_len36_dense_shift1024",
+      "description": "4x count bucket with dense nonzero branch pressure and +1024 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "branch_density_shift",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 1600,
+      "program_name": "bytecode_count_nonzero_i32_buffer_len36_a1704",
+      "precision_reference_sampled": false
+    },
+    {
+      "case_order": 6,
+      "bucket_id": "bucket_b_4x",
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_len32_lowbin_shift1024",
+      "description": "4x histogram bucket with low-bin skew and +1024 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "histogram_low_bin_skew",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 1600,
+      "program_name": "bytecode_histogram16_u8_len32_a1824",
+      "precision_reference_sampled": true
+    },
+    {
+      "case_order": 7,
+      "bucket_id": "bucket_c_8x",
+      "kernel_id": "sum_i32_buffer",
+      "variant_id": "sum_len64_shift4096",
+      "description": "8x sum bucket with longer fixed buffer and +4096 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 4000,
+      "program_name": "bytecode_sum_i32_buffer_len64_a4656",
+      "precision_reference_sampled": false
+    },
+    {
+      "case_order": 8,
+      "bucket_id": "bucket_c_8x",
+      "kernel_id": "count_nonzero_i32_buffer",
+      "variant_id": "count_len72_dense_shift4096",
+      "description": "8x count bucket with dense nonzero branch pressure and +4096 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "branch_density_shift",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "medium_exact_trace",
+      "max_steps": 4000,
+      "program_name": "bytecode_count_nonzero_i32_buffer_len72_a4776",
+      "precision_reference_sampled": false
+    },
+    {
+      "case_order": 9,
+      "bucket_id": "bucket_c_8x",
+      "kernel_id": "histogram16_u8",
+      "variant_id": "histogram_len64_lowbin_shift4096",
+      "description": "8x histogram bucket with low-bin skew and +4096 preserved-base shift.",
+      "axis_tags": [
+        "buffer_length_scale",
+        "base_address_scale",
+        "histogram_low_bin_skew",
+        "numeric_precision_gate"
+      ],
+      "comparison_mode": "long_exact_final_state",
+      "max_steps": 4000,
+      "program_name": "bytecode_histogram16_u8_len64_a4896",
+      "precision_reference_sampled": true
+    }
+  ]
+}

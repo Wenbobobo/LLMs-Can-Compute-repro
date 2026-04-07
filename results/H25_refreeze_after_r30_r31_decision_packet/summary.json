@@ -1,0 +1,78 @@
+{
+  "experiment": "h25_refreeze_after_r30_r31_decision_packet",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/README.md",
+    "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/status.md",
+    "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/todo.md",
+    "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/acceptance.md",
+    "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/artifact_index.md",
+    "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/result_digest.md",
+    "results/H23_refreeze_after_r26_r27_r28/summary.json",
+    "results/R30_d0_boundary_reauthorization_packet/summary.json",
+    "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/summary.json"
+  ],
+  "summary": {
+    "current_paper_phase": "h25_post_h23_reauthorization_packet_complete",
+    "active_stage": "h25_refreeze_after_r30_r31_decision_packet",
+    "current_frozen_stage": "h23_refreeze_after_r26_r27_r28",
+    "decision_state": "post_h23_reauthorization_packet_complete",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "boundary_reauthorization_verdict": "execute_one_more_family_local_zoom",
+    "systems_reauthorization_verdict": "audit_non_retrieval_overhead_first",
+    "next_priority_lane": "r32_d0_family_local_boundary_sharp_zoom",
+    "deferred_audit_lane": "r33_d0_non_retrieval_overhead_localization_audit",
+    "blocked_future_lanes": [
+      "r29_d0_same_endpoint_systems_recovery_execution_gate",
+      "f3_post_h23_scope_lift_decision_bundle"
+    ],
+    "supported_here_count": 3,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "Execute R32 only through its predeclared family-local sharp-zoom manifest while keeping R33 deferred as the systems-audit prerequisite and leaving R29/F3 blocked.",
+    "supported_here": [
+      "H23 remains the current frozen scientific state after the bounded post-H21 reopen/refreeze packet.",
+      "R30 authorizes one future bounded family-local boundary sharp zoom instead of another full-grid expansion.",
+      "R31 routes any later same-endpoint systems recovery discussion through a narrower non-retrieval overhead audit first."
+    ],
+    "unsupported_here": [
+      "H25 does not upgrade the H23 systems verdict from mixed to positive.",
+      "H25 does not authorize direct R29 execution or broader scope lift.",
+      "H25 does not widen beyond the fixed tiny typed-bytecode D0 endpoint."
+    ],
+    "disconfirmed_here": [
+      "The narrower expectation that another retrieval-first same-endpoint recovery probe is already the best next systems move."
+    ]
+  }
+}

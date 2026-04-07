@@ -1,0 +1,41 @@
+{
+  "summary": {
+    "current_paper_phase": "h30_post_r36_r37_scope_decision_packet_complete",
+    "active_stage": "h30_post_r36_r37_scope_decision_packet",
+    "prior_active_stage": "h29_refreeze_after_r34_r35_origin_core_gate",
+    "decision_state": "origin_core_tiny_compiled_boundary_refrozen",
+    "origin_core_chain_state": "positive_with_narrow_compiled_boundary",
+    "compiled_boundary_state": "tiny_compiled_boundary_supported_narrowly",
+    "next_required_lane": "later_explicit_packet_required_before_any_compiler_boundary_extension",
+    "blocked_future_lanes": [
+      "r29_d0_same_endpoint_systems_recovery_execution_gate",
+      "f3_post_h23_scope_lift_decision_bundle"
+    ],
+    "future_frontier_review_state": "planning_only_f2_preserved",
+    "supported_here_count": 4,
+    "unsupported_here_count": 3,
+    "disconfirmed_here_count": 1,
+    "check_count": 4,
+    "pass_count": 4,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h31-later-explicit\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

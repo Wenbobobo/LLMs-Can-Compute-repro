@@ -1,0 +1,94 @@
+{
+  "experiment": "p31_post_h43_blog_guardrails_refresh_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p31-h43-blog-guardrails-refresh\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p31-h43-blog-guardrails-refresh\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "docs/milestones/P31_post_h43_blog_guardrails_refresh/README.md",
+      "matched_lines": [
+        "Current low-priority operational blocked-blog/helper guardrail refresh packet"
+      ]
+    },
+    {
+      "path": "docs/plans/2026-03-24-post-h43-p31-blog-guardrails-refresh-design.md",
+      "matched_lines": [
+        "### Recommended: `P31_post_h43_blog_guardrails_refresh`",
+        "- `blocked_blog_guardrails_refreshed_to_h43`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/blog_outline.md",
+      "matched_lines": [
+        "keep the completed `R43/R44/R45` stack explicit, and must treat the preserved"
+      ]
+    },
+    {
+      "path": "docs/publication_record/blog_release_rules.md",
+      "matched_lines": [
+        "memory small-VM execution in `R43`, coequal `R45` model support as"
+      ]
+    },
+    {
+      "path": "docs/publication_record/manuscript_stub_notes.md",
+      "matched_lines": [
+        "on the frozen starter suite inside a broader current `H43` paper endpoint. The"
+      ]
+    },
+    {
+      "path": "docs/publication_record/section_caption_notes.md",
+      "matched_lines": [
+        "| Compiled boundary | Open by stating that the preserved first compiled step is the tiny typed bytecode `D0` boundary inside the broader current `H43` endpoint. | Combine verifier parity, exact trace/final-state agreement, one stress/reference follow-up, and the explicit `M7` no-go decision. | State that these results do not authorize widening to Wasm-like or arbitrary-C claims. | frontend boundary diagram + exact-trace/final-state table |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/appendix_boundary_map.md",
+      "matched_lines": [
+        "appendix companions to the broader `H43` paper endpoint and remain the",
+        "| `D0` memory-surface diagnostics | required | They audit the preserved first compiled step without widening it. | Do not present them as broader compiler or runtime evidence. |",
+        "| `D0` stress/reference companion rows | required | They strengthen confidence in the preserved first compiled step while staying outside the main-text starter-suite table. | Do not treat companion success as a warrant for frontend widening. |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "frozen by `H43`. The earlier tiny typed-bytecode `D0` endpoint remains a"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "completed prior low-priority sync packets `P30/P29/P28`, current low-"
+      ]
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "matched_lines": [
+        "- `docs/milestones/P31_post_h43_blog_guardrails_refresh/` \u2014 the current",
+        "- `results/P31_post_h43_blog_guardrails_refresh/summary.json` \u2014 machine-"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`P31_post_h43_blog_guardrails_refresh` is the current low-priority",
+        "- `wip/p31-h43-blog-guardrails-refresh` is the clean post-`H43`"
+      ]
+    }
+  ]
+}

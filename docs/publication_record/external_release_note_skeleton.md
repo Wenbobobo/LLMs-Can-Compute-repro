@@ -1,42 +1,19 @@
 # External Release Note Skeleton
 
-Status: downstream-only skeleton. This file is not itself approval for a new
-release wave, blog post, or broader public narrative.
-
-## One-paragraph skeleton
-
-This repository reproduces a narrow execution-substrate claim rather than a
-broad “LLMs are computers” thesis. On the current validated scope, append-only
-execution traces, exact latest-write retrieval, and a tiny typed-bytecode `D0`
-compiled endpoint remain supported, while precision stays bounded, the systems
-gate stays mixed, and broader compiled or general-computation claims remain
-blocked.
-
-## Allowed callouts
-
-- append-only trace substrate
-- exact latest-write retrieval
-- tiny typed-bytecode `D0` boundary
-- bounded precision with explicit failure counts
-- mixed systems result with explicit limitations
-
-## Blocked callouts
-
-- general “LLMs are computers”
-- arbitrary C reproduction
-- broader compiled demos
-- current-scope end-to-end runtime superiority
-- claims that a blog/demo is equivalent to evidence
-
-## Required links when reused
-
-- `README.md`
-- `STATUS.md`
-- `docs/publication_record/submission_packet_index.md`
-- `docs/publication_record/claim_ladder.md`
-
-## Use rule
-
-Reuse this skeleton only after `release_candidate_checklist.md` and
-`results/P10_submission_archive_ready/summary.json` are both green. The blog
-remains blocked unless `blog_release_rules.md` is also satisfied in full.
+- current active packet:
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+- current archive-facing control stack:
+  `P79/P80`
+- current published clean descendant branch:
+  `wip/p75-post-p74-published-successor-freeze`
+- preserved immediate publication lineage:
+  `P74/P75/P76`
+- preserved `P56/P57/P58/P59` follow-through foundation
+- preserved `H64_post_p53_p54_p55_f38_archive_first_freeze_packet`
+- preserved `H43_post_r44_useful_case_refreeze`
+- preserved `H58_post_r62_origin_value_boundary_closeout_packet`
+- dormant non-runtime `F38` dossier
+- archive-first terminal freeze
+- strongest justified executor-value lane is closed negative
+- explicit stop
+- no further action

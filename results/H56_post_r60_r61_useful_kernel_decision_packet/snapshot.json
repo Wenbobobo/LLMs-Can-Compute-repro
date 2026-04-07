@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "source": "r60",
+      "lane_verdict": "compiled_useful_kernel_carryover_supported_exactly"
+    },
+    {
+      "source": "r61",
+      "lane_verdict": "compiled_useful_kernel_route_lacks_bounded_value"
+    },
+    {
+      "source": "h56",
+      "selected_outcome": "freeze_minimal_useful_kernel_bridge_supported_without_bounded_value"
+    }
+  ]
+}

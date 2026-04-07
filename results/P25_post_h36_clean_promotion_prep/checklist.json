@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p25_docs_fix_source_of_truth_clean_prep_and_prepare_only_policy",
+      "status": "pass",
+      "notes": "P25 should stay operational-only, fix the true source branch, and keep promotion in prepare-only mode."
+    },
+    {
+      "item_id": "p25_manifest_delta_and_runbook_keep_main_untouched_and_inventory_only",
+      "status": "pass",
+      "notes": "The promotion manifest must encode inventory-only mechanics and keep both runtime execution and merge-by-momentum out of scope."
+    },
+    {
+      "item_id": "driver_wave_and_upstream_refreeze_treat_p25_as_completed_prep_not_merge_authorization",
+      "status": "pass",
+      "notes": "The repo entry surfaces should present P25 as a completed clean-prep lane above the landed H36 state, not as merge authorization."
+    }
+  ]
+}

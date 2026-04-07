@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "item_id": "f36_reads_h60",
+      "status": "pass",
+      "notes": "F36 begins only after H60 leaves the branch planning-only."
+    },
+    {
+      "item_id": "f36_preserves_f34_single_admissible_family",
+      "status": "pass",
+      "notes": "F36 keeps only the same admissible family that F34 allowed on paper."
+    },
+    {
+      "item_id": "f36_keeps_far_future_routes_separate",
+      "status": "pass",
+      "notes": "F35 far-future routes stay outside the active qualification bundle."
+    },
+    {
+      "item_id": "f36_fixates_useful_case_target",
+      "status": "pass",
+      "notes": "F36 requires an exact useful-kernel or stricter narrow target before any runtime work."
+    },
+    {
+      "item_id": "f36_requires_material_cost_structure_change",
+      "status": "pass",
+      "notes": "A renamed same-lane executor-value microvariant is not admissible."
+    },
+    {
+      "item_id": "f36_requires_declared_stop_rules",
+      "status": "pass",
+      "notes": "F36 makes stop conditions explicit before any future authorization."
+    },
+    {
+      "item_id": "f36_keeps_runtime_lane_closed",
+      "status": "pass",
+      "notes": "F36 is qualification-only and does not authorize runtime by itself."
+    }
+  ]
+}

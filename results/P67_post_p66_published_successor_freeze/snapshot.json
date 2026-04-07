@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "field": "current_published_clean_descendant_branch",
+      "value": "wip/p66-post-p65-published-successor-freeze"
+    },
+    {
+      "field": "preserved_prior_published_clean_descendant_branch",
+      "value": "wip/p63-post-p62-tight-core-hygiene"
+    },
+    {
+      "field": "preserved_prior_successor_review_branch",
+      "value": "wip/p64-post-p63-successor-stack"
+    }
+  ]
+}

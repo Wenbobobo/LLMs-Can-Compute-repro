@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h31_docs_lock_one_extension_and_one_boundary_probe",
+      "status": "pass",
+      "notes": "H31 should convert the post-H30 fork into one explicit tiny-extension decision with named admitted and boundary rows."
+    },
+    {
+      "item_id": "upstream_h30_r37_state_remains_narrow_and_positive",
+      "status": "pass",
+      "notes": "H31 is only justified if the H30/R37 state being extended is still narrow, positive, and blocked-lane disciplined."
+    },
+    {
+      "item_id": "saved_plan_preserves_same_substrate_and_no_widening_rules",
+      "status": "pass",
+      "notes": "The saved plan should keep execution on the current substrate and reject broad compiler/demo widening."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "supports": [
+      "H62 makes hygiene-first the gating posture for any later scientific follow-up.",
+      "H62 keeps archive/hygiene stop as the default downstream state.",
+      "H62 limits any later scientific continuation to one conditional non-runtime R63 profile gate."
+    ],
+    "does_not_support": [
+      "runtime reopening",
+      "merge-main by momentum",
+      "broad scientific widening beyond the F37 route"
+    ],
+    "distilled_result": {
+      "active_stage": "h62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet",
+      "preserved_prior_active_packet": "h61_post_h60_archive_first_position_packet",
+      "current_root_quarantine_planning": "p47_post_h61_root_quarantine_and_main_merge_planning",
+      "current_clean_descendant_promotion_prep": "p48_post_h61_clean_descendant_promotion_prep",
+      "current_origin_advisory_sync": "p49_post_h61_origin_advisory_sync",
+      "current_reauthorization_bundle": "f37_post_h61_compiled_online_coprocessor_reauthorization_bundle",
+      "default_downstream_lane": "archive_or_hygiene_stop",
+      "conditional_downstream_lane": "r63_post_h62_coprocessor_eligibility_profile_gate",
+      "all_prerequisites_green": true,
+      "runtime_authorization": "closed",
+      "selected_outcome": "hygiene_first_scope_decision_keeps_archive_default_and_limits_any_reopen_to_r63_profile_gate",
+      "next_required_lane": "archive_or_hygiene_stop_unless_later_explicit_r63_profile_authorization"
+    }
+  }
+}

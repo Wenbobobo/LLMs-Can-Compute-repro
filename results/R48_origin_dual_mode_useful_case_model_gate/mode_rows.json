@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "mode_id": "compiled_weight_executor",
+      "mode_role": "compiled_analytic",
+      "memory_strategy": "accelerated_exact",
+      "call_strategy": "pointer_like_exact",
+      "train_kernel_ids": [
+        "count_nonzero_i32_buffer",
+        "histogram16_u8",
+        "sum_i32_buffer"
+      ],
+      "heldout_kernel_ids": [],
+      "quadratic_scale": 2.0,
+      "time_scale": 0.0022675736961451248,
+      "fit_train_sample_accuracy": null,
+      "fit_train_exact_program_accuracy": null,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "program_count": 8,
+      "exact_variant_count": 8,
+      "heldout_exact_variant_count": 3
+    },
+    {
+      "mode_id": "trainable_2d_executor",
+      "mode_role": "fitted_stack_latest_write",
+      "memory_strategy": "accelerated_exact",
+      "call_strategy": "pointer_like_exact",
+      "train_kernel_ids": [
+        "count_nonzero_i32_buffer",
+        "sum_i32_buffer"
+      ],
+      "heldout_kernel_ids": [
+        "histogram16_u8"
+      ],
+      "quadratic_scale": 0.25,
+      "time_scale": 0.0005,
+      "fit_train_sample_accuracy": 1.0,
+      "fit_train_exact_program_accuracy": 1.0,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "program_count": 8,
+      "exact_variant_count": 8,
+      "heldout_exact_variant_count": 3
+    }
+  ]
+}

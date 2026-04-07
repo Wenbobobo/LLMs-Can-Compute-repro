@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "item_id": "p51_reads_h62",
+      "status": "pass",
+      "notes": "P51 packages the paper-facing state only after H62 locks archive-first as the default lane."
+    },
+    {
+      "item_id": "p51_reads_p50",
+      "status": "pass",
+      "notes": "P51 assumes the control surfaces are already synchronized by P50."
+    },
+    {
+      "item_id": "p51_reads_f37",
+      "status": "pass",
+      "notes": "Future-route wording must stay inside the strict F37 non-runtime contract."
+    },
+    {
+      "item_id": "p51_surface_01",
+      "status": "pass",
+      "notes": "docs/publication_record/paper_bundle_status.md contains the required paper-facing closeout wording."
+    },
+    {
+      "item_id": "p51_surface_02",
+      "status": "pass",
+      "notes": "docs/publication_record/review_boundary_summary.md contains the required paper-facing closeout wording."
+    },
+    {
+      "item_id": "p51_surface_03",
+      "status": "pass",
+      "notes": "docs/publication_record/release_summary_draft.md contains the required paper-facing closeout wording."
+    },
+    {
+      "item_id": "p51_surface_04",
+      "status": "pass",
+      "notes": "docs/publication_record/claim_ladder.md contains the required paper-facing closeout wording."
+    },
+    {
+      "item_id": "p51_surface_05",
+      "status": "blocked",
+      "notes": "docs/publication_record/claim_evidence_table.md contains the required paper-facing closeout wording."
+    },
+    {
+      "item_id": "p51_surface_06",
+      "status": "pass",
+      "notes": "docs/publication_record/archival_repro_manifest.md contains the required paper-facing closeout wording."
+    },
+    {
+      "item_id": "p51_surface_07",
+      "status": "pass",
+      "notes": "docs/publication_record/submission_packet_index.md contains the required paper-facing closeout wording."
+    }
+  ]
+}

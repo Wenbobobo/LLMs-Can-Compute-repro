@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "supported_here": [
+      "F23 saves the only admissible post-H47 numeric-scaling planning bundle without authorizing execution by itself.",
+      "F23 preserves H47 as the active docs-only packet and H43 as the current paper-grade endpoint.",
+      "F23 fixes R49 as the only next runtime candidate while keeping exact R46/R47 evidence decisive relative to comparator-only R48."
+    ],
+    "unsupported_here": [
+      "F23 does not itself authorize runtime execution.",
+      "F23 does not widen frontend/runtime scope beyond structured i32 plus static memory on the preserved useful-case kernels.",
+      "F23 does not authorize F24, broader Wasm/C, arbitrary C, or model substitution for exact evidence."
+    ],
+    "disconfirmed_here": [
+      "The idea that the post-H47 line should jump directly into broader useful-case widening or hybrid growth without first testing one narrow numeric-scaling gate."
+    ],
+    "distilled_result": {
+      "active_stage": "f23_post_h47_numeric_scaling_bundle",
+      "current_active_docs_only_stage": "h47_post_r48_useful_case_bridge_refreeze",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "selected_outcome": "post_h47_numeric_scaling_bundle_saved",
+      "current_low_priority_wave": "p35_post_h47_research_record_rollup",
+      "current_exact_first_planning_bundle": "f21_post_h43_exact_useful_case_expansion_bundle",
+      "current_comparator_planning_bundle": "f22_post_r46_useful_case_model_bridge_bundle",
+      "only_next_runtime_candidate": "r49_origin_useful_case_numeric_scaling_gate",
+      "dormant_parallel_bundle": "f24_post_h47_hybrid_executor_growth_bundle",
+      "positive_downstream_placeholder": "f25_post_h48_restricted_tinyc_lowering_bundle",
+      "negative_downstream_placeholder": "p36_post_h48_falsification_closeout_bundle",
+      "next_required_lane": "r49_origin_useful_case_numeric_scaling_gate"
+    }
+  }
+}

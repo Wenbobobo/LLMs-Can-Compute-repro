@@ -42,7 +42,7 @@
     {
       "claim_id": "unsupported_arbitrary_c",
       "label": "arbitrary C reproduction",
-      "reason": "The current compiled boundary is intentionally fixed to a tiny typed bytecode and should not be inflated into arbitrary-C coverage.",
+      "reason": "The preserved first compiled boundary is a tiny typed bytecode inside the broader current H43 paper endpoint and should not be inflated into arbitrary-C coverage.",
       "source_docs": [
         "README.md",
         "docs/publication_record/threats_to_validity.md",

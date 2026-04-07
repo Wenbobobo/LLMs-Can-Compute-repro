@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "field": "current_branch",
+      "value": "wip/p75-post-p74-published-successor-freeze"
+    },
+    {
+      "field": "tracked_keep_branches",
+      "value": {
+        "wip/p75-post-p74-published-successor-freeze": "origin/wip/p75-post-p74-published-successor-freeze",
+        "wip/p74-post-p73-successor-publication-review": "origin/wip/p74-post-p73-successor-publication-review",
+        "wip/p73-post-p72-hygiene-shrink-mergeprep": "origin/wip/p73-post-p72-hygiene-shrink-mergeprep",
+        "wip/p72-post-p71-archive-polish-stop-handoff": "origin/wip/p72-post-p71-archive-polish-stop-handoff",
+        "wip/p69-post-h65-hygiene-only-cleanup": "origin/wip/p69-post-h65-hygiene-only-cleanup",
+        "wip/p56-main-scratch": "origin/main"
+      }
+    }
+  ]
+}

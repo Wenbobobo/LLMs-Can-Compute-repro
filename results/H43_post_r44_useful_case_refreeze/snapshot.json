@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "snapshot_id": "prior_route_selection_packet",
+      "lane": "H42_post_r43_route_selection_packet",
+      "state": "preserved_prior_docs_only_decision_packet"
+    },
+    {
+      "snapshot_id": "exact_runtime_gate",
+      "lane": "R43_origin_bounded_memory_small_vm_execution_gate",
+      "state": "completed_upstream_exact_gate"
+    },
+    {
+      "snapshot_id": "useful_case_gate",
+      "lane": "R44_origin_restricted_wasm_useful_case_execution_gate",
+      "state": "completed_current_useful_case_gate"
+    },
+    {
+      "snapshot_id": "coequal_model_gate",
+      "lane": "R45_origin_dual_mode_model_mainline_gate",
+      "state": "completed_coequal_model_gate"
+    },
+    {
+      "snapshot_id": "post_r44_stack_state",
+      "lane": "H43_post_r44_useful_case_refreeze",
+      "state": "no_active_downstream_runtime_lane"
+    }
+  ]
+}

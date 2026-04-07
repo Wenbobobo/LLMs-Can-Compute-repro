@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "r62_uses_native_trace_programs_not_tinyc_or_bytecode_compilation",
+      "status": "pass",
+      "notes": "All measured programs are constructed directly in the append-only trace DSL."
+    },
+    {
+      "item_id": "r62_excludes_compiler_and_lowering_time_from_measured_executor_values",
+      "status": "pass",
+      "notes": "Program-construction time is exported separately and excluded from the runtime comparators."
+    },
+    {
+      "item_id": "r62_keeps_runtime_free_of_teacher_forcing_or_reference_replay",
+      "status": "pass",
+      "notes": "All measured executor rows run free-running against the native trace programs."
+    },
+    {
+      "item_id": "r62_keeps_external_scalar_reference_as_audit_only_comparator",
+      "status": "pass",
+      "notes": "The external scalar reference produces audit values and timing only."
+    }
+  ]
+}

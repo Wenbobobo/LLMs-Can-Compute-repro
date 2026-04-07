@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "field": "current_archive_release_sync_wave",
+      "value": "p58_post_h64_archive_release_closeout_sync"
+    },
+    {
+      "field": "current_clean_merge_candidate_packet",
+      "value": "p56_post_h64_clean_merge_candidate_packet"
+    },
+    {
+      "field": "current_paper_submission_sync_wave",
+      "value": "p57_post_h64_paper_submission_package_sync"
+    },
+    {
+      "field": "current_control_sync_wave",
+      "value": "p59_post_h64_control_and_handoff_sync"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "planned_variant_count": 8,
+  "executed_variant_count": 8,
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "reason": "all held-out useful-case surface variants stayed exact"
+}

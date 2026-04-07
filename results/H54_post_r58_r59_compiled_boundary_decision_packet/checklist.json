@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h54_docs_record_one_completed_compiled_boundary_closeout_outcome",
+      "status": "pass",
+      "notes": "H54 must land as one explicit docs-only closeout packet with one selected outcome."
+    },
+    {
+      "item_id": "h54_reads_r58_and_r59_explicitly_before_closing",
+      "status": "pass",
+      "notes": "H54 should read the two positive exact gates explicitly rather than infer by momentum."
+    },
+    {
+      "item_id": "h54_preserves_h52_h43_and_blocked_future_entry",
+      "status": "pass",
+      "notes": "H54 must preserve H52 as prior mechanism history, keep H43 as the paper-grade endpoint, and keep blocked future entry blocked."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_h54_the_current_closed_state",
+      "status": "pass",
+      "notes": "Shared control surfaces should expose H54 as the current closed state and remove any active downstream runtime lane."
+    }
+  ]
+}

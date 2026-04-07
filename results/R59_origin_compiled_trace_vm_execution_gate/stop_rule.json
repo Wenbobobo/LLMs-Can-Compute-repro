@@ -1,0 +1,5 @@
+{
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "stop_policy": "stop at first source/lowered or free-running exactness break"
+}

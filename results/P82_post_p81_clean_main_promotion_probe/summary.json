@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "current_probe_wave": "p82_post_p81_clean_main_promotion_probe",
+    "probe_branch": "wip/p82-post-p81-clean-main-promotion-probe",
+    "probe_head": "56ff106",
+    "source_branch": "wip/p81-post-p80-clean-descendant-promotion-prep",
+    "source_head": "7a9fe0b",
+    "published_branch": "wip/p75-post-p74-published-successor-freeze",
+    "published_head": "53962ca",
+    "origin_main_to_source_left_right": "0/180",
+    "probe_to_source_left_right": "0/180",
+    "merge_base": "56ff1066c96dbc00b1fc73e60c3503b2accec389",
+    "fast_forward_ready": true,
+    "merge_tree_conflict_free": true,
+    "selected_outcome": "clean_main_probe_confirms_fast_forward_promotion_path_after_p81",
+    "next_required_lane": "p83_promotion_branch_and_pr_handoff",
+    "pass_count": 5,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p81-post-p80-clean-descendant-promotion-prep\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p81-post-p80-clean-descendant-promotion-prep\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "supports": [
+      "P76 reanchors release hygiene and current control on the p75 published branch.",
+      "P76 keeps the release-commit classification explicit without implying any dirty-root merge.",
+      "P76 preserves p66 as prior published lineage while keeping p73 and p74 explicit."
+    ],
+    "does_not_support": [
+      "dirty-root publication",
+      "runtime reopen",
+      "merge execution"
+    ],
+    "distilled_result": {
+      "current_release_hygiene_and_control_rebaseline_wave": "p76_post_p75_release_hygiene_and_control_rebaseline",
+      "current_published_clean_descendant_branch": "wip/p75-post-p74-published-successor-freeze",
+      "preserved_prior_published_clean_descendant_branch": "wip/p66-post-p65-published-successor-freeze",
+      "preserved_prior_successor_review_branch": "wip/p74-post-p73-successor-publication-review",
+      "current_local_hygiene_branch": "wip/p73-post-p72-hygiene-shrink-mergeprep",
+      "current_execution_branch": "wip/p75-post-p74-published-successor-freeze",
+      "worktree_hygiene_branch": "wip/p75-post-p74-published-successor-freeze",
+      "release_commit_state": "clean_worktree_ready_if_other_gates_green",
+      "selected_outcome": "published_successor_release_hygiene_and_control_rebaselined_after_p75",
+      "next_required_lane": "standing_release_audit_refresh_on_p75"
+    }
+  }
+}

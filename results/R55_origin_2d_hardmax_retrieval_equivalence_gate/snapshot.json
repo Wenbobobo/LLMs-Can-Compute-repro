@@ -1,0 +1,57 @@
+{
+  "rows": [
+    {
+      "source": "results/H51_post_h50_origin_mechanism_reentry_packet/summary.json",
+      "fields": {
+        "active_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+        "selected_outcome": "authorize_origin_mechanism_reentry_through_r55_first",
+        "only_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate"
+      }
+    },
+    {
+      "source": "results/F28_post_h50_origin_mechanism_reentry_bundle/summary.json",
+      "fields": {
+        "active_stage": "f28_post_h50_origin_mechanism_reentry_bundle",
+        "only_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+        "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync"
+      }
+    },
+    {
+      "source": "results/H50_post_r51_r52_scope_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h50_post_r51_r52_scope_decision_packet",
+        "selected_outcome": "stop_as_exact_without_system_value",
+        "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze"
+      }
+    },
+    {
+      "path": "docs/milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/equivalence_contract.md",
+      "matched_lines": [
+        "- the reference path is a transparent latest-relevant-state lookup over the",
+        "- both paths must return the same value and the same maximizer-row identity on"
+      ]
+    },
+    {
+      "path": "docs/milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/task_matrix.md",
+      "matched_lines": [
+        "- overwrite-after-gap latest-write rows on static memory;",
+        "- stack-slot latest-write rows across deeper control flow;",
+        "- duplicate-max rows that keep value parity but stress row-identity handling;",
+        "- declared tie rows that require explicit tie semantics; and",
+        "- coordinate-offset rows that stress the claimed geometric addressing pattern"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `R55_origin_2d_hardmax_retrieval_equivalence_gate`",
+        "- `R56_origin_append_only_trace_vm_semantics_gate`",
+        "- `R55_origin_2d_hardmax_retrieval_equivalence_gate` is the completed current",
+        "- `R56_origin_append_only_trace_vm_semantics_gate` is the only next runtime",
+        "- `results/R55_origin_2d_hardmax_retrieval_equivalence_gate/summary.json`",
+        "- `docs/milestones/R55_origin_2d_hardmax_retrieval_equivalence_gate/`",
+        "- `docs/milestones/R56_origin_append_only_trace_vm_semantics_gate/`"
+      ]
+    }
+  ]
+}

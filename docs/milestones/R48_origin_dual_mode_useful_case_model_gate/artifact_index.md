@@ -1,0 +1,21 @@
+# R48 Artifact Index
+
+- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/README.md`
+- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/status.md`
+- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/todo.md`
+- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/acceptance.md`
+- `docs/milestones/R48_origin_dual_mode_useful_case_model_gate/artifact_index.md`
+- `docs/plans/2026-03-24-post-h46-r48-dual-mode-useful-case-model-design.md`
+- `docs/milestones/H46_post_r47_frontend_bridge_decision_packet/README.md`
+- `docs/milestones/F22_post_r46_useful_case_model_bridge_bundle/README.md`
+- `docs/milestones/R47_origin_restricted_frontend_translation_gate/README.md`
+- `src/model/r48_dual_mode_useful_case.py`
+- `scripts/export_r48_origin_dual_mode_useful_case_model_gate.py`
+- `tests/test_r48_dual_mode_useful_case.py`
+- `tests/test_export_r48_origin_dual_mode_useful_case_model_gate.py`
+- `results/R48_origin_dual_mode_useful_case_model_gate/execution_manifest.json`
+- `results/R48_origin_dual_mode_useful_case_model_gate/mode_rows.json`
+- `results/R48_origin_dual_mode_useful_case_model_gate/variant_rows.json`
+- `results/R48_origin_dual_mode_useful_case_model_gate/kernel_rows.json`
+- `results/R48_origin_dual_mode_useful_case_model_gate/stop_rule.json`
+- `results/R48_origin_dual_mode_useful_case_model_gate/summary.json`

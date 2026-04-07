@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "path": "README.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "STATUS.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/README.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/claim_evidence_table.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/review_boundary_summary.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/conditional_reopen_protocol.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/paper_bundle_status.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/archival_repro_manifest.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/submission_packet_index.md",
+      "status": "pass",
+      "missing_patterns": []
+    }
+  ]
+}

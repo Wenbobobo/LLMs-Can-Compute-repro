@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "active_stage_at_sidecar_time": "h59_post_h58_reproduction_gap_decision_packet",
+    "current_low_priority_wave": "p42_post_h59_gptpro_reinterview_packet",
+    "selected_outcome": "self_contained_gptpro_dossier_ready",
+    "dossier_path": "docs/plans/2026-03-25-post-h59-gptpro-reinterview-dossier.md",
+    "included_code_file_count": 6,
+    "included_code_files": [
+      "src/geometry/hardmax.py",
+      "src/geometry/hull_kv.py",
+      "src/exec_trace/dsl.py",
+      "src/exec_trace/interpreter.py",
+      "src/model/exact_hardmax.py",
+      "src/bytecode/interpreter.py"
+    ],
+    "current_downstream_scientific_lane": "planning_only_or_project_stop",
+    "pass_count": 4,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\f32-post-h56-last-discriminator\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

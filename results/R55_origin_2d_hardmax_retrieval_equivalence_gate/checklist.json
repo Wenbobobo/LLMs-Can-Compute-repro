@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "r55_requires_positive_h51_reentry_basis",
+      "status": "pass",
+      "notes": "R55 only runs after H51 selects explicit mechanism reentry through R55 first."
+    },
+    {
+      "item_id": "r55_docs_fix_reference_contract_and_required_task_classes",
+      "status": "pass",
+      "notes": "R55 milestone docs must explicitly fix the reference contract and the five required task classes."
+    },
+    {
+      "item_id": "reference_and_candidate_values_match_on_every_declared_read",
+      "status": "pass",
+      "notes": "Both the transparent reference and the claimed fast path must match the declared expected value on every read."
+    },
+    {
+      "item_id": "candidate_path_preserves_exact_maximizer_row_identity",
+      "status": "pass",
+      "notes": "R55 requires maximizer-row identity parity, not value parity alone."
+    },
+    {
+      "item_id": "task_matrix_covers_duplicate_tie_stack_and_coordinate_offset_cases",
+      "status": "pass",
+      "notes": "The fixed bounded suite must cover all required task classes and explicit tie/duplicate observations."
+    },
+    {
+      "item_id": "r55_opens_r56_only_if_exact",
+      "status": "pass",
+      "notes": "R56 can open only after a positive exact R55 verdict; otherwise the lane must stop and close explicitly."
+    }
+  ]
+}

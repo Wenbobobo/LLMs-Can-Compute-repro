@@ -1,0 +1,81 @@
+{
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-24-post-h48-f25-restricted-tinyc-lowering-design.md",
+      "matched_lines": [
+        "- `R50_origin_restricted_tinyc_lowering_gate` as the only next runtime",
+        "- `H49_post_r50_tinyc_lowering_decision_packet` as the only follow-up packet"
+      ]
+    },
+    {
+      "path": "docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/admitted_surface_matrix.md",
+      "matched_lines": [
+        "| bounded scalar math | `int32_t`-like scalars, counters, and accumulators with bounded ranges only | existing `i32` scalar/local operations on the preserved useful-case kernels | already inside the `R47` structured frontend bridge contract |",
+        "| single-kernel entrypoint | one top-level kernel function with explicit inputs and outputs | same one-kernel useful-case execution contract preserved by `R47/R49` | prevents scope drift into general program execution |"
+      ]
+    },
+    {
+      "path": "docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/excluded_feature_matrix.md",
+      "matched_lines": [
+        "| heap allocation | would require a broader memory model than the preserved static-window contract | any need for dynamic allocation or free-store semantics |",
+        "| multi-function program structure | would exceed the single-kernel useful-case contract being preserved first | any need for more than one top-level kernel function in the first gate |"
+      ]
+    },
+    {
+      "path": "docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/execution_matrix.md",
+      "matched_lines": [
+        "| `sum_i32_buffer` | one canonical counted loop over a declared `i32` buffer with one scalar accumulator | same held-out `R47` useful-case variants for `sum_i32_buffer` | exact on the preserved variant set before any wider numeric experiment |",
+        "| `histogram16_u8` | one canonical counted loop over a declared byte buffer with updates into a predeclared `hist[16]` window | same held-out `R47` useful-case variants for `histogram16_u8` | exact on the preserved variant set with the fixed 16-bin boundary unchanged |"
+      ]
+    },
+    {
+      "path": "docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/kill_criteria.md",
+      "matched_lines": [
+        "`H49` must freeze the post-`H48` tiny-`C` line as a practical falsifier if any",
+        "4. the first pass cannot stay exact on the preserved `8/8` useful-case"
+      ]
+    },
+    {
+      "path": "docs/milestones/R50_origin_restricted_tinyc_lowering_gate/README.md",
+      "matched_lines": [
+        "Authorized but not yet executed runtime candidate after completed `F25`.",
+        "Current status: `planned_by_f25_not_yet_executed`."
+      ]
+    },
+    {
+      "path": "docs/milestones/H49_post_r50_tinyc_lowering_decision_packet/README.md",
+      "matched_lines": [
+        "Future docs-only interpretation packet after potential `R50`.",
+        "Current status: `placeholder_only`."
+      ]
+    },
+    {
+      "path": "docs/claims_matrix.md",
+      "matched_lines": [
+        "| F25 | The post-`H48` useful-case line can continue only through one planning-only restricted tiny-`C` lowering bundle that narrows the earlier `R47` frontend bridge into one explicit `R50` runtime question | `F25_post_h48_restricted_tinyc_lowering_bundle` over `H48`, `R49`, `R47`, `F21`, `F19`, `H43`, and `P35` | validated as a planning-only bundle; preserves `H48` as the current active docs-only packet, preserves `H43` as the paper-grade endpoint, records `R49` as completed current evidence, narrows the admitted surface to bounded `i32` scalars, declared static buffers, structured control flow, fixed-range table updates, and one top-level kernel function, fixes `R50` as the only next runtime candidate, fixes `H49` as the only follow-up packet, and keeps `claim_ceiling = bounded_useful_cases_only` |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The current post-`H48` planning bundle is:",
+        "- `R50_origin_restricted_tinyc_lowering_gate`",
+        "- `R50_origin_restricted_tinyc_lowering_gate` is now the only next runtime",
+        "`R50_origin_restricted_tinyc_lowering_gate` is the only next runtime"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "- current post-`H48` planning bundle:",
+        "- only next runtime candidate fixed by `F25`:"
+      ]
+    },
+    {
+      "path": "docs/publication_record/experiment_manifest.md",
+      "matched_lines": [
+        "| 2026-03-24 | post-`H48` `F25` restricted tiny-`C` lowering bundle wave | docs/control plus exporter sync: save one dedicated `F25` planning design, complete the `F25` milestone docs, add explicit `R50/H49` placeholder readmes, add one `F25` exporter plus focused test/results, and refresh shared root/current-stage/index/handoff surfaces so `H48` stays the current active docs-only packet while `F25` becomes the current post-`H48` planning bundle fixing `R50` as the only next runtime candidate | new `docs/plans/2026-03-24-post-h48-f25-restricted-tinyc-lowering-design.md`, refreshed `docs/milestones/F25_post_h48_restricted_tinyc_lowering_bundle/*`, new `docs/milestones/R50_origin_restricted_tinyc_lowering_gate/README.md`, new `docs/milestones/H49_post_r50_tinyc_lowering_decision_packet/README.md`, refreshed `README.md`, refreshed `STATUS.md`, refreshed `docs/publication_record/README.md`, refreshed `docs/publication_record/current_stage_driver.md`, refreshed `docs/publication_record/experiment_manifest.md`, refreshed `docs/plans/README.md`, refreshed `docs/milestones/README.md`, refreshed `docs/claims_matrix.md`, refreshed `tmp/active_wave_plan.md`, new `scripts/export_f25_post_h48_restricted_tinyc_lowering_bundle.py`, new `tests/test_export_f25_post_h48_restricted_tinyc_lowering_bundle.py`, new `results/F25_post_h48_restricted_tinyc_lowering_bundle/summary.json`, new `results/F25_post_h48_restricted_tinyc_lowering_bundle/checklist.json`, new `results/F25_post_h48_restricted_tinyc_lowering_bundle/claim_packet.json`, new `results/F25_post_h48_restricted_tinyc_lowering_bundle/snapshot.json` | CPython 3.13.9 from `D:/zWenbo/AI/LLMCompute-worktrees/p35-f23-post-h47-mainline-extension/.venv`, `uv 0.9.14`, clean successor worktree `D:/zWenbo/AI/LLMCompute-worktrees/p35-f23-post-h47-mainline-extension` on `wip/p35-f23-post-h47-mainline-extension`; focused exporter run plus pytest on `F25` and `git diff --check` should pass | no scientific widening; `H48` stays the current active docs-only packet, `H43` stays the paper-grade endpoint, `R49` stays the completed current numeric-scaling gate, `F25` becomes the current post-`H48` planning bundle, `R50` becomes the only next runtime candidate, `H49` becomes the only explicit follow-up packet, `P36` remains explicit but non-selected, and `no_active_downstream_runtime_lane` stays in force until `R50` executes |"
+      ]
+    }
+  ]
+}

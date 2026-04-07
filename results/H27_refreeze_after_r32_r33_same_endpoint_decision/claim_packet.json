@@ -1,0 +1,45 @@
+{
+  "experiment": "h27_refreeze_claim_packet",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r33-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "supported_here": [
+      "H27 keeps the same tiny typed-bytecode D0 endpoint and freezes the post-R33 state instead of reopening execution by momentum.",
+      "R33 ended at `suite_stable_noncompetitive_after_localization` under audit scope `stratified_first_pass`.",
+      "H27 preserves blocked future lanes explicitly rather than turning the attribution lane into automatic recovery authorization.",
+      "The post-R33 systems story is now more sharply negative than the earlier mixed reading."
+    ],
+    "unsupported_here": [
+      "H27 does not widen beyond the fixed tiny typed-bytecode D0 endpoint.",
+      "H27 does not authorize direct R29 execution.",
+      "H27 does not authorize F3 or bypass F2 by momentum."
+    ],
+    "disconfirmed_here": [
+      "The narrower expectation that bounded overhead localization alone would make current same-endpoint recovery look directly viable."
+    ],
+    "distilled_result": {
+      "h26_boundary_verdict": "family_local_sharp_zoom_still_not_localized",
+      "r33_lane_verdict": "suite_stable_noncompetitive_after_localization",
+      "systems_verdict": "systems_more_sharply_negative",
+      "r29_state": "blocked_preserved",
+      "f3_state": "blocked_preserved",
+      "f2_state": "planning_only_preserved"
+    }
+  }
+}

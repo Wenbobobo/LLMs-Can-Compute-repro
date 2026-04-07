@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "supported_here": [
+      "F28 preserves negative H50 while reopening only a narrower mechanism-first reading of the Origin materials.",
+      "F28 fixes H51 as the only follow-up packet and R55 as the only next runtime candidate.",
+      "F28 keeps R56, R57, and H52 as the only conditional downstream sequence and leaves F27, R53, and R54 blocked."
+    ],
+    "unsupported_here": [
+      "F28 does not overturn H50 or reactivate transformed or trainable executor entry.",
+      "F28 does not authorize arbitrary C, broad Wasm, or general 'LLMs are computers' wording.",
+      "F28 does not itself execute a runtime lane or claim fast-path value."
+    ],
+    "disconfirmed_here": [
+      "The idea that negative H50 should automatically reopen executor-entry work or broader claims by momentum."
+    ],
+    "distilled_result": {
+      "active_stage": "f28_post_h50_origin_mechanism_reentry_bundle",
+      "current_active_docs_only_stage": "h51_post_h50_origin_mechanism_reentry_packet",
+      "preserved_prior_docs_only_closeout": "h50_post_r51_r52_scope_decision_packet",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_routing_refreeze_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "selected_outcome": "post_h50_mechanism_reentry_bundle_saved",
+      "only_followup_packet": "h51_post_h50_origin_mechanism_reentry_packet",
+      "only_next_runtime_candidate": "r55_origin_2d_hardmax_retrieval_equivalence_gate",
+      "only_conditional_later_sequence": [
+        "r56_origin_append_only_trace_vm_semantics_gate",
+        "r57_origin_accelerated_trace_vm_comparator_gate",
+        "h52_post_r55_r56_r57_origin_mechanism_decision_packet"
+      ],
+      "current_low_priority_wave": "p37_post_h50_narrow_executor_closeout_sync",
+      "blocked_future_bundle": "f27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle",
+      "blocked_future_gates": [
+        "r53_origin_transformed_executor_entry_gate",
+        "r54_origin_trainable_executor_comparator_gate"
+      ],
+      "next_required_lane": "r55_origin_2d_hardmax_retrieval_equivalence_gate"
+    }
+  }
+}

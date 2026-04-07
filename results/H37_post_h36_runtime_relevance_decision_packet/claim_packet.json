@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "supported_here": [
+      "H37 lands the required post-H36 docs-only runtime-relevance decision packet.",
+      "H36 remains the preserved prior active routing/refreeze packet after H37 lands.",
+      "The selected outcome is `keep_h36_freeze`, so no active downstream runtime lane exists after H37.",
+      "R41 remains deferred because no uniquely isolated admissible candidate currently survives on the fixed landed R40 row pair."
+    ],
+    "unsupported_here": [
+      "H37 does not authorize R41 execution by wording alone.",
+      "H37 does not reopen R29, F3, frontier review, restricted-Wasm widening, hybrid work, or general-computer rhetoric."
+    ],
+    "disconfirmed_here": [
+      "The expectation that the existence of a saved R41 design or surviving F14 cautions is enough to reopen the runtime lane automatically after H36."
+    ],
+    "distilled_result": {
+      "active_stage": "h37_post_h36_runtime_relevance_decision_packet",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "selected_outcome": "keep_h36_freeze",
+      "non_selected_outcome": "authorize_r41_origin_runtime_relevance_threat_stress_audit",
+      "authorized_next_runtime_candidate": "none",
+      "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+      "decision_basis": "no_uniquely_isolated_admissible_candidate_on_fixed_r40_row_pair",
+      "remaining_runtime_relevance_threats": [
+        "runtime_irrelevance_via_compiler_helper_overencoding",
+        "fast_path_only_helps_the_easy_part"
+      ],
+      "blocked_future_lanes": [
+        "r29_d0_same_endpoint_systems_recovery_execution_gate",
+        "f3_post_h23_scope_lift_decision_bundle"
+      ],
+      "future_frontier_review_state": "planning_only_f2_preserved",
+      "next_required_lane": "no_active_downstream_runtime_lane"
+    }
+  }
+}

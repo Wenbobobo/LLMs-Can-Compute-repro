@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "f33_starts_after_h59_gap_packet",
+      "status": "pass",
+      "notes": "F33 opens only after the reproduction-gap packet is explicit."
+    },
+    {
+      "item_id": "f33_requires_different_cost_structure",
+      "status": "pass",
+      "notes": "No same-lane reopen is admissible without a materially different cost structure."
+    },
+    {
+      "item_id": "f33_stores_planning_only_candidate_families",
+      "status": "pass",
+      "notes": "F33 stores future candidates but does not authorize runtime execution."
+    },
+    {
+      "item_id": "f33_keeps_project_stop_admissible",
+      "status": "pass",
+      "notes": "If no candidate survives scrutiny, project stop remains a valid outcome."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "current_release_hygiene_and_control_rebaseline_wave": "p68_post_p67_release_hygiene_and_control_rebaseline",
+    "current_published_clean_descendant_branch": "wip/p66-post-p65-published-successor-freeze",
+    "preserved_prior_published_clean_descendant_branch": "wip/p63-post-p62-tight-core-hygiene",
+    "preserved_prior_successor_review_branch": "wip/p64-post-p63-successor-stack",
+    "current_execution_branch": "wip/p66-post-p65-published-successor-freeze",
+    "worktree_hygiene_branch": "wip/p66-post-p65-published-successor-freeze",
+    "release_commit_state": "clean_worktree_ready_if_other_gates_green",
+    "selected_outcome": "published_frozen_successor_release_hygiene_and_control_rebaselined",
+    "next_required_lane": "h65_archive_first_terminal_freeze_packet",
+    "pass_count": 4,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p66-post-p65-published-successor-freeze\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

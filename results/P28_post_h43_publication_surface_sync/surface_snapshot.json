@@ -1,0 +1,64 @@
+{
+  "rows": [
+    {
+      "surface_id": "publication_readme",
+      "path": "docs/publication_record/README.md",
+      "role": "paper_first_control_index"
+    },
+    {
+      "surface_id": "claim_evidence_table",
+      "path": "docs/publication_record/claim_evidence_table.md",
+      "role": "claim_to_artifact_mapping"
+    },
+    {
+      "surface_id": "paper_bundle_status",
+      "path": "docs/publication_record/paper_bundle_status.md",
+      "role": "paper_facing_bundle_readiness"
+    },
+    {
+      "surface_id": "release_preflight_checklist",
+      "path": "docs/publication_record/release_preflight_checklist.md",
+      "role": "outward_sync_guard"
+    },
+    {
+      "surface_id": "release_summary_draft",
+      "path": "docs/publication_record/release_summary_draft.md",
+      "role": "short_public_surface_draft"
+    },
+    {
+      "surface_id": "release_summary_outline",
+      "path": "docs/publication_record/release_summary_outline.md",
+      "role": "short_public_surface_outline"
+    },
+    {
+      "surface_id": "review_boundary_summary",
+      "path": "docs/publication_record/review_boundary_summary.md",
+      "role": "reviewer_boundary_packet"
+    },
+    {
+      "surface_id": "submission_packet_index",
+      "path": "docs/publication_record/submission_packet_index.md",
+      "role": "submission_archive_handoff"
+    },
+    {
+      "surface_id": "experiment_manifest",
+      "path": "docs/publication_record/experiment_manifest.md",
+      "role": "unattended_batch_ledger"
+    },
+    {
+      "surface_id": "plans_index",
+      "path": "docs/plans/README.md",
+      "role": "design_navigation_index"
+    },
+    {
+      "surface_id": "milestones_index",
+      "path": "docs/milestones/README.md",
+      "role": "milestone_navigation_index"
+    },
+    {
+      "surface_id": "active_wave_plan",
+      "path": "tmp/active_wave_plan.md",
+      "role": "current_wave_handoff"
+    }
+  ]
+}

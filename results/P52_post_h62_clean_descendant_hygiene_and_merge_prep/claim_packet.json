@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "supports": [
+      "P52 refreshes clean-descendant-only hygiene and merge-prep without executing a merge.",
+      "P52 keeps dirty root main quarantined and preserves the repo-local worktree rule.",
+      "P52 keeps raw-row ignore rules and oversized-artifact posture explicit on the clean descendant line."
+    ],
+    "does_not_support": [
+      "merge execution",
+      "dirty-root integration",
+      "scientific claim widening"
+    ],
+    "distilled_result": {
+      "active_stage_at_sidecar_time": "h62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet",
+      "current_repo_hygiene_sidecar": "p52_post_h62_clean_descendant_hygiene_and_merge_prep",
+      "preserved_prior_repo_hygiene_sidecar": "p48_post_h61_clean_descendant_promotion_prep",
+      "source_branch": "wip/f37-post-h61-hygiene-first-reauth-prep",
+      "current_planning_branch": "wip/f38-post-h62-archive-first-closeout",
+      "current_planning_branch_upstream": "",
+      "root_main_branch": "wip/root-main-parking-2026-03-24",
+      "root_main_quarantined": true,
+      "tracked_oversize_count": 0,
+      "raw_row_ignore_rules_active": true,
+      "selected_outcome": "clean_descendant_hygiene_and_merge_prep_locked_without_dirty_root_merge",
+      "next_required_lane": "later_clean_descendant_promotion_packet_or_archive"
+    }
+  }
+}

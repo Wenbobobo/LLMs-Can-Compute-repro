@@ -1,0 +1,70 @@
+{
+  "experiment": "p34_post_h43_live_surface_wording_guardrail",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p34-h43-wording-guardrail-lint\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\p34-h43-wording-guardrail-lint\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "path": "docs/plans/2026-03-24-post-h43-p34-live-surface-wording-guardrail-design.md",
+      "matched_lines": [
+        "### Recommended: `P34_post_h43_live_surface_wording_guardrail`",
+        "- `live_surface_wording_guardrail_landed`"
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "- `H43_post_r44_useful_case_refreeze`",
+        "`no_active_downstream_runtime_lane`.",
+        "`next_required_lane = no_active_downstream_runtime_lane`;",
+        "`H43_post_r44_useful_case_refreeze`",
+        "`no_active_downstream_runtime_lane`",
+        "- `results/H43_post_r44_useful_case_refreeze/summary.json`",
+        "- `docs/milestones/H43_post_r44_useful_case_refreeze/`",
+        "- `H43_post_r44_useful_case_refreeze` is completed and remains the current"
+      ]
+    },
+    {
+      "path": "docs/publication_record/blog_release_rules.md",
+      "matched_lines": []
+    },
+    {
+      "path": "docs/publication_record/section_caption_notes.md",
+      "matched_lines": []
+    },
+    {
+      "path": "docs/publication_record/figure_table_narrative_roles.md",
+      "matched_lines": [
+        "| Frontend boundary diagram | Explains why the first compiled step is `D0` and why it stops there. | Tiny typed bytecode is the preserved first compiled step inside the current `H43` endpoint, not the whole current endpoint or the first step toward arbitrary source-language claims. | `D0` already implies Wasm-like or arbitrary-C coverage. | `results/P1_paper_readiness/m6_frontend_boundary_diagram.svg`, `results/M7_frontend_candidate_decision/decision_summary.json` |"
+      ]
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "matched_lines": [
+        "frozen by `H43`. The earlier tiny typed-bytecode `D0` endpoint remains a"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "- `wip/p34-h43-wording-guardrail-lint` is the clean completed auxiliary",
+        "- `P34` is the completed auxiliary live-surface wording guardrail packet and"
+      ]
+    }
+  ]
+}

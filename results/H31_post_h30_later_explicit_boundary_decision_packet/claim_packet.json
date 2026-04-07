@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "supported_here": [
+      "H31 converts the post-H30 fork into one explicit later-explicit packet.",
+      "The only admitted extension row is `subroutine_braid_program(6, base_address=80)`.",
+      "The only named non-admission boundary row is `subroutine_braid_long_program(12, base_address=160)`.",
+      "The packet preserves `R29` and `F3` as blocked while routing to `R38` only."
+    ],
+    "unsupported_here": [
+      "H31 does not authorize opcode-surface widening.",
+      "H31 does not authorize hidden host-side execution or a new runtime substrate.",
+      "H31 does not authorize arbitrary `C`, broad Wasm coverage, or same-endpoint systems recovery."
+    ],
+    "disconfirmed_here": [
+      "The expectation that `H30` alone should automatically widen compiler scope without a new explicit packet."
+    ],
+    "distilled_result": {
+      "active_stage": "h31_post_h30_later_explicit_boundary_decision_packet",
+      "prior_active_stage": "h30_post_r36_r37_scope_decision_packet",
+      "decision_state": "later_explicit_one_tiny_extension_authorized",
+      "authorization_outcome": "execute_one_more_tiny_extension",
+      "admitted_extension_case": "bytecode_subroutine_braid_6_a80",
+      "boundary_probe_case": "bytecode_subroutine_braid_long_12_a160",
+      "next_required_lane": "r38_origin_compiler_control_surface_extension_gate",
+      "blocked_lanes_preserved": [
+        "r29_d0_same_endpoint_systems_recovery_execution_gate",
+        "f3_post_h23_scope_lift_decision_bundle"
+      ]
+    }
+  }
+}

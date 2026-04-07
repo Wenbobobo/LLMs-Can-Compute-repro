@@ -1,0 +1,41 @@
+{
+  "experiment": "h47_post_r48_useful_case_bridge_refreeze",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r48-origin-dual-mode-useful-case-model\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r48-origin-dual-mode-useful-case-model\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "summary": {
+    "active_stage": "h47_post_r48_useful_case_bridge_refreeze",
+    "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+    "preserved_prior_docs_only_decision_packet": "h46_post_r47_frontend_bridge_decision_packet",
+    "preserved_route_reauthorization_packet": "h44_post_h43_route_reauthorization_packet",
+    "current_exact_first_planning_bundle": "f21_post_h43_exact_useful_case_expansion_bundle",
+    "current_comparator_planning_bundle": "f22_post_r46_useful_case_model_bridge_bundle",
+    "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+    "selected_outcome": "freeze_r48_as_narrow_comparator_support_only",
+    "current_completed_post_h44_exact_runtime_gate": "r46_origin_useful_case_surface_generalization_gate",
+    "current_completed_exact_frontend_bridge_gate": "r47_origin_restricted_frontend_translation_gate",
+    "current_completed_comparator_only_useful_case_model_gate": "r48_origin_dual_mode_useful_case_model_gate",
+    "current_low_priority_wave": "p31_post_h43_blog_guardrails_refresh",
+    "snapshot_surface_count": 7,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "next_required_lane": "no_active_downstream_runtime_lane"
+  }
+}

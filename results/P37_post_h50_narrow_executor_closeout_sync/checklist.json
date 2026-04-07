@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "p37_docs_define_post_h50_hygiene_sync_packet",
+      "status": "pass",
+      "notes": "P37 should codify hygiene and no-merge policy for the closed mechanism-reentry wave without changing scientific stage."
+    },
+    {
+      "item_id": "p37_records_worktree_artifact_and_commit_policy",
+      "status": "pass",
+      "notes": "P37 should make the worktree policy, large-artifact policy, and commit cadence explicit for this wave."
+    },
+    {
+      "item_id": "p37_repo_state_matches_large_artifact_policy",
+      "status": "pass",
+      "notes": "The clean worktree should enforce raw-row ignore rules and keep tracked artifacts under the roughly 10 MiB default limit."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_p37_current_low_priority_wave",
+      "status": "pass",
+      "notes": "Shared control docs should expose P37 as the current low-priority wave and keep no-merge posture explicit."
+    }
+  ]
+}

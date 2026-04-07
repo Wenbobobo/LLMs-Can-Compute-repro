@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 import subprocess
 from typing import Any
@@ -12,16 +13,23 @@ from utils import detect_runtime_environment
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "results" / "release_worktree_hygiene_snapshot"
+HYGIENE_GIT_ROOT_ENV = "LLMCOMPUTE_HYGIENE_GIT_ROOT"
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+
+def resolved_git_root() -> Path:
+    override = os.environ.get(HYGIENE_GIT_ROOT_ENV)
+    return Path(override).resolve() if override else ROOT.resolve()
 
 
 def git_output(*args: str) -> str:
     result = subprocess.run(
         ["git", *args],
-        cwd=ROOT,
+        cwd=resolved_git_root(),
         check=True,
         capture_output=True,
         text=True,
@@ -33,7 +41,7 @@ def git_output(*args: str) -> str:
 def git_result(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         ["git", *args],
-        cwd=ROOT,
+        cwd=resolved_git_root(),
         check=False,
         capture_output=True,
         text=True,
@@ -56,7 +64,7 @@ def parse_status_lines(text: str) -> dict[str, object]:
         if not raw_line:
             continue
         if raw_line.startswith("## "):
-            branch_line = raw_line[3:].strip()
+            branch_line = raw_line[3:].strip().split("...", 1)[0]
             continue
         status_code = raw_line[:2]
         path = normalize_status_path(raw_line[3:])
@@ -159,7 +167,9 @@ def build_checklist_rows(
 
 
 def build_summary(
-    worktree_audit: dict[str, object], diff_check_summary: dict[str, object] | None = None, checklist_rows: list[dict[str, object]] | None = None
+    worktree_audit: dict[str, object],
+    diff_check_summary: dict[str, object] | None = None,
+    checklist_rows: list[dict[str, object]] | None = None,
 ) -> dict[str, object]:
     diff_summary = diff_check_summary or {
         "git_diff_check_state": "clean",
@@ -177,6 +187,7 @@ def build_summary(
     )
     return {
         "repo_hygiene_scope": "current_worktree_and_diff_check",
+        "git_root": resolved_git_root().as_posix(),
         "branch": worktree_audit["branch"],
         "changed_path_count": changed_path_count,
         "modified_path_count": int(worktree_audit["modified_path_count"]),
@@ -235,6 +246,7 @@ def main() -> None:
         {
             "experiment": "release_worktree_hygiene_snapshot_status_snapshot",
             "environment": environment.as_dict(),
+            "git_root": resolved_git_root().as_posix(),
             "branch": parsed["branch"],
             "rows": parsed["rows"],
             "worktree_audit": worktree_audit,

@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "source": "h60",
+      "selected_outcome": "remain_planning_only_and_prepare_stop_or_archive"
+    },
+    {
+      "source": "p45",
+      "merge_posture": "clean_descendant_only_never_dirty_root_main"
+    },
+    {
+      "source": "f36",
+      "selected_outcome": "compiled_online_route_qualified_on_paper_only_with_strict_preruntime_gates"
+    },
+    {
+      "source": "f35",
+      "current_execution_candidate_count": 0
+    },
+    {
+      "source": "h61",
+      "selected_outcome": "archive_first_consolidation_becomes_default_posture"
+    }
+  ]
+}

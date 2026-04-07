@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "family_id": "latest_write_same_address_short",
+      "task_id": "latest_write_same_address_short",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Short same-address overwrite sequence with interleaved loads."
+    },
+    {
+      "family_id": "latest_write_same_address_long",
+      "task_id": "latest_write_same_address_long",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Longer same-address overwrite chain to keep only the latest row visible."
+    },
+    {
+      "family_id": "stack_slot_depth_short",
+      "task_id": "stack_slot_depth_short",
+      "space": "stack",
+      "source_kind": "program_trace",
+      "program_name": "stack_fanout_sum_6_v2",
+      "description": "Trace-derived short stack fanout with multiple stack-slot reads."
+    },
+    {
+      "family_id": "stack_slot_depth_long",
+      "task_id": "stack_slot_depth_long",
+      "space": "stack",
+      "source_kind": "program_trace",
+      "program_name": "stack_fanout_sum_18_v1",
+      "description": "Trace-derived deeper stack fanout probing larger stack-slot depths."
+    },
+    {
+      "family_id": "address_reuse_duplicate_and_tie_cases",
+      "task_id": "address_reuse_duplicate_and_tie_cases",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Address reuse, default read, and duplicate-row tie averaging in one fixed sequence."
+    },
+    {
+      "family_id": "precision_range_sweep",
+      "task_id": "precision_range_sweep",
+      "space": "memory",
+      "source_kind": "synthetic_operations",
+      "program_name": null,
+      "description": "Large-step and large-address sweep over the same exact latest-write contract."
+    }
+  ]
+}

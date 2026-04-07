@@ -1,0 +1,43 @@
+{
+  "rows": [
+    {
+      "path": "docs/publication_record/paper_bundle_status.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/review_boundary_summary.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/release_summary_draft.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/claim_ladder.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/claim_evidence_table.md",
+      "status": "blocked",
+      "missing_patterns": [
+        "H63 is now the current active docs-only packet",
+        "F38 is the current dormant future dossier",
+        "P51 is the current paper-facing partial-falsification package"
+      ]
+    },
+    {
+      "path": "docs/publication_record/archival_repro_manifest.md",
+      "status": "pass",
+      "missing_patterns": []
+    },
+    {
+      "path": "docs/publication_record/submission_packet_index.md",
+      "status": "pass",
+      "missing_patterns": []
+    }
+  ]
+}

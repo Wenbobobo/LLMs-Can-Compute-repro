@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "supports": [
+      "P65 synchronizes current control and next-entrypoint surfaces to the published successor stack.",
+      "P65 keeps H64 active while leaving runtime closed and merge execution absent.",
+      "P65 makes the next decision explicitly review/merge-prep or archive-first stop, not scientific reopen."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "merge execution",
+      "dirty-root integration"
+    ],
+    "distilled_result": {
+      "active_stage": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+      "current_published_clean_descendant_wave": "p63_post_p62_published_successor_promotion_prep",
+      "current_release_hygiene_rebaseline_wave": "p64_post_p63_release_hygiene_rebaseline",
+      "current_merge_prep_control_sync_wave": "p65_post_p64_merge_prep_control_sync",
+      "selected_outcome": "published_successor_merge_prep_control_synced_to_h64_stack",
+      "next_required_lane": "later_published_successor_review_or_explicit_archive_stop_decision"
+    }
+  }
+}

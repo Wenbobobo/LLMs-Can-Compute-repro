@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "h64_preserves_h63",
+      "status": "pass",
+      "notes": "H63 remains the preserved prior active packet under H64."
+    },
+    {
+      "item_id": "h64_reads_p53",
+      "status": "pass",
+      "notes": "Paper/archive claim surfaces must already be synchronized by P53."
+    },
+    {
+      "item_id": "h64_reads_p54",
+      "status": "pass",
+      "notes": "Hygiene and artifact policy must already be synchronized by P54."
+    },
+    {
+      "item_id": "h64_reads_p55",
+      "status": "pass",
+      "notes": "Promotion-prep and handoff surfaces must already be synchronized by P55."
+    },
+    {
+      "item_id": "h64_reads_f38",
+      "status": "pass",
+      "notes": "The only future family must remain dormant and ineligible at F38."
+    },
+    {
+      "item_id": "h64_runtime_stays_closed",
+      "status": "pass",
+      "notes": "H64 does not authorize runtime; any future R63 remains non-runtime unless a later packet says otherwise."
+    }
+  ]
+}

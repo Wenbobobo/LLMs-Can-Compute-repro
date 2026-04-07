@@ -1,0 +1,52 @@
+{
+  "experiment": "h26_refreeze_snapshot",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "source": "results/H23_refreeze_after_r26_r27_r28/summary.json",
+      "fields": {
+        "boundary_verdict": "bounded_grid_still_not_localized",
+        "systems_verdict": "systems_still_mixed"
+      }
+    },
+    {
+      "source": "results/H25_refreeze_after_r30_r31_decision_packet/summary.json",
+      "fields": {
+        "next_priority_lane": "r32_d0_family_local_boundary_sharp_zoom",
+        "deferred_audit_lane": "r33_d0_non_retrieval_overhead_localization_audit"
+      }
+    },
+    {
+      "source": "results/R30_d0_boundary_reauthorization_packet/summary.json",
+      "fields": {
+        "boundary_reauthorization_verdict": "execute_one_more_family_local_zoom",
+        "recommended_next_lane": "r32_d0_family_local_boundary_sharp_zoom"
+      }
+    },
+    {
+      "source": "results/R32_d0_family_local_boundary_sharp_zoom/summary.json",
+      "fields": {
+        "lane_verdict": "grid_extended_still_not_localized",
+        "executed_candidate_count": 60,
+        "failure_candidate_count": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "rows": [
+    {
+      "source": "results/H49_post_r50_tinyc_lowering_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h49_post_r50_tinyc_lowering_decision_packet",
+        "selected_outcome": "freeze_r50_as_narrow_exact_tinyc_support_only",
+        "next_required_lane": "no_active_downstream_runtime_lane"
+      }
+    },
+    {
+      "source": "results/R51_origin_memory_control_surface_sufficiency_gate/summary.json",
+      "fields": {
+        "lane_verdict": "memory_control_surface_supported_narrowly",
+        "exact_case_count": 5,
+        "maximizer_identity_exact_count": 5,
+        "budget_clean_case_count": 5
+      }
+    },
+    {
+      "source": "results/R52_origin_internal_vs_external_executor_value_gate/summary.json",
+      "fields": {
+        "lane_verdict": "internal_route_lacks_bounded_value",
+        "executed_case_count": 5,
+        "accelerated_faster_than_linear_count": 3,
+        "accelerated_faster_than_external_count": 0
+      }
+    }
+  ]
+}

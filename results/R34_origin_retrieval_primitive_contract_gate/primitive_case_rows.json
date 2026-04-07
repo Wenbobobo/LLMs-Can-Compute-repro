@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "primitive_id": "latest_write_address",
+      "case_id": "latest_write_program",
+      "program_name": "latest_write",
+      "observation_count": 1,
+      "exact_observation_count": 1,
+      "supports_default_read": false,
+      "notes": "Real trace-derived latest-write audit case."
+    },
+    {
+      "primitive_id": "latest_write_address",
+      "case_id": "dynamic_latest_write_program",
+      "program_name": "dynamic_latest_write",
+      "observation_count": 1,
+      "exact_observation_count": 1,
+      "supports_default_read": false,
+      "notes": "Real trace-derived latest-write audit case."
+    },
+    {
+      "primitive_id": "latest_write_address",
+      "case_id": "synthetic_default_and_alias_read",
+      "program_name": null,
+      "observation_count": 2,
+      "exact_observation_count": 2,
+      "supports_default_read": true,
+      "notes": "Synthetic latest-write case covering default-read and alias-shaped overwrite behavior."
+    },
+    {
+      "primitive_id": "stack_top",
+      "case_id": "countdown_6",
+      "program_name": "countdown_6",
+      "observation_count": 13,
+      "exact_observation_count": 13,
+      "max_relative_depth": 0,
+      "notes": "Real stack-pop trace-derived retrieval case."
+    },
+    {
+      "primitive_id": "stack_at_depth",
+      "case_id": "countdown_6",
+      "program_name": "countdown_6",
+      "observation_count": 6,
+      "exact_observation_count": 6,
+      "max_relative_depth": 1,
+      "notes": "Real stack-pop trace-derived retrieval case."
+    },
+    {
+      "primitive_id": "stack_top",
+      "case_id": "stack_memory_ping_pong_a0",
+      "program_name": "stack_memory_ping_pong_a0",
+      "observation_count": 8,
+      "exact_observation_count": 8,
+      "max_relative_depth": 0,
+      "notes": "Real stack-pop trace-derived retrieval case."
+    },
+    {
+      "primitive_id": "stack_at_depth",
+      "case_id": "stack_memory_ping_pong_a0",
+      "program_name": "stack_memory_ping_pong_a0",
+      "observation_count": 3,
+      "exact_observation_count": 3,
+      "max_relative_depth": 1,
+      "notes": "Real stack-pop trace-derived retrieval case."
+    },
+    {
+      "primitive_id": "stack_at_depth",
+      "case_id": "stack_fanout_sum_6_v2",
+      "program_name": "stack_fanout_sum_6_v2",
+      "observation_count": 5,
+      "exact_observation_count": 5,
+      "max_relative_depth": 1,
+      "notes": "Real stack-pop trace-derived retrieval case."
+    },
+    {
+      "primitive_id": "stack_top",
+      "case_id": "stack_fanout_sum_6_v2",
+      "program_name": "stack_fanout_sum_6_v2",
+      "observation_count": 5,
+      "exact_observation_count": 5,
+      "max_relative_depth": 0,
+      "notes": "Real stack-pop trace-derived retrieval case."
+    },
+    {
+      "primitive_id": "call_return_target",
+      "case_id": "call_chain_program",
+      "program_name": "call_chain",
+      "observation_count": 2,
+      "exact_observation_count": 2,
+      "notes": "Nested call/return target retrieval expressed as append-only latest-write frame lookup."
+    }
+  ]
+}

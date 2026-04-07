@@ -20,18 +20,20 @@ like computation, but we freeze the paper around a narrower reproduction target:
 append-only execution traces, exact latest-write retrieval, and a small exact
 executor under explicit boundaries. On the current public artifact surface, the
 mechanism story remains positive at this narrower level: append-only trace
-semantics and exact retrieval survive, and a tiny typed-bytecode `D0` slice
-achieves exact trace or exact final-state agreement on the frozen starter
-suite. The precision story is positive but bounded rather than open-ended:
+semantics and exact retrieval survive, and the preserved first tiny typed-
+bytecode `D0` slice still achieves exact trace or exact final-state agreement
+on the frozen starter suite inside a broader current `H43` paper endpoint. The
+precision story is positive but bounded rather than open-ended:
 float32 single-head fails on 12 of 25 tracked real-trace streams, with 7
 failing already at `1x`, while at least one decomposition configuration
 remains exact on all 25 tracked streams in the validated suite. The systems
 story is mixed: cached retrieval retains a strong asymptotic advantage on the
 geometry benchmark, but the current lowered `exec_trace` path remains about
 `1.82x` slower than the best current reference/oracle path on the positive
-`D0` suites. We therefore keep the compiled endpoint at tiny typed bytecode and
-treat broader claims about arbitrary C, general LLM computation, or current
-end-to-end competitiveness as unsupported.
+`D0` suites. We therefore keep the preserved first compiled step at tiny typed
+bytecode inside the broader current endpoint and still treat broader claims
+about arbitrary C, general LLM computation, or current end-to-end
+competitiveness as unsupported.
 
 ## Introduction opening seed
 
@@ -52,10 +54,10 @@ keeps the append-only trace substrate and exact retrieval story intact on the
 current validated scope. Second, it closes two important boundaries instead of
 silently skipping them: staged-neural execution remains caveated by legality
 structure, and real-trace precision remains positive only within an explicitly
-narrow current-suite boundary. Third, it shows that the first compiled endpoint
-should remain at tiny typed bytecode `D0`: the current slice is exact and
-auditable, but the systems gate is mixed and therefore does not justify
-widening to a broader frontend.
+narrow current-suite boundary. Third, it shows that the preserved first
+compiled step at tiny typed bytecode `D0` remains exact and auditable inside
+the broader current `H43` endpoint, while the systems gate is mixed and
+therefore does not justify widening to a broader frontend.
 
 ## Methods seed
 

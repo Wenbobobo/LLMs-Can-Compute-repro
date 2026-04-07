@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h32_docs_freeze_h30_h31_r38_and_preserve_scope_discipline",
+      "status": "pass",
+      "notes": "H32 should freeze the post-H30 later-explicit packet and the one-row extension gate without widening scope."
+    },
+    {
+      "item_id": "upstream_h30_h31_r38_chain_remains_narrow_and_positive",
+      "status": "pass",
+      "notes": "H32 is only positive if H30 stays narrow, H31 stays explicit, and R38 passes on the same substrate."
+    },
+    {
+      "item_id": "driver_and_active_wave_preserve_h32_as_upstream_refreeze_without_scope_lift",
+      "status": "pass",
+      "notes": "The canonical driver and short active-wave handoff should still preserve H32 as upstream refreeze context even though H36 is now active."
+    },
+    {
+      "item_id": "blocked_and_planning_only_lanes_remain_explicit",
+      "status": "pass",
+      "notes": "H32 should not soften R29/F3 or create automatic further compiler widening."
+    }
+  ]
+}

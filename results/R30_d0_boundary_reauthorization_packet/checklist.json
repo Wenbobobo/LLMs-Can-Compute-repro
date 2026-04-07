@@ -1,0 +1,53 @@
+{
+  "experiment": "r30_boundary_reauthorization_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "r30_docs_define_a_decision_packet_not_a_new_runtime_lane",
+      "status": "pass",
+      "notes": "R30 should remain a post-H23 decision packet rather than a hidden runtime lane."
+    },
+    {
+      "item_id": "current_boundary_state_still_requires_reauthorization",
+      "status": "pass",
+      "notes": "R30 only exists because both H21 and H23 still leave the true executor boundary unresolved."
+    },
+    {
+      "item_id": "r22_r26_r27_all_preserve_no_localized_break_inside_bounded_scans",
+      "status": "pass",
+      "notes": "R30 should be grounded in the fact that several bounded scans still stayed exact without localizing a failure."
+    },
+    {
+      "item_id": "r24_already_exports_a_candidate_core_and_stop_rules",
+      "status": "pass",
+      "notes": "R30 should reuse the R24 bounded zoom discipline instead of inventing a new open-ended scan."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "active_stage_at_archive_sync_time": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+    "current_archive_index_sidecar": "p70_post_p69_archive_index_and_artifact_policy_sync",
+    "preserved_prior_repo_hygiene_sidecar": "p69_post_h65_repo_graph_hygiene_inventory",
+    "current_planning_branch": "wip/p69-post-h65-hygiene-only-cleanup",
+    "preflight_state": "docs_and_audits_green",
+    "packet_state": "archive_ready",
+    "tracked_oversize_count": 0,
+    "raw_row_ignore_rules_active": true,
+    "selected_outcome": "archive_indexes_and_artifact_policy_synced_to_h65_hygiene_cleanup_stack",
+    "next_required_lane": "p71_clean_descendant_merge_prep_readiness_sync",
+    "pass_count": 10,
+    "blocked_count": 0,
+    "tracked_oversize_artifacts": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p69-post-h65-hygiene-only-cleanup\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

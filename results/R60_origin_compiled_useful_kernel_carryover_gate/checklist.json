@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "r60_requires_h55_reentry_authorization",
+      "status": "pass",
+      "notes": "R60 runs only under the explicit H55 useful-kernel reentry packet."
+    },
+    {
+      "item_id": "r60_admitted_pair_stays_exact_on_all_rows",
+      "status": "pass",
+      "notes": "All admitted sum/count preserved useful-kernel rows must keep exact source/spec/lowered and linear/accelerated internal execution parity."
+    },
+    {
+      "item_id": "r60_shows_no_compiler_work_leakage_on_declared_rows",
+      "status": "pass",
+      "notes": "Compiled tiny-C lowering should stay translation-identical to the preserved canonical rows on the admitted suite."
+    },
+    {
+      "item_id": "r60_keeps_histogram_and_scope_lift_out",
+      "status": "pass",
+      "notes": "The carryover gate remains fixed to sum_i32_buffer and count_nonzero_i32_buffer only."
+    }
+  ]
+}

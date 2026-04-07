@@ -1,0 +1,43 @@
+{
+  "experiment": "h26_refreeze_checklist",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r32-next\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "item_id": "h26_docs_describe_one_post_r32_same_endpoint_refreeze",
+      "status": "pass",
+      "notes": "H26 should freeze R32 into one explicit same-endpoint routing packet."
+    },
+    {
+      "item_id": "r32_exports_one_explicit_family_local_sharp_zoom_verdict",
+      "status": "pass",
+      "notes": "H26 must consume one explicit R32 verdict rather than a narrative summary."
+    },
+    {
+      "item_id": "h23_and_h25_remain_the_preserved_inputs_under_h26",
+      "status": "pass",
+      "notes": "H26 should preserve H23/H25 as the narrow pre-R32 controls."
+    },
+    {
+      "item_id": "r30_single_zoom_authorization_is_consumed_without_scope_drift",
+      "status": "pass",
+      "notes": "H26 should treat R32 as the consumed R30-authorized sharp zoom, not as an open-ended reopen."
+    }
+  ]
+}

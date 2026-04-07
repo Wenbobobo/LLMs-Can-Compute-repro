@@ -1,0 +1,67 @@
+{
+  "experiment": "h22_post_h21_boundary_reopen_and_dual_track_lock",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "source_artifacts": [
+    "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/README.md",
+    "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/status.md",
+    "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/todo.md",
+    "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/acceptance.md",
+    "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/artifact_index.md",
+    "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/decision_log.md",
+    "docs/milestones/R26_d0_boundary_localization_execution_gate/todo.md",
+    "docs/milestones/R27_d0_boundary_localization_extension_gate/status.md",
+    "docs/milestones/R28_d0_trace_retrieval_contract_audit/todo.md",
+    "docs/milestones/H23_refreeze_after_r26_r27_r28/todo.md",
+    "docs/milestones/R29_d0_same_endpoint_systems_recovery_execution_gate/status.md",
+    "docs/milestones/F3_post_h23_scope_lift_decision_bundle/status.md",
+    "results/H21_refreeze_after_r22_r23/summary.json",
+    "docs/milestones/R24_d0_boundary_localization_zoom_followup/boundary_zoom_matrix.md",
+    "docs/milestones/R25_d0_same_endpoint_systems_recovery_hypotheses/thresholds_and_disconfirmers.md"
+  ],
+  "summary": {
+    "active_stage": "h22_post_h21_boundary_reopen_and_dual_track_lock",
+    "current_frozen_stage": "h21_refreeze_after_r22_r23",
+    "decision_state": "post_h21_dual_track_reopen_contract_complete",
+    "scope_lock_state": "tiny_typed_bytecode_d0_locked",
+    "active_runtime_lane": "r26_d0_boundary_localization_execution_gate",
+    "active_support_lane": "r28_d0_trace_retrieval_contract_audit",
+    "conditional_runtime_lane": "r27_d0_boundary_localization_extension_gate",
+    "blocked_future_lanes": [
+      "r29_d0_same_endpoint_systems_recovery_execution_gate",
+      "f3_post_h23_scope_lift_decision_bundle"
+    ],
+    "next_priority_lane": "r26_d0_boundary_localization_execution_gate",
+    "check_count": 5,
+    "pass_count": 5,
+    "blocked_count": 0,
+    "blocked_items": [],
+    "recommended_next_action": "Advance to R26 and R28 in parallel, keep R27 conditional, and refreeze the packet in H23 before any outward sync."
+  }
+}

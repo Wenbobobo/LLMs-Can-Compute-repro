@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "supports": [
+      "P39 keeps the current post-H54 useful-kernel execution wave on a clean successor worktree.",
+      "P39 preserves uv-first execution and the default policy that raw step/trace dumps stay out of git.",
+      "P39 preserves explicit no-merge posture for the dirty root main checkout."
+    ],
+    "does_not_support": [
+      "Git LFS expansion for this phase",
+      "blanket ignores for all *_rows.json artifacts",
+      "science on the dirty root checkout"
+    ],
+    "distilled_result": {
+      "current_active_stage": "h56_post_r60_r61_useful_kernel_decision_packet",
+      "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+      "selected_outcome": "successor_worktree_hygiene_rules_active_and_clean",
+      "root_dirty_main_quarantined": true,
+      "tracked_large_artifact_count": 0,
+      "next_required_lane": "no_active_downstream_runtime_lane"
+    }
+  }
+}

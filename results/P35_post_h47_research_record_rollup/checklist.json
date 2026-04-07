@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p35_docs_define_post_h47_rollup_without_scientific_widening",
+      "status": "pass",
+      "notes": "P35 should stay docs-only, preserve H47/H43, and hand the next planning question to F23."
+    },
+    {
+      "item_id": "p35_hygiene_docs_record_artifact_policy_quarantine_push_and_merge_posture",
+      "status": "pass",
+      "notes": "P35 should record hygiene policy, pushed baseline state, explicit no-merge posture, and preserved negative-result accounting."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_p35_current_low_priority_wave",
+      "status": "pass",
+      "notes": "Shared control surfaces should keep H47 current while promoting P35 into the current low-priority operational/docs wave."
+    }
+  ]
+}

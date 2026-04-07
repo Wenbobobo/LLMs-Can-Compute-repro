@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "h63_preserves_h62",
+      "status": "pass",
+      "notes": "H62 remains the preserved prior active packet under H63."
+    },
+    {
+      "item_id": "h63_reads_p50",
+      "status": "pass",
+      "notes": "Control surfaces must already be synchronized by P50."
+    },
+    {
+      "item_id": "h63_reads_p51",
+      "status": "pass",
+      "notes": "Paper-facing packaging must already be synchronized by P51."
+    },
+    {
+      "item_id": "h63_reads_p52",
+      "status": "pass",
+      "notes": "Hygiene and merge-prep posture must already be synchronized by P52."
+    },
+    {
+      "item_id": "h63_reads_f38",
+      "status": "pass",
+      "notes": "The only future family must remain dormant and ineligible at F38."
+    },
+    {
+      "item_id": "h63_runtime_stays_closed",
+      "status": "pass",
+      "notes": "H63 does not authorize runtime; any future R63 remains non-runtime unless a later packet says otherwise."
+    }
+  ]
+}

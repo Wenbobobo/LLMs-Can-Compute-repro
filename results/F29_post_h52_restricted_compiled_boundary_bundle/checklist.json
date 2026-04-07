@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "f29_docs_define_post_h52_compiled_boundary_bundle",
+      "status": "pass",
+      "notes": "F29 should save one planning-only compiled-boundary bundle and fix only the narrow H53->R58->R59->H54 lane."
+    },
+    {
+      "item_id": "upstream_h52_and_h43_support_f29_reframing_without_overturning_h52",
+      "status": "pass",
+      "notes": "F29 must preserve H52 as a negative fast-path closeout while keeping H43 as the paper-grade endpoint."
+    },
+    {
+      "item_id": "shared_control_surfaces_make_f29_the_current_preserved_planning_bundle",
+      "status": "pass",
+      "notes": "Shared current-wave surfaces should expose F29 as the preserved planning bundle under active H54 and closed downstream routing."
+    }
+  ]
+}

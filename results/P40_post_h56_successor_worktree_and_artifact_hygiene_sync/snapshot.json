@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "policy": "current_worktree_root",
+      "value": "D:/zWenbo/AI/wt/f32-post-h56-last-discriminator"
+    },
+    {
+      "policy": "large_artifact_threshold_mib",
+      "value": 10.0
+    },
+    {
+      "policy": "tracked_large_artifact_count",
+      "value": 0
+    }
+  ]
+}

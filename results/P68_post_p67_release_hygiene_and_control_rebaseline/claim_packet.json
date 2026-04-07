@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "supports": [
+      "P68 reanchors release hygiene and current control on the frozen p66 published branch.",
+      "P68 keeps the release-commit classification explicit without implying any dirty-root merge.",
+      "P68 preserves p63 and p64 as lineage only while moving live control to p66."
+    ],
+    "does_not_support": [
+      "dirty-root publication",
+      "runtime reopen",
+      "merge execution"
+    ],
+    "distilled_result": {
+      "current_release_hygiene_and_control_rebaseline_wave": "p68_post_p67_release_hygiene_and_control_rebaseline",
+      "current_published_clean_descendant_branch": "wip/p66-post-p65-published-successor-freeze",
+      "preserved_prior_published_clean_descendant_branch": "wip/p63-post-p62-tight-core-hygiene",
+      "preserved_prior_successor_review_branch": "wip/p64-post-p63-successor-stack",
+      "current_execution_branch": "wip/p66-post-p65-published-successor-freeze",
+      "worktree_hygiene_branch": "wip/p66-post-p65-published-successor-freeze",
+      "release_commit_state": "clean_worktree_ready_if_other_gates_green",
+      "selected_outcome": "published_frozen_successor_release_hygiene_and_control_rebaselined",
+      "next_required_lane": "h65_archive_first_terminal_freeze_packet"
+    }
+  }
+}

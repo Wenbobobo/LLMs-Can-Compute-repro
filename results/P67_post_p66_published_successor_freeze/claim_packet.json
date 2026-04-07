@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "supports": [
+      "P67 promotes p66 into the live published clean descendant after the exact P66 review.",
+      "P67 preserves p63 as the prior published clean descendant and p64 as the reviewed pre-publication lane.",
+      "P67 keeps merge execution absent while updating live control wording to the new frozen successor stack."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "merge execution"
+    ],
+    "distilled_result": {
+      "current_published_clean_descendant_branch": "wip/p66-post-p65-published-successor-freeze",
+      "preserved_prior_published_clean_descendant_branch": "wip/p63-post-p62-tight-core-hygiene",
+      "preserved_prior_successor_review_branch": "wip/p64-post-p63-successor-stack",
+      "current_execution_branch": "wip/p66-post-p65-published-successor-freeze",
+      "selected_outcome": "published_successor_freeze_locked_after_p66_review",
+      "next_required_lane": "p68_release_hygiene_and_control_rebaseline"
+    }
+  }
+}

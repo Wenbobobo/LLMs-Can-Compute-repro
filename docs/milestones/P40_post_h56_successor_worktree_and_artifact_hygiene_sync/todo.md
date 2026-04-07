@@ -1,0 +1,4 @@
+- run from `D:/zWenbo/AI/wt/...`
+- keep `uv` as default
+- keep large raw artifacts out of git
+- keep dirty root `main` quarantined and unmerged

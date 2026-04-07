@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "supports": [
+      "P81 rebaselines the locked facts after P80 to the published p75 head 53962ca.",
+      "P81 keeps release_preflight green and P10 archive_ready while opening clean-descendant promotion-prep only.",
+      "P81 leaves runtime closed and dirty-root integration out of bounds."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "dirty-root integration",
+      "same-lane executor-value reopen"
+    ],
+    "distilled_result": {
+      "current_locked_fact_wave": "p81_post_p80_locked_fact_rebaseline_and_route_sync",
+      "current_execution_branch": "wip/p81-post-p80-clean-descendant-promotion-prep",
+      "published_branch": "wip/p75-post-p74-published-successor-freeze",
+      "published_branch_head": "53962ca",
+      "preflight_state": "docs_and_audits_green",
+      "archive_ready_state": "archive_ready",
+      "selected_outcome": "locked_facts_rebaselined_and_route_synced_after_p80",
+      "next_required_lane": "p82_clean_main_promotion_probe"
+    }
+  }
+}

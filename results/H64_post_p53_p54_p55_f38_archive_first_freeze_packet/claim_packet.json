@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "supports": [
+      "H64 makes archive-first freeze the active repo route above the preserved H63 packet.",
+      "H64 keeps archive/hygiene stop as the default downstream state.",
+      "H64 keeps R63 dormant and non-runtime only rather than converting it into authorization."
+    ],
+    "does_not_support": [
+      "runtime reopening",
+      "same-lane executor-value reopening",
+      "integration through dirty root main"
+    ],
+    "distilled_result": {
+      "active_stage": "h64_post_p53_p54_p55_f38_archive_first_freeze_packet",
+      "preserved_prior_active_packet": "h63_post_p50_p51_p52_f38_archive_first_closeout_packet",
+      "current_paper_archive_claim_sync_wave": "p53_post_h63_paper_archive_claim_sync",
+      "current_repo_hygiene_sidecar": "p54_post_h63_clean_descendant_hygiene_and_artifact_slimming",
+      "current_promotion_prep_wave": "p55_post_h63_clean_descendant_promotion_prep",
+      "current_dormant_future_dossier": "f38_post_h62_r63_dormant_eligibility_profile_dossier",
+      "default_downstream_lane": "archive_or_hygiene_stop",
+      "conditional_downstream_lane": "r63_post_h62_coprocessor_eligibility_profile_gate",
+      "all_prerequisites_green": true,
+      "runtime_authorization": "closed",
+      "selected_outcome": "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant",
+      "next_required_lane": "archive_or_hygiene_stop_with_only_optional_planning_only_r63_profile_spec"
+    }
+  }
+}

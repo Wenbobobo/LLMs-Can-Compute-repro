@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "mode_id": "compiled_weight_executor",
+      "mode_role": "compiled_analytic",
+      "memory_strategy": "accelerated_exact",
+      "call_strategy": "pointer_like_exact",
+      "train_family_ids": [
+        "bounded_static_sum_loop",
+        "bounded_branch_accumulator",
+        "bounded_memory_reuse_loop",
+        "stack_depth_revisit_loop",
+        "single_call_return_accumulator"
+      ],
+      "heldout_family_ids": [],
+      "quadratic_scale": 2.0,
+      "time_scale": 0.003205128205128205,
+      "fit_train_sample_accuracy": null,
+      "fit_train_exact_program_accuracy": null,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "program_count": 5,
+      "exact_family_count": 5
+    },
+    {
+      "mode_id": "trainable_2d_executor",
+      "mode_role": "fitted_stack_latest_write",
+      "memory_strategy": "accelerated_exact",
+      "call_strategy": "pointer_like_exact",
+      "train_family_ids": [
+        "bounded_static_sum_loop",
+        "bounded_branch_accumulator",
+        "bounded_memory_reuse_loop",
+        "stack_depth_revisit_loop"
+      ],
+      "heldout_family_ids": [
+        "single_call_return_accumulator"
+      ],
+      "quadratic_scale": 0.25,
+      "time_scale": 0.0005,
+      "fit_train_sample_accuracy": 1.0,
+      "fit_train_exact_program_accuracy": 1.0,
+      "exact_trace_accuracy": 1.0,
+      "exact_final_state_accuracy": 1.0,
+      "program_count": 5,
+      "exact_family_count": 5
+    }
+  ]
+}

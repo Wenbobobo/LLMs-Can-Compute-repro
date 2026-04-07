@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "supports": [
+      "P66 reviews the exact p63..p64 successor delta before any new publication freeze.",
+      "P66 keeps the review narrow to docs/export/control/release surfaces.",
+      "P66 authorizes a p66 freeze only if the review remains one-sided, exact, and non-runtime."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "dirty-root integration",
+      "non-release-surface successor changes"
+    ],
+    "distilled_result": {
+      "review_base_branch": "wip/p63-post-p62-tight-core-hygiene",
+      "review_tip_branch": "wip/p64-post-p63-successor-stack",
+      "freeze_target_branch": "wip/p66-post-p65-published-successor-freeze",
+      "current_execution_branch": "wip/p66-post-p65-published-successor-freeze",
+      "review_left_count": 0,
+      "review_right_count": 3,
+      "reviewed_commit_count": 3,
+      "reviewed_path_count": 88,
+      "blocked_reviewed_path_count": 0,
+      "all_reviewed_paths_allowed": true,
+      "selected_outcome": "successor_publication_review_supports_p67_freeze",
+      "next_required_lane": "p67_published_successor_freeze"
+    }
+  }
+}

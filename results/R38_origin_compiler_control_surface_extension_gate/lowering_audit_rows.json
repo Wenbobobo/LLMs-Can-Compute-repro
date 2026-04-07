@@ -1,0 +1,482 @@
+{
+  "rows": [
+    {
+      "case_id": "subroutine_braid_admitted",
+      "fragment": "single_richer_control_call_family",
+      "program_name": "bytecode_subroutine_braid_6_a80",
+      "admission_role": "admitted",
+      "lowered_instruction_count": 40,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 6
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 80
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 81
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 5,
+          "opcode": "store",
+          "arg": 82
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 7,
+          "opcode": "store",
+          "arg": 83
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 80
+        },
+        {
+          "pc": 9,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 10,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 11,
+          "opcode": "jz",
+          "arg": 16
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 82
+        },
+        {
+          "pc": 13,
+          "opcode": "load",
+          "arg": 83
+        },
+        {
+          "pc": 14,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 15,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 16,
+          "opcode": "load",
+          "arg": 81
+        },
+        {
+          "pc": 17,
+          "opcode": "jz",
+          "arg": 22
+        },
+        {
+          "pc": 18,
+          "opcode": "call",
+          "arg": 30
+        },
+        {
+          "pc": 19,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 20,
+          "opcode": "store",
+          "arg": 81
+        },
+        {
+          "pc": 21,
+          "opcode": "jmp",
+          "arg": 25
+        },
+        {
+          "pc": 22,
+          "opcode": "call",
+          "arg": 35
+        },
+        {
+          "pc": 23,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 24,
+          "opcode": "store",
+          "arg": 81
+        },
+        {
+          "pc": 25,
+          "opcode": "load",
+          "arg": 80
+        },
+        {
+          "pc": 26,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 27,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 28,
+          "opcode": "store",
+          "arg": 80
+        },
+        {
+          "pc": 29,
+          "opcode": "jmp",
+          "arg": 8
+        },
+        {
+          "pc": 30,
+          "opcode": "load",
+          "arg": 83
+        },
+        {
+          "pc": 31,
+          "opcode": "load",
+          "arg": 80
+        },
+        {
+          "pc": 32,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 33,
+          "opcode": "store",
+          "arg": 83
+        },
+        {
+          "pc": 34,
+          "opcode": "ret",
+          "arg": null
+        },
+        {
+          "pc": 35,
+          "opcode": "load",
+          "arg": 82
+        },
+        {
+          "pc": 36,
+          "opcode": "load",
+          "arg": 80
+        },
+        {
+          "pc": 37,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 38,
+          "opcode": "store",
+          "arg": 82
+        },
+        {
+          "pc": 39,
+          "opcode": "ret",
+          "arg": null
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 15,
+        "stack": [
+          21
+        ],
+        "memory": [
+          [
+            80,
+            0
+          ],
+          [
+            81,
+            0
+          ],
+          [
+            82,
+            12
+          ],
+          [
+            83,
+            9
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 133
+      }
+    },
+    {
+      "case_id": "subroutine_braid_long_boundary",
+      "fragment": "same_family_long_boundary_probe",
+      "program_name": "bytecode_subroutine_braid_long_12_a160",
+      "admission_role": "boundary_stress",
+      "lowered_instruction_count": 40,
+      "lowered_program": [
+        {
+          "pc": 0,
+          "opcode": "push_const",
+          "arg": 12
+        },
+        {
+          "pc": 1,
+          "opcode": "store",
+          "arg": 160
+        },
+        {
+          "pc": 2,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 3,
+          "opcode": "store",
+          "arg": 161
+        },
+        {
+          "pc": 4,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 5,
+          "opcode": "store",
+          "arg": 162
+        },
+        {
+          "pc": 6,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 7,
+          "opcode": "store",
+          "arg": 163
+        },
+        {
+          "pc": 8,
+          "opcode": "load",
+          "arg": 160
+        },
+        {
+          "pc": 9,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 10,
+          "opcode": "eq",
+          "arg": null
+        },
+        {
+          "pc": 11,
+          "opcode": "jz",
+          "arg": 16
+        },
+        {
+          "pc": 12,
+          "opcode": "load",
+          "arg": 162
+        },
+        {
+          "pc": 13,
+          "opcode": "load",
+          "arg": 163
+        },
+        {
+          "pc": 14,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 15,
+          "opcode": "halt",
+          "arg": null
+        },
+        {
+          "pc": 16,
+          "opcode": "load",
+          "arg": 161
+        },
+        {
+          "pc": 17,
+          "opcode": "jz",
+          "arg": 22
+        },
+        {
+          "pc": 18,
+          "opcode": "call",
+          "arg": 30
+        },
+        {
+          "pc": 19,
+          "opcode": "push_const",
+          "arg": 0
+        },
+        {
+          "pc": 20,
+          "opcode": "store",
+          "arg": 161
+        },
+        {
+          "pc": 21,
+          "opcode": "jmp",
+          "arg": 25
+        },
+        {
+          "pc": 22,
+          "opcode": "call",
+          "arg": 35
+        },
+        {
+          "pc": 23,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 24,
+          "opcode": "store",
+          "arg": 161
+        },
+        {
+          "pc": 25,
+          "opcode": "load",
+          "arg": 160
+        },
+        {
+          "pc": 26,
+          "opcode": "push_const",
+          "arg": 1
+        },
+        {
+          "pc": 27,
+          "opcode": "sub",
+          "arg": null
+        },
+        {
+          "pc": 28,
+          "opcode": "store",
+          "arg": 160
+        },
+        {
+          "pc": 29,
+          "opcode": "jmp",
+          "arg": 8
+        },
+        {
+          "pc": 30,
+          "opcode": "load",
+          "arg": 163
+        },
+        {
+          "pc": 31,
+          "opcode": "load",
+          "arg": 160
+        },
+        {
+          "pc": 32,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 33,
+          "opcode": "store",
+          "arg": 163
+        },
+        {
+          "pc": 34,
+          "opcode": "ret",
+          "arg": null
+        },
+        {
+          "pc": 35,
+          "opcode": "load",
+          "arg": 162
+        },
+        {
+          "pc": 36,
+          "opcode": "load",
+          "arg": 160
+        },
+        {
+          "pc": 37,
+          "opcode": "add",
+          "arg": null
+        },
+        {
+          "pc": 38,
+          "opcode": "store",
+          "arg": 162
+        },
+        {
+          "pc": 39,
+          "opcode": "ret",
+          "arg": null
+        }
+      ],
+      "source_to_lowered_trace_match": true,
+      "source_to_lowered_final_state_match": true,
+      "source_to_lowered_first_mismatch_step": null,
+      "lowered_final_state": {
+        "pc": 15,
+        "stack": [
+          78
+        ],
+        "memory": [
+          [
+            160,
+            0
+          ],
+          [
+            161,
+            0
+          ],
+          [
+            162,
+            42
+          ],
+          [
+            163,
+            36
+          ]
+        ],
+        "call_stack": [],
+        "halted": true,
+        "steps": 250
+      }
+    }
+  ]
+}

@@ -6,10 +6,10 @@ freeze candidate, and which ones stay optional or out of scope.
 ## Required companions
 
 - `D0` memory-surface diagnostics
-  Why: they audit the compiled boundary without widening it.
+  Why: they audit the preserved first compiled step without widening it.
 - `D0` stress/reference companion rows
-  Why: they strengthen confidence in the frozen endpoint while staying outside
-  the main-text starter-suite table.
+  Why: they strengthen confidence in the preserved first compiled step while
+  staying outside the main-text starter-suite table.
 - Regeneration and public-safe release ledgers
   Why: the freeze candidate must remain auditable and outwardly disciplined.
 
@@ -28,6 +28,7 @@ freeze candidate, and which ones stay optional or out of scope.
 ## Out of scope on the current freeze candidate
 
 - A standalone systems gate table or the full `R2` runtime matrix in main text
-- Broader compiled demos or any frontend widening beyond `D0`
+- Broader compiled demos or any frontend widening beyond the preserved first
+  `D0` compiled step
 - Any appendix branch that would read as a new evidence wave rather than as a
   companion to an already-frozen claim

@@ -1,0 +1,52 @@
+{
+  "rows": [
+    {
+      "mode_id": "compiled_weight_executor",
+      "kernel_id": "count_nonzero_i32_buffer",
+      "family_role": "core",
+      "variant_count": 3,
+      "exact_variant_count": 3,
+      "all_exact": true
+    },
+    {
+      "mode_id": "compiled_weight_executor",
+      "kernel_id": "histogram16_u8",
+      "family_role": "heldout",
+      "variant_count": 3,
+      "exact_variant_count": 3,
+      "all_exact": true
+    },
+    {
+      "mode_id": "compiled_weight_executor",
+      "kernel_id": "sum_i32_buffer",
+      "family_role": "core",
+      "variant_count": 2,
+      "exact_variant_count": 2,
+      "all_exact": true
+    },
+    {
+      "mode_id": "trainable_2d_executor",
+      "kernel_id": "count_nonzero_i32_buffer",
+      "family_role": "core",
+      "variant_count": 3,
+      "exact_variant_count": 3,
+      "all_exact": true
+    },
+    {
+      "mode_id": "trainable_2d_executor",
+      "kernel_id": "histogram16_u8",
+      "family_role": "heldout",
+      "variant_count": 3,
+      "exact_variant_count": 3,
+      "all_exact": true
+    },
+    {
+      "mode_id": "trainable_2d_executor",
+      "kernel_id": "sum_i32_buffer",
+      "family_role": "core",
+      "variant_count": 2,
+      "exact_variant_count": 2,
+      "all_exact": true
+    }
+  ]
+}

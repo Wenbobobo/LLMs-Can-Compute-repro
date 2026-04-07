@@ -7,6 +7,7 @@ from fractions import Fraction
 from typing import Literal, Sequence
 
 from exec_trace import TraceEvent
+from exec_trace.dsl import Opcode
 from geometry import HullKVCache, brute_force_hardmax_2d
 
 
@@ -30,7 +31,18 @@ class MemoryOperation:
     kind: Literal["store", "load"]
     address: int
     value: int
-    space: Literal["memory", "stack"] = "memory"
+    space: Literal["memory", "stack", "call"] = "memory"
+
+
+@dataclass(frozen=True, slots=True)
+class DecodeCandidateRow:
+    row_index: int
+    kind: Literal["default", "store"]
+    address: int
+    step: int
+    value: int
+    space: Literal["memory", "stack", "call"]
+    label: str
 
 
 @dataclass(frozen=True, slots=True)
@@ -40,12 +52,15 @@ class DecodeObservation:
     expected_value: int
     linear_value: int
     accelerated_value: int
+    linear_maximizer_indices: tuple[int, ...]
+    accelerated_maximizer_indices: tuple[int, ...]
 
 
 @dataclass(frozen=True, slots=True)
 class DecodeRun:
     config: LatestWriteDecodeConfig
     operations: tuple[MemoryOperation, ...]
+    candidate_rows: tuple[DecodeCandidateRow, ...]
     observations: tuple[DecodeObservation, ...]
 
 
@@ -112,6 +127,37 @@ def extract_stack_slot_operations(events: Sequence[TraceEvent]) -> tuple[MemoryO
     return tuple(operations)
 
 
+def extract_call_frame_operations(events: Sequence[TraceEvent]) -> tuple[MemoryOperation, ...]:
+    operations: list[MemoryOperation] = []
+    call_depth = 0
+    for event in events:
+        if event.opcode == Opcode.CALL:
+            operations.append(
+                MemoryOperation(
+                    step=event.step,
+                    kind="store",
+                    address=call_depth,
+                    value=event.pc + 1,
+                    space="call",
+                )
+            )
+            call_depth += 1
+        elif event.opcode == Opcode.RET:
+            if call_depth <= 0:
+                raise ValueError(f"RET event at step {event.step} has no pending call frame.")
+            call_depth -= 1
+            operations.append(
+                MemoryOperation(
+                    step=event.step,
+                    kind="load",
+                    address=call_depth,
+                    value=event.next_pc,
+                    space="call",
+                )
+            )
+    return tuple(operations)
+
+
 def infer_address_domain(operations: Sequence[MemoryOperation]) -> tuple[int, ...]:
     return tuple(sorted({operation.address for operation in operations}))
 
@@ -127,6 +173,26 @@ def run_latest_write_decode(
     linear_keys: list[tuple[int, Fraction]] = []
     linear_values: list[int] = []
     accelerated = HullKVCache()
+    space = next(iter(spaces), "memory")
+    candidate_rows: list[DecodeCandidateRow] = []
+
+    def append_candidate_row(*, kind: Literal["default", "store"], address: int, step: int, value: int) -> None:
+        row_index = len(candidate_rows)
+        if kind == "default":
+            label = f"default:{space}:a{address}"
+        else:
+            label = f"store:{space}:a{address}:s{step}:r{row_index}"
+        candidate_rows.append(
+            DecodeCandidateRow(
+                row_index=row_index,
+                kind=kind,
+                address=address,
+                step=step,
+                value=value,
+                space=space,
+                label=label,
+            )
+        )
 
     seed_step = -1
     for address in config.addresses:
@@ -134,6 +200,7 @@ def run_latest_write_decode(
         linear_keys.append(key)
         linear_values.append(config.default_value)
         accelerated.insert(key, config.default_value)
+        append_candidate_row(kind="default", address=address, step=seed_step, value=config.default_value)
 
     observations: list[DecodeObservation] = []
     for operation in operations:
@@ -142,11 +209,19 @@ def run_latest_write_decode(
             linear_keys.append(key)
             linear_values.append(operation.value)
             accelerated.insert(key, operation.value)
+            append_candidate_row(
+                kind="store",
+                address=operation.address,
+                step=operation.step,
+                value=operation.value,
+            )
             continue
 
         query = encode_latest_write_query(operation.address)
-        linear_value = brute_force_hardmax_2d(linear_keys, linear_values, query).value
-        accelerated_value = accelerated.query(query).value
+        linear_result = brute_force_hardmax_2d(linear_keys, linear_values, query)
+        accelerated_result = accelerated.query(query)
+        linear_value = linear_result.value
+        accelerated_value = accelerated_result.value
         if not isinstance(linear_value, int) or not isinstance(accelerated_value, int):
             raise TypeError("Latest-write decode expects scalar integer values.")
 
@@ -157,12 +232,15 @@ def run_latest_write_decode(
                 expected_value=operation.value,
                 linear_value=linear_value,
                 accelerated_value=accelerated_value,
+                linear_maximizer_indices=linear_result.maximizer_indices,
+                accelerated_maximizer_indices=accelerated_result.maximizer_indices,
             )
         )
 
     return DecodeRun(
         config=config,
         operations=tuple(operations),
+        candidate_rows=tuple(candidate_rows),
         observations=tuple(observations),
     )
 
@@ -199,5 +277,15 @@ def run_latest_write_decode_for_stack_events(
     default_value: int = 0,
 ) -> DecodeRun:
     operations = extract_stack_slot_operations(events)
+    config = config_for_operations(operations, default_value=default_value)
+    return run_latest_write_decode(operations, config)
+
+
+def run_latest_write_decode_for_call_events(
+    events: Sequence[TraceEvent],
+    *,
+    default_value: int = 0,
+) -> DecodeRun:
+    operations = extract_call_frame_operations(events)
     config = config_for_operations(operations, default_value=default_value)
     return run_latest_write_decode(operations, config)

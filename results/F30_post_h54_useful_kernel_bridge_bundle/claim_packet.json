@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "supported_here": [
+      "F30 stores one narrow post-H54 stop/go bundle for minimal useful-kernel carryover.",
+      "F30 fixes H55 as the only follow-up packet and R60 as the only next runtime candidate if activated later.",
+      "F30 keeps R61 and H56 as the only later sequence while leaving F27, R53, and R54 blocked."
+    ],
+    "unsupported_here": [
+      "F30 does not replace H54 as the current active docs-only packet.",
+      "F30 does not reopen arbitrary C, broad Wasm, transformed entry, or trainable entry.",
+      "F30 does not itself execute a runtime lane or claim bounded value."
+    ],
+    "disconfirmed_here": [
+      "The idea that exact toy compiled-boundary evidence alone justifies broader compiled-execution claims without one minimal useful-kernel carryover test."
+    ],
+    "distilled_result": {
+      "active_stage": "f30_post_h54_useful_kernel_bridge_bundle",
+      "current_active_docs_only_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
+      "preserved_prior_docs_only_closeout": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "current_routing_refreeze_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "selected_outcome": "post_h54_useful_kernel_stopgo_bundle_saved",
+      "only_followup_packet": "h55_post_h54_useful_kernel_reentry_packet",
+      "only_next_runtime_candidate": "r60_origin_compiled_useful_kernel_carryover_gate",
+      "only_conditional_later_sequence": [
+        "r61_origin_compiled_useful_kernel_value_gate",
+        "h56_post_r60_r61_useful_kernel_decision_packet"
+      ],
+      "saved_successor_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+      "blocked_future_bundle": "f27_post_h50_bounded_trainable_or_transformed_executor_entry_bundle",
+      "blocked_future_gates": [
+        "r53_origin_transformed_executor_entry_gate",
+        "r54_origin_trainable_executor_comparator_gate"
+      ],
+      "next_required_lane_if_activated": "r60_origin_compiled_useful_kernel_carryover_gate"
+    }
+  }
+}

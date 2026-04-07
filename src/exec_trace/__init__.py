@@ -2,6 +2,7 @@
 
 from .datasets import (
     alternating_memory_loop_program,
+    call_chain_program,
     countdown_program,
     dynamic_latest_write_program,
     dynamic_memory_program,
@@ -12,6 +13,8 @@ from .datasets import (
     latest_write_program,
     loop_indirect_memory_program,
     memory_accumulator_program,
+    native_count_nonzero_i32_buffer_program,
+    native_sum_i32_buffer_program,
     selector_checkpoint_bank_program,
     stack_fanout_sum_program,
     stack_memory_ping_pong_program,
@@ -31,6 +34,7 @@ __all__ = [
     "TraceEvent",
     "TraceInterpreter",
     "alternating_memory_loop_program",
+    "call_chain_program",
     "countdown_program",
     "dynamic_latest_write_program",
     "dynamic_memory_program",
@@ -42,6 +46,8 @@ __all__ = [
     "latest_write_program",
     "loop_indirect_memory_program",
     "memory_accumulator_program",
+    "native_count_nonzero_i32_buffer_program",
+    "native_sum_i32_buffer_program",
     "replay_trace",
     "reconstruct_memory",
     "selector_checkpoint_bank_program",

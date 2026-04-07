@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h58_reads_h57_authorization_and_r62_gate",
+      "status": "pass",
+      "notes": "H58 closes the lane only after the explicit H57 authorization and the actual R62 result."
+    },
+    {
+      "item_id": "h58_stops_scope_lift_on_negative_native_value",
+      "status": "pass",
+      "notes": "Negative bounded-value evidence should close the mainline rather than reopening broader executor growth."
+    },
+    {
+      "item_id": "h58_restores_no_active_downstream_runtime_lane",
+      "status": "pass",
+      "notes": "This wave closes explicitly with no active downstream runtime lane."
+    },
+    {
+      "item_id": "h58_keeps_blocked_future_storage_blocked",
+      "status": "pass",
+      "notes": "F27, R53, and R54 remain blocked after the closeout."
+    }
+  ]
+}

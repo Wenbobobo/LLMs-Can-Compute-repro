@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "field": "current_published_clean_descendant_wave",
+      "value": "p63_post_p62_published_successor_promotion_prep"
+    },
+    {
+      "field": "current_release_hygiene_rebaseline_wave",
+      "value": "p64_post_p63_release_hygiene_rebaseline"
+    },
+    {
+      "field": "current_merge_prep_control_sync_wave",
+      "value": "p65_post_p64_merge_prep_control_sync"
+    },
+    {
+      "field": "handoff_path",
+      "value": "docs/plans/2026-04-01-post-p65-next-planmode-handoff.md"
+    },
+    {
+      "field": "startup_prompt_path",
+      "value": "docs/plans/2026-04-01-post-p65-next-planmode-startup-prompt.md"
+    },
+    {
+      "field": "brief_prompt_path",
+      "value": "docs/plans/2026-04-01-post-p65-next-planmode-brief-prompt.md"
+    }
+  ]
+}

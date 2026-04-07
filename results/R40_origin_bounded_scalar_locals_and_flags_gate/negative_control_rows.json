@@ -1,0 +1,246 @@
+{
+  "rows": [
+    {
+      "case_id": "invalid_flag_branch",
+      "fragment": "non_flag_branch_operand",
+      "program_name": "invalid_bounded_scalar_flag_branch_a352",
+      "opcode_surface": [
+        "const_i32",
+        "halt",
+        "jz_zero",
+        "load_static",
+        "store_static"
+      ],
+      "verifier_passed": false,
+      "verifier_error_class": "type_mismatch",
+      "spec_contract_passed": false,
+      "spec_contract_error_class": "type_mismatch",
+      "memory_surface_verifier_passed": false,
+      "memory_surface_error_class": "type_mismatch",
+      "family_scope_passed": true,
+      "family_scope_error": null,
+      "rejected_by_r40": true,
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 352,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "load_static",
+          "arg": 352,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "jz_zero",
+          "arg": 5,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ]
+    },
+    {
+      "case_id": "invalid_flag_layout",
+      "fragment": "layout_type_mismatch",
+      "program_name": "invalid_bounded_scalar_flag_layout_a360",
+      "opcode_surface": [
+        "const_i32",
+        "halt",
+        "jz_zero",
+        "load_static",
+        "store_static"
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "memory_surface_verifier_passed": false,
+      "memory_surface_error_class": "layout_type_mismatch",
+      "family_scope_passed": true,
+      "family_scope_error": null,
+      "rejected_by_r40": true,
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 1,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 360,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "load_static",
+          "arg": 360,
+          "in_types": [],
+          "out_types": [
+            "flag"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "jz_zero",
+          "arg": 5,
+          "in_types": [
+            "flag"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        },
+        {
+          "pc": 5,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ]
+    },
+    {
+      "case_id": "invalid_heap_escape",
+      "fragment": "family_scope_escape",
+      "program_name": "invalid_bounded_scalar_heap_escape_a368",
+      "opcode_surface": [
+        "add_i32",
+        "const_i32",
+        "halt",
+        "load_static",
+        "store_static"
+      ],
+      "verifier_passed": true,
+      "verifier_error_class": null,
+      "spec_contract_passed": true,
+      "spec_contract_error_class": null,
+      "memory_surface_verifier_passed": true,
+      "memory_surface_error_class": null,
+      "family_scope_passed": false,
+      "family_scope_error": "non_frame_cell_present",
+      "rejected_by_r40": true,
+      "source_program": [
+        {
+          "pc": 0,
+          "opcode": "const_i32",
+          "arg": 2,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 1,
+          "opcode": "store_static",
+          "arg": 368,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 2,
+          "opcode": "const_i32",
+          "arg": 5,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 3,
+          "opcode": "store_static",
+          "arg": 369,
+          "in_types": [
+            "i32"
+          ],
+          "out_types": []
+        },
+        {
+          "pc": 4,
+          "opcode": "load_static",
+          "arg": 368,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 5,
+          "opcode": "load_static",
+          "arg": 369,
+          "in_types": [],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 6,
+          "opcode": "add_i32",
+          "arg": null,
+          "in_types": [
+            "i32",
+            "i32"
+          ],
+          "out_types": [
+            "i32"
+          ]
+        },
+        {
+          "pc": 7,
+          "opcode": "halt",
+          "arg": null,
+          "in_types": [],
+          "out_types": []
+        }
+      ]
+    }
+  ]
+}

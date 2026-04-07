@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "current_paper_phase": "p26_post_h37_promotion_and_artifact_hygiene_audit_complete",
+    "active_stage": "p26_post_h37_promotion_and_artifact_hygiene_audit",
+    "current_clean_audit_branch": "wip/f16-h38-p26-exec",
+    "current_clean_audit_worktree": "D:/zWenbo/AI/LLMCompute-worktrees/f16-h38-p26-exec",
+    "preserved_prior_clean_source_branch": "wip/p25-f15-h37-exec",
+    "target_branch": "main",
+    "promotion_mode": "audit_only",
+    "merge_recommended": false,
+    "current_decision_packet": "h38_post_f16_runtime_relevance_reopen_decision_packet",
+    "preserved_prior_decision_packet": "h37_post_h36_runtime_relevance_decision_packet",
+    "ahead_of_main_commit_count": 45,
+    "ahead_of_main_file_count": 663,
+    "artifact_state": "not_present_on_current_source_branch",
+    "artifact_size": null,
+    "supported_here_count": 0,
+    "unsupported_here_count": 0,
+    "disconfirmed_here_count": 0,
+    "check_count": 3,
+    "pass_count": 3,
+    "blocked_count": 0,
+    "blocked_items": []
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f16-h38-p26-exec\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\f16-h38-p26-exec\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

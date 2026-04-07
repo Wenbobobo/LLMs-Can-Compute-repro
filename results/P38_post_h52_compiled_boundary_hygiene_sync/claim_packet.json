@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "supported_here": [
+      "P38 promotes the clean F29 worktree as the control and execution surface for the compiled-boundary wave.",
+      "P38 keeps raw row dumps and artifacts above roughly 10 MiB out of git by default while preserving explicit no-merge posture.",
+      "P38 keeps uv as the default exporter and focused-test execution path."
+    ],
+    "unsupported_here": [
+      "P38 does not change the active scientific stage or overturn H52/H54.",
+      "P38 does not merge dirty root main back into the clean line.",
+      "P38 does not reopen a downstream runtime lane after the landed H54 closeout."
+    ],
+    "disconfirmed_here": [
+      "The idea that convenience alone is enough reason to keep large raw artifacts in git or to execute science from dirty root main."
+    ],
+    "distilled_result": {
+      "current_active_stage": "h54_post_r58_r59_compiled_boundary_decision_packet",
+      "preserved_prior_docs_only_closeout": "h52_post_r55_r56_r57_origin_mechanism_decision_packet",
+      "preserved_prior_compiled_boundary_reentry_packet": "h53_post_h52_compiled_boundary_reentry_packet",
+      "current_paper_grade_endpoint": "h43_post_r44_useful_case_refreeze",
+      "refresh_packet": "p38_post_h52_compiled_boundary_hygiene_sync",
+      "selected_outcome": "compiled_boundary_hygiene_preserved_through_h54_closeout",
+      "current_low_priority_wave": "p38_post_h52_compiled_boundary_hygiene_sync",
+      "current_planning_bundle": "f29_post_h52_restricted_compiled_boundary_bundle",
+      "preserved_execution_gate": "r59_origin_compiled_trace_vm_execution_gate",
+      "current_merge_posture": "explicit_no_merge_during_wave",
+      "merge_executed": false,
+      "root_dirty_main_quarantined": true,
+      "large_artifact_default_policy": "raw_step_trace_and_per_read_rows_out_of_git",
+      "next_required_lane": "no_active_downstream_runtime_lane"
+    }
+  }
+}

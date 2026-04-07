@@ -10,6 +10,7 @@
 - `docs/publication_record/review_boundary_summary.md`
 - `docs/publication_record/threats_to_validity.md`
 - `docs/publication_record/manuscript_bundle_draft.md`
+- `docs/publication_record/release_summary_draft.md`
 - `results/H20_post_h19_mainline_reentry_and_hygiene_split/summary.json`
 - `results/R22_d0_true_boundary_localization_gate/summary.json`
 - `results/R23_d0_same_endpoint_systems_overturn_gate/summary.json`
@@ -18,3 +19,6 @@
 - `docs/milestones/P12_manuscript_and_manifest_maintenance/h19_packet_ledger_map.md`
 - `docs/milestones/P12_manuscript_and_manifest_maintenance/post_h21_manuscript_implications.md`
 - `docs/milestones/P12_manuscript_and_manifest_maintenance/r19_r23_h21_placeholder_map.md`
+- `docs/milestones/P12_manuscript_and_manifest_maintenance/post_h34_manuscript_resync_gap_note.md`
+- `docs/milestones/P20_post_h34_manuscript_narrative_resync/`
+- `docs/milestones/F5_post_h34_contradiction_scout_matrix/`

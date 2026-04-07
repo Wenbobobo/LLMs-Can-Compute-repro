@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "supports": [
+      "F34 keeps the current branch in planning-only mode while naming one conditionally credible future reopen family.",
+      "That family is a materially different compiled/online exact-retrieval primitive or attention-coprocessor route.",
+      "Same-lane executor-value microvariants remain inadmissible after H58/F32/H59."
+    ],
+    "does_not_support": [
+      "runtime authorization",
+      "automatic reopening of the same lane",
+      "promoting model-route or weights-route ideas into current candidates"
+    ],
+    "distilled_result": {
+      "active_stage_at_screen_time": "h59_post_h58_reproduction_gap_decision_packet",
+      "planning_bundle": "f34_post_h59_compiled_online_retrieval_reopen_screen",
+      "preserved_prior_planning_bundle": "f33_post_h59_different_cost_structure_reopen_bundle",
+      "current_low_priority_wave": "p42_post_h59_gptpro_reinterview_packet",
+      "admissible_reopen_family": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route",
+      "same_lane_status": "same_lane_executor_value_microvariants_not_admissible",
+      "later_authorization_gate": "no_runtime_lane_open_until_later_explicit_authorization",
+      "selected_outcome": "compiled_online_exact_retrieval_primitive_or_attention_coprocessor_route_screened_without_runtime_authorization",
+      "non_admissible_near_term_routes": [
+        "same_lane_executor_value_microvariants_not_admissible",
+        "high_cost_model_route_far_future_only",
+        "programs_into_weights_route_far_future_only"
+      ],
+      "required_baseline_contract": "exact_useful_case_or_stronger_narrow_target_with_transparent_linear_and_external_baselines",
+      "project_default_fallback": "planning_only_or_project_stop",
+      "next_required_lane": "docs_only_decision_or_stop_archive"
+    }
+  }
+}

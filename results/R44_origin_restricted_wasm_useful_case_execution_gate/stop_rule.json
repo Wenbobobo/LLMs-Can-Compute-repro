@@ -1,0 +1,7 @@
+{
+  "planned_kernel_count": 3,
+  "executed_kernel_count": 3,
+  "stop_rule_triggered": false,
+  "first_failure": null,
+  "reason": "all fixed useful kernels stayed exact on source/spec, source/lowered, trace, and final state"
+}

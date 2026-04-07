@@ -1,0 +1,35 @@
+{
+  "rows": [
+    {
+      "field": "current_clean_source_branch",
+      "value": "wip/h64-post-h63-archive-first-freeze"
+    },
+    {
+      "field": "current_candidate_branch",
+      "value": "wip/p56-post-h64-clean-merge-candidate"
+    },
+    {
+      "field": "ahead_of_main_commit_count",
+      "value": 138
+    },
+    {
+      "field": "main_delta_file_count",
+      "value": 1966
+    },
+    {
+      "field": "candidate_delta_file_count",
+      "value": 53
+    },
+    {
+      "field": "candidate_delta_path_classes",
+      "value": [
+        "README.md",
+        "STATUS.md",
+        "docs",
+        "scripts",
+        "tests",
+        "tmp"
+      ]
+    }
+  ]
+}

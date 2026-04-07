@@ -8,8 +8,9 @@ bundle remains the manuscript, appendix, and claim/evidence ledgers.
 - Deterministic computation can be encoded as an append-only execution trace.
 - Exact latest-write retrieval over that trace can be implemented with the
   current structured 2D hard-max mechanism.
-- Those primitives support one small exact executor and a tiny typed-bytecode
-  `D0` compiled endpoint on the current validated slice.
+- Those primitives support one small exact executor, a narrow restricted
+  useful-case paper endpoint, and a preserved first tiny typed-bytecode `D0`
+  compiled step on the current validated slice.
 - The current precision result is positive but bounded.
 - The current systems result is mixed rather than triumphant.
 
@@ -17,7 +18,7 @@ bundle remains the manuscript, appendix, and claim/evidence ledgers.
 
 - General LLM computation.
 - Arbitrary C reproduction.
-- Broader compiled demos beyond the current `D0` boundary.
+- Broader compiled demos beyond the preserved first `D0` compiled step.
 - Broad long-horizon robustness beyond the current validated suite.
 - Current-scope end-to-end runtime superiority.
 

@@ -2,29 +2,19 @@
   "experiment": "h2_bundle_lock_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
-      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\r57-origin-accelerated-trace-vm-comparator\\.venv"
     },
     "torch": {
-      "installed": true,
-      "version": "2.10.0+cu128",
-      "cuda_version": "12.8",
-      "cuda_available": true,
-      "device_count": 1,
-      "devices": [
-        {
-          "index": 0,
-          "name": "NVIDIA GeForce GTX 1650",
-          "capability": [
-            7,
-            5
-          ],
-          "total_memory_bytes": 4294705152
-        }
-      ]
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
     },
     "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
   },
@@ -32,122 +22,85 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "| `H10-H12` | completed bounded `D0` retrieval-pressure packet: `H10` reconciles `R7` to artifact-backed wording, `H11` replaces the driver, `R8` stresses higher retrieval pressure on the same endpoint, `R9` keeps real-trace precision companion-only, `R10` attributes same-endpoint costs, and `H12` refreezes the packet |",
-        "| `H13-V1` | completed governance/runtime handoff preserved as a control baseline: `H13` kept the completed checkpoint explicit, `V1` classified the slow full-suite `pytest -q` gate as `healthy_but_slow`, and outward-sync audits were tightened without widening scope |",
-        "| `H14-H15` | completed bounded core-first reopen/refreeze packet: `H14` locked the reopened lane to exact 2D retrieval plus append-only/latest-write execution, `R11/R12` landed on bounded evidence, `R13` stayed inactive, `R14` stayed unjustified, and `H15` refroze the repo on the same endpoint |",
-        "| `H16-H17` | completed bounded same-scope reopen/refreeze packet: `H16` kept the same `D0` endpoint active after `H15`, `R15` and `R16` closed the remaining-family retrieval-pressure and admitted precision surfaces, `R17` landed as the full-surface runtime stop result, `R18a` failed its narrow decomp-first gate, `R18b` then closed the runtime repair packet with exact `8/8` confirmation, and `H17` refroze the repo on the same endpoint |",
-        "| `H18-H19` | completed bounded same-endpoint mainline reopen/refreeze packet: `H18` kept the `D0` scope lock explicit, `R19` confirmed admitted-plus-heldout same-endpoint runtime generalization, `R20` supported the mechanism on a fixed `16`-row probe set, `R21` did not expose a failure inside the bounded `48`-branch executor grid, and `H19` refroze the packet as the current machine-readable state |"
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "`H50_post_r51_r52_scope_decision_packet`",
+        "`H51_post_h50_origin_mechanism_reentry_packet`",
+        "`R57_origin_accelerated_trace_vm_comparator_gate`",
+        "`H43_post_r44_useful_case_refreeze`"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state:",
-        "- `H10/H11/R8/R9/R10/H12` remains the latest completed same-endpoint",
-        "- `H13_post_h12_rollover_and_next_stage_staging` remains preserved. `V1`",
-        "gate as `healthy_but_slow`.",
-        "- `H15_refreeze_and_decision_sync` remains the preserved prior refrozen state",
-        "- `H17_refreeze_and_conditional_frontier_recheck` is now the preserved prior",
-        "- `H14_core_first_reopen_and_scope_lock` is now the completed prior reopened",
-        "- `P8` stage is complete on the current frozen scope."
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
+        "`H50_post_r51_r52_scope_decision_packet`.",
+        "`H51_post_h50_origin_mechanism_reentry_packet`.",
+        "`P37_post_h50_narrow_executor_closeout_sync`.",
+        "- Dirty root `main` remains quarantined and `merge_executed = false` remains"
       ]
     },
     {
       "path": "docs/publication_record/README.md",
       "matched_lines": [
-        "- `current_stage_driver.md` \u2014 the canonical `active_driver` for the current",
-        "- `planning_state_taxonomy.md` \u2014 allowed planning-state labels and current",
-        "- `paper_package_plan.md` \u2014 completed post-`P7` stage design retained as a",
-        "- `release_candidate_checklist.md` \u2014 restrained outward-sync",
-        "- `conditional_reopen_protocol.md` \u2014 bounded reopen protocol still governing",
-        "- `release_preflight_checklist.md` \u2014 outward release checklist for README /",
-        "machine-readable `release_preflight_checklist_audit` export;",
-        "- `results/release_worktree_hygiene_snapshot/summary.json` \u2014 operational"
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "- `H43_post_r44_useful_case_refreeze`",
+        "- `R57_origin_accelerated_trace_vm_comparator_gate`"
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "`H14_core_first_reopen_and_scope_lock` with landed `R11`, `R12`, and the",
-        "preserved `H15_refreeze_and_decision_sync` closeout, from the completed",
-        "`H16_post_h15_same_scope_reopen_and_scope_lock` ->",
-        "7. Preserve `H15_refreeze_and_decision_sync` as the prior completed refreeze",
-        "- `H16_post_h15_same_scope_reopen_and_scope_lock` is preserved as the earlier",
-        "- `H15_refreeze_and_decision_sync` is preserved as the prior refreeze and",
-        "- `H14_core_first_reopen_and_scope_lock` remains preserved as the completed"
-      ]
-    },
-    {
-      "path": "docs/publication_record/planning_state_taxonomy.md",
-      "matched_lines": [
-        "- `active_driver`",
-        "- `standing_gate`",
-        "- `historical_complete`",
-        "- `dormant_protocol`",
-        "- `docs/publication_record/current_stage_driver.md` \u2014 `active_driver`",
-        "- `docs/publication_record/release_candidate_checklist.md` \u2014 `standing_gate`",
-        "- `docs/publication_record/paper_package_plan.md` \u2014 `historical_complete`",
-        "- `docs/publication_record/conditional_reopen_protocol.md` \u2014 `dormant_protocol`"
-      ]
-    },
-    {
-      "path": "docs/publication_record/paper_package_plan.md",
-      "matched_lines": [
-        "State: `historical_complete`.",
-        "## Goal",
-        "## Fixed Inputs",
-        "## Package Write Set",
-        "## Exit Gate"
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet`",
+        "- `H50_post_r51_r52_scope_decision_packet`",
+        "- `H51_post_h50_origin_mechanism_reentry_packet`",
+        "- `P37_post_h50_narrow_executor_closeout_sync`",
+        "- `H43_post_r44_useful_case_refreeze`",
+        "- `no_active_downstream_runtime_lane`",
+        "- `no_active_downstream_runtime_lane` is restored as the current downstream",
+        "- `H52_post_r55_r56_r57_origin_mechanism_decision_packet` is the current"
       ]
     },
     {
       "path": "docs/publication_record/release_summary_draft.md",
       "matched_lines": [
-        "The current frozen scope has a locked submission-candidate bundle. `P8` closed",
-        "stage, and `E1c` remains conditional only and contradiction-only on current"
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`.",
+        "baselines on that suite (`R57`). `H43` remains the paper-grade endpoint for",
+        "`H52_post_r55_r56_r57_origin_mechanism_decision_packet`, which preserves"
       ]
     },
     {
       "path": "docs/publication_record/paper_bundle_status.md",
       "matched_lines": [
-        "locked submission-candidate bundle now serves as the current frozen bundle",
-        "The current submission/release controls also live in"
+        "gate, and `R57` is the completed negative fast-path comparator gate. `F20` is",
+        "packet with `merge_executed = false`, `P37` is the aligned low-priority"
       ]
     },
     {
       "path": "docs/publication_record/submission_candidate_criteria.md",
       "matched_lines": [
-        "1. Freeze-candidate conditions still hold.",
-        "2. Manuscript bundle and supporting ledgers are locked together.",
-        "6. Standing audits remain green."
+        "frozen scope, currently anchored on the active `H43` docs-only useful-case",
+        "- `results/P28_post_h43_publication_surface_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
-        "State: `standing_gate`.",
-        "- [ ] `results/P1_paper_readiness/summary.json` still reports `10/10` ready",
-        "- [ ] `results/P5_public_surface_sync/summary.json` reports zero blocked items.",
-        "- [ ] `results/H2_bundle_lock_audit/summary.json` reports zero blocked items.",
-        "- [ ] `results/release_preflight_checklist_audit/summary.json` reports",
-        "- [ ] `results/V1_full_suite_validation_runtime_timing_followup/summary.json`",
-        "- [ ] Blog work remains blocked unless this checklist and"
+        "- [ ] `results/H43_post_r44_useful_case_refreeze/summary.json` reports the"
       ]
     },
     {
       "path": "docs/publication_record/conditional_reopen_protocol.md",
       "matched_lines": [
         "State: `dormant_protocol`.",
-        "Only one patch lane may be active at a time:",
         "- `E1a_precision_patch`",
-        "- `E1b_systems_patch`",
         "- `E1c_compiled_boundary_patch`"
       ]
     },
     {
       "path": "docs/publication_record/layout_decision_log.md",
       "matched_lines": [
-        "| Post-`P7` next phase | Treat the freeze-candidate checkpoint as the fixed baseline and move the next paper-facing work into `P8` bundle lock, `H2` audit promotion, and `P9` restrained release sync. | The next risk is package and governance drift, not another freeze pass or a structure rewrite. | A later audit or review requirement proves one missing evidence class that cannot be resolved inside the current frozen bundle. | `docs/milestones/P7_manuscript_freeze_candidate_and_release_preflight/result_digest.md`, `docs/publication_record/paper_package_plan.md`, `docs/plans/2026-03-19-post-p7-submission-release-stabilization-master-plan.md` |",
+        "| Release-summary reuse | Treat `release_summary_draft.md` as stable enough to seed future README-adjacent short updates, while keeping the manuscript bundle as the authoritative source. | The release summary now inherits the frozen scope, the mixed `R2` wording, and the preserved-first-step `D0` compiled-boundary line rather than treating that older `D0` evidence as the whole current endpoint. Using it as the short-update source reduces future public-surface churn. | A later manuscript or public-surface change introduces materially new quantitative detail or shifts a claim boundary that the release summary no longer captures cleanly. | `docs/publication_record/release_summary_draft.md`, `docs/publication_record/manuscript_bundle_draft.md`, `README.md`, `STATUS.md` |",
         "| Evidence reopen discipline | Reopen evidence only through one named `E1` patch lane, and always return control to the locked paper/release lanes. | This keeps unattended runs from silently widening precision, systems, or compiled scope by wording drift. | A later scope decision intentionally replaces the current frozen endpoint with a new evidence program. | `docs/publication_record/conditional_reopen_protocol.md`, `docs/milestones/E1_conditional_evidence_reopen_protocol/result_digest.md` |"
       ]
     }

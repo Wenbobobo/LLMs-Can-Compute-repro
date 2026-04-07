@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "h53_docs_record_explicit_compiled_boundary_reentry_decision",
+      "status": "pass",
+      "notes": "H53 should record one narrow docs-only decision: preserve H52, select reentry through R58, and keep executor-entry work blocked."
+    },
+    {
+      "item_id": "upstream_h52_negative_closeout_is_preserved_not_overturned",
+      "status": "pass",
+      "notes": "H53 must preserve H52 as binding on fast-path value while preserving H43 as the paper-grade endpoint."
+    },
+    {
+      "item_id": "shared_control_surfaces_record_h53_as_preserved_prior_reentry_packet",
+      "status": "pass",
+      "notes": "Shared current-wave docs should expose H53 as preserved prior authorization history inside the current H54 stack."
+    }
+  ]
+}

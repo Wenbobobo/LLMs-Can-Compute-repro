@@ -35,6 +35,24 @@ def equality_branch_program(lhs: int, rhs: int) -> Program:
     return Program(instructions=instructions, name=f"eq_{lhs}_{rhs}")
 
 
+def call_chain_program() -> Program:
+    """Exercise nested call/return control flow on the tiny stack machine."""
+
+    instructions = (
+        Instruction(Opcode.PUSH_CONST, 1),
+        Instruction(Opcode.PUSH_CONST, 2),
+        Instruction(Opcode.CALL, 4),
+        Instruction(Opcode.HALT),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.PUSH_CONST, 3),
+        Instruction(Opcode.CALL, 8),
+        Instruction(Opcode.RET),
+        Instruction(Opcode.ADD),
+        Instruction(Opcode.RET),
+    )
+    return Program(instructions=instructions, name="call_chain")
+
+
 def latest_write_program() -> Program:
     """Overwrite one address and read it back to expose last-write semantics."""
 
@@ -520,4 +538,167 @@ def stack_fanout_sum_program(depth: int, *, base_value: int = 1) -> Program:
     return Program(
         instructions=instructions,
         name=f"stack_fanout_sum_{depth}_v{base_value}",
+    )
+
+
+def native_sum_i32_buffer_program(
+    input_values: tuple[int, ...],
+    *,
+    input_base_address: int = 1024,
+    accumulator_address: int | None = None,
+    pointer_address: int | None = None,
+    remaining_address: int | None = None,
+    name: str | None = None,
+) -> Program:
+    """Execute a sum kernel directly on the append-only trace substrate."""
+
+    if not input_values:
+        raise ValueError("native_sum_i32_buffer_program expects at least one input value.")
+    if input_base_address < 0:
+        raise ValueError("native_sum_i32_buffer_program expects a non-negative base address.")
+
+    accumulator_address = accumulator_address if accumulator_address is not None else input_base_address + len(input_values)
+    pointer_address = pointer_address if pointer_address is not None else accumulator_address + 1
+    remaining_address = remaining_address if remaining_address is not None else pointer_address + 1
+
+    instructions: list[Instruction] = []
+    for offset, value in enumerate(input_values):
+        instructions.extend(
+            (
+                Instruction(Opcode.PUSH_CONST, value),
+                Instruction(Opcode.STORE, input_base_address + offset),
+            )
+        )
+
+    instructions.extend(
+        (
+            Instruction(Opcode.PUSH_CONST, 0),
+            Instruction(Opcode.STORE, accumulator_address),
+            Instruction(Opcode.PUSH_CONST, input_base_address),
+            Instruction(Opcode.STORE, pointer_address),
+            Instruction(Opcode.PUSH_CONST, len(input_values)),
+            Instruction(Opcode.STORE, remaining_address),
+        )
+    )
+
+    loop_pc = len(instructions)
+    instructions.extend(
+        (
+            Instruction(Opcode.LOAD, remaining_address),
+            Instruction(Opcode.JZ, 0),
+            Instruction(Opcode.LOAD, pointer_address),
+            Instruction(Opcode.LOAD_AT),
+            Instruction(Opcode.LOAD, accumulator_address),
+            Instruction(Opcode.ADD),
+            Instruction(Opcode.STORE, accumulator_address),
+            Instruction(Opcode.LOAD, pointer_address),
+            Instruction(Opcode.PUSH_CONST, 1),
+            Instruction(Opcode.ADD),
+            Instruction(Opcode.STORE, pointer_address),
+            Instruction(Opcode.LOAD, remaining_address),
+            Instruction(Opcode.PUSH_CONST, 1),
+            Instruction(Opcode.SUB),
+            Instruction(Opcode.STORE, remaining_address),
+            Instruction(Opcode.JMP, loop_pc),
+        )
+    )
+    end_pc = len(instructions)
+    instructions[loop_pc + 1] = Instruction(Opcode.JZ, end_pc)
+    instructions.extend(
+        (
+            Instruction(Opcode.LOAD, accumulator_address),
+            Instruction(Opcode.HALT),
+        )
+    )
+
+    return Program(
+        instructions=tuple(instructions),
+        name=name or f"native_sum_i32_buffer_len{len(input_values)}_a{input_base_address}",
+    )
+
+
+def native_count_nonzero_i32_buffer_program(
+    input_values: tuple[int, ...],
+    *,
+    input_base_address: int = 2048,
+    accumulator_address: int | None = None,
+    pointer_address: int | None = None,
+    remaining_address: int | None = None,
+    name: str | None = None,
+) -> Program:
+    """Execute a count-nonzero kernel directly on the append-only trace substrate."""
+
+    if not input_values:
+        raise ValueError("native_count_nonzero_i32_buffer_program expects at least one input value.")
+    if input_base_address < 0:
+        raise ValueError("native_count_nonzero_i32_buffer_program expects a non-negative base address.")
+
+    accumulator_address = accumulator_address if accumulator_address is not None else input_base_address + len(input_values)
+    pointer_address = pointer_address if pointer_address is not None else accumulator_address + 1
+    remaining_address = remaining_address if remaining_address is not None else pointer_address + 1
+
+    instructions: list[Instruction] = []
+    for offset, value in enumerate(input_values):
+        instructions.extend(
+            (
+                Instruction(Opcode.PUSH_CONST, value),
+                Instruction(Opcode.STORE, input_base_address + offset),
+            )
+        )
+
+    instructions.extend(
+        (
+            Instruction(Opcode.PUSH_CONST, 0),
+            Instruction(Opcode.STORE, accumulator_address),
+            Instruction(Opcode.PUSH_CONST, input_base_address),
+            Instruction(Opcode.STORE, pointer_address),
+            Instruction(Opcode.PUSH_CONST, len(input_values)),
+            Instruction(Opcode.STORE, remaining_address),
+        )
+    )
+
+    loop_pc = len(instructions)
+    instructions.extend(
+        (
+            Instruction(Opcode.LOAD, remaining_address),
+            Instruction(Opcode.JZ, 0),
+            Instruction(Opcode.LOAD, pointer_address),
+            Instruction(Opcode.LOAD_AT),
+            Instruction(Opcode.DUP),
+            Instruction(Opcode.JZ, 0),
+            Instruction(Opcode.POP),
+            Instruction(Opcode.LOAD, accumulator_address),
+            Instruction(Opcode.PUSH_CONST, 1),
+            Instruction(Opcode.ADD),
+            Instruction(Opcode.STORE, accumulator_address),
+            Instruction(Opcode.JMP, 0),
+            Instruction(Opcode.POP),
+            Instruction(Opcode.LOAD, pointer_address),
+            Instruction(Opcode.PUSH_CONST, 1),
+            Instruction(Opcode.ADD),
+            Instruction(Opcode.STORE, pointer_address),
+            Instruction(Opcode.LOAD, remaining_address),
+            Instruction(Opcode.PUSH_CONST, 1),
+            Instruction(Opcode.SUB),
+            Instruction(Opcode.STORE, remaining_address),
+            Instruction(Opcode.JMP, loop_pc),
+        )
+    )
+
+    zero_branch_pc = loop_pc + 12
+    after_zero_branch_pc = loop_pc + 13
+    instructions[loop_pc + 5] = Instruction(Opcode.JZ, zero_branch_pc)
+    instructions[loop_pc + 11] = Instruction(Opcode.JMP, after_zero_branch_pc)
+    end_pc = len(instructions)
+    instructions[loop_pc + 1] = Instruction(Opcode.JZ, end_pc)
+    instructions.extend(
+        (
+            Instruction(Opcode.LOAD, accumulator_address),
+            Instruction(Opcode.HALT),
+        )
+    )
+
+    return Program(
+        instructions=tuple(instructions),
+        name=name or f"native_count_nonzero_i32_buffer_len{len(input_values)}_a{input_base_address}",
     )

@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "source": "results/H27_refreeze_after_r32_r33_same_endpoint_decision/summary.json",
+      "fields": {
+        "systems_verdict": "systems_more_sharply_negative",
+        "next_priority_lane": "later_explicit_packet_required_before_new_runtime"
+      }
+    },
+    {
+      "source": "docs/milestones/F4_post_h23_origin_claim_delta_matrix/claim_delta_matrix.md",
+      "fields": {
+        "headline_narrative_state": "blocked_scope_or_requires_new_substrate"
+      }
+    },
+    {
+      "source": "docs/publication_record/claim_ladder.md",
+      "fields": {
+        "d0_row_state": "historical_boundary_preserved_not_current_mainline"
+      }
+    }
+  ]
+}

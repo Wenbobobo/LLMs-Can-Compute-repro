@@ -1,0 +1,4 @@
+- preserve `H56` and `H57` as visible prior packets
+- record `R62` as completed negative bounded-value evidence
+- keep `F27/R53/R54` blocked
+- close the lane without reopening compiled or language scope

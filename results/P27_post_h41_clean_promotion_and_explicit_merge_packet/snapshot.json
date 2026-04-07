@@ -1,0 +1,32 @@
+{
+  "rows": [
+    {
+      "source": "results/H41_post_r42_aggressive_long_arc_decision_packet/summary.json",
+      "fields": {
+        "active_stage": "h41_post_r42_aggressive_long_arc_decision_packet",
+        "selected_outcome": "authorize_r43_exact_mainline_and_coequal_r45_model_lane",
+        "explicit_merge_packet": "p27_post_h41_clean_promotion_and_explicit_merge_packet"
+      }
+    },
+    {
+      "source": "results/F20_post_r42_dual_mode_model_mainline_bundle/summary.json",
+      "fields": {
+        "active_stage": "f20_post_r42_dual_mode_model_mainline_bundle",
+        "model_mainline_posture": "coequal_mainline_exact_non_substitutive",
+        "decisive_exact_next_gate": "r43_origin_bounded_memory_small_vm_execution_gate",
+        "authorized_future_model_gate": "r45_origin_dual_mode_model_mainline_gate"
+      }
+    },
+    {
+      "source": "docs/milestones/P27_post_h41_clean_promotion_and_explicit_merge_packet/merge_wave_manifest.md",
+      "fields": {
+        "branch_name": "wip/p27-promotion-merge",
+        "source_branch_synced_to_origin": true,
+        "ahead_of_main_commit_count": 50,
+        "ahead_of_main_file_count": 809,
+        "artifact_state": "not_present_on_current_source_branch",
+        "artifact_size": null
+      }
+    }
+  ]
+}

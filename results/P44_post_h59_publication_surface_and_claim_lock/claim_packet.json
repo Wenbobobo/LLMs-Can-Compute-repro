@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "supports": [
+      "P44 locks outward wording to the post-H59 archive state and the H60 decision.",
+      "P44 keeps the narrow positive explicit while keeping the broad headline negative explicit.",
+      "P44 keeps the compiled-online route conditional-only and the default posture planning-only / archive / stop."
+    ],
+    "does_not_support": [
+      "broad headline reproduction claims",
+      "same-lane executor-value reopening",
+      "turning far-future ideas into current release wording"
+    ],
+    "distilled_result": {
+      "active_stage_at_lock_time": "h60_post_f34_next_lane_decision_packet",
+      "current_publication_lock_wave": "p44_post_h59_publication_surface_and_claim_lock",
+      "current_planning_bundle": "f34_post_h59_compiled_online_retrieval_reopen_screen",
+      "selected_outcome": "publication_surfaces_locked_to_post_h59_archive_state",
+      "current_downstream_scientific_lane": "planning_only_or_project_stop",
+      "audited_file_count": 12,
+      "locked_file_count": 12,
+      "claim_lock_assertions": [
+        "narrow positive mechanism result survives",
+        "broad headline reproduction did not land",
+        "same-lane executor-value microvariants remain inadmissible",
+        "compiled-online exact retrieval or attention-coprocessor route remains conditional only",
+        "default outcome remains planning-only, archive, or explicit stop"
+      ]
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "rows": [
+    {
+      "path": "docs/milestones/H53_post_h52_compiled_boundary_reentry_packet/README.md",
+      "matched_lines": [
+        "- selected outcome:",
+        "`authorize_compiled_boundary_reentry_through_r58_first`;",
+        "`R58` as the next runtime candidate, and keep `F27`, `R53`, and `R54`"
+      ]
+    },
+    {
+      "path": "docs/milestones/H53_post_h52_compiled_boundary_reentry_packet/decision_matrix.md",
+      "matched_lines": [
+        "| `authorize_compiled_boundary_reentry_through_r58_first` | preserve `H52`, keep `H43` visible, set `R58` as the only next runtime candidate, keep `R59 -> H54` downstream only, and keep `F27/R53/R54` blocked |"
+      ]
+    },
+    {
+      "path": "docs/milestones/H53_post_h52_compiled_boundary_reentry_packet/status.md",
+      "matched_lines": []
+    },
+    {
+      "path": "README.md",
+      "matched_lines": [
+        "`H53_post_h52_compiled_boundary_reentry_packet`",
+        "`R58_origin_restricted_stack_bytecode_lowering_contract_gate`"
+      ]
+    },
+    {
+      "path": "STATUS.md",
+      "matched_lines": [
+        "`H54_post_r58_r59_compiled_boundary_decision_packet`.",
+        "`H53_post_h52_compiled_boundary_reentry_packet`."
+      ]
+    },
+    {
+      "path": "docs/publication_record/current_stage_driver.md",
+      "matched_lines": [
+        "The preserved prior compiled-boundary reentry packet is:",
+        "- `H53_post_h52_compiled_boundary_reentry_packet`",
+        "- `H53_post_h52_compiled_boundary_reentry_packet` is the preserved prior"
+      ]
+    },
+    {
+      "path": "docs/claims_matrix.md",
+      "matched_lines": [
+        "| H53 | The post-`H52` line can preserve the prior mechanism closeout while explicitly authorizing a narrower compiled-boundary reentry through `R58` only | `H53_post_h52_compiled_boundary_reentry_packet` over `H52`, `F29`, `H43`, and the saved compiled-boundary lane | validated as a docs-only packet; preserves the prior mechanism closeout while explicitly authorizing a narrower compiled-boundary reentry through `R58` only, preserves `H43` as the paper-grade endpoint, selects `authorize_compiled_boundary_reentry_through_r58_first`, fixes `R58` as the only next runtime candidate, and keeps `F27/R53/R54` blocked |"
+      ]
+    },
+    {
+      "path": "tmp/active_wave_plan.md",
+      "matched_lines": [
+        "`no_active_downstream_runtime_lane`;",
+        "8. Keep the downstream scientific lane at `no_active_downstream_runtime_lane`.",
+        "- `no_active_downstream_runtime_lane` is the current downstream lane state."
+      ]
+    }
+  ]
+}

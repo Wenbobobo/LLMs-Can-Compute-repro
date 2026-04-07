@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "supports": [
+      "The current compiled-boundary route carries the minimal preserved useful-kernel pair exactly on the declared five-row suite.",
+      "The compiled tiny-C lowering stays translation-identical to the preserved canonical bytecode on all admitted rows.",
+      "Both linear and accelerated free-running lowered execution remain exact on the admitted compiled useful-kernel rows."
+    ],
+    "does_not_support": [
+      "bounded value over simpler baselines",
+      "histogram16_u8 carryover on this wave",
+      "arbitrary C or broad Wasm claims"
+    ],
+    "distilled_result": {
+      "active_stage": "r60_origin_compiled_useful_kernel_carryover_gate",
+      "current_active_docs_only_stage": "h55_post_h54_useful_kernel_reentry_packet",
+      "current_planning_bundle": "f30_post_h54_useful_kernel_bridge_bundle",
+      "current_low_priority_wave": "p39_post_h54_successor_worktree_hygiene_sync",
+      "selected_outcome": "compiled_useful_kernel_carryover_supported_exactly",
+      "admitted_kernel_suite": [
+        "sum_i32_buffer",
+        "count_nonzero_i32_buffer"
+      ],
+      "exact_variant_count": 5,
+      "compiler_work_leakage_break_count": 0,
+      "next_required_packet": "r61_origin_compiled_useful_kernel_value_gate"
+    }
+  }
+}

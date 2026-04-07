@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "question": "what exact useful-case target survives as the comparator",
+      "status": "must_answer_before_runtime"
+    },
+    {
+      "question": "what exact cost model differs materially from the closed executor-value lane",
+      "status": "must_answer_before_runtime"
+    },
+    {
+      "question": "what transparent linear and external baselines must be beaten",
+      "status": "must_answer_before_runtime"
+    },
+    {
+      "question": "what measured bounded-value win condition would count as success",
+      "status": "must_answer_before_runtime"
+    },
+    {
+      "question": "what immediate stop rules terminate the lane before runtime expansion",
+      "status": "must_answer_before_runtime"
+    },
+    {
+      "stop_rule": "stop_if_route_is_just_renamed_same_lane_executor_value_work",
+      "status": "active"
+    },
+    {
+      "stop_rule": "stop_if_useful_case_target_is_broader_than_preserved_narrow_endpoint",
+      "status": "active"
+    },
+    {
+      "stop_rule": "stop_if_transparent_linear_and_external_baselines_are_missing",
+      "status": "active"
+    },
+    {
+      "stop_rule": "stop_if_cost_structure_delta_is_not_materially_different",
+      "status": "active"
+    },
+    {
+      "stop_rule": "stop_if_runtime_is_requested_without_later_explicit_authorization_packet",
+      "status": "active"
+    }
+  ]
+}

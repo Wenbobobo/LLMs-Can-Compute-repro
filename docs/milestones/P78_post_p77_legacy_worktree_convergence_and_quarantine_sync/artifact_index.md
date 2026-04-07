@@ -1,0 +1,6 @@
+# Artifact Index
+
+- `results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json`
+- `results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/checklist.json`
+- `results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/claim_packet.json`
+- `results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/snapshot.json`

@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "field": "current_clean_merge_candidate_packet",
+      "value": "p56_post_h64_clean_merge_candidate_packet"
+    },
+    {
+      "field": "current_paper_submission_sync_wave",
+      "value": "p57_post_h64_paper_submission_package_sync"
+    },
+    {
+      "field": "preserved_executor_value_closeout",
+      "value": "h58_post_r62_origin_value_boundary_closeout_packet"
+    },
+    {
+      "field": "preserved_paper_grade_endpoint",
+      "value": "h43_post_r44_useful_case_refreeze"
+    }
+  ]
+}

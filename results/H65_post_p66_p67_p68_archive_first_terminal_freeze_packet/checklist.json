@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "h65_preserves_h64",
+      "status": "pass",
+      "notes": "H64 remains the preserved prior active packet under H65."
+    },
+    {
+      "item_id": "h65_reads_p66",
+      "status": "pass",
+      "notes": "P66 must already confirm the exact successor review range and scope."
+    },
+    {
+      "item_id": "h65_reads_p67",
+      "status": "pass",
+      "notes": "P67 must already freeze the new published successor branch."
+    },
+    {
+      "item_id": "h65_reads_p68",
+      "status": "pass",
+      "notes": "P68 must already reanchor release hygiene and control on p66."
+    },
+    {
+      "item_id": "h65_reads_f38",
+      "status": "pass",
+      "notes": "F38 must remain the only dormant future dossier and remain non-runtime only."
+    },
+    {
+      "item_id": "h65_runtime_stays_closed",
+      "status": "pass",
+      "notes": "H65 does not authorize runtime; any future R63 remains dormant and advisory-only unless a later explicit packet says otherwise."
+    }
+  ]
+}

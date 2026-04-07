@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "item_id": "p45_reads_h60",
+      "status": "pass",
+      "notes": "P45 begins only after H60 leaves the repo in planning-only / archive posture."
+    },
+    {
+      "item_id": "p45_preserves_p43_merge_posture",
+      "status": "pass",
+      "notes": "P45 inherits the descendant-only merge rule from P43."
+    },
+    {
+      "item_id": "p45_current_worktree_uses_repo_local_alias_prefix",
+      "status": "pass",
+      "notes": "The current successor line should live under D:/zWenbo/AI/wt/."
+    },
+    {
+      "item_id": "p45_root_main_is_quarantined",
+      "status": "pass",
+      "notes": "Dirty root main should remain parked on a quarantine branch."
+    },
+    {
+      "item_id": "p45_predecessor_branch_exists",
+      "status": "pass",
+      "notes": "The clean predecessor branch should remain visible for later clean-descendant integration."
+    },
+    {
+      "item_id": "p45_current_branch_is_successor_line",
+      "status": "pass",
+      "notes": "The active worktree should stay on the named archive-first successor branch."
+    }
+  ]
+}

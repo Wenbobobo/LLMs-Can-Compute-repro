@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "supported_here": [
+      "H41 lands the required later explicit post-R42 docs-only decision packet.",
+      "H41 preserves H40/H36 and records R42 as the completed first semantic-boundary gate.",
+      "H41 authorizes exact R43 as the next decisive runtime gate and admits R45 as a coequal model lane under the F20 evidence boundary.",
+      "H41 keeps R41 deferred, keeps R44 behind later H42, and keeps merge explicit through P27."
+    ],
+    "unsupported_here": [
+      "H41 does not treat R42 as already proving bounded-memory small-VM execution.",
+      "H41 does not authorize R44, arbitrary C, unrestricted Wasm, or general-computer rhetoric.",
+      "H41 does not let model-only positives replace exact R43 evidence."
+    ],
+    "disconfirmed_here": [
+      "The idea that the post-R42 route should stay planning-only by default once an explicit aggressive-long-arc override has been selected."
+    ],
+    "distilled_result": {
+      "active_stage": "h41_post_r42_aggressive_long_arc_decision_packet",
+      "current_active_routing_stage": "h36_post_r40_bounded_scalar_family_refreeze",
+      "preserved_prior_docs_only_decision_packet": "h40_post_h38_semantic_boundary_activation_packet",
+      "current_completed_retrieval_contract_gate": "r42_origin_append_only_memory_retrieval_contract_gate",
+      "current_model_mainline_bundle": "f20_post_r42_dual_mode_model_mainline_bundle",
+      "selected_outcome": "authorize_r43_exact_mainline_and_coequal_r45_model_lane",
+      "non_selected_outcome": "hold_at_r42_and_continue_planning_only",
+      "authorized_exact_runtime_candidate": "r43_origin_bounded_memory_small_vm_execution_gate",
+      "authorized_model_runtime_candidate": "r45_origin_dual_mode_model_mainline_gate",
+      "deferred_future_runtime_candidate": "r41_origin_runtime_relevance_threat_stress_audit",
+      "deferred_future_semantic_boundary_candidate": "r44_origin_restricted_wasm_useful_case_execution_gate",
+      "later_explicit_followup_packet": "h42_post_r43_route_selection_packet",
+      "explicit_merge_packet": "p27_post_h41_clean_promotion_and_explicit_merge_packet",
+      "decision_basis": "r42_positive_plus_f20_coequal_mainline_boundary",
+      "next_required_lane": "p27_post_h41_clean_promotion_and_explicit_merge_packet"
+    }
+  }
+}

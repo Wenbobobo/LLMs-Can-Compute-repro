@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "supports": [
+      "P51 packages archive-first partial falsification as the strongest honest paper-facing reading.",
+      "P51 keeps the narrow positive mechanism result explicit while keeping the broader headline negative explicit.",
+      "P51 keeps F38 dormant and non-runtime rather than hinting at a reopened science lane."
+    ],
+    "does_not_support": [
+      "runtime-superiority claims",
+      "broad Wasm or arbitrary C claims",
+      "advisory material as evidence"
+    ],
+    "distilled_result": {
+      "active_stage_at_package_time": "h62_post_p47_p48_p49_f37_hygiene_first_scope_decision_packet",
+      "current_paper_facing_package_wave": "p51_post_h62_paper_facing_partial_falsification_package",
+      "preserved_prior_publication_sync_wave": "p46_post_h60_archive_first_publication_sync",
+      "selected_outcome": "paper_surfaces_locked_to_archive_first_partial_falsification_closeout",
+      "audited_file_count": 7,
+      "locked_file_count": 6,
+      "future_route_posture": "dormant_non_runtime_only"
+    }
+  }
+}

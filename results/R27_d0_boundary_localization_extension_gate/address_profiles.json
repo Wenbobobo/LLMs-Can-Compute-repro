@@ -1,0 +1,2601 @@
+{
+  "experiment": "r27_address_profiles",
+  "environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute\\.venv\\Scripts\\python.exe",
+      "version": "3.12.9 (main, Feb 12 2025, 14:52:31) [MSC v.1942 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute\\.venv"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.10.0+cu128",
+      "cuda_version": "12.8",
+      "cuda_available": true,
+      "device_count": 1,
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce GTX 1650",
+          "capability": [
+            7,
+            5
+          ],
+          "total_memory_bytes": 4294705152
+        }
+      ]
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  },
+  "rows": [
+    {
+      "branch_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kbaseline",
+      "candidate_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kbaseline_seed0",
+      "lane_class": "second_wave_extension",
+      "family": "subroutine_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_subroutine_braid_long_140_a176",
+      "seed_variant": "r19_admitted_address_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "baseline",
+      "seed_id": 0,
+      "base_start": 140,
+      "scaled_start": 490,
+      "base_max_steps": 10240,
+      "max_steps": 35946,
+      "base_reference_step_count": 2746,
+      "expected_reference_step_count": 9653,
+      "base_unique_address_count": 4,
+      "padding_unique_count": 20,
+      "flatten_rounds": 0,
+      "padding_base_address": 40000,
+      "expected_padding_instruction_count": 40,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_subroutine_braid_long_490_a176_r26_u24_h3p5_cplus_two_kbaseline_seed0",
+      "reference_step_count": 9613,
+      "memory_operation_count": 3947,
+      "memory_load_count": 2453,
+      "memory_store_count": 1494,
+      "unique_address_count": 24,
+      "hottest_address": 176,
+      "hottest_address_loads": 1471,
+      "hottest_address_stores": 491,
+      "hottest_address_share": 0.4970863947301748,
+      "address_rows": [
+        {
+          "address": 176,
+          "loads": 1471,
+          "stores": 491,
+          "total_ops": 1962
+        },
+        {
+          "address": 177,
+          "loads": 490,
+          "stores": 491,
+          "total_ops": 981
+        },
+        {
+          "address": 178,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 179,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 40000,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40001,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40002,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40003,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40004,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40005,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40006,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40007,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40008,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40009,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40010,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40011,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40012,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40013,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40014,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40015,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40016,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40017,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40018,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40019,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kbaseline",
+      "candidate_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kbaseline_seed1",
+      "lane_class": "second_wave_extension",
+      "family": "subroutine_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_subroutine_braid_long_140_a176",
+      "seed_variant": "r19_heldout_address_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "baseline",
+      "seed_id": 1,
+      "base_start": 140,
+      "scaled_start": 490,
+      "base_max_steps": 10240,
+      "max_steps": 35946,
+      "base_reference_step_count": 2746,
+      "expected_reference_step_count": 9653,
+      "base_unique_address_count": 4,
+      "padding_unique_count": 20,
+      "flatten_rounds": 0,
+      "padding_base_address": 40016,
+      "expected_padding_instruction_count": 40,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_subroutine_braid_long_490_a208_r26_u24_h3p5_cplus_two_kbaseline_seed1",
+      "reference_step_count": 9613,
+      "memory_operation_count": 3947,
+      "memory_load_count": 2453,
+      "memory_store_count": 1494,
+      "unique_address_count": 24,
+      "hottest_address": 208,
+      "hottest_address_loads": 1471,
+      "hottest_address_stores": 491,
+      "hottest_address_share": 0.4970863947301748,
+      "address_rows": [
+        {
+          "address": 208,
+          "loads": 1471,
+          "stores": 491,
+          "total_ops": 1962
+        },
+        {
+          "address": 209,
+          "loads": 490,
+          "stores": 491,
+          "total_ops": 981
+        },
+        {
+          "address": 210,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 211,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 40016,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40017,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40018,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40019,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40020,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40021,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40022,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40023,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40024,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40025,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40026,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40027,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40028,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40029,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40030,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40031,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40032,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40033,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40034,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40035,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kflattened",
+      "candidate_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kflattened_seed0",
+      "lane_class": "second_wave_extension",
+      "family": "subroutine_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_subroutine_braid_long_140_a176",
+      "seed_variant": "r19_admitted_address_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "flattened",
+      "seed_id": 0,
+      "base_start": 140,
+      "scaled_start": 490,
+      "base_max_steps": 10240,
+      "max_steps": 43866,
+      "base_reference_step_count": 2746,
+      "expected_reference_step_count": 17573,
+      "base_unique_address_count": 4,
+      "padding_unique_count": 20,
+      "flatten_rounds": 198,
+      "padding_base_address": 40064,
+      "expected_padding_instruction_count": 7960,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_subroutine_braid_long_490_a176_r26_u24_h3p5_cplus_two_kflattened_seed0",
+      "reference_step_count": 17533,
+      "memory_operation_count": 7907,
+      "memory_load_count": 2453,
+      "memory_store_count": 5454,
+      "unique_address_count": 24,
+      "hottest_address": 176,
+      "hottest_address_loads": 1471,
+      "hottest_address_stores": 491,
+      "hottest_address_share": 0.24813456431010497,
+      "address_rows": [
+        {
+          "address": 176,
+          "loads": 1471,
+          "stores": 491,
+          "total_ops": 1962
+        },
+        {
+          "address": 177,
+          "loads": 490,
+          "stores": 491,
+          "total_ops": 981
+        },
+        {
+          "address": 178,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 179,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 40064,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40065,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40066,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40067,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40068,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40069,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40070,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40071,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40072,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40073,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40074,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40075,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40076,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40077,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40078,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40079,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40080,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40081,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40082,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40083,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kflattened",
+      "candidate_id": "second_wave_extension_subroutine_braid_long_u24_h3p5_cplus_two_kflattened_seed1",
+      "lane_class": "second_wave_extension",
+      "family": "subroutine_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_subroutine_braid_long_140_a176",
+      "seed_variant": "r19_heldout_address_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "flattened",
+      "seed_id": 1,
+      "base_start": 140,
+      "scaled_start": 490,
+      "base_max_steps": 10240,
+      "max_steps": 43866,
+      "base_reference_step_count": 2746,
+      "expected_reference_step_count": 17573,
+      "base_unique_address_count": 4,
+      "padding_unique_count": 20,
+      "flatten_rounds": 198,
+      "padding_base_address": 40080,
+      "expected_padding_instruction_count": 7960,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_subroutine_braid_long_490_a208_r26_u24_h3p5_cplus_two_kflattened_seed1",
+      "reference_step_count": 17533,
+      "memory_operation_count": 7907,
+      "memory_load_count": 2453,
+      "memory_store_count": 5454,
+      "unique_address_count": 24,
+      "hottest_address": 208,
+      "hottest_address_loads": 1471,
+      "hottest_address_stores": 491,
+      "hottest_address_share": 0.24813456431010497,
+      "address_rows": [
+        {
+          "address": 208,
+          "loads": 1471,
+          "stores": 491,
+          "total_ops": 1962
+        },
+        {
+          "address": 209,
+          "loads": 490,
+          "stores": 491,
+          "total_ops": 981
+        },
+        {
+          "address": 210,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 211,
+          "loads": 246,
+          "stores": 246,
+          "total_ops": 492
+        },
+        {
+          "address": 40080,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40081,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40082,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40083,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40084,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40085,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40086,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40087,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40088,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40089,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40090,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40091,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40092,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40093,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40094,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40095,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40096,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40097,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40098,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        },
+        {
+          "address": 40099,
+          "loads": 0,
+          "stores": 199,
+          "total_ops": 199
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kbaseline",
+      "candidate_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kbaseline_seed0",
+      "lane_class": "second_wave_extension",
+      "family": "helper_checkpoint_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "seed_variant": "r19_admitted_seed_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "baseline",
+      "seed_id": 0,
+      "base_start": 180,
+      "scaled_start": 630,
+      "base_max_steps": 10240,
+      "max_steps": 35942,
+      "base_reference_step_count": 4788,
+      "expected_reference_step_count": 16796,
+      "base_unique_address_count": 6,
+      "padding_unique_count": 18,
+      "flatten_rounds": 0,
+      "padding_base_address": 40128,
+      "expected_padding_instruction_count": 36,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_helper_checkpoint_braid_long_630_a312_s0_r26_u24_h3p5_cplus_two_kbaseline_seed0",
+      "reference_step_count": 16751,
+      "memory_operation_count": 7586,
+      "memory_load_count": 4412,
+      "memory_store_count": 3174,
+      "unique_address_count": 24,
+      "hottest_address": 312,
+      "hottest_address_loads": 1891,
+      "hottest_address_stores": 631,
+      "hottest_address_share": 0.33245452148694965,
+      "address_rows": [
+        {
+          "address": 312,
+          "loads": 1891,
+          "stores": 631,
+          "total_ops": 2522
+        },
+        {
+          "address": 313,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 314,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 315,
+          "loads": 1,
+          "stores": 631,
+          "total_ops": 632
+        },
+        {
+          "address": 316,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 317,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 40128,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40129,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40130,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40131,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40132,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40133,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40134,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40135,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40136,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40137,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40138,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40139,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40140,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40141,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40142,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40143,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40144,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40145,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kbaseline",
+      "candidate_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kbaseline_seed1",
+      "lane_class": "second_wave_extension",
+      "family": "helper_checkpoint_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "seed_variant": "r19_heldout_seed_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "baseline",
+      "seed_id": 1,
+      "base_start": 180,
+      "scaled_start": 630,
+      "base_max_steps": 10240,
+      "max_steps": 35942,
+      "base_reference_step_count": 4788,
+      "expected_reference_step_count": 16796,
+      "base_unique_address_count": 6,
+      "padding_unique_count": 18,
+      "flatten_rounds": 0,
+      "padding_base_address": 40144,
+      "expected_padding_instruction_count": 36,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_helper_checkpoint_braid_long_630_a312_s1_r26_u24_h3p5_cplus_two_kbaseline_seed1",
+      "reference_step_count": 16751,
+      "memory_operation_count": 7586,
+      "memory_load_count": 4412,
+      "memory_store_count": 3174,
+      "unique_address_count": 24,
+      "hottest_address": 312,
+      "hottest_address_loads": 1891,
+      "hottest_address_stores": 631,
+      "hottest_address_share": 0.33245452148694965,
+      "address_rows": [
+        {
+          "address": 312,
+          "loads": 1891,
+          "stores": 631,
+          "total_ops": 2522
+        },
+        {
+          "address": 313,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 314,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 315,
+          "loads": 1,
+          "stores": 631,
+          "total_ops": 632
+        },
+        {
+          "address": 316,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 317,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 40144,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40145,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40146,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40147,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40148,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40149,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40150,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40151,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40152,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40153,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40154,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40155,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40156,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40157,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40158,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40159,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40160,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40161,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kflattened",
+      "candidate_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kflattened_seed0",
+      "lane_class": "second_wave_extension",
+      "family": "helper_checkpoint_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "seed_variant": "r19_admitted_seed_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "flattened",
+      "seed_id": 0,
+      "base_start": 180,
+      "scaled_start": 630,
+      "base_max_steps": 10240,
+      "max_steps": 51134,
+      "base_reference_step_count": 4788,
+      "expected_reference_step_count": 31988,
+      "base_unique_address_count": 6,
+      "padding_unique_count": 18,
+      "flatten_rounds": 422,
+      "padding_base_address": 40192,
+      "expected_padding_instruction_count": 15228,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_helper_checkpoint_braid_long_630_a312_s0_r26_u24_h3p5_cplus_two_kflattened_seed0",
+      "reference_step_count": 31943,
+      "memory_operation_count": 15182,
+      "memory_load_count": 4412,
+      "memory_store_count": 10770,
+      "unique_address_count": 24,
+      "hottest_address": 312,
+      "hottest_address_loads": 1891,
+      "hottest_address_stores": 631,
+      "hottest_address_share": 0.16611777104465814,
+      "address_rows": [
+        {
+          "address": 312,
+          "loads": 1891,
+          "stores": 631,
+          "total_ops": 2522
+        },
+        {
+          "address": 313,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 314,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 315,
+          "loads": 1,
+          "stores": 631,
+          "total_ops": 632
+        },
+        {
+          "address": 316,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 317,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 40192,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40193,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40194,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40195,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40196,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40197,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40198,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40199,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40200,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40201,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40202,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40203,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40204,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40205,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40206,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40207,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40208,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40209,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kflattened",
+      "candidate_id": "second_wave_extension_helper_checkpoint_braid_long_u24_h3p5_cplus_two_kflattened_seed1",
+      "lane_class": "second_wave_extension",
+      "family": "helper_checkpoint_braid_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_helper_checkpoint_braid_long_180_a312_s0",
+      "seed_variant": "r19_heldout_seed_anchor",
+      "unique_address_target": 24,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "flattened",
+      "seed_id": 1,
+      "base_start": 180,
+      "scaled_start": 630,
+      "base_max_steps": 10240,
+      "max_steps": 51134,
+      "base_reference_step_count": 4788,
+      "expected_reference_step_count": 31988,
+      "base_unique_address_count": 6,
+      "padding_unique_count": 18,
+      "flatten_rounds": 422,
+      "padding_base_address": 40208,
+      "expected_padding_instruction_count": 15228,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_helper_checkpoint_braid_long_630_a312_s1_r26_u24_h3p5_cplus_two_kflattened_seed1",
+      "reference_step_count": 31943,
+      "memory_operation_count": 15182,
+      "memory_load_count": 4412,
+      "memory_store_count": 10770,
+      "unique_address_count": 24,
+      "hottest_address": 312,
+      "hottest_address_loads": 1891,
+      "hottest_address_stores": 631,
+      "hottest_address_share": 0.16611777104465814,
+      "address_rows": [
+        {
+          "address": 312,
+          "loads": 1891,
+          "stores": 631,
+          "total_ops": 2522
+        },
+        {
+          "address": 313,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 314,
+          "loads": 630,
+          "stores": 631,
+          "total_ops": 1261
+        },
+        {
+          "address": 315,
+          "loads": 1,
+          "stores": 631,
+          "total_ops": 632
+        },
+        {
+          "address": 316,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 317,
+          "loads": 630,
+          "stores": 316,
+          "total_ops": 946
+        },
+        {
+          "address": 40208,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40209,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40210,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40211,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40212,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40213,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40214,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40215,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40216,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40217,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40218,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40219,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40220,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40221,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40222,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40223,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40224,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        },
+        {
+          "address": 40225,
+          "loads": 0,
+          "stores": 423,
+          "total_ops": 423
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kbaseline",
+      "candidate_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kbaseline_seed0",
+      "lane_class": "second_wave_extension",
+      "family": "checkpoint_replay_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_checkpoint_replay_long_100_a128",
+      "seed_variant": "r19_admitted_address_anchor",
+      "unique_address_target": 40,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "baseline",
+      "seed_id": 0,
+      "base_start": 100,
+      "scaled_start": 350,
+      "base_max_steps": 12800,
+      "max_steps": 44928,
+      "base_reference_step_count": 3126,
+      "expected_reference_step_count": 11005,
+      "base_unique_address_count": 9,
+      "padding_unique_count": 31,
+      "flatten_rounds": 0,
+      "padding_base_address": 40256,
+      "expected_padding_instruction_count": 62,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_checkpoint_replay_long_350_a128_r26_u40_h3p5_cplus_two_kbaseline_seed0",
+      "reference_step_count": 10942,
+      "memory_operation_count": 4594,
+      "memory_load_count": 3154,
+      "memory_store_count": 1440,
+      "unique_address_count": 40,
+      "hottest_address": 128,
+      "hottest_address_loads": 1051,
+      "hottest_address_stores": 351,
+      "hottest_address_share": 0.305180670439704,
+      "address_rows": [
+        {
+          "address": 128,
+          "loads": 1051,
+          "stores": 351,
+          "total_ops": 1402
+        },
+        {
+          "address": 129,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 130,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 131,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 132,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 133,
+          "loads": 116,
+          "stores": 1,
+          "total_ops": 117
+        },
+        {
+          "address": 134,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 135,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 136,
+          "loads": 117,
+          "stores": 117,
+          "total_ops": 234
+        },
+        {
+          "address": 40256,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40257,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40258,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40259,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40260,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40261,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40262,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40263,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40264,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40265,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40266,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40267,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40268,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40269,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40270,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40271,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40272,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40273,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40274,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40275,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40276,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40277,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40278,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40279,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40280,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40281,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40282,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40283,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40284,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40285,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40286,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kbaseline",
+      "candidate_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kbaseline_seed1",
+      "lane_class": "second_wave_extension",
+      "family": "checkpoint_replay_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_checkpoint_replay_long_100_a128",
+      "seed_variant": "r19_heldout_address_anchor",
+      "unique_address_target": 40,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "baseline",
+      "seed_id": 1,
+      "base_start": 100,
+      "scaled_start": 350,
+      "base_max_steps": 12800,
+      "max_steps": 44928,
+      "base_reference_step_count": 3126,
+      "expected_reference_step_count": 11005,
+      "base_unique_address_count": 9,
+      "padding_unique_count": 31,
+      "flatten_rounds": 0,
+      "padding_base_address": 40272,
+      "expected_padding_instruction_count": 62,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_checkpoint_replay_long_350_a144_r26_u40_h3p5_cplus_two_kbaseline_seed1",
+      "reference_step_count": 10942,
+      "memory_operation_count": 4594,
+      "memory_load_count": 3154,
+      "memory_store_count": 1440,
+      "unique_address_count": 40,
+      "hottest_address": 144,
+      "hottest_address_loads": 1051,
+      "hottest_address_stores": 351,
+      "hottest_address_share": 0.305180670439704,
+      "address_rows": [
+        {
+          "address": 144,
+          "loads": 1051,
+          "stores": 351,
+          "total_ops": 1402
+        },
+        {
+          "address": 145,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 146,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 147,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 148,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 149,
+          "loads": 116,
+          "stores": 1,
+          "total_ops": 117
+        },
+        {
+          "address": 150,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 151,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 152,
+          "loads": 117,
+          "stores": 117,
+          "total_ops": 234
+        },
+        {
+          "address": 40272,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40273,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40274,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40275,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40276,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40277,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40278,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40279,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40280,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40281,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40282,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40283,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40284,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40285,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40286,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40287,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40288,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40289,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40290,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40291,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40292,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40293,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40294,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40295,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40296,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40297,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40298,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40299,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40300,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40301,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        },
+        {
+          "address": 40302,
+          "loads": 0,
+          "stores": 1,
+          "total_ops": 1
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kflattened",
+      "candidate_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kflattened_seed0",
+      "lane_class": "second_wave_extension",
+      "family": "checkpoint_replay_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_checkpoint_replay_long_100_a128",
+      "seed_variant": "r19_admitted_address_anchor",
+      "unique_address_target": 40,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "flattened",
+      "seed_id": 0,
+      "base_start": 100,
+      "scaled_start": 350,
+      "base_max_steps": 12800,
+      "max_steps": 54166,
+      "base_reference_step_count": 3126,
+      "expected_reference_step_count": 20243,
+      "base_unique_address_count": 9,
+      "padding_unique_count": 31,
+      "flatten_rounds": 149,
+      "padding_base_address": 40320,
+      "expected_padding_instruction_count": 9300,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_checkpoint_replay_long_350_a128_r26_u40_h3p5_cplus_two_kflattened_seed0",
+      "reference_step_count": 20180,
+      "memory_operation_count": 9213,
+      "memory_load_count": 3154,
+      "memory_store_count": 6059,
+      "unique_address_count": 40,
+      "hottest_address": 128,
+      "hottest_address_loads": 1051,
+      "hottest_address_stores": 351,
+      "hottest_address_share": 0.15217627265820036,
+      "address_rows": [
+        {
+          "address": 128,
+          "loads": 1051,
+          "stores": 351,
+          "total_ops": 1402
+        },
+        {
+          "address": 129,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 130,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 131,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 132,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 133,
+          "loads": 116,
+          "stores": 1,
+          "total_ops": 117
+        },
+        {
+          "address": 134,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 135,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 136,
+          "loads": 117,
+          "stores": 117,
+          "total_ops": 234
+        },
+        {
+          "address": 40320,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40321,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40322,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40323,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40324,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40325,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40326,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40327,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40328,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40329,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40330,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40331,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40332,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40333,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40334,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40335,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40336,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40337,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40338,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40339,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40340,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40341,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40342,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40343,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40344,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40345,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40346,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40347,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40348,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40349,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40350,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        }
+      ]
+    },
+    {
+      "branch_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kflattened",
+      "candidate_id": "second_wave_extension_checkpoint_replay_long_u40_h3p5_cplus_two_kflattened_seed1",
+      "lane_class": "second_wave_extension",
+      "family": "checkpoint_replay_long",
+      "comparison_mode": "long_exact_final_state",
+      "base_program_name": "bytecode_checkpoint_replay_long_100_a128",
+      "seed_variant": "r19_heldout_address_anchor",
+      "unique_address_target": 40,
+      "horizon_multiplier": 3.5,
+      "checkpoint_depth": "plus_two",
+      "hot_address_skew": "flattened",
+      "seed_id": 1,
+      "base_start": 100,
+      "scaled_start": 350,
+      "base_max_steps": 12800,
+      "max_steps": 54166,
+      "base_reference_step_count": 3126,
+      "expected_reference_step_count": 20243,
+      "base_unique_address_count": 9,
+      "padding_unique_count": 31,
+      "flatten_rounds": 149,
+      "padding_base_address": 40336,
+      "expected_padding_instruction_count": 9300,
+      "target_wrapper_call_depth": 2,
+      "program_name": "bytecode_checkpoint_replay_long_350_a144_r26_u40_h3p5_cplus_two_kflattened_seed1",
+      "reference_step_count": 20180,
+      "memory_operation_count": 9213,
+      "memory_load_count": 3154,
+      "memory_store_count": 6059,
+      "unique_address_count": 40,
+      "hottest_address": 144,
+      "hottest_address_loads": 1051,
+      "hottest_address_stores": 351,
+      "hottest_address_share": 0.15217627265820036,
+      "address_rows": [
+        {
+          "address": 144,
+          "loads": 1051,
+          "stores": 351,
+          "total_ops": 1402
+        },
+        {
+          "address": 145,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 146,
+          "loads": 700,
+          "stores": 351,
+          "total_ops": 1051
+        },
+        {
+          "address": 147,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 148,
+          "loads": 117,
+          "stores": 1,
+          "total_ops": 118
+        },
+        {
+          "address": 149,
+          "loads": 116,
+          "stores": 1,
+          "total_ops": 117
+        },
+        {
+          "address": 150,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 151,
+          "loads": 118,
+          "stores": 118,
+          "total_ops": 236
+        },
+        {
+          "address": 152,
+          "loads": 117,
+          "stores": 117,
+          "total_ops": 234
+        },
+        {
+          "address": 40336,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40337,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40338,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40339,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40340,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40341,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40342,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40343,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40344,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40345,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40346,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40347,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40348,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40349,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40350,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40351,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40352,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40353,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40354,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40355,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40356,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40357,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40358,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40359,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40360,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40361,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40362,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40363,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40364,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40365,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        },
+        {
+          "address": 40366,
+          "loads": 0,
+          "stores": 150,
+          "total_ops": 150
+        }
+      ]
+    }
+  ]
+}

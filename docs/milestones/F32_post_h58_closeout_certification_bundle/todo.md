@@ -1,0 +1,4 @@
+- preserve `H58` as a real closeout rather than a staging point
+- certify that no same-lane runtime task remains open
+- route follow-up only through `H59`, `P41`, `P42`, and `F33`
+- keep `F27/R53/R54` blocked by default

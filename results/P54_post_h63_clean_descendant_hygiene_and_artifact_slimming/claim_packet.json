@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "supports": [
+      "P54 refreshes clean-descendant-only hygiene and artifact policy without executing a merge.",
+      "P54 keeps dirty root main quarantined and preserves the repo-local worktree rule.",
+      "P54 keeps raw-row ignore rules active while making oversize surface-report handling explicit."
+    ],
+    "does_not_support": [
+      "merge execution",
+      "dirty-root integration",
+      "scientific claim widening"
+    ],
+    "distilled_result": {
+      "active_stage_at_hygiene_time": "h63_post_p50_p51_p52_f38_archive_first_closeout_packet",
+      "current_repo_hygiene_sidecar": "p54_post_h63_clean_descendant_hygiene_and_artifact_slimming",
+      "preserved_prior_repo_hygiene_sidecar": "p52_post_h62_clean_descendant_hygiene_and_merge_prep",
+      "source_branch": "wip/f38-post-h62-archive-first-closeout",
+      "current_planning_branch": "wip/h64-post-h63-archive-first-freeze",
+      "current_planning_branch_upstream": "",
+      "root_main_branch": "wip/root-main-parking-2026-03-24",
+      "root_main_quarantined": true,
+      "tracked_oversize_count": 0,
+      "raw_row_ignore_rules_active": true,
+      "surface_report_policy_declared": true,
+      "selected_outcome": "clean_descendant_hygiene_and_artifact_policy_locked_without_merge_execution",
+      "next_required_lane": "later_clean_descendant_promotion_prep_or_archive_freeze"
+    }
+  }
+}

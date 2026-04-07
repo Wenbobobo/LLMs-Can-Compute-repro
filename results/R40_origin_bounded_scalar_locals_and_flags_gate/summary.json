@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "current_paper_phase": "r40_origin_bounded_scalar_locals_and_flags_gate_complete",
+    "active_runtime_lane": "r40_origin_bounded_scalar_locals_and_flags_gate",
+    "gate": {
+      "lane_verdict": "origin_bounded_scalar_locals_and_flags_supported_narrowly",
+      "same_opcode_surface_kept": true,
+      "admitted_case_count": 1,
+      "boundary_stress_case_count": 1,
+      "admitted_source_reference_exact_count": 1,
+      "admitted_lowering_exact_count": 1,
+      "admitted_free_running_exact_count": 1,
+      "boundary_source_reference_exact_count": 1,
+      "boundary_lowering_exact_count": 1,
+      "boundary_free_running_exact_count": 1,
+      "flag_slot_case_count": 2,
+      "memory_surface_verifier_pass_count": 2,
+      "family_scope_pass_count": 2,
+      "negative_control_count": 3,
+      "negative_control_rejection_count": 3,
+      "family_scope_rejection_count": 1,
+      "memory_surface_negative_count": 2,
+      "opcode_surface": [
+        "add_i32",
+        "const_i32",
+        "eq_i32",
+        "halt",
+        "jmp",
+        "jz_zero",
+        "load_static",
+        "store_static",
+        "sub_i32"
+      ],
+      "admitted_program_name": "bytecode_bounded_scalar_flag_loop_6_a320",
+      "boundary_program_name": "bytecode_bounded_scalar_flag_loop_long_12_a336",
+      "next_priority_lane": "h36_post_r40_bounded_scalar_family_refreeze"
+    }
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h35-r40-p24-exec\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\LLMCompute-worktrees\\h35-r40-p24-exec\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

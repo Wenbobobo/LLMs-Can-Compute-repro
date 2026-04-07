@@ -130,7 +130,7 @@
         "claim_id": "D0",
         "path": "results/M7_frontend_candidate_decision/decision_summary.json",
         "path_exists": true,
-        "description": "Frontend decision bundle: the current endpoint stays on tiny typed bytecode, frontend widening is not authorized, and any revisit now requires a fresh scope + systems case."
+        "description": "Frontend decision bundle: the preserved first compiled boundary is the tiny typed bytecode inside the broader current H43 paper endpoint, frontend widening is not authorized, and any revisit now requires a fresh scope + systems case."
       }
     ]
   }

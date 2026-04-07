@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "item_id": "f37_reads_h61",
+      "status": "pass",
+      "notes": "F37 begins only after H61 locks the archive-first posture."
+    },
+    {
+      "item_id": "f37_reads_f36",
+      "status": "pass",
+      "notes": "F37 narrows the one surviving F36 route rather than inventing a new family."
+    },
+    {
+      "item_id": "f37_reads_p49",
+      "status": "pass",
+      "notes": "F37 uses advisory material only after it is available in the clean line."
+    },
+    {
+      "item_id": "f37_baseline_contract_count",
+      "status": "pass",
+      "notes": "F37 requires exactly three honest baselines."
+    },
+    {
+      "item_id": "f37_eligibility_gate_count",
+      "status": "pass",
+      "notes": "F37 requires five preruntime eligibility questions."
+    },
+    {
+      "item_id": "f37_stop_rule_count",
+      "status": "pass",
+      "notes": "F37 requires seven immediate stop rules."
+    },
+    {
+      "item_id": "f37_runtime_stays_closed",
+      "status": "pass",
+      "notes": "F37 does not authorize runtime; it only prepares a later profile gate."
+    }
+  ]
+}
