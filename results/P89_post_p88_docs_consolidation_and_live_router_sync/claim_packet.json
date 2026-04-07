@@ -14,9 +14,9 @@
     "distilled_result": {
       "current_docs_wave": "p89_post_p88_docs_consolidation_and_live_router_sync",
       "current_branch": "wip/p85-post-p84-main-rebaseline",
-      "current_branch_head": "9597ec6",
+      "current_branch_head": "d55f589",
       "merged_main_head": "b82b566",
-      "origin_main_to_p89_left_right": "0/5",
+      "origin_main_to_p89_left_right": "0/6",
       "selected_outcome": "docs_consolidation_and_live_router_sync_after_p88",
       "next_recommended_route": "archive_then_replace_closeout_or_explicit_stop"
     }
