@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_checklist",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv"
     },
     "torch": {
       "installed": false,
@@ -20,24 +20,24 @@
   },
   "rows": [
     {
-      "item_id": "top_level_release_surface_stays_narrow_and_h65_terminal_freeze_explicit",
+      "item_id": "top_level_release_surface_stays_narrow_and_h66_terminal_stop_explicit",
       "status": "pass",
-      "notes": "README, STATUS, and release summary should expose H65 plus the current archive-facing control stack."
+      "notes": "README, STATUS, and release summary should expose H66 plus the current terminal-stop control stack."
     },
     {
-      "item_id": "publication_and_plan_indexes_expose_current_h65_route",
+      "item_id": "publication_and_plan_indexes_expose_current_h66_route",
       "status": "pass",
-      "notes": "Publication, control, and planning indexes should expose the current archive-facing control route."
+      "notes": "Publication, control, and planning indexes should expose the H66 terminal-stop route."
     },
     {
       "item_id": "release_candidate_submission_claim_and_archive_ledgers_align",
       "status": "pass",
-      "notes": "Release, submission, claim, and archive ledgers should expose the same current archive-facing stack and preserved publication lineage."
+      "notes": "Release, submission, claim, and archive ledgers should expose the same H66/P91/P90 bundle."
     },
     {
-      "item_id": "paper_bundle_ledgers_stay_downstream_of_archive_first_partial_falsification",
+      "item_id": "paper_bundle_ledgers_stay_downstream_of_h66_terminal_stop",
       "status": "pass",
-      "notes": "Paper bundle and outward helper notes must stay downstream of archive-first terminal freeze."
+      "notes": "Paper bundle and outward helper notes must stay downstream of H66 terminal stop."
     },
     {
       "item_id": "blog_rules_keep_restrained_release_surface",
@@ -50,9 +50,9 @@
       "notes": "The worktree hygiene snapshot should classify current release-commit readiness."
     },
     {
-      "item_id": "standing_h65_followthrough_audits_remain_green",
+      "item_id": "standing_h66_followthrough_audits_remain_green",
       "status": "pass",
-      "notes": "Standing release-preflight state depends on H65, the landed P56/P57/P58/P59 foundation, and the current archive-facing control stack."
+      "notes": "Standing release-preflight state depends on H66, preserved H65, and the landed follow-through foundation."
     }
   ]
 }

@@ -40,81 +40,66 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
     _write_rel_text(
         "README.md",
         [
-            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P77_post_p76_keep_set_and_provenance_normalization`",
-            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
-            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-            "`P80_post_p79_next_planmode_handoff_sync`",
+            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+            "`P91_post_h66_next_planmode_handoff_sync`",
+            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
             "`explicit_stop_or_no_further_action_archive_first`",
         ],
     )
     _write_rel_text(
         "STATUS.md",
         [
-            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P77_post_p76_keep_set_and_provenance_normalization`",
-            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
-            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-            "`P80_post_p79_next_planmode_handoff_sync`",
+            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+            "`P91_post_h66_next_planmode_handoff_sync`",
+            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
         ],
     )
     _write_rel_text(
         "docs/publication_record/README.md",
         [
-            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
-            "P77_post_p76_keep_set_and_provenance_normalization",
-            "P78_post_p77_legacy_worktree_convergence_and_quarantine_sync",
-            "P79_post_p78_archive_claim_boundary_and_reopen_screen",
-            "P80_post_p79_next_planmode_handoff_sync",
+            "H66_post_p90_archive_replace_terminal_stop_packet",
+            "P91_post_h66_next_planmode_handoff_sync",
+            "P90_post_p89_archive_replace_screen_and_replacement_decision",
         ],
     )
     _write_rel_text(
         "docs/publication_record/current_stage_driver.md",
         [
-            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P77_post_p76_keep_set_and_provenance_normalization`",
-            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
-            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-            "`P80_post_p79_next_planmode_handoff_sync`",
+            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+            "`P91_post_h66_next_planmode_handoff_sync`",
+            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
             "`explicit_stop_or_no_further_action_archive_first`",
-            "explicit stop",
-            "no further action",
         ],
     )
     _write_rel_text(
         "docs/publication_record/submission_packet_index.md",
         [
-            "P72/P71/P70/P69 entries below are hygiene-only control sidecars",
-            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
-            "P80_post_p79_next_planmode_handoff_sync",
-            "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
-            "P79_post_p78_archive_claim_boundary_and_reopen_screen",
-            "P78_post_p77_legacy_worktree_convergence_and_quarantine_sync",
-            "P77_post_p76_keep_set_and_provenance_normalization",
-            "do not widen the paper-facing evidence bundle",
+            "H66/H58/H43",
+            "H65/P90 remain preserved immediate closeout lineage below `H66`",
+            "../milestones/H66_post_p90_archive_replace_terminal_stop_packet/",
+            "../milestones/P91_post_h66_next_planmode_handoff_sync/",
+            "results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json",
+            "results/P91_post_h66_next_planmode_handoff_sync/summary.json",
+            "results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json",
         ],
     )
     _write_rel_text(
         "docs/publication_record/archival_repro_manifest.md",
         [
-            "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
-            "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
-            "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
-            "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
+            "results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json",
+            "results/P91_post_h66_next_planmode_handoff_sync/summary.json",
+            "results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json",
             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
-            "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
-            "Preserved immediate publication lineage",
         ],
     )
     _write_rel_text(
         "docs/publication_record/review_boundary_summary.md",
         [
+            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+            "`P91_post_h66_next_planmode_handoff_sync`",
+            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P79/P80`",
-            "`P56/P57/P58/P59`",
-            "narrow positive mechanism support survives",
-            "the only remaining future route is a dormant no-go dossier at `F38`",
             "explicit stop",
             "no further action",
         ],
@@ -122,17 +107,12 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
     _write_rel_text(
         "docs/publication_record/external_release_note_skeleton.md",
         [
+            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+            "`P91_post_h66_next_planmode_handoff_sync`",
+            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-            "`P79/P80`",
-            "`P56/P57/P58/P59`",
-            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-            "`H43_post_r44_useful_case_refreeze`",
-            "`H58_post_r62_origin_value_boundary_closeout_packet`",
-            "dormant non-runtime `F38` dossier",
-            "archive-first terminal freeze",
+            "archive-replace terminal stop",
             "strongest justified executor-value lane is closed negative",
-            "explicit stop",
-            "no further action",
         ],
     )
     _write_rel_json(
@@ -140,6 +120,14 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         {
             "figure_table_status_summary": {"by_status": [{"status": "ready", "count": 10}]},
             "blocked_or_partial_items": [],
+        },
+    )
+    _write_rel_json(
+        "results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json",
+        {
+            "summary": {
+                "selected_outcome": "archive_replace_terminal_stop_becomes_current_active_route_and_defaults_to_explicit_stop"
+            }
         },
     )
     _write_rel_json(
@@ -151,32 +139,12 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
         },
     )
     _write_rel_json(
-        "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-        {
-            "summary": {
-                "selected_outcome": "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant"
-            }
-        },
+        "results/P91_post_h66_next_planmode_handoff_sync/summary.json",
+        {"summary": {"selected_outcome": "next_planmode_handoff_synced_to_explicit_stop_after_h66"}},
     )
     _write_rel_json(
-        "results/P74_post_p73_successor_publication_review/summary.json",
-        {"summary": {"selected_outcome": "successor_publication_review_supports_p75_freeze"}},
-    )
-    _write_rel_json(
-        "results/P75_post_p74_published_successor_freeze/summary.json",
-        {"summary": {"selected_outcome": "published_successor_freeze_locked_after_p74_review"}},
-    )
-    _write_rel_json(
-        "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
-        {"summary": {"selected_outcome": "published_successor_release_hygiene_and_control_rebaselined_after_p75"}},
-    )
-    _write_rel_json(
-        "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
-        {"summary": {"selected_outcome": "keep_set_and_provenance_normalized_after_p76"}},
-    )
-    _write_rel_json(
-        "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
-        {"summary": {"selected_outcome": "balanced_worktree_convergence_completed_with_quarantines_preserved"}},
+        "results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json",
+        {"summary": {"selected_outcome": "archive_replace_screen_completed_with_no_additional_salvage_after_p89"}},
     )
     _write_rel_json(
         "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
@@ -248,7 +216,6 @@ def test_export_p10_submission_archive_ready_summary(tmp_path: Path) -> None:
     payload = json.loads((tmp_path / "P10_submission_archive_ready" / "summary.json").read_text(encoding="utf-8"))
     assert payload["summary"]["packet_state"] == "archive_ready"
     assert payload["summary"]["blocked_count"] == 0
-    assert "P77/P78/P79/P80 remain the current archive-facing control stack" in payload["summary"]["recommended_next_action"]
-    assert "P74/P75/P76 remain the preserved immediate publication lineage" in payload["summary"]["recommended_next_action"]
-    assert "explicit stop or no further action is now the recommended downstream route" in payload["summary"]["recommended_next_action"]
-
+    assert "H66 remains the current active docs-only packet" in payload["summary"]["recommended_next_action"]
+    assert "P91/P90 remain the current terminal-stop and handoff stack" in payload["summary"]["recommended_next_action"]
+    assert "explicit stop or no further action remains the recommended downstream route" in payload["summary"]["recommended_next_action"]

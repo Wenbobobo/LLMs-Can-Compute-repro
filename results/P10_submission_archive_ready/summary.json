@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv"
     },
     "torch": {
       "installed": false,
@@ -27,13 +27,10 @@
     "docs/publication_record/archival_repro_manifest.md",
     "docs/publication_record/review_boundary_summary.md",
     "docs/publication_record/external_release_note_skeleton.md",
+    "results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json",
     "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
-    "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-    "results/P74_post_p73_successor_publication_review/summary.json",
-    "results/P75_post_p74_published_successor_freeze/summary.json",
-    "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
-    "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
-    "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
+    "results/P91_post_h66_next_planmode_handoff_sync/summary.json",
+    "results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json",
     "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
     "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
     "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
@@ -46,7 +43,7 @@
     "results/release_preflight_checklist_audit/summary.json"
   ],
   "summary": {
-    "current_paper_phase": "h65_p80_archive_facing_stack_with_preserved_p74_p76_h64_h58_h43_endpoints",
+    "current_paper_phase": "h66_p91_terminal_stop_with_preserved_h65_p74_p76_h58_h43_endpoints",
     "packet_state": "archive_ready",
     "release_commit_state": "clean_worktree_ready_if_other_gates_green",
     "git_diff_check_state": "clean",
@@ -54,6 +51,6 @@
     "pass_count": 5,
     "blocked_count": 0,
     "blocked_items": [],
-    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H65 remains the current active docs-only packet, P77/P78/P79/P80 remain the current archive-facing control stack, P72/P71/P70/P69 remain hygiene-only archive/control sidecars beneath that archive-facing stack, P56/P57/P58/P59 remain the landed follow-through foundation, P74/P75/P76 remain the preserved immediate publication lineage on wip/p75-post-p74-published-successor-freeze, P66/P67/P68 remain the preserved prior successor stack, P63/P64/P65 remain the preserved deeper successor stack, H64 remains the preserved prior active packet, F38 remains the dormant non-runtime dossier, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
+    "recommended_next_action": "use submission_packet_index.md plus archival_repro_manifest.md as the canonical handoff while H66 remains the current active docs-only packet, P91/P90 remain the current terminal-stop and handoff stack, P77/P78/P79/P80 remain the preserved archive-facing convergence stack, P72/P71/P70/P69 remain hygiene-only archive/control sidecars, H65 remains the preserved prior active packet, P56/P57/P58/P59 remain the landed follow-through foundation, P74/P75/P76 remain the preserved immediate publication lineage on wip/p75-post-p74-published-successor-freeze, H58 remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop or no further action remains the recommended downstream route, and no dirty-root-main merge or runtime reopen is implied"
   }
 }

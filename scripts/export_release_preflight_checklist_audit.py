@@ -12,20 +12,18 @@ from utils import detect_runtime_environment
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "results" / "release_preflight_checklist_audit"
 
-CURRENT_PAPER_PHASE = "h65_p80_archive_facing_stack_with_preserved_p74_p76_h64_h58_h43_endpoints"
+CURRENT_PAPER_PHASE = "h66_p91_terminal_stop_with_preserved_h65_p74_p76_h58_h43_endpoints"
 PREFLIGHT_SCOPE = "outward_release_surface_and_followthrough_bundle"
 GREEN_ACTION = (
     "use this audit together with release_worktree_hygiene_snapshot as the outward-sync control reference while "
-    "P77/P78/P79/P80 remain the current archive-facing control stack above the active H65 packet, "
-    "P72/P69/P70/P71 remain hygiene-only archive/control sidecars beneath that archive-facing stack, "
-    "H65 remains the current active docs-only packet, P56/P57/P58/P59 remain the landed follow-through "
-    "foundation, P74/P75/P76 remain the preserved immediate publication lineage on "
-    "wip/p75-post-p74-published-successor-freeze, P66/P67/P68 remain the preserved prior successor stack, "
-    "P63/P64/P65 remain the preserved deeper successor stack, "
-    "H64 remains the preserved prior active packet, F38 remains the dormant non-runtime future dossier, H58 "
-    "remains the strongest executor-value closeout, H43 remains the preserved paper-grade endpoint, explicit stop "
-    "or no further action is now the recommended downstream route, and no dirty-root-main merge or runtime reopen "
-    "is implied"
+    "H66 remains the current active docs-only packet, P91/P90 remain the current terminal-stop and handoff stack, "
+    "P77/P78/P79/P80 remain the preserved archive-facing convergence stack, "
+    "P72/P69/P70/P71 remain hygiene-only archive/control sidecars, "
+    "H65 remains the preserved prior active packet, P56/P57/P58/P59 remain the landed follow-through foundation, "
+    "P74/P75/P76 remain the preserved immediate publication lineage on "
+    "wip/p75-post-p74-published-successor-freeze, H58 remains the value-negative closeout, "
+    "H43 remains the preserved paper-grade endpoint, explicit stop or no further action remains the recommended "
+    "downstream route, and no dirty-root-main merge or runtime reopen is implied"
 )
 
 
@@ -101,13 +99,10 @@ def load_inputs() -> dict[str, Any]:
     }
     json_files = {
         "p1_summary": "results/P1_paper_readiness/summary.json",
+        "h66_summary": "results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json",
         "h65_summary": "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
-        "h64_summary": "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-        "p74_summary": "results/P74_post_p73_successor_publication_review/summary.json",
-        "p75_summary": "results/P75_post_p74_published_successor_freeze/summary.json",
-        "p76_summary": "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
-        "p77_summary": "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
-        "p78_summary": "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
+        "p91_summary": "results/P91_post_h66_next_planmode_handoff_sync/summary.json",
+        "p90_summary": "results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json",
         "p79_summary": "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
         "p80_summary": "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
         "p56_summary": "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
@@ -129,52 +124,46 @@ def load_inputs() -> dict[str, Any]:
 
 
 def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
-    text_checks = [
+    checks = [
         (
-            "top_level_release_surface_stays_narrow_and_h65_terminal_freeze_explicit",
+            "top_level_release_surface_stays_narrow_and_h66_terminal_stop_explicit",
             all(
                 (
                     contains_all(
                         inputs["readme_text"],
                         [
-                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-                            "`P77_post_p76_keep_set_and_provenance_normalization`",
-                            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
-                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-                            "`P80_post_p79_next_planmode_handoff_sync`",
-                            "`wip/p75-post-p74-published-successor-freeze`",
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
                             "`explicit_stop_or_no_further_action_archive_first`",
                         ],
                     ),
                     contains_all(
                         inputs["status_text"],
                         [
-                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-                            "`P77_post_p76_keep_set_and_provenance_normalization`",
-                            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
-                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-                            "`P80_post_p79_next_planmode_handoff_sync`",
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
                             "`F38_post_h62_r63_dormant_eligibility_profile_dossier`",
                         ],
                     ),
                     contains_all(
                         inputs["release_summary_text"],
                         [
-                            "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-                            "`P72`",
-                            "`P56/P57/P58/P59`",
-                            "`P66/P67/P68`",
-                            "`wip/p75-post-p74-published-successor-freeze`",
-                            "archive-first terminal freeze",
-                            "R63 remains dormant, non-runtime",
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
+                            "explicit stop",
+                            "archive polish",
+                            "no further action",
                         ],
                     ),
                 )
             ),
-            "README, STATUS, and release summary should expose H65 plus the current archive-facing control stack.",
+            "README, STATUS, and release summary should expose H66 plus the current terminal-stop control stack.",
         ),
         (
-            "publication_and_plan_indexes_expose_current_h65_route",
+            "publication_and_plan_indexes_expose_current_h66_route",
             all(
                 (
                     contains_all(
@@ -182,7 +171,6 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                         [
                             "publication_record/current_stage_driver.md",
                             "branch_worktree_registry.md",
-                            "F38_post_h62_r63_dormant_eligibility_profile_dossier",
                             "live",
                             "historical",
                             "dormant",
@@ -191,44 +179,37 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["publication_readme_text"],
                         [
-                            "H65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
-                            "P77_post_p76_keep_set_and_provenance_normalization",
-                            "P78_post_p77_legacy_worktree_convergence_and_quarantine_sync",
-                            "P79_post_p78_archive_claim_boundary_and_reopen_screen",
-                            "P80_post_p79_next_planmode_handoff_sync",
-                            "partial_falsification_boundary.md",
+                            "H66_post_p90_archive_replace_terminal_stop_packet",
+                            "P91_post_h66_next_planmode_handoff_sync",
+                            "P90_post_p89_archive_replace_screen_and_replacement_decision",
+                            "current_stage_driver.md",
                             "future_reopen_screen.md",
                         ],
                     ),
                     contains_all(
                         inputs["current_stage_driver_text"],
                         [
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-                            "`P77_post_p76_keep_set_and_provenance_normalization`",
-                            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
-                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-                            "`P80_post_p79_next_planmode_handoff_sync`",
-                            "`P74_post_p73_successor_publication_review`",
-                            "`wip/p75-post-p74-published-successor-freeze`",
                             "`explicit_stop_or_no_further_action_archive_first`",
                         ],
                     ),
                     contains_all(
                         inputs["plans_readme_text"],
                         [
-                            "2026-04-05-post-p76-hygiene-first-convergence-design.md",
-                            "2026-04-05-post-p80-next-planmode-handoff.md",
-                            "2026-04-05-post-p80-next-planmode-startup-prompt.md",
-                            "2026-04-05-post-p80-next-planmode-brief-prompt.md",
-                            "P77_post_p76_keep_set_and_provenance_normalization",
-                            "P78_post_p77_legacy_worktree_convergence_and_quarantine_sync",
-                            "P79_post_p78_archive_claim_boundary_and_reopen_screen",
-                            "P80_post_p79_next_planmode_handoff_sync",
+                            "2026-04-07-post-h66-next-planmode-handoff.md",
+                            "2026-04-07-post-h66-next-planmode-startup-prompt.md",
+                            "2026-04-07-post-h66-next-planmode-brief-prompt.md",
+                            "P91_post_h66_next_planmode_handoff_sync",
+                            "H66_post_p90_archive_replace_terminal_stop_packet",
+                            "P90_post_p89_archive_replace_screen_and_replacement_decision",
                         ],
                     ),
                 )
             ),
-            "Publication, control, and planning indexes should expose the current archive-facing control route.",
+            "Publication, control, and planning indexes should expose the H66 terminal-stop route.",
         ),
         (
             "release_candidate_submission_claim_and_archive_ledgers_align",
@@ -237,93 +218,76 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["release_preflight_text"],
                         [
-                            "`H65/P77/P78/P79/P80`",
+                            "`H66/P91/P90/P77/P78/P79/P80`",
                             "`P72` hygiene-only archive-polish and explicit-stop handoff sidecar",
                             "`P69/P70/P71` hygiene-only cleanup sidecars",
-                            "`P74/P75/P76` as the immediate publication lineage",
-                            "`H64/P56/P57/P58/P59/F38` foundation",
-                            "`H58` as the value-negative closeout",
-                            "`H43` as the preserved paper-grade endpoint",
+                            "`H65/P90` as the immediate prior closeout lineage",
                             "explicit stop or no further action",
                         ],
                     ),
                     contains_all(
                         inputs["release_candidate_text"],
                         [
-                            "`H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`",
-                            "`P74/P75/P76` remain preserved immediate publication lineage",
-                            "`P72` remains the current archive-polish explicit-stop handoff sidecar",
-                            "`P69/P70/P71` remain hygiene-only cleanup sidecars",
+                            "`H66/P91/P90/H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`",
                             "preserved `H64/H58/H43`",
-                            "no outward wording implies a new runtime lane",
                             "explicit stop or no further action",
+                            "no outward wording implies a new runtime lane",
                         ],
                     ),
                     contains_all(
                         inputs["submission_candidate_text"],
                         [
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-                            "`P77_post_p76_keep_set_and_provenance_normalization`",
-                            "`P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`",
-                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-                            "`P80_post_p79_next_planmode_handoff_sync`",
-                            "`P71_post_p70_clean_descendant_merge_prep_readiness_sync`",
-                            "`P70_post_p69_archive_index_and_artifact_policy_sync`",
-                            "`P69_post_h65_repo_graph_hygiene_inventory`",
-                            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
                             "`H58_post_r62_origin_value_boundary_closeout_packet`",
                             "`H43_post_r44_useful_case_refreeze`",
-                            "do not authorize a runtime reopen",
                             "explicit stop or no further action",
                         ],
                     ),
                     contains_all(
                         inputs["claim_ladder_text"],
                         [
-                            "| P79 Archive claim boundary and reopen screen |",
-                            "| P80 Next-planmode handoff sync |",
-                            "| P74/P75/P76 Immediate publication lineage |",
+                            "| H66 Archive-replace terminal stop packet |",
+                            "| P91 Next-planmode handoff sync |",
+                            "| P90 Archive-replace screen and replacement decision |",
                         ],
                     ),
                     contains_all(
                         inputs["archival_manifest_text"],
                         [
-                            "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
-                            "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
-                            "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
-                            "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
-                            "results/P72_post_p71_archive_polish_and_explicit_stop_handoff/summary.json",
+                            "results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json",
+                            "results/P91_post_h66_next_planmode_handoff_sync/summary.json",
+                            "results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json",
                             "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
-                            "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
                             "results/F38_post_h62_r63_dormant_eligibility_profile_dossier/summary.json",
                         ],
                     ),
                 )
             ),
-            "Release, submission, claim, and archive ledgers should expose the same current archive-facing stack and preserved publication lineage.",
+            "Release, submission, claim, and archive ledgers should expose the same H66/P91/P90 bundle.",
         ),
         (
-            "paper_bundle_ledgers_stay_downstream_of_archive_first_partial_falsification",
+            "paper_bundle_ledgers_stay_downstream_of_h66_terminal_stop",
             all(
                 (
                     contains_all(
                         inputs["paper_bundle_status_text"],
                         [
-                            "`P79_post_p78_archive_claim_boundary_and_reopen_screen`",
-                            "`P80_post_p79_next_planmode_handoff_sync`",
-                            "`P74_post_p73_successor_publication_review`",
-                            "`P76_post_p75_release_hygiene_and_control_rebaseline`",
-                            "archive-first terminal-freeze and explicit-stop framing",
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
+                            "`F38_post_h62_r63_dormant_eligibility_profile_dossier`",
                         ],
                     ),
                     contains_all(
                         inputs["review_boundary_text"],
                         [
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-                            "`P79/P80`",
-                            "`P56/P57/P58/P59`",
-                            "narrow positive mechanism support survives",
-                            "the only remaining future route is a dormant no-go dossier at `F38` unless a",
                             "explicit stop",
                             "no further action",
                         ],
@@ -331,18 +295,17 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
                     contains_all(
                         inputs["external_release_note_text"],
                         [
+                            "`H66_post_p90_archive_replace_terminal_stop_packet`",
+                            "`P91_post_h66_next_planmode_handoff_sync`",
+                            "`P90_post_p89_archive_replace_screen_and_replacement_decision`",
                             "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`",
-                            "`P79/P80`",
-                            "`P56/P57/P58/P59`",
-                            "`H64_post_p53_p54_p55_f38_archive_first_freeze_packet`",
-                            "`H43_post_r44_useful_case_refreeze`",
-                            "`H58_post_r62_origin_value_boundary_closeout_packet`",
-                            "dormant non-runtime `F38` dossier",
+                            "archive-replace terminal stop",
+                            "strongest justified executor-value lane is closed negative",
                         ],
                     ),
                 )
             ),
-            "Paper bundle and outward helper notes must stay downstream of archive-first terminal freeze.",
+            "Paper bundle and outward helper notes must stay downstream of H66 terminal stop.",
         ),
         (
             "blog_rules_keep_restrained_release_surface",
@@ -357,8 +320,6 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             ),
             "Blocked-blog rules should remain explicit and downstream.",
         ),
-    ]
-    summary_checks = [
         (
             "release_worktree_hygiene_snapshot_classifies_commit_state",
             inputs["worktree_hygiene_summary"]["summary"]["release_commit_state"]
@@ -368,23 +329,17 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             "The worktree hygiene snapshot should classify current release-commit readiness.",
         ),
         (
-            "standing_h65_followthrough_audits_remain_green",
+            "standing_h66_followthrough_audits_remain_green",
             ready_count(inputs["p1_summary"]) == 10
             and not inputs["p1_summary"]["blocked_or_partial_items"]
+            and inputs["h66_summary"]["summary"]["selected_outcome"]
+            == "archive_replace_terminal_stop_becomes_current_active_route_and_defaults_to_explicit_stop"
             and inputs["h65_summary"]["summary"]["selected_outcome"]
             == "archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop"
-            and inputs["h64_summary"]["summary"]["selected_outcome"]
-            == "archive_first_freeze_becomes_current_active_route_and_r63_remains_dormant"
-            and inputs["p74_summary"]["summary"]["selected_outcome"]
-            == "successor_publication_review_supports_p75_freeze"
-            and inputs["p75_summary"]["summary"]["selected_outcome"]
-            == "published_successor_freeze_locked_after_p74_review"
-            and inputs["p76_summary"]["summary"]["selected_outcome"]
-            == "published_successor_release_hygiene_and_control_rebaselined_after_p75"
-            and inputs["p77_summary"]["summary"]["selected_outcome"]
-            == "keep_set_and_provenance_normalized_after_p76"
-            and inputs["p78_summary"]["summary"]["selected_outcome"]
-            == "balanced_worktree_convergence_completed_with_quarantines_preserved"
+            and inputs["p91_summary"]["summary"]["selected_outcome"]
+            == "next_planmode_handoff_synced_to_explicit_stop_after_h66"
+            and inputs["p90_summary"]["summary"]["selected_outcome"]
+            == "archive_replace_screen_completed_with_no_additional_salvage_after_p89"
             and inputs["p79_summary"]["summary"]["selected_outcome"]
             == "archive_claim_boundary_and_reopen_screen_locked_after_convergence"
             and inputs["p80_summary"]["summary"]["selected_outcome"]
@@ -397,8 +352,6 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             == "archive_release_closeout_surfaces_synced_to_h64_followthrough_stack"
             and inputs["p59_summary"]["summary"]["selected_outcome"]
             == "control_and_handoff_surfaces_synced_to_h64_followthrough_stack"
-            and inputs["f38_summary"]["summary"]["selected_outcome"]
-            == "r63_profile_remains_dormant_and_ineligible_without_cost_profile_fields"
             and inputs["f38_summary"]["summary"]["runtime_authorization"] == "closed"
             and inputs["h58_summary"]["summary"]["selected_outcome"]
             == "stop_as_mechanism_supported_but_no_bounded_executor_value"
@@ -408,27 +361,47 @@ def build_checklist_rows(**inputs: Any) -> list[dict[str, object]]:
             and blocked_count(inputs["h2_summary"]) == 0
             and inputs["v1_timing_summary"]["summary"]["runtime_classification"] == "healthy_but_slow"
             and int(inputs["v1_timing_summary"]["summary"]["timed_out_file_count"]) == 0,
-            "Standing release-preflight state depends on H65, the landed P56/P57/P58/P59 foundation, and the current archive-facing control stack.",
+            "Standing release-preflight state depends on H66, preserved H65, and the landed follow-through foundation.",
         ),
     ]
     return [
         {"item_id": item_id, "status": "pass" if ok else "blocked", "notes": notes}
-        for item_id, ok, notes in [*text_checks, *summary_checks]
+        for item_id, ok, notes in checks
     ]
 
 
 def build_snapshot(inputs: dict[str, Any]) -> list[dict[str, object]]:
     lookup = {
-        "README.md": ("readme_text", ["`P77_post_p76_keep_set_and_provenance_normalization`", "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`"]),
-        "STATUS.md": ("status_text", ["`P80_post_p79_next_planmode_handoff_sync`", "`explicit_stop_or_no_further_action_archive_first`"]),
-        "docs/README.md": ("docs_readme_text", ["current_stage_driver.md", "branch_worktree_registry.md", "Dormant Future"]),
-        "docs/publication_record/current_stage_driver.md": ("current_stage_driver_text", ["`P80_post_p79_next_planmode_handoff_sync`", "`wip/p75-post-p74-published-successor-freeze`"]),
-        "docs/plans/README.md": ("plans_readme_text", ["2026-04-05-post-p80-next-planmode-handoff.md", "P80_post_p79_next_planmode_handoff_sync"]),
-        "docs/publication_record/release_preflight_checklist.md": ("release_preflight_text", ["`P72` hygiene-only archive-polish and explicit-stop handoff sidecar", "dirty root `main`"]),
-        "docs/publication_record/release_candidate_checklist.md": ("release_candidate_text", ["`H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`", "preserved `H64/H58/H43`"]),
-        "docs/publication_record/claim_ladder.md": ("claim_ladder_text", ["| P79 Archive claim boundary and reopen screen |", "| P74/P75/P76 Immediate publication lineage |"]),
-        "docs/publication_record/archival_repro_manifest.md": ("archival_manifest_text", ["results/P80_post_p79_next_planmode_handoff_sync/summary.json", "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json"]),
-        "results/release_worktree_hygiene_snapshot/summary.json": ("worktree_hygiene_summary_text", ['"release_commit_state":', '"git_diff_check_state":']),
+        "README.md": ("readme_text", ["`H66_post_p90_archive_replace_terminal_stop_packet`", "`P91_post_h66_next_planmode_handoff_sync`"]),
+        "STATUS.md": ("status_text", ["`H66_post_p90_archive_replace_terminal_stop_packet`", "`P91_post_h66_next_planmode_handoff_sync`"]),
+        "docs/publication_record/current_stage_driver.md": (
+            "current_stage_driver_text",
+            ["`H66_post_p90_archive_replace_terminal_stop_packet`", "`P91_post_h66_next_planmode_handoff_sync`"],
+        ),
+        "docs/plans/README.md": (
+            "plans_readme_text",
+            ["2026-04-07-post-h66-next-planmode-handoff.md", "P91_post_h66_next_planmode_handoff_sync"],
+        ),
+        "docs/publication_record/release_preflight_checklist.md": (
+            "release_preflight_text",
+            ["`H66/P91/P90/P77/P78/P79/P80`", "`H65/P90` as the immediate prior closeout lineage"],
+        ),
+        "docs/publication_record/release_candidate_checklist.md": (
+            "release_candidate_text",
+            ["`H66/P91/P90/H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`", "preserved `H64/H58/H43`"],
+        ),
+        "docs/publication_record/claim_ladder.md": (
+            "claim_ladder_text",
+            ["| H66 Archive-replace terminal stop packet |", "| P91 Next-planmode handoff sync |"],
+        ),
+        "docs/publication_record/archival_repro_manifest.md": (
+            "archival_manifest_text",
+            ["results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json", "results/P91_post_h66_next_planmode_handoff_sync/summary.json"],
+        ),
+        "results/release_worktree_hygiene_snapshot/summary.json": (
+            "worktree_hygiene_summary_text",
+            ['"release_commit_state":', '"git_diff_check_state":'],
+        ),
     }
     return [{"path": path, "matched_lines": extract_matching_lines(inputs[key], needles=needles)} for path, (key, needles) in lookup.items()]
 
@@ -454,8 +427,14 @@ def main() -> None:
     inputs = load_inputs()
     checklist_rows = build_checklist_rows(**inputs)
     summary = build_summary(checklist_rows, inputs["worktree_hygiene_summary"])
-    write_json(OUT_DIR / "checklist.json", {"experiment": "release_preflight_checklist_audit_checklist", "environment": environment.as_dict(), "rows": checklist_rows})
-    write_json(OUT_DIR / "snapshot.json", {"experiment": "release_preflight_checklist_audit_snapshot", "environment": environment.as_dict(), "rows": build_snapshot(inputs)})
+    write_json(
+        OUT_DIR / "checklist.json",
+        {"experiment": "release_preflight_checklist_audit_checklist", "environment": environment.as_dict(), "rows": checklist_rows},
+    )
+    write_json(
+        OUT_DIR / "snapshot.json",
+        {"experiment": "release_preflight_checklist_audit_snapshot", "environment": environment.as_dict(), "rows": build_snapshot(inputs)},
+    )
     write_json(
         OUT_DIR / "summary.json",
         {
@@ -477,13 +456,10 @@ def main() -> None:
                 "docs/publication_record/paper_bundle_status.md",
                 "docs/publication_record/review_boundary_summary.md",
                 "docs/publication_record/external_release_note_skeleton.md",
+                "results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json",
                 "results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json",
-                "results/H64_post_p53_p54_p55_f38_archive_first_freeze_packet/summary.json",
-                "results/P74_post_p73_successor_publication_review/summary.json",
-                "results/P75_post_p74_published_successor_freeze/summary.json",
-                "results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json",
-                "results/P77_post_p76_keep_set_and_provenance_normalization/summary.json",
-                "results/P78_post_p77_legacy_worktree_convergence_and_quarantine_sync/summary.json",
+                "results/P91_post_h66_next_planmode_handoff_sync/summary.json",
+                "results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json",
                 "results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json",
                 "results/P80_post_p79_next_planmode_handoff_sync/summary.json",
                 "results/P56_post_h64_clean_merge_candidate_packet/summary.json",
@@ -501,15 +477,11 @@ def main() -> None:
     (OUT_DIR / "README.md").write_text(
         "# Release Preflight Checklist Audit\n\n"
         "Machine-readable audit of whether outward release-facing docs and the frozen paper bundle remain aligned on "
-        "the H65 published frozen successor posture while preserving H64 as the prior active packet, P63/P64/P65 as "
-        "the prior successor stack, H58 as the value-negative closeout, and H43 as the paper-grade "
-        "endpoint.\n",
+        "the H66 terminal-stop posture while preserving H65 as the prior active packet, H58 as the value-negative "
+        "closeout, and H43 as the paper-grade endpoint.\n",
         encoding="utf-8",
     )
 
 
 if __name__ == "__main__":
     main()
-
-
-

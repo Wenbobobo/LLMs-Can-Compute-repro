@@ -2,11 +2,11 @@
   "experiment": "p10_submission_archive_ready_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,51 +22,53 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
-        "`P77_post_p76_keep_set_and_provenance_normalization`"
+        "`H66_post_p90_archive_replace_terminal_stop_packet`.",
+        "`P91_post_h66_next_planmode_handoff_sync`",
+        "`H66_post_p90_archive_replace_terminal_stop_packet`, and the next route is"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P80_post_p79_next_planmode_handoff_sync`.",
-        "`explicit_stop_or_no_further_action_archive_first`."
+        "`H66_post_p90_archive_replace_terminal_stop_packet`.",
+        "`P91_post_h66_next_planmode_handoff_sync`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P80_post_p79_next_planmode_handoff_sync`",
-        "- `explicit_stop_or_no_further_action_archive_first`"
+        "- `H66_post_p90_archive_replace_terminal_stop_packet`",
+        "- `P91_post_h66_next_planmode_handoff_sync`",
+        "packet `H66_post_p90_archive_replace_terminal_stop_packet` unless a later",
+        "- `H66_post_p90_archive_replace_terminal_stop_packet`, then explicit stop or"
       ]
     },
     {
       "path": "docs/publication_record/submission_packet_index.md",
       "matched_lines": [
-        "- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`",
-        "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
-        "- `results/P80_post_p79_next_planmode_handoff_sync/summary.json`"
+        "- `../milestones/H66_post_p90_archive_replace_terminal_stop_packet/`",
+        "- `results/P91_post_h66_next_planmode_handoff_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`",
-        "- `results/P80_post_p79_next_planmode_handoff_sync/summary.json`"
+        "- `results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json`",
+        "- `results/P91_post_h66_next_planmode_handoff_sync/summary.json`"
       ]
     },
     {
       "path": "docs/publication_record/review_boundary_summary.md",
       "matched_lines": [
-        "- preserved `P56/P57/P58/P59` follow-through foundation:",
-        "- the only remaining future route is a dormant no-go dossier at `F38` unless a"
+        "`H66_post_p90_archive_replace_terminal_stop_packet`",
+        "`P91_post_h66_next_planmode_handoff_sync`"
       ]
     },
     {
       "path": "docs/publication_record/external_release_note_skeleton.md",
       "matched_lines": [
-        "- preserved `P56/P57/P58/P59` follow-through foundation",
-        "- dormant non-runtime `F38` dossier"
+        "`H66_post_p90_archive_replace_terminal_stop_packet`",
+        "`P91_post_h66_next_planmode_handoff_sync`"
       ]
     },
     {

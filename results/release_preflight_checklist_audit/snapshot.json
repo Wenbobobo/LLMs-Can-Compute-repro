@@ -2,11 +2,11 @@
   "experiment": "release_preflight_checklist_audit_snapshot",
   "environment": {
     "python": {
-      "executable": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv\\Scripts\\python.exe",
+      "executable": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv\\Scripts\\python.exe",
       "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
       "implementation": "CPython",
       "platform": "Windows-10-10.0.19044-SP0",
-      "virtual_env": "D:\\zWenbo\\AI\\wt\\p75-post-p74-published-successor-freeze\\.venv"
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv"
     },
     "torch": {
       "installed": false,
@@ -22,67 +22,60 @@
     {
       "path": "README.md",
       "matched_lines": [
-        "`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.",
-        "`P77_post_p76_keep_set_and_provenance_normalization`"
+        "`H66_post_p90_archive_replace_terminal_stop_packet`.",
+        "`P91_post_h66_next_planmode_handoff_sync`",
+        "`H66_post_p90_archive_replace_terminal_stop_packet`, and the next route is"
       ]
     },
     {
       "path": "STATUS.md",
       "matched_lines": [
-        "`P80_post_p79_next_planmode_handoff_sync`.",
-        "`explicit_stop_or_no_further_action_archive_first`."
-      ]
-    },
-    {
-      "path": "docs/README.md",
-      "matched_lines": [
-        "and the dormant future dossier.",
-        "- `publication_record/current_stage_driver.md`",
-        "- `branch_worktree_registry.md`",
-        "## Dormant Future",
-        "- treat `publication_record/current_stage_driver.md` as the canonical live"
+        "`H66_post_p90_archive_replace_terminal_stop_packet`.",
+        "`P91_post_h66_next_planmode_handoff_sync`."
       ]
     },
     {
       "path": "docs/publication_record/current_stage_driver.md",
       "matched_lines": [
-        "- `P80_post_p79_next_planmode_handoff_sync`",
-        "- `wip/p75-post-p74-published-successor-freeze`",
-        "produced the live `wip/p75-post-p74-published-successor-freeze` branch."
+        "- `H66_post_p90_archive_replace_terminal_stop_packet`",
+        "- `P91_post_h66_next_planmode_handoff_sync`",
+        "packet `H66_post_p90_archive_replace_terminal_stop_packet` unless a later",
+        "- `H66_post_p90_archive_replace_terminal_stop_packet`, then explicit stop or"
       ]
     },
     {
       "path": "docs/plans/README.md",
       "matched_lines": [
-        "- `2026-04-05-post-p80-next-planmode-handoff.md`",
-        "- `../milestones/P80_post_p79_next_planmode_handoff_sync/`"
+        "- `2026-04-07-post-h66-next-planmode-handoff.md`",
+        "- `../milestones/P91_post_h66_next_planmode_handoff_sync/`"
       ]
     },
     {
       "path": "docs/publication_record/release_preflight_checklist.md",
       "matched_lines": [
-        "- keep dirty root `main` outside any integration path"
+        "`H66/P91/P90/P77/P78/P79/P80`",
+        "- preserve `H65/P90` as the immediate prior closeout lineage underneath `H66`"
       ]
     },
     {
       "path": "docs/publication_record/release_candidate_checklist.md",
       "matched_lines": [
-        "- current package must expose `H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`",
+        "- current package must expose `H66/P91/P90/H65/P56/P57/P58/P59/P77/P78/P79/P80/F38`",
         "- preserved `H64/H58/H43`"
       ]
     },
     {
       "path": "docs/publication_record/claim_ladder.md",
       "matched_lines": [
-        "| P79 Archive claim boundary and reopen screen | validated as the current archive-facing claim-boundary wave | `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json`, `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/claim_packet.json` | packages the strongest honest claim boundary: narrow mechanism support survives while the executor-value lane is closed |",
-        "| P74/P75/P76 Immediate publication lineage | preserved immediate publication lineage | `results/P74_post_p73_successor_publication_review/summary.json`, `results/P75_post_p74_published_successor_freeze/summary.json`, `results/P76_post_p75_release_hygiene_and_control_rebaseline/summary.json` | produced the live `p75` publication branch and remains the nearest preserved publication stack |"
+        "| H66 Archive-replace terminal stop packet | validated as the current active docs-only packet | `results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json`, `results/H66_post_p90_archive_replace_terminal_stop_packet/claim_packet.json` | closes the archive-replace route at terminal stop and preserves H65 as the prior active packet |",
+        "| P91 Next-planmode handoff sync | validated as the current handoff-sync wave | `results/P91_post_h66_next_planmode_handoff_sync/summary.json`, `results/P91_post_h66_next_planmode_handoff_sync/claim_packet.json` | freezes next planning prompts on explicit stop, archive polish, or no further action only |"
       ]
     },
     {
       "path": "docs/publication_record/archival_repro_manifest.md",
       "matched_lines": [
-        "- `results/P80_post_p79_next_planmode_handoff_sync/summary.json`",
-        "- `results/P77_post_p76_keep_set_and_provenance_normalization/summary.json`"
+        "- `results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json`",
+        "- `results/P91_post_h66_next_planmode_handoff_sync/summary.json`"
       ]
     },
     {
