@@ -4,7 +4,15 @@
 
 The current active stage is:
 
-- `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+- `H66_post_p90_archive_replace_terminal_stop_packet`
+
+The current next-planmode handoff sync wave is:
+
+- `P91_post_h66_next_planmode_handoff_sync`
+
+The current archive-replace screen and replacement-decision wave is:
+
+- `P90_post_p89_archive_replace_screen_and_replacement_decision`
 
 The current docs-consolidation and live-router sync wave is:
 
@@ -36,6 +44,9 @@ The current promotion branch and PR handoff wave is:
 
 The current live convergence and handoff stack is:
 
+- `P91_post_h66_next_planmode_handoff_sync`
+- `H66_post_p90_archive_replace_terminal_stop_packet`
+- `P90_post_p89_archive_replace_screen_and_replacement_decision`
 - `P89_post_p88_docs_consolidation_and_live_router_sync`
 - `P88_post_p87_salvage_screen_and_no_import_decision`
 - `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
@@ -101,6 +112,17 @@ The default downstream lane is:
 
 ## Current Machine-State Meaning
 
+- `H66` promotes the completed archive-replace screen into the current
+  terminal-stop packet, preserves `H65` as the prior active docs-only state,
+  and defaults the downstream route to explicit stop, archive polish, or no
+  further action.
+- `P91` synchronizes the next planning prompts to the `H66` terminal-stop
+  posture and keeps any later `R63` discussion strictly non-runtime.
+- `P90` screens the remaining dirty-root publication docs still marked as
+  salvage-later in `P86`, closes them as keep-clean/archive-root-only
+  decisions, and narrows the next route to the archive-then-replace closeout
+  packet `H66_post_p90_archive_replace_terminal_stop_packet` unless a later
+  file-specific salvage case appears.
 - `P89` consolidates the live router surfaces around the clean `p85` branch,
   makes docs consolidation the current control wave, and narrows the next
   route to archive-then-replace closeout or explicit stop unless a later
@@ -165,8 +187,13 @@ The default downstream lane is:
 - runtime remains closed.
 - `F38` records the only surviving future family as a dormant dossier; any
   later `R63` discussion must stay strictly non-runtime.
-- `H65` remains the current active docs-only packet and still selects
-  `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
-- archive-then-replace closeout and no further action are now the recommended
-  downstream routes after docs consolidation, unless a later file-specific
-  salvage case appears.
+- `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet` remains the
+  preserved prior active packet immediately below `H66`.
+- `explicit_stop_or_no_further_action_archive_first` remains the default
+  downstream lane label.
+- `H66` remains the current active docs-only packet and selects
+  `archive_replace_terminal_stop_becomes_current_active_route_and_defaults_to_explicit_stop`.
+- `H66_post_p90_archive_replace_terminal_stop_packet`, then explicit stop or
+  no further action, are now the recommended downstream routes after the
+  archive-then-replace closeout screen, unless a later file-specific salvage
+  case appears.

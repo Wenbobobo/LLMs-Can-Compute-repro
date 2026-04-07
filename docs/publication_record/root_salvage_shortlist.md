@@ -27,18 +27,30 @@ the clean branch during `P87`.
   dirty-root version is shorter and omits later closeout-era caveats that the
   clean branch already preserves.
 
-## Salvage Later If Still Needed
+## Keep Clean And Archive Root Only
 
 - `docs/publication_record/archival_repro_manifest.md`
+  dirty-root version is keyed to the older `H63/P50/P51/P52` closeout stack;
+  keep the clean `H65` archive-facing manifest and preserve the root version
+  only as archive context.
 - `docs/publication_record/release_candidate_checklist.md`
+  dirty-root version is an older `H25/H23` checklist and should not replace the
+  restrained clean `H65` release candidate surface.
 - `docs/publication_record/release_preflight_checklist.md`
+  dirty-root version is scoped to the older `H25/H23` preflight language and
+  should not replace the clean `H65` archive-facing checklist.
 - `docs/publication_record/submission_candidate_criteria.md`
+  dirty-root version is still bound to the older `H25/H23` submission gate.
 - `docs/publication_record/submission_packet_index.md`
+  dirty-root version still points at the older `H63/P50` bundle rather than
+  the current `H65` archive-facing packet.
 - `docs/publication_record/experiment_manifest.md`
+  dirty-root version is missing the later archive-first closeout lineage that
+  the clean branch already preserves.
 
-These remain potentially useful, but they should only be imported after the
-paper-facing narrative is fully aligned with `H65`, `P87/P88`, and the
-value-negative closeout.
+These files are now closed as keep-clean/archive-root-only decisions under
+`P90`. No further selective salvage is required unless a later file-specific
+case appears.
 
 ## Do Not Salvage Blindly
 

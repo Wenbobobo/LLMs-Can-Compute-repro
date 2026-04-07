@@ -12,11 +12,16 @@ For live routing and preserved-history navigation, start at `docs/README.md`.
 
 ## Current Stage
 
-As of `2026-04-07`, the current active packet remains
-`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+As of `2026-04-07`, the current active packet is
+`H66_post_p90_archive_replace_terminal_stop_packet`.
 
 Current anchors:
 
+- current archive-replace screen and replacement-decision wave:
+- current next-planmode handoff sync wave:
+  `P91_post_h66_next_planmode_handoff_sync`
+- current archive-replace screen and replacement-decision wave:
+  `P90_post_p89_archive_replace_screen_and_replacement_decision`
 - current docs-consolidation and live-router sync wave:
   `P89_post_p88_docs_consolidation_and_live_router_sync`
 - current salvage-screen and no-import decision wave:
@@ -96,13 +101,17 @@ Current anchors:
 - only conditional later gate:
   `r63_post_h62_coprocessor_eligibility_profile_gate`
 
-`P89` consolidates the live router surfaces around the clean-branch
-docs-consolidation posture after `P88`. `P88` screens the first-tier dirty-root
-publication shortlist and decides no immediate imports for the four
-highest-value remaining candidates. `P87` refreshes the paper-facing spine on
-the clean branch and records a salvage shortlist for the highest-value
-dirty-root publication docs without importing the dirty root wholesale. `P86`
-packages the dirty-root inventory and archive-replace map from the clean
+`H66` promotes the completed archive-replace screen into the current
+terminal-stop packet and preserves `H65` as the prior active docs-only state.
+`P91` synchronizes the next plan-mode prompts to that `H66` terminal-stop
+posture. `P90` screens the remaining archive/replace publication candidates
+after `P89` and closes them as keep-clean/archive-root-only decisions. `P89`
+consolidates the live router surfaces around the clean-branch docs-consolidation
+posture after `P88`. `P88` screens the first-tier dirty-root publication
+shortlist and decides no immediate imports for the four highest-value
+remaining candidates. `P87` refreshes the paper-facing spine on the clean
+branch and records a salvage shortlist for the highest-value dirty-root
+publication docs without importing the dirty root wholesale. `P86` packages the dirty-root inventory and archive-replace map from the clean
 `p85` branch, keeping `wip/root-main-parking-2026-03-24` quarantine-only while
 classifying root-only paths into duplicate/obsolete, salvage, and archive-only
 buckets. `P85` rebaselines current control onto merged `main` via the clean
@@ -121,7 +130,9 @@ the dirty root checkout plus `wip/h27-promotion` as quarantined survivors.
 `P79` packages the paper-facing partial falsification boundary and the future
 reopen screen. `P80` syncs all next-planmode prompts to the honest default:
 explicit stop, no further action, or at most hygiene-only / archive polish /
-merge-prep documentation work.
+merge-prep documentation work. The current replacement route has closed at
+`H66_post_p90_archive_replace_terminal_stop_packet`, and the next route is
+explicit stop, archive polish, or no further action.
 
 ## Execution Posture
 
@@ -130,7 +141,8 @@ There are no open runtime tasks on this branch.
 Runtime remains closed. Dirty-root integration remains out of bounds. The only
 surviving future discussion is a strictly non-runtime gate, and it is not a
 runtime authorization. Current local follow-through should run only from clean
-descendants recorded in `docs/branch_worktree_registry.md`, with `P89`
-completed and the current engineering route narrowed to archive-then-replace
-closeout or explicit stop on `wip/p85-post-p84-main-rebaseline` unless a later
-file-specific salvage case appears.
+descendants recorded in `docs/branch_worktree_registry.md`, with `H66`
+current, `P91` providing the next-planmode entrypoint, and the current
+engineering route narrowed to explicit stop, archive polish, or no further
+action on `wip/p85-post-p84-main-rebaseline` unless a later file-specific
+salvage case appears.

@@ -9,14 +9,18 @@ Do not widen the paper-facing evidence bundle.
 ## Current Archive-Facing Control Bundle
 
 - current packet does not widen the paper-facing evidence bundle beyond
-  `H65/H58/H43`
+  `H66/H58/H43`
+- `H65/P90 remain preserved immediate closeout lineage below `H66``
 - `P74/P75/P76` remain preserved immediate publication lineage
 - `P72/P71/P70/P69` entries below are hygiene-only control sidecars, not new
   paper-facing evidence
-- current archive-facing control surfaces are `P77/P78/P79/P80`
+- current archive-facing control surfaces are `P91/P90/P77/P78/P79/P80`
 
 Current milestone bundle:
 
+- `../milestones/H66_post_p90_archive_replace_terminal_stop_packet/`
+- `../milestones/P91_post_h66_next_planmode_handoff_sync/`
+- `../milestones/P90_post_p89_archive_replace_screen_and_replacement_decision/`
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
 - `../milestones/P80_post_p79_next_planmode_handoff_sync/`
 - `../milestones/P79_post_p78_archive_claim_boundary_and_reopen_screen/`
@@ -27,6 +31,9 @@ Current milestone bundle:
 
 Current result anchors:
 
+- `results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json`
+- `results/P91_post_h66_next_planmode_handoff_sync/summary.json`
+- `results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json`
 - `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
 - `results/P80_post_p79_next_planmode_handoff_sync/summary.json`
 - `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json`

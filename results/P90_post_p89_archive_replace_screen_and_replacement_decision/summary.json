@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "current_archive_replace_wave": "p90_post_p89_archive_replace_screen_and_replacement_decision",
+    "current_branch": "wip/p85-post-p84-main-rebaseline",
+    "current_branch_head": "a9473c1",
+    "merged_main_head": "b82b566",
+    "origin_main_to_p90_left_right": "0\t7",
+    "selected_outcome": "archive_replace_screen_completed_with_no_additional_salvage_after_p89",
+    "next_recommended_route": "h66_archive_replace_terminal_stop_packet",
+    "screened_now_count": 6,
+    "keep_clean_replace_root_count": 6,
+    "archive_only_preserve_root_count": 0,
+    "file_specific_salvage_required_count": 0,
+    "pass_count": 3,
+    "blocked_count": 0
+  },
+  "runtime_environment": {
+    "python": {
+      "executable": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv\\Scripts\\python.exe",
+      "version": "3.13.9 (main, Nov 19 2025, 22:41:40) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "platform": "Windows-10-10.0.19044-SP0",
+      "virtual_env": "D:\\zWenbo\\AI\\wt\\p85-post-p84-main-rebaseline\\.venv"
+    },
+    "torch": {
+      "installed": false,
+      "version": null,
+      "cuda_version": null,
+      "cuda_available": false,
+      "device_count": 0,
+      "devices": []
+    },
+    "uv_version": "uv 0.9.14 (05814f9cd 2025-12-01)"
+  }
+}

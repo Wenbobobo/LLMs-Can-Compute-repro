@@ -1,0 +1,119 @@
+{
+  "rows": [
+    {
+      "field": "p89_summary",
+      "value": {
+        "current_docs_wave": "p89_post_p88_docs_consolidation_and_live_router_sync",
+        "current_branch": "wip/p85-post-p84-main-rebaseline",
+        "current_branch_head": "d55f589",
+        "merged_main_head": "b82b566",
+        "origin_main_to_p89_left_right": "0/6",
+        "selected_outcome": "docs_consolidation_and_live_router_sync_after_p88",
+        "next_recommended_route": "archive_then_replace_closeout_or_explicit_stop",
+        "router_docs_checked": 11,
+        "pass_count": 3,
+        "blocked_count": 0
+      }
+    },
+    {
+      "field": "screen_rows",
+      "value": [
+        {
+          "path": "docs/publication_record/archival_repro_manifest.md",
+          "dirty_exists": true,
+          "clean_ok": true,
+          "decision": "keep_clean_replace_root",
+          "reason": "dirty-root version is keyed to the older H63/P50/P51/P52 closeout stack while the clean branch already carries the H65 archive-facing bundle."
+        },
+        {
+          "path": "docs/publication_record/release_candidate_checklist.md",
+          "dirty_exists": true,
+          "clean_ok": true,
+          "decision": "keep_clean_replace_root",
+          "reason": "dirty-root version is an older H25/H23-era checklist and should not replace the restrained H65 release candidate surface."
+        },
+        {
+          "path": "docs/publication_record/release_preflight_checklist.md",
+          "dirty_exists": true,
+          "clean_ok": true,
+          "decision": "keep_clean_replace_root",
+          "reason": "dirty-root version is bound to older H25/H23 preflight wording while the clean branch already reflects the H65 archive-facing control stack."
+        },
+        {
+          "path": "docs/publication_record/submission_candidate_criteria.md",
+          "dirty_exists": true,
+          "clean_ok": true,
+          "decision": "keep_clean_replace_root",
+          "reason": "dirty-root version is still scoped to the old H25/H23 submission gate rather than the current H65 archive-facing closeout state."
+        },
+        {
+          "path": "docs/publication_record/submission_packet_index.md",
+          "dirty_exists": true,
+          "clean_ok": true,
+          "decision": "keep_clean_replace_root",
+          "reason": "dirty-root version still points at the older H63/P50 archive-first packet instead of the current H65 bundle."
+        },
+        {
+          "path": "docs/publication_record/experiment_manifest.md",
+          "dirty_exists": true,
+          "clean_ok": true,
+          "decision": "keep_clean_replace_root",
+          "reason": "dirty-root version is missing the later archive-first closeout lineage that the clean branch already preserves in the manifest."
+        }
+      ]
+    },
+    {
+      "field": "doc_sync_rows",
+      "value": [
+        {
+          "path": "README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "STATUS.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/milestones/README.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        },
+        {
+          "path": "docs/publication_record/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/publication_record/current_stage_driver.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/publication_record/root_salvage_shortlist.md",
+          "exists": true,
+          "needle_count": 7,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

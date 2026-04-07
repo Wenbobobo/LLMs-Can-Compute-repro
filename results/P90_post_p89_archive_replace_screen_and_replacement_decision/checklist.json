@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p90_reads_green_p89_summary",
+      "status": "pass",
+      "notes": "P90 begins only after the landed green P89 docs-consolidation packet."
+    },
+    {
+      "item_id": "p90_archive_replace_screen_resolves_remaining_publication_candidates",
+      "status": "pass",
+      "notes": "The remaining six publication docs should close as keep-clean/archive-root-only unless a real file-specific salvage case appears."
+    },
+    {
+      "item_id": "p90_live_docs_shift_current_control_to_archive_replace_screen",
+      "status": "pass",
+      "notes": "Routers and publication docs should make P90 the current archive-replace decision wave."
+    }
+  ]
+}

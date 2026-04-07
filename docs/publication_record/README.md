@@ -3,8 +3,8 @@
 This directory stores paper-facing, archive-facing, review-facing, and release
 facing control surfaces.
 
-The active docs-only packet remains
-`H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+The active docs-only packet is
+`H66_post_p90_archive_replace_terminal_stop_packet`.
 
 ## Current Start Points
 
@@ -14,13 +14,16 @@ The active docs-only packet remains
   top-level live/historical/dormant router
 - `../branch_worktree_registry.md`
   current branch/worktree registry and hygiene control note
-- `../plans/2026-04-07-post-p89-next-planmode-handoff.md`
-  current shortest handoff from the post-`P89` docs-consolidation state into
+- `../plans/2026-04-07-post-h66-next-planmode-handoff.md`
+  current shortest handoff from the post-`H66` terminal-stop state into
   the next planning round
-- `../plans/2026-04-07-post-p89-next-planmode-startup-prompt.md`
+- `../plans/2026-04-07-post-h66-next-planmode-startup-prompt.md`
   current ready-to-paste startup prompt for the next `plan mode` round
-- `../plans/2026-04-07-post-p89-next-planmode-brief-prompt.md`
+- `../plans/2026-04-07-post-h66-next-planmode-brief-prompt.md`
   current short startup prompt for the next `plan mode` round
+- `../plans/2026-04-07-post-p89-next-planmode-handoff.md`
+  preserved shortest handoff from the post-`P89` docs-consolidation state into
+  the next planning round
 - `../plans/2026-04-07-post-p88-next-planmode-handoff.md`
   preserved shortest handoff from the post-`P88` no-import decision state into
   the next planning round
@@ -67,6 +70,12 @@ The active docs-only packet remains
 
 ## Current Taxonomy
 
+- current next-planmode handoff sync wave:
+  `../milestones/P91_post_h66_next_planmode_handoff_sync/`
+- current active docs-only packet:
+  `../milestones/H66_post_p90_archive_replace_terminal_stop_packet/`
+- current archive-replace screen and replacement-decision wave:
+  `../milestones/P90_post_p89_archive_replace_screen_and_replacement_decision/`
 - current docs-consolidation and live-router sync wave:
   `../milestones/P89_post_p88_docs_consolidation_and_live_router_sync/`
 - current salvage-screen and no-import decision wave:
@@ -90,6 +99,8 @@ The active docs-only packet remains
   `../milestones/P73_post_p72_legacy_worktree_shrink_inventory_and_keep_set_sync/`
 - current archive polish and explicit stop handoff wave:
   `../milestones/P72_post_p71_archive_polish_and_explicit_stop_handoff/`
+- preserved prior active packet:
+  `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
 - current hygiene-only cleanup stack:
   `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`,
   `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`,

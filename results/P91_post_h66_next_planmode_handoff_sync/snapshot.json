@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "field": "handoff_path",
+      "value": "D:/zWenbo/AI/wt/p85-post-p84-main-rebaseline/docs/plans/2026-04-07-post-h66-next-planmode-handoff.md"
+    },
+    {
+      "field": "startup_path",
+      "value": "D:/zWenbo/AI/wt/p85-post-p84-main-rebaseline/docs/plans/2026-04-07-post-h66-next-planmode-startup-prompt.md"
+    },
+    {
+      "field": "brief_path",
+      "value": "D:/zWenbo/AI/wt/p85-post-p84-main-rebaseline/docs/plans/2026-04-07-post-h66-next-planmode-brief-prompt.md"
+    }
+  ]
+}

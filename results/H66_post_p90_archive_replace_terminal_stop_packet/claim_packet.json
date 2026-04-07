@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "supports": [
+      "H66 promotes archive-replace terminal stop to the current active docs-only packet above preserved H65.",
+      "H66 defaults the downstream route to explicit stop, archive polish, or no further action.",
+      "H66 keeps any future R63 discussion strictly non-runtime and non-authorizing."
+    ],
+    "does_not_support": [
+      "runtime reopening",
+      "same-lane executor-value reopening",
+      "dirty-root integration",
+      "broad Wasm or arbitrary C widening"
+    ],
+    "distilled_result": {
+      "active_stage": "h66_post_p90_archive_replace_terminal_stop_packet",
+      "preserved_prior_active_packet": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet",
+      "current_archive_replace_wave": "p90_post_p89_archive_replace_screen_and_replacement_decision",
+      "current_clean_branch": "wip/p85-post-p84-main-rebaseline",
+      "default_downstream_lane": "explicit_stop_or_no_further_action_archive_first",
+      "secondary_downstream_lane": "archive_polish_or_hygiene_only_docs_cleanup",
+      "conditional_downstream_lane": "r63_post_h62_coprocessor_eligibility_profile_gate",
+      "all_prerequisites_green": true,
+      "runtime_authorization": "closed",
+      "selected_outcome": "archive_replace_terminal_stop_becomes_current_active_route_and_defaults_to_explicit_stop",
+      "next_required_lane": "explicit_stop_or_no_further_action_archive_first"
+    }
+  }
+}

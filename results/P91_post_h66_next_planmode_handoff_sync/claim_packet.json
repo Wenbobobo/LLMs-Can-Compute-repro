@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "supports": [
+      "P91 syncs the next planning prompts to the honest H66 terminal-stop posture.",
+      "P91 keeps the default route at explicit stop, archive polish, or no further action.",
+      "P91 leaves any later R63 discussion strictly non-runtime and non-authorizing."
+    ],
+    "does_not_support": [
+      "runtime reopen",
+      "dirty-root integration",
+      "executor-value continuation"
+    ],
+    "distilled_result": {
+      "current_handoff_sync_wave": "p91_post_h66_next_planmode_handoff_sync",
+      "selected_outcome": "next_planmode_handoff_synced_to_explicit_stop_after_h66",
+      "next_required_lane": "explicit_stop_archive_polish_or_no_further_action"
+    }
+  }
+}

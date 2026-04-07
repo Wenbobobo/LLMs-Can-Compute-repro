@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "supports": [
+      "P90 screens the remaining six dirty-root publication docs and closes them as keep-clean/archive-root-only decisions.",
+      "P90 leaves no remaining mandatory selective-salvage follow-through on the clean branch.",
+      "P90 narrows the next route to an H66 terminal-stop packet rather than more dirty-root imports."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "same-lane executor-value reopen",
+      "broad Wasm or arbitrary C scope expansion"
+    ],
+    "distilled_result": {
+      "current_archive_replace_wave": "p90_post_p89_archive_replace_screen_and_replacement_decision",
+      "current_branch": "wip/p85-post-p84-main-rebaseline",
+      "current_branch_head": "a9473c1",
+      "merged_main_head": "b82b566",
+      "origin_main_to_p90_left_right": "0\t7",
+      "selected_outcome": "archive_replace_screen_completed_with_no_additional_salvage_after_p89",
+      "next_recommended_route": "h66_archive_replace_terminal_stop_packet"
+    }
+  }
+}

@@ -2,6 +2,9 @@
 
 Archive-facing control surfaces:
 
+- `results/H66_post_p90_archive_replace_terminal_stop_packet/summary.json`
+- `results/P91_post_h66_next_planmode_handoff_sync/summary.json`
+- `results/P90_post_p89_archive_replace_screen_and_replacement_decision/summary.json`
 - `results/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/summary.json`
 - `results/P80_post_p79_next_planmode_handoff_sync/summary.json`
 - `results/P79_post_p78_archive_claim_boundary_and_reopen_screen/summary.json`

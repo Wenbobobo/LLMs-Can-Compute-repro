@@ -1,12 +1,18 @@
 # Submission Candidate Criteria
 
 - current active packet:
+  `H66_post_p90_archive_replace_terminal_stop_packet`
+- current next-planmode handoff sync wave:
+  `P91_post_h66_next_planmode_handoff_sync`
+- preserved prior active packet:
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - current archive-facing control stack:
   `P77_post_p76_keep_set_and_provenance_normalization`,
   `P78_post_p77_legacy_worktree_convergence_and_quarantine_sync`,
   `P79_post_p78_archive_claim_boundary_and_reopen_screen`,
   `P80_post_p79_next_planmode_handoff_sync`
+- current archive-replace screen:
+  `P90_post_p89_archive_replace_screen_and_replacement_decision`
 - current archive polish and explicit stop handoff wave:
   `P72_post_p71_archive_polish_and_explicit_stop_handoff`
 - current merge-prep readiness sync wave:

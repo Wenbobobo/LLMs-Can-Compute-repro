@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "field": "preserved_prior_active_packet",
+      "value": "h65_post_p66_p67_p68_archive_first_terminal_freeze_packet"
+    },
+    {
+      "field": "current_archive_replace_wave",
+      "value": "p90_post_p89_archive_replace_screen_and_replacement_decision"
+    },
+    {
+      "field": "next_required_lane",
+      "value": "explicit_stop_or_no_further_action_archive_first"
+    }
+  ]
+}

@@ -1,9 +1,15 @@
 # External Release Note Skeleton
 
 - current active packet:
-  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+  `H66_post_p90_archive_replace_terminal_stop_packet`
+- current next-planmode handoff sync wave:
+  `P91_post_h66_next_planmode_handoff_sync`
+- current archive-replace screen wave:
+  `P90_post_p89_archive_replace_screen_and_replacement_decision`
 - current archive-facing control stack:
   `P79/P80`
+- preserved prior active packet:
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
 - current published clean descendant branch:
   `wip/p75-post-p74-published-successor-freeze`
 - preserved immediate publication lineage:
@@ -13,7 +19,7 @@
 - preserved `H43_post_r44_useful_case_refreeze`
 - preserved `H58_post_r62_origin_value_boundary_closeout_packet`
 - dormant non-runtime `F38` dossier
-- archive-first terminal freeze
+- archive-replace terminal stop
 - strongest justified executor-value lane is closed negative
 - explicit stop
 - no further action

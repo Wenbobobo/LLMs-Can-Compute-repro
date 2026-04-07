@@ -7,13 +7,21 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-04-07-post-h66-next-planmode-handoff.md`
+  current shortest handoff from the post-`H66` terminal-stop state into
+  the next planning round
+- `2026-04-07-post-h66-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `2026-04-07-post-h66-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `2026-04-07-post-p89-next-planmode-handoff.md`
-  current shortest handoff from the post-`P89` docs-consolidation state into
+  preserved shortest handoff from the post-`P89` docs-consolidation state into
   the next planning round
 - `2026-04-07-post-p89-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved ready-to-paste startup prompt for the post-`P89`
+  docs-consolidation state
 - `2026-04-07-post-p89-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved short startup prompt for the post-`P89` docs-consolidation state
 - `2026-04-07-post-p88-next-planmode-handoff.md`
   preserved shortest handoff from the post-`P88` no-import decision state into
   the next planning round
@@ -72,8 +80,10 @@ driver and machine-readable `results/` summaries first.
   current top-level docs router
 - `../branch_worktree_registry.md`
   current branch/worktree registry and merge posture control note
-- `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
+- `../milestones/H66_post_p90_archive_replace_terminal_stop_packet/`
   current active docs-only packet
+- `../milestones/P91_post_h66_next_planmode_handoff_sync/`
+  current handoff-sync wave
 - `../milestones/P88_post_p87_salvage_screen_and_no_import_decision/`
   current salvage-screen and no-import decision wave
 - `../milestones/P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
@@ -114,17 +124,23 @@ driver and machine-readable `results/` summaries first.
 - preserved immediate publication lineage:
   `P74 -> P75 -> P76`
 - current promotion and post-merge lineage:
-  `P81 -> P82 -> P83 -> P84 -> P85 -> P86 -> P87 -> P88 -> P89`
+  `P81 -> P82 -> P83 -> P84 -> P85 -> P86 -> P87 -> P88 -> P89 -> P90`
+- current terminal-stop and handoff closure:
+  `H66 -> P91`
 - current convergence and handoff stack:
   `P77 -> P78 -> P79 -> P80`
 - current active docs-only packet:
-  `H65`
+  `H66`
 - preserved prior published successor stack:
   `P66 -> P67 -> P68`
 - preserved deeper successor stack:
   `P63 -> P64 -> P65`
 - current clean rebaseline branch:
   `wip/p85-post-p84-main-rebaseline`
+- current archive-replace decision wave:
+  `P90`
+- current next-planmode handoff sync wave:
+  `P91`
 - current docs-consolidation wave:
   `P89`
 - current salvage-screen wave:
@@ -164,6 +180,9 @@ driver and machine-readable `results/` summaries first.
 - `../README.md`
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-04-07-post-h66-next-planmode-handoff.md`
+- `2026-04-07-post-h66-next-planmode-startup-prompt.md`
+- `2026-04-07-post-h66-next-planmode-brief-prompt.md`
 - `2026-04-07-post-p89-next-planmode-handoff.md`
 - `2026-04-07-post-p89-next-planmode-startup-prompt.md`
 - `2026-04-07-post-p89-next-planmode-brief-prompt.md`
@@ -188,6 +207,7 @@ driver and machine-readable `results/` summaries first.
 - `2026-04-05-post-p80-next-planmode-startup-prompt.md`
 - `2026-04-05-post-p80-next-planmode-brief-prompt.md`
 - `../milestones/P89_post_p88_docs_consolidation_and_live_router_sync/`
+- `../milestones/P90_post_p89_archive_replace_screen_and_replacement_decision/`
 - `../milestones/P88_post_p87_salvage_screen_and_no_import_decision/`
 - `../milestones/P87_post_p86_paper_spine_refresh_and_salvage_shortlist/`
 - `../milestones/P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
@@ -208,6 +228,8 @@ driver and machine-readable `results/` summaries first.
 - `../milestones/P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
 - `../milestones/P70_post_p69_archive_index_and_artifact_policy_sync/`
 - `../milestones/P69_post_h65_repo_graph_hygiene_inventory/`
+- `../milestones/P91_post_h66_next_planmode_handoff_sync/`
+- `../milestones/H66_post_p90_archive_replace_terminal_stop_packet/`
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
 - `../milestones/P56_post_h64_clean_merge_candidate_packet/`
 - `../milestones/P57_post_h64_paper_submission_package_sync/`

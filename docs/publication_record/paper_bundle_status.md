@@ -7,16 +7,16 @@ refresh on top of `P86` and `P85`.
 
 The paper bundle is not widening toward a new runtime or executor-value claim.
 
-Authoritative control now lives at the `H65 + P87 + P86 + P85` layer:
+Authoritative control now lives at the `H66 + P91 + P90 + P87` layer:
 
-- `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet` remains the
-  active docs-only packet.
+- `H66_post_p90_archive_replace_terminal_stop_packet` remains the active
+  docs-only packet.
+- `P91_post_h66_next_planmode_handoff_sync` is the current next-planmode
+  handoff wave.
+- `P90_post_p89_archive_replace_screen_and_replacement_decision` is the
+  preserved archive-replace screen immediately below `H66`.
 - `P87_post_p86_paper_spine_refresh_and_salvage_shortlist` is the current
   paper-spine refresh wave.
-- `P86_post_p85_dirty_root_inventory_and_archive_replace_map` is the current
-  dirty-root inventory wave.
-- `P85_post_p84_main_rebaseline_and_control_resync` is the current clean
-  merged-main rebaseline wave.
 - `F38_post_h62_r63_dormant_eligibility_profile_dossier` remains the only
   dormant future dossier.
 
@@ -32,10 +32,11 @@ scientific widening.
 - keep `H58` as the binding value-negative closeout of the strongest admitted
   useful-case lane;
 - keep `H59` as the preserved reproduction-gap packet above that closeout;
-- keep `H65` as the live archive-first terminal-freeze packet for current
+- keep `H66` as the live archive-replace terminal-stop packet for current
   outward wording;
-- keep `P87` as the current paper-spine refresh wave and `P86` as the current
-  dirty-root inventory wave;
+- keep `P91` as the live handoff sync wave and `P90` as the preserved
+  archive-replace screen;
+- keep `P87` as the current paper-spine refresh wave;
 - keep same-lane executor-value reopen closed; and
 - keep `F38/R63` dormant and non-runtime rather than implying a reopened lane.
 

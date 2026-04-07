@@ -5,6 +5,12 @@ decision points.
 
 ## Current Live Stack
 
+- `P91_post_h66_next_planmode_handoff_sync/`
+  current next-planmode handoff sync wave
+- `H66_post_p90_archive_replace_terminal_stop_packet/`
+  current active docs-only packet
+- `P90_post_p89_archive_replace_screen_and_replacement_decision/`
+  current archive-replace screen and replacement-decision wave
 - `P89_post_p88_docs_consolidation_and_live_router_sync/`
   current docs-consolidation and live-router sync wave
 - `P88_post_p87_salvage_screen_and_no_import_decision/`
@@ -36,7 +42,7 @@ decision points.
 - `P72_post_p71_archive_polish_and_explicit_stop_handoff/`
   current archive polish and explicit stop handoff wave
 - `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
-  current active docs-only packet
+  preserved prior active docs-only packet
 - `P71_post_p70_clean_descendant_merge_prep_readiness_sync/`
   current clean-descendant merge-prep readiness sync wave
 - `P70_post_p69_archive_index_and_artifact_policy_sync/`
@@ -97,6 +103,10 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
+- treat `H66` as the current active docs-only packet;
+- treat `P91` as the current next-planmode handoff sync wave;
+- treat `P90` as the current archive-replace screen and replacement-decision
+  wave;
 - treat `P89` as the current docs-consolidation and live-router sync wave;
 - treat `P88` as the current salvage-screen and no-import decision wave;
 - treat `P87` as the current paper-spine refresh and salvage shortlist wave;
@@ -112,10 +122,10 @@ decision points.
   stack underneath `P85`;
 - treat `P73` as the current local hygiene and shrink wave above `P72`;
 - treat `P72` as the current archive polish and explicit stop handoff wave
-  above `H65`;
+  below `H66`;
 - treat `P74/P75/P76` as the preserved immediate publication lineage that
   produced the current `p75` branch;
 - treat `P69/P70/P71` as hygiene/control sidecars underneath `P72`;
-- treat `P66/P67/P68`, `P63/P64/P65`, and `P60/P61/P62` as preserved prior
+- treat `H65`, `P66/P67/P68`, `P63/P64/P65`, and `P60/P61/P62` as preserved prior
   live control, not current; and
 - treat `F38` as dormant future only, not a live scientific route.

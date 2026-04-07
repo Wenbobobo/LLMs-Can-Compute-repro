@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "item_id": "p91_reads_h66",
+      "status": "pass",
+      "notes": "P91 starts only after the landed H66 terminal-stop packet."
+    },
+    {
+      "item_id": "p91_handoff_surfaces_select_explicit_stop_archive_polish_or_no_further_action",
+      "status": "pass",
+      "notes": "All next-planmode prompts should default to explicit stop, archive polish, or no further action after H66."
+    },
+    {
+      "item_id": "p91_plans_router_points_to_post_h66_prompts",
+      "status": "pass",
+      "notes": "Plans router should point to the post-H66 handoff surfaces as the current entrypoints."
+    }
+  ]
+}

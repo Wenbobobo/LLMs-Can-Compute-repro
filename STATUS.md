@@ -3,7 +3,11 @@
 ## Current Scientific State
 
 - The current active docs-only packet is
-  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+  `H66_post_p90_archive_replace_terminal_stop_packet`.
+- The current next-planmode handoff sync wave is
+  `P91_post_h66_next_planmode_handoff_sync`.
+- The current archive-replace screen and replacement-decision wave is
+  `P90_post_p89_archive_replace_screen_and_replacement_decision`.
 - The current docs-consolidation and live-router sync wave is
   `P89_post_p88_docs_consolidation_and_live_router_sync`.
 - The current salvage-screen and no-import decision wave is
@@ -73,8 +77,8 @@
   `P59_post_h64_control_and_handoff_sync`.
 - The current dormant future dossier is
   `F38_post_h62_r63_dormant_eligibility_profile_dossier`.
-- `H65` selects
-  `archive_first_terminal_freeze_becomes_current_active_route_and_defaults_to_explicit_stop`.
+- `H66` selects
+  `archive_replace_terminal_stop_becomes_current_active_route_and_defaults_to_explicit_stop`.
 - The default downstream scientific lane is
   `explicit_stop_or_no_further_action_archive_first`.
 - The only conditional later gate remains
@@ -96,10 +100,12 @@
 - `wip/h27-promotion` remains a blocked dirty quarantine.
 - The active mounted keep set for the current phase is `p85`, `p83`, `p75`,
   `p74`, `p73`, `p72`, `p69`, and `p56`.
-- The default next action is archive-then-replace closeout or no further
+- The default next action is explicit stop, archive polish, or no further
   action, with any future `R63` staying strictly non-runtime.
-- The current docs-only follow-through is docs consolidation and live-router
-  sync on the clean branch.
+- The current docs-only follow-through is archive-replace screening and
+  replacement-decision sync on the clean branch.
 - The first-tier selective salvage screen completed with no imports for the
   four highest-value remaining publication candidates, so salvage only reopens
-  on a later file-specific case.
+  on a later file-specific salvage case.
+- The preserved prior active packet is
+  `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.

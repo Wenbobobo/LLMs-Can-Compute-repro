@@ -19,14 +19,15 @@ remains the preserved reproduction-gap packet above it.
 
 The current live control state is now:
 
-- `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`
+- `H66_post_p90_archive_replace_terminal_stop_packet`
+- `P91_post_h66_next_planmode_handoff_sync`
+- `P90_post_p89_archive_replace_screen_and_replacement_decision`
 - `P87_post_p86_paper_spine_refresh_and_salvage_shortlist`
-- `P86_post_p85_dirty_root_inventory_and_archive_replace_map`
-- `P85_post_p84_main_rebaseline_and_control_resync`
 
-`P87` refreshes the clean-branch paper spine, `P86` inventories the dirty root
-without integrating it, and `P85` keeps current control on a clean descendant
-above merged `main`.
+`H66` makes terminal stop the current docs-only packet, `P91` freezes the next
+planning prompts on that stop posture, `P90` closes the remaining archive/
+replace screen with no further salvage, and `P87` remains the live paper-spine
+refresh layer on the clean branch.
 
 ## Paper-Facing Partial Falsification
 
@@ -55,6 +56,5 @@ The unresolved gating fields remain:
 - tie frequency and tie-handling burden; and
 - a materially different cost model relative to `R62/H58`.
 
-That route remains dormant. The current downstream recommendation is selective
-salvage import, docs consolidation, and then archive-then-replace closeout,
-not further scientific widening.
+That route remains dormant. The current downstream recommendation is explicit
+stop, archive polish, or no further action, not further scientific widening.

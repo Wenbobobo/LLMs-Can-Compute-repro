@@ -1,7 +1,7 @@
 # Release Preflight Checklist
 
 - confirm the current archive-facing control stack is
-  `H65/P77/P78/P79/P80`
+  `H66/P91/P90/P77/P78/P79/P80`
 - confirm the `P72` hygiene-only archive-polish and explicit-stop handoff
   sidecar remains aligned below that current stack
 - confirm the `P69/P70/P71` hygiene-only cleanup sidecars remain aligned below
@@ -15,5 +15,6 @@
 - keep `H43` as the preserved paper-grade endpoint
 - keep `P72/P69/P70/P71` framed as hygiene/control sidecars rather than new
   runtime or evidence-bearing packets
+- preserve `H65/P90` as the immediate prior closeout lineage underneath `H66`
 - explicit stop or no further action
 - keep dirty root `main` outside any integration path

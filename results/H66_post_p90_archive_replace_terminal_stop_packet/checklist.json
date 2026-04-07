@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "item_id": "h66_reads_h65",
+      "status": "pass",
+      "notes": "H65 must remain the preserved prior active packet before H66 can become current."
+    },
+    {
+      "item_id": "h66_reads_green_p90",
+      "status": "pass",
+      "notes": "P90 must already close the archive-replace screen with no additional salvage required."
+    },
+    {
+      "item_id": "h66_requires_zero_file_specific_salvage",
+      "status": "pass",
+      "notes": "H66 assumes the remaining dirty-root publication docs stay keep-clean/archive-root-only."
+    },
+    {
+      "item_id": "h66_runtime_stays_closed",
+      "status": "pass",
+      "notes": "H66 remains docs-only and does not authorize runtime or any same-lane scientific reopen."
+    }
+  ]
+}
