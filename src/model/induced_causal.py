@@ -489,11 +489,12 @@ class InducedTransitionExecutor(FreeRunningTraceExecutor):
         step: int,
         pc: int,
         stack_depth: int,
-        call_stack: list[int],
+        call_depth: int,
         instruction: Opcode,
         arg: int | None,
         stack_history,
         memory_history,
+        call_history,
         read_observations,
     ):
         if instruction in {Opcode.CALL, Opcode.RET}:
@@ -501,11 +502,12 @@ class InducedTransitionExecutor(FreeRunningTraceExecutor):
                 step=step,
                 pc=pc,
                 stack_depth=stack_depth,
-                call_stack=call_stack,
+                call_depth=call_depth,
                 instruction=instruction,
                 arg=arg,
                 stack_history=stack_history,
                 memory_history=memory_history,
+                call_history=call_history,
                 read_observations=read_observations,
             )
         rule = self.library.rule_for(instruction)
@@ -559,7 +561,7 @@ class InducedTransitionExecutor(FreeRunningTraceExecutor):
             memory_write = (address, value)
 
         next_pc = _eval_next_pc(rule.next_pc_mode, pc=pc, arg=arg, branch_taken=branch_taken)
-        return (popped, pushed, branch_taken, memory_read, memory_write, next_pc, rule.halted)
+        return (popped, pushed, branch_taken, memory_read, memory_write, next_pc, rule.halted, call_depth)
 
 
 def run_free_running_with_induced_rules(
