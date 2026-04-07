@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p83_reads_p82",
+      "status": "pass",
+      "notes": "P83 starts only after the landed P82 clean-main probe."
+    },
+    {
+      "item_id": "p83_runs_on_clean_promotion_branch",
+      "status": "pass",
+      "notes": "The promotion handoff should be prepared on the dedicated p83 branch; final cleanliness is verified after commit."
+    },
+    {
+      "item_id": "p83_promotion_branch_matches_source_head",
+      "status": "pass",
+      "notes": "The promotion branch should fast-forward to the exact current source head."
+    },
+    {
+      "item_id": "p83_promotion_branch_remains_ahead_only_from_origin_main",
+      "status": "pass",
+      "notes": "The promotion branch should remain ahead-only relative to origin/main."
+    },
+    {
+      "item_id": "p83_handoff_doc_is_pr_ready",
+      "status": "pass",
+      "notes": "The handoff doc should contain the branch names, head, verification command, and guardrails."
+    }
+  ]
+}

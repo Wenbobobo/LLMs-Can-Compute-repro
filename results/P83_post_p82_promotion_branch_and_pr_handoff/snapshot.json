@@ -1,0 +1,22 @@
+{
+  "rows": [
+    {
+      "field": "current_branch",
+      "value": "wip/p83-post-p82-promotion-branch-and-pr-handoff"
+    },
+    {
+      "field": "base_divergence",
+      "value": {
+        "left_only": 0,
+        "right_only": 181
+      }
+    },
+    {
+      "field": "source_divergence",
+      "value": {
+        "left_only": 0,
+        "right_only": 0
+      }
+    }
+  ]
+}
