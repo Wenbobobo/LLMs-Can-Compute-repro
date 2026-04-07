@@ -86,9 +86,9 @@ The active docs-only packet is
   `../milestones/P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
 - current merged-main rebaseline and control-resync wave:
   `../milestones/P85_post_p84_main_rebaseline_and_control_resync/`
-- current keep-set contraction and closeout wave:
+- preserved keep-set contraction and closeout wave:
   `../milestones/P84_post_p83_keep_set_contraction_and_closeout/`
-- current promotion branch and PR handoff wave:
+- preserved promotion branch and PR handoff wave:
   `../milestones/P83_post_p82_promotion_branch_and_pr_handoff/`
 - current archive-facing convergence stack:
   `../milestones/P77_post_p76_keep_set_and_provenance_normalization/`,

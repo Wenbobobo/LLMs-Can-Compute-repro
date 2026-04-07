@@ -18,9 +18,9 @@
   `P86_post_p85_dirty_root_inventory_and_archive_replace_map`.
 - The current merged-main rebaseline and control-resync wave is
   `P85_post_p84_main_rebaseline_and_control_resync`.
-- The current keep-set contraction and closeout wave is
+- The preserved keep-set contraction and closeout wave is
   `P84_post_p83_keep_set_contraction_and_closeout`.
-- The current promotion branch and PR handoff wave is
+- The preserved promotion branch and PR handoff wave is
   `P83_post_p82_promotion_branch_and_pr_handoff`.
 - The current keep-set and provenance normalization wave is
   `P77_post_p76_keep_set_and_provenance_normalization`.
@@ -98,8 +98,8 @@
   `duplicate_or_obsolete`, `salvage_candidate`, and `archive_only`; any import
   from root must remain clean-descendant-only and file-specific.
 - `wip/h27-promotion` remains a blocked dirty quarantine.
-- The active mounted keep set for the current phase is `p85`, `p83`, `p75`,
-  `p74`, `p73`, `p72`, `p69`, and `p56`.
+- The active mounted keep set for the current phase is `p85`, `p75`, `p74`,
+  `p73`, `p72`, `p69`, and `p56`.
 - The default next action is explicit stop, archive polish, or no further
   action, with any future `R63` staying strictly non-runtime.
 - The current docs-only follow-through is archive-replace screening and

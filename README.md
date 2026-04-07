@@ -17,7 +17,6 @@ As of `2026-04-07`, the current active packet is
 
 Current anchors:
 
-- current archive-replace screen and replacement-decision wave:
 - current next-planmode handoff sync wave:
   `P91_post_h66_next_planmode_handoff_sync`
 - current archive-replace screen and replacement-decision wave:
@@ -32,9 +31,9 @@ Current anchors:
   `P86_post_p85_dirty_root_inventory_and_archive_replace_map`
 - current merged-main rebaseline and control-resync wave:
   `P85_post_p84_main_rebaseline_and_control_resync`
-- current keep-set contraction and closeout wave:
+- preserved keep-set contraction and closeout wave:
   `P84_post_p83_keep_set_contraction_and_closeout`
-- current promotion branch and PR handoff wave:
+- preserved promotion branch and PR handoff wave:
   `P83_post_p82_promotion_branch_and_pr_handoff`
 - current keep-set and provenance normalization wave:
   `P77_post_p76_keep_set_and_provenance_normalization`
@@ -115,11 +114,12 @@ publication docs without importing the dirty root wholesale. `P86` packages the 
 `p85` branch, keeping `wip/root-main-parking-2026-03-24` quarantine-only while
 classifying root-only paths into duplicate/obsolete, salvage, and archive-only
 buckets. `P85` rebaselines current control onto merged `main` via the clean
-`p85` branch, preserving `p83` only as short-term merged-source lineage while
-preparing root archive/replace, docs consolidation, and paper spine refresh.
-`P84` contracts the mounted keep set to the promotion-ready `p83` branch plus
-the preserved operational branches `p75`, `p74`, `p73`, `p72`, `p69`, and
-`p56`, while unmounting the temporary `p81` and `p82` worktrees. `P83`
+`p85` branch, preserving `p83` only as merged-source lineage while preparing
+root archive/replace, docs consolidation, and paper spine refresh. `P84`
+contracts the mounted keep set around `p83`, `p75`, `p74`, `p73`, `p72`,
+`p69`, and `p56`, while unmounting the temporary `p81` and `p82` worktrees.
+Under the current `H66/P91` posture, `p83` is now preserved unmounted lineage.
+`P83`
 materializes the clean promotion branch and PR handoff after the successful
 `P82` probe. `P81` rebaselines the locked facts after `P80`, records the
 published `p75` head at `53962ca`, and keeps the route at explicit stop plus
