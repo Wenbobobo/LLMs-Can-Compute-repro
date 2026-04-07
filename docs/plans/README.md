@@ -7,13 +7,20 @@ driver and machine-readable `results/` summaries first.
 
 ## Current Start Points
 
+- `2026-04-07-post-p86-next-planmode-handoff.md`
+  current shortest handoff from the post-`P86` dirty-root inventory state
+  into the next planning round
+- `2026-04-07-post-p86-next-planmode-startup-prompt.md`
+  current ready-to-paste startup prompt for the next `plan mode` round
+- `2026-04-07-post-p86-next-planmode-brief-prompt.md`
+  current short startup prompt for the next `plan mode` round
 - `2026-04-07-post-p85-next-planmode-handoff.md`
-  current shortest handoff from the post-`P85` merged-main rebaseline state
+  preserved shortest handoff from the post-`P85` merged-main rebaseline state
   into the next planning round
 - `2026-04-07-post-p85-next-planmode-startup-prompt.md`
-  current ready-to-paste startup prompt for the next `plan mode` round
+  preserved startup prompt from the post-`P85` merged-main rebaseline state
 - `2026-04-07-post-p85-next-planmode-brief-prompt.md`
-  current short startup prompt for the next `plan mode` round
+  preserved brief prompt from the post-`P85` merged-main rebaseline state
 - `2026-04-07-post-p84-next-planmode-handoff.md`
   preserved shortest handoff from the post-`P84` promotion-ready closeout
   state
@@ -46,6 +53,8 @@ driver and machine-readable `results/` summaries first.
   current branch/worktree registry and merge posture control note
 - `../milestones/H65_post_p66_p67_p68_archive_first_terminal_freeze_packet/`
   current active docs-only packet
+- `../milestones/P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
+  current dirty-root inventory and archive-replace map wave
 - `../milestones/P85_post_p84_main_rebaseline_and_control_resync/`
   current merged-main rebaseline and control-resync wave
 - `../milestones/P84_post_p83_keep_set_contraction_and_closeout/`
@@ -80,7 +89,7 @@ driver and machine-readable `results/` summaries first.
 - preserved immediate publication lineage:
   `P74 -> P75 -> P76`
 - current promotion and post-merge lineage:
-  `P81 -> P82 -> P83 -> P84 -> P85`
+  `P81 -> P82 -> P83 -> P84 -> P85 -> P86`
 - current convergence and handoff stack:
   `P77 -> P78 -> P79 -> P80`
 - current active docs-only packet:
@@ -91,6 +100,8 @@ driver and machine-readable `results/` summaries first.
   `P63 -> P64 -> P65`
 - current clean rebaseline branch:
   `wip/p85-post-p84-main-rebaseline`
+- current dirty-root inventory wave:
+  `P86`
 - preserved merged-source branch:
   `wip/p83-post-p82-promotion-branch-and-pr-handoff`
 - current published branch:
@@ -122,6 +133,9 @@ driver and machine-readable `results/` summaries first.
 - `../README.md`
 - `../branch_worktree_registry.md`
 - `../../tmp/active_wave_plan.md`
+- `2026-04-07-post-p86-next-planmode-handoff.md`
+- `2026-04-07-post-p86-next-planmode-startup-prompt.md`
+- `2026-04-07-post-p86-next-planmode-brief-prompt.md`
 - `2026-04-07-post-p85-next-planmode-handoff.md`
 - `2026-04-07-post-p85-next-planmode-startup-prompt.md`
 - `2026-04-07-post-p85-next-planmode-brief-prompt.md`
@@ -133,6 +147,7 @@ driver and machine-readable `results/` summaries first.
 - `2026-04-05-post-p80-next-planmode-handoff.md`
 - `2026-04-05-post-p80-next-planmode-startup-prompt.md`
 - `2026-04-05-post-p80-next-planmode-brief-prompt.md`
+- `../milestones/P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
 - `../milestones/P85_post_p84_main_rebaseline_and_control_resync/`
 - `../milestones/P84_post_p83_keep_set_contraction_and_closeout/`
 - `../milestones/P83_post_p82_promotion_branch_and_pr_handoff/`

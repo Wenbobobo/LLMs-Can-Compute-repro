@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "supports": [
+      "P86 records the dirty root as a quarantine-only archive/replace target rather than an integration base.",
+      "P86 classifies dirty-root paths into duplicate_or_obsolete, salvage_candidate, and archive_only buckets.",
+      "P86 moves the next route from root inventory toward docs consolidation, selective salvage import, and paper spine refresh."
+    ],
+    "does_not_support": [
+      "dirty-root integration",
+      "runtime reopen",
+      "same-lane executor-value reopen",
+      "broad Wasm or arbitrary C scope expansion"
+    ],
+    "distilled_result": {
+      "current_inventory_wave": "p86_post_p85_dirty_root_inventory_and_archive_replace_map",
+      "current_branch": "wip/p85-post-p84-main-rebaseline",
+      "current_branch_head": "29d4d84",
+      "merged_main_head": "b82b566",
+      "quarantine_root_branch": "wip/root-main-parking-2026-03-24",
+      "origin_main_to_p86_left_right": "0/1",
+      "selected_outcome": "dirty_root_inventory_and_archive_replace_map_after_p85",
+      "next_recommended_route": "docs_consolidation_selective_salvage_import_and_paper_spine_refresh"
+    }
+  }
+}

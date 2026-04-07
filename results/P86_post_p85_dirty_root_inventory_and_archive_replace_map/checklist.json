@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "item_id": "p86_reads_green_p85_summary",
+      "status": "pass",
+      "notes": "P86 begins only after the landed green P85 merged-main rebaseline."
+    },
+    {
+      "item_id": "p86_runs_on_clean_p85_branch",
+      "status": "pass",
+      "notes": "The dirty-root inventory packet must run from the dedicated clean p85 branch."
+    },
+    {
+      "item_id": "p86_quarantine_root_stays_parked",
+      "status": "pass",
+      "notes": "Dirty root remains quarantine-only and is inspected read-only."
+    },
+    {
+      "item_id": "p86_dirty_root_inventory_is_nonempty",
+      "status": "pass",
+      "notes": "Archive/replace mapping should capture both tracked and untracked root dirt."
+    },
+    {
+      "item_id": "p86_live_docs_shift_current_control_to_inventory_wave",
+      "status": "pass",
+      "notes": "Live control docs should make P86 current while keeping dirty root quarantine-only."
+    }
+  ]
+}

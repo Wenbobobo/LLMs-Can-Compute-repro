@@ -5,6 +5,8 @@ decision points.
 
 ## Current Live Stack
 
+- `P86_post_p85_dirty_root_inventory_and_archive_replace_map/`
+  current dirty-root inventory and archive-replace map wave
 - `P85_post_p84_main_rebaseline_and_control_resync/`
   current merged-main rebaseline and control-resync wave
 - `P84_post_p83_keep_set_contraction_and_closeout/`
@@ -89,6 +91,8 @@ decision points.
 
 - treat `publication_record/current_stage_driver.md` as the canonical live
   router for which milestone is current;
+- treat `P86` as the current dirty-root inventory and archive-replace map
+  wave;
 - treat `P85` as the current merged-main rebaseline and control-resync wave;
 - treat `P84` as the preserved keep-set contraction and closeout wave;
 - treat `P83` as preserved merged-source branch handoff lineage above the

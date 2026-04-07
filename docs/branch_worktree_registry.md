@@ -2,7 +2,8 @@
 
 This file records the balanced mounted keep set, quarantine posture, preserved
 lineage refs, and cleanup priorities for the clean-descendant-only repo state
-after the `P85` merged-main rebaseline above the `P84` keep-set closeout.
+after the `P86` dirty-root inventory and archive-replace map above the `P85`
+merged-main rebaseline and `P84` keep-set closeout.
 
 ## Balanced Mounted Keep Set
 
@@ -39,6 +40,8 @@ after the `P85` merged-main rebaseline above the `P84` keep-set closeout.
   and now survive only as preserved unmounted lineage
 - `p83` remains mounted only as short-term preserved merged-source lineage and
   is eligible for later unmount once the `P85` post-merge route is settled
+- `P86` classifies the dirty root into duplicate/obsolete, salvage-candidate,
+  and archive-only buckets; only selective salvage-only import is admissible
 - only the dirty root checkout and `wip/h27-promotion` should remain dirty and
   mounted after convergence
 - clean historical mounts targeted for removal are:
@@ -58,9 +61,12 @@ after the `P85` merged-main rebaseline above the `P84` keep-set closeout.
 ## Merge Rules
 
 - merge posture remains `clean_descendant_only_never_dirty_root_main`
+- `wip/root-main-parking-2026-03-24` is now covered by a read-only
+  archive-replace map; keep it quarantine-only and use it only as a
+  salvage-only import source
 - `wip/p85-post-p84-main-rebaseline` is the current clean rebaseline branch
-  for post-merge root archive/replace, docs consolidation, and paper spine
-  refresh
+  for post-merge docs consolidation, selective salvage-only import, paper
+  spine refresh, and later archive-replace closeout
 - `wip/p83-post-p82-promotion-branch-and-pr-handoff` is preserved merged-source
   lineage only after the merged-main rebaseline
 - `wip/p75-post-p74-published-successor-freeze` is the live published clean

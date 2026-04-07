@@ -4,6 +4,8 @@
 
 - The current active docs-only packet is
   `H65_post_p66_p67_p68_archive_first_terminal_freeze_packet`.
+- The current dirty-root inventory and archive-replace map wave is
+  `P86_post_p85_dirty_root_inventory_and_archive_replace_map`.
 - The current merged-main rebaseline and control-resync wave is
   `P85_post_p84_main_rebaseline_and_control_resync`.
 - The current keep-set contraction and closeout wave is
@@ -82,9 +84,12 @@
 - Merge posture remains `clean_descendant_only_never_dirty_root_main`.
 - Dirty root `main` remains quarantine-only under
   `wip/root-main-parking-2026-03-24`.
+- Dirty root inventory now classifies parked root paths into
+  `duplicate_or_obsolete`, `salvage_candidate`, and `archive_only`; any import
+  from root must remain salvage-only and clean-descendant-only.
 - `wip/h27-promotion` remains a blocked dirty quarantine.
 - The active mounted keep set for the current phase is `p85`, `p83`, `p75`,
   `p74`, `p73`, `p72`, `p69`, and `p56`.
-- The default next action is root archive/replace, docs consolidation, paper
-  spine refresh, or no further action, with any future `R63` staying strictly
-  non-runtime.
+- The default next action is docs consolidation, selective salvage-only
+  import, paper spine refresh, archive-then-replace closeout, or no further
+  action, with any future `R63` staying strictly non-runtime.

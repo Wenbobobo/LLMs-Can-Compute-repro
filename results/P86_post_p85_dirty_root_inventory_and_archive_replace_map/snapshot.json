@@ -1,0 +1,1557 @@
+{
+  "rows": [
+    {
+      "field": "dirty_status_rows",
+      "value": [
+        {
+          "status": "M ",
+          "path": "EADME.md"
+        },
+        {
+          "status": " M",
+          "path": "STATUS.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/claims_matrix.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/README.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/acceptance.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/artifact_index.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/blocked_hypotheses.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/status.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/todo.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/README.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/archival_repro_manifest.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/blog_outline.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/claim_evidence_table.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/claim_ladder.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/conditional_reopen_protocol.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/current_stage_driver.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/experiment_manifest.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/freeze_candidate_criteria.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/negative_results.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/paper_bundle_status.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/release_candidate_checklist.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/release_preflight_checklist.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/release_summary_draft.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/review_boundary_summary.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/submission_candidate_criteria.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/submission_packet_index.md"
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/threats_to_validity.md"
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/README.md"
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/checklist.json"
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/summary.json"
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/surface_snapshot.json"
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/README.md"
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/checklist.json"
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/snapshot.json"
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/summary.json"
+        },
+        {
+          "status": " M",
+          "path": "results/release_worktree_hygiene_snapshot/status_snapshot.json"
+        },
+        {
+          "status": " M",
+          "path": "results/release_worktree_hygiene_snapshot/summary.json"
+        },
+        {
+          "status": " M",
+          "path": "scripts/export_p5_public_surface_sync.py"
+        },
+        {
+          "status": " M",
+          "path": "tests/test_export_p5_public_surface_sync.py"
+        },
+        {
+          "status": " M",
+          "path": "tests/test_export_release_preflight_checklist_audit.py"
+        },
+        {
+          "status": " M",
+          "path": "tmp/active_wave_plan.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F34_post_h59_compiled_online_retrieval_reopen_screen/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F35_post_h59_far_future_model_and_weights_horizon_log/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F3_post_h23_scope_lift_decision_bundle/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F4_post_h23_origin_claim_delta_matrix/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H23_refreeze_after_r26_r27_r28/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H24_post_h23_reauthorization_and_hygiene_split/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H27_refreeze_after_r32_r33_same_endpoint_decision/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H30_post_r36_r37_scope_decision_packet/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H60_post_f34_next_lane_decision_packet/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P14_public_surface_sync_after_h23/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P16_h25_commit_hygiene_and_clean_worktree_promotion/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P43_post_h59_repo_graph_hygiene_and_merge_map/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P44_post_h59_publication_surface_and_claim_lock/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R26_d0_boundary_localization_execution_gate/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R27_d0_boundary_localization_extension_gate/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R28_d0_trace_retrieval_contract_audit/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R29_d0_same_endpoint_systems_recovery_execution_gate/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R30_d0_boundary_reauthorization_packet/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R32_d0_family_local_boundary_sharp_zoom/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R37_origin_compiler_boundary_gate/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R45_dual_mode_model_mainline_gate/"
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/README.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-21-post-h21-dual-track-boundary-reopen-design.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-h23-reauthorization-design.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-unattended-r32-mainline-design.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-26-post-h59-archive-and-reopen-screen-design.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-26-post-h59-far-future-horizon-log.md"
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/README.md"
+        },
+        {
+          "status": "??",
+          "path": "results/H22_post_h21_boundary_reopen_and_dual_track_lock/"
+        },
+        {
+          "status": "??",
+          "path": "results/H23_refreeze_after_r26_r27_r28/"
+        },
+        {
+          "status": "??",
+          "path": "results/H25_refreeze_after_r30_r31_decision_packet/"
+        },
+        {
+          "status": "??",
+          "path": "results/R26_d0_boundary_localization_execution_gate/"
+        },
+        {
+          "status": "??",
+          "path": "results/R27_d0_boundary_localization_extension_gate/"
+        },
+        {
+          "status": "??",
+          "path": "results/R28_d0_trace_retrieval_contract_audit/"
+        },
+        {
+          "status": "??",
+          "path": "results/R30_d0_boundary_reauthorization_packet/"
+        },
+        {
+          "status": "??",
+          "path": "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f20_post_r42_dual_mode_model_mainline_bundle.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f34_post_h59_compiled_online_retrieval_reopen_screen.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f35_post_h59_far_future_model_and_weights_horizon_log.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f38_post_h62_r63_dormant_eligibility_profile_dossier.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h22_post_h21_boundary_reopen_and_dual_track_lock.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h23_refreeze_after_r26_r27_r28.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h25_refreeze_after_r30_r31_decision_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h41_post_r42_aggressive_long_arc_decision_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h60_post_f34_next_lane_decision_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h63_post_p50_p51_p52_f38_archive_first_closeout_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p43_post_h59_repo_graph_hygiene_and_merge_map.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p44_post_h59_publication_surface_and_claim_lock.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p50_post_h62_archive_first_control_sync.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p51_post_h62_paper_facing_partial_falsification_package.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p52_post_h62_clean_descendant_hygiene_and_merge_prep.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r26_d0_boundary_localization_execution_gate.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r27_d0_boundary_localization_extension_gate.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r28_d0_trace_retrieval_contract_audit.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r30_d0_boundary_reauthorization_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r31_d0_same_endpoint_systems_recovery_reauthorization_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r55_origin_2d_hardmax_retrieval_equivalence_gate.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f20_post_r42_dual_mode_model_mainline_bundle.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f34_post_h59_compiled_online_retrieval_reopen_screen.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f35_post_h59_far_future_model_and_weights_horizon_log.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f38_post_h62_r63_dormant_eligibility_profile_dossier.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h22_post_h21_boundary_reopen_and_dual_track_lock.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h23_refreeze_after_r26_r27_r28.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h25_refreeze_after_r30_r31_decision_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h41_post_r42_aggressive_long_arc_decision_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h60_post_f34_next_lane_decision_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h63_post_p50_p51_p52_f38_archive_first_closeout_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p43_post_h59_repo_graph_hygiene_and_merge_map.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p44_post_h59_publication_surface_and_claim_lock.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p50_post_h62_archive_first_control_sync.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p51_post_h62_paper_facing_partial_falsification_package.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p52_post_h62_clean_descendant_hygiene_and_merge_prep.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r26_d0_boundary_localization_execution_gate.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r27_d0_boundary_localization_extension_gate.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r28_d0_trace_retrieval_contract_audit.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r30_d0_boundary_reauthorization_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r31_d0_same_endpoint_systems_recovery_reauthorization_packet.py"
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r55_origin_2d_hardmax_retrieval_equivalence_gate.py"
+        }
+      ]
+    },
+    {
+      "field": "inventory_rows",
+      "value": [
+        {
+          "status": "M ",
+          "path": "EADME.md",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "STATUS.md",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/claims_matrix.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/README.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/acceptance.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/activation_matrix.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/artifact_index.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/blocked_hypotheses.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/status.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/milestones/F2_future_frontier_recheck_activation_matrix/todo.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/README.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/archival_repro_manifest.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/blog_outline.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/claim_evidence_table.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/claim_ladder.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/conditional_reopen_protocol.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/current_stage_driver.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/experiment_manifest.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/freeze_candidate_criteria.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/negative_results.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/paper_bundle_status.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/release_candidate_checklist.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/release_preflight_checklist.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/release_summary_draft.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/review_boundary_summary.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/submission_candidate_criteria.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/submission_packet_index.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "docs/publication_record/threats_to_validity.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/README.md",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/checklist.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/summary.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "results/P5_public_surface_sync/surface_snapshot.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/README.md",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/checklist.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/snapshot.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "results/release_preflight_checklist_audit/summary.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "results/release_worktree_hygiene_snapshot/status_snapshot.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "results/release_worktree_hygiene_snapshot/summary.json",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "scripts/export_p5_public_surface_sync.py",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "tests/test_export_p5_public_surface_sync.py",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": " M",
+          "path": "tests/test_export_release_preflight_checklist_audit.py",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": " M",
+          "path": "tmp/active_wave_plan.md",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F20_post_r42_dual_mode_model_mainline_bundle/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F34_post_h59_compiled_online_retrieval_reopen_screen/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F35_post_h59_far_future_model_and_weights_horizon_log/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F3_post_h23_scope_lift_decision_bundle/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/F4_post_h23_origin_claim_delta_matrix/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H22_post_h21_boundary_reopen_and_dual_track_lock/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H23_refreeze_after_r26_r27_r28/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H24_post_h23_reauthorization_and_hygiene_split/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H25_refreeze_after_r30_r31_decision_packet/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H26_refreeze_after_r32_boundary_sharp_zoom/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H27_refreeze_after_r32_r33_same_endpoint_decision/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H30_post_r36_r37_scope_decision_packet/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H41_post_r42_aggressive_long_arc_decision_packet/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/H60_post_f34_next_lane_decision_packet/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P14_public_surface_sync_after_h23/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P15_internal_claim_and_handoff_sync_after_h25/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P16_h25_commit_hygiene_and_clean_worktree_promotion/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P43_post_h59_repo_graph_hygiene_and_merge_map/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/P44_post_h59_publication_surface_and_claim_lock/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R26_d0_boundary_localization_execution_gate/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R27_d0_boundary_localization_extension_gate/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R28_d0_trace_retrieval_contract_audit/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R29_d0_same_endpoint_systems_recovery_execution_gate/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R30_d0_boundary_reauthorization_packet/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R32_d0_family_local_boundary_sharp_zoom/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R33_d0_non_retrieval_overhead_localization_audit/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R37_origin_compiler_boundary_gate/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/R45_dual_mode_model_mainline_gate/",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/milestones/README.md",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-21-post-h21-dual-track-boundary-reopen-design.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-h23-reauthorization-design.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-h25-r32-r33-near-term-design.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-r36-explicit-next-wave-design.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-22-post-unattended-r32-mainline-design.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-26-post-h59-archive-and-reopen-screen-design.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/2026-03-26-post-h59-far-future-horizon-log.md",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "docs/plans/README.md",
+          "classification": "duplicate_or_obsolete",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": true
+        },
+        {
+          "status": "??",
+          "path": "results/H22_post_h21_boundary_reopen_and_dual_track_lock/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "results/H23_refreeze_after_r26_r27_r28/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "results/H25_refreeze_after_r30_r31_decision_packet/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "results/R26_d0_boundary_localization_execution_gate/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "results/R27_d0_boundary_localization_extension_gate/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "results/R28_d0_trace_retrieval_contract_audit/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "results/R30_d0_boundary_reauthorization_packet/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "results/R31_d0_same_endpoint_systems_recovery_reauthorization_packet/",
+          "classification": "archive_only",
+          "merge_policy": "do_not_merge_blindly",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f20_post_r42_dual_mode_model_mainline_bundle.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f34_post_h59_compiled_online_retrieval_reopen_screen.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f35_post_h59_far_future_model_and_weights_horizon_log.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_f38_post_h62_r63_dormant_eligibility_profile_dossier.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h22_post_h21_boundary_reopen_and_dual_track_lock.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h23_refreeze_after_r26_r27_r28.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h25_refreeze_after_r30_r31_decision_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h41_post_r42_aggressive_long_arc_decision_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h60_post_f34_next_lane_decision_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_h63_post_p50_p51_p52_f38_archive_first_closeout_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p43_post_h59_repo_graph_hygiene_and_merge_map.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p44_post_h59_publication_surface_and_claim_lock.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p50_post_h62_archive_first_control_sync.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p51_post_h62_paper_facing_partial_falsification_package.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_p52_post_h62_clean_descendant_hygiene_and_merge_prep.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r26_d0_boundary_localization_execution_gate.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r27_d0_boundary_localization_extension_gate.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r28_d0_trace_retrieval_contract_audit.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r30_d0_boundary_reauthorization_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r31_d0_same_endpoint_systems_recovery_reauthorization_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "scripts/export_r55_origin_2d_hardmax_retrieval_equivalence_gate.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f20_post_r42_dual_mode_model_mainline_bundle.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f34_post_h59_compiled_online_retrieval_reopen_screen.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f35_post_h59_far_future_model_and_weights_horizon_log.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_f38_post_h62_r63_dormant_eligibility_profile_dossier.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h22_post_h21_boundary_reopen_and_dual_track_lock.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h23_refreeze_after_r26_r27_r28.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h25_refreeze_after_r30_r31_decision_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h41_post_r42_aggressive_long_arc_decision_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h60_post_f34_next_lane_decision_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_h63_post_p50_p51_p52_f38_archive_first_closeout_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p43_post_h59_repo_graph_hygiene_and_merge_map.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p44_post_h59_publication_surface_and_claim_lock.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p50_post_h62_archive_first_control_sync.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p51_post_h62_paper_facing_partial_falsification_package.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_p52_post_h62_clean_descendant_hygiene_and_merge_prep.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r26_d0_boundary_localization_execution_gate.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r27_d0_boundary_localization_extension_gate.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r28_d0_trace_retrieval_contract_audit.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r30_d0_boundary_reauthorization_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r31_d0_same_endpoint_systems_recovery_reauthorization_packet.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        },
+        {
+          "status": "??",
+          "path": "tests/test_export_r55_origin_2d_hardmax_retrieval_equivalence_gate.py",
+          "classification": "salvage_candidate",
+          "merge_policy": "salvage_only_import",
+          "risky": false
+        }
+      ]
+    },
+    {
+      "field": "classification_counts",
+      "value": {
+        "duplicate_or_obsolete": 8,
+        "salvage_candidate": 104,
+        "archive_only": 18
+      }
+    },
+    {
+      "field": "risky_paths",
+      "value": [
+        "STATUS.md",
+        "docs/milestones/README.md",
+        "docs/plans/README.md",
+        "docs/publication_record/README.md",
+        "docs/publication_record/archival_repro_manifest.md",
+        "docs/publication_record/blog_outline.md",
+        "docs/publication_record/claim_evidence_table.md",
+        "docs/publication_record/claim_ladder.md",
+        "docs/publication_record/conditional_reopen_protocol.md",
+        "docs/publication_record/current_stage_driver.md",
+        "docs/publication_record/experiment_manifest.md",
+        "docs/publication_record/freeze_candidate_criteria.md",
+        "docs/publication_record/negative_results.md",
+        "docs/publication_record/paper_bundle_status.md",
+        "docs/publication_record/release_candidate_checklist.md",
+        "docs/publication_record/release_preflight_checklist.md",
+        "docs/publication_record/release_summary_draft.md",
+        "docs/publication_record/review_boundary_summary.md",
+        "docs/publication_record/submission_candidate_criteria.md",
+        "docs/publication_record/submission_packet_index.md",
+        "docs/publication_record/threats_to_validity.md",
+        "results/release_preflight_checklist_audit/README.md",
+        "results/release_preflight_checklist_audit/checklist.json",
+        "results/release_preflight_checklist_audit/snapshot.json",
+        "results/release_preflight_checklist_audit/summary.json",
+        "results/release_worktree_hygiene_snapshot/status_snapshot.json",
+        "results/release_worktree_hygiene_snapshot/summary.json",
+        "scripts/export_p5_public_surface_sync.py",
+        "tests/test_export_release_preflight_checklist_audit.py"
+      ]
+    },
+    {
+      "field": "doc_sync_rows",
+      "value": [
+        {
+          "path": "README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "STATUS.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/branch_worktree_registry.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/README.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/milestones/README.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        },
+        {
+          "path": "docs/publication_record/README.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        },
+        {
+          "path": "docs/publication_record/current_stage_driver.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/2026-04-07-post-p86-next-planmode-handoff.md",
+          "exists": true,
+          "needle_count": 4,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/2026-04-07-post-p86-next-planmode-startup-prompt.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        },
+        {
+          "path": "docs/plans/2026-04-07-post-p86-next-planmode-brief-prompt.md",
+          "exists": true,
+          "needle_count": 3,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}
