@@ -93,12 +93,14 @@ def brute_force_hardmax_2d(
     if any(flag != scalar_flags[0] for flag in scalar_flags):
         raise ValueError("Do not mix scalar and vector values in one retrieval call.")
 
-    query_key = _coerce_key(query)
+    qx, qy = _coerce_key(query)
     best_score: Fraction | None = None
     maximizer_indices: list[int] = []
 
     for index, key in enumerate(keys):
-        score = dot_2d(key, query_key)
+        # Inline dot product to avoid repeated tuple allocation and length checking
+        kx, ky = _coerce_key(key)
+        score = (kx * qx) + (ky * qy)
         if best_score is None or score > best_score:
             best_score = score
             maximizer_indices = [index]
