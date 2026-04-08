@@ -60,7 +60,9 @@ class _Envelope:
         return index < len(self.breakpoints) and self.breakpoints[index] == slope
 
 
-def _add_vectors(left: tuple[Fraction, ...], right: tuple[Fraction, ...]) -> tuple[Fraction, ...]:
+def _add_vectors(
+    left: tuple[Fraction, ...], right: tuple[Fraction, ...]
+) -> tuple[Fraction, ...]:
     return tuple(a + b for a, b in zip(left, right, strict=True))
 
 
@@ -68,7 +70,9 @@ def _intersection_x(left: _EnvelopeLine, right: _EnvelopeLine) -> Fraction:
     return Fraction(left.intercept - right.intercept, right.slope - left.slope)
 
 
-def _build_upper_envelope(points: Sequence[_PointAggregate], negate: bool = False) -> _Envelope:
+def _build_upper_envelope(
+    points: Sequence[_PointAggregate], negate: bool = False
+) -> _Envelope:
     sign = Fraction(-1 if negate else 1)
     best_by_slope: dict[Fraction, _EnvelopeLine] = {}
 
@@ -83,7 +87,9 @@ def _build_upper_envelope(points: Sequence[_PointAggregate], negate: bool = Fals
         if existing is None or candidate.intercept > existing.intercept:
             best_by_slope[candidate.slope] = candidate
 
-    ordered = sorted(best_by_slope.values(), key=lambda line: (line.slope, line.intercept))
+    ordered = sorted(
+        best_by_slope.values(), key=lambda line: (line.slope, line.intercept)
+    )
     if not ordered:
         return _Envelope(lines=(), breakpoints=())
 
@@ -172,7 +178,9 @@ class HullKVCache:
         if qx == 0 and qy == 0:
             divisor = Fraction(self._total_count)
             averaged = tuple(coord / divisor for coord in self._total_value_sum)
-            all_indices = tuple(index for point in self._points for index in point.entry_indices)
+            all_indices = tuple(
+                index for point in self._points for index in point.entry_indices
+            )
             return HardmaxResult(
                 score=0,
                 value=_restore_value(averaged, self._scalar_mode),
@@ -205,10 +213,14 @@ class HullKVCache:
         total_value_sum = [Fraction(0) for _ in range(self._value_width or 0)]
 
         for index, (key, value) in enumerate(self._entries):
-            bucket = aggregates.setdefault(
-                key,
-                {"value_sum": [Fraction(0) for _ in value], "count": 0, "entry_indices": []},
-            )
+            # Optimization: avoid eager default allocation in hot loop
+            if key not in aggregates:
+                aggregates[key] = {
+                    "value_sum": [Fraction(0) for _ in value],
+                    "count": 0,
+                    "entry_indices": [],
+                }
+            bucket = aggregates[key]
             for coord_index, coord in enumerate(value):
                 bucket["value_sum"][coord_index] += coord
                 total_value_sum[coord_index] += coord
