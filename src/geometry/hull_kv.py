@@ -17,7 +17,6 @@ from .hardmax import (
     HardmaxResult,
     NumberLike,
     ValueLike,
-    _as_fraction,
     _coerce_key,
     _coerce_value,
     _normalize_number,
@@ -204,11 +203,11 @@ class HullKVCache:
         aggregates: dict[tuple[Fraction, Fraction], dict[str, object]] = {}
         total_value_sum = [Fraction(0) for _ in range(self._value_width or 0)]
 
+        # ⚡ Bolt Optimization: Avoid eager evaluation of complex defaults in hot loop
         for index, (key, value) in enumerate(self._entries):
-            bucket = aggregates.setdefault(
-                key,
-                {"value_sum": [Fraction(0) for _ in value], "count": 0, "entry_indices": []},
-            )
+            if key not in aggregates:
+                aggregates[key] = {"value_sum": [Fraction(0) for _ in value], "count": 0, "entry_indices": []}
+            bucket = aggregates[key]
             for coord_index, coord in enumerate(value):
                 bucket["value_sum"][coord_index] += coord
                 total_value_sum[coord_index] += coord
