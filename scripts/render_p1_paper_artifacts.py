@@ -80,7 +80,6 @@ def build_failure_taxonomy_figure_svg(summary: dict[str, object]) -> str:
     families: list[dict[str, object]] = summary["by_family"]  # type: ignore[assignment]
     width = 1100
     height = 170 + len(families) * 52
-    margin_left = 290
     bar_left = 420
     bar_width = 520
     top = 110

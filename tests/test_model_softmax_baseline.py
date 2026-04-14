@@ -13,7 +13,6 @@ from model.softmax_baseline import (
     evaluate_free_running_rollout,
     evaluate_teacher_forced_model,
     require_torch,
-    serialize_event_tokens,
     SoftmaxBaselineConfig,
     SoftmaxTrainingConfig,
     summarize_trace_sequences,

@@ -6,7 +6,6 @@ import json
 import os
 from pathlib import Path
 import subprocess
-from typing import Any
 
 from utils import detect_runtime_environment
 

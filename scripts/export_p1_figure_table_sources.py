@@ -221,7 +221,7 @@ def build_real_trace_boundary_exports() -> tuple[dict[str, object], list[dict[st
     organic_claim_impact_path = ROOT / "results" / "M4_precision_organic_traces" / "claim_impact.json"
     offset_boundary_path = ROOT / "results" / "M4_precision_scaling_real_traces" / "horizon_base_sweep.json"
 
-    organic_screening: dict[str, object] = read_json(organic_screening_path)
+    read_json(organic_screening_path)
     organic_boundary: dict[str, object] = read_json(organic_boundary_path)
     organic_claim_impact: dict[str, object] = read_json(organic_claim_impact_path)
     offset_boundary: dict[str, object] = read_json(offset_boundary_path)

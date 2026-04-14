@@ -235,7 +235,7 @@ def build_stream_boundary_rows(
     for stream_name, payload in sorted(screening_payload["streams"].items()):
         screening_rows = list(payload["rows"])
         combined_rows = screening_rows + base_rows_by_stream.get(stream_name, [])
-        single_head_rows = [row for row in screening_rows if str(row["scheme"]) == "single_head"]
+        [row for row in screening_rows if str(row["scheme"]) == "single_head"]
         decomposition_screening_rows = [
             row for row in screening_rows if str(row["scheme"]) in DECOMPOSITION_SCHEMES
         ]

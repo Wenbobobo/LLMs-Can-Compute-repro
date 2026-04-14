@@ -7,7 +7,6 @@ import sys
 from bytecode import (
     analyze_memory_surfaces,
     call_frame_roundtrip_program,
-    countdown_helper_call_program,
     memory_surface_cases,
     memory_surface_negative_programs,
     run_memory_surface_case,

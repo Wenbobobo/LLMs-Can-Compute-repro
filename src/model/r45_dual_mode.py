@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from bytecode import BoundedMemoryVMCase, lower_program, r43_bounded_memory_vm_cases
+from bytecode import lower_program, r43_bounded_memory_vm_cases
 from exec_trace import Program, TraceInterpreter
 
 from .exact_hardmax import extract_stack_slot_operations

@@ -42,7 +42,7 @@ def test_export_p84_writes_keep_set_closeout_summary(tmp_path: Path, monkeypatch
         encoding="utf-8",
     )
 
-    doc_root = tmp_path / "docs"
+    tmp_path / "docs"
     docs = {
         "README.md": "\n".join(
             [

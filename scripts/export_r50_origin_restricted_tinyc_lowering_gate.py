@@ -12,7 +12,6 @@ from bytecode import (
     BytecodeMemoryRegion,
     BytecodeOpcode,
     BytecodeProgram,
-    RestrictedTinyCLoweringCase,
     compile_restricted_tinyc_program,
     first_divergence_step,
     lower_program,

@@ -1,0 +1,3 @@
+## 2024-04-14 - Avoid `setdefault` with complex defaults in hot loops
+**Learning:** In Python, `dict.setdefault(key, default_value)` eagerly evaluates `default_value` on every iteration, even if the key already exists. In `src/geometry/hull_kv.py`'s `_rebuild_if_needed`, the default value involved list comprehensions and creating new fractions `{"value_sum": [Fraction(0) for _ in value], ...}`, causing significant overhead during cache rebuilds for repeated keys.
+**Action:** Replace `setdefault` with an explicit `if key not in dict:` check when the default value is expensive to instantiate, especially inside inner loops.
