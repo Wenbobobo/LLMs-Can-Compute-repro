@@ -697,14 +697,14 @@ def evaluate_free_running_programs(
 
         outcomes.append(outcome)
         bucket = bucket_name(outcome.program_steps)
-        bucket_state = per_bucket.setdefault(
-            bucket,
-            {
+        # Avoid eager instantiation of default dict on every iteration
+        if bucket not in per_bucket:
+            per_bucket[bucket] = {
                 "program_count": 0,
                 "exact_trace_count": 0,
                 "exact_final_state_count": 0,
-            },
-        )
+            }
+        bucket_state = per_bucket[bucket]
         bucket_state["program_count"] += 1
         bucket_state["exact_trace_count"] += int(outcome.exact_trace_match)
         bucket_state["exact_final_state_count"] += int(outcome.exact_final_state_match)

@@ -171,7 +171,10 @@ def exact_program_accuracy(scorer: TrainableLatestWriteScorer, samples: Sequence
         return 0.0
     per_program: dict[str, list[bool]] = {}
     for sample in samples:
-        per_program.setdefault(sample.program_name, []).append(scorer.predict_index(sample) == sample.target_index)
+        # Avoid eager instantiation of default list on every iteration
+        if sample.program_name not in per_program:
+            per_program[sample.program_name] = []
+        per_program[sample.program_name].append(scorer.predict_index(sample) == sample.target_index)
     exact = sum(1 for outcomes in per_program.values() if all(outcomes))
     return exact / len(per_program)
 
@@ -198,12 +201,21 @@ def evaluate_scorer(
         correct_samples += int(correct)
 
         bucket = bucket_name(sample.program_steps)
-        bucket_state = per_bucket.setdefault(bucket, {"sample_count": 0, "sample_correct": 0, "programs": {}})
+        # Avoid eager instantiation of default dict on every iteration
+        if bucket not in per_bucket:
+            per_bucket[bucket] = {"sample_count": 0, "sample_correct": 0, "programs": {}}
+        bucket_state = per_bucket[bucket]
         bucket_state["sample_count"] = int(bucket_state["sample_count"]) + 1
         bucket_state["sample_correct"] = int(bucket_state["sample_correct"]) + int(correct)
-        bucket_state["programs"].setdefault(sample.program_name, []).append(correct)
 
-        per_program.setdefault(sample.program_name, []).append(correct)
+        programs_dict = bucket_state["programs"]
+        if sample.program_name not in programs_dict:
+            programs_dict[sample.program_name] = []
+        programs_dict[sample.program_name].append(correct)
+
+        if sample.program_name not in per_program:
+            per_program[sample.program_name] = []
+        per_program[sample.program_name].append(correct)
         program_steps[sample.program_name] = sample.program_steps
 
     exact_programs = sum(1 for outcomes in per_program.values() if all(outcomes))
