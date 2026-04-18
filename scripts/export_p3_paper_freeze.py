@@ -6,7 +6,6 @@ from collections import Counter, defaultdict
 import json
 from pathlib import Path
 import re
-from typing import Any
 
 from utils import detect_runtime_environment
 
