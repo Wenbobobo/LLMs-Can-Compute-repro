@@ -306,7 +306,6 @@ class FreeRunningTraceExecutor:
         branch_taken: bool | None = None
         memory_read: tuple[int, int] | None = None
         memory_write: tuple[int, int] | None = None
-        halted = False
 
         match instruction:
             case Opcode.PUSH_CONST:
