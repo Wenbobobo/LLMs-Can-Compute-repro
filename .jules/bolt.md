@@ -1,0 +1,3 @@
+## 2024-05-24 - Avoid `dict.setdefault` with Complex Defaults in Hot Loops
+**Learning:** Using `dict.setdefault(key, complex_default)` inside hot loops incurs a significant performance penalty. Even if the key already exists, Python eagerly evaluates and constructs the `complex_default` argument on every iteration before passing it to `setdefault`. This is particularly costly when the default involves list comprehensions or multiple object instantiations.
+**Action:** Replace `dict.setdefault` calls within hot loops with explicit membership checks (`if key not in dict: dict[key] = complex_default`). This ensures the default is only evaluated and instantiated when strictly necessary.
