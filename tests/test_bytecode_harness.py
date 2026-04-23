@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from bytecode import (
-    accumulator_loop_program,
     alternating_memory_loop_bytecode_program,
     arithmetic_smoke_program,
     branch_then_call_false_program,

@@ -21,7 +21,7 @@ from bytecode import (
     subroutine_braid_long_program,
     verify_program,
 )
-from exec_trace import ExecutionState, Program, TraceEvent, replay_trace, TraceInterpreter
+from exec_trace import Program, TraceEvent, replay_trace, TraceInterpreter
 from geometry import brute_force_hardmax_2d
 from model.exact_hardmax import encode_latest_write_query
 from model.free_running_executor import (

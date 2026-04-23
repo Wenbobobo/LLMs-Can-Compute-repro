@@ -455,7 +455,11 @@ def fit_transition_library(
     examples = build_transition_examples(programs, interpreter=interpreter)
     by_opcode: dict[Opcode, list[TransitionExample]] = {}
     for example in examples:
-        by_opcode.setdefault(example.opcode, []).append(example)
+        # Performance optimization: Replace `setdefault` with an explicit check
+        # to avoid list allocation overhead on every loop iteration.
+        if example.opcode not in by_opcode:
+            by_opcode[example.opcode] = []
+        by_opcode[example.opcode].append(example)
 
     rules = tuple(_fit_rule_for_opcode(by_opcode[opcode], opcode) for opcode in sorted(by_opcode, key=str))
     return InducedTransitionLibrary(rules=rules)

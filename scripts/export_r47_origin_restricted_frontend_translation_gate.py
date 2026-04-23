@@ -12,7 +12,6 @@ from bytecode import (
     BytecodeMemoryRegion,
     BytecodeOpcode,
     BytecodeProgram,
-    RestrictedFrontendTranslationCase,
     compile_restricted_frontend_program,
     first_divergence_step,
     lower_program,
