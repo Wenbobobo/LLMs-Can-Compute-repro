@@ -17,7 +17,6 @@ from .hardmax import (
     HardmaxResult,
     NumberLike,
     ValueLike,
-    _as_fraction,
     _coerce_key,
     _coerce_value,
     _normalize_number,
@@ -205,15 +204,17 @@ class HullKVCache:
         total_value_sum = [Fraction(0) for _ in range(self._value_width or 0)]
 
         for index, (key, value) in enumerate(self._entries):
-            bucket = aggregates.setdefault(
-                key,
-                {"value_sum": [Fraction(0) for _ in value], "count": 0, "entry_indices": []},
-            )
+            if key not in aggregates:
+                bucket = {"value_sum": [Fraction(0) for _ in value], "count": 0, "entry_indices": []}
+                aggregates[key] = bucket
+            else:
+                bucket = aggregates[key]
+
             for coord_index, coord in enumerate(value):
-                bucket["value_sum"][coord_index] += coord
+                bucket["value_sum"][coord_index] += coord # type: ignore
                 total_value_sum[coord_index] += coord
-            bucket["count"] += 1
-            bucket["entry_indices"].append(index)
+            bucket["count"] += 1 # type: ignore
+            bucket["entry_indices"].append(index) # type: ignore
 
         points: list[_PointAggregate] = []
         for key in sorted(aggregates):
@@ -221,9 +222,9 @@ class HullKVCache:
             points.append(
                 _PointAggregate(
                     key=key,
-                    value_sum=tuple(bucket["value_sum"]),
-                    count=int(bucket["count"]),
-                    entry_indices=tuple(bucket["entry_indices"]),
+                    value_sum=tuple(bucket["value_sum"]), # type: ignore
+                    count=int(bucket["count"]), # type: ignore
+                    entry_indices=tuple(bucket["entry_indices"]), # type: ignore
                 )
             )
 

@@ -582,19 +582,21 @@ if torch is not None:  # pragma: no branch
                 total_correct += correct
 
                 bucket = baseline_bucket_name(example.program_steps)
-                bucket_state = per_bucket.setdefault(
-                    bucket,
-                    {
+                if bucket not in per_bucket:
+                    bucket_state = {
                         "example_count": 0,
                         "token_count": 0,
                         "correct_tokens": 0,
                         "weighted_loss": 0.0,
-                    },
-                )
-                bucket_state["example_count"] = int(bucket_state["example_count"]) + 1
-                bucket_state["token_count"] = int(bucket_state["token_count"]) + token_count
-                bucket_state["correct_tokens"] = int(bucket_state["correct_tokens"]) + correct
-                bucket_state["weighted_loss"] = float(bucket_state["weighted_loss"]) + (float(loss.item()) * token_count)
+                    }
+                    per_bucket[bucket] = bucket_state
+                else:
+                    bucket_state = per_bucket[bucket]
+
+                bucket_state["example_count"] = int(bucket_state["example_count"]) + 1 # type: ignore
+                bucket_state["token_count"] = int(bucket_state["token_count"]) + token_count # type: ignore
+                bucket_state["correct_tokens"] = int(bucket_state["correct_tokens"]) + correct # type: ignore
+                bucket_state["weighted_loss"] = float(bucket_state["weighted_loss"]) + float(loss.item()) * token_count # type: ignore
 
         by_length_bucket = tuple(
             (
@@ -753,9 +755,13 @@ if torch is not None:  # pragma: no branch
             )
 
             bucket = baseline_bucket_name(example.program_steps)
-            bucket_state = per_bucket.setdefault(bucket, {"example_count": 0, "exact_count": 0})
-            bucket_state["example_count"] = int(bucket_state["example_count"]) + 1
-            bucket_state["exact_count"] = int(bucket_state["exact_count"]) + int(exact)
+            if bucket not in per_bucket:
+                bucket_state = {"example_count": 0, "exact_count": 0}
+                per_bucket[bucket] = bucket_state
+            else:
+                bucket_state = per_bucket[bucket]
+            bucket_state["example_count"] = int(bucket_state["example_count"]) + 1 # type: ignore
+            bucket_state["exact_count"] = int(bucket_state["exact_count"]) + int(exact) # type: ignore
 
         by_length_bucket = tuple(
             (

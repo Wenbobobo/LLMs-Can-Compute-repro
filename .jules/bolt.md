@@ -1,0 +1,3 @@
+## 2024-04-25 - Python Dictionary `setdefault` Overhead in Hot Loops
+**Learning:** Python's `dict.setdefault(key, default)` evaluates the `default` argument eagerly on every call, even if the `key` already exists. In hot loops, passing complex default values (like list comprehensions generating `Fraction` objects, or allocating new nested dictionaries) causes immense redundant memory allocation and garbage collection overhead.
+**Action:** Always prefer explicit `if key not in dict:` checks over `setdefault` when the default value requires computation or object allocation inside tight loops. Only use `setdefault` with trivial defaults like `None` or small integer constants where eagerly evaluating the default is effectively free.

@@ -306,7 +306,6 @@ class FreeRunningTraceExecutor:
         branch_taken: bool | None = None
         memory_read: tuple[int, int] | None = None
         memory_write: tuple[int, int] | None = None
-        halted = False
 
         match instruction:
             case Opcode.PUSH_CONST:
@@ -697,17 +696,20 @@ def evaluate_free_running_programs(
 
         outcomes.append(outcome)
         bucket = bucket_name(outcome.program_steps)
-        bucket_state = per_bucket.setdefault(
-            bucket,
-            {
+
+        if bucket not in per_bucket:
+            bucket_state = {
                 "program_count": 0,
                 "exact_trace_count": 0,
                 "exact_final_state_count": 0,
-            },
-        )
-        bucket_state["program_count"] += 1
-        bucket_state["exact_trace_count"] += int(outcome.exact_trace_match)
-        bucket_state["exact_final_state_count"] += int(outcome.exact_final_state_match)
+            }
+            per_bucket[bucket] = bucket_state
+        else:
+            bucket_state = per_bucket[bucket]
+
+        bucket_state["program_count"] += 1 # type: ignore
+        bucket_state["exact_trace_count"] += int(outcome.exact_trace_match) # type: ignore
+        bucket_state["exact_final_state_count"] += int(outcome.exact_final_state_match) # type: ignore
 
     bucket_rows: list[tuple[str, dict[str, float | int]]] = []
     for name in sorted(per_bucket):
