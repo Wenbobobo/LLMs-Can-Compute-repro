@@ -1,0 +1,3 @@
+## 2024-04-27 - [Avoid setdefault with eager initialization in hot loops]
+**Learning:** Using `dict.setdefault(key, complex_initialization())` inside a hot loop forces the Python interpreter to eagerly evaluate the default value (such as a list comprehension with `Fraction(0)`) on every single iteration, even if the key already exists. This can cause severe performance degradation, especially when dealing with computationally expensive object creation or large iterations.
+**Action:** Replace `dict.setdefault` with explicit `if key not in dict:` checks when the default value involves function calls, list comprehensions, or object instantiations. This ensures the default value is only evaluated when necessary (i.e., on cache miss).
